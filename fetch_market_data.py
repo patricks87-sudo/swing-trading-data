@@ -7,10 +7,8 @@ täglich. Holt OHLCV-Daten über die kostenlose Twelve Data API, berechnet
 RSI/OBV/ATR/DMA selbst (keine kostenpflichtigen Indikator-Endpunkte nötig)
 und schreibt das Ergebnis als JSON in den Ordner data/. Der GitHub-Actions-
 Workflow committet und pusht die Datei anschließend automatisch.
-
 Claude liest die Datei danach zeitgesteuert über die GitHub-API und wendet
 P4 / P5 / P5.5 / P1 darauf an.
-
 API-Key kommt aus der Umgebungsvariable TWELVEDATA_API_KEY
 (in GitHub Actions als Repository-Secret hinterlegt, siehe README.md).
 """
@@ -38,6 +36,28 @@ WATCHLIST = [
     "LMT", "NOC", "RTX", "UNH", "ISRG", "V", "MA", "CAT",
 ]
 
+# Statische Sektor-Zuordnung je Ticker - Grundlage fuer das
+# Sektorrotations-Barometer im Cockpit (index.html). Rein informativ,
+# beeinflusst die Kursdaten nicht.
+SECTOR_MAP = {
+    "AAPL": "Technology",
+    "MSFT": "Software/Cloud",
+    "NVDA": "Semiconductors/AI",
+    "AMD": "Semiconductors/AI",
+    "AVGO": "Semiconductors/AI",
+    "CRM": "Software/Cloud",
+    "PANW": "Cybersecurity",
+    "NOW": "Software/Cloud",
+    "LMT": "Defense",
+    "NOC": "Defense",
+    "RTX": "Defense/Industrials",
+    "UNH": "Healthcare",
+    "ISRG": "MedTech",
+    "V": "Payments",
+    "MA": "Payments",
+    "CAT": "Industrials",
+}
+
 # Marktbreite / Indizes (Twelve Data Symbole - vor Produktivbetrieb einmal
 # manuell gegen die Twelve-Data-Doku prüfen, da Symbol-Verfügbarkeit sich
 # je nach Tarif unterscheiden kann)
@@ -54,7 +74,6 @@ INDEX_SYMBOLS = {
 EURUSD_URL = "https://api.frankfurter.app/latest?from=USD&to=EUR"
 
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
-
 
 # ---------------------------------------------------------------------------
 # Datenabruf
@@ -74,7 +93,6 @@ def fetch_time_series(symbol: str, interval: str = "1day", outputsize: int = 260
         return {"error": data.get("message", "unknown error")}
     return data.get("values", [])
 
-
 def fetch_eurusd():
     try:
         r = requests.get(EURUSD_URL, timeout=10)
@@ -82,7 +100,6 @@ def fetch_eurusd():
         return r.json()["rates"]["EUR"]
     except Exception as e:
         return {"error": str(e)}
-
 
 # ---------------------------------------------------------------------------
 # Indikatoren selbst berechnen
@@ -138,7 +155,7 @@ def compute_indicators(values):
         "close": round(close, 4),
         "rsi14": round(last["rsi14"], 2) if pd.notna(last["rsi14"]) else None,
         "obv": round(last["obv"], 0),
-        "obv_trend_5d": ("steigend" if df["obv"].iloc[-1] > df["obv"].iloc[-6] else "fallend") if len(df) >= 6 else None,
+        "obv_trend_5d": round(df["obv"].iloc[-1] - df["obv"].iloc[-6], 0) if len(df) >= 6 else None,
         "atr14": round(last["atr14"], 4) if pd.notna(last["atr14"]) else None,
         "sma20": round(last["sma20"], 4) if pd.notna(last["sma20"]) else None,
         "sma50": round(last["sma50"], 4) if pd.notna(last["sma50"]) else None,
@@ -172,7 +189,10 @@ def build_snapshot(run_label: str):
     for ticker in WATCHLIST:
         vals = fetch_time_series(ticker, outputsize=260)
         time.sleep(8)
-        snapshot["watchlist"][ticker] = compute_indicators(vals) if isinstance(vals, list) else vals
+        result = compute_indicators(vals) if isinstance(vals, list) else vals
+        if isinstance(result, dict) and "error" not in result:
+            result["sector"] = SECTOR_MAP.get(ticker, "Unknown")
+        snapshot["watchlist"][ticker] = result
 
     return snapshot
 
