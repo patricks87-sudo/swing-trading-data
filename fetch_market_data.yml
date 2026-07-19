@@ -1,0 +1,72 @@
+name: Fetch Market Data
+
+# ACHTUNG - Sommerzeit/Winterzeit:
+# GitHub-Actions-Cron läuft immer in UTC. Diese Zeiten sind für die aktuelle
+# Sommerzeit (MESZ = UTC+2) berechnet:
+#   14:45 MESZ -> 12:45 UTC  (P4)
+#   15:25 MESZ -> 13:25 UTC  (P5)
+#   17:00 MESZ -> 15:00 UTC  (P5.5)
+#   17:15 MESZ -> 15:15 UTC  (P1)
+# Wenn im Oktober auf Winterzeit (MEZ = UTC+1) umgestellt wird, verschieben
+# sich diese Läufe um 1 Stunde nach vorne (lokal betrachtet). Einfach die
+# "cron"-Werte unten dann um -1 Stunde anpassen (z.B. 12:45 -> 13:45 UTC),
+# oder mir Bescheid geben, dann passe ich es an.
+
+on:
+  schedule:
+    - cron: "45 12 * * 1-5"   # P4  ~14:45 MESZ, Mo-Fr
+    - cron: "25 13 * * 1-5"   # P5  ~15:25 MESZ, Mo-Fr
+    - cron: "0 15 * * 1-5"    # P5.5 ~17:00 MESZ, Mo-Fr
+    - cron: "15 15 * * 1-5"   # P1  ~17:15 MESZ, Mo-Fr
+  workflow_dispatch:          # manueller Testlauf über den "Run workflow" Button
+    inputs:
+      run:
+        description: "Welcher Lauf soll ausgeführt werden?"
+        required: true
+        default: "p4"
+        type: choice
+        options: [p4, p5, p55, p1]
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests pandas
+
+      - name: Determine run label
+        id: label
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=${{ inputs.run }}" >> "$GITHUB_OUTPUT"
+          else
+            case "${{ github.event.schedule }}" in
+              "45 12 * * 1-5") echo "run=p4" >> "$GITHUB_OUTPUT" ;;
+              "25 13 * * 1-5") echo "run=p5" >> "$GITHUB_OUTPUT" ;;
+              "0 15 * * 1-5")  echo "run=p55" >> "$GITHUB_OUTPUT" ;;
+              "15 15 * * 1-5") echo "run=p1" >> "$GITHUB_OUTPUT" ;;
+              *) echo "run=p4" >> "$GITHUB_OUTPUT" ;;
+            esac
+          fi
+
+      - name: Fetch data
+        env:
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+        run: python fetch_market_data.py --run ${{ steps.label.outputs.run }}
+
+      - name: Commit and push results
+        run: |
+          git config user.name "market-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --quiet --cached || git commit -m "data: ${{ steps.label.outputs.run }} snapshot $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
