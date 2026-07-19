@@ -19,6 +19,7 @@ import argparse
 import json
 import os
 import sys
+import time
 from datetime import datetime, timezone
 
 import requests
@@ -165,10 +166,12 @@ def build_snapshot(run_label: str):
 
     for name, symbol in INDEX_SYMBOLS.items():
         vals = fetch_time_series(symbol, outputsize=260)
+        time.sleep(8)
         snapshot["indices"][name] = compute_indicators(vals) if isinstance(vals, list) else vals
 
     for ticker in WATCHLIST:
         vals = fetch_time_series(ticker, outputsize=260)
+        time.sleep(8)
         snapshot["watchlist"][ticker] = compute_indicators(vals) if isinstance(vals, list) else vals
 
     return snapshot
