@@ -273,37 +273,39 @@ function renderPortfolio(portfolio, bewertung, p4, barometer, eurRate) {
     return (a.sector || "").localeCompare(b.sector || "");
   });
   const eurFmt = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" });
-  let totalUsd = 0, totalEur = 0, totalPnlUsd = 0, totalPnlEur = 0, pnlCount = 0, missingLive = false;
+  let totalEur = 0, totalUsdEquiv = 0, totalPnlEur = 0, totalPnlUsdEquiv = 0, pnlCount = 0, missingLive = false;
   const rows = sorted.map((p) => {
-    const invested = p.buy_price * p.quantity;
-    totalUsd += invested;
     const hasRealEur = typeof p.buy_price_eur === "number";
     const buyEur = hasRealEur ? p.buy_price_eur : (eurRate ? p.buy_price * eurRate : null);
-    const investedEur = hasRealEur ? p.buy_price_eur * p.quantity : (eurRate ? invested * eurRate : null);
+    const investedEur = buyEur !== null ? buyEur * p.quantity : null;
     if (investedEur !== null) totalEur += investedEur;
+    const buyUsdEquiv = (buyEur !== null && eurRate) ? buyEur / eurRate : null;
+    const investedUsdEquiv = (investedEur !== null && eurRate) ? investedEur / eurRate : null;
+    if (investedUsdEquiv !== null) totalUsdEquiv += investedUsdEquiv;
     const emp = empfehlungen[p.id];
     const empText = emp ? emp.empfehlung + (emp.begruendung ? " – " + emp.begruendung : "") : "noch keine Bewertung";
     const liveInfo = p4 && p4.watchlist ? p4.watchlist[p.ticker] : null;
     const currentPrice = liveInfo && liveInfo.close !== null ? liveInfo.close : null;
     let pnlHtml;
-    if (currentPrice !== null) {
+    if (currentPrice !== null && investedEur !== null) {
       const currentValueUsd = currentPrice * p.quantity;
-      const pnlUsd = currentValueUsd - invested;
       const currentValueEur = eurRate ? currentValueUsd * eurRate : null;
-      const pnlEur = (currentValueEur !== null && investedEur !== null) ? currentValueEur - investedEur : null;
-      const pnlPct = (investedEur && pnlEur !== null) ? (pnlEur / investedEur) * 100 : ((currentPrice - p.buy_price) / p.buy_price) * 100;
-      totalPnlUsd += pnlUsd;
-      if (pnlEur !== null) totalPnlEur += pnlEur;
-      pnlCount++;
-      const cls = (pnlEur !== null ? pnlEur : pnlUsd) >= 0 ? "var(--green)" : "var(--red)";
-      const sign = pnlPct >= 0 ? "+" : "";
-      const signEur = pnlEur !== null && pnlEur >= 0 ? "+" : "";
-      const signUsd = pnlUsd >= 0 ? "+" : "";
-      pnlHtml = '<td style="color:' + cls + '">' + sign + pnlPct.toFixed(2) + '%' +
-        '<div class="timestamp" style="color:' + cls + '">' +
-        (pnlEur !== null ? signEur + eurFmt.format(pnlEur) : signUsd + pnlUsd.toFixed(2) + ' USD') +
-        (pnlEur !== null ? ' <span style="color:var(--muted)">(' + signUsd + pnlUsd.toFixed(2) + ' USD)</span>' : '') +
-        '</div></td>';
+      const pnlEur = currentValueEur !== null ? currentValueEur - investedEur : null;
+      const pnlPct = (pnlEur !== null && investedEur) ? (pnlEur / investedEur) * 100 : null;
+      const pnlUsdEquiv = (pnlEur !== null && eurRate) ? pnlEur / eurRate : null;
+      if (pnlEur !== null) {
+        totalPnlEur += pnlEur;
+        if (pnlUsdEquiv !== null) totalPnlUsdEquiv += pnlUsdEquiv;
+        pnlCount++;
+      }
+      const cls = pnlEur >= 0 ? "var(--green)" : "var(--red)";
+      const sign = pnlEur >= 0 ? "+" : "";
+      pnlHtml = pnlEur !== null
+        ? '<td style="color:' + cls + '">' + sign + pnlPct.toFixed(2) + '%' +
+          '<div class="timestamp" style="color:' + cls + '">' + sign + eurFmt.format(pnlEur) +
+          (pnlUsdEquiv !== null ? ' <span style="color:var(--muted)">(' + sign + pnlUsdEquiv.toFixed(2) + ' USD)</span>' : '') +
+          '</div></td>'
+        : '<td style="color:var(--muted)">noch keine Live-Daten</td>';
     } else {
       missingLive = true;
       pnlHtml = '<td style="color:var(--muted)">noch keine Live-Daten</td>';
@@ -311,28 +313,27 @@ function renderPortfolio(portfolio, bewertung, p4, barometer, eurRate) {
     return '<tr>' +
       '<td>' + p.name + ' <span style="color:var(--muted)">(' + p.ticker + ')</span>' +
         (p.sector ? '<div class="cand-sector">' + p.sector + '</div>' : '') + '</td>' +
-      '<td>' + p.buy_price.toFixed(2) + ' ' + (p.currency || "USD") +
-        (buyEur !== null ? '<div class="timestamp">' + (hasRealEur ? '' : '≈ ') + eurFmt.format(buyEur) + '</div>' : '') + '</td>' +
+      '<td>' + (buyEur !== null ? eurFmt.format(buyEur) : (p.buy_price.toFixed(2) + ' ' + (p.currency || "USD"))) +
+        (buyUsdEquiv !== null ? '<div class="timestamp">≈ ' + buyUsdEquiv.toFixed(2) + ' USD</div>' : '') + '</td>' +
       '<td>' + p.quantity + '</td>' +
-      '<td>' + invested.toFixed(2) + ' ' + (p.currency || "USD") +
-        (investedEur !== null ? '<div class="timestamp">' + (hasRealEur ? '' : '≈ ') + eurFmt.format(investedEur) + '</div>' : '') + '</td>' +
+      '<td>' + (investedEur !== null ? eurFmt.format(investedEur) : "–") +
+        (investedUsdEquiv !== null ? '<div class="timestamp">≈ ' + investedUsdEquiv.toFixed(2) + ' USD</div>' : '') + '</td>' +
       pnlHtml +
       '<td style="color:var(--muted)">' + empText + '</td>' +
       '<td><button class="del-btn" data-name="' + p.name + '">Löschen</button></td>' +
       '</tr>';
   }).join("");
-  const totalHasEur = !!eurRate;
-  const totalPnlCls = (totalHasEur ? totalPnlEur : totalPnlUsd) >= 0 ? "var(--green)" : "var(--red)";
-  const totalPnlSign = (totalHasEur ? totalPnlEur : totalPnlUsd) >= 0 ? "+" : "";
+  const totalPnlCls = totalPnlEur >= 0 ? "var(--green)" : "var(--red)";
+  const totalPnlSign = totalPnlEur >= 0 ? "+" : "";
   const totalPnlCell = pnlCount > 0
-    ? '<td style="color:' + totalPnlCls + '">' + totalPnlSign + (totalHasEur ? eurFmt.format(totalPnlEur) : totalPnlUsd.toFixed(2) + ' USD') +
-      '<div class="timestamp" style="color:' + totalPnlCls + '">' + (totalPnlUsd >= 0 ? '+' : '') + totalPnlUsd.toFixed(2) + ' USD</div>' +
+    ? '<td style="color:' + totalPnlCls + '">' + totalPnlSign + eurFmt.format(totalPnlEur) +
+      '<div class="timestamp" style="color:' + totalPnlCls + '">' + totalPnlSign + totalPnlUsdEquiv.toFixed(2) + ' USD</div>' +
       (missingLive ? '<div class="timestamp">(unvollständig)</div>' : '') + '</td>'
     : '<td style="color:var(--muted)">noch keine Live-Daten</td>';
   el.innerHTML = '<table><thead><tr><th>Position</th><th>Kaufkurs</th><th>Stück</th><th>Investiert</th><th>Gewinn/Verlust</th><th>Empfehlung</th><th></th></tr></thead>' +
-    '<tbody>' + rows + '<tr class="total-row"><td colspan="3">Gesamtinvestitionssumme</td><td>' + totalUsd.toFixed(2) + ' USD' +
-      (eurRate ? '<div class="timestamp">≈ ' + eurFmt.format(totalEur) + '</div>' : '') + '</td>' + totalPnlCell + '<td colspan="2"></td></tr></tbody></table>' +
-    '<div class="timestamp">Sortiert nach Sektorrotation' + (eurRate ? ' · EUR-Kurs: 1 USD ≈ ' + eurRate.toFixed(4) + ' EUR (tagesaktuell)' : '') + '. Klicke "Löschen", um den passenden Chat-Befehl zu kopieren – die eigentliche Änderung bestätigst du dann im Claude-Chat.</div>';
+    '<tbody>' + rows + '<tr class="total-row"><td colspan="3">Gesamtinvestitionssumme</td><td>' + eurFmt.format(totalEur) +
+      '<div class="timestamp">≈ ' + totalUsdEquiv.toFixed(2) + ' USD</div></td>' + totalPnlCell + '<td colspan="2"></td></tr></tbody></table>' +
+    '<div class="timestamp">Sortiert nach Sektorrotation' + (eurRate ? ' · EUR-Kurs: 1 USD ≈ ' + eurRate.toFixed(4) + ' EUR (tagesaktuell)' : '') + '. Alle Beträge in Euro (echter Einstiegskurs), USD als Umrechnung zur Orientierung. Klicke "Löschen", um den passenden Chat-Befehl zu kopieren – die eigentliche Änderung bestätigst du dann im Claude-Chat.</div>';
   el.querySelectorAll(".del-btn").forEach((btn) => {
     btn.addEventListener("click", () => copyText("Lösche Position " + btn.dataset.name));
   });
