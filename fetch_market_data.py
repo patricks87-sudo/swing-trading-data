@@ -2,12 +2,12 @@
 """
 fetch_market_data.py
 ---------------------
-Läuft in GitHub Actions (Cloud, kein eigenes Gerät nötig) zu 4 festen Zeitpunkten
-täglich. Holt OHLCV-Daten über die kostenlose Twelve Data API, berechnet
-RSI/OBV/ATR/DMA selbst (keine kostenpflichtigen Indikator-Endpunkte nötig)
+LÃ¤uft in GitHub Actions (Cloud, kein eigenes GerÃ¤t nÃ¶tig) zu 4 festen Zeitpunkten
+tÃ¤glich. Holt OHLCV-Daten Ã¼ber die kostenlose Twelve Data API, berechnet
+RSI/OBV/ATR/DMA selbst (keine kostenpflichtigen Indikator-Endpunkte nÃ¶tig)
 und schreibt das Ergebnis als JSON in den Ordner data/. Der GitHub-Actions-
-Workflow committet und pusht die Datei anschließend automatisch.
-Claude liest die Datei danach zeitgesteuert über die GitHub-API und wendet
+Workflow committet und pusht die Datei anschlieÃend automatisch.
+Claude liest die Datei danach zeitgesteuert Ã¼ber die GitHub-API und wendet
 P4 / P5 / P5.5 / P1 darauf an.
 API-Key kommt aus der Umgebungsvariable TWELVEDATA_API_KEY
 (in GitHub Actions als Repository-Secret hinterlegt, siehe README.md).
@@ -29,11 +29,12 @@ import requests
 API_KEY = os.environ.get("TWELVEDATA_API_KEY", "")
 BASE_URL = "https://api.twelvedata.com"
 
-# Watchlist: die Ticker, die P4 als Kandidaten prüfen soll.
-# Erweitere/kürze diese Liste je nach Free-Tier-Budget (8 Calls/Min, 800/Tag).
+# Watchlist: die Ticker, die P4 als Kandidaten prÃ¼fen soll.
+# Erweitere/kÃ¼rze diese Liste je nach Free-Tier-Budget (8 Calls/Min, 800/Tag).
 WATCHLIST = [
     "AAPL", "MSFT", "NVDA", "AMD", "AVGO", "CRM", "PANW", "NOW",
     "LMT", "NOC", "RTX", "UNH", "ISRG", "V", "MA", "CAT",
+    "HOOD", "ORCL",
 ]
 
 # Statische Sektor-Zuordnung je Ticker - Grundlage fuer das
@@ -56,10 +57,12 @@ SECTOR_MAP = {
     "V": "Payments",
     "MA": "Payments",
     "CAT": "Industrials",
+    "HOOD": "Fintech/Brokerage",
+    "ORCL": "Software/Cloud",
 }
 
 # Marktbreite / Indizes (Twelve Data Symbole - vor Produktivbetrieb einmal
-# manuell gegen die Twelve-Data-Doku prüfen, da Symbol-Verfügbarkeit sich
+# manuell gegen die Twelve-Data-Doku prÃ¼fen, da Symbol-VerfÃ¼gbarkeit sich
 # je nach Tarif unterscheiden kann)
 INDEX_SYMBOLS = {
     "NASDAQ_COMPOSITE": "QQQ",
@@ -67,7 +70,7 @@ INDEX_SYMBOLS = {
     "RUSSELL2000": "IWM",
     "VIX": "VIXY",
     # SOX (Philadelphia Semiconductor Index) ist auf dem Free-Tier evtl. nicht
-    # direkt verfügbar - SOXX (ETF) dient hier als Näherungswert.
+    # direkt verfÃ¼gbar - SOXX (ETF) dient hier als NÃ¤herungswert.
     "SOX_PROXY": "SOXX",
 }
 
@@ -114,7 +117,7 @@ def compute_indicators(values):
     df = pd.DataFrame(values)
     for col in ["open", "high", "low", "close", "volume"]:
         df[col] = df[col].astype(float)
-    df = df.iloc[::-1].reset_index(drop=True)  # älteste zuerst
+    df = df.iloc[::-1].reset_index(drop=True)  # Ã¤lteste zuerst
 
     delta = df["close"].diff()
     gain = delta.clip(lower=0)
