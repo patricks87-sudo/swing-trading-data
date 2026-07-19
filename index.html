@@ -273,7 +273,7 @@ function renderPortfolio(portfolio, bewertung, p4, barometer, eurRate) {
     return (a.sector || "").localeCompare(b.sector || "");
   });
   const eurFmt = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" });
-  let totalUsd = 0, totalEur = 0;
+  let totalUsd = 0, totalEur = 0, totalPnlUsd = 0, totalPnlEur = 0, pnlCount = 0, missingLive = false;
   const rows = sorted.map((p) => {
     const invested = p.buy_price * p.quantity;
     totalUsd += invested;
@@ -282,6 +282,24 @@ function renderPortfolio(portfolio, bewertung, p4, barometer, eurRate) {
     const buyEur = eurRate ? p.buy_price * eurRate : null;
     const emp = empfehlungen[p.id];
     const empText = emp ? emp.empfehlung + (emp.begruendung ? " – " + emp.begruendung : "") : "noch keine Bewertung";
+    const liveInfo = p4 && p4.watchlist ? p4.watchlist[p.ticker] : null;
+    const currentPrice = liveInfo && liveInfo.close != null ? liveInfo.close : null;
+    let pnlHtml;
+    if (currentPrice !== null) {
+      const currentValue = currentPrice * p.quantity;
+      const pnlUsd = currentValue - invested;
+      const pnlPct = ((currentPrice - p.buy_price) / p.buy_price) * 100;
+      const pnlEur = eurRate ? pnlUsd * eurRate : null;
+      totalPnlUsd += pnlUsd;
+      if (pnlEur !== null) totalPnlEur += pnlEur;
+      pnlCount++;
+      const cls = pnlUsd >= 0 ? "var(--green)" : "var(--red)";
+      const sign = pnlUsd >= 0 ? "+" : "";
+      pnlHtml = '<td style="color:' + cls + '">' + sign + pnlPct.toFixed(2) + '% <div class="timestamp" style="color:' + cls + '">' + sign + pnlUsd.toFixed(2) + ' USD' + (pnlEur !== null ? ' (≈ ' + eurFmt.format(pnlEur) + ')' : '') + '</div></td>';
+    } else {
+      missingLive = true;
+      pnlHtml = '<td style="color:var(--muted)">noch keine Live-Daten</td>';
+    }
     return '<tr>' +
       '<td>' + p.name + ' <span style="color:var(--muted)">(' + p.ticker + ')</span>' +
         (p.sector ? '<div class="cand-sector">' + p.sector + '</div>' : '') + '</td>' +
@@ -290,13 +308,19 @@ function renderPortfolio(portfolio, bewertung, p4, barometer, eurRate) {
       '<td>' + p.quantity + '</td>' +
       '<td>' + invested.toFixed(2) + ' ' + (p.currency || "USD") +
         (investedEur !== null ? '<div class="timestamp">≈ ' + eurFmt.format(investedEur) + '</div>' : '') + '</td>' +
+      pnlHtml +
       '<td style="color:var(--muted)">' + empText + '</td>' +
       '<td><button class="del-btn" data-name="' + p.name + '">Löschen</button></td>' +
       '</tr>';
   }).join("");
-  el.innerHTML = '<table><thead><tr><th>Position</th><th>Kaufkurs</th><th>Stück</th><th>Investiert</th><th>Empfehlung</th><th></th></tr></thead>' +
+  const totalPnlCls = totalPnlUsd >= 0 ? "var(--green)" : "var(--red)";
+  const totalPnlSign = totalPnlUsd >= 0 ? "+" : "";
+  const totalPnlCell = pnlCount > 0
+    ? '<td style="color:' + totalPnlCls + '">' + totalPnlSign + totalPnlUsd.toFixed(2) + ' USD' + (eurRate ? '<div class="timestamp" style="color:' + totalPnlCls + '">≈ ' + eurFmt.format(totalPnlEur) + '</div>' : '') + (missingLive ? '<div class="timestamp">(unvollständig)</div>' : '') + '</td>'
+    : '<td style="color:var(--muted)">noch keine Live-Daten</td>';
+  el.innerHTML = '<table><thead><tr><th>Position</th><th>Kaufkurs</th><th>Stück</th><th>Investiert</th><th>Gewinn/Verlust</th><th>Empfehlung</th><th></th></tr></thead>' +
     '<tbody>' + rows + '<tr class="total-row"><td colspan="3">Gesamtinvestitionssumme</td><td>' + totalUsd.toFixed(2) + ' USD' +
-      (eurRate ? '<div class="timestamp">≈ ' + eurFmt.format(totalEur) + '</div>' : '') + '</td><td colspan="2"></td></tr></tbody></table>' +
+      (eurRate ? '<div class="timestamp">≈ ' + eurFmt.format(totalEur) + '</div>' : '') + '</td>' + totalPnlCell + '<td colspan="2"></td></tr></tbody></table>' +
     '<div class="timestamp">Sortiert nach Sektorrotation' + (eurRate ? ' · EUR-Kurs: 1 USD ≈ ' + eurRate.toFixed(4) + ' EUR (tagesaktuell)' : '') + '. Klicke "Löschen", um den passenden Chat-Befehl zu kopieren – die eigentliche Änderung bestätigst du dann im Claude-Chat.</div>';
   el.querySelectorAll(".del-btn").forEach((btn) => {
     btn.addEventListener("click", () => copyText("Lösche Position " + btn.dataset.name));
