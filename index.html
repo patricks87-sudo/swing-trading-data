@@ -78,27 +78,27 @@
   <h1>Swing Trading Cockpit</h1>
   <div class="sub">Automatisch aktualisiert &middot; Datenquelle: GitHub Actions + Twelve Data + Claude-Analyse</div>
 
+  <h2>Top-3-Schlagzeilen</h2>
+  <div id="headlines" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten Analyse-Lauf befüllt.</div></div>
+
   <div id="ampel" class="ampel-box card">Lade Marktstimmung...</div>
 
   <h2>Sektorrotation</h2>
-  <div id="sektorrotation" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem n&auml;chsten Analyse-Lauf bef&uuml;llt.</div></div>
+  <div id="sektorrotation" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten Analyse-Lauf befüllt.</div></div>
 
   <h2>Indizes</h2>
   <div id="indices" class="grid"></div>
 
   <h2>P4-Kandidaten (Institutioneller Swing-Scanner)</h2>
-  <div id="candidates"><div class="placeholder">Noch keine Daten &ndash; wird nach dem n&auml;chsten P4-Lauf bef&uuml;llt.</div></div>
+  <div id="candidates"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P4-Lauf befüllt.</div></div>
 
   <h2>Top-Empfehlung des Tages</h2>
-  <div id="top3"><div class="placeholder">Noch keine Daten &ndash; wird nach dem n&auml;chsten P1-Lauf bef&uuml;llt.</div></div>
+  <div id="top3"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
 
   <h2>Meine Positionen</h2>
   <div id="portfolio" class="card"><div class="placeholder">Lade Portfolio...</div></div>
 
-  <h2>Top-3-Schlagzeilen</h2>
-  <div id="headlines" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem n&auml;chsten Analyse-Lauf bef&uuml;llt.</div></div>
-
-  <a class="footer-link" href="https://claude.ai/cowork/project/019f79db-3af1-7716-a5bd-b16bf5c14770" target="_blank">Heutige Analyse in Claude &ouml;ffnen &rarr;</a>
+  <a class="footer-link" href="https://claude.ai/cowork/project/019f79db-3af1-7716-a5bd-b16bf5c14770" target="_blank">Heutige Analyse in Claude öffnen &rarr;</a>
 </div>
 <div id="toast" class="toast"></div>
 
@@ -113,6 +113,17 @@ async function fetchJson(name) {
   } catch (e) {
     return null;
   }
+}
+
+async function fetchEurRate(p4) {
+  try {
+    const r = await fetch("https://api.frankfurter.dev/v1/latest?from=USD&to=EUR", { cache: "no-store" });
+    if (r.ok) {
+      const j = await r.json();
+      if (j && j.rates && typeof j.rates.EUR === "number") return j.rates.EUR;
+    }
+  } catch (e) {}
+  return (p4 && typeof p4.eurusd === "number") ? p4.eurusd : null;
 }
 
 function fmtTime(iso) {
@@ -133,7 +144,7 @@ function showToast(msg) {
 function copyText(text) {
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text).then(
-      () => showToast('Kopiert: "' + text + '" \u2013 jetzt in den Claude-Chat einf\u00fcgen.'),
+      () => showToast('Kopiert: "' + text + '" – jetzt in den Claude-Chat einfügen.'),
       () => showToast('Bitte manuell in den Claude-Chat schreiben: "' + text + '"')
     );
   } else {
@@ -158,8 +169,8 @@ function computeAmpelFromIndices(idx) {
   });
   if (total === 0) return null;
   const ratio = riskOffPoints / total;
-  if (ratio >= 0.6) return { status: "RISK-OFF", reason: "Mehrheit der Indizes unter SMA50 und/oder erh\u00f6hte Volatilit\u00e4t (automatisch aus Rohdaten berechnet)." };
-  if (ratio <= 0.25) return { status: "RISK-ON", reason: "Breite Best\u00e4tigung \u00fcber SMA50 bei moderater Volatilit\u00e4t (automatisch aus Rohdaten berechnet)." };
+  if (ratio >= 0.6) return { status: "RISK-OFF", reason: "Mehrheit der Indizes unter SMA50 und/oder erhöhte Volatilität (automatisch aus Rohdaten berechnet)." };
+  if (ratio <= 0.25) return { status: "RISK-ON", reason: "Breite Bestätigung über SMA50 bei moderater Volatilität (automatisch aus Rohdaten berechnet)." };
   return { status: "NEUTRAL", reason: "Gemischtes Bild zwischen Indizes (automatisch aus Rohdaten berechnet)." };
 }
 
@@ -173,7 +184,7 @@ function renderAmpel(barometer, p4) {
   } else {
     const computed = computeAmpelFromIndices(p4 && p4.indices);
     if (!computed) {
-      el.innerHTML = '<div class="placeholder">Keine Marktdaten verf\u00fcgbar.</div>';
+      el.innerHTML = '<div class="placeholder">Keine Marktdaten verfügbar.</div>';
       return;
     }
     status = computed.status;
@@ -193,7 +204,7 @@ function renderSektorrotation(barometer) {
   if (!barometer || !barometer.sektor_rotation || !barometer.sektor_rotation.length) return;
   el.innerHTML = barometer.sektor_rotation.map((s) => {
     const cls = s.trend === "positiv" ? "trend-positiv" : s.trend === "negativ" ? "trend-negativ" : "trend-neutral";
-    const arrow = s.trend === "positiv" ? "\u2191" : s.trend === "negativ" ? "\u2193" : "\u2192";
+    const arrow = s.trend === "positiv" ? "↑" : s.trend === "negativ" ? "↓" : "→";
     return '<div class="sector-row"><div class="sector-name">' + s.sektor + '</div>' +
       '<div class="trend-badge ' + cls + '">' + arrow + ' ' + s.trend + '</div>' +
       '<div style="color:var(--muted);font-size:12px;">' + (s.kommentar || "") + '</div></div>';
@@ -202,7 +213,7 @@ function renderSektorrotation(barometer) {
 
 function renderIndices(p4) {
   const el = document.getElementById("indices");
-  if (!p4 || !p4.indices) { el.innerHTML = '<div class="placeholder">Keine Daten verf\u00fcgbar.</div>'; return; }
+  if (!p4 || !p4.indices) { el.innerHTML = '<div class="placeholder">Keine Daten verfügbar.</div>'; return; }
   const names = { NASDAQ_COMPOSITE: "Nasdaq (QQQ)", SP500: "S&P 500 (SPY)", RUSSELL2000: "Russell 2000 (IWM)", VIX: "VIX (VIXY)", SOX_PROXY: "Semiconductors (SOXX)" };
   el.innerHTML = Object.keys(names).map((k) => {
     const v = p4.indices[k];
@@ -238,16 +249,15 @@ function renderTop3(data) {
     '<div class="timestamp">Stand: ' + fmtTime(data.generated_at_utc) + '</div></div>';
 }
 
-function renderHeadlines(data) {
-  const el = document.getElementById("headlines");
-  if (!data || !data.headlines || !data.headlines.length) return;
-  el.innerHTML = data.headlines.map((h) =>
-    '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a>' +
-    '<div class="src">' + (h.source || "") + '</div></div>'
-  ).join("") + '<div class="timestamp">Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
+function sectorRankMap(barometer) {
+  const map = {};
+  if (barometer && barometer.sektor_rotation) {
+    barometer.sektor_rotation.forEach((s, i) => { map[s.sektor] = i; });
+  }
+  return map;
 }
 
-function renderPortfolio(portfolio, bewertung, p4) {
+function renderPortfolio(portfolio, bewertung, p4, barometer, eurRate) {
   const el = document.getElementById("portfolio");
   const positions = (portfolio && portfolio.positions) || [];
   if (!positions.length) { el.innerHTML = '<div class="placeholder">Keine Positionen hinterlegt.</div>'; return; }
@@ -255,27 +265,51 @@ function renderPortfolio(portfolio, bewertung, p4) {
   if (bewertung && bewertung.positionen) {
     bewertung.positionen.forEach((p) => { empfehlungen[p.id] = p; });
   }
-  let total = 0;
-  const rows = positions.map((p) => {
+  const rank = sectorRankMap(barometer);
+  const sorted = positions.slice().sort((a, b) => {
+    const ra = rank[a.sector] !== undefined ? rank[a.sector] : 999;
+    const rb = rank[b.sector] !== undefined ? rank[b.sector] : 999;
+    if (ra !== rb) return ra - rb;
+    return (a.sector || "").localeCompare(b.sector || "");
+  });
+  const eurFmt = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" });
+  let totalUsd = 0, totalEur = 0;
+  const rows = sorted.map((p) => {
     const invested = p.buy_price * p.quantity;
-    total += invested;
+    totalUsd += invested;
+    const investedEur = eurRate ? invested * eurRate : null;
+    if (investedEur !== null) totalEur += investedEur;
+    const buyEur = eurRate ? p.buy_price * eurRate : null;
     const emp = empfehlungen[p.id];
-    const empText = emp ? emp.empfehlung + (emp.begruendung ? " \u2013 " + emp.begruendung : "") : "noch keine Bewertung";
+    const empText = emp ? emp.empfehlung + (emp.begruendung ? " – " + emp.begruendung : "") : "noch keine Bewertung";
     return '<tr>' +
-      '<td>' + p.name + ' <span style="color:var(--muted)">(' + p.ticker + ')</span></td>' +
-      '<td>' + p.buy_price.toFixed(2) + ' ' + (p.currency || "USD") + '</td>' +
+      '<td>' + p.name + ' <span style="color:var(--muted)">(' + p.ticker + ')</span>' +
+        (p.sector ? '<div class="cand-sector">' + p.sector + '</div>' : '') + '</td>' +
+      '<td>' + p.buy_price.toFixed(2) + ' ' + (p.currency || "USD") +
+        (buyEur !== null ? '<div class="timestamp">≈ ' + eurFmt.format(buyEur) + '</div>' : '') + '</td>' +
       '<td>' + p.quantity + '</td>' +
-      '<td>' + invested.toFixed(2) + '</td>' +
+      '<td>' + invested.toFixed(2) + ' ' + (p.currency || "USD") +
+        (investedEur !== null ? '<div class="timestamp">≈ ' + eurFmt.format(investedEur) + '</div>' : '') + '</td>' +
       '<td style="color:var(--muted)">' + empText + '</td>' +
-      '<td><button class="del-btn" data-name="' + p.name + '">L\u00f6schen</button></td>' +
+      '<td><button class="del-btn" data-name="' + p.name + '">Löschen</button></td>' +
       '</tr>';
   }).join("");
-  el.innerHTML = '<table><thead><tr><th>Position</th><th>Kaufkurs</th><th>St\u00fcck</th><th>Investiert</th><th>Empfehlung</th><th></th></tr></thead>' +
-    '<tbody>' + rows + '<tr class="total-row"><td colspan="3">Gesamtinvestitionssumme</td><td>' + total.toFixed(2) + '</td><td colspan="2"></td></tr></tbody></table>' +
-    '<div class="timestamp">Klicke "L\u00f6schen", um den passenden Chat-Befehl zu kopieren \u2013 die eigentliche \u00c4nderung best\u00e4tigst du dann im Claude-Chat.</div>';
+  el.innerHTML = '<table><thead><tr><th>Position</th><th>Kaufkurs</th><th>Stück</th><th>Investiert</th><th>Empfehlung</th><th></th></tr></thead>' +
+    '<tbody>' + rows + '<tr class="total-row"><td colspan="3">Gesamtinvestitionssumme</td><td>' + totalUsd.toFixed(2) + ' USD' +
+      (eurRate ? '<div class="timestamp">≈ ' + eurFmt.format(totalEur) + '</div>' : '') + '</td><td colspan="2"></td></tr></tbody></table>' +
+    '<div class="timestamp">Sortiert nach Sektorrotation' + (eurRate ? ' · EUR-Kurs: 1 USD ≈ ' + eurRate.toFixed(4) + ' EUR (tagesaktuell)' : '') + '. Klicke "Löschen", um den passenden Chat-Befehl zu kopieren – die eigentliche Änderung bestätigst du dann im Claude-Chat.</div>';
   el.querySelectorAll(".del-btn").forEach((btn) => {
-    btn.addEventListener("click", () => copyText("L\u00f6sche Position " + btn.dataset.name));
+    btn.addEventListener("click", () => copyText("Lösche Position " + btn.dataset.name));
   });
+}
+
+function renderHeadlines(data) {
+  const el = document.getElementById("headlines");
+  if (!data || !data.headlines || !data.headlines.length) return;
+  el.innerHTML = data.headlines.map((h) =>
+    '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a>' +
+    '<div class="src">' + (h.source || "") + '</div></div>'
+  ).join("");
 }
 
 async function init() {
@@ -288,12 +322,13 @@ async function init() {
     fetchJson("portfolio_bewertung.json"),
     fetchJson("headlines.json"),
   ]);
+  const eurRate = await fetchEurRate(p4);
   renderAmpel(barometer, p4);
   renderSektorrotation(barometer);
   renderIndices(p4);
   renderCandidates(candidates);
   renderTop3(top3);
-  renderPortfolio(portfolio, bewertung, p4);
+  renderPortfolio(portfolio, bewertung, p4, barometer, eurRate);
   renderHeadlines(headlines);
 }
 init();
