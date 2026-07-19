@@ -1,116 +1,302 @@
 <!DOCTYPE html>
-  <html lang="de">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Swing Trading Cockpit</title>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swing Trading Cockpit</title>
 <style>
-  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background:#0f1115; color:#e8e8e8; margin:0; padding:16px; }
-  h1 { font-size:1.3rem; margin-bottom:4px; }
-  .sub { color:#9aa0a6; font-size:0.85rem; margin-bottom:16px; }
-  .ampel { display:flex; align-items:center; gap:14px; padding:16px; border-radius:12px; margin-bottom:18px; }
-  .ampel .dot { width:28px; height:28px; border-radius:50%; flex-shrink:0; }
-  .ampel-text { font-size:1.1rem; font-weight:600; }
-  .ampel-sub { font-size:0.8rem; color:#cfd2d6; margin-top:4px; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap:10px; margin-bottom:22px; }
-  .card { background:#1b1e24; border-radius:10px; padding:10px; border-left:5px solid #666; }
-  .card .tk { font-weight:700; font-size:0.95rem; }
-  .card .px { font-size:0.85rem; color:#cfd2d6; }
-    .card .meta { font-size:0.72rem; color:#9aa0a6; margin-top:4px; line-height:1.4; }
-  .section-title { font-size:1rem; margin:18px 0 8px; color:#cfd2d6; }
-    a.linkbtn { display:inline-block; background:#d97706; color:#111; text-decoration:none; padding:10px 16px; border-radius:8px; font-weight:600; margin-top:6px; }
-    .err { color:#f87171; }
-  </style>
-    </head>
-    <body>
-    <h1>Swing Trading Cockpit</h1>
-<div class="sub" id="lastUpdate">Lade Daten...</div>
+  :root {
+    --bg: #0f1115; --card: #171a21; --border: #2a2e38;
+    --text: #e8eaed; --muted: #9aa0ab;
+    --green: #2ecc71; --yellow: #f1c40f; --red: #e74c3c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px 0; }
+  .sub { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 32px 0 12px 0; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .ampel-box { display: flex; align-items: center; gap: 16px; padding: 20px; border-radius: 12px; border: 1px solid var(--border); }
+  .dot { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; }
+  .dot.green { background: var(--green); box-shadow: 0 0 16px var(--green); }
+  .dot.yellow { background: var(--yellow); box-shadow: 0 0 16px var(--yellow); }
+  .dot.red { background: var(--red); box-shadow: 0 0 16px var(--red); }
+  .ampel-status { font-size: 19px; font-weight: 700; }
+  .ampel-reason { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .idx-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px; }
+  .idx-name { font-size: 12px; color: var(--muted); }
+  .idx-price { font-size: 18px; font-weight: 700; margin: 4px 0; }
+  .idx-rsi { font-size: 12px; }
+  .sector-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .sector-row:last-child { border-bottom: none; }
+  .sector-name { flex: 1; }
+  .trend-badge { padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; }
+  .trend-positiv { background: rgba(46,204,113,.15); color: var(--green); }
+  .trend-neutral { background: rgba(241,196,15,.15); color: var(--yellow); }
+  .trend-negativ { background: rgba(231,76,60,.15); color: var(--red); }
+  .cand-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; margin-bottom: 10px; }
+  .cand-top { display: flex; justify-content: space-between; align-items: center; }
+  .cand-ticker { font-weight: 700; font-size: 15px; }
+  .cand-sector { color: var(--muted); font-size: 12px; }
+  .score-badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; }
+  .score-hoch { background: rgba(46,204,113,.15); color: var(--green); }
+  .score-mittel { background: rgba(241,196,15,.15); color: var(--yellow); }
+  .score-niedrig { background: rgba(231,76,60,.15); color: var(--red); }
+  .cand-begr { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .top3-box { background: linear-gradient(135deg, rgba(46,204,113,.08), rgba(23,26,33,0)); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .top3-item { display: flex; gap: 10px; margin-bottom: 8px; align-items: baseline; }
+  .top3-rank { font-weight: 700; color: var(--muted); width: 18px; }
+  .top3-ticker { font-weight: 700; }
+  .top3-begr { color: var(--muted); font-size: 13px; }
+  .gesamt { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; color: var(--muted); font-weight: 600; padding: 8px 6px; border-bottom: 1px solid var(--border); font-size: 11px; text-transform: uppercase; }
+  td { padding: 10px 6px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  .del-btn { background: none; border: 1px solid var(--border); color: var(--muted); border-radius: 6px; padding: 4px 8px; cursor: pointer; font-size: 12px; }
+  .del-btn:hover { border-color: var(--red); color: var(--red); }
+  .total-row td { font-weight: 700; border-top: 2px solid var(--border); }
+  .headline { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+  .headline:last-child { border-bottom: none; }
+  .headline a { color: var(--text); text-decoration: none; }
+  .headline a:hover { text-decoration: underline; }
+  .headline .src { color: var(--muted); font-size: 11px; margin-top: 2px; }
+  .placeholder { color: var(--muted); font-size: 13px; font-style: italic; padding: 12px 0; }
+  .footer-link { display: inline-block; margin-top: 32px; padding: 12px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); text-decoration: none; font-size: 14px; }
+  .footer-link:hover { border-color: var(--green); }
+  .timestamp { color: var(--muted); font-size: 11px; margin-top: 6px; }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--card); border: 1px solid var(--green); color: var(--text); padding: 10px 18px; border-radius: 8px; font-size: 13px; display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Swing Trading Cockpit</h1>
+  <div class="sub">Automatisch aktualisiert &middot; Datenquelle: GitHub Actions + Twelve Data + Claude-Analyse</div>
 
-    <div class="ampel" id="ampelBox">
-      <div class="dot" id="ampelDot" style="background:#666"></div>
-      <div>
-        <div class="ampel-text" id="ampelText">Marktregime wird berechnet...</div>
-        <div class="ampel-sub" id="ampelSub"></div>
-      </div>
-    </div>
+  <div id="ampel" class="ampel-box card">Lade Marktstimmung...</div>
 
-    <div class="section-title">Indizes</div>
-    <div class="grid" id="indexGrid"></div>
+  <h2>Sektorrotation</h2>
+  <div id="sektorrotation" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem n&auml;chsten Analyse-Lauf bef&uuml;llt.</div></div>
 
-    <div class="section-title">Watchlist</div>
-    <div class="grid" id="watchGrid"></div>
+  <h2>Indizes</h2>
+  <div id="indices" class="grid"></div>
 
-    <a class="linkbtn" href="https://claude.ai/cowork/project/019f79db-3af1-7716-a5bd-b16bf5c14770" target="_blank">Heutige Analyse in Claude offnen</a>
+  <h2>P4-Kandidaten (Institutioneller Swing-Scanner)</h2>
+  <div id="candidates"><div class="placeholder">Noch keine Daten &ndash; wird nach dem n&auml;chsten P4-Lauf bef&uuml;llt.</div></div>
+
+  <h2>Top-Empfehlung des Tages</h2>
+  <div id="top3"><div class="placeholder">Noch keine Daten &ndash; wird nach dem n&auml;chsten P1-Lauf bef&uuml;llt.</div></div>
+
+  <h2>Meine Positionen</h2>
+  <div id="portfolio" class="card"><div class="placeholder">Lade Portfolio...</div></div>
+
+  <h2>Top-3-Schlagzeilen</h2>
+  <div id="headlines" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem n&auml;chsten Analyse-Lauf bef&uuml;llt.</div></div>
+
+  <a class="footer-link" href="https://claude.ai/cowork/project/019f79db-3af1-7716-a5bd-b16bf5c14770" target="_blank">Heutige Analyse in Claude &ouml;ffnen &rarr;</a>
+</div>
+<div id="toast" class="toast"></div>
 
 <script>
-const BASE = "https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/data/";
-const RUNS = ["p4","p5","p55","p1"];
+const REPO_BASE = "https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/data/";
 
-async function loadLatest(){
-  const results = await Promise.allSettled(RUNS.map(r =>
-    fetch(BASE + r + "_latest.json?_=" + Date.now()).then(res => res.ok ? res.json() : Promise.reject())
-  ));
-  let best = null;
-  for (const res of results){
-    if (res.status === "fulfilled"){
-      const d = res.value;
-      if (!best || new Date(d.generated_at_utc) > new Date(best.generated_at_utc)) best = d;
-}
-}
-  return best;
+async function fetchJson(name) {
+  try {
+    const r = await fetch(REPO_BASE + name + "?_=" + Date.now());
+    if (!r.ok) return null;
+    return await r.json();
+  } catch (e) {
+    return null;
+  }
 }
 
-function fmtEur(usd, rate){
-  return (usd * rate).toLocaleString("de-DE", {style:"currency", currency:"EUR"});
+function fmtTime(iso) {
+  if (!iso) return "";
+  try {
+    const d = new Date(iso);
+    return d.toLocaleString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }) + " UTC-Quelle";
+  } catch (e) { return iso; }
 }
 
-function computeAmpel(idx){
-  const nasdaq = idx.NASDAQ_COMPOSITE, sox = idx.SOX_PROXY, vix = idx.VIX, rus = idx.RUSSELL2000;
-  const critVix = vix.close < 18;
-  const critTrend = nasdaq.pct_from_sma20 > 0;
-  const critSox = sox.chg_5d_pct > nasdaq.chg_5d_pct;
-  const critBreadth = rus.pct_from_sma50 > 0;
-  const failed = [critVix, critTrend, critSox, critBreadth].filter(v => !v).length;
-  let status, color;
-  if (failed === 0){ status = "RISK-ON"; color = "#1a9850"; }
-  else if (failed <= 2){ status = "NEUTRAL"; color = "#f5b301"; }
-  else { status = "RISK-OFF"; color = "#d7191c"; }
-  return {status, color, critVix, critTrend, critSox, critBreadth};
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.style.display = "block";
+  setTimeout(() => { t.style.display = "none"; }, 4000);
 }
 
-function cardColor(t){
-  if (t.rsi14 > 75 || t.pct_from_sma20 > 10) return "#d7191c";
-  if (t.rsi14 >= 45 && t.rsi14 <= 70 && t.pct_from_sma50 > 0 && t.obv_trend_5d === "steigend") return "#1a9850";
-  if (t.pct_from_sma50 < -5 || (t.obv_trend_5d === "fallend" && t.chg_5d_pct < 0)) return "#fdae61";
-  return "#666";
+function copyText(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(
+      () => showToast('Kopiert: "' + text + '" \u2013 jetzt in den Claude-Chat einf\u00fcgen.'),
+      () => showToast('Bitte manuell in den Claude-Chat schreiben: "' + text + '"')
+    );
+  } else {
+    showToast('Bitte in den Claude-Chat schreiben: "' + text + '"');
+  }
 }
 
-function card(name, t, rate){
-  return "<div class=\"card\" style=\"border-left-color:" + cardColor(t) + "\">" +
-    "<div class=\"tk\">" + name + "</div>" +
-    "<div class=\"px\">" + fmtEur(t.close, rate) + "</div>" +
-    "<div class=\"meta\">RSI " + t.rsi14.toFixed(1) + " | 5T " + t.chg_5d_pct.toFixed(1) + "%<br>OBV " + t.obv_trend_5d + " | vs SMA50 " + t.pct_from_sma50.toFixed(1) + "%</div>" +
-  "</div>";
+function computeAmpelFromIndices(idx) {
+  if (!idx) return null;
+  let riskOffPoints = 0, total = 0;
+  const vix = idx.VIX;
+  if (vix && vix.close != null) {
+    total++;
+    if (vix.close > 20) riskOffPoints++;
+  }
+  ["NASDAQ_COMPOSITE", "SP500", "RUSSELL2000", "SOX_PROXY"].forEach((k) => {
+    const v = idx[k];
+    if (v && v.pct_from_sma50 != null) {
+      total++;
+      if (v.pct_from_sma50 < 0) riskOffPoints++;
+    }
+  });
+  if (total === 0) return null;
+  const ratio = riskOffPoints / total;
+  if (ratio >= 0.6) return { status: "RISK-OFF", reason: "Mehrheit der Indizes unter SMA50 und/oder erh\u00f6hte Volatilit\u00e4t (automatisch aus Rohdaten berechnet)." };
+  if (ratio <= 0.25) return { status: "RISK-ON", reason: "Breite Best\u00e4tigung \u00fcber SMA50 bei moderater Volatilit\u00e4t (automatisch aus Rohdaten berechnet)." };
+  return { status: "NEUTRAL", reason: "Gemischtes Bild zwischen Indizes (automatisch aus Rohdaten berechnet)." };
 }
 
-loadLatest().then(d => {
-  if (!d){ document.getElementById("lastUpdate").innerHTML = "<span class=\"err\">Keine Daten gefunden.</span>"; return; }
-  const rate = d.eurusd;
-  document.getElementById("lastUpdate").textContent = "Letzter Datenstand: " + new Date(d.generated_at_utc).toLocaleString("de-DE") + " (Lauf: " + d.run.toUpperCase() + ")";
+function renderAmpel(barometer, p4) {
+  const el = document.getElementById("ampel");
+  let status, reason, ts;
+  if (barometer && barometer.status) {
+    status = barometer.status;
+    reason = barometer.begruendung || "";
+    ts = barometer.generated_at_utc;
+  } else {
+    const computed = computeAmpelFromIndices(p4 && p4.indices);
+    if (!computed) {
+      el.innerHTML = '<div class="placeholder">Keine Marktdaten verf\u00fcgbar.</div>';
+      return;
+    }
+    status = computed.status;
+    reason = computed.reason;
+    ts = p4 && p4.generated_at_utc;
+  }
+  const color = status === "RISK-ON" ? "green" : status === "RISK-OFF" ? "red" : "yellow";
+  el.innerHTML =
+    '<div class="dot ' + color + '"></div>' +
+    '<div><div class="ampel-status">' + status + '</div>' +
+    '<div class="ampel-reason">' + reason + '</div>' +
+    '<div class="timestamp">Stand: ' + fmtTime(ts) + '</div></div>';
+}
 
-  const a = computeAmpel(d.indices);
-  document.getElementById("ampelDot").style.background = a.color;
-  document.getElementById("ampelText").textContent = a.status;
-  document.getElementById("ampelSub").textContent = "VIX<18: " + (a.critVix?"ja":"nein") + " | NASDAQ>20DMA: " + (a.critTrend?"ja":"nein") + " | SOX>NASDAQ: " + (a.critSox?"ja":"nein") + " | Breadth-Proxy (Russell>50DMA): " + (a.critBreadth?"ja":"nein") + ". Vereinfachte Ampel, echte A/D-Linie & %>50DMA nicht im Feed enthalten.";
+function renderSektorrotation(barometer) {
+  const el = document.getElementById("sektorrotation");
+  if (!barometer || !barometer.sektor_rotation || !barometer.sektor_rotation.length) return;
+  el.innerHTML = barometer.sektor_rotation.map((s) => {
+    const cls = s.trend === "positiv" ? "trend-positiv" : s.trend === "negativ" ? "trend-negativ" : "trend-neutral";
+    const arrow = s.trend === "positiv" ? "\u2191" : s.trend === "negativ" ? "\u2193" : "\u2192";
+    return '<div class="sector-row"><div class="sector-name">' + s.sektor + '</div>' +
+      '<div class="trend-badge ' + cls + '">' + arrow + ' ' + s.trend + '</div>' +
+      '<div style="color:var(--muted);font-size:12px;">' + (s.kommentar || "") + '</div></div>';
+  }).join("");
+}
 
-  const idxGrid = document.getElementById("indexGrid");
-  Object.entries(d.indices).forEach(([name, t]) => idxGrid.innerHTML += card(name, t, rate));
+function renderIndices(p4) {
+  const el = document.getElementById("indices");
+  if (!p4 || !p4.indices) { el.innerHTML = '<div class="placeholder">Keine Daten verf\u00fcgbar.</div>'; return; }
+  const names = { NASDAQ_COMPOSITE: "Nasdaq (QQQ)", SP500: "S&P 500 (SPY)", RUSSELL2000: "Russell 2000 (IWM)", VIX: "VIX (VIXY)", SOX_PROXY: "Semiconductors (SOXX)" };
+  el.innerHTML = Object.keys(names).map((k) => {
+    const v = p4.indices[k];
+    if (!v || v.close == null) return "";
+    return '<div class="idx-card"><div class="idx-name">' + names[k] + '</div>' +
+      '<div class="idx-price">' + v.close + '</div>' +
+      '<div class="idx-rsi" style="color:var(--muted)">RSI ' + (v.rsi14 != null ? v.rsi14 : "-") + '</div></div>';
+  }).join("");
+}
 
-  const watchGrid = document.getElementById("watchGrid");
-  Object.entries(d.watchlist).forEach(([name, t]) => watchGrid.innerHTML += card(name, t, rate));
-}).catch(err => {
-  document.getElementById("lastUpdate").innerHTML = "<span class=\"err\">Fehler beim Laden der Daten: " + err + "</span>";
-});
+function renderCandidates(data) {
+  const el = document.getElementById("candidates");
+  if (!data || !data.candidates || !data.candidates.length) return;
+  el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Stand: ' + fmtTime(data.generated_at_utc) + '</div>' +
+    data.candidates.map((c) => {
+      const scoreCls = c.score === "hoch" ? "score-hoch" : c.score === "niedrig" ? "score-niedrig" : "score-mittel";
+      return '<div class="cand-card"><div class="cand-top">' +
+        '<div><span class="cand-ticker">' + c.ticker + '</span> <span class="cand-sector">' + (c.sector || "") + '</span></div>' +
+        '<span class="score-badge ' + scoreCls + '">' + (c.score || "-") + '</span></div>' +
+        '<div class="cand-begr">' + (c.begruendung || "") + '</div></div>';
+    }).join("");
+}
+
+function renderTop3(data) {
+  const el = document.getElementById("top3");
+  if (!data || !data.top3 || !data.top3.length) return;
+  el.innerHTML = '<div class="top3-box">' +
+    data.top3.map((t, i) =>
+      '<div class="top3-item"><div class="top3-rank">' + (i + 1) + '.</div>' +
+      '<div><div class="top3-ticker">' + t.ticker + '</div><div class="top3-begr">' + (t.begruendung || "") + '</div></div></div>'
+    ).join("") +
+    (data.gesamteinschaetzung ? '<div class="gesamt">' + data.gesamteinschaetzung + '</div>' : "") +
+    '<div class="timestamp">Stand: ' + fmtTime(data.generated_at_utc) + '</div></div>';
+}
+
+function renderHeadlines(data) {
+  const el = document.getElementById("headlines");
+  if (!data || !data.headlines || !data.headlines.length) return;
+  el.innerHTML = data.headlines.map((h) =>
+    '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a>' +
+    '<div class="src">' + (h.source || "") + '</div></div>'
+  ).join("") + '<div class="timestamp">Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
+}
+
+function renderPortfolio(portfolio, bewertung, p4) {
+  const el = document.getElementById("portfolio");
+  const positions = (portfolio && portfolio.positions) || [];
+  if (!positions.length) { el.innerHTML = '<div class="placeholder">Keine Positionen hinterlegt.</div>'; return; }
+  const empfehlungen = {};
+  if (bewertung && bewertung.positionen) {
+    bewertung.positionen.forEach((p) => { empfehlungen[p.id] = p; });
+  }
+  let total = 0;
+  const rows = positions.map((p) => {
+    const invested = p.buy_price * p.quantity;
+    total += invested;
+    const emp = empfehlungen[p.id];
+    const empText = emp ? emp.empfehlung + (emp.begruendung ? " \u2013 " + emp.begruendung : "") : "noch keine Bewertung";
+    return '<tr>' +
+      '<td>' + p.name + ' <span style="color:var(--muted)">(' + p.ticker + ')</span></td>' +
+      '<td>' + p.buy_price.toFixed(2) + ' ' + (p.currency || "USD") + '</td>' +
+      '<td>' + p.quantity + '</td>' +
+      '<td>' + invested.toFixed(2) + '</td>' +
+      '<td style="color:var(--muted)">' + empText + '</td>' +
+      '<td><button class="del-btn" data-name="' + p.name + '">L\u00f6schen</button></td>' +
+      '</tr>';
+  }).join("");
+  el.innerHTML = '<table><thead><tr><th>Position</th><th>Kaufkurs</th><th>St\u00fcck</th><th>Investiert</th><th>Empfehlung</th><th></th></tr></thead>' +
+    '<tbody>' + rows + '<tr class="total-row"><td colspan="3">Gesamtinvestitionssumme</td><td>' + total.toFixed(2) + '</td><td colspan="2"></td></tr></tbody></table>' +
+    '<div class="timestamp">Klicke "L\u00f6schen", um den passenden Chat-Befehl zu kopieren \u2013 die eigentliche \u00c4nderung best\u00e4tigst du dann im Claude-Chat.</div>';
+  el.querySelectorAll(".del-btn").forEach((btn) => {
+    btn.addEventListener("click", () => copyText("L\u00f6sche Position " + btn.dataset.name));
+  });
+}
+
+async function init() {
+  const [p4, candidates, top3, barometer, portfolio, bewertung, headlines] = await Promise.all([
+    fetchJson("p4_latest.json"),
+    fetchJson("p4_candidates.json"),
+    fetchJson("top_empfehlung.json"),
+    fetchJson("market_barometer.json"),
+    fetchJson("portfolio.json"),
+    fetchJson("portfolio_bewertung.json"),
+    fetchJson("headlines.json"),
+  ]);
+  renderAmpel(barometer, p4);
+  renderSektorrotation(barometer);
+  renderIndices(p4);
+  renderCandidates(candidates);
+  renderTop3(top3);
+  renderPortfolio(portfolio, bewertung, p4);
+  renderHeadlines(headlines);
+}
+init();
 </script>
 </body>
 </html>
