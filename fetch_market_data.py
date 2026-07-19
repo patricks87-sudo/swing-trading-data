@@ -41,10 +41,10 @@ WATCHLIST = [
 # manuell gegen die Twelve-Data-Doku prüfen, da Symbol-Verfügbarkeit sich
 # je nach Tarif unterscheiden kann)
 INDEX_SYMBOLS = {
-    "NASDAQ_COMPOSITE": "IXIC",
-    "SP500": "SPX",
-    "RUSSELL2000": "RUT",
-    "VIX": "VIX",
+    "NASDAQ_COMPOSITE": "QQQ",
+    "SP500": "SPY",
+    "RUSSELL2000": "IWM",
+    "VIX": "VIXY",
     # SOX (Philadelphia Semiconductor Index) ist auf dem Free-Tier evtl. nicht
     # direkt verfügbar - SOXX (ETF) dient hier als Näherungswert.
     "SOX_PROXY": "SOXX",
