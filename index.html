@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+  <html lang="de">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swing Trading Cockpit</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background:#0f1115; color:#e8e8e8; margin:0; padding:16px; }
+  h1 { font-size:1.3rem; margin-bottom:4px; }
+  .sub { color:#9aa0a6; font-size:0.85rem; margin-bottom:16px; }
+  .ampel { display:flex; align-items:center; gap:14px; padding:16px; border-radius:12px; margin-bottom:18px; }
+  .ampel .dot { width:28px; height:28px; border-radius:50%; flex-shrink:0; }
+  .ampel-text { font-size:1.1rem; font-weight:600; }
+  .ampel-sub { font-size:0.8rem; color:#cfd2d6; margin-top:4px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap:10px; margin-bottom:22px; }
+  .card { background:#1b1e24; border-radius:10px; padding:10px; border-left:5px solid #666; }
+  .card .tk { font-weight:700; font-size:0.95rem; }
+  .card .px { font-size:0.85rem; color:#cfd2d6; }
+    .card .meta { font-size:0.72rem; color:#9aa0a6; margin-top:4px; line-height:1.4; }
+  .section-title { font-size:1rem; margin:18px 0 8px; color:#cfd2d6; }
+    a.linkbtn { display:inline-block; background:#d97706; color:#111; text-decoration:none; padding:10px 16px; border-radius:8px; font-weight:600; margin-top:6px; }
+    .err { color:#f87171; }
+  </style>
+    </head>
+    <body>
+    <h1>Swing Trading Cockpit</h1>
+<div class="sub" id="lastUpdate">Lade Daten...</div>
+
+    <div class="ampel" id="ampelBox">
+      <div class="dot" id="ampelDot" style="background:#666"></div>
+      <div>
+        <div class="ampel-text" id="ampelText">Marktregime wird berechnet...</div>
+        <div class="ampel-sub" id="ampelSub"></div>
+      </div>
+    </div>
+
+    <div class="section-title">Indizes</div>
+    <div class="grid" id="indexGrid"></div>
+
+    <div class="section-title">Watchlist</div>
+    <div class="grid" id="watchGrid"></div>
+
+    <a class="linkbtn" href="https://claude.ai/cowork/project/019f79db-3af1-7716-a5bd-b16bf5c14770" target="_blank">Heutige Analyse in Claude offnen</a>
+
+<script>
+const BASE = "https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/data/";
+const RUNS = ["p4","p5","p55","p1"];
+
+async function loadLatest(){
+  const results = await Promise.allSettled(RUNS.map(r =>
+    fetch(BASE + r + "_latest.json?_=" + Date.now()).then(res => res.ok ? res.json() : Promise.reject())
+  ));
+  let best = null;
+  for (const res of results){
+    if (res.status === "fulfilled"){
+      const d = res.value;
+      if (!best || new Date(d.generated_at_utc) > new Date(best.generated_at_utc)) best = d;
+}
+}
+  return best;
+}
+
+function fmtEur(usd, rate){
+  return (usd * rate).toLocaleString("de-DE", {style:"currency", currency:"EUR"});
+}
+
+function computeAmpel(idx){
+  const nasdaq = idx.NASDAQ_COMPOSITE, sox = idx.SOX_PROXY, vix = idx.VIX, rus = idx.RUSSELL2000;
+  const critVix = vix.close < 18;
+  const critTrend = nasdaq.pct_from_sma20 > 0;
+  const critSox = sox.chg_5d_pct > nasdaq.chg_5d_pct;
+  const critBreadth = rus.pct_from_sma50 > 0;
+  const failed = [critVix, critTrend, critSox, critBreadth].filter(v => !v).length;
+  let status, color;
+  if (failed === 0){ status = "RISK-ON"; color = "#1a9850"; }
+  else if (failed <= 2){ status = "NEUTRAL"; color = "#f5b301"; }
+  else { status = "RISK-OFF"; color = "#d7191c"; }
+  return {status, color, critVix, critTrend, critSox, critBreadth};
+}
+
+function cardColor(t){
+  if (t.rsi14 > 75 || t.pct_from_sma20 > 10) return "#d7191c";
+  if (t.rsi14 >= 45 && t.rsi14 <= 70 && t.pct_from_sma50 > 0 && t.obv_trend_5d === "steigend") return "#1a9850";
+  if (t.pct_from_sma50 < -5 || (t.obv_trend_5d === "fallend" && t.chg_5d_pct < 0)) return "#fdae61";
+  return "#666";
+}
+
+function card(name, t, rate){
+  return "<div class=\"card\" style=\"border-left-color:" + cardColor(t) + "\">" +
+    "<div class=\"tk\">" + name + "</div>" +
+    "<div class=\"px\">" + fmtEur(t.close, rate) + "</div>" +
+    "<div class=\"meta\">RSI " + t.rsi14.toFixed(1) + " | 5T " + t.chg_5d_pct.toFixed(1) + "%<br>OBV " + t.obv_trend_5d + " | vs SMA50 " + t.pct_from_sma50.toFixed(1) + "%</div>" +
+  "</div>";
+}
+
+loadLatest().then(d => {
+  if (!d){ document.getElementById("lastUpdate").innerHTML = "<span class=\"err\">Keine Daten gefunden.</span>"; return; }
+  const rate = d.eurusd;
+  document.getElementById("lastUpdate").textContent = "Letzter Datenstand: " + new Date(d.generated_at_utc).toLocaleString("de-DE") + " (Lauf: " + d.run.toUpperCase() + ")";
+
+  const a = computeAmpel(d.indices);
+  document.getElementById("ampelDot").style.background = a.color;
+  document.getElementById("ampelText").textContent = a.status;
+  document.getElementById("ampelSub").textContent = "VIX<18: " + (a.critVix?"ja":"nein") + " | NASDAQ>20DMA: " + (a.critTrend?"ja":"nein") + " | SOX>NASDAQ: " + (a.critSox?"ja":"nein") + " | Breadth-Proxy (Russell>50DMA): " + (a.critBreadth?"ja":"nein") + ". Vereinfachte Ampel, echte A/D-Linie & %>50DMA nicht im Feed enthalten.";
+
+  const idxGrid = document.getElementById("indexGrid");
+  Object.entries(d.indices).forEach(([name, t]) => idxGrid.innerHTML += card(name, t, rate));
+
+  const watchGrid = document.getElementById("watchGrid");
+  Object.entries(d.watchlist).forEach(([name, t]) => watchGrid.innerHTML += card(name, t, rate));
+}).catch(err => {
+  document.getElementById("lastUpdate").innerHTML = "<span class=\"err\">Fehler beim Laden der Daten: " + err + "</span>";
+});
+</script>
+</body>
+</html>
