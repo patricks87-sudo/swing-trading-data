@@ -36,8 +36,7 @@ permissions:
   # parallel zu laufen (Ursache der 429-Fehler durch doppelte API-Last).
   concurrency:
     group: fetch-market-data
-      cancel-in-progress: false
-
+    cancel-in-progress: false
 jobs:
   fetch:
     runs-on: ubuntu-latest
