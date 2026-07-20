@@ -89,12 +89,24 @@ def fetch_time_series(symbol: str, interval: str = "1day", outputsize: int = 260
         "outputsize": outputsize,
         "apikey": API_KEY,
     }
-    r = requests.get(f"{BASE_URL}/time_series", params=params, timeout=20)
-    r.raise_for_status()
-    data = r.json()
-    if data.get("status") == "error":
-        return {"error": data.get("message", "unknown error")}
-    return data.get("values", [])
+    # Retry mit exponentiellem Backoff bei 429 (Rate Limit). Dadurch fangen
+    # wir kurzfristige Ueberlastungen ab (z.B. wenn ein verspaeteter Cron-Lauf
+    # doch einmal mit einem anderen Lauf ueberlappt), statt den ganzen Job
+    # sofort abzubrechen.
+    max_retries = 4
+    backoff_seconds = 15
+    for attempt in range(max_retries + 1):
+        r = requests.get(f"{BASE_URL}/time_series", params=params, timeout=20)
+        if r.status_code == 429 and attempt < max_retries:
+            print(f"429 fuer {symbol}, Versuch {attempt + 1}/{max_retries + 1} - warte {backoff_seconds}s")
+            time.sleep(backoff_seconds)
+            backoff_seconds *= 2
+            continue
+            r.raise_for_status()
+            data = r.json()
+            if data.get("status") == "error":
+                return {"error": data.get("message", "unknown error")}
+                return data.get("values", [])
 
 def fetch_eurusd():
     try:
