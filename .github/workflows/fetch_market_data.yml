@@ -34,9 +34,9 @@ permissions:
   # Falls GitHub einen Lauf verzögert und ein weiterer Trigger dazwischen
   # kommt, wird der neue Lauf in eine Warteschlange gestellt statt
   # parallel zu laufen (Ursache der 429-Fehler durch doppelte API-Last).
-  concurrency:
-  group: fetch-market-data
-  cancel-in-progress: false
+concurrency:
+    group: fetch-market-data
+    cancel-in-progress: false
 jobs:
   fetch:
     runs-on: ubuntu-latest
