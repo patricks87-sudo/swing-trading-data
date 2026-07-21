@@ -102,11 +102,11 @@ def fetch_time_series(symbol: str, interval: str = "1day", outputsize: int = 260
             time.sleep(backoff_seconds)
             backoff_seconds *= 2
             continue
-            r.raise_for_status()
-            data = r.json()
-            if data.get("status") == "error":
-                return {"error": data.get("message", "unknown error")}
-                return data.get("values", [])
+        r.raise_for_status()
+        data = r.json()
+        if data.get("status") == "error":
+            return {"error": data.get("message", "unknown error")}
+        return data.get("values", [])
 
 def fetch_eurusd():
     try:
