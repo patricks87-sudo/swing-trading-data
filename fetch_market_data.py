@@ -2,13 +2,14 @@
 """
 fetch_market_data.py
 ---------------------
-LÃ¤uft in GitHub Actions (Cloud, kein eigenes GerÃ¤t nÃ¶tig) zu 4 festen Zeitpunkten
-tÃ¤glich. Holt OHLCV-Daten Ã¼ber die kostenlose Twelve Data API, berechnet
-RSI/OBV/ATR/DMA selbst (keine kostenpflichtigen Indikator-Endpunkte nÃ¶tig)
-und schreibt das Ergebnis als JSON in den Ordner data/. Der GitHub-Actions-
-Workflow committet und pusht die Datei anschlieÃend automatisch.
-Claude liest die Datei danach zeitgesteuert Ã¼ber die GitHub-API und wendet
-P4 / P5 / P5.5 / P1 darauf an.
+Laeuft in GitHub Actions (Cloud, kein eigenes Geraet noetig), gesteuert
+durch scripts/determine_run.py, mehrmals taeglich. Holt OHLCV-Daten ueber
+die kostenlose Twelve Data API, berechnet RSI/OBV/ATR/DMA selbst (keine
+kostenpflichtigen Indikator-Endpunkte noetig) und schreibt das Ergebnis
+als JSON in den Ordner data/. Der GitHub-Actions-Workflow committet und
+pusht die Datei anschliessend automatisch.
+Claude liest die Datei danach zeitgesteuert ueber die GitHub-API und
+wendet P4 / P5 / P5.5 / P1 darauf an.
 API-Key kommt aus der Umgebungsvariable TWELVEDATA_API_KEY
 (in GitHub Actions als Repository-Secret hinterlegt, siehe README.md).
 """
@@ -29,8 +30,8 @@ import requests
 API_KEY = os.environ.get("TWELVEDATA_API_KEY", "")
 BASE_URL = "https://api.twelvedata.com"
 
-# Watchlist: die Ticker, die P4 als Kandidaten prÃ¼fen soll.
-# Erweitere/kÃ¼rze diese Liste je nach Free-Tier-Budget (8 Calls/Min, 800/Tag).
+# Watchlist: die Ticker, die P4 als Kandidaten pruefen soll.
+# Erweitere/kuerze diese Liste je nach Free-Tier-Budget (8 Calls/Min, 800/Tag).
 WATCHLIST = [
     "AAPL", "MSFT", "NVDA", "AMD", "AVGO", "CRM", "PANW", "NOW",
     "LMT", "NOC", "RTX", "UNH", "ISRG", "V", "MA", "CAT",
@@ -62,7 +63,7 @@ SECTOR_MAP = {
 }
 
 # Marktbreite / Indizes (Twelve Data Symbole - vor Produktivbetrieb einmal
-# manuell gegen die Twelve-Data-Doku prÃ¼fen, da Symbol-VerfÃ¼gbarkeit sich
+# manuell gegen die Twelve-Data-Doku pruefen, da Symbol-Verfuegbarkeit sich
 # je nach Tarif unterscheiden kann)
 INDEX_SYMBOLS = {
     "NASDAQ_COMPOSITE": "QQQ",
@@ -70,11 +71,11 @@ INDEX_SYMBOLS = {
     "RUSSELL2000": "IWM",
     "VIX": "VIXY",
     # SOX (Philadelphia Semiconductor Index) ist auf dem Free-Tier evtl. nicht
-    # direkt verfÃ¼gbar - SOXX (ETF) dient hier als NÃ¤herungswert.
+    # direkt verfuegbar - SOXX (ETF) dient hier als Naeherungswert.
     "SOX_PROXY": "SOXX",
 }
 
-EURUSD_URL = "https://api.frankfurter.app/latest?from=USD&to=EUR"
+EURUSD_URL = "https://api.exchangerate-api.com/v4/latest/USD"
 
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
@@ -108,6 +109,7 @@ def fetch_time_series(symbol: str, interval: str = "1day", outputsize: int = 260
             return {"error": data.get("message", "unknown error")}
         return data.get("values", [])
 
+
 def fetch_eurusd():
     try:
         r = requests.get(EURUSD_URL, timeout=10)
@@ -129,7 +131,7 @@ def compute_indicators(values):
     df = pd.DataFrame(values)
     for col in ["open", "high", "low", "close", "volume"]:
         df[col] = df[col].astype(float)
-    df = df.iloc[::-1].reset_index(drop=True)  # Ã¤lteste zuerst
+    df = df.iloc[::-1].reset_index(drop=True)  # aelteste zuerst
 
     delta = df["close"].diff()
     gain = delta.clip(lower=0)
@@ -212,6 +214,20 @@ def build_snapshot(run_label: str):
     return snapshot
 
 
+def snapshot_is_healthy(snapshot: dict) -> bool:
+    """Circuit Breaker gegen stille Fehl-Laeufe (Ursache 1): ein frueherer
+    Bug hat dazu gefuehrt, dass fetch_time_series() bei jedem Aufruf None
+    zurueckgab, obwohl GitHub Actions den Lauf als 'erfolgreich' meldete -
+    alle Werte im Cockpit blieben leer. Diese Funktion prueft, ob ein
+    Mindestanteil der Indizes/Watchlist-Eintraege echte Kurswerte enthaelt,
+    BEVOR das Ergebnis gespeichert und committet wird."""
+    entries = list(snapshot.get("indices", {}).values()) + list(snapshot.get("watchlist", {}).values())
+    if not entries:
+        return False
+    healthy = sum(1 for e in entries if isinstance(e, dict) and isinstance(e.get("close"), (int, float)))
+    return (healthy / len(entries)) >= 0.5
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--run", required=True, choices=["p4", "p5", "p55", "p1"])
@@ -223,6 +239,14 @@ def main():
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     snapshot = build_snapshot(args.run)
+
+    if not snapshot_is_healthy(snapshot):
+        print(
+            "FEHLER: Ueberwiegend fehlende Kursdaten im Snapshot - wird NICHT "
+            "gespeichert/committet (Circuit Breaker gegen stille Fehl-Laeufe).",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
     filename = f"{args.run}_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M')}.json"
     filepath = os.path.join(OUTPUT_DIR, filename)
