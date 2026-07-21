@@ -1,27 +1,22 @@
 name: Fetch Market Data
 
-# ACHTUNG - Sommerzeit/Winterzeit:
-# GitHub-Actions-Cron läuft immer in UTC. Diese Zeiten sind für die aktuelle
-# Sommerzeit (MESZ = UTC+2) berechnet:
-#   14:45 MESZ -> 12:45 UTC  (P4)
-#   15:25 MESZ -> 13:25 UTC  (P5)
-#   17:00 MESZ -> 15:00 UTC  (P5.5)
-#   17:15 MESZ -> 15:15 UTC  (P1)
-# Wenn im Oktober auf Winterzeit (MEZ = UTC+1) umgestellt wird, verschieben
-# sich diese Läufe um 1 Stunde nach vorne (lokal betrachtet). Einfach die
-# "cron"-Werte unten dann um -1 Stunde anpassen (z.B. 12:45 -> 13:45 UTC),
-# oder mir Bescheid geben, dann passe ich es an.
+# Laeuft alle 5 Minuten im Fenster 12:00-16:59 UTC (deckt Sommer- und
+# Winterzeit automatisch ab, keine manuelle Anpassung im Oktober mehr
+# noetig). Welcher der 4 Laeufe (P4/P5/P5.5/P1) tatsaechlich ausgefuehrt
+# wird, entscheidet das Script scripts/determine_run.py anhand der
+# aktuellen Uhrzeit in Europe/Berlin (automatisch MESZ/MEZ-korrekt) und
+# einem 25-Minuten-Toleranzfenster. Faellt ein Tick aus oder kommt
+# verspaetet, springt automatisch der naechste Tick ein statt dass ein
+# ganzer Lauf ausfaellt (Ursache 1: GitHub-Cron-Trigger sind nicht 100%
+# zuverlaessig/puenktlich).
 
 on:
   schedule:
-    - cron: "45 12 * * 1-5"   # P4  ~14:45 MESZ, Mo-Fr
-    - cron: "25 13 * * 1-5"   # P5  ~15:25 MESZ, Mo-Fr
-    - cron: "0 15 * * 1-5"    # P5.5 ~17:00 MESZ, Mo-Fr
-    - cron: "15 15 * * 1-5"   # P1  ~17:15 MESZ, Mo-Fr
-  workflow_dispatch:          # manueller Testlauf über den "Run workflow" Button
+    - cron: "*/5 12-16 * * 1-5"
+  workflow_dispatch:
     inputs:
       run:
-        description: "Welcher Lauf soll ausgeführt werden?"
+        description: "Welcher Lauf soll ausgefuehrt werden?"
         required: true
         default: "p4"
         type: choice
@@ -30,13 +25,11 @@ on:
 permissions:
   contents: write
 
-  # Verhindert, dass sich zeitgleiche/verspätete Cron-Läufe überlappen.
-  # Falls GitHub einen Lauf verzögert und ein weiterer Trigger dazwischen
-  # kommt, wird der neue Lauf in eine Warteschlange gestellt statt
-  # parallel zu laufen (Ursache der 429-Fehler durch doppelte API-Last).
+# Verhindert, dass sich zeitgleiche/verspaetete Laeufe ueberlappen.
 concurrency:
-    group: fetch-market-data
-    cancel-in-progress: false
+  group: fetch-market-data
+  cancel-in-progress: false
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -55,22 +48,19 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=${{ inputs.run }}" >> "$GITHUB_OUTPUT"
+            echo "skip=false" >> "$GITHUB_OUTPUT"
           else
-            case "${{ github.event.schedule }}" in
-              "45 12 * * 1-5") echo "run=p4" >> "$GITHUB_OUTPUT" ;;
-              "25 13 * * 1-5") echo "run=p5" >> "$GITHUB_OUTPUT" ;;
-              "0 15 * * 1-5")  echo "run=p55" >> "$GITHUB_OUTPUT" ;;
-              "15 15 * * 1-5") echo "run=p1" >> "$GITHUB_OUTPUT" ;;
-              *) echo "run=p4" >> "$GITHUB_OUTPUT" ;;
-            esac
+            python3 scripts/determine_run.py
           fi
 
       - name: Fetch data
+        if: steps.label.outputs.skip != 'true'
         env:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
         run: python fetch_market_data.py --run ${{ steps.label.outputs.run }}
 
       - name: Commit and push results
+        if: steps.label.outputs.skip != 'true'
         run: |
           git config user.name "market-data-bot"
           git config user.email "actions@users.noreply.github.com"
