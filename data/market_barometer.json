@@ -1,0 +1,17 @@
+{
+  "generated_at_utc": "2026-07-25T08:15:00Z",
+  "status": "NEUTRAL",
+  "begruendung": "Lauf erfolgte an einem Samstag (kein Handelstag), Datenbasis spiegelt den Schlussstand von Freitag, 24.07.2026 (Feed-Zeitstempel 2026-07-25T06:36:14Z, unveraendert seit dem vorherigen Lauf). Marktampel: von 5 Kriterien sind 3 pruefbar (A/D-Ratio und %NASDAQ-Aktien-ueber-50DMA fehlen im Feed - bekannte Datenluecke). Davon 2 verletzt (VIX-Proxy VIXY 21,465 > 18; NASDAQ-Proxy QQQ 684,23, -3,86% unter SMA20) und 1 erfuellt (SOX-Proxy SOXX 5T +1,04% vs. NASDAQ 5T -1,6% - SOX bestaetigt/staerker). Rechnerisch NEUTRAL (1-2 von 5 Kriterien verletzt), nicht Risk-Off. Der Institutionelle Marktfilter (Abschnitt 15B) ist mit 2 von 5 bekannten Warnkriterien (VIX>18, NASDAQ<20DMA) dennoch ausgeloest -> keine Kaufempfehlung moeglich, unabhaengig von Einzelscores. Ergebnis: Kein Trade, Kapitalerhalt hat Vorrang.",
+  "sektor_rotation": [
+    {"sektor": "Defense", "trend": "positiv", "kommentar": "LMT 5T +14,54%, RTX +9,99%, NOC +4,01% - alle mit steigender OBV-Linie, getrieben durch Earnings-Beats und Pentagon-Restocking (Rekord-Auftragsbestaende). Staerkster Sektor, aber LMT/RTX nahe Anti-Bulltrap-Schwellen."},
+    {"sektor": "Semiconductors/AI", "trend": "positiv", "kommentar": "NVDA +2,05% (OBV +113,7 Mio., staerkster Wert der Watchlist), AMD +5,3% (OBV +23,0 Mio.), AVGO +2,99% (OBV +18,4 Mio.) - klare relative Staerke ggue. dem schwachen NASDAQ (-1,6% 5T), aber noch unter SMA50."},
+    {"sektor": "Technology", "trend": "neutral", "kommentar": "AAPL 5T -0,2%, RSI von ueberkauften 88,6 auf 67,7 abgekuehlt, OBV fallend - Konsolidierung nach Ueberdehnung."},
+    {"sektor": "Payments", "trend": "neutral", "kommentar": "V -0,79%, MA -0,72% - beide flach, OBV leicht fallend, kein Signal."},
+    {"sektor": "Industrials", "trend": "negativ", "kommentar": "CAT 5T +0,96%, aber RSI 29,38 stark ueberverkauft und -5,27% unter SMA20, OBV fallend/flach - kein Akkumulationssignal."},
+    {"sektor": "Software/Cloud", "trend": "negativ", "kommentar": "MSFT -3,07%, CRM -4,19%, NOW -4,32%, ORCL -9,03% (-14,45%/-32,97% unter SMA20/50) - durchgehend fallende OBV-Linien, schwaechster Kernsektor. ORCL zusaetzlich Portfolio-Position mit erheblichem Buchverlust."},
+    {"sektor": "Cybersecurity", "trend": "negativ", "kommentar": "PANW 5T -9,74%, OBV fallend, unter SMA20 - deutliche Schwaeche."},
+    {"sektor": "Healthcare", "trend": "negativ", "kommentar": "UNH 5T -1,28%, OBV fallend (-10,8 Mio.) - leicht negativ, aber weiterhin defensivste Position der Watchlist."},
+    {"sektor": "MedTech", "trend": "negativ", "kommentar": "ISRG RSI 21,64 extrem ueberverkauft, -13,1%/-17,1% unter SMA20/50, OBV weiter fallend - klarer Abwaertstrend."},
+    {"sektor": "Fintech/Brokerage", "trend": "negativ", "kommentar": "HOOD 5T -5,05%, -11,49% unter SMA20, OBV fallend (-51,1 Mio.) - Breakdown. Zusaetzlich Portfolio-Position mit Buchverlust."}
+  ]
+}
