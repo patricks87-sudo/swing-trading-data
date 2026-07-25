@@ -37,13 +37,13 @@ def already_done_today(run, now_berlin):
     path = f"data/{run}_latest.json"
     if not os.path.exists(path):
         return False
-        try:
-            with open(path) as fh:
-                snap = json.load(fh)
-                gen = datetime.fromisoformat(snap["generated_at_utc"])
-                return gen.astimezone(BERLIN).date() == now_berlin.date()
-        except Exception:
-            return False
+    try:
+        with open(path) as fh:
+            snap = json.load(fh)
+            gen = datetime.fromisoformat(snap["generated_at_utc"])
+            return gen.astimezone(BERLIN).date() == now_berlin.date()
+    except Exception:
+        return False
 
 
 def pick_run(now_berlin):
@@ -57,17 +57,17 @@ def pick_run(now_berlin):
 
 
 def main():
-now_berlin = datetime.now(BERLIN)
-chosen = pick_run(now_berlin)
-with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-    if chosen:
-        f.write(f"run={chosen}\n")
-        f.write("skip=false\n")
-        print(f"Gewaehlter Lauf: {chosen}")
-    else:
-        f.write("run=none\n")
-        f.write("skip=true\n")
-        print("Kein Lauf faellig - wird uebersprungen.")
+    now_berlin = datetime.now(BERLIN)
+    chosen = pick_run(now_berlin)
+    with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+        if chosen:
+            f.write(f"run={chosen}\n")
+            f.write("skip=false\n")
+            print(f"Gewaehlter Lauf: {chosen}")
+        else:
+            f.write("run=none\n")
+            f.write("skip=true\n")
+            print("Kein Lauf faellig - wird uebersprungen.")
 
 
 if __name__ == "__main__":
