@@ -1,16 +1,66 @@
 {
-  "generated_at_utc": "2026-07-27T12:57:00Z",
-  "run_date": "2026-07-27",
+  "generated_at_utc": "2026-07-28T12:53:47Z",
+  "run_date": "2026-07-28",
   "candidates": [
-    {"ticker": "LMT", "sector": "Defense", "score": "mittel", "begruendung": "5T +14,51% nach Q2-Earnings-Beat mit angehobenem Jahresausblick und Rekord-Auftragsbestand (Pentagon-Restocking), OBV steigend, RSI 68,92 (noch nicht ueberkauft). Aber: Abstand SMA20 +11,14% (Anti-Bulltrap-Trigger 1) und 5T-Anstieg nahe der 15%-Schwelle - Einzelevent-Gap statt gradueller Akkumulation. Kein Kauf trotz starker Fundamentaldaten."},
-    {"ticker": "RTX", "sector": "Defense/Industrials", "score": "mittel", "begruendung": "5T +9,96%, ebenfalls Earnings-Beat und Rekord-Backlog, RSI 65,58, OBV steigend (+22,1 Mio.). Abstand SMA20 +8,49% (1 Anti-Bulltrap-Trigger), sonst sauber. Beobachten fuer moeglichen Pullback-Einstieg."},
-    {"ticker": "NOC", "sector": "Defense", "score": "mittel", "begruendung": "5T +3,96%, OBV leicht steigend, RSI 47,18 neutral, kein Anti-Bulltrap-Trigger ausgeloest. Sauberster Defense-Wert, aber durch institutionellen Marktfilter (15B) blockiert."},
-    {"ticker": "NVDA", "sector": "Semiconductors/AI", "score": "mittel", "begruendung": "5T +1,99%, OBV weiterhin stark steigend (+109,9 Mio., staerkster Wert der Watchlist), relative Staerke besser als NASDAQ und S&P 500. Noch unter SMA50 (-1,12%), Trend nicht vollstaendig bestaetigt. Ist bereits Portfolio-Position (Halten)."},
-    {"ticker": "AMD", "sector": "Semiconductors/AI", "score": "mittel", "begruendung": "5T +5,28%, OBV steigend (+23,0 Mio.), aber noch unter SMA20 (-2,08%) - eher Pullback-Setup als bestaetigter Breakout. RSI 44,08 neutral."},
-    {"ticker": "AVGO", "sector": "Semiconductors/AI", "score": "niedrig", "begruendung": "5T +2,99%, OBV leicht steigend, Kurs nahe SMA20 (+0,14%), noch unter SMA50 (-4,36%) - Basisbildung ohne klares Signal."},
-    {"ticker": "AAPL", "sector": "Technology", "score": "niedrig", "begruendung": "5T -0,22%, RSI von zuvor ueberkauft auf 67,7 abgekuehlt, OBV fallend. Zusaetzlich: Apple berichtet laut Presse in dieser Handelswoche (27.-31.07.) Quartalszahlen - Ausschluss ueber Qualitaetsfilter (Earnings <7 Handelstage), unabhaengig vom technischen Bild."},
-    {"ticker": "CAT", "sector": "Industrials", "score": "niedrig", "begruendung": "RSI 29,38 stark ueberverkauft, 5T +0,96%, aber OBV fallend/flach, -5,27% unter SMA20. Kein Akkumulationssignal, allenfalls technischer Bounce."},
-    {"ticker": "UNH", "sector": "Healthcare", "score": "niedrig", "begruendung": "5T -1,26%, OBV fallend, RSI 51,65 neutral. Keine Akkumulation erkennbar, defensive Beobachtungsposition."},
-    {"ticker": "ISRG", "sector": "MedTech", "score": "niedrig", "begruendung": "RSI 21,65 extrem ueberverkauft, -13,09%/-17,09% unter SMA20/50, OBV weiter fallend. Klarer Abwaertstrend, kein Pullback-Kandidat trotz Ueberverkauftheit."}
+    {
+      "ticker": "AVGO",
+      "sector": "Semiconductors/AI",
+      "score": "mittel",
+      "begruendung": "Einziger Semi-Wert mit positivem OBV-Trend 5T (+18,6 Mio.) und leicht steigendem Kurs (+1,34% 5T) trotz branchenweitem Chip-Ausverkauf (SOX-Proxy -1,51% 5T, Suedkorea-Markt heute -10%, Sorgen um zirkulaere KI-Finanzierung). Kein Anti-Bulltrap-Trigger, RSI 55 neutral. Bleibt aber durch Institutionellen Marktfilter (15B) und schwaches Sektorumfeld blockiert."
+    },
+    {
+      "ticker": "RTX",
+      "sector": "Defense/Industrials",
+      "score": "niedrig",
+      "begruendung": "Staerkster Momentum-Wert der Watchlist (5T +12,33%, OBV +23,8 Mio.), aber 2 Anti-Bulltrap-Kriterien erfuellt: Abstand SMA20 +10,5% (>8%) und Abstand SMA50 +16,73% (>15%) -> Ausschluss nach Abschnitt 6, deutlich ueberdehnt."
+    },
+    {
+      "ticker": "LMT",
+      "sector": "Defense",
+      "score": "niedrig",
+      "begruendung": "5T +13,83%, OBV positiv, aber Abstand SMA20 +9,88% (>8%, Anti-Bulltrap) UND Volumen 894k klar unter Ø 1,14 Mio. trotz starkem Kursanstieg (Breakout ohne steigendes Volumen) -> 2 Kriterien erfuellt, Ausschluss."
+    },
+    {
+      "ticker": "NOC",
+      "sector": "Defense",
+      "begruendung": "5T +4,51% moderat, aber Kurs weiterhin unter SMA200 (langfristiger Abwaertstrend), Volumen 680k klar unter Ø 1,03 Mio. -> keine institutionelle Bestaetigung des Sektor-Momentums.",
+      "score": "niedrig"
+    },
+    {
+      "ticker": "MA",
+      "sector": "Payments",
+      "score": "niedrig",
+      "begruendung": "Flach (5T +0,78%), OBV 5T leicht fallend (-2,4 Mio.) trotz Kurs nahe Hoch -> kein klares Akkumulationssignal."
+    },
+    {
+      "ticker": "NOW",
+      "sector": "Software/Cloud",
+      "score": "niedrig",
+      "begruendung": "Volumen leicht ueber Ø, aber OBV 5T deutlich fallend (-52,9 Mio.) trotz stabilem Kurs -> Warnsignal auf Distribution statt Akkumulation."
+    },
+    {
+      "ticker": "UNH",
+      "sector": "Healthcare",
+      "score": "niedrig",
+      "begruendung": "5T -0,93%, unter SMA20, RSI 43 neutral-schwach -> kein Setup, aber als defensiver Sektor fuer Risk-Off-Szenario im Blick zu behalten."
+    },
+    {
+      "ticker": "PANW",
+      "sector": "Cybersecurity",
+      "score": "niedrig",
+      "begruendung": "Deutlichster Verlierer der Watchlist: 5T -8,99%, OBV 5T stark fallend (-29,3 Mio.), klarer Kapitalabfluss."
+    },
+    {
+      "ticker": "ISRG",
+      "sector": "MedTech",
+      "score": "niedrig",
+      "begruendung": "RSI 30,6 ueberverkauft, aber OBV weiterhin fallend und -12% unter SMA50 -> strukturell gebrochener Chart, kein Reversal-Signal, keine Schaetzung eines Bodens ohne Bestaetigung."
+    },
+    {
+      "ticker": "CAT",
+      "sector": "Industrials",
+      "score": "niedrig",
+      "begruendung": "RSI 31,7 ueberverkauft, OBV 5T fallend, unter SMA20/50 -> kein Akkumulationssignal trotz guenstiger Bewertung."
+    }
   ]
 }
