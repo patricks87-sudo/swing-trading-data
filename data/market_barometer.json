@@ -1,18 +1,18 @@
 {
-  "generated_at_utc": "2026-07-28T15:20:00Z",
+  "generated_at_utc": "2026-07-28T15:29:39Z",
   "status": "RISK-OFF",
-  "begruendung": "Institutioneller Marktfilter beim zweiten Handelsstunden-Check (P5.5, 17:13 MESZ) weiterhin vollständig ausgelöst (3/3 Kriterien, unverändert seit P5): VIX-Proxy (VIXY) 21,28 > 18; NASDAQ-Proxy (QQQ) -4,91%/-6,07% unter SMA20/50 (5T -5,05%); SOX-Proxy (SOXX) underperformt NASDAQ deutlich (5T -11,62% vs. -5,05%). S&P500-Proxy (SPY) weiterhin unter SMA50 (-0,71%) -> Zusatzwarnung 'Momentum-Trades eingeschränkt' bleibt aktiv. Keine Verbesserung seit dem P5-Lauf, Halbleiter-Ausverkauf (v.a. AMD -8,85% an einem einzigen Handelstag) belastet den Markt zusätzlich. Kapitalabfluss aus Technology/Semiconductors erkennbar, Zufluss in Defense/Payments, dort aber bereits stark überkauft.",
+  "begruendung": "Institutioneller Marktfilter beim P1-Lauf (17:22 MESZ) weiterhin vollstaendig ausgeloest (3/3 Kriterien, unveraendert seit P5 13:36 UTC): VIX-Proxy (VIXY) 21,11 > 18; NASDAQ-Proxy (QQQ) -4,48%/-5,64% unter SMA20/50 (5T -4,6%); SOX-Proxy (SOXX) underperformt NASDAQ deutlich (5T -11,04% vs. -4,6%). S&P500-Proxy (SPY) weiterhin unter SMA50 (-0,52%) -> Zusatzwarnung 'Momentum-Trades eingeschraenkt' bleibt aktiv. Keine Verbesserung seit P5/P5.5, Halbleiter-Ausverkauf haelt an (AMD 5T -16,4%). Kapitalabfluss aus Semiconductors/AI und Fintech/Brokerage, punktueller Zufluss in Defense/Payments, dort aber bereits stark ueberkauft (RTX RSI 80,5, MA RSI 71,3).",
   "sektor_rotation": [
-    {"sektor": "Technology", "trend": "positiv", "kommentar": "AAPL +3,5% 5T, aber RSI 72 überkauft und Earnings am 30.7. -> erhöhtes Risiko für Neueinstiege."},
-    {"sektor": "Software/Cloud", "trend": "neutral", "kommentar": "Kurse uneinheitlich (CRM +7,8%, NOW +8,9% stark; ORCL -7,2% schwach), aber OBV-Trend in allen 4 Werten negativ trotz teils steigender Kurse -> Distribution statt Akkumulation."},
-    {"sektor": "Semiconductors/AI", "trend": "negativ", "kommentar": "AMD -17,1% 5T (davon -8,85% allein heute), NVDA -5,2%, AVGO -2,0% -> branchenweiter Ausverkauf durch Sorgen um zirkuläre KI-Finanzierung und Kospi-Crash."},
-    {"sektor": "Cybersecurity", "trend": "negativ", "kommentar": "PANW -6,6% 5T, OBV-Trend weiterhin stark negativ, anhaltender Kapitalabfluss."},
-    {"sektor": "Defense", "trend": "positiv", "kommentar": "LMT +14,7%, NOC +8,0% 5T, aber LMT stark überdehnt (RSI 74, Volumen unter Ø trotz Kursanstieg) -> für Neueinstieg zu spät."},
-    {"sektor": "Defense/Industrials", "trend": "positiv", "kommentar": "RTX +12,2% 5T, RSI 80 extrem überkauft -> Euphorie-Muster, Anti-Bulltrap-Ausschluss."},
-    {"sektor": "Healthcare", "trend": "negativ", "kommentar": "UNH -3,2% 5T, unter SMA20, kein Reversal-Signal."},
-    {"sektor": "MedTech", "trend": "neutral", "kommentar": "ISRG +4,0% 5T Erholung, aber OBV noch leicht negativ und weiterhin deutlich unter SMA20/50."},
-    {"sektor": "Payments", "trend": "positiv", "kommentar": "V +2,9%, MA +4,1% 5T, aber MA mit RSI 71 überkauft und Volumen deutlich unter Ø."},
-    {"sektor": "Industrials", "trend": "negativ", "kommentar": "CAT -6,9% 5T, RSI 23 überverkauft, OBV-Trend auf negativ gedreht, kein Reversal."},
-    {"sektor": "Fintech/Brokerage", "trend": "negativ", "kommentar": "HOOD -14,1% 5T, RSI 29 überverkauft, keine institutionelle Stabilisierung erkennbar."}
+    {"sektor": "Technology", "trend": "positiv", "kommentar": "AAPL +3,5% 5T, aber RSI 71,9 ueberkauft und Earnings am 30.7. -> erhoehtes Risiko fuer Neueinstiege."},
+    {"sektor": "Software/Cloud", "trend": "neutral", "kommentar": "Kurse uneinheitlich (CRM +8,2%, NOW +9,3% stark; ORCL -5,6% schwach), aber OBV-Trend in allen 4 Werten negativ trotz teils steigender Kurse -> Distribution statt Akkumulation."},
+    {"sektor": "Semiconductors/AI", "trend": "negativ", "kommentar": "AMD -16,4% 5T, NVDA -4,7%, AVGO -1,4% -> branchenweiter Ausverkauf durch Sorgen um zirkulaere KI-Finanzierung haelt an."},
+    {"sektor": "Cybersecurity", "trend": "negativ", "kommentar": "PANW -6,2% 5T, OBV-Trend weiterhin negativ, anhaltender Kapitalabfluss."},
+    {"sektor": "Defense", "trend": "positiv", "kommentar": "LMT +14,6%, NOC +7,9% 5T, aber LMT stark ueberdehnt (RSI 73,8, Volumen unter Ø trotz Kursanstieg) -> fuer Neueinstieg zu spaet."},
+    {"sektor": "Defense/Industrials", "trend": "positiv", "kommentar": "RTX +12,2% 5T, RSI 80,5 extrem ueberkauft -> Euphorie-Muster, Anti-Bulltrap-Ausschluss."},
+    {"sektor": "Healthcare", "trend": "negativ", "kommentar": "UNH -2,9% 5T, knapp unter SMA20, kein Reversal-Signal."},
+    {"sektor": "MedTech", "trend": "neutral", "kommentar": "ISRG +4,1% 5T Erholung, aber OBV noch leicht negativ und weiterhin deutlich unter SMA20/50."},
+    {"sektor": "Payments", "trend": "positiv", "kommentar": "V +3,2%, MA +4,3% 5T, aber MA mit RSI 71,3 ueberkauft und Volumen deutlich unter Ø."},
+    {"sektor": "Industrials", "trend": "negativ", "kommentar": "CAT -6,5% 5T, RSI 23,1 ueberverkauft, OBV-Trend negativ, kein Reversal."},
+    {"sektor": "Fintech/Brokerage", "trend": "negativ", "kommentar": "HOOD -13,1% 5T, RSI 29,4 ueberverkauft, keine institutionelle Stabilisierung erkennbar, Quartalszahlen morgen (29.07.)."}
   ]
 }
