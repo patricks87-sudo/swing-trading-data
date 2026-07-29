@@ -1,66 +1,66 @@
 {
-  "generated_at_utc": "2026-07-28T12:53:47Z",
-  "run_date": "2026-07-28",
+  "generated_at_utc": "2026-07-29T12:59:26Z",
+  "run_date": "2026-07-29",
   "candidates": [
-    {
-      "ticker": "AVGO",
-      "sector": "Semiconductors/AI",
-      "score": "mittel",
-      "begruendung": "Einziger Semi-Wert mit positivem OBV-Trend 5T (+18,6 Mio.) und leicht steigendem Kurs (+1,34% 5T) trotz branchenweitem Chip-Ausverkauf (SOX-Proxy -1,51% 5T, Suedkorea-Markt heute -10%, Sorgen um zirkulaere KI-Finanzierung). Kein Anti-Bulltrap-Trigger, RSI 55 neutral. Bleibt aber durch Institutionellen Marktfilter (15B) und schwaches Sektorumfeld blockiert."
-    },
     {
       "ticker": "RTX",
       "sector": "Defense/Industrials",
       "score": "niedrig",
-      "begruendung": "Staerkster Momentum-Wert der Watchlist (5T +12,33%, OBV +23,8 Mio.), aber 2 Anti-Bulltrap-Kriterien erfuellt: Abstand SMA20 +10,5% (>8%) und Abstand SMA50 +16,73% (>15%) -> Ausschluss nach Abschnitt 6, deutlich ueberdehnt."
+      "begruendung": "5T +12,86%, RSI 82,9 stark ueberkauft, Abstand SMA20 +9,72% und SMA50 +16,28% - alle drei Anti-Bulltrap-Schwellen gerissen, trotz Volumenbestaetigung (+56% ueber Oe) fuer Neueinstieg zu ueberdehnt."
     },
     {
       "ticker": "LMT",
       "sector": "Defense",
       "score": "niedrig",
-      "begruendung": "5T +13,83%, OBV positiv, aber Abstand SMA20 +9,88% (>8%, Anti-Bulltrap) UND Volumen 894k klar unter Ø 1,14 Mio. trotz starkem Kursanstieg (Breakout ohne steigendes Volumen) -> 2 Kriterien erfuellt, Ausschluss."
+      "begruendung": "5T +14,64%, RSI 73,9 ueberkauft, Abstand SMA20 +9,31% - 2 Anti-Bulltrap-Kriterien erfuellt, zudem Volumen unter Oe trotz Kursanstieg (schwache Breakout-Bestaetigung)."
     },
     {
-      "ticker": "NOC",
-      "sector": "Defense",
-      "begruendung": "5T +4,51% moderat, aber Kurs weiterhin unter SMA200 (langfristiger Abwaertstrend), Volumen 680k klar unter Ø 1,03 Mio. -> keine institutionelle Bestaetigung des Sektor-Momentums.",
-      "score": "niedrig"
-    },
-    {
-      "ticker": "MA",
-      "sector": "Payments",
-      "score": "niedrig",
-      "begruendung": "Flach (5T +0,78%), OBV 5T leicht fallend (-2,4 Mio.) trotz Kurs nahe Hoch -> kein klares Akkumulationssignal."
+      "ticker": "CRM",
+      "sector": "Software/Cloud",
+      "score": "mittel",
+      "begruendung": "5T +6,73%, OBV steigend, Volumen +35% ueber Oe, Abstand SMA20 8,51% grenzwertig (1 Anti-Bulltrap-Flag). Sektor Software/Cloud Rang 5, aber institutioneller Marktfilter blockiert jede Empfehlung."
     },
     {
       "ticker": "NOW",
       "sector": "Software/Cloud",
-      "score": "niedrig",
-      "begruendung": "Volumen leicht ueber Ø, aber OBV 5T deutlich fallend (-52,9 Mio.) trotz stabilem Kurs -> Warnsignal auf Distribution statt Akkumulation."
+      "score": "mittel",
+      "begruendung": "5T +8,39%, Volumen +34% ueber Oe, keine Anti-Bulltrap-Flags, aber OBV-Trend nur leicht positiv (+0,3 Mio.) nach laenger negativer OBV-Basis - Akkumulation nicht eindeutig."
     },
     {
-      "ticker": "UNH",
-      "sector": "Healthcare",
+      "ticker": "NOC",
+      "sector": "Defense",
       "score": "niedrig",
-      "begruendung": "5T -0,93%, unter SMA20, RSI 43 neutral-schwach -> kein Setup, aber als defensiver Sektor fuer Risk-Off-Szenario im Blick zu behalten."
+      "begruendung": "5T +7,21%, aber weiterhin unter SMA200 (-9,6%) und Volumen -30% unter Oe - kein bestaetigtes Akkumulationssignal, sauberster Defense-Wert technisch, aber ohne Volumenbestaetigung."
     },
     {
-      "ticker": "PANW",
-      "sector": "Cybersecurity",
+      "ticker": "V",
+      "sector": "Payments",
+      "score": "mittel",
+      "begruendung": "5T +3,03%, OBV steigend, Volumen +39% ueber Oe, keine Anti-Bulltrap-Flags. Earnings bereits am 28.7. nach Handelsschluss veroeffentlicht - Reaktion noch nicht vollstaendig eingepreist."
+    },
+    {
+      "ticker": "MA",
+      "sector": "Payments",
+      "score": "mittel",
+      "begruendung": "5T +4,54%, RSI 71,7 knapp unter Ueberkauft-Schwelle, OBV leicht positiv, keine Anti-Bulltrap-Flags, aber kein starkes institutionelles Signal."
+    },
+    {
+      "ticker": "AAPL",
+      "sector": "Technology",
       "score": "niedrig",
-      "begruendung": "Deutlichster Verlierer der Watchlist: 5T -8,99%, OBV 5T stark fallend (-29,3 Mio.), klarer Kapitalabfluss."
+      "begruendung": "5T +3,77%, RSI 72,3 (1 Anti-Bulltrap-Flag), zusaetzlich Earnings am 30.7. - ueber Qualitaetsfilter (Abschnitt 5) ausgeschlossen."
+    },
+    {
+      "ticker": "AVGO",
+      "sector": "Semiconductors/AI",
+      "score": "niedrig",
+      "begruendung": "5T -1,45%, Sektor Semiconductors/AI insgesamt schwaechster Bereich der Watchlist (Oe -6,65pp vs. S&P 500) nach branchenweitem Chip-Ausverkauf (Sorge um chinesischen Fertigungs-Durchbruch) - kein Akkumulationssignal."
     },
     {
       "ticker": "ISRG",
       "sector": "MedTech",
       "score": "niedrig",
-      "begruendung": "RSI 30,6 ueberverkauft, aber OBV weiterhin fallend und -12% unter SMA50 -> strukturell gebrochener Chart, kein Reversal-Signal, keine Schaetzung eines Bodens ohne Bestaetigung."
-    },
-    {
-      "ticker": "CAT",
-      "sector": "Industrials",
-      "score": "niedrig",
-      "begruendung": "RSI 31,7 ueberverkauft, OBV 5T fallend, unter SMA20/50 -> kein Akkumulationssignal trotz guenstiger Bewertung."
+      "begruendung": "RSI 34,8 ueberverkauft, aber strukturell -25% unter SMA200, OBV nur minimal positiv - kein bestaetigtes Reversal, Datenbasis fuer Trendwende unzureichend."
     }
   ]
 }
