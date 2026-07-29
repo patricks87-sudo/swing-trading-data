@@ -1,18 +1,17 @@
 {
-  "generated_at_utc": "2026-07-28T15:29:39Z",
+  "generated_at_utc": "2026-07-29T12:59:26Z",
   "status": "RISK-OFF",
-  "begruendung": "Institutioneller Marktfilter beim P1-Lauf (17:22 MESZ) weiterhin vollstaendig ausgeloest (3/3 Kriterien, unveraendert seit P5 13:36 UTC): VIX-Proxy (VIXY) 21,11 > 18; NASDAQ-Proxy (QQQ) -4,48%/-5,64% unter SMA20/50 (5T -4,6%); SOX-Proxy (SOXX) underperformt NASDAQ deutlich (5T -11,04% vs. -4,6%). S&P500-Proxy (SPY) weiterhin unter SMA50 (-0,52%) -> Zusatzwarnung 'Momentum-Trades eingeschraenkt' bleibt aktiv. Keine Verbesserung seit P5/P5.5, Halbleiter-Ausverkauf haelt an (AMD 5T -16,4%). Kapitalabfluss aus Semiconductors/AI und Fintech/Brokerage, punktueller Zufluss in Defense/Payments, dort aber bereits stark ueberkauft (RTX RSI 80,5, MA RSI 71,3).",
+  "begruendung": "P4-Lauf 12:51 UTC: Alle 3 pruefbaren Ampel-Kriterien verletzt - VIX-Proxy (VIXY) 21,24 > 18; NASDAQ-Proxy (QQQ) 675,49, -4,6% unter SMA20; SOX-Proxy (SOXX) 5T -11,08% deutlich schwaecher als NASDAQ 5T -4,72%. A/D-Ratio und % NASDAQ-Aktien ueber 50 DMA weiterhin nicht im Feed verfuegbar. Institutioneller Marktfilter (15B) mit 3/5 bekannten Warnkriterien ausgeloest -> keine Kaufempfehlung moeglich, unabhaengig von Einzelscores. Setzt die bereits gestern ab P5/P5.5/P1 aufgetretene Risk-Off-Einstufung fort (P4 gestern frueh noch Neutral). Zusaetzliche Belastung heute: ueberraschender iranischer Angriff auf die USA (Oelpreis +3%), Unsicherheit vor Fed-Zinsentscheid und Microsoft/Meta-Quartalszahlen heute Abend, anhaltender Chip-Sektor-Ausverkauf wegen Sorgen um chinesischen Fertigungs-Durchbruch.",
   "sektor_rotation": [
-    {"sektor": "Technology", "trend": "positiv", "kommentar": "AAPL +3,5% 5T, aber RSI 71,9 ueberkauft und Earnings am 30.7. -> erhoehtes Risiko fuer Neueinstiege."},
-    {"sektor": "Software/Cloud", "trend": "neutral", "kommentar": "Kurse uneinheitlich (CRM +8,2%, NOW +9,3% stark; ORCL -5,6% schwach), aber OBV-Trend in allen 4 Werten negativ trotz teils steigender Kurse -> Distribution statt Akkumulation."},
-    {"sektor": "Semiconductors/AI", "trend": "negativ", "kommentar": "AMD -16,4% 5T, NVDA -4,7%, AVGO -1,4% -> branchenweiter Ausverkauf durch Sorgen um zirkulaere KI-Finanzierung haelt an."},
-    {"sektor": "Cybersecurity", "trend": "negativ", "kommentar": "PANW -6,2% 5T, OBV-Trend weiterhin negativ, anhaltender Kapitalabfluss."},
-    {"sektor": "Defense", "trend": "positiv", "kommentar": "LMT +14,6%, NOC +7,9% 5T, aber LMT stark ueberdehnt (RSI 73,8, Volumen unter Ø trotz Kursanstieg) -> fuer Neueinstieg zu spaet."},
-    {"sektor": "Defense/Industrials", "trend": "positiv", "kommentar": "RTX +12,2% 5T, RSI 80,5 extrem ueberkauft -> Euphorie-Muster, Anti-Bulltrap-Ausschluss."},
-    {"sektor": "Healthcare", "trend": "negativ", "kommentar": "UNH -2,9% 5T, knapp unter SMA20, kein Reversal-Signal."},
-    {"sektor": "MedTech", "trend": "neutral", "kommentar": "ISRG +4,1% 5T Erholung, aber OBV noch leicht negativ und weiterhin deutlich unter SMA20/50."},
-    {"sektor": "Payments", "trend": "positiv", "kommentar": "V +3,2%, MA +4,3% 5T, aber MA mit RSI 71,3 ueberkauft und Volumen deutlich unter Ø."},
-    {"sektor": "Industrials", "trend": "negativ", "kommentar": "CAT -6,5% 5T, RSI 23,1 ueberverkauft, OBV-Trend negativ, kein Reversal."},
-    {"sektor": "Fintech/Brokerage", "trend": "negativ", "kommentar": "HOOD -13,1% 5T, RSI 29,4 ueberverkauft, keine institutionelle Stabilisierung erkennbar, Quartalszahlen morgen (29.07.)."}
+    {"sektor": "Defense", "trend": "positiv", "kommentar": "Staerkster Sektor (Oe ca. +12,6pp vs. S&P 500, 5T): LMT +14,6%, RTX +12,9%, NOC +7,2%. LMT/RTX bereits ueberdehnt (Anti-Bulltrap-Ausschluss), NOC ohne Volumenbestaetigung und weiterhin unter SMA200."},
+    {"sektor": "Payments", "trend": "positiv", "kommentar": "V +3,0%, MA +4,5%, beide ohne Anti-Bulltrap-Flags, moderate institutionelle Akkumulation (Volumen ueber Oe, OBV steigend)."},
+    {"sektor": "Technology", "trend": "positiv", "kommentar": "AAPL +3,8%, aber RSI 72,3 ueberkauft und Earnings am 30.7. -> Qualitaetsfilter greift, kein Neueinstieg."},
+    {"sektor": "MedTech", "trend": "neutral", "kommentar": "ISRG +3,4% von ueberverkauftem Niveau, aber strukturell -25% unter SMA200, kein bestaetigtes Reversal."},
+    {"sektor": "Software/Cloud", "trend": "neutral", "kommentar": "Gemischt: CRM +6,7%/NOW +8,4% positiv, MSFT -1,1%/ORCL -5,6% negativ, Sektor-Ø nur leicht positiv (+3,1pp). Microsoft (Portfolio-relevant fuer Sektor) berichtet heute Abend Zahlen."},
+    {"sektor": "Healthcare", "trend": "neutral", "kommentar": "UNH -1,7%, OBV fallend, kein Akkumulationssignal."},
+    {"sektor": "Industrials", "trend": "negativ", "kommentar": "CAT -5,5%, RSI 24,1 stark ueberverkauft, OBV fallend, kein Reversal."},
+    {"sektor": "Cybersecurity", "trend": "negativ", "kommentar": "PANW -6,8%, OBV fallend, unter SMA20."},
+    {"sektor": "Semiconductors/AI", "trend": "negativ", "kommentar": "Schwaechster Sektor (Oe ca. -6,7pp vs. S&P 500): AMD -16,5%, NVDA -5,0%, AVGO -1,5% - branchenweiter Chip-Ausverkauf wegen Sorgen um chinesischen Fertigungs-Durchbruch bei KI-Chips."},
+    {"sektor": "Fintech/Brokerage", "trend": "negativ", "kommentar": "HOOD -12,8%, RSI 29,6 ueberverkauft, deutlich unter SMA20 (-13%) - Portfolio-Position, berichtet zudem heute (29.7.) Quartalszahlen, kein Kaufsignal."}
   ]
 }
