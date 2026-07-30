@@ -1,62 +1,62 @@
 {
-  "generated_at_utc": "2026-07-30T12:51:20Z",
+  "generated_at_utc": "2026-07-30T13:42:19Z",
   "status": "RISK-OFF",
-  "begruendung": "Institutioneller Marktfilter (15B) mit 3 von 3 pruefbaren Kriterien verletzt (A/D-Ratio und % NASDAQ-Aktien ueber 50 DMA fehlen weiterhin im Feed): VIX-Proxy 22,53 (>18-Schwelle verletzt, 5T +8,74%, RSI14 61,26 steigend); NASDAQ Composite RSI14 nur 21,82 (stark ueberverkauft), -6,05%/-7,55% unter SMA20/50 (5T -6,18%, schlechter als an den Vortagen); SOX-Proxy 5T -16,29% vs. NASDAQ 5T -6,18% - der Halbleiter-Ausverkauf hat sich weiter beschleunigt und Marktkapitalisierung von ueber 1 Billion USD vernichtet. Depotfilter (Abschnitt 12) zusaetzlich ausgeloest: 2 von 3 offenen Positionen (HOOD -10,05%, ORCL -27,43%) mit Buchverlust >10% - laut Regel keine neue Position, Umschichtung pruefen. Fed hat Leitzins trotz hawkischer Toene unveraendert gelassen (3 Dissents), Iran hat die Waffenruhe beendet, Oelpreis bleibt erhoeht. Microsoft uebertraf mit Rekordgewinn deutlich die Erwartungen (Aktie +8-10%), waehrend Meta bei den KI-Ausgaben enttaeuschte (-9%) - der Markt bleibt trotz des MSFT-Erfolgs insgesamt risikoscheu. Apple berichtet heute (30.7.) nach Handelsschluss Quartalszahlen.",
+  "begruendung": "P5-Lauf (US-Open, 15:35 MESZ). VIX-Proxy 21,70 (>18-Schwelle weiterhin verletzt, leicht ruecklaeufig ggue. P4 14:51 MESZ: 22,53), RSI14 58,5. NASDAQ-Proxy RSI14 nur 28,27 (weiterhin stark ueberverkauft, leichte Erholung von 21,82), -3,99%/-5,79% unter SMA20/50, 5T -2,63%, OBV-Trend -187,9 Mio. fallend (Distribution haelt an). SP500-Proxy -1,35%/-1,27% unter SMA20/50 -> unter 50-DMA, Zusatzwarnung gemaess Abschnitt 2 ausgeloest, Momentum-Trades eingeschraenkt. SOX-Proxy weiterhin schwaechster Bereich: 5T -11,02% (verbessert ggue. -16,29% im P4-Lauf, aber -9,39%/-13,52% unter SMA20/50). Zusaetzliche Warnsignale: LMT und RTX, die im P4-Lauf noch mit +10,66%/+10,45% 5T die staerksten Defense-Kandidaten waren, sind binnen weniger Stunden auf -0,99%/+1,39% zurueckgefallen - klassisches Fake-Breakout-Reversal-Muster, zeigt erhoehte Marktfragilitaet auch bei zuvor sauberen Setups. Fed haelt Leitzins trotz hawkischer Toene unveraendert (3 Dissents), 30-jaehrige Anleiherendite auf hoechstem Stand seit 2007, Iran hat Waffenruhe beendet und Handelsschiffe in der Strasse von Hormus angegriffen (Oelpreis erhoeht). Microsoft sprang zum Handelsstart um fast 9% nach starken Azure-Zahlen, Meta verlor dagegen rund 9% wegen enttaeuschendem KI-Investitionsausblick - der breite Markt bleibt trotz MSFT-Erfolg risikoscheu. Apple berichtet heute (30.7.) nach Handelsschluss Quartalszahlen. Depotfilter-Kontext (P4, Abschnitt 12) weiterhin aktiv: HOOD und ORCL mit Buchverlust >10% (HOOD sogar von -10,05% auf -12,85% verschlechtert), NVDA +2,80% - keine neue Position, Umschichtung pruefen.",
   "sektor_rotation": [
     {
       "sektor": "Payments",
       "trend": "positiv",
-      "kommentar": "V +4,33% und MA +5,89%, beide ohne Anti-Bulltrap-Flags, V zusaetzlich mit Volumen +40% ueber Oe - technisch staerkster Bereich der Watchlist, aber institutionell durch Marktfilter blockiert."
-    },
-    {
-      "sektor": "Defense",
-      "trend": "positiv",
-      "kommentar": "LMT 5T +10,66% (RSI 72,31, Anti-Bulltrap aktiv), NOC +1,86% technisch sauberer, aber weiterhin unter SMA200 und ohne Volumenbestaetigung."
-    },
-    {
-      "sektor": "Defense/Industrials",
-      "trend": "positiv",
-      "kommentar": "RTX 5T +10,45%, RSI 75,7 stark ueberkauft - fuer Neueinstieg durch Anti-Bulltrap-Filter gesperrt."
+      "kommentar": "V +3,83% (RSI 63,48, sauber, RS vs SP500/NASDAQ deutlich positiv), MA +9,15% (RSI 74,13, jetzt ueberkauft, erhoehtes Fake-Breakout-Risiko) - weiterhin staerkster sauberer Bereich der Watchlist, OBV-Trend bei beiden positiv."
     },
     {
       "sektor": "Software/Cloud",
-      "trend": "neutral",
-      "kommentar": "Gemischt: NOW +21,27% und CRM +15,57% beide durch Anti-Bulltrap-Filter gesperrt (ueberdehnt), MSFT trotz starker Quartalszahlen nur +0,05% im Feed sichtbar, ORCL (Portfolio-Position) -6,44% strukturell schwach."
+      "trend": "positiv",
+      "kommentar": "MSFT +17,14% (Earnings-Gap, RSI 72,82 stark ueberkauft), NOW +19,93%, CRM +14,0% (beide weiterhin ueberdehnt), ORCL +2,06% (Portfolio-Position, strukturell schwach, OBV tief negativ) - starkes 5T-Bild, aber groesstenteils earnings-getrieben bzw. ueberdehnt, kein valider Neueinstieg."
     },
     {
-      "sektor": "Technology",
+      "sektor": "Defense/Industrials",
       "trend": "neutral",
-      "kommentar": "Nur AAPL abgedeckt (+3,77%, RSI 68,65) - durch Qualitaetsfilter ausgeschlossen: Earnings heute (30.7.) nach Handelsschluss."
+      "kommentar": "RTX +1,39% - deutliche Abschwaechung ggue. P4 (+10,45%), Reversal-Muster, RSI 69,45 weiterhin erhoeht. Fuer Neueinstieg gesperrt."
+    },
+    {
+      "sektor": "Defense",
+      "trend": "negativ",
+      "kommentar": "LMT -0,99% (starker Reversal ggue. P4 +10,66% - Fake-Breakout), NOC -0,79% (weiterhin unter SMA20/50/200, kein Akkumulationssignal) - beide ohne valides Setup."
     },
     {
       "sektor": "MedTech",
       "trend": "neutral",
-      "kommentar": "ISRG +3,64% von ueberverkauftem Niveau (RSI 33,75), aber strukturell -7,45%/-12,36% unter SMA20/50 - kein bestaetigtes Reversal."
+      "kommentar": "ISRG +5,92% von ueberverkauftem Niveau (RSI 34,39), aber strukturell weiterhin -7,21%/-12,33% unter SMA20/50 - kein bestaetigtes Reversal."
+    },
+    {
+      "sektor": "Technology",
+      "trend": "neutral",
+      "kommentar": "Nur AAPL abgedeckt (+3,45%, RSI 63,74) - durch Qualitaetsfilter ausgeschlossen: Earnings heute (30.7.) nach Handelsschluss."
     },
     {
       "sektor": "Healthcare",
       "trend": "negativ",
-      "kommentar": "UNH 5T -2,49%, RSI 43,62, knapp unter SMA20 - schwache Verfassung, keine institutionelle Akkumulation erkennbar."
+      "kommentar": "UNH 5T -2,24%, RSI 43,9, unter SMA20 - keine institutionelle Akkumulation erkennbar."
     },
     {
       "sektor": "Cybersecurity",
       "trend": "negativ",
-      "kommentar": "PANW 5T -6,3%, -6,99% unter SMA20, RSI 37,03 - kein Akkumulationssignal."
+      "kommentar": "PANW 5T -2,61%, -5,62% unter SMA20, RSI 44,76 - kein Akkumulationssignal."
     },
     {
       "sektor": "Semiconductors/AI",
       "trend": "negativ",
-      "kommentar": "Schwaechster Bereich der Watchlist: AMD 5T -22,23% (RSI 29,09), NVDA -10,4% (Portfolio-Position), AVGO -6,68% - Halbleiter-Ausverkauf beschleunigt sich weiter (>1 Billion USD Marktkapitalisierung branchenweit verloren)."
+      "kommentar": "AMD -14,16% (RSI 34,37), NVDA -7,97% (Portfolio-Position, RSI 34,44), AVGO -2,97% (RSI 41,68) - Ausverkauf haelt an, wenngleich leichte Erholung ggue. P4 (AMD dort noch -22,23%). OBV-Trend bei allen dreien weiterhin negativ."
     },
     {
       "sektor": "Industrials",
       "trend": "negativ",
-      "kommentar": "CAT 5T -11,99%, RSI 19,53 extrem ueberverkauft, -13,82%/-15,11% unter SMA20/50."
+      "kommentar": "CAT 5T -9,61% (leicht verbessert ggue. P4: -11,99%), RSI 23,1 weiterhin extrem ueberverkauft, -10,06%/-12,2% unter SMA20/50."
     },
     {
       "sektor": "Fintech/Brokerage",
       "trend": "negativ",
-      "kommentar": "HOOD (Portfolio-Position) 5T -14,01%, RSI 25,83, weiterhin -15,33%/-6,61% unter SMA20/50 - schwaechster Kernsektor der Watchlist."
+      "kommentar": "HOOD (Portfolio-Position) 5T -14,3% (leicht verschlechtert ggue. P4: -14,01%), RSI 26,0, -17,12%/-9,7% unter SMA20/50 - weiterhin schwaechster Kernsektor."
     }
   ]
 }
