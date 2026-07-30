@@ -1,62 +1,62 @@
 {
-  "generated_at_utc": "2026-07-30T15:08:24Z",
+  "generated_at_utc": "2026-07-30T15:26:59Z",
   "status": "RISK-OFF",
-  "begruendung": "P5.5-Lauf (17:08 MESZ, 90 Min. nach US-Open). VIX-Proxy 21,78 (>18-Schwelle weiterhin verletzt, praktisch unveraendert ggue. P5: 21,70), RSI14 59,09. NASDAQ-Proxy RSI14 31,62 (spuerbare Erholung ggue. P5: 28,27), -3,2%/-4,99% unter SMA20/50 (verbessert ggue. -3,99%/-5,79%), 5T -1,78%. SP500-Proxy -1,3%/-1,21% unter SMA20/50 -> weiterhin unter 50-DMA, Zusatzwarnung gemaess Abschnitt 2 bleibt aktiv, OBV-Trend +67,0 Mio. leicht positiv. SOX-Proxy bleibt schwaechster Bereich, aber deutliche Stabilisierung: 5T -8,79% (verbessert ggue. P5: -11,02% und P4: -16,29%), -7,23%/-11,4% unter SMA20/50. Insgesamt: Reale Marktdaten (Websuche) bestaetigen eine kraeftige Nachmittagserholung (S&P 500 +0,96%, Nasdaq-100 +2,12% seit Handelsstart) nach dem Fed-Entscheid (Leitzins unveraendert, 9-3-Votum, vage Zinsausblick von Fed-Chef Warsh, schwaches BIP 1,5% vs. erwartet 1,8%, Inflation 3,7%) - dennoch bleiben alle 3 pruefbaren Risk-Off-Kriterien (VIX>18, NASDAQ/SOX unter SMA20/50, S&P500 unter 50-DMA) formal verletzt, wenn auch klar abgeschwaecht gegenueber P4/P5. Institutioneller Hold-Test (Abschnitt 2 des P5.5-Prompts): Die zuvor staerksten P4-Kandidaten (LMT, RTX) bestaetigen ihr Fake-Breakout-Reversal aus dem P5-Lauf weiter (OBV-Trend nahe Null bzw. weiter abschwaechend) - keine institutionelle Wiederaufnahme erkennbar. Semiconductor-Sektor (NVDA/AMD/AVGO) zeigt eine deutliche Stabilisierung ggue. Vortagen, OBV-Trend aber weiterhin negativ - Websuche bestaetigt anhaltenden Ausverkauf bei Micron/KLA/Super Micro trotz Markterholung. Apple berichtet heute (30.7.) nach Handelsschluss Quartalszahlen - bleibt durch Earnings-Filter ausgeschlossen. Depotfilter-Kontext (P4, Abschnitt 12) weiterhin aktiv: HOOD ca. -12,2% und ORCL ca. -22,9% weiterhin mit Buchverlust >10% (ORCL leicht erholt ggue. P4/P5), NVDA weiter verbessert auf ca. +4,3% - keine neue Position, Umschichtung pruefen.",
+  "begruendung": "P1-Lauf (17:20 MESZ, data/p1_latest.json, generated_at_utc 2026-07-30T15:20:59Z, eurusd 0,876). Alle 3 prüfbaren Risk-Off-Kriterien bleiben formal verletzt: VIX-Proxy 21,795 (>18-Schwelle), NASDAQ-Proxy RSI14 31,23 mit -3,29%/-5,08% unter SMA20/50, SOX-Proxy weiterhin schwächster Bereich (5T -8,67%, -7,11%/-11,28% unter SMA20/50) und S&P500-Proxy -1,31%/-1,22% unter SMA20/50 (weiterhin unter 50-DMA, Zusatzwarnung Abschnitt 2 aktiv). Gegenüber dem P5.5-Lauf (17:08 MESZ) hat sich die Lage nicht weiter verschlechtert, sondern stabilisiert sich auf ähnlichem, leicht abgeschwächtem Niveau fort - keine neue Verschärfung, aber auch keine Auflösung des Risk-Off-Regimes. Websuche bestätigt: Fed hält Leitzins wie erwartet unverändert, Markt erholt sich den Nachmittag über weiter, Microsoft führt die Tech-Erholung mit Rekordzahlen an, während der Halbleiter-Sektor (Micron, KLA, Super Micro laut Marktberichten) trotz Markterholung weiter unter Druck bleibt (branchenweiter Verlust >1 Billion USD Marktkapitalisierung). Apple berichtet HEUTE nach US-Börsenschluss Quartalszahlen - Ergebnis steht zum Analysezeitpunkt noch aus und bleibt Ereignisrisiko für morgen. Kandidatenprüfung (P4→P5→P5.5-Kette): kein P4-Kandidat erfüllt die vollständige Bestätigungskette. V bleibt technisch sauberster Wert, kühlt aber weiter ab statt neue Hochs zu bilden; CRM hat seine Anti-Bulltrap-Flags (5T>15%, SMA20-Abstand>8%) im zweiten Lauf in Folge verloren, zeigt aber Konsolidierung statt Breakout; MA/NOW/MSFT bleiben überdehnt bzw. earnings-getrieben; LMT/RTX bestätigen ihr Fake-Breakout-Reversal aus dem P5-Lauf weiter; NOC/ISRG ohne strukturelle Bestätigung; AAPL durch Earnings-Filter (heute) zwingend ausgeschlossen. Depotfilter-Kontext (P4, Abschnitt 12) bleibt aktiv und hat sich im Tagesverlauf weiter verschärft: HOOD jetzt ca. -12,55% (verschlechtert ggü. ca. -12,2% im P5.5-Lauf), ORCL ca. -22,54% (leicht stabilisiert ggü. ca. -22,9%), NVDA wieder leicht positiv auf ca. +3,76%, aber strukturell weiterhin unter beiden SMAs mit anhaltend tief negativem OBV-Trend - spricht insgesamt weiterhin für Zurückhaltung statt Neuaufbau.",
   "sektor_rotation": [
     {
       "sektor": "Payments",
       "trend": "positiv",
-      "kommentar": "V +2,74% (RSI 59,64, kuehlt gegenueber P5 (+3,83%) leicht ab, weiterhin ohne Anti-Bulltrap-Flag, OBV-Trend +32,8 Mio. stabil positiv), MA +7,27% (RSI 71,51 weiterhin ueberkauft, Ausdehnung SMA50 +11,0%) - weiterhin staerkster technisch sauberer Bereich, Momentum kuehlt aber leicht ab statt neue Hochs zu bilden."
+      "kommentar": "V +2,84% (RSI 59,97, OBV-Trend +32,7 Mio. stabil positiv, weiterhin ohne Anti-Bulltrap-Flag, leichter Wiederanstieg ggü. P5.5: +2,74%), MA +7,56% (RSI 71,94 knapp unter der 72er-Überkauft-Schwelle, Ausdehnung SMA50 +11,29%) - weiterhin stärkster technisch sauberer Bereich der Watchlist."
     },
     {
       "sektor": "Software/Cloud",
       "trend": "positiv",
-      "kommentar": "MSFT +16,71% (RSI 72,49, Earnings-Gap haelt, OBV-Trend weiter positiv +58,0 Mio.), NOW +17,74% (RSI 50,47, deutliche Abkuehlung ggue. P4: +21,27%), CRM +13,18% (RSI 58,74, erstmals unter der 15%-Anti-Bulltrap-Schwelle, aber weiterhin kein Neueinstieg-Setup), ORCL +4,27% (Portfolio-Position, strukturell weiterhin schwach, OBV -1,2 Mio.) - Sektor bleibt stark, aber ueberwiegend earnings-getrieben bzw. ueberdehnt."
+      "kommentar": "MSFT +16,71% (RSI 72,48 weiterhin überkauft, Earnings-Gap hält), NOW +17,62% (RSI 50,38, SMA-Abstand jetzt nur noch +2,48%/+2,6% statt vormals ca. +9,8%), CRM +13,13% (RSI 58,68, zweiten Lauf in Folge unter der 15%-Anti-Bulltrap-Schwelle und SMA20-Abstand mit +4,7% unter 8% - beide Anti-Bulltrap-Flags entfernt, aber Momentum konsolidiert statt zu beschleunigen), ORCL +4,69% (Portfolio-Position, deutliche Stabilisierung: SMA20-Abstand nur noch -2,81%, aber weiterhin -24,25% unter SMA50 - strukturell tief beschädigt) - Sektor bleibt stark, überwiegend earnings-getrieben bzw. konsolidierend statt neu beschleunigend."
     },
     {
       "sektor": "Semiconductors/AI",
       "trend": "negativ",
-      "kommentar": "NVDA -6,66% (RSI 37,28, Portfolio-Position), AMD -9,94% (RSI 38,96), AVGO -1,87% (RSI 43,79) - deutliche Stabilisierung ggue. P4 (-22,23%/-10,4%/-6,68% waren die 5T-Werte fuer AMD/NVDA/AVGO), OBV-Trend bei allen dreien aber weiterhin negativ - noch keine bestaetigte institutionelle Bodenbildung, Websuche bestaetigt anhaltenden Ausverkauf bei Micron/KLA/Super Micro."
+      "kommentar": "NVDA -7,11% (RSI 36,31, Portfolio-Position, OBV-Trend weiterhin tief negativ -262,3 Mio.), AMD -10,15% (RSI 38,75), AVGO -2,06% (RSI 43,43) - Stabilisierung gegenüber den Vortagen hält an, aber OBV-Trend bei allen drei Werten weiterhin negativ, keine bestätigte institutionelle Bodenbildung."
     },
     {
       "sektor": "Defense/Industrials",
       "trend": "neutral",
-      "kommentar": "RTX +0,8% - weitere leichte Abschwaechung ggue. P5 (+1,39%) und P4 (+10,45%), OBV-Trend +13,4 Mio. stabil aber Preisreversal bestaetigt sich, RSI 67,45 weiterhin erhoeht. Fuer Neueinstieg weiterhin gesperrt."
+      "kommentar": "RTX +0,69% (RSI 67,08, OBV-Trend +13,3 Mio. stabil, aber Preisreversal aus dem P5-Lauf bestätigt sich weiter statt neuer Hochs) - für Neueinstieg weiterhin gesperrt."
     },
     {
       "sektor": "Defense",
       "trend": "neutral",
-      "kommentar": "LMT -1,77% (OBV-Trend nahe Null +0,25 Mio. - Fake-Breakout-Reversal aus P5 bestaetigt sich, keine institutionelle Wiederaufnahme), NOC -1,61% (weiterhin unter SMA20/50, OBV-Trend nahe Null) - beide ohne valides Setup, im Rahmen des Risk-Off-Spezialmodus als Alternativsektor ohne Ergebnis geprueft."
+      "kommentar": "LMT -1,42% (RSI 65,82, OBV-Trend nahe Null +0,24 Mio. - Fake-Breakout-Reversal bestätigt sich), NOC -1,46% (weiterhin unter SMA20/50) - beide ohne valides Setup."
     },
     {
       "sektor": "Healthcare",
       "trend": "neutral",
-      "kommentar": "UNH -0,81% (RSI 47,2, OBV-Trend -7,9 Mio. leicht negativ) - im Rahmen des Risk-Off-Spezialmodus als Alternativsektor geprueft, kein institutionelles Akkumulationssignal erkennbar."
+      "kommentar": "UNH -0,81% (RSI 47,21, OBV-Trend -7,9 Mio. leicht negativ) - kein institutionelles Akkumulationssignal erkennbar."
     },
     {
       "sektor": "MedTech",
       "trend": "neutral",
-      "kommentar": "ISRG +5,15% von ueberverkauftem Niveau (RSI 33,9), aber strukturell weiterhin -7,85%/-12,96% unter SMA20/50 - technische Gegenbewegung ohne strukturelle Bestaetigung."
+      "kommentar": "ISRG +5,24% von überverkauftem Niveau (RSI 33,96), aber strukturell weiterhin -7,77%/-12,88% unter SMA20/50 - technische Gegenbewegung ohne strukturelle Bestätigung."
     },
     {
       "sektor": "Technology",
       "trend": "neutral",
-      "kommentar": "Nur AAPL abgedeckt (+3,25%, RSI 63,11) - durch Qualitaetsfilter weiterhin ausgeschlossen: Earnings heute (30.7.) nach Handelsschluss."
+      "kommentar": "Nur AAPL abgedeckt (+3,03%, RSI 62,42) - durch Qualitätsfilter weiterhin ausgeschlossen: Quartalszahlen HEUTE nach Handelsschluss, Ergebnis zum Analysezeitpunkt noch offen."
     },
     {
       "sektor": "Cybersecurity",
       "trend": "negativ",
-      "kommentar": "PANW -2,42% (RSI 45,17, -5,44% unter SMA20, OBV-Trend -9,5 Mio.) - kein Akkumulationssignal."
+      "kommentar": "PANW -2,2% (RSI 45,63, -5,24% unter SMA20, OBV-Trend -9,5 Mio.) - kein Akkumulationssignal."
     },
     {
       "sektor": "Industrials",
       "trend": "negativ",
-      "kommentar": "CAT -9,65% (RSI 23,01 weiterhin extrem ueberverkauft, -10,1%/-12,24% unter SMA20/50) - kein Stabilisierungssignal trotz breiter Markterholung."
+      "kommentar": "CAT -9,7% (RSI 22,87 weiterhin extrem überverkauft, -10,15%/-12,29% unter SMA20/50) - kein Stabilisierungssignal trotz breiter Markterholung."
     },
     {
       "sektor": "Fintech/Brokerage",
       "trend": "negativ",
-      "kommentar": "HOOD (Portfolio-Position) -13,68% 5T (RSI 26,32, -16,54%/-9,05% unter SMA20/50) - weiterhin schwaechster Kernsektor, Buchverlust der Position bleibt >10%."
+      "kommentar": "HOOD (Portfolio-Position) -14,01% 5T (RSI 26,15, -16,84%/-9,39% unter SMA20/50, OBV-Trend -54,0 Mio. weiterhin negativ) - weiterhin schwächster Kernsektor, Buchverlust der Position hat sich im Tagesverlauf von ca. -10% auf ca. -12,55% vertieft."
     }
   ]
 }
