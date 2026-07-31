@@ -1,62 +1,62 @@
 {
-  "generated_at_utc": "2026-07-31T15:16:58Z",
+  "generated_at_utc": "2026-07-31T15:24:30Z",
   "status": "RISK-OFF",
-  "begruendung": "Alle 3 prüfbaren Risk-Off-Kriterien bleiben verletzt und verschärfen sich gegenüber der leichten Stabilisierung beim P5-Lauf (15:35 MESZ) wieder: VIX-Proxy 21,09 (>18-Schwelle, leicht gestiegen ggü. 20,73 bei P5), NASDAQ-Proxy RSI14 fällt von 43,31 (P5) auf 38,88 zurück, -2,17%/-4,11% unter SMA20/50 (verschlechtert ggü. P5: -0,93%/-2,85%). Neu und entscheidend: Der S&P-500-Proxy ist zwischen P5 und P5.5 unter SMA20 UND SMA50 gerutscht (-0,43%/-0,35%, bei P5 noch hauchdünn darüber) - damit ist die Zusatzwarnschwelle 'S&P500 unter 50-DMA' jetzt ausgelöst. Der SOX-Proxy vollzieht die stärkste Kehrtwende des Tages: von 5T +0,68% (P5, Erholung) auf 5T -2,81% (P5.5) - Halbleiter-Sektor gibt die Vormittagserholung komplett wieder ab. Hintergrund laut Websuche: Anleiherenditen steigen mit den Ölpreisen, nachdem Fed-Vertreter weitere Zinserhöhungen ins Spiel gebracht haben, während der seit Ende Juli laufende KI-Investitionskosten-Ausverkauf bei Halbleiterwerten anhält. AAPL bleibt nach dem Q3-Kurseinbruch zur Eröffnung (-9,4%) auf niedrigem Niveau eingefroren, keine institutionelle Erholung. Depotfilter weiterhin aktiv: 2 von 3 offenen Positionen mit Buchverlust >10% (HOOD -14,75%, ORCL -21,77%), nur NVDA im Plus (+5,64%). Kapitalerhalt hat weiterhin klar Vorrang.",
+  "begruendung": "Alle 3 pruefbaren Risk-Off-Kriterien bleiben zum P1-Analysezeitpunkt (17:20 MESZ) verletzt, unveraendert seit mindestens 21.07. und ueber alle 4 heutigen Laeufe hinweg bestaetigt: VIX-Proxy 21,11 (>18-Schwelle, praktisch unveraendert ggue. P5.5: 21,09), NASDAQ-Proxy RSI14 38,19 (leichte Erholung ggue. P5.5: 38,88 ist minimal schwaecher, aber im Rahmen der Schwankung), -2,35%/-4,28% unter SMA20/50. Die bei P5.5 neu ausgeloeste Zusatzwarnung 'S&P500 unter 50-DMA' bleibt aktiv (-0,40% unter SMA50). Der SOX-Proxy verschaerft sich weiter (5T von -2,81% bei P5.5 auf -3,23% bei P1) - der Halbleiter-Sektor bleibt die klar schwaechste Gruppe des Tages. Hintergrund laut Websuche: Die Fed hat den Leitzins zum fuenften Mal in Folge unveraendert gelassen (3,50-3,75%), verweist aber auf Unsicherheit durch die Nahost-Entwicklung und signalisiert wegen oelpreisgetriebener Inflationsrisiken moeglicherweise mindestens eine weitere Zinserhoehung im Jahresverlauf - Anleiherenditen und Oelpreise bleiben erhoeht. Der KI-Investitionskosten-Ausverkauf bei Halbleiterwerten haelt unveraendert an. AAPL zeigt eine leichte Erholung ggue. P5.5 (5T -8,75% vs. -9,12%), bleibt aber nahe dem Eroeffnungs-Crash-Niveau eingefroren. Depotfilter weiterhin aktiv: 2 von 3 offenen Positionen mit Buchverlust >10% (HOOD -14,90%, ORCL -21,73%), nur NVDA im Plus (+5,09%, abgeschwaecht). Kapitalerhalt hat weiterhin klar Vorrang.",
   "sektor_rotation": [
     {
       "sektor": "Technology",
       "trend": "negativ",
-      "kommentar": "AAPL verharrt bei 302,65 $ (5T -9,12%, RSI14 41,99) nahezu unverändert auf dem Eröffnungs-Crash-Niveau - keine institutionelle Erholung nach dem Fake-Breakout."
+      "kommentar": "AAPL 303,88$ (5T -8,75%, RSI14 42,57) - leichte Erholung ggue. P5.5 (-9,12%), aber weiterhin nahe dem Eroeffnungs-Crash-Niveau eingefroren, keine institutionelle Bestaetigung einer Trendwende."
     },
     {
       "sektor": "Software/Cloud",
       "trend": "neutral",
-      "kommentar": "Weiterhin stärkster Sektor im 5T-Vergleich (MSFT +18,26%, NOW +10,42%, CRM +10,33%, ORCL +10,38%), aber MSFT dreht intraday um -1,55% ins Minus (Gewinnmitnahmen nach Earnings-Gap, RSI14 weiterhin überkauft bei 72,52) - von 'positiv' auf 'neutral' herabgestuft."
+      "kommentar": "Staerkster Sektor im 5T-Vergleich (MSFT +19,6%, NOW +10,9%, CRM +10,54%, ORCL +10,43%), MSFT erholt sich intraday leicht (456,52$ ggue. 451,38$ bei P5.5), bleibt aber mit RSI14 73,53 klar ueberkauft und durch 3/3 Anti-Bulltrap-Kriterien fuer einen Neueinstieg gesperrt - daher neutral statt positiv eingestuft."
     },
     {
       "sektor": "Semiconductors/AI",
       "trend": "negativ",
-      "kommentar": "SOX-Proxy dreht von 5T +0,68% (P5) auf 5T -2,81% - deutlichste Verschlechterung des Tages. NVDA -4,55%, AMD -5,57%, nur AVGO +1,35% positiv. KI-Investitionskosten-Sorgen belasten laut Websuche weiter."
+      "kommentar": "SOX-Proxy verschaerft sich weiter von 5T -2,81% (P5.5) auf -3,23% (P1). NVDA -5,05% (P5.5: -4,55%), AMD -6,13% (P5.5: -5,57%), nur AVGO +1,04% leicht positiv. KI-Investitionskosten-Sorgen belasten laut Websuche unveraendert weiter."
     },
     {
       "sektor": "Cybersecurity",
       "trend": "neutral",
-      "kommentar": "PANW nahezu unverändert (5T +0,15%)."
+      "kommentar": "PANW nahezu unveraendert (5T +0,17%), kein Setup."
     },
     {
       "sektor": "Defense",
       "trend": "neutral",
-      "kommentar": "LMT -1,54%/NOC -1,56%, beide ohne Setup, LMT weiterhin überkauft (RSI 73,64)."
+      "kommentar": "LMT -1,45%/NOC -1,48%, beide ohne Setup, LMT weiterhin ueberkauft (RSI 73,95)."
     },
     {
       "sektor": "Defense/Industrials",
       "trend": "neutral",
-      "kommentar": "RTX 5T nur noch +0,28% (P4: +2,5%), überkauft (RSI 71,4), Momentum verliert weiter an Kraft."
+      "kommentar": "RTX 5T nur noch +0,32%, ueberkauft (RSI 71,57), Momentum weiterhin schwach."
     },
     {
       "sektor": "Healthcare",
       "trend": "neutral",
-      "kommentar": "UNH nahezu unverändert (5T -0,27%) - im Risk-Off-Spezialmodus als Alternativsektor geprüft, kein Signal."
+      "kommentar": "UNH nahezu unveraendert (5T -0,18%), kein Signal."
     },
     {
       "sektor": "MedTech",
       "trend": "neutral",
-      "kommentar": "ISRG +3,54%, kühlt gegenüber P4 (+6,31%) weiter ab, strukturell weiterhin -6,87%/-12,49% unter SMA20/50."
+      "kommentar": "ISRG +3,65%, kuehlt weiter ab (P5.5: +3,54%, P4: +6,31%), strukturell weiterhin -6,77%/-12,39% unter SMA20/50."
     },
     {
       "sektor": "Payments",
       "trend": "positiv",
-      "kommentar": "V +2,32%/MA +5,72%, V bleibt technisch sauberster Wert der Watchlist, aber ohne Volumenbestätigung/Beschleunigung - kein Second-Chance-Breakout."
+      "kommentar": "V +2,17%/MA +5,64%, weiterhin technisch sauberster Bereich der Watchlist, kuehlt aber ggue. P5.5 (V +2,32%/MA +5,72%) leicht ab - keine Beschleunigung, kein Second-Chance-Breakout."
     },
     {
       "sektor": "Industrials",
       "trend": "negativ",
-      "kommentar": "CAT -8,02%, RSI 27,67, deutlich unter SMA20/50 - extrem überverkauft."
+      "kommentar": "CAT -8,22%, RSI 27,16, deutlich unter SMA20/50 - extrem ueberverkauft, keine Stabilisierung."
     },
     {
       "sektor": "Fintech/Brokerage",
       "trend": "negativ",
-      "kommentar": "HOOD -10,28%, RSI 26,11, Depotposition weiterhin mit -14,75% Buchverlust."
+      "kommentar": "HOOD -10,44%, RSI 26,03, Depotposition mit weiter vertieftem Buchverlust von -14,90%."
     }
   ]
 }
