@@ -1,62 +1,62 @@
 {
-  "generated_at_utc": "2026-08-03T13:42:28Z",
+  "generated_at_utc": "2026-08-03T15:16:52Z",
   "status": "RISK-OFF",
-  "begruendung": "Marktampel bleibt Risk-Off zum US-Open (Daten 13:35 UTC / 15:35 MESZ, ca. 5 Min. nach Handelsstart, Volumenwerte daher noch sehr dünn): alle 3 prüfbaren Kriterien weiterhin verletzt (VIX-Proxy 20,26 >18; NASDAQ -1,69% unter SMA20, RSI14 nur 35,61; SOX-Proxy 5T -5,75% vs. NASDAQ 5T +0,78% - Abstand hat sich gegenüber dem P4-Lauf sogar vergrößert, -4,2% vs. +0,55% um 12:51 UTC). Gleichzeitig zeigen die breiten Indizes einen klaren Gap-up zum Open: S&P 500 +0,49% und Russell 2000 +0,55% seit P4, VIX-Proxy -1,2% (Entspannung), US-Futures vorbörslich deutlich positiv (Dow +0,76%, S&P +0,53%, Nasdaq +0,42%) auf Iran-Deeskalationshoffnung (Ölpreis WTI -6,2%). Diese Entspannung ist aber fragil: Irans Außenministerium bestreitet laut Marktberichten aktive Gespräche mit Washington. Der Halbleitersektor bleibt der klare Schwachpunkt und hat sich seit dem P4-Lauf weiter verschlechtert (SOX-Proxy RSI14 nur noch 32,2, -8,93%/-14,19% unter SMA20/50) - das vom Markt zuletzt gefeierte Whipsaw-Rebound bei Einzelwerten bestätigt sich in unserer Watchlist nicht. A/D-Ratio und %-NASDAQ-Aktien über 50-DMA weiterhin nicht im Feed verfügbar. Institutioneller Marktfilter bleibt mit 3 von 3 bekannten Kriterien ausgelöst -> keine Kaufempfehlung möglich, unabhängig von Einzelwert-Scores. Zusätzlich bleibt der Depotfilter aktiv (2 von 3 Positionen mit Buchverlust >10%: HOOD -13,2%, ORCL -16,7%), was gemäß Projektregel jede neue Position kategorisch blockiert.",
+  "begruendung": "Marktampel bleibt Risk-Off (Daten 15:09 UTC / 17:09 MESZ, ca. 100 Min. nach US-Handelsstart, P5.5-Analysefenster): alle 3 prüfbaren Kriterien weiterhin knapp verletzt (VIX-Proxy 20,23 >18; NASDAQ -0,38% unter SMA20, RSI14 40,61; SOX-Proxy 5T -2,32% vs. NASDAQ 5T +2,19%, Abstand -4,51pp). Gleichzeitig zeigt der Handelstag die stärkste Stabilisierungstendenz seit Wochenbeginn: NASDAQ +1,40% seit P5-Open, SOX-Proxy sogar +3,63% (Erholung von -8,93%/-14,19% auf -5,77%/-11,12% unter SMA20/50), S&P 500 und Russell 2000 bauen ihre Gewinne weiter aus, VIX-Proxy stabil knapp über 20. US-Indizes schließen den Tag deutlich im Plus (Nasdaq +1,7%, S&P 500 +1,1%, Dow +1,0%) auf anhaltender Iran-Entspannung (Trump storniert Militärschlag zugunsten von Verhandlungen zur Straße von Hormus, Ölpreis fällt) und einem überraschend starken ISM-Index (55,6, +2,3 Punkte). Der Institutional Hold Test scheitert dennoch für die beiden strukturell saubersten P4-Kandidaten (V, MA) - beide geben ihre Vormittagsgewinne seit P5 wieder ab, kein Second-Chance-Breakout erkennbar. Institutioneller Marktfilter bleibt mit 3 von 3 bekannten Kriterien ausgelöst -> keine Kaufempfehlung möglich, unabhängig von Einzelwert-Scores. Depotfilter entspannt sich deutlich: nur noch 1 von 3 Positionen mit Buchverlust >10% (ORCL -15,78%; HOOD erstmals unter der Schwelle bei -9,95%; NVDA jetzt +10,46% im Plus) - die Umschichtungsregel (ab 2+ Positionen) greift damit erstmals seit mehreren Handelstagen nicht mehr, ist angesichts des weiterhin aktiven Marktfilters aber nicht entscheidend.",
   "sektor_rotation": [
     {
       "sektor": "Software/Cloud",
       "trend": "positiv",
-      "kommentar": "Stärkster Sektor, Ø 5T jetzt ca. +14,4% (MSFT +24,49%, ORCL +12,64%, NOW +10,71%, CRM +9,91%) - alle vier seit dem P4-Lauf nochmal deutlich gestiegen. MSFT jetzt extrem überdehnt (RSI14 80,88, >20% über SMA20/50) - kategorischer Anti-Bulltrap-Ausschluss. ORCL/CRM/NOW erholen sich, bleiben aber unter SMA200 bzw. SMA50 - eher Kurzfrist-Rally als bestätigte institutionelle Akkumulation."
+      "kommentar": "Weiterhin stärkster Sektor, Ø 5T +13,7% (MSFT +24,21%, ORCL +13,96%, NOW +8,46%, CRM +8,27%), kühlt seit P5 aber leicht ab (CRM -1,49%, NOW -2,04% seit P5). MSFT bleibt mit RSI14 80,75 massiv überdehnt (Anti-Bulltrap-Ausschluss), ORCL/CRM/NOW weiterhin unter SMA50/SMA200 - Kurzfrist-Rally statt bestätigter Akkumulation."
     },
     {
       "sektor": "Payments",
       "trend": "positiv",
-      "kommentar": "Ø 5T +3,54% (V +2,01%, MA +5,07%), beide seit P4 nochmal gestiegen (+1% bzw. +1,1% am Open). V bleibt technisch sauberster Wert der Watchlist, MA weiterhin unter dem Mindestvolumen-Filter (<5 Mio. Aktien/Tag)."
+      "kommentar": "Ø 5T noch +2,4% (V +1,07%, MA +3,74%), aber beide seit P5 im Rückwärtsgang (V -0,92%, MA -1,27%) - der technisch sauberste Sektor der Watchlist hält die Vormittagsgewinne nicht, kein Second-Chance-Breakout erkennbar."
+    },
+    {
+      "sektor": "Semiconductors/AI",
+      "trend": "neutral",
+      "kommentar": "Deutlichste Bewegung des Laufs: SOX-Proxy +3,63% seit P5 (RSI14 32,2->34,9), NVDA/AMD/AVGO Ø 5T dreht von -3,26% (P4) auf +1,14% (P5.5) ins Plus. Strukturell aber weiterhin -11,12% unter SMA50 - Erholung von sehr überverkauftem Niveau, keine bestätigte Trendwende, Hochstufung von negativ auf neutral."
     },
     {
       "sektor": "MedTech",
       "trend": "positiv",
-      "kommentar": "Nur ISRG (+3,76% 5T), technische Erholung setzt sich fort (RSI14 47,19, nur noch -6,93% unter SMA50 statt -11,53% beim P4-Lauf) - noch keine strukturelle Bestätigung."
+      "kommentar": "ISRG +4,12% 5T, technische Erholung setzt sich fort (RSI14 47,59, nur noch -6,62% unter SMA50)."
     },
     {
       "sektor": "Cybersecurity",
       "trend": "neutral",
-      "kommentar": "PANW +4,86% 5T, aber RSI14 zum Open von 50,81 auf 36,08 eingebrochen - Momentum verpufft direkt nach Handelsstart, weiterhin knapp unter SMA20."
+      "kommentar": "PANW erholt sich seit dem Fake-Breakout-Einbruch zum Open wieder (RSI14 36,08->40,90, Kurs +1,77% seit P5), bleibt aber unter RSI 50 und ohne bestätigtes Setup."
     },
     {
       "sektor": "Defense",
       "trend": "neutral",
-      "kommentar": "LMT/NOC Ø 5T +0,45%. LMT jetzt noch stärker überkauft (RSI14 79,84, >8% über SMA20) - Anti-Bulltrap-Ausschluss bleibt bestehen."
+      "kommentar": "LMT/NOC Ø 5T +0,17%, beide nahezu unverändert seit P5. LMT weiterhin überkauft (RSI14 78,75, Anti-Bulltrap-Ausschluss)."
     },
     {
       "sektor": "Defense/Industrials",
       "trend": "neutral",
-      "kommentar": "RTX -0,87% 5T, RSI14 jetzt 80,57 (von 73,82) - Überkauft-Signal hat sich zum Open weiter verschärft."
+      "kommentar": "RTX -1,36% 5T, RSI14 weiterhin extrem überkauft (80,01) - Ausschluss bleibt bestehen."
     },
     {
       "sektor": "Healthcare",
-      "trend": "negativ",
-      "kommentar": "UNH -0,55% 5T, weiterhin unter SMA20, schwaches Momentum trotz defensivem Charakter."
+      "trend": "neutral",
+      "kommentar": "UNH knapp im Plus seit P5 (+0,39%), aber weiterhin -1,72% unter SMA20 - kein Akkumulationssignal."
     },
     {
       "sektor": "Technology",
       "trend": "negativ",
-      "kommentar": "AAPL -8,5% 5T, leicht schwächer zum Open (-0,2%) - Reaktion auf die starken Q3-Zahlen (30.07.) bleibt verpufft, Wert klar unter SMA20."
-    },
-    {
-      "sektor": "Semiconductors/AI",
-      "trend": "negativ",
-      "kommentar": "Ø 5T -2,31% (NVDA +1,36%, AMD -7,37%, AVGO -0,93%). SOX-Proxy auf Indexebene mit -3,6% klar schwächster Wert zum Open - Sektor bleibt trotz der in den Marktnachrichten kolportierten Chip-Erholung (Intel/AMD/TSM) in unserer Watchlist der volatilste und schwächste Bereich."
+      "kommentar": "AAPL -9,5% 5T, RSI14 44,26, weiterhin klar unter SMA20 (-5,89%)."
     },
     {
       "sektor": "Industrials",
       "trend": "negativ",
-      "kommentar": "CAT -6,67% 5T, RSI14 26,42 weiterhin stark überverkauft, klar unter SMA20/50."
+      "kommentar": "CAT -5,32% 5T, RSI14 29,73 weiterhin überverkauft, aber leichte Verbesserung ggü. P5 (-6,67%)."
     },
     {
       "sektor": "Fintech/Brokerage",
       "trend": "negativ",
-      "kommentar": "HOOD -9,34% 5T, RSI14 21,48 extrem überverkauft, Depotposition mit weiterhin größtem Buchverlust (-13,2%)."
+      "kommentar": "HOOD -5,97% 5T, RSI14 26,53 extrem überverkauft, Depotposition. Buchverlust verbessert sich aber deutlich auf -9,95% (von -13,18% bei P5) - erstmals unter der 10%-Schwelle des Depotfilters."
     }
   ]
 }
