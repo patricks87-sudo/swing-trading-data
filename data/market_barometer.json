@@ -1,62 +1,62 @@
 {
-  "generated_at_utc": "2026-08-03T15:28:33Z",
-  "status": "RISK-OFF",
-  "begruendung": "Institutioneller Marktfilter bleibt am vierten Lauf in Folge (P4/P5/P5.5/P1) mit 3/3 bekannten Kriterien ausgelöst: VIX-Proxy 20,19 (>18-Schwelle), NASDAQ-Proxy 0,33% unter SMA20 (RSI14 40,82), SOX-Proxy 5T -2,38% klar schwächer als NASDAQ 5T +2,25%. S&P 500 und Russell 2000 bleiben über ihren SMA20/50 (keine Zusatzwarnung), VIX nicht über 25. Trotz spürbarer Erleichterung durch die Iran-Deeskalation (Trump storniert Militärschlag, Ölpreis -5%) und einen überraschend starken ISM-Index (55,6) reicht die Verbesserung nicht zur Freigabe neuer Positionen. Palantir- (nachbörslich) und SpaceX-Zahlen (Dienstag) stehen als mögliche Katalysatoren für morgen noch aus.",
+  "generated_at_utc": "2026-08-04T12:57:44Z",
+  "status": "NEUTRAL",
+  "begruendung": "Erstmals seit mindestens dem 21.07. keine Risk-Off-Einstufung mehr: NASDAQ-Proxy notiert minimal über SMA20 (+0,03%, RSI14 42,06) statt darunter, damit ist von den 3 prüfbaren Kernkriterien nur noch 1 verletzt statt 3 (VIX-Proxy 20,35 >18-Schwelle weiterhin verletzt; SOX-Proxy 5T -1,66% weiterhin schwächer als NASDAQ 5T +2,63%, ebenfalls verletzt). A/D-Ratio und % NASDAQ-Aktien über 50 DMA bleiben im Feed unverfügbar (Datenbasis unvollständig, nicht geschätzt). Institutioneller Marktfilter (Abschnitt 15B) bleibt trotzdem ausgelöst: 2 von 5 Kriterien (VIX>18, SOX schwächer als NASDAQ) sind bekannt erfüllt, das reicht bereits für die \"≥2 von 5\"-Sperre – daher weiterhin keine Kaufempfehlung möglich, unabhängig von der verbesserten Ampel-Einstufung. Hintergrund laut Marktrecherche: Palantir-Rekordquartal (+14% vorbörslich) und starke Hyperscaler-Zahlen (Amazon erstmals über 3 Billionen USD Marktkap.) treiben die Tech-Rally, während die Iran-Lage nach Trumps Vorwurf an Teheran (\"unglaublich doppelzüngig\") wieder unsicherer wird und der Ölpreis anzieht.",
   "sektor_rotation": [
     {
       "sektor": "Technology",
       "trend": "negativ",
-      "kommentar": "AAPL 5T -9,48%, RSI14 44,3, OBV-Trend deutlich negativ (-215,7 Mio.) – anhaltend schwächster Wert der Watchlist."
+      "kommentar": "AAPL 5T -9,94%, RSI14 43,53, OBV-Trend deutlich negativ (-283,3 Mio.) – weiterhin schwächster Wert der Watchlist, Kursreaktion auf die Q3-Zahlen bereits verpufft."
     },
     {
       "sektor": "Software/Cloud",
       "trend": "positiv",
-      "kommentar": "MSFT/CRM/NOW/ORCL im Schnitt 5T +14,0%, OBV überwiegend positiv, aber MSFT mit RSI14 80,8 massiv überdehnt (Anti-Bulltrap) und damit gesperrt."
+      "kommentar": "MSFT/CRM/NOW/ORCL im Schnitt 5T +14,7%, OBV überwiegend positiv, aber MSFT (RSI14 81,3) und ORCL weiterhin klar überdehnt/strukturell schwach und damit gesperrt."
     },
     {
       "sektor": "Semiconductors/AI",
       "trend": "neutral",
-      "kommentar": "NVDA/AMD/AVGO im Schnitt 5T nur +1,4%, gemischtes Bild (NVDA/AVGO OBV positiv, AMD negativ), SOX-Proxy insgesamt weiterhin 5T -2,38%."
+      "kommentar": "NVDA/AMD/AVGO im Schnitt 5T nur +1,8%, gemischtes Bild (NVDA stärkster OBV-Trend der Watchlist, AMD weiterhin negativ), SOX-Proxy insgesamt weiterhin 5T -1,66%."
     },
     {
       "sektor": "Cybersecurity",
       "trend": "positiv",
-      "kommentar": "PANW 5T +6,25%, OBV-Trend positiv (+12,5 Mio.), RSI14 39,7 noch nicht überkauft."
+      "kommentar": "PANW 5T +9,39%, OBV-Trend positiv (+18,7 Mio.), RSI14 46,68 – sauberes Setup ohne Anti-Bulltrap-Flags."
     },
     {
       "sektor": "Defense",
       "trend": "neutral",
-      "kommentar": "LMT/NOC 5T nahezu flach (Ø -0,02%), beide RSI-technisch überkauft (77,9/60,2), kein frisches Signal."
+      "kommentar": "LMT/NOC 5T nahezu flach (Ø +0,62%), LMT RSI14 80,2 überkauft – kein frisches Signal."
     },
     {
       "sektor": "Defense/Industrials",
-      "trend": "negativ",
-      "kommentar": "RTX 5T -1,53% bei RSI14 79,55 – überkauft und gleichzeitig rückläufig, Fake-Breakout-Reversal bestätigt sich weiter."
+      "trend": "neutral",
+      "kommentar": "RTX 5T -0,81% bei RSI14 80,64 – überkauft trotz leicht rückläufigem Kurs."
     },
     {
       "sektor": "Healthcare",
       "trend": "neutral",
-      "kommentar": "UNH 5T -0,39%, RSI14 44,4 – kein aktives Akkumulationssignal, aber auch keine Verschärfung."
+      "kommentar": "UNH 5T -0,55%, RSI14 43,9 – kein aktives Akkumulationssignal, aber auch keine Verschärfung."
     },
     {
       "sektor": "MedTech",
       "trend": "positiv",
-      "kommentar": "ISRG 5T +4,37%, RSI14 47,9 – moderate Erholung, strukturell aber weiterhin 6,4% unter SMA50."
+      "kommentar": "ISRG 5T +5,21%, RSI14 48,79 – moderate Erholung, strukturell aber weiterhin 5,66% unter SMA50."
     },
     {
       "sektor": "Payments",
-      "trend": "positiv",
-      "kommentar": "V/MA im Schnitt 5T +2,49%, RSI Ø 64,2 – weiterhin technisch sauberster Bereich der Watchlist, kühlt aber leicht ab."
+      "trend": "neutral",
+      "kommentar": "V/MA im Schnitt 5T nur noch +2,18% – weiterhin technisch sauberster Bereich der Watchlist, Momentum kühlt aber spürbar ab."
     },
     {
       "sektor": "Industrials",
       "trend": "negativ",
-      "kommentar": "CAT 5T -5,58%, RSI14 29,1 überverkauft, OBV-Trend negativ – anhaltende institutionelle Distribution."
+      "kommentar": "CAT 5T -4,95%, RSI14 30,58 überverkauft, OBV-Trend leicht negativ – anhaltende Schwäche."
     },
     {
       "sektor": "Fintech/Brokerage",
       "trend": "negativ",
-      "kommentar": "HOOD (Depotposition) 5T -5,58%, RSI14 27,1 überverkauft, OBV-Trend klar negativ (-95,7 Mio.) – keine Bestätigung der Kurserholung."
+      "kommentar": "HOOD (Depotposition) 5T -5,55%, RSI14 27,11 überverkauft, OBV-Trend negativ (-77,9 Mio.), aber Buchverlust ggü. Vortagen leicht reduziert (-9,55% statt -13,34%)."
     }
   ]
 }
