@@ -1,62 +1,62 @@
 {
-  "generated_at_utc": "2026-08-04T13:43:08Z",
+  "generated_at_utc": "2026-08-04T15:11:29Z",
   "status": "NEUTRAL",
-  "begruendung": "Deutliche Verbesserung zum US-Open ggü. dem P4-Lauf (12:51 UTC): Von den 3 seit Wochen verletzten Kernkriterien ist jetzt nur noch 1 aktiv. NASDAQ-Proxy notiert klar über SMA20 (+1,68%, RSI14 47,76, P4: +0,03%/42,06). SOX-Proxy dreht deutlich und ist mit 5T +8,2% erstmals seit Wochen STÄRKER als NASDAQ (5T +5,37%) statt schwächer (P4: SOX -1,66% vs. NASDAQ +2,63%) - getrieben von starken Halbleiter-Zahlen (AMD-Quartalszahlen, ON Semiconductor vorbörslich +8%). Einzig VIX-Proxy bleibt mit 20,08 knapp über der 18er-Schwelle verletzt (aber rückläufig von 20,35 bei P4). Damit ist rechnerisch nur noch 1 von 5 bekannten institutionellen Marktfilter-Kriterien erfüllt - die \"≥2 von 5\"-Sperre aus dem P4-Lauf ist nicht mehr aktiv. Keine Zusatzwarnung (VIX<25, S&P500 klar über SMA50 mit +2,16%). Dennoch bleibt die P5-eigene Regel für Neutral-Einstufungen bestehen: nur A+ Setups zulässig, und diese lassen sich mangels valider Erste-15/30-Minuten-Volumendaten (struktureller Snapshot nur ~5 Min. nach Open, last_volume-Werte durchgehend <1% des 20-Tage-Ø) nicht bestätigen - daher trotz verbessertem Marktbild weiterhin keine Kaufempfehlung. Hintergrund laut Marktrecherche: starke Halbleiter-Berichtssaison (AMD, ON Semiconductor) und Palantir-Rekordquartal (+17% vorbörslich) treiben die Rally, während die Iran-Lage (neue Meldungen zu Angriffen in der Straße von Hormus) den Ölpreis zeitweise treibt, ohne die Aktienmärkte spürbar zu belasten.",
+  "begruendung": "Verbesserungstrend seit P4/P5 hält an. Von den 3 seit Wochen verfolgten Kernkriterien bleibt weiterhin nur 1 verletzt (VIX-Proxy 20,12, praktisch unverändert seit P5, knapp über der 18er-Schwelle). NASDAQ-Proxy baut seinen Abstand zur SMA20 weiter aus (+2,38%, P5: +1,68%), S&P500 ebenso (+2,65% SMA20 / +2,82% SMA50). Wichtige neue Bestätigung: der SOX-Proxy (Halbleiter) notiert jetzt erstmals seit Wochen auch ÜBER der eigenen SMA20 (+0,28%, P5: -0,47%) und bleibt mit 5T +9,07% klar stärker als NASDAQ (5T +6,13%) - der Sektor-Turnaround ist damit nicht nur relativ, sondern auch absolut technisch bestätigt. Keine Zusatzwarnung (VIX<25, S&P500 klar über SMA50). Dennoch bleibt der P5.5-Lauf ohne Kaufempfehlung: die Abschnitte 'Smart Money Analyse' und 'Second-Chance Breakout Setup' setzen eine Bestätigung institutioneller Käufe im Zeitfenster 16:00-17:00 Uhr über Volumendaten voraus, die im Feed strukturell nicht vorliegen (nur Einzel-Snapshot-Volumen statt Zeitfenster-Summe) - dieselbe Datenlücke wie an allen Vortagen. Auffällig: die zuvor bei P5 aufkeimenden Erholungen in Industrials (CAT) und Fintech/Brokerage (HOOD) brechen bereits 90 Minuten später wieder ab - kein nachhaltiges Rotationssignal aus Tech heraus, Kapital bleibt auf Semiconductors/AI, Cybersecurity und Software/Cloud konzentriert.",
   "sektor_rotation": [
     {
       "sektor": "Technology",
       "trend": "negativ",
-      "kommentar": "AAPL 5T -10,52% (P4: -9,94%), RSI14 34,86 (P4: 43,53) - schwächt sich zum Open weiter ab, weiterhin schwächster Wert der Watchlist."
+      "kommentar": "AAPL 5T -9,91% (P5: -10,52%) - leichte Verbesserung, bleibt aber schwächster Wert der Watchlist, RSI14 36,58 weiterhin schwach."
     },
     {
       "sektor": "Software/Cloud",
       "trend": "positiv",
-      "kommentar": "MSFT/CRM/NOW/ORCL im Schnitt 5T +12,5% (P4: +14,7%, leichte Abkühlung). MSFT (RSI14 79,6) und ORCL (5T +19,7%) weiterhin klar überdehnt/strukturell schwach und damit gesperrt, NOW/CRM sauberer."
+      "kommentar": "MSFT/CRM/NOW/ORCL im Schnitt 5T +13,9% (P5: +12,5%). MSFT (RSI14 81,1) und ORCL (5T +20,0%, strukturell -11,7% unter SMA50) weiterhin klar gesperrt, NOW/CRM zeigen mittlerweile ebenfalls Anti-Bulltrap-Flags (Abstand SMA20 8,99%/9,8%)."
     },
     {
       "sektor": "Semiconductors/AI",
       "trend": "positiv",
-      "kommentar": "Deutliche Höherstufung: NVDA/AMD/AVGO im Schnitt jetzt 5T +8,9% (P4: nur +1,8%). AMD dreht von 5T -2,08% auf +12,21%, AVGO von +2,35% auf +7,34% - passend zum SOX-Proxy-Turnaround (5T +8,2%, jetzt stärker als NASDAQ). NVDA weiterhin sauberstes Setup, keine Anti-Bulltrap-Flags."
+      "kommentar": "NVDA/AMD/AVGO im Schnitt 5T +9,49% (P5: +8,94%) - passend zur SOX-Proxy-Bestätigung über der eigenen SMA20. NVDA konsolidiert leicht (OBV-Trend wächst dennoch weiter), AVGO sauber und stabil, AMD weiterhin stärkster Einzelwert (5T +14,06%)."
     },
     {
       "sektor": "Cybersecurity",
       "trend": "positiv",
-      "kommentar": "PANW 5T +12,03% (P4: +9,39%), RSI14 51,75 (P4: 46,68) - Momentum verstärkt sich zum Open, weiterhin keine Anti-Bulltrap-Flags (Abstand SMA20 6,32%, unter 8%-Schwelle)."
+      "kommentar": "PANW 5T +13,08% (P5: +12,03%), RSI14 53,38 - bestes RS-Profil der gesamten Kandidatenliste, wachsender OBV-Trend, Abstand SMA20 7,26% noch unter der 8%-Schwelle."
     },
     {
       "sektor": "Defense",
       "trend": "neutral",
-      "kommentar": "LMT/NOC im Schnitt 5T -0,55% (P4: +0,62%), LMT RSI14 77,3 weiterhin überkauft - kein frisches Signal, leichte Abkühlung."
+      "kommentar": "LMT/NOC im Schnitt 5T +0,49% (P5: -0,55%), LMT weiterhin überkauft (RSI14 80,15)."
     },
     {
       "sektor": "Defense/Industrials",
       "trend": "neutral",
-      "kommentar": "RTX 5T -1,48% (P4: -0,81%), RSI14 76,44 (P4: 80,64) - weiterhin überkauft, leicht rückläufig."
+      "kommentar": "RTX 5T -1,22% (P5: -1,48%), RSI14 77,65 weiterhin überkauft - kategorisch ausgeschlossen."
     },
     {
       "sektor": "Healthcare",
       "trend": "negativ",
-      "kommentar": "UNH 5T -3,86% (P4: -0,55%) - deutliche Verschlechterung zum Open, RSI14 45,93 kein Akkumulationssignal."
+      "kommentar": "UNH 5T -4,79% (P5: -3,86%) - Verschlechterung setzt sich fort, RSI14 43,65 kein Akkumulationssignal."
     },
     {
       "sektor": "MedTech",
-      "trend": "positiv",
-      "kommentar": "ISRG 5T +2,84% (P4: +5,21%) - Erholung kühlt spürbar ab, strukturell weiterhin -6,18% unter SMA50."
+      "trend": "neutral",
+      "kommentar": "ISRG 5T +1,23% (P5: +2,84%) - Erholung kühlt weiter ab, fällt unter SMA20 zurück (-0,88%), strukturell -7,62% unter SMA50."
     },
     {
       "sektor": "Payments",
       "trend": "neutral",
-      "kommentar": "V/MA im Schnitt 5T nur noch +0,11% (P4: +2,18%) - Momentum stoppt praktisch, V dreht sogar auf 5T -0,71% mit negativem OBV-Trend (-9,1 Mio.) - nicht mehr der sauberste Bereich der Watchlist."
+      "kommentar": "V/MA im Schnitt 5T +1,06% (P5: +0,11%) - leichte Erholung, V aber mit weiterhin negativem OBV-Trend (-8,74 Mio.) trotz Kursgewinn - Distributions-Warnsignal bleibt bestehen."
     },
     {
       "sektor": "Industrials",
-      "trend": "positiv",
-      "kommentar": "Kräftiger Turnaround: CAT 5T +9,41% (P4: -4,95%), RSI14 50,84 (P4: 30,58) - deutliche Erholung aus überverkaufter Zone."
+      "trend": "negativ",
+      "kommentar": "Wende: CAT 5T fällt von +9,41% (P5) auf +4,2%, Kurs selbst -4,76% seit P5 (919,97 auf 876,19 USD), RSI14 kühlt von 50,84 auf 43,5 - der kräftige Turnaround von P4/P5 kehrt sich bereits wieder teilweise um."
     },
     {
       "sektor": "Fintech/Brokerage",
-      "trend": "neutral",
-      "kommentar": "HOOD (Depotposition) dreht auf 5T +2,73% (P4: -5,55%), RSI14 31,02 weiterhin überverkauft, aber Buchverlust deutlich reduziert (-4,60% statt -9,55%)."
+      "trend": "negativ",
+      "kommentar": "Wende: HOOD (Depotposition) 5T fällt von +2,73% (P5) auf -0,43%, Kurs -3,08% seit P5 (95,29 auf 92,36 USD), RSI14 wieder tiefer überverkauft (31,02 auf 27,01), Depotverlust vertieft sich wieder auf -7,53% (P5: -4,60%)."
     }
   ]
 }
