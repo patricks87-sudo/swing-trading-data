@@ -1,18 +1,18 @@
 {
-  "generated_at_utc": "2026-08-04T15:36:19Z",
+  "generated_at_utc": "2026-08-05T12:59:24Z",
   "status": "NEUTRAL",
-  "begruendung": "VIX-Proxy 20,18 bleibt über der 18er-Schwelle (einziges von 3 durchgängig verfolgten Kernkriterien weiterhin verletzt). NASDAQ (+2,56% über SMA20) und SOX-Proxy (5T +9,58% vs. NASDAQ 5T +6,33%, jetzt auch über eigener SMA20) bestätigen die seit P4 laufende Verbesserung. Marktbreite laut Zusatzrecherche uneinheitlich: NYSE-A/D-Ratio 2,62:1 pro Advancer (Vortag, positiv), aber nur 4 S&P500-Werte auf 52-Wochen-Hoch (eng) – keine breit bestätigte Rally. Vierter Lauf in Folge ohne neue Position mangels valider Intraday-Volumen- und Optionsflow-Bestätigung.",
+  "begruendung": "Von den 3 durchgängig verfolgten Kernkriterien (VIX<18, NASDAQ über SMA20, SOX stärker als NASDAQ) ist nur noch 1 verletzt: VIX-Proxy 20,45 bleibt über der 18er-Schwelle. NASDAQ notiert +3,32% über SMA20, und der SOX-Proxy bestätigt heute erstmals seit mindestens 3 Wochen wieder stärker als NASDAQ (5T +10,33% vs. +7,16%). Damit ist der institutionelle Marktbreitefilter (Abschnitt 15B: Sperre bei ≥2 von 5 bekannten Warnkriterien) auf Basis der verfügbaren Daten erstmals seit Wochen NICHT mehr kategorisch ausgelöst (nur 1 von 3 prüfbaren Kriterien verletzt; A/D-Ratio und %-Aktien-über-50-DMA fehlen weiterhin im Feed und werden nicht geschätzt). Trotzdem kein Trade: PANW und ORCL sind neu/weiterhin durch je 2 Anti-Bulltrap-Kriterien gesperrt, MSFT bleibt massiv überdehnt, CRM/NOW liefern keine Volumenbestätigung (Volumen unter statt über Durchschnitt), und AMD fällt laut Websuche trotz Gewinn-Beat aktuell ca. -9% vorbörslich (Q3-Guidance unter Erwartungen, Sektorsorgen) – im Feed-Snapshot (12:51 UTC, vor US-Open) noch nicht erfasst. NVDA/AVGO technisch sauber, aber ohne Breakout-Volumen und mit Vorsicht wegen des frischen Chipsektor-Gegenwinds.",
   "sektor_rotation": [
-    {"sektor": "Semiconductors/AI", "trend": "positiv", "kommentar": "Ø 5T +9,94% (NVDA +6,78%, AMD +14,59%, AVGO +8,45%), SOX-Proxy bestätigt jetzt auch technisch über eigener SMA20 (+0,72%) und stärker als NASDAQ."},
-    {"sektor": "Software/Cloud", "trend": "positiv", "kommentar": "Ø 5T +13,97%, stark aber teils überdehnt: MSFT massiv überdehnt (RSI14 81,27, 4 Anti-Bulltrap-Kriterien), ORCL erholt sich weiter (OBV-Trend +99,9 Mio.), aber strukturell -11,47% unter SMA50; NOW/CRM mit SMA20-Anti-Bulltrap-Flag."},
-    {"sektor": "Cybersecurity", "trend": "positiv", "kommentar": "PANW 5T +12,94%, RSI14 53,17 unauffällig, aber Abstand SMA50 jetzt +16,43% (>15%-Schwelle) – erstes eigenes Anti-Bulltrap-Signal des Tages."},
-    {"sektor": "Defense", "trend": "neutral", "kommentar": "Ø 5T +0,3% (LMT +0,56%, NOC +0,05%), beide nahezu unverändert, LMT weiterhin überkauft (RSI14 79,38)."},
-    {"sektor": "Defense/Industrials", "trend": "negativ", "kommentar": "RTX 5T -1,24%, weiterhin überkauft (RSI14 77,58) und rückläufig – Fake-Breakout-Reversal aus P5/P5.5 bestätigt sich."},
-    {"sektor": "Payments", "trend": "neutral", "kommentar": "Ø 5T +1,05% (V +0,43%, MA +1,66%), V weiterhin mit negativem OBV-Trend (-8,68 Mio.) trotz stabilem Kurs – Distributionssignal hält an."},
-    {"sektor": "Healthcare", "trend": "negativ", "kommentar": "UNH 5T -4,72%, RSI14 43,81, strukturell unter SMA20 (-3,47%) – Abwärtstrend setzt sich fort."},
-    {"sektor": "MedTech", "trend": "neutral", "kommentar": "ISRG 5T +1,34%, aber unter SMA20 (-0,78%) zurückgefallen, Momentum kühlt weiter ab."},
-    {"sektor": "Technology", "trend": "negativ", "kommentar": "AAPL 5T -10,05%, weiterhin schwächster Wert der Watchlist, RSI14 36,18, -5,49% unter SMA20."},
-    {"sektor": "Industrials", "trend": "neutral", "kommentar": "CAT 5T +4,37%, aber Kurs wieder unter SMA20 (-0,44%) – Erholung vom Vortag bricht ab."},
-    {"sektor": "Fintech/Brokerage", "trend": "negativ", "kommentar": "HOOD 5T -0,63%, RSI14 26,75 tief überverkauft, -9,0% unter SMA20, OBV-Trend weiterhin klar negativ (-55,0 Mio.) – Depotposition, Sektorwende ins Negative von P5.5 bestätigt sich."}
+    {"sektor": "Semiconductors/AI", "trend": "positiv", "kommentar": "Ø 5T +10,48% (NVDA +7,58%, AMD +14,07%, AVGO +9,78%), SOX-Proxy bestätigt erstmals seit Wochen stärker als NASDAQ. Aber: AMD-Wert im Feed veraltet (Schlusskurs vor Zahlen), laut Presse aktuell ca. -9% vorbörslich – Sektor dürfte bei nächstem Datenabruf deutlich schwächer aussehen."},
+    {"sektor": "Software/Cloud", "trend": "positiv", "kommentar": "Ø 5T +14,70%, weiterhin zweigeteilt: MSFT (+25,29%, RSI 80,6) und ORCL (+21,49%, 2 Anti-Bulltrap-Flags) klar überdehnt, NOW/CRM technisch moderater aber mit unterdurchschnittlichem Volumen (keine Akkumulationsbestätigung)."},
+    {"sektor": "Cybersecurity", "trend": "positiv", "kommentar": "PANW 5T +14,84%, aber Abstand SMA20 (+8,84%) und SMA50 (+18,35%) überschreiten jetzt beide die Anti-Bulltrap-Schwellen – erstmals seit Tagen kategorisch ausgeschlossen."},
+    {"sektor": "Defense", "trend": "neutral", "kommentar": "Ø 5T +0,90% (LMT +1,38%, NOC +0,42%), LMT weiterhin stark überkauft (RSI14 81,05)."},
+    {"sektor": "Defense/Industrials", "trend": "negativ", "kommentar": "RTX 5T -0,30%, weiterhin überkauft (RSI14 79,99) bei negativem Momentum."},
+    {"sektor": "Payments", "trend": "neutral", "kommentar": "Ø 5T +1,15% (V +0,82%, MA +1,48%), V weiterhin mit negativem OBV (-49,8 Mio.) trotz stabilem Kurs."},
+    {"sektor": "Healthcare", "trend": "negativ", "kommentar": "UNH 5T -4,95%, RSI14 43,29, -3,69% unter SMA20 – Abwärtstrend hält an."},
+    {"sektor": "MedTech", "trend": "neutral", "kommentar": "ISRG 5T +1,79%, aber -0,36% unter SMA20 und -7,12% unter SMA50, OBV-Trend negativ – Momentum kühlt weiter ab."},
+    {"sektor": "Technology", "trend": "negativ", "kommentar": "AAPL 5T -9,03%, RSI14 38,91, -4,47% unter SMA20 – weiterhin schwächster Wert der Watchlist."},
+    {"sektor": "Industrials", "trend": "neutral", "kommentar": "CAT 5T +4,24%, aber -0,56% unter SMA20 – Erholung bricht erneut ab, kein Breakout-Setup."},
+    {"sektor": "Fintech/Brokerage", "trend": "neutral", "kommentar": "HOOD 5T +0,81%, RSI14 28,64 tief überverkauft, -7,75% unter SMA20 – Depotposition, technisch angeschlagen aber leicht stabilisiert."}
   ]
 }
