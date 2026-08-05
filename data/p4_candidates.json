@@ -1,66 +1,66 @@
 {
-  "generated_at_utc": "2026-08-04T12:57:44Z",
-  "run_date": "2026-08-04",
+  "generated_at_utc": "2026-08-05T12:59:24Z",
+  "run_date": "2026-08-05",
   "candidates": [
     {
       "ticker": "NVDA",
       "sector": "Semiconductors/AI",
-      "score": "hoch",
-      "begruendung": "Stärkstes institutionelles Flow-Signal der gesamten Watchlist: OBV-Trend 5T +382,6 Mio. (höchster Wert), keine Anti-Bulltrap-Flags (RSI14 45,65, nur +1,37%/+0,39% über SMA20/50), chg_5d +5,15%. SOX-Proxy bestätigt aber weiterhin nicht (5T -1,66% vs. NASDAQ +2,63%). Bereits Depotposition (+10,6%)."
-    },
-    {
-      "ticker": "PANW",
-      "sector": "Cybersecurity",
-      "score": "hoch",
-      "begruendung": "chg_5d +9,39%, RSI14 46,68 unauffällig, keine Anti-Bulltrap-Flags (Abstand SMA20/50 klar unter 8%/15%-Schwelle), OBV-Trend 5T positiv (+18,7 Mio.). Sauberstes Momentum-Setup neben NVDA."
-    },
-    {
-      "ticker": "NOW",
-      "sector": "Software/Cloud",
       "score": "mittel",
-      "begruendung": "chg_5d +8,18%, RSI14 59,44, Abstand SMA20 +7,55% knapp unter der 8%-Anti-Bulltrap-Schwelle, OBV-Trend deutlich positiv (+87,4 Mio.). Sektor-Durchschnitt aber stark durch MSFT/ORCL-Ausreißer verzerrt."
-    },
-    {
-      "ticker": "CRM",
-      "sector": "Software/Cloud",
-      "score": "mittel",
-      "begruendung": "chg_5d +7,11%, RSI14 62,7, Abstand SMA20 +8,34% – knapp über der 8%-Schwelle (1 Anti-Bulltrap-Flag), OBV-Trend positiv (+44,4 Mio.)."
-    },
-    {
-      "ticker": "V",
-      "sector": "Payments",
-      "score": "mittel",
-      "begruendung": "Weiterhin technisch sauberster Wert der Watchlist, keine Anti-Bulltrap-Flags, RSI14 59,92. Momentum kühlt aber spürbar ab: chg_5d nur noch +0,87% (Vortage deutlich höher)."
-    },
-    {
-      "ticker": "ISRG",
-      "sector": "MedTech",
-      "score": "mittel",
-      "begruendung": "chg_5d +5,21%, RSI14 48,79, keine Anti-Bulltrap-Flags, aber strukturell weiterhin -5,66% unter SMA50 – Pullback-Erholung statt bestätigter institutioneller Akkumulation."
+      "begruendung": "Technisch sauberster Wert der Watchlist: 0 Anti-Bulltrap-Flags (RSI14 49,56, nur +3,59%/+3,04% über SMA20/50), OBV-Trend 5T stark positiv (+380,1 Mio.). SOX-Proxy bestätigt heute erstmals seit Wochen (5T +10,33% vs. NASDAQ +7,16%). Aber: Volumen nur +0,7% über Ø20 (last_volume 130,4 Mio. vs. Ø 129,5 Mio.) – kein Breakout-Volumen. Laut Websuche kühlt der Chipsektor nach AMDs Kursreaktion auf die Zahlen (s.u.) gerade spürbar ab; im Feed (Snapshot 12:51 UTC, vor US-Open) noch nicht erfasst. Bereits Depotposition (+13,4%)."
     },
     {
       "ticker": "AVGO",
       "sector": "Semiconductors/AI",
-      "score": "niedrig",
-      "begruendung": "chg_5d +2,35%, keine Anti-Bulltrap-Flags, aber schwaches Momentum und SOX-Proxy insgesamt weiterhin unter Druck (5T -1,66%)."
+      "score": "mittel",
+      "begruendung": "0 Anti-Bulltrap-Flags (RSI14 59,45, +7,77%/+5,90% über SMA20/50), Volumen +37,3% über Ø20 (28,05 Mio. vs. 20,42 Mio.) – knapp unter der 40%-Breakout-Schwelle, OBV-Trend positiv (+68,0 Mio.). Gleiche Vorsicht wie NVDA: frischer Sektor-Gegenwind (Chip-Abkühlung laut Presse) im Feed noch nicht abgebildet."
     },
     {
-      "ticker": "RTX",
-      "sector": "Defense/Industrials",
+      "ticker": "AMD",
+      "sector": "Semiconductors/AI",
       "score": "niedrig",
-      "begruendung": "RSI14 80,64 (>72-Schwelle) – Anti-Bulltrap-Kriterium erfüllt, technisch überkauft trotz negativem 5-Tage-Trend (-0,81%)."
+      "begruendung": "WICHTIG – Datenlücke: Feed-Kurs 518,58 USD ist der Schlusskurs vor den Q2-Zahlen vom 4.8. nach Handelsschluss. Laut Websuche (CNBC, TradingKey) fällt AMD trotz Gewinn-Beat aktuell ca. -9% vorbörslich, da die Q3-Umsatzprognose (13,0 Mrd. USD) unter den überzogenen Konsens-Erwartungen (~14 Mrd. USD) liegt und Sorgen um KI-Kapitalrendite den Sektor belasten. Kategorischer Ausschluss trotz sauberer Technik im Feed."
     },
     {
-      "ticker": "MSFT",
+      "ticker": "CRM",
       "sector": "Software/Cloud",
       "score": "niedrig",
-      "begruendung": "Weiterhin massiv überdehnt: chg_5d +25,33% (>15%-Schwelle), +21,33%/+21,69% über SMA20/50 (beide >8%/15%), RSI14 81,26 (>72) – mind. 4 Anti-Bulltrap-Kriterien erfüllt, kategorischer Ausschluss trotz stärkstem Sektor."
+      "begruendung": "Nur 1 Anti-Bulltrap-Flag (Abstand SMA20 +10,58%), aber Volumen 30,7% UNTER Ø20 (8,79 Mio. vs. 12,67 Mio.) – keine institutionelle Akkumulation/Breakout-Bestätigung."
+    },
+    {
+      "ticker": "NOW",
+      "sector": "Software/Cloud",
+      "score": "niedrig",
+      "begruendung": "Nur 1 Anti-Bulltrap-Flag (Abstand SMA20 +10,88%), aber Volumen 22,2% unter Ø20 (19,19 Mio. vs. 24,66 Mio.) – keine Bestätigung."
+    },
+    {
+      "ticker": "PANW",
+      "sector": "Cybersecurity",
+      "score": "niedrig",
+      "begruendung": "Erstmals seit Tagen kategorisch ausgeschlossen: 2 Anti-Bulltrap-Flags (Abstand SMA20 +8,84% >8%, Abstand SMA50 +18,35% >15%), RSI14 55,88, chg_5d +14,84%."
     },
     {
       "ticker": "ORCL",
       "sector": "Software/Cloud",
       "score": "niedrig",
-      "begruendung": "chg_5d +18,31% (>15%-Schwelle), +10,14% über SMA20 (>8%) – 2 Anti-Bulltrap-Flags. Weiterhin -13,5% unter SMA50, Depotposition (-12,6%) – Erholung ohne strukturelle Bestätigung."
+      "begruendung": "2 Anti-Bulltrap-Flags (chg_5d +21,49% >15%, Abstand SMA20 +12,98% >8%), strukturell weiterhin -10,65% unter SMA50. Depotposition (-10,2%)."
+    },
+    {
+      "ticker": "MSFT",
+      "sector": "Software/Cloud",
+      "score": "niedrig",
+      "begruendung": "Weiterhin massiv überdehnt: RSI14 80,6 (>72), chg_5d +25,29% (>15%), +21,05%/+22,53% über SMA20/50 (beide über Schwelle) – mind. 4 Anti-Bulltrap-Kriterien erfüllt."
+    },
+    {
+      "ticker": "CAT",
+      "sector": "Industrials",
+      "score": "niedrig",
+      "begruendung": "Kurs wieder unter SMA20 (-0,56%) und -4,67% unter SMA50 – kein Breakout-Setup, Erholung der Vortage bricht erneut ab."
+    },
+    {
+      "ticker": "ISRG",
+      "sector": "MedTech",
+      "score": "niedrig",
+      "begruendung": "Unter SMA20 (-0,36%) und -7,12% unter SMA50, OBV-Trend 5T negativ (-3,48 Mio.) – keine institutionelle Akkumulation erkennbar, nur schwache Pullback-Erholung."
     }
   ]
 }
