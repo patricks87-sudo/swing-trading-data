@@ -56,6 +56,7 @@
   .score-hoch { background: rgba(46,204,113,.15); color: var(--green); }
   .score-mittel { background: rgba(241,196,15,.15); color: var(--yellow); }
   .score-niedrig { background: rgba(231,76,60,.15); color: var(--red); }
+  .score-neutral { background: rgba(148,163,184,.15); color: var(--muted); }
   .cand-begr { color: var(--muted); font-size: 13px; margin-top: 6px; }
   .top3-box { background: linear-gradient(135deg, rgba(46,204,113,.08), rgba(23,26,33,0)); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
   .top3-item { display: flex; gap: 10px; margin-bottom: 8px; align-items: baseline; }
@@ -100,6 +101,9 @@
 
   <h2>P4-Kandidaten (Institutioneller Swing-Scanner)</h2>
   <div id="candidates"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P4-Lauf befüllt.</div></div>
+
+  <h2>P5.5 &ndash; Second-Chance-Check</h2>
+  <div id="p55candidates"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P5.5-Lauf befüllt.</div></div>
 
   <h2>Top-Empfehlung des Tages</h2>
   <div id="top3"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
@@ -250,6 +254,24 @@ function renderCandidates(data) {
     }).join("");
 }
 
+function renderP55Candidates(data) {
+  const el = document.getElementById("p55candidates");
+  if (!data || !data.kandidaten || !data.kandidaten.length) return;
+  const ergebnisCls = data.ergebnis === "Trade" ? "score-hoch" : "score-niedrig";
+  el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Stand: ' + fmtTime(data.generated_at_utc) + '</div>' +
+    '<div class="cand-card" style="margin-bottom:10px;"><div class="cand-top">' +
+      '<div><span class="cand-ticker">Ergebnis</span></div>' +
+      '<span class="score-badge ' + ergebnisCls + '">' + (data.ergebnis || "-") + '</span></div>' +
+      '<div class="cand-begr">' + (data.kurzbegruendung || "") + '</div></div>' +
+    data.kandidaten.map((c) => {
+      const statusCls = c.status === "Bestanden" ? "score-hoch" : c.status === "Nicht bestanden" ? "score-niedrig" : c.status === "Teilweise" ? "score-mittel" : "score-neutral";
+      return '<div class="cand-card"><div class="cand-top">' +
+        '<div><span class="cand-ticker">' + (c.name || c.ticker) + '</span> <span class="cand-sector">' + (c.sector || "") + '</span></div>' +
+        '<span class="score-badge ' + statusCls + '">' + (c.status || "-") + '</span></div>' +
+        '<div class="cand-begr">' + (c.begruendung || "") + '</div></div>';
+    }).join("");
+}
+
 function renderTop3(data) {
   const el = document.getElementById("top3");
   if (!data || !data.top3 || !data.top3.length) return;
@@ -362,9 +384,10 @@ function renderHeadlines(data) {
 }
 
 function renderNewsToday(data) { const el = document.getElementById("newsToday"); if (!data || !data.entries || !data.entries.length) return; el.innerHTML = data.entries.slice().reverse().map((e) => { const items = (e.headlines || []).map((h) => '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a><div class="src">' + (h.source || "") + '</div></div>').join(""); return '<div style="margin-bottom:14px;"><div class="timestamp" style="font-weight:600;">' + (e.time_local || "") + ' Uhr</div>' + items + '</div>'; }).join(""); } async function init() {
-  const [p4, candidates, top3, barometer, portfolio, bewertung, headlines, newsToday] = await Promise.all([
+  const [p4, candidates, p55Candidates, top3, barometer, portfolio, bewertung, headlines, newsToday] = await Promise.all([
     fetchJson("p4_latest.json"),
     fetchJson("p4_candidates.json"),
+    fetchJson("p55_candidates.json"),
     fetchJson("top_empfehlung.json"),
     fetchJson("market_barometer.json"),
     fetchJson("portfolio.json"),
@@ -376,6 +399,7 @@ function renderNewsToday(data) { const el = document.getElementById("newsToday")
   renderSektorrotation(barometer);
   renderIndices(p4);
   renderCandidates(candidates);
+  renderP55Candidates(p55Candidates);
   renderTop3(top3);
   renderPortfolio(portfolio, bewertung, p4, barometer, eurRate);
   renderHeadlines(headlines); renderNewsToday(newsToday);
