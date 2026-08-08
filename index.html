@@ -179,7 +179,7 @@ function renderAmpel(barometer, p4) {
   let status, reason, ts;
   if (barometer && barometer.status) {
     status = barometer.status;
-    reason = barometer.begruendung || "";
+    reason = barometer.kurzbegruendung || barometer.begruendung || "";
     ts = barometer.generated_at_utc;
   } else {
     const computed = computeAmpelFromIndices(p4 && p4.indices);
