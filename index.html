@@ -39,6 +39,15 @@
   .trend-positiv { background: rgba(46,204,113,.15); color: var(--green); }
   .trend-neutral { background: rgba(241,196,15,.15); color: var(--yellow); }
   .trend-negativ { background: rgba(231,76,60,.15); color: var(--red); }
+  .sector-table { width: 100%; border-collapse: collapse; }
+  .sector-table th { text-align: left; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+  .sector-table td { padding: 10px 8px; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 13px; }
+  .sector-table tr:last-child td { border-bottom: none; }
+  .kandidat-item { display: inline-flex; align-items: center; gap: 6px; margin: 2px 10px 2px 0; }
+  .emp-badge { padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; }
+  .emp-kauf { background: rgba(46,204,113,.15); color: var(--green); }
+  .emp-halten { background: rgba(241,196,15,.15); color: var(--yellow); }
+  .emp-verkauf { background: rgba(231,76,60,.15); color: var(--red); }
   .cand-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; margin-bottom: 10px; }
   .cand-top { display: flex; justify-content: space-between; align-items: center; }
   .cand-ticker { font-weight: 700; font-size: 15px; }
@@ -202,13 +211,17 @@ function renderAmpel(barometer, p4) {
 function renderSektorrotation(barometer) {
   const el = document.getElementById("sektorrotation");
   if (!barometer || !barometer.sektor_rotation || !barometer.sektor_rotation.length) return;
-  el.innerHTML = barometer.sektor_rotation.map((s) => {
-    const cls = s.trend === "positiv" ? "trend-positiv" : s.trend === "negativ" ? "trend-negativ" : "trend-neutral";
-    const arrow = s.trend === "positiv" ? "↑" : s.trend === "negativ" ? "↓" : "→";
-    return '<div class="sector-row"><div class="sector-name">' + s.sektor + '</div>' +
-      '<div class="trend-badge ' + cls + '">' + arrow + ' ' + s.trend + '</div>' +
-      '<div style="color:var(--muted);font-size:12px;">' + (s.kommentar || "") + '</div></div>';
-  }).join("");
+  const empCls = (e) => e === "Kauf" ? "emp-kauf" : e === "Verkauf" ? "emp-verkauf" : "emp-halten";
+  el.innerHTML = '<table class="sector-table"><thead><tr><th>Sektor</th><th>Kandidaten</th></tr></thead><tbody>' +
+    barometer.sektor_rotation.map((s) => {
+      const cls = s.trend === "positiv" ? "trend-positiv" : s.trend === "negativ" ? "trend-negativ" : "trend-neutral";
+      const arrow = s.trend === "positiv" ? "↑" : s.trend === "negativ" ? "↓" : "→";
+      const kandidaten = (s.kandidaten || []).map((k) =>
+        '<span class="kandidat-item">' + k.name + ' <span class="emp-badge ' + empCls(k.empfehlung) + '">' + k.empfehlung + '</span></span>'
+      ).join("") || '<span style="color:var(--muted)">–</span>';
+      return '<tr><td><div class="sector-name">' + s.sektor + '</div><div class="trend-badge ' + cls + '">' + arrow + ' ' + s.trend + '</div></td>' +
+        '<td>' + kandidaten + '</td></tr>';
+    }).join("") + '</tbody></table>';
 }
 
 function renderIndices(p4) {
@@ -231,7 +244,7 @@ function renderCandidates(data) {
     data.candidates.map((c) => {
       const scoreCls = c.score === "hoch" ? "score-hoch" : c.score === "niedrig" ? "score-niedrig" : "score-mittel";
       return '<div class="cand-card"><div class="cand-top">' +
-        '<div><span class="cand-ticker">' + c.ticker + '</span> <span class="cand-sector">' + (c.sector || "") + '</span></div>' +
+        '<div><span class="cand-ticker">' + (c.name || c.ticker) + '</span> <span class="cand-sector">' + (c.sector || "") + '</span></div>' +
         '<span class="score-badge ' + scoreCls + '">' + (c.score || "-") + '</span></div>' +
         '<div class="cand-begr">' + (c.begruendung || "") + '</div></div>';
     }).join("");
@@ -243,7 +256,7 @@ function renderTop3(data) {
   el.innerHTML = '<div class="top3-box">' +
     data.top3.map((t, i) =>
       '<div class="top3-item"><div class="top3-rank">' + (i + 1) + '.</div>' +
-      '<div><div class="top3-ticker">' + t.ticker + '</div><div class="top3-begr">' + (t.begruendung || "") + '</div></div></div>'
+      '<div><div class="top3-ticker">' + (t.name || t.ticker) + '</div><div class="top3-begr">' + (t.begruendung || "") + '</div></div></div>'
     ).join("") +
     (data.gesamteinschaetzung ? '<div class="gesamt">' + data.gesamteinschaetzung + '</div>' : "") +
     '<div class="timestamp">Stand: ' + fmtTime(data.generated_at_utc) + '</div></div>';
@@ -311,7 +324,7 @@ function renderPortfolio(portfolio, bewertung, p4, barometer, eurRate) {
       pnlHtml = '<td style="color:var(--muted)">noch keine Live-Daten</td>';
     }
     return '<tr>' +
-      '<td>' + p.name + ' <span style="color:var(--muted)">(' + p.ticker + ')</span>' +
+      '<td>' + p.name +
         (p.sector ? '<div class="cand-sector">' + p.sector + '</div>' : '') + '</td>' +
       '<td>' + (buyEur !== null ? eurFmt.format(buyEur) : (p.buy_price.toFixed(2) + ' ' + (p.currency || "USD"))) +
         (buyUsdEquiv !== null ? '<div class="timestamp">≈ ' + buyUsdEquiv.toFixed(2) + ' USD</div>' : '') + '</td>' +
