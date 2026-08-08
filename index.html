@@ -96,7 +96,7 @@
   <div id="top3"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
 
   <h2>Meine Positionen</h2>
-  <div id="portfolio" class="card"><div class="placeholder">Lade Portfolio...</div></div>
+  <div id="portfolio" class="card"><div class="placeholder">Lade Portfolio...</div></div> <h2>Nachrichtenüberblick heute</h2> <div id="newsToday" class="card"><div class="placeholder">Noch keine Daten – wird im Laufe des Tages befüllt.</div></div>
 
   <a class="footer-link" href="https://claude.ai/cowork/project/019f79db-3af1-7716-a5bd-b16bf5c14770" target="_blank">Heutige Analyse in Claude öffnen &rarr;</a>
 </div>
@@ -348,15 +348,15 @@ function renderHeadlines(data) {
   ).join("");
 }
 
-async function init() {
-  const [p4, candidates, top3, barometer, portfolio, bewertung, headlines] = await Promise.all([
+function renderNewsToday(data) { const el = document.getElementById("newsToday"); if (!data || !data.entries || !data.entries.length) return; el.innerHTML = data.entries.slice().reverse().map((e) => { const items = (e.headlines || []).map((h) => '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a><div class="src">' + (h.source || "") + '</div></div>').join(""); return '<div style="margin-bottom:14px;"><div class="timestamp" style="font-weight:600;">' + (e.time_local || "") + ' Uhr</div>' + items + '</div>'; }).join(""); } async function init() {
+  const [p4, candidates, top3, barometer, portfolio, bewertung, headlines, newsToday] = await Promise.all([
     fetchJson("p4_latest.json"),
     fetchJson("p4_candidates.json"),
     fetchJson("top_empfehlung.json"),
     fetchJson("market_barometer.json"),
     fetchJson("portfolio.json"),
     fetchJson("portfolio_bewertung.json"),
-    fetchJson("headlines.json"),
+    fetchJson("headlines.json"), fetchJson("news_summary_today.json"),
   ]);
   const eurRate = await fetchEurRate(p4);
   renderAmpel(barometer, p4);
@@ -365,7 +365,7 @@ async function init() {
   renderCandidates(candidates);
   renderTop3(top3);
   renderPortfolio(portfolio, bewertung, p4, barometer, eurRate);
-  renderHeadlines(headlines);
+  renderHeadlines(headlines); renderNewsToday(newsToday);
 }
 init();
 </script>
