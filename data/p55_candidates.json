@@ -1,0 +1,36 @@
+{
+  "generated_at_utc": "2026-08-07T15:14:31Z",
+  "run_date": "2026-08-07",
+  "ergebnis": "Kein Trade",
+  "kurzbegruendung": "Kein Trade – Volumen-Datenluecke blockiert weiterhin jede Bestaetigung; NVIDIA haelt relative Staerke zum leicht ruecklaeufigen Sektor, Broadcom mit 2 Anti-Bulltrap-Flags ausgeschlossen.",
+  "kandidaten": [
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Semiconductors/AI",
+      "status": "Bestanden",
+      "begruendung": "Haelt Kursniveau und legt sogar zu, waehrend der eigene Sektor (SOX-Proxy) im selben Fenster -1,00% verliert - positive relative Divergenz. Konstruktivstes Signal des Tages, aber ohne die geforderte Volumenfenster-Bestaetigung."
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Cybersecurity",
+      "status": "Teilweise",
+      "begruendung": "Moderater Ruecksetzer seit dem P5-Hoch (-0,81%), bleibt aber klar ueber dem P4-Ausgangsniveau. Kein ausreichend starkes Second-Chance-Signal, um den fehlenden Volumennachweis zu kompensieren."
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "sector": "Semiconductors/AI",
+      "status": "Nicht bestanden",
+      "begruendung": "2 Anti-Bulltrap-Kriterien gleichzeitig erfuellt (RSI14 72,88 > 72er-Schwelle, Abstand SMA20 +8,51% > 8%-Schwelle) - Ausschlussregel greift."
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Software/Cloud",
+      "status": "Neutral",
+      "begruendung": "Nahezu unveraendert (-0,10%), kein klares Setup, aber auch keine erkennbare Schwaeche."
+    }
+  ]
+}
