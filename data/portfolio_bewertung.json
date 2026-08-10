@@ -1,17 +1,23 @@
 {
-  "generated_at_utc": "2026-08-07T15:32:44Z",
+  "generated_at_utc": "2026-08-10T15:46:00Z",
   "positionen": [
     {
       "id": "hood-1",
       "ticker": "HOOD",
       "empfehlung": "Halten",
-      "begruendung": "-5,05% zum Kaufkurs (94,84 USD vs. 99,88 USD), Erholung setzt sich fort (P4: -9,18%, P5.5: -5,25%). OBV-5T-Trend positiv (+17,0 Mio.), RSI14 44,74 unauffaellig, chg_5d stark bei +9,57%. Kurs bleibt aber unter SMA20 (-3,47%) und SMA50 (-3,59%) - Nachkaufregel (5-8% Verlustzone, haelt Unterstuetzungen) noch nicht sauber erfuellt, daher weiterhin kein Nachkauf. Kein Verkauf, da klare Stabilisierungstendenz."
+      "begruendung": "-6,70% zum Kaufkurs (93,185 USD / ~80,72 EUR vs. 99,88 USD), liegt rein rechnerisch in der 5-8%-Nachkaufzone. RSI14 30,46 angeschlagen, chg_5d aber leicht positiv (+3,15%), OBV-5T-Trend positiv (+9,3 Mio.). Kurs bleibt jedoch klar unter SMA20 (-4,27%) und SMA50 (-5,40%) - die Nachkaufvoraussetzung 'haelt relevante Unterstuetzungen' ist damit nicht erfuellt, daher kein Nachkauf. Kein Verkauf, da keine weitere technische Verschlechterung und leicht positive 5-Tage-Dynamik."
     },
     {
       "id": "orcl-1",
       "ticker": "ORCL",
       "empfehlung": "Halten",
-      "begruendung": "-10,28% zum Kaufkurs (145,57 USD vs. 162,24 USD), knapp ausserhalb der 5-8%-Nachkauftoleranz, aber weiterhin staerkste 5-Tage-Erholung im Depot (chg_5d +12,09%, OBV-5T-Trend +48,8 Mio. positiv). RSI14 71,11 bereits erhoeht, Kurs klar ueber SMA20 (+12,50%). Verkauf in dieser Erholungsphase waere prozyklisch; strukturell bleibt der Kurs aber -9,17% unter SMA50, daher weiterhin kein Nachkauf trotz positiver Kurzfristdynamik."
+      "begruendung": "-7,92% zum Kaufkurs (149,40 USD / ~129,42 EUR vs. 162,24 USD), liegt rein rechnerisch in der 5-8%-Nachkaufzone und haelt die SMA20 (+14,60%) klar. RSI14 70,15 naehert sich aber der 72er-Ueberhitzungsschwelle, und die stark negative kumulierte OBV (-719,2 Mio., trotz positivem 5T-Trend +21,0 Mio.) signalisiert sichtbare historische institutionelle Distribution - Nachkauf-Ausschlusskriterium erfuellt, daher kein Nachkauf. Kein Verkauf, da Kurs klar ueber SMA20 und keine akute Trendverletzung."
+    },
+    {
+      "id": "nvda-1",
+      "ticker": "NVDA",
+      "empfehlung": "Halten",
+      "begruendung": "+17,27% zum Kaufkurs (219,17 USD / ~189,80 EUR vs. 186,89 USD) - klar im Gewinn, Nachkaufregel (5-8%-Verlustzone) nicht einschlaegig. Weiterhin mit Abstand staerkstes institutionelles Signal der gesamten Watchlist (OBV-5T-Trend +278,0 Mio.), RS positiv vs. S&P500/NASDAQ/Sektor. Kuehlte seit dem P5-Snapshot aber weiter ab (223,39 -> 219,17 USD, RSI14 62,82 -> 58,86) - der P5.5-Institutional-Hold-Test wurde nicht vollstaendig bestanden (Kurs seit Open ruecklaeufig). Position halten und Abkuehlung beobachten, kein Verkaufssignal."
     }
   ]
 }
