@@ -1,76 +1,76 @@
 {
-  "generated_at_utc": "2026-08-07T13:00:27Z",
-  "run_date": "2026-08-07",
+  "generated_at_utc": "2026-08-10T13:03:38Z",
+  "run_date": "2026-08-10",
   "candidates": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "Semiconductors/AI",
       "score": "hoch",
-      "begruendung": "Technisch sauberster Wert der Watchlist: 0 Anti-Bulltrap-Flags (RSI14 63,1; +6,22%/+6,38% ueber SMA20/50; chg_5d +12,28%, keine Schwelle verletzt). OBV-Trend 5T mit +448,4 Mio. mit Abstand staerkster Wert der gesamten Watchlist - klares institutionelles Akkumulationssignal. Sektor Semiconductors/AI unter Top-5, SOX-Proxy bestaetigt (5T +5,55% vs. NASDAQ +4,55%). Aber Volumen aktuell -12,6% unter Oe20 (113,1 vs. 129,3 Mio., P4-Zeitpunkt vor US-Handelsvolumen) - Breakout-Schwelle (+40%) nicht erreicht, daher noch kein vollstaendig bestaetigter Breakout. Earnings erst 26.08. (ausserhalb 7-Tage-Fenster)."
+      "begruendung": "Mit Abstand staerkstes institutionelles Signal der Watchlist: OBV-5T-Trend +413,0 Mio. (naechststaerkster Wert Microsoft +149,1 Mio.). Nur 1 Anti-Bulltrap-Flag (Abstand SMA20 +8,29%, knapp ueber der 8%-Schwelle), RSI14 65,61 unauffaellig, chg_5d +11,56% unter der 15%-Schwelle. Sektor Semiconductors/AI unter Top-5 (Oe 5T +7,65%), SOX-Proxy bestaetigt (5T +7,60% vs. NASDAQ +5,09%). Volumen aktuell -17,1% unter Oe20 (105,5 vs. 127,2 Mio., P4-Zeitpunkt vor US-Handelsvolumen) - Breakout-Schwelle (+40%) nicht erreicht, daher kein vollstaendig bestaetigter Breakout. Earnings erst 26.08. (ausserhalb 7-Tage-Fenster)."
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "sector": "Cybersecurity",
       "score": "hoch",
-      "begruendung": "0 Anti-Bulltrap-Flags (RSI14 50,38 unauffaellig; +5,81%/+14,62% ueber SMA20/50, beide unter Schwelle; chg_5d +10,38%). Cybersecurity staerkster Sektor der Watchlist (5T +10,38%). Volumen -10,7% unter Oe20 - keine Breakout-Bestaetigung. Earnings erst 01.09. (ausserhalb 7-Tage-Fenster), keine negativen Unternehmensmeldungen gefunden."
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "sector": "Semiconductors/AI",
-      "score": "mittel",
-      "begruendung": "1 Anti-Bulltrap-Flag (RSI14 73,61 > 72er-Schwelle), sonst sauber (+7,71%/+6,49% SMA20/50, chg_5d +8,44%). OBV-Trend 5T positiv (+96,8 Mio.). Volumen -33,3% unter Oe20 - keine Breakout-Bestaetigung, Ueberkauft-Risiko erhoeht gegenueber NVDA/PANW."
-    },
-    {
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "sector": "Software/Cloud",
-      "score": "mittel",
-      "begruendung": "0 Anti-Bulltrap-Flags (RSI14 60,33; +6,58%/+8,68% SMA20/50; chg_5d +3,35%). Sektor Software/Cloud unter Top-5 (Ø +8,31% 5T, getrieben von ORCL/MSFT). OBV-Trend 5T moderat positiv (+32,3 Mio.), aber Volumen -26,0% unter Oe20 - kein Momentum-Ausbruch, eher stabiler Basisaufbau."
+      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA50 +15,16%, knapp ueber Schwelle), sonst sauber (RSI14 57,50; Abstand SMA20 +6,50%; chg_5d +9,65%). Cybersecurity staerkster Sektor der Watchlist auf 5-Tage-Basis (+9,65%). Volumen -21,8% unter Oe20 - keine Breakout-Bestaetigung. Earnings erst 01.09. (ausserhalb 7-Tage-Fenster), keine negativen Unternehmensmeldungen gefunden."
     },
     {
       "ticker": "ORCL",
       "name": "Oracle",
       "sector": "Software/Cloud",
+      "score": "mittel",
+      "begruendung": "Bereits Depotposition (aktuell -9,38%, unter der 10%-Verlustschwelle). 1 Anti-Bulltrap-Flag (Abstand SMA20 +13,56%), RSI14 71,82 knapp unter der 72er-Schwelle, chg_5d +13,21% staerkstes 5T-Momentum der Watchlist. Volumen -39,3% deutlich unter Oe20. Kein Nachkauf-Kandidat, da bereits Depotposition."
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Software/Cloud",
       "score": "niedrig",
-      "begruendung": "Bereits Depotposition (aktuell -11,57%). 1 Anti-Bulltrap-Flag (Abstand SMA20 +11,09%), gleichzeitig -10,98% UNTER SMA50 - strukturell gemischtes Bild trotz starkem chg_5d (+12,47%). Kein Nachkauf-Kandidat, da Position bereits im Depotfilter-relevanten Verlustbereich."
+      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA20 +9,07%). Schwaechste relative Staerke im Sektor: chg_5d +4,74% liegt unter NASDAQ (+5,09%) und unter Sektor-Durchschnitt (+9,45%) - RS-Kriterium (Abschnitt 15D) nicht erfuellt. Volumen -11,1% unter Oe20, kein Momentum-Ausbruch."
+    },
+    {
+      "ticker": "ISRG",
+      "name": "Intuitive Surgical",
+      "sector": "MedTech",
+      "score": "mittel",
+      "begruendung": "0 Anti-Bulltrap-Flags (RSI14 62,46; Abstand SMA20 +3,98%; chg_5d +7,21%), aber weiterhin -3,65% unter SMA50 - kein bestaetigtes Setup. Volumen -42,4% unter Oe20."
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "sector": "Semiconductors/AI",
+      "score": "niedrig",
+      "begruendung": "2 Anti-Bulltrap-Flags (RSI14 73,58 > 72er-Schwelle; Abstand SMA20 +9,16%) - technisch ueberhitzt, durch Anti-Bulltrap-Filter ausgeschlossen trotz Sektorstaerke (chg_5d +9,88%)."
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Software/Cloud",
+      "score": "niedrig",
+      "begruendung": "3 Anti-Bulltrap-Flags (RSI14 81,43; Abstand SMA20 +17,97%; Abstand SMA50 +22,84%) - massiv ueberdehnt, klar durch Anti-Bulltrap-Filter ausgeschlossen."
     },
     {
       "ticker": "NOW",
       "name": "ServiceNow",
       "sector": "Software/Cloud",
       "score": "niedrig",
-      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA20 +9,22%). Volumen -39,4% deutlich unter Oe20 - keine institutionelle Bestaetigung trotz positivem OBV-Trend (+63,8 Mio.)."
+      "begruendung": "2 Anti-Bulltrap-Flags (Abstand SMA20 +15,31%; Abstand SMA50 +16,37%) - ueberdehnt, durch Anti-Bulltrap-Filter ausgeschlossen trotz positivem OBV-Trend (+71,3 Mio.)."
     },
     {
-      "ticker": "ISRG",
-      "name": "Intuitive Surgical",
-      "sector": "MedTech",
+      "ticker": "AMD",
+      "name": "AMD (Advanced Micro Devices)",
+      "sector": "Semiconductors/AI",
       "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags, aber weiterhin -5,14% unter SMA50 trotz chg_5d +5,88% - kein bestaetigtes Setup. Volumen -39,3% unter Oe20."
-    },
-    {
-      "ticker": "CAT",
-      "name": "Caterpillar",
-      "sector": "Industrials",
-      "score": "niedrig",
-      "begruendung": "Weiterhin unter SMA20 (-1,90%) und SMA50 (-6,67%) trotz starkem 5T-Momentum (+5,91%) - kein bestaetigtes Breakout-Setup, Volumen -31,2% unter Oe20."
+      "begruendung": "0 Anti-Bulltrap-Flags, aber technisch schwaechstes Sektormitglied: weiterhin unter SMA20 (-3,99%) und SMA50 (-5,98%), chg_5d nur +1,51% - keine Akkumulation erkennbar."
     },
     {
       "ticker": "HOOD",
       "name": "Robinhood",
       "sector": "Fintech/Brokerage",
       "score": "niedrig",
-      "begruendung": "Bereits Depotposition (aktuell -9,18%, knapp unter der 10%-Verlustschwelle). Weiterhin unter SMA20 (-8,47%)/SMA50 (-7,43%), RSI14 38,08 - leichte Stabilisierung (chg_5d +4,75%), aber kein Setup."
-    },
-    {
-      "ticker": "RTX",
-      "name": "RTX Corporation",
-      "sector": "Defense/Industrials",
-      "score": "niedrig",
-      "begruendung": "2 Anti-Bulltrap-Flags (RSI14 87,47 stark ueberkauft; Abstand SMA50 +15,13%) - trotz Sektorstaerke akut erhoehtes Reversal-/Bulltrap-Risiko, kein Einstieg."
+      "begruendung": "Bereits Depotposition (aktuell -6,59%, weitere Stabilisierung seit Vortagen). Weiterhin unter SMA20 (-4,98%)/SMA50 (-5,13%), RSI14 42,64 - trotz chg_5d +7,77% kein bestaetigtes Setup."
     }
   ]
 }
