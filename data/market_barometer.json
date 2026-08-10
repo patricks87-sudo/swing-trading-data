@@ -1,31 +1,31 @@
 {
-  "generated_at_utc": "2026-08-10T13:03:38Z",
+  "generated_at_utc": "2026-08-10T13:56:00Z",
   "status": "NEUTRAL",
-  "begruendung": "P4-Lauf 10.08.2026, Feed generiert 12:55:12 UTC / 14:55 MESZ (innerhalb Analysefenster 14:45-15:15 MESZ, vor US-Open 15:30 MESZ). Von den 3 durchgaengig pruefbaren Kernkriterien ist 1 verletzt: VIX-Proxy 19,56 (>18-Schwelle, aber 5T -4,63% ruecklaeufig). NASDAQ-Proxy klar ueber SMA20 (+3,24%). SOX-Proxy bleibt auf 5-Tage-Basis vor NASDAQ (+7,60% vs. +5,09%) - institutioneller Marktbreitefilter (Abschnitt 15B) auf Basis der pruefbaren Kriterien nicht ausgeloest (nur 1 von 3 pruefbaren Warnkriterien erfuellt, benoetigt werden >=2). A/D-Ratio und Prozent-Aktien-ueber-50DMA fehlen strukturell im Feed. NVIDIA bleibt mit +413,0 Mio. OBV-5T-Trend mit weitem Abstand institutionell staerkster Wert der gesamten Watchlist (naechststaerkster: Microsoft +149,1 Mio.), traegt aber 1 Anti-Bulltrap-Flag (Abstand SMA20 +8,29%). Palo Alto Networks bleibt nahezu sauber (1 Flag: Abstand SMA50 +15,16%), staerkster Sektor Cybersecurity. Oracle (+13,21% 5T, Depotposition) und Salesforce zeigen ebenfalls je 1 Flag, Salesforce zusaetzlich mit schwacher relativer Staerke (RS-Kriterium 15D nicht erfuellt). Broadcom (2 Flags: RSI14 73,58, Abstand SMA20 +9,16%), Microsoft (3 Flags, massiv ueberdehnt) und ServiceNow (2 Flags) bleiben durch den Anti-Bulltrap-Filter ausgeschlossen. Eine Volumenbestaetigung ist strukturell weiterhin nicht moeglich, da der P4-Zeitpunkt vor dem vollen US-Handelsvolumen liegt: alle 18 Watchlist-Werte notieren unter ihrem 20-Tage-Volumendurchschnitt (bester Wert NVIDIA: -17,1%, benoetigt waeren +40%). Depotfilter nicht ausgeloest (HOOD -6,59%, ORCL -9,38%, beide unter der 10%-Schwelle). Ohne die Pflicht-Volumenbestaetigung bleibt es bei Kein Trade - Kapitalerhalt hat Vorrang.",
-  "kurzbegruendung": "Neutral - VIX-Proxy 19,56 ueber Schwelle, NASDAQ/SOX-Breite intakt. NVIDIA institutionell staerkster Wert, Volumen-Datenluecke vor US-Open verhindert Kaufsignal.",
+  "begruendung": "P5-Lauf 10.08.2026, Feed generiert 13:46:57 UTC / 15:46 MESZ (innerhalb Analysefenster 15:25-16:15 MESZ, ca. 17 Min. nach US-Open 15:30 MESZ). Von den 3 durchgaengig pruefbaren Kernkriterien bleibt weiterhin 1 verletzt: VIX-Proxy 19,38 (>18-Schwelle, aber 5T -4,77% ruecklaeufig und -6,5% unter SMA20). NASDAQ-Proxy weiterhin ueber SMA20 (+2,98%). SOX-Proxy bleibt auf 5-Tage-Basis vor NASDAQ (+6,4% vs. +3,09%), notiert seit dem P4-Snapshot aber minimal schwaecher als NASDAQ (-0,57% vs. -0,18%) - keine Umkehr der 5-Tage-Fuehrung. Institutioneller Marktbreitefilter (Abschnitt 15B) auf Basis der pruefbaren Kriterien weiterhin nicht ausgeloest (nur 1 von 3 pruefbaren Warnkriterien erfuellt). A/D-Ratio und Prozent-Aktien-ueber-50DMA fehlen strukturell im Feed. Kandidatenbasis (data/p4_candidates.json): NVIDIA und Palo Alto Networks mit Score 'hoch', Oracle (Depotposition) mit 'mittel'. NVIDIA kuehlte seit P4 leicht ab (Kurs -0,26%, RSI14 65,61 -> 62,82), rutschte dabei aber unter die 8%-Anti-Bulltrap-Schwelle beim SMA20-Abstand (8,29% -> 7,50%) und steht jetzt bei 0 Anti-Bulltrap-Flags - technisch die sauberste Aktie der Watchlist, weiterhin mit dem staerksten kumulierten OBV-Signal. Palo Alto Networks sprang dagegen zum US-Open um +3,36% auf 376,09 USD (Sektor-Nachfrage plus Kurszielerhoehungen von Morgan Stanley/Citigroup/Tigress Financial laut Recherche), zog dadurch aber auf 2 Anti-Bulltrap-Flags (Abstand SMA20 +9,35%, Abstand SMA50 +18,15%) - zunehmend ueberdehnt, zusaetzlich laut Marktrecherche mit nachlassendem MACD-Momentum und einem Analysten-Durchschnittskursziel (344,93 USD) bereits unter dem aktuellen Kurs. Oracle (Depotposition, -8,53% statt -9,38% Buchverlust) und Salesforce (weiterhin schwaechste relative Staerke im Sektor) unveraendert kein Setup. Eine Volumenbestaetigung zum Open (Pflichtkriterium fuer A+/A-Einstufung, Abschnitt 3/5) bleibt strukturell nicht auswertbar: das Feld last_volume wechselt beim Uebergang von Vor- zu Nach-Open-Snapshot auf einen sehr kleinen Einzelwert (z.B. NVIDIA 105,5 Mio. vor Open -> 1,07 Mio. nach Open) und ist nicht mit dem 20-Tage-Durchschnitt vergleichbar - dieselbe dokumentierte Datenluecke wie an den Vortagen. Ohne diese Pflichtbestaetigung bleibt es trotz technisch sauberem NVIDIA-Setup bei Kein Trade. Depotfilter nicht ausgeloest (HOOD -6,54%, ORCL -8,53%, beide unter der 10%-Schwelle). Kapitalerhalt hat Vorrang.",
+  "kurzbegruendung": "Neutral - NVIDIA jetzt technisch sauberstes Setup (0 Flags), Palo Alto Networks nach +3,4%-Sprung staerker ueberdehnt. Volumen-Datenluecke zum Open verhindert weiterhin Kaufsignal.",
   "sektor_rotation": [
     {
       "sektor": "Semiconductors/AI",
       "trend": "positiv",
-      "kommentar": "SOX-Proxy 5T +7,60% weiterhin vor NASDAQ (+5,09%). NVIDIA (chg_5d +11,56%, OBV-5T +413,0 Mio.) mit weitem Abstand staerkstes Setup der Watchlist, traegt aber 1 Anti-Bulltrap-Flag (Abstand SMA20 +8,29%). Broadcom (chg_5d +9,88%, RSI14 73,58) mit 2 Flags technisch ueberhitzt und ausgeschlossen. AMD bleibt schwaechstes Sektormitglied (chg_5d +1,51%, weiterhin unter SMA20/50).",
+      "kommentar": "SOX-Proxy 5T weiterhin vor NASDAQ (+6,4% vs. +3,09%), seit P4-Snapshot minimal schwaecher als NASDAQ (-0,57% vs. -0,18%). NVIDIA (chg_5d +8,11%, Kurs seit P4 -0,26%) rutschte unter die Anti-Bulltrap-Schwelle beim SMA20-Abstand (7,50%) und steht jetzt bei 0 Flags - technisch sauberstes Setup der Watchlist, weiterhin mit Abstand staerkstes kumuliertes OBV-Signal. Broadcom verbesserte sich auf 1 Flag (RSI14 71,58, knapp unter 72er-Schwelle), bleibt aber ohne bestaetigten Trigger. AMD weiterhin schwaechstes Sektormitglied, unter SMA20/50.",
       "kandidaten": [
         { "name": "NVIDIA", "empfehlung": "Kauf" },
-        { "name": "Broadcom", "empfehlung": "Verkauf" },
+        { "name": "Broadcom", "empfehlung": "Halten" },
         { "name": "AMD (Advanced Micro Devices)", "empfehlung": "Verkauf" }
       ]
     },
     {
       "sektor": "Cybersecurity",
       "trend": "positiv",
-      "kommentar": "Palo Alto Networks chg_5d +9,65%, RSI14 57,50 - technisch nahezu sauber (1 Flag: Abstand SMA50 +15,16%, knapp ueber Schwelle), staerkster Sektor der Watchlist auf 5-Tage-Basis. OBV-5T-Trend moderat positiv (+9,0 Mio.).",
+      "kommentar": "Palo Alto Networks sprang zum US-Open um +3,36% auf 376,09 USD (Sektor-Nachfrage, Kurszielerhoehungen mehrerer Analysten laut Recherche), RSI14 stieg auf 65,86. Dadurch jetzt 2 Anti-Bulltrap-Flags (Abstand SMA20 +9,35%, Abstand SMA50 +18,15%) - zunehmend ueberdehnt, Analysten-Durchschnittskursziel (344,93 USD) bereits unter aktuellem Kurs, laut Charttechnik nachlassendes MACD-Momentum. Weiterhin staerkster Sektor der Watchlist auf 5-Tage-Basis, aber kein sauberer Neueinstieg mehr.",
       "kandidaten": [
-        { "name": "Palo Alto Networks", "empfehlung": "Kauf" }
+        { "name": "Palo Alto Networks", "empfehlung": "Halten" }
       ]
     },
     {
       "sektor": "Software/Cloud",
       "trend": "positiv",
-      "kommentar": "Oracle (chg_5d +13,21%, Depotposition, 1 Flag: Abstand SMA20 +13,56%), ServiceNow (chg_5d +12,27%, 2 Flags - ausgeschlossen), Microsoft (chg_5d +7,59%, 3 Flags - massiv ueberdehnt) und Salesforce (chg_5d +4,74%, 1 Flag, aber schwaechste relative Staerke des Sektors, unterperformt NASDAQ und Sektor-Durchschnitt) - Sektor-Oe 5T +9,45%, zweitstaerkster Sektor.",
+      "kommentar": "Oracle (Depotposition, Buchverlust auf -8,53% verringert, 1 Flag: Abstand SMA20 +13,88%), ServiceNow (2 Flags - ausgeschlossen), Microsoft (3 Flags - massiv ueberdehnt) und Salesforce (1 Flag, weiterhin schwaechste relative Staerke des Sektors) unveraendert ohne bestaetigtes Setup.",
       "kandidaten": [
         { "name": "Oracle", "empfehlung": "Halten" },
         { "name": "Salesforce", "empfehlung": "Halten" },
@@ -36,7 +36,7 @@
     {
       "sektor": "Industrials",
       "trend": "neutral",
-      "kommentar": "Caterpillar chg_5d +3,36%, bleibt unter SMA20 (-2,98%) und SMA50 (-8,15%) - weiterhin kein bestaetigtes Setup.",
+      "kommentar": "Caterpillar bleibt unter SMA20 und SMA50 - weiterhin kein bestaetigtes Setup.",
       "kandidaten": [
         { "name": "Caterpillar", "empfehlung": "Verkauf" }
       ]
@@ -44,7 +44,7 @@
     {
       "sektor": "MedTech",
       "trend": "neutral",
-      "kommentar": "Intuitive Surgical chg_5d +7,21%, 0 Anti-Bulltrap-Flags, bleibt aber unter SMA50 (-3,65%) - keine institutionelle Bestaetigung.",
+      "kommentar": "Intuitive Surgical bleibt unter SMA50 - keine institutionelle Bestaetigung.",
       "kandidaten": [
         { "name": "Intuitive Surgical", "empfehlung": "Verkauf" }
       ]
@@ -52,7 +52,7 @@
     {
       "sektor": "Defense",
       "trend": "neutral",
-      "kommentar": "Lockheed Martin (RSI14 78,79, chg_5d +0,89%) und Northrop Grumman (RSI14 73,88, chg_5d +5,36%) bleiben ueberkauft, kein neues Setup.",
+      "kommentar": "Lockheed Martin (RSI14 81,73) und Northrop Grumman (RSI14 84,45) bleiben ueberkauft, kein neues Setup.",
       "kandidaten": [
         { "name": "Lockheed Martin", "empfehlung": "Halten" },
         { "name": "Northrop Grumman", "empfehlung": "Halten" }
@@ -61,7 +61,7 @@
     {
       "sektor": "Defense/Industrials",
       "trend": "negativ",
-      "kommentar": "RTX Corporation weiterhin extrem ueberkauft (RSI14 86,68, Abstand SMA50 +14,47%), akutes Reversal-Risiko trotz Sektorstaerke (chg_5d +3,63%).",
+      "kommentar": "RTX Corporation weiterhin extrem ueberkauft (RSI14 89,13, Abstand SMA50 +15,18%), akutes Reversal-Risiko trotz Sektorstaerke.",
       "kandidaten": [
         { "name": "RTX Corporation", "empfehlung": "Verkauf" }
       ]
@@ -69,7 +69,7 @@
     {
       "sektor": "Fintech/Brokerage",
       "trend": "neutral",
-      "kommentar": "Robinhood (Depotposition) bei -6,59% Buchverlust, weitere Stabilisierung (chg_5d +7,77%, OBV-5T-Trend positiv +29,5 Mio.), bleibt aber unter SMA20 (-4,98%)/SMA50 (-5,13%).",
+      "kommentar": "Robinhood (Depotposition) Buchverlust auf -6,54% leicht verringert, bleibt aber unter SMA20/50.",
       "kandidaten": [
         { "name": "Robinhood", "empfehlung": "Halten" }
       ]
@@ -77,7 +77,7 @@
     {
       "sektor": "Payments",
       "trend": "neutral",
-      "kommentar": "Visa (chg_5d -0,99%) und Mastercard (chg_5d -1,77%) unauffaellig, kein Setup.",
+      "kommentar": "Visa und Mastercard unauffaellig, kein Setup.",
       "kandidaten": [
         { "name": "Visa", "empfehlung": "Halten" },
         { "name": "Mastercard", "empfehlung": "Halten" }
@@ -86,7 +86,7 @@
     {
       "sektor": "Healthcare",
       "trend": "negativ",
-      "kommentar": "UnitedHealth Group bleibt schwach, RSI14 41,66, unter SMA20 (-3,14%), chg_5d -1,77%.",
+      "kommentar": "UnitedHealth Group bleibt schwach, RSI14 34,82, unter SMA20.",
       "kandidaten": [
         { "name": "UnitedHealth Group", "empfehlung": "Verkauf" }
       ]
@@ -94,7 +94,7 @@
     {
       "sektor": "Technology",
       "trend": "neutral",
-      "kommentar": "Apple RSI14 40,82, unter SMA20 (-3,12%), chg_5d +1,43% - weiterhin schwaechster Grosswert der Watchlist relativ zum breiten Markt.",
+      "kommentar": "Apple RSI14 36,15, weiter unter SMA20 (-5,21%, vorher -3,12%) - schwaechster Grosswert der Watchlist relativ zum breiten Markt.",
       "kandidaten": [
         { "name": "Apple", "empfehlung": "Halten" }
       ]
