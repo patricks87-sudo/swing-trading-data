@@ -1,36 +1,29 @@
 {
-  "generated_at_utc": "2026-08-10T15:26:30Z",
-  "run_date": "2026-08-10",
+  "generated_at_utc": "2026-08-11T15:20:00Z",
+  "run_date": "2026-08-11",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade - Palo Alto Networks legt gemaess Recherche +4% zu, bleibt aber ueberdehnt (2 Flags). NVIDIA seit Open leicht ruecklaeufig trotz sauberstem Setup (0 Flags). Volumen-Datenluecke blockiert weiterhin jede Bestaetigung.",
+  "kurzbegruendung": "Kein Trade - Intuitive Surgical setzt Anstieg fort, kippt dabei aber auf 2 Anti-Bulltrap-Flags. NVIDIA haelt sich knapp ueber P4-Niveau, Sektor bleibt ausserhalb Top-5. Oracle (Depot) faellt weiter, Buchverlust naehert sich 10%.",
   "kandidaten": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "Semiconductors/AI",
       "status": "Teilweise",
-      "begruendung": "Kuehlte seit dem P5-Snapshot weiter ab (223,39 -> 219,04 USD, -1,95%), RSI14 62,82 -> 58,75. Bleibt bei 0 Anti-Bulltrap-Flags (SMA20-Abstand nur noch 5,51%) und weiterhin mit Abstand staerkstem OBV-Signal der Watchlist (+278,4 Mio. 5T-Trend). Institutional Hold Test nicht vollstaendig bestanden, da der Kurs seit der Open-Referenz nachgegeben statt gehalten hat; Volumenfenster 16:00-17:00 Uhr strukturell nicht auswertbar (bekannte Datenluecke)."
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "sector": "Cybersecurity",
-      "status": "Teilweise",
-      "begruendung": "Legt laut Marktrecherche auf Tagesbasis rund +4% zu (381,40 USD), getrieben von Platformization-Strategie und robuster Cybersecurity-Nachfrage vor den Quartalszahlen - haelt damit die Gewinne seit dem P5-Snapshot und baut sie sogar aus. Bleibt aber bei 2 Anti-Bulltrap-Flags (SMA20-Abstand +10,81%, SMA50-Abstand +19,78%), das durchschnittliche Analysten-Kursziel (rund 341 USD lt. Recherche) liegt weiter klar unter dem aktuellen Kurs - zunehmend ueberdehnt trotz fundamentaler Staerke, kein sauberer Neueinstieg."
+      "begruendung": "Haelt sich mit 219,25 USD knapp ueber dem P4-Ausgangsniveau (217,55 USD, +0,78%), gab aber den Grossteil des P5-Anstiegs wieder ab (220,87 -> 219,25 USD, -0,73%). RSI14 sinkt kontinuierlich (57,47 -> 56,56 -> 55,48), OBV-5T-Trend bleibt nach dem starken Ruecksetzer von P4 zu P5 (176,7 -> 42,0 Mio.) auf niedrigem Niveau stabil (43,4 Mio.). Weiterhin 0 Anti-Bulltrap-Flags, technisch sauber, aber Sektor Semiconductors/AI bleibt klar ausserhalb der Top-5 (5T-Durchschnitt -1,68%, durch AMD-Schwaeche -9,39% belastet) - Pflichtkriterium 'Sektor Top 5' weiterhin nicht erfuellt, kein Second-Chance-Signal."
     },
     {
       "ticker": "ORCL",
       "name": "Oracle",
       "sector": "Software/Cloud",
-      "status": "Neutral",
-      "begruendung": "Depotposition, kein Nachkaufkandidat. Kurs stabil (149,60 USD), RSI14 70,26 naehert sich der 72er-Ueberhitzungsschwelle, 1 Anti-Bulltrap-Flag unveraendert (SMA20-Abstand 14,74%)."
+      "status": "Nicht bestanden",
+      "begruendung": "Depotposition, kein Nachkauf-Kandidat. Faellt seit P4 durchgehend (151,05 -> 147,35 -> 145,05 USD, insgesamt -3,97%), Anti-Bulltrap-Flag (Abstand SMA20) baut sich zwar ab (15,80% -> 10,47%), aber nur weil der Kurs faellt, nicht weil er konsolidiert. Buchverlust der Depotposition hat sich auf rund -10,6% ausgeweitet (Einstand 162,24 USD) - naeher an der 10%-Warnschwelle aus Abschnitt 12 als am Vortag. Institutional Hold Test klar nicht bestanden."
     },
     {
       "ticker": "ISRG",
       "name": "Intuitive Surgical",
       "sector": "MedTech",
-      "status": "Teilweise",
-      "begruendung": "Naehert sich der SMA50 weiter an (-1,28% statt -3,65% bei P4), 0 Anti-Bulltrap-Flags, RSI14 gesund bei 67,24. Noch kein vollstaendig bestaetigter Breakout, da SMA50 weiterhin nicht zurueckerobert und die geforderte Volumenbestaetigung strukturell fehlt."
+      "status": "Nicht bestanden",
+      "begruendung": "Staerkste Kursfortsetzung des Tages (393,38 -> 397,26 -> 399,45 USD, +1,55% seit P4), MedTech bleibt staerkster Sektor der Watchlist (5T +8,47%). Kippt dabei aber auf 2 Anti-Bulltrap-Flags (RSI14 76,46 > 72er-Schwelle, Abstand SMA20 +9,55% > 8%-Schwelle) - Ausschlussregel greift trotz bestem Chart der drei Kandidaten."
     }
   ]
 }
