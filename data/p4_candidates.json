@@ -1,76 +1,76 @@
 {
-  "generated_at_utc": "2026-08-10T13:03:38Z",
-  "run_date": "2026-08-10",
+  "generated_at_utc": "2026-08-11T13:04:14Z",
+  "run_date": "2026-08-11",
   "candidates": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "Semiconductors/AI",
-      "score": "hoch",
-      "begruendung": "Mit Abstand staerkstes institutionelles Signal der Watchlist: OBV-5T-Trend +413,0 Mio. (naechststaerkster Wert Microsoft +149,1 Mio.). Nur 1 Anti-Bulltrap-Flag (Abstand SMA20 +8,29%, knapp ueber der 8%-Schwelle), RSI14 65,61 unauffaellig, chg_5d +11,56% unter der 15%-Schwelle. Sektor Semiconductors/AI unter Top-5 (Oe 5T +7,65%), SOX-Proxy bestaetigt (5T +7,60% vs. NASDAQ +5,09%). Volumen aktuell -17,1% unter Oe20 (105,5 vs. 127,2 Mio., P4-Zeitpunkt vor US-Handelsvolumen) - Breakout-Schwelle (+40%) nicht erreicht, daher kein vollstaendig bestaetigter Breakout. Earnings erst 26.08. (ausserhalb 7-Tage-Fenster)."
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "sector": "Cybersecurity",
-      "score": "hoch",
-      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA50 +15,16%, knapp ueber Schwelle), sonst sauber (RSI14 57,50; Abstand SMA20 +6,50%; chg_5d +9,65%). Cybersecurity staerkster Sektor der Watchlist auf 5-Tage-Basis (+9,65%). Volumen -21,8% unter Oe20 - keine Breakout-Bestaetigung. Earnings erst 01.09. (ausserhalb 7-Tage-Fenster), keine negativen Unternehmensmeldungen gefunden."
+      "score": "mittel",
+      "begruendung": "0 Anti-Bulltrap-Flags (RSI14 57,47; Abstand SMA20 +4,83%; Abstand SMA50 +5,54%; chg_5d +5,28%) - technisch sauberste Aktie der gesamten Watchlist, mit Abstand staerkstes institutionelles Signal (OBV-5T-Trend +176,7 Mio., naechststaerkster Wert Microsoft +113,5 Mio.). ABER: Sektor Semiconductors/AI heute nicht mehr unter den Top-5 (Oe 5T nur +3,29%, durch AMD-Schwaeche belastet) - Pflichtkriterium Abschnitt 14 ('Sektor Top 5') nicht erfuellt, daher kein Kandidat fuer eine Kaufempfehlung trotz sauberer Technik. Zusaetzlich belasten erneute Marktsorgen um 'zirkulaere Finanzierung' im KI-Sektor (Nvidias eigene 500-Mrd-USD-Finanzierungspartnerschaft mit Wall-Street-Banken fuer KI-Rechenzentren), die die Aktie am 10.08. zeitweise um bis zu 5% drueckten - Analystenkonsens laut Recherche weiterhin klar bullisch (36 von 37 Kaufempfehlungen, Kursziel ca. 308,69 USD), Entscheidung faellt aber wohl erst zu den Zahlen am 26.08. (ausserhalb 7-Tage-Fenster). Volumen -14,6% unter Oe20 (P4-Zeitpunkt vor US-Open)."
     },
     {
       "ticker": "ORCL",
       "name": "Oracle",
       "sector": "Software/Cloud",
       "score": "mittel",
-      "begruendung": "Bereits Depotposition (aktuell -9,38%, unter der 10%-Verlustschwelle). 1 Anti-Bulltrap-Flag (Abstand SMA20 +13,56%), RSI14 71,82 knapp unter der 72er-Schwelle, chg_5d +13,21% staerkstes 5T-Momentum der Watchlist. Volumen -39,3% deutlich unter Oe20. Kein Nachkauf-Kandidat, da bereits Depotposition."
+      "begruendung": "Bereits Depotposition (aktuell -6,90%, deutlich erholt von -9,38% am Vortag). 1 Anti-Bulltrap-Flag (Abstand SMA20 +15,80%), RSI14 71,02 knapp unter der 72er-Schwelle, chg_5d +6,49%. Kein Nachkauf-Kandidat, da bereits Depotposition. Volumen -40,6% unter Oe20."
     },
     {
       "ticker": "CRM",
       "name": "Salesforce",
       "sector": "Software/Cloud",
       "score": "niedrig",
-      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA20 +9,07%). Schwaechste relative Staerke im Sektor: chg_5d +4,74% liegt unter NASDAQ (+5,09%) und unter Sektor-Durchschnitt (+9,45%) - RS-Kriterium (Abschnitt 15D) nicht erfuellt. Volumen -11,1% unter Oe20, kein Momentum-Ausbruch."
+      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA20 +10,94%). RS-Kriterium (Abschnitt 15D) weiterhin nicht erfuellt: chg_5d +6,22% liegt unter dem Sektor-Durchschnitt (+7,02%), wenn auch ueber NASDAQ (+2,97%) und S&P500 (+2,03%). Volumen -47,7% unter Oe20."
     },
     {
       "ticker": "ISRG",
       "name": "Intuitive Surgical",
       "sector": "MedTech",
       "score": "mittel",
-      "begruendung": "0 Anti-Bulltrap-Flags (RSI14 62,46; Abstand SMA20 +3,98%; chg_5d +7,21%), aber weiterhin -3,65% unter SMA50 - kein bestaetigtes Setup. Volumen -42,4% unter Oe20."
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "sector": "Semiconductors/AI",
-      "score": "niedrig",
-      "begruendung": "2 Anti-Bulltrap-Flags (RSI14 73,58 > 72er-Schwelle; Abstand SMA20 +9,16%) - technisch ueberhitzt, durch Anti-Bulltrap-Filter ausgeschlossen trotz Sektorstaerke (chg_5d +9,88%)."
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "sector": "Software/Cloud",
-      "score": "niedrig",
-      "begruendung": "3 Anti-Bulltrap-Flags (RSI14 81,43; Abstand SMA20 +17,97%; Abstand SMA50 +22,84%) - massiv ueberdehnt, klar durch Anti-Bulltrap-Filter ausgeschlossen."
-    },
-    {
-      "ticker": "NOW",
-      "name": "ServiceNow",
-      "sector": "Software/Cloud",
-      "score": "niedrig",
-      "begruendung": "2 Anti-Bulltrap-Flags (Abstand SMA20 +15,31%; Abstand SMA50 +16,37%) - ueberdehnt, durch Anti-Bulltrap-Filter ausgeschlossen trotz positivem OBV-Trend (+71,3 Mio.)."
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD (Advanced Micro Devices)",
-      "sector": "Semiconductors/AI",
-      "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags, aber technisch schwaechstes Sektormitglied: weiterhin unter SMA20 (-3,99%) und SMA50 (-5,98%), chg_5d nur +1,51% - keine Akkumulation erkennbar."
+      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA20 +8,18%, knapp ueber der Schwelle), RSI14 68,95, chg_5d +4,79%. Technisch verbessert: erstmals wieder knapp ueber SMA50 (+0,21%, zuvor -3,65%). Sektor MedTech in den Top-5, RS-Kriterium erfuellt (staerker als NASDAQ, S&P500 und Sektor-Durchschnitt). Volumen -26,1% unter Oe20 - keine Breakout-Bestaetigung."
     },
     {
       "ticker": "HOOD",
       "name": "Robinhood",
       "sector": "Fintech/Brokerage",
       "score": "niedrig",
-      "begruendung": "Bereits Depotposition (aktuell -6,59%, weitere Stabilisierung seit Vortagen). Weiterhin unter SMA20 (-4,98%)/SMA50 (-5,13%), RSI14 42,64 - trotz chg_5d +7,77% kein bestaetigtes Setup."
+      "begruendung": "Bereits Depotposition (aktuell -5,37%, leichte Erholung von -6,59%). 0 Anti-Bulltrap-Flags, aber weiterhin unter SMA20 (-2,96%)/SMA50 (-4,07%), RSI14 33,01 - kein bestaetigtes Setup trotz positivem OBV-5T-Trend."
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Cybersecurity",
+      "score": "niedrig",
+      "begruendung": "Neu 2 Anti-Bulltrap-Flags (Abstand SMA20 +11,81%; Abstand SMA50 +20,89%, beide ueber Schwelle) - nach der starken Rally der letzten Tage nun technisch ueberdehnt und durch den Anti-Bulltrap-Filter ausgeschlossen (Abschnitt 6), trotz staerkstem Sektor der Watchlist (Cybersecurity +10,92% 5T)."
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
+      "score": "niedrig",
+      "begruendung": "2 Anti-Bulltrap-Flags (Abstand SMA20 +16,80%; Abstand SMA50 +18,34%) - ueberdehnt, durch Anti-Bulltrap-Filter ausgeschlossen trotz starkem OBV-5T-Trend (+61,5 Mio.)."
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Software/Cloud",
+      "score": "niedrig",
+      "begruendung": "3 Anti-Bulltrap-Flags (RSI14 84,50; Abstand SMA20 +17,80%; Abstand SMA50 +23,85%) - weiterhin massiv ueberdehnt, klar durch Anti-Bulltrap-Filter ausgeschlossen."
+    },
+    {
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "sector": "Defense",
+      "score": "niedrig",
+      "begruendung": "2 Anti-Bulltrap-Flags (RSI14 82,25; Abstand SMA20 +8,21%) - ueberkauft, durch Anti-Bulltrap-Filter ausgeschlossen."
+    },
+    {
+      "ticker": "NOC",
+      "name": "Northrop Grumman",
+      "sector": "Defense",
+      "score": "niedrig",
+      "begruendung": "Formal nur 1 Anti-Bulltrap-Flag (RSI14 84,77 > 72er-Schwelle), Abstand SMA20/50 unter den jeweiligen Schwellen (+6,87%/+7,71%) - RSI-Wert aber extrem ueberkauft, hohes Ueberdehnungsrisiko trotz formal knapp unter dem 2-Flag-Ausschluss."
     }
   ]
 }
