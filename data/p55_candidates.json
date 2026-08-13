@@ -1,29 +1,29 @@
 {
-  "generated_at_utc": "2026-08-12T15:20:18Z",
-  "run_date": "2026-08-12",
+  "generated_at_utc": "2026-08-13T15:40:00Z",
+  "run_date": "2026-08-13",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade - NVIDIA erstmals mit Anti-Bulltrap-Flag trotz Kurshalt, Northrop Grumman verliert Sektor-RS, Lockheed Martin bleibt trotz neuer RS ueberdehnt. Volumen-Datenluecke 16-17 Uhr weiterhin ungeloest.",
+  "kurzbegruendung": "Kein Trade - Lockheed Martin, Northrop Grumman und Robinhood fallen alle seit P5 zurueck, trotz S&P-500-Rekordhoch keine frische institutionelle Bestaetigung.",
   "kandidaten": [
     {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors/AI",
-      "status": "Teilweise",
-      "begruendung": "Haelt das Kursniveau und baut es seit P5 sogar leicht aus (221,62 -> 223,74 USD, +0,96%) - Institutional-Hold-Kriterium (Preis haelt Breakout-Niveau) formal erfuellt. Zeigt aber erstmals ein neues Anti-Bulltrap-Flag (Abstand SMA50 erstmals ueber 8%-Schwelle: 8,48%, zuvor 7,47%) und die seit P4 bestehende OBV-Distributionswarnung bleibt auf sehr hohem Niveau nahezu unveraendert (-218,0 Mio. vs. -219,5 Mio. bei P5) - keine institutionelle Bestaetigung (Smart-Money-Analyse) trotz Kursstaerke. Sektor Semiconductors/AI bleibt mit Rang 6 von 11 (Oe +1,27%) klar ausserhalb der Top-5."
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "sector": "Defense",
+      "status": "Nicht bestanden",
+      "begruendung": "Verliert das seit P4 gehaltene Breakout-Niveau wieder: Kurs faellt von 606,845 USD (P5) auf 599,13 USD (-1,27%), waehrend NASDAQ im selben Fenster +0,81% zulegte - klare relative Schwaeche. Weiterhin 0 Anti-Bulltrap-Flags (RSI14 58,67, Abstand SMA20 +5,03%/SMA50 +10,85%, beide abkuehlend statt sich zu verschaerfen) und RS-Kriterium formal noch knapp erfuellt (chg_5d +2,79% > Sektor-Oe Defense +1,91% und S&P500 +1,03%), aber erstmals unter NASDAQ (+2,52%). OBV-5T-Trend praktisch unveraendert (1,822 Mio. vs. 1,832 Mio. bei P5) - keine frische institutionelle Akkumulation trotz des Kursrueckgangs erkennbar. Kein Second-Chance-Setup, last_volume weiterhin nur 0,74% des Oe20 (Datenluecke)."
     },
     {
       "ticker": "NOC",
       "name": "Northrop Grumman",
       "sector": "Defense",
       "status": "Nicht bestanden",
-      "begruendung": "Kurs seit P5 leicht ruecklaeufig (574,87 -> 573,74 USD, -0,20%) - kein Fortsetzungsmomentum. OBV-5T-Trend bleibt nahe Null (+1,3 Mio.), keine institutionelle Akkumulation erkennbar. RSI14 weiterhin ueberkauft (76,04, Anti-Bulltrap-Flag). Verliert heute erstmals seit dem P4-Lauf die relative Staerke zum eigenen Sektor (chg_5d +2,92% < Sektor-Oe Defense +3,25%, zuvor bei P4 noch klar erfuellt). Kein Second-Chance-Setup erkennbar."
+      "begruendung": "Kurs faellt weiter von 578,99 USD (P5) auf 573,52 USD (-0,94%). Verfehlt weiterhin die Sektor-RS (chg_5d +1,02% < Sektor-Oe Defense +1,91%) und liegt jetzt auch unter NASDAQ (+2,52%) sowie praktisch gleichauf mit S&P500 (+1,03%). OBV bleibt tief negativ (-10,14 Mio.) und OBV-5T-Trend nahezu unveraendert (+1,144 Mio.) - keine institutionelle Akkumulation. RSI14 kuehlt zwar auf 71,72 ab (knapp unter der 72er-Anti-Bulltrap-Schwelle), das ist aber Ausdruck der Kursschwaeche, keine Bestaetigung. Kein Second-Chance-Setup erkennbar."
     },
     {
-      "ticker": "LMT",
-      "name": "Lockheed Martin",
-      "sector": "Defense",
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sector": "Fintech/Brokerage",
       "status": "Teilweise",
-      "begruendung": "Setzt den Anstieg seit P5 fort (594,16 -> 598,27 USD, +0,69%) und erfuellt das Sektor-RS-Kriterium heute erstmals (chg_5d +3,58% > Sektor-Oe Defense +3,25%, bei P4 noch verfehlt). Der bereits bei P5 bestehende Anti-Bulltrap-Flag (Abstand SMA50) hat sich jedoch weiter verschaerft (+11,08%, zuvor +10,33%) - keine Entspannung der Ueberdehnung. OBV-5T-Trend bleibt nur leicht positiv (+1,9 Mio.) ohne klare institutionelle Bestaetigung."
+      "begruendung": "Bereits Depotposition (kein neuer Einstieg noetig). Gibt seit P5 einen Teil der starken Gewinne ab (99,93 -> 98,455 USD, -1,48%), bleibt aber RS-technisch mit Abstand am staerksten im Feld (chg_5d +8,54%, Sektor Fintech/Brokerage weiterhin Rang 2 von 11 Sektoren, klar vor NASDAQ +2,52% und S&P500 +1,03%). Weiterhin 0 Anti-Bulltrap-Flags (RSI14 56,42 gesund), rutscht aber knapp unter die SMA50 (-0,37%). OBV-5T-Trend praktisch unveraendert (27,95 Mio. vs. 27,71 Mio. bei P5) - keine frische institutionelle Akkumulation seit P5, aber auch keine Distribution. Kein Anlass fuer eine Nachkauf-Eskalation vor der P1-Portfoliopruefung; Depot-Buchverlust bleibt ohnehin nicht relevant (aktuell +/-Nulllinie um Einstand 99,88 USD)."
     }
   ]
 }
