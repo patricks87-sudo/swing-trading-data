@@ -1,29 +1,36 @@
 {
-  "generated_at_utc": "2026-08-13T15:40:00Z",
-  "run_date": "2026-08-13",
+  "generated_at_utc": "2026-08-14T15:40:00Z",
+  "run_date": "2026-08-14",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade - Lockheed Martin, Northrop Grumman und Robinhood fallen alle seit P5 zurueck, trotz S&P-500-Rekordhoch keine frische institutionelle Bestaetigung.",
+  "kurzbegruendung": "Lockheed Martin haelt und erweitert seine Gewinne trotz leicht ruecklaeufigem Gesamtmarkt (Institutional Hold Test bestanden), aber institutioneller Marktfilter (VIX>18 UND SOX schwaecher als NASDAQ) blockiert weiterhin kategorisch jede Kaufempfehlung.",
   "kandidaten": [
     {
       "ticker": "LMT",
       "name": "Lockheed Martin",
       "sector": "Defense",
-      "status": "Nicht bestanden",
-      "begruendung": "Verliert das seit P4 gehaltene Breakout-Niveau wieder: Kurs faellt von 606,845 USD (P5) auf 599,13 USD (-1,27%), waehrend NASDAQ im selben Fenster +0,81% zulegte - klare relative Schwaeche. Weiterhin 0 Anti-Bulltrap-Flags (RSI14 58,67, Abstand SMA20 +5,03%/SMA50 +10,85%, beide abkuehlend statt sich zu verschaerfen) und RS-Kriterium formal noch knapp erfuellt (chg_5d +2,79% > Sektor-Oe Defense +1,91% und S&P500 +1,03%), aber erstmals unter NASDAQ (+2,52%). OBV-5T-Trend praktisch unveraendert (1,822 Mio. vs. 1,832 Mio. bei P5) - keine frische institutionelle Akkumulation trotz des Kursrueckgangs erkennbar. Kein Second-Chance-Setup, last_volume weiterhin nur 0,74% des Oe20 (Datenluecke)."
+      "status": "Bestanden",
+      "begruendung": "Haelt das seit P4 gehaltene Breakout-Niveau nicht nur, sondern baut es aus: Kurs steigt von 602,645 USD (P5) auf 607,40 USD (+0,79%), waehrend NASDAQ (-0,55%), S&P500 (-0,26%) und SOX-Proxy (-0,86%) im selben Fenster nachgaben - klare relative Staerke gegen einen leicht schwaecheren Gesamtmarkt. Weiterhin 0 Anti-Bulltrap-Flags (RSI14 63,26, Abstand SMA20 +5,57%/SMA50 +11,99%, beide klar unter den Schwellen 72/8%/15%). RS-Kriterium weiterhin vollstaendig erfuellt: chg_5d +3,31% schlaegt Sektor-Durchschnitt Defense (+2,72%), NASDAQ (+0,81%) und S&P500 (+0,36%). Sektor Defense verbessert sich von Rang 5 auf Rang 4 von 11 - Kapital rotiert sichtbar in Richtung Defense, waehrend Cybersecurity (Rang 1, aber von +8,20% auf +5,68% abgekuehlt) und Semiconductors/AI (Rang 8) nachgeben. OBV-5T-Trend bleibt leicht positiv, praktisch unveraendert (+736.116 vs. +727.609 bei P5) - keine dramatische frische Akkumulation, aber auch keine Distribution. Bestes Institutional-Flow-Setup des Tages, aber wegen des uebergeordneten Marktfilters weiterhin kein Kauf moeglich."
     },
     {
       "ticker": "NOC",
       "name": "Northrop Grumman",
       "sector": "Defense",
       "status": "Nicht bestanden",
-      "begruendung": "Kurs faellt weiter von 578,99 USD (P5) auf 573,52 USD (-0,94%). Verfehlt weiterhin die Sektor-RS (chg_5d +1,02% < Sektor-Oe Defense +1,91%) und liegt jetzt auch unter NASDAQ (+2,52%) sowie praktisch gleichauf mit S&P500 (+1,03%). OBV bleibt tief negativ (-10,14 Mio.) und OBV-5T-Trend nahezu unveraendert (+1,144 Mio.) - keine institutionelle Akkumulation. RSI14 kuehlt zwar auf 71,72 ab (knapp unter der 72er-Anti-Bulltrap-Schwelle), das ist aber Ausdruck der Kursschwaeche, keine Bestaetigung. Kein Second-Chance-Setup erkennbar."
+      "begruendung": "Kurs steigt zwar leicht von 579,65 USD (P5) auf 583,745 USD (+0,71%), aber RSI14 klettert von 72,79 auf 74,28 - jetzt eindeutig ueber der 72er-Anti-Bulltrap-Schwelle (1 Flag bestaetigt). RS-Kriterium weiterhin verfehlt: chg_5d +2,13% liegt unter dem von Lockheed Martin nach oben gezogenen Sektor-Durchschnitt Defense (+2,72%). OBV bleibt tief negativ (-11,37 Mio.), OBV-5T-Trend nur marginal positiv (+437.544) - keine institutionelle Akkumulation trotz Kursanstieg erkennbar."
     },
     {
       "ticker": "HOOD",
       "name": "Robinhood",
       "sector": "Fintech/Brokerage",
       "status": "Teilweise",
-      "begruendung": "Bereits Depotposition (kein neuer Einstieg noetig). Gibt seit P5 einen Teil der starken Gewinne ab (99,93 -> 98,455 USD, -1,48%), bleibt aber RS-technisch mit Abstand am staerksten im Feld (chg_5d +8,54%, Sektor Fintech/Brokerage weiterhin Rang 2 von 11 Sektoren, klar vor NASDAQ +2,52% und S&P500 +1,03%). Weiterhin 0 Anti-Bulltrap-Flags (RSI14 56,42 gesund), rutscht aber knapp unter die SMA50 (-0,37%). OBV-5T-Trend praktisch unveraendert (27,95 Mio. vs. 27,71 Mio. bei P5) - keine frische institutionelle Akkumulation seit P5, aber auch keine Distribution. Kein Anlass fuer eine Nachkauf-Eskalation vor der P1-Portfoliopruefung; Depot-Buchverlust bleibt ohnehin nicht relevant (aktuell +/-Nulllinie um Einstand 99,88 USD)."
+      "begruendung": "Bereits Depotposition, kein neuer Einstieg noetig. Gibt seit P5 leicht nach (97,51 -> 97,06 USD, -0,46%), bleibt aber strukturell sauber: 0 Anti-Bulltrap-Flags, RSI14 52,34 gesund, RS-Kriterium weiterhin erfuellt (chg_5d +4,04% > NASDAQ und S&P500), Sektor Fintech/Brokerage weiterhin Rang 3 von 11 (Top-5). OBV-5T-Trend bleibt klar positiv (+30,06 Mio.) - institutionelle Akkumulation haelt an, kein Verkaufsgrund, aber auch kein akuter Nachkaufanlass vor der P1-Portfoliopruefung."
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Semiconductors/AI",
+      "status": "Nicht bestanden",
+      "begruendung": "Kurs leicht ruecklaeufig seit P5 (225,87 -> 225,245 USD, -0,28%). RSI14 bleibt mit 75,55 ueber der 72er-Schwelle (1 Anti-Bulltrap-Flag). OBV-5T-Trend bleibt negativ und verschaerft sich sogar (-15,91 Mio. vs. -14,53 Mio. bei P5) - klassische Preis/OBV-Divergenz trotz Kursnaehe zum Hoch. Sektor Semiconductors/AI bleibt auf Rang 8 von 11 (nicht Top-5) - das fuer eine Kaufempfehlung zwingende Sektor-Pflichtkriterium (Abschnitt 14 P4-Prompt) bleibt verfehlt."
     }
   ]
 }
