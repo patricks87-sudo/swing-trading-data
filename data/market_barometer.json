@@ -1,54 +1,63 @@
 {
-  "generated_at_utc": "2026-08-14T15:50:08Z",
+  "generated_at_utc": "2026-08-17T13:03:22Z",
   "status": "NEUTRAL",
-  "begruendung": "P1-Lauf 14.08.2026 (Freitag, Portfolioaufbau 17:35 MESZ). Workflow fetch_market_data.yml per workflow_dispatch (run=p1) ausgeloest (Run-ID 31815933146, gestartet 15:43:57 UTC, erfolgreich abgeschlossen 15:47:45 UTC). data/p1_latest.json enthaelt den frischen Datensatz (generated_at_utc 2026-08-14T15:44:18Z, entspricht 17:44 MESZ, innerhalb des P1-Analysefensters 17:15-18:00 MESZ). EUR/USD 0,867. Marktregime: NASDAQ-Proxy 728,42 (5T +0,75%, RSI14 68,98, Abstand SMA20 +3,47%) und S&P500-Proxy 775,88 (5T +0,34%, RSI14 74,68, Abstand SMA50 +3,60%) bleiben klar im Aufwaertstrend ueber allen gleitenden Durchschnitten, wenngleich beide Indizes mit erhoehtem RSI. Ausloeser der leichten Nachmittagsschwaeche: ueberraschend schwacher Uni-Michigan-Verbrauchervertrauensindex (51,0 vs. 54,5 erwartet) und ueberraschend gefallene US-Einzelhandelsumsaetze im Juli (-0,6%, staerkster Rueckgang seit ueber einem Jahr). SOX-Proxy 543,32 (5T +0,01%) bleibt praktisch flach und damit klar schwaecher als NASDAQ (+0,75%) - der Halbleitersektor verliert weiter relative Staerke. VIX-Proxy 18,875 (5T -3,50%) bleibt knapp ueber der 18er-Warnschwelle, klar unter der 25er-Schwelle. US-10Y-Treasury-Rendite und A/D-Ratio weiterhin nicht im Feed enthalten (bekannte Datenluecke). Institutioneller Marktfilter (Abschnitt 15B, P4-Prompt): von 3 durchgehend pruefbaren Kriterien sind 2 verletzt (VIX-Proxy 18,875>18; SOX 5T +0,01% klar schwaecher als NASDAQ 5T +0,75%), NASDAQ bleibt ueber SMA20 (Kriterium erfuellt). Die Pflichtschwelle 'keine Empfehlung bei >=2 von 5 bekannten Warnkriterien' bleibt erreicht - jede Kaufempfehlung bleibt strukturell blockiert. Risk-Off-Spezialmodus nicht ausgeloest (VIX-Proxy <25, S&P500 klar ueber SMA50). Kandidatenpruefung: Lockheed Martin besteht als einziger P4-Kandidat den P5.5-Institutional-Hold-Test ('Bestanden') und alle technischen Kriterien (0 Anti-Bulltrap-Flags, RS-Kriterium vollstaendig erfuellt, Sektor Defense Rang 4 von 11), scheitert aber am eigenstaendigen P1-Liquiditaetskriterium (Oe20-Volumen ~1,20 Mio. Aktien, unter der 5-Mio.-Schwelle) und bleibt zusaetzlich durch den Marktfilter blockiert. Northrop Grumman und NVIDIA scheitern jeweils am P5.5-Test. Ergebnis: Kein Trade. Kapitalerhalt hat Vorrang - Lockheed Martin bleibt bestes Institutional-Flow-Setup des Tages fuer kommende Handelstage, sofern Marktfilter und Volumenkriterium sich verbessern. Depotpruefung: Robinhood -2,45% (Halten), Oracle -5,37% (Halten, Nachkauf durch BBB--Rating-Downgrade und Ueberhitzung blockiert), NVIDIA +20,24% (Teilverkauf zur Gewinnsicherung wegen RSI-Ueberhitzung und anhaltender OBV-Divergenz). Unrealisiertes Gesamtergebnis Depot: rund +425,60 EUR (+5,35%).",
-  "kurzbegruendung": "NEUTRAL – Kein Trade. Markt bleibt im Aufwaertstrend, aber VIX/SOX-Marktfilter blockiert weiterhin; Lockheed Martin bestes Setup, scheitert am Volumenkriterium.",
+  "begruendung": "P4-Lauf 17.08.2026 (Montag, regulaerer Handelstag, Kandidatensuche 14:45 MESZ). Workflow fetch_market_data.yml per workflow_dispatch (run=p4) ausgeloest (Run-ID 32032134424, gestartet 12:53:33 UTC, erfolgreich abgeschlossen 12:56:56 UTC). data/p4_latest.json enthaelt den frischen Datensatz (generated_at_utc 2026-08-17T12:53:47Z, entspricht 14:53 MESZ, innerhalb des P4-Analysefensters 14:45-15:15 MESZ, aber vor US-Markteroeffnung 15:30 MESZ). EUR/USD 0,864. Marktregime: NASDAQ-Proxy 731,07 (5T +1,11%, RSI14 70,52, Abstand SMA20 +3,83%) und S&P500-Proxy 776,34 (5T +0,40%, RSI14 75,15, Abstand SMA20 +2,66%) klar im Aufwaertstrend ueber allen gleitenden Durchschnitten, beide Indizes mit erhoehtem RSI nahe Rekordniveau. SOX-Proxy 550,42 (5T +1,32%) bestaetigt und ist damit staerker als NASDAQ (+1,11%). VIX-Proxy 18,63 (5T -4,75%) liegt knapp ueber der 18er-Warnschwelle. Websuche zur Einordnung: reale VIX (nicht Proxy) schloss Freitag bei rund 14,56 und notierte Montagfrueh bei rund 14,97 - deutlich entspannter als der VIXY-Proxy im Feed nahelegt. Institutioneller Marktfilter (Abschnitt 15B, P4-Prompt): von 3 durchgehend pruefbaren Kriterien ist nur 1 verletzt (VIX-Proxy 18,63>18, real jedoch klar darunter), NASDAQ bleibt ueber SMA20 und SOX bestaetigt staerker als NASDAQ (beide Kriterien erfuellt) - die Pflichtschwelle 'keine Empfehlung bei >=2 von 5 bekannten Warnkriterien' ist auf Basis der bekannten Daten nicht erreicht. A/D-Ratio und % NASDAQ-Aktien ueber 50 DMA bleiben strukturell im Feed nicht verfuegbar (bekannte Datenluecke, nicht geschaetzt). Marktnews: Fed-Zinserhoehungswahrscheinlichkeit fuer September auf unter 30% gesunken (schwache Einzelhandelsdaten), FOMC-Protokoll folgt Mittwoch; NVIDIA erwaegt 3-Mrd.-USD-Investition in SB Energy (OpenAI-Rechenzentrums-Deal); US-Regierung draengt Apple, auf chinesische Speicherchips zu verzichten. Sektorrotation (18 Watchlist-Werte inkl. Robinhood/Oracle, 11 Sektoren, 5T): Top-5 sind Cybersecurity (+5,61%), MedTech (+4,14%), Defense (Oe +3,02%), Fintech/Brokerage (+2,43%) und Industrials (+1,71%). Kandidaten-Screening: Lockheed Martin ist der sauberste Kandidat des Tages (0 Anti-Bulltrap-Flags, RS-Kriterium vollstaendig erfuellt, Sektor Defense Top-5), gefolgt von Intuitive Surgical (0 Flags, RSI nahe Schwelle) und Caterpillar (0 Flags, aber weiterhin unter SMA50, fruehe Akkumulationsphase). Northrop Grumman verfehlt die Sektor-RS. NVIDIA zeigt heute erneut eine OBV-Divergenz (2 Anti-Bulltrap-Flags) und bleibt zusaetzlich durch den Sektorfilter blockiert (Rang 9 von 11). Robinhood (Depotposition) technisch sauber, aber bereits gehalten. Oracle (Depotposition) mit 2 Anti-Bulltrap-Flags weiterhin ueberdehnt. Trotz der technisch saubersten Setups seit Tagen (Lockheed Martin, Intuitive Surgical) verhindert die strukturelle Volumen-Datenluecke vor US-Open (last_volume nur 55,5-78,3% des 20-Tage-Durchschnitts bei allen Top-Kandidaten) die laut Abschnitt 8/14 zwingend erforderliche Breakout-Volumenbestaetigung (>=40% ueber Oe) und die Verifikation des Institutionellen-Flow-Scores (>=90) - damit keine Kaufempfehlung heute. Depotfilter (Abschnitt 12): 2 offene Positionen (Robinhood -4,33%, Oracle -7,22%), keine der beiden ueber -10% Buchverlust - Depotfilter-Regel (2+ Positionen >10% Verlust) nicht ausgeloest. Ergebnis: Kein Trade. Kapitalerhalt hat Vorrang - Lockheed Martin bleibt bestes Institutional-Flow-Setup fuer die P5-Bestaetigung nach US-Open, Intuitive Surgical und Caterpillar als Beobachtungskandidaten.",
+  "kurzbegruendung": "NEUTRAL – Kein Trade. VIX-Proxy knapp über 18; Lockheed Martin & Intuitive Surgical sauberste Setups, scheitern am Volumen vor US-Open.",
   "sektor_rotation": [
-    {
-      "sektor": "MedTech",
-      "trend": "positiv",
-      "kommentar": "Staerkster Sektor der Watchlist (chg_5d +5,73%). Intuitive Surgical bleibt mit RSI14 77,26 und Abstand SMA20 +8,83% ueberdehnt (2 Anti-Bulltrap-Flags) - kein Einstieg empfehlenswert trotz Sektorstaerke.",
-      "kandidaten": [
-        { "name": "Intuitive Surgical", "empfehlung": "Verkauf" }
-      ]
-    },
     {
       "sektor": "Cybersecurity",
       "trend": "positiv",
-      "kommentar": "Zweitstaerkster Sektor (chg_5d +5,46%), kuehlt seit gestern weiter ab. Palo Alto Networks bleibt massiv ueberdehnt (RSI14 78,42, Abstand SMA20 +9,35%, SMA50 +17,60% - 3 Anti-Bulltrap-Flags) - klar kein Einstieg.",
+      "kommentar": "Staerkster Sektor der Watchlist (chg_5d +5,61%). Palo Alto Networks bleibt massiv ueberdehnt (RSI14 78,79, Abstand SMA20 +9,49%, SMA50 +17,76% - 3 Anti-Bulltrap-Flags) - klar kein Einstieg trotz Sektorstaerke.",
       "kandidaten": [
         { "name": "Palo Alto Networks", "empfehlung": "Verkauf" }
       ]
     },
     {
-      "sektor": "Fintech/Brokerage",
+      "sektor": "MedTech",
       "trend": "positiv",
-      "kommentar": "Robinhood (Depotposition) drittstaerkster Sektor (chg_5d +4,44%), strukturell weiterhin sauber: 0 Anti-Bulltrap-Flags, RSI14 52,99 gesund, OBV-5T-Trend klar positiv (+30,05 Mio.) - kein Nachkaufanlass, aber kein Verkaufsgrund.",
+      "kommentar": "Zweitstaerkster Sektor (chg_5d +4,14%). Intuitive Surgical mit 0 Anti-Bulltrap-Flags (RSI14 71,88 knapp unter Schwelle, Abstand SMA20 +7,28%) technisch sauber und RS-Kriterium erfuellt, aber Breakout-Volumen (55,5% des Oe20) vor US-Open nicht bestaetigt.",
       "kandidaten": [
-        { "name": "Robinhood", "empfehlung": "Halten" }
+        { "name": "Intuitive Surgical", "empfehlung": "Kauf" }
       ]
     },
     {
       "sektor": "Defense",
       "trend": "positiv",
-      "kommentar": "Rang 4 von 11 (chg_5d +2,72%) - Kapital rotiert weiter sichtbar in den Sektor. Lockheed Martin technisch sauberstes Setup der gesamten Watchlist (0 Anti-Bulltrap-Flags, RS-Kriterium vollstaendig erfuellt), scheitert aber am P1-Liquiditaetskriterium (Volumen <5 Mio. Aktien) und am uebergeordneten Marktfilter. Northrop Grumman traegt ein Anti-Bulltrap-Flag (RSI14 74,11) und verfehlt weiterhin die Sektor-RS.",
+      "kommentar": "Rang 3 von 11 (Oe chg_5d +3,02%). Lockheed Martin technisch sauberstes Setup der gesamten Watchlist (0 Anti-Bulltrap-Flags, RS-Kriterium vollstaendig erfuellt gegen Sektor, NASDAQ und S&P500), scheitert aber am Volumenkriterium vor US-Open. Northrop Grumman traegt 1 Anti-Bulltrap-Flag (RSI14 75,00) und verfehlt die Sektor-RS (chg_5d +2,50% unter Sektor-Oe).",
       "kandidaten": [
         { "name": "Lockheed Martin", "empfehlung": "Kauf" },
         { "name": "Northrop Grumman", "empfehlung": "Verkauf" }
       ]
     },
     {
+      "sektor": "Fintech/Brokerage",
+      "trend": "positiv",
+      "kommentar": "Robinhood (Depotposition) chg_5d +2,43%, strukturell weiterhin sauber: 0 Anti-Bulltrap-Flags, RSI14 49,86 gesund, OBV-5T-Trend klar positiv (+16,35 Mio.) - kein Nachkaufanlass, aber kein Verkaufsgrund.",
+      "kandidaten": [
+        { "name": "Robinhood", "empfehlung": "Halten" }
+      ]
+    },
+    {
       "sektor": "Industrials",
       "trend": "positiv",
-      "kommentar": "Neu in den Top-5 (Rang 5, chg_5d +1,84%). Caterpillar RSI14 46,83 gesund und 0 Anti-Bulltrap-Flags, aber weiterhin unter SMA50 (-6,01%) - noch kein bestaetigter Trendwechsel.",
+      "kommentar": "Rang 5 von 11 (chg_5d +1,71%). Caterpillar RSI14 46,58 gesund und 0 Anti-Bulltrap-Flags, aber weiterhin klar unter SMA50 (-6,13%) - noch kein bestaetigter Trendwechsel, fruehe Beobachtungsposition.",
       "kandidaten": [
         { "name": "Caterpillar", "empfehlung": "Halten" }
       ]
     },
     {
+      "sektor": "Payments",
+      "trend": "neutral",
+      "kommentar": "Visa (chg_5d +0,46%, 1 Anti-Bulltrap-Flag durch leichte OBV-Divergenz) und Mastercard (chg_5d +1,13%, 0 Flags) beide leicht positiv ohne klaren Aufwaertsimpuls - reine Beobachtungsposition.",
+      "kandidaten": [
+        { "name": "Visa", "empfehlung": "Halten" },
+        { "name": "Mastercard", "empfehlung": "Halten" }
+      ]
+    },
+    {
       "sektor": "Software/Cloud",
       "trend": "neutral",
-      "kommentar": "Sektor-Durchschnitt +1,65%, jetzt Rang 6 (knapp ausserhalb Top-5). Microsoft (RSI14 85,78, 3 Anti-Bulltrap-Flags) und ServiceNow (RSI14 73,43, 3 Flags) massiv ueberdehnt. Salesforce technisch sauber (0 Flags), aber Sektor ausserhalb Top-5. Oracle (Depotposition) weiterhin ueberkauft (RSI14 78,43) und durch Rating-Downgrade belastet.",
+      "kommentar": "Sektor-Durchschnitt +0,64%, Rang 7 von 11 (ausserhalb Top-5). Microsoft (RSI14 84,77, 3 Anti-Bulltrap-Flags) massiv ueberdehnt. ServiceNow (2 Flags) ebenfalls ueberdehnt. Salesforce (1 Flag, leichte OBV-Divergenz) moderat. Oracle (Depotposition) mit 2 Anti-Bulltrap-Flags weiterhin ueberkauft, Buchverlust -7,22%.",
       "kandidaten": [
         { "name": "Microsoft", "empfehlung": "Verkauf" },
         { "name": "ServiceNow", "empfehlung": "Verkauf" },
@@ -57,44 +66,35 @@
       ]
     },
     {
-      "sektor": "Payments",
-      "trend": "neutral",
-      "kommentar": "Visa (chg_5d +0,83%) und Mastercard (chg_5d +1,07%) beide leicht positiv, ohne klaren Aufwaertsimpuls - reine Beobachtungsposition.",
-      "kandidaten": [
-        { "name": "Visa", "empfehlung": "Halten" },
-        { "name": "Mastercard", "empfehlung": "Halten" }
-      ]
-    },
-    {
       "sektor": "Defense/Industrials",
       "trend": "negativ",
-      "kommentar": "RTX Corporation ruecklaeufig (chg_5d -0,54%) trotz 0 Anti-Bulltrap-Flags - kein klares Momentum, kein Einstieg empfehlenswert.",
+      "kommentar": "RTX Corporation nahezu unveraendert (chg_5d -0,03%) trotz 0 Anti-Bulltrap-Flags - RS gegen NASDAQ und S&P500 verfehlt, kein Einstieg empfehlenswert.",
       "kandidaten": [
         { "name": "RTX Corporation", "empfehlung": "Verkauf" }
       ]
     },
     {
-      "sektor": "Healthcare",
-      "trend": "negativ",
-      "kommentar": "UnitedHealth Group bleibt schwach, RSI14 38,96, unter SMA20 (-3,28%) und SMA50 (-3,32%).",
-      "kandidaten": [
-        { "name": "UnitedHealth Group", "empfehlung": "Verkauf" }
-      ]
-    },
-    {
       "sektor": "Semiconductors/AI",
       "trend": "negativ",
-      "kommentar": "Sektor-Durchschnitt -1,54%, jetzt Rang 10 von 11. NVIDIA (Depotposition) mit RSI14 74,85 ueber der 72er-Schwelle und anhaltender OBV-Divergenz (-15,997 Mio.) - Teilverkauf zur Gewinnsicherung empfohlen. Broadcom bleibt schwach (chg_5d -7,96%).",
+      "kommentar": "Sektor-Durchschnitt -0,39%, Rang 9 von 11. NVIDIA zeigt erneut eine OBV-Divergenz (OBV-5T-Trend -84,97 Mio. bei RSI14 75,44 - 2 Anti-Bulltrap-Flags), AMD (Advanced Micro Devices) mit staerkstem Momentum der Watchlist (chg_5d +6,42%, 0 Flags) bleibt durch den Sektorfilter blockiert, Broadcom schwaechster Wert (chg_5d -8,13%).",
       "kandidaten": [
-        { "name": "NVIDIA", "empfehlung": "Halten" },
+        { "name": "NVIDIA", "empfehlung": "Verkauf" },
         { "name": "AMD (Advanced Micro Devices)", "empfehlung": "Halten" },
         { "name": "Broadcom", "empfehlung": "Verkauf" }
       ]
     },
     {
+      "sektor": "Healthcare",
+      "trend": "negativ",
+      "kommentar": "UnitedHealth Group schwach, RSI14 39,25, unter SMA20 (-3,20%) und SMA50 (-3,24%), RS gegen NASDAQ und S&P500 verfehlt.",
+      "kandidaten": [
+        { "name": "UnitedHealth Group", "empfehlung": "Verkauf" }
+      ]
+    },
+    {
       "sektor": "Technology",
       "trend": "negativ",
-      "kommentar": "Apple schwaechster Sektor-Wert, RSI14 25,74 (weiter ueberverkauft), klar unter SMA20 (-3,99%) - kein Bodenbildungssignal erkennbar.",
+      "kommentar": "Apple schwaechster Sektor-Wert und schwaechster Wert der gesamten Watchlist im RSI (25,98, tief ueberverkauft), klar unter SMA20 (-3,93%) - kein Bodenbildungssignal erkennbar.",
       "kandidaten": [
         { "name": "Apple", "empfehlung": "Verkauf" }
       ]
