@@ -1,43 +1,29 @@
 {
-  "generated_at_utc": "2026-08-17T15:18:00Z",
-  "run_date": "2026-08-17",
+  "generated_at_utc": "2026-08-18T15:19:07Z",
+  "run_date": "2026-08-18",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Caterpillar haelt und erweitert Gewinne (bestanden), Lockheed Martin faellt seit P4 kontinuierlich zurueck (Fake Breakout bestaetigt) - Institutioneller Flow-Score mangels Volumen-/Options-Daten strukturell nicht verifizierbar, Kein Trade.",
+  "kurzbegruendung": "AMD und Caterpillar fallen seit P5 weiter unter SMA20/50 zurueck (Institutional Hold Test gescheitert), Robinhood-Depotposition haelt sich ohne Handlungsbedarf. Institutioneller Marktfilter (VIX>18, SOX<NASDAQ) blockiert ohnehin jede Neuposition - Kein Trade.",
   "kandidaten": [
+    {
+      "ticker": "AMD",
+      "name": "AMD (Advanced Micro Devices)",
+      "sector": "Semiconductors/AI",
+      "status": "Nicht bestanden",
+      "begruendung": "Der beim P5-Lauf erkannte Fake-Breakout bestaetigt sich und verschaerft sich weiter: Abstand SMA20 verschlechtert sich von +2,35% (P4) ueber -0,69% (P5) auf -3,12% (P5.5), Abstand SMA50 von -0,80% (P4) ueber -4,37% (P5) auf -6,79% (P5.5). Der 5-Tage-Trend kollabiert von +7,76% (P4) ueber +2,92% (P5) auf nur noch +0,27% (P5.5). OBV-5T-Trend bleibt zwar weiterhin positiv (+42,7 Mio., P5: +43,0 Mio.) und RSI14 mit 59,04 unauffaellig - aber ohne Rueckeroberung des Breakout-Niveaus ist das kein Kaufsignal. Institutional Hold Test klar nicht bestanden."
+    },
     {
       "ticker": "CAT",
       "name": "Caterpillar",
       "sector": "Industrials",
-      "status": "Bestanden",
-      "begruendung": "Einziger Kandidat mit klarem Institutional Hold: Kurs steigt seit P5 weiter um +1,86% (863,01 -> 879,05 USD), chg_5d beschleunigt von +1,71% (P4) ueber +3,04% (P5) auf +4,95% (P5.5). 0 Anti-Bulltrap-Flags (RSI14 58,15, Abstand SMA20 +2,89%), OBV-5T-Trend deutlich positiv und steigend (+4,72 Mio., P4: +2,79 Mio.). Sektor Industrials jetzt klarer Rang 1 von 11 (chg_5d +4,95%). RS vs. NASDAQ (+1,87%) und S&P500 (+0,30%) klar erfuellt. Einziger Schwachpunkt: weiterhin -3,54% unter SMA50, also noch keine vollstaendige Trendbestaetigung - fruehe Akkumulationsphase, kein etabliertes Breakout-Level."
-    },
-    {
-      "ticker": "LMT",
-      "name": "Lockheed Martin",
-      "sector": "Defense",
       "status": "Nicht bestanden",
-      "begruendung": "Fake-Breakout-Signal aus dem P5-Lauf bestaetigt sich: Kurs faellt seit P5 weiter um -1,11% (606,20 -> 599,45 USD), nach bereits -0,41% seit P4. chg_5d dreht von +3,53% (P4) ueber +0,50% (P5) jetzt ins Negative (-0,62%) - liegt damit klar unter NASDAQ (+1,87%), S&P500 (+0,30%) und dem eigenen Sektor-Durchschnitt. RSI14 auf 58,06 entspannt (kein Anti-Bulltrap-Flag mehr), aber die institutionelle Nachfrage, die den Kandidaten tagelang angefuehrt hat, ist erkennbar abgeebbt (OBV-5T-Trend nur noch +163.597, P4: +736.116). Sektor Defense rutscht auf Rang 5 von 11 (Grenzbereich Top-5)."
-    },
-    {
-      "ticker": "ISRG",
-      "name": "Intuitive Surgical",
-      "sector": "MedTech",
-      "status": "Nicht bestanden",
-      "begruendung": "Kurs faellt seit P5 weiter um -0,71% (394,12 -> 391,31 USD). chg_5d dreht von +4,14% (P4) ueber +0,19% (P5) jetzt ins Negative (-0,53%) - unter NASDAQ und S&P500. Sektor MedTech faellt auf Rang 7 von 11 (nicht mehr Top-5). RSI14 auf 67,49 entspannt (0 Anti-Bulltrap-Flags), aber ohne institutionelle Bestaetigung - klassischer Pullback ohne bisherige Wiederaufnahme der Staerke."
+      "begruendung": "Faellt seit P5 erstmals unter SMA20 zurueck (-1,53%, war bei P5 noch +0,31%, bei P4 +3,18%), Abstand SMA50 -7,82%. 5-Tage-Trend dreht von +1,43% (P5) auf -0,54% (P5.5) ins Negative. Zusaetzlich zum bereits bei P4/P5 identifizierten Volumenfilter (Oe Tagesvolumen 2,85 Mio. < 5-Mio.-Mindestschwelle) damit jetzt auch technisch das Breakout-Niveau verloren. RSI14 62,66 unauffaellig, OBV-5T-Trend weiterhin leicht positiv (+4,12 Mio.), reicht aber nicht fuer einen bestandenen Hold Test. Sektor Industrials faellt von Rang 1 auf Rang 6 von 11 zurueck."
     },
     {
       "ticker": "HOOD",
       "name": "Robinhood",
       "sector": "Fintech/Brokerage",
       "status": "Teilweise",
-      "begruendung": "Bereits Depotposition (Buchverlust -4,10%, Einstand 99,88 USD, aktuell 95,785 USD). Kurs seit P5 leicht ruecklaeufig (-0,78%), chg_5d schwaecht sich von +2,43% (P4) ueber +2,14% (P5) auf +1,34% (P5.5) ab und liegt damit erstmals seit Tagen unter NASDAQ (+1,87%), bleibt aber ueber S&P500 (+0,30%). OBV-5T-Trend deutlich verlangsamt (+4,48 Mio., P4: +16,35 Mio.) - Akkumulation laesst spuerbar nach. Sektor Fintech/Brokerage weiterhin Top-5 (Rang 3). Kein Nachkauf-Anlass, aber auch kein Verkaufsgrund (0 Anti-Bulltrap-Flags, RSI14 55,23 gesund)."
-    },
-    {
-      "ticker": "NOC",
-      "name": "Northrop Grumman",
-      "sector": "Defense",
-      "status": "Nicht bestanden",
-      "begruendung": "Kurs faellt seit P5 weiter um -0,51% (582,275 -> 579,30 USD). chg_5d schwaecht sich von +2,50% (P4) ueber +0,76% (P5) auf nur noch +0,24% (P5.5) ab - unter NASDAQ und knapp unter S&P500. RSI14 faellt von 74,28 (P4) auf 68,45 - der Anti-Bulltrap-Flag (RSI>72) ist damit aufgeloest, aber ohne institutionelle Bestaetigung (OBV-5T-Trend nur +380.332, praktisch unveraendert seit P4). Bewegt sich im Sog von Lockheed Martin mit nach unten."
+      "begruendung": "Bereits bestehende Depotposition (Kauf 99,88 USD/86,20€, aktuell 92,585 USD/79,92€, Buchverlust -7,30%, unter der 10%-Schwelle). Faellt wie AMD und Caterpillar unter SMA20 (-1,54%) und SMA50 (-6,91%) zurueck, 5-Tage-Trend -1,90%. RSI14 54,55 weiterhin gesund, 0 Anti-Bulltrap-Flags, OBV-5T-Trend deutlich positiv (+26,08 Mio.) - keine institutionelle Distribution erkennbar trotz Kursschwaeche. Kein Nachkauf-Anlass, aber auch kein Verkaufsgrund."
     }
   ]
 }
