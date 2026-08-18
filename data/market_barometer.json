@@ -1,39 +1,55 @@
 {
-  "generated_at_utc": "2026-08-17T15:45:30Z",
+  "generated_at_utc": "2026-08-18T13:01:57Z",
   "status": "NEUTRAL",
-  "begruendung": "P1-Lauf 17.08.2026 (Montag, Daily Institutional Swing Portfolio Builder, Analysefenster 17:15-18:00 MESZ). Workflow fetch_market_data.yml per workflow_dispatch (run=p1) ausgeloest (Run-ID 32042844406, gestartet 15:36:37 UTC, erfolgreich abgeschlossen 15:40:04 UTC). data/p1_latest.json enthaelt den frischen Datensatz (generated_at_utc 2026-08-17T15:36:52Z, entspricht 17:36 MESZ, innerhalb des Analysefensters). EUR/USD 0,864 (unveraendert seit P5.5). Marktregime seit P5.5 (15:09 UTC) kaum veraendert: NASDAQ-Proxy 733,62 (5T +1,77%, RSI14 75,23, Abstand SMA50 +2,92%), S&P500-Proxy 775,28 (5T +0,29%, RSI14 73,46, Abstand SMA50 +3,47%) - beide weiterhin stark ueberkauft (RSI>70). SOX-Proxy 564,55 (5T +6,64%) bleibt klar staerkster Index, Chip-Sektor institutionell fuehrend. VIX-Proxy 18,69 (5T -4,40%), praktisch unveraendert knapp ueber der 18er-Warnschwelle; reale CBOE-VIX laut Websuche weiterhin nahe Jahrestief 2026 (~15) - deutlich entspannter als der Proxy. Institutioneller Marktfilter (P4-Prompt Abschnitt 15B): von 3 bekannten Kriterien weiterhin nur 1 verletzt (VIX-Proxy>18) - NASDAQ klar ueber 20DMA, SOX klar staerker als NASDAQ, Schwelle von 2/5 wird nicht erreicht, Filter strukturell nicht ausgeloest. Risk-Off-Spezialmodus nicht ausgeloest (VIX-Proxy 18,69<25, S&P500 klar ueber SMA50). Einstufung bleibt NEUTRAL (vierter Lauf in Folge am 17.08.2026 mit dieser Klassifikation) - regeltechnisch waere max. 1 neue Position zulaessig. Marktnews: VIX auf Jahrestief 2026, Anleger trotz ueberkaufter Indizes entspannt; AMD platziert 4,75-Mrd.-USD-Anleihe zur KI-Infrastruktur-Finanzierung und liefert das staerkste Tagesmomentum der Watchlist; Fed-Zinserhoehungswahrscheinlichkeit September weiterhin unter einem Drittel, FOMC-Protokoll Mittwoch; Einzelhandels-Berichtswoche (Walmart, Target, Home Depot, Lowe's) laeuft. Kandidatenpruefung (nur P4-identifizierte Aktien, Kreuzabgleich mit dem P5.5-Institutional-Hold-Test): Caterpillar bestaetigt seinen Status als bestes Setup des Tages (chg_5d +4,91%, 0 Anti-Bulltrap-Flags, OBV-5T-Trend weiterhin positiv +4,72 Mio., Sektor Industrials Rang 1 von 11), bleibt aber -3,58% unter der SMA50 - fruehe Akkumulationsphase ohne etabliertes Breakout-Level. Lockheed Martin bestaetigt endgueltig das Fake-Breakout-Signal aus P5/P5.5 (chg_5d dreht von +3,39% bei P4 auf -0,95%, OBV-5T-Trend faellt auf nur noch +161.849) - Kandidat fuer heute verworfen. AMD (im P4-Lauf noch mit Score niedrig gefuehrt) liefert mit chg_5d +10,11% das staerkste Momentum der gesamten Watchlist und rueckt mit dem Sektor Semiconductors/AI erstmals in die Top-5 (Rang 2) - hat aber die formale P5.5-Bestaetigungskette nicht durchlaufen. Fuer alle Kandidaten gilt uebergreifend: die zwingend erforderliche Breakout-Volumenbestaetigung und der institutionelle Flow-Score (>=90/100) sind strukturell nicht verifizierbar, da last_volume im Feed durchgehend nur einen minimalen Bruchteil des Tagesvolumens abbildet und Options-Flow-Daten vollstaendig fehlen (bekannte Datenluecke). Depotfilter: 2 offene Positionen, Robinhood -4,03% (Einstand 99,88 USD, aktuell 95,85 USD), Oracle -8,97% (Einstand 162,24 USD, aktuell 147,68 USD, hat die 8%-Nachkaufschwelle ueberschritten) - Depotfilter-Regel (2+ Positionen >10% Verlust) nicht ausgeloest. Ergebnis: Kein Trade. Kapitalerhalt hat Vorrang - vierter Kein-Trade-Lauf in Folge am 17.08.2026 (P4, P5, P5.5, P1), Caterpillar bleibt bestes beobachtetes Setup, AMD staerkstes Momentum fuer den morgigen P4-Lauf vorzumerken.",
-  "kurzbegruendung": "NEUTRAL – Kein Trade. Caterpillar bestes Setup (kein Breakout bestätigt), AMD stärkstes Momentum (ungeprüft), Oracle-Depot über Nachkauf-Schwelle.",
+  "begruendung": "P4-Lauf 18.08.2026 (Dienstag, Institutioneller Swing-Scanner v3.0, Analysefenster 14:45-15:15 MESZ). Workflow fetch_market_data.yml per workflow_dispatch (run=p4) ausgeloest und erfolgreich abgeschlossen (Run-ID 32139017817, 12:50:52-12:54:25 UTC). data/p4_latest.json frisch (generated_at_utc 2026-08-18T12:51:10Z, entspricht 14:51 MESZ, innerhalb des Analysefensters). EUR/USD 0,863. Marktregime (Basis: Schlusskurse 17.08.2026, vor dem heutigen US-Open): NASDAQ-Proxy 729,87 (RSI14 73,88 ueberkauft, +3,41% ueber SMA20, 5T +1,25%), S&P500-Proxy 772,67 (RSI14 70,94, +1,97% ueber SMA20), SOX-Proxy 559,12 klar staerkster Index (5T +5,62% vs. NASDAQ +1,25% - SOX bestaetigt). VIX-Proxy 18,82, knapp ueber der 18er-Warnschwelle (RSI14 nur 29,21, also zuletzt fallend/entspannt). Institutioneller Marktfilter (Abschnitt 15B): von den 3 im Feed pruefbaren Kriterien nur 1 verletzt (VIX-Proxy>18); A/D-Ratio und Prozent NASDAQ-Aktien >50DMA sind bekannte Datenluecken und nicht verfuegbar. Formal bleibt die Einstufung NEUTRAL (Schwelle von 2/5 wird auf Basis der bekannten Kriterien nicht erreicht). WICHTIGER VORBEHALT: Der Feed bildet nur Schlusskurse bis 17.08. ab und erfasst eine seit gestern Abend eskalierende Nachrichtenlage nicht - laut Websuche drohen die USA Oman im Zusammenhang mit der Straße von Hormuz mit einem Militaerschlag, der Oelpreis ist auf Jahreshoch gesprungen (Brent 91 USD, WTI 84 USD), die US-Erdoelreserve auf dem niedrigsten Stand seit 1982, die Rendite 30-jaehriger US-Anleihen auf dem hoechsten Stand seit 19 Jahren (5,31%) - und die US-Aktienfutures notieren deutlich im Minus (Nasdaq-Futures -1,1%, S&P-Futures -0,5%, reale VIX +4,5% vorbörslich). In Kombination mit ueberkauften Indizes (NASDAQ-RSI 73,9) ist ein schwacher bis roter Handelsstart wahrscheinlich - der Eroeffnungsfilter (Abschnitt 15C: keine Kaeufe bei schwachem NASDAQ/Sektor zum Open) duerfte greifen. Sektorrotation: Industrials fuehrt klar (Caterpillar +5,26% 5T), gefolgt von Fintech/Brokerage (Robinhood, Depotposition) und Semiconductors/AI (AMD staerkstes Einzelmomentum +7,76%). Kandidatenpruefung: AMD ist der einzige Wert der gesamten Watchlist ohne jedes Anti-Bulltrap-Flag (RSI14 60,3, OBV-5T-Trend +61,0 Mio. parallel zum Kurs, RS vs. Sektor/NASDAQ/S&P500 durchgehend positiv, SOX bestaetigt, keine Earnings in den naechsten 7 Handelstagen erkennbar) - bestes Setup des Tages, aber die zwingend erforderliche Breakout-Volumen- und Options-Flow-Bestaetigung ist strukturell erst nach US-Open pruefbar. Caterpillar zeigt das staerkste Sektor-Momentum, faellt aber mit einem Oe Tagesvolumen von 3,01 Mio. Aktien unter die 5-Mio.-Mindestschwelle des Qualitaetsfilters durch. NVIDIA bleibt mit 2 Anti-Bulltrap-Flags (RSI14 75,0, OBV-Divergenz trotz +3,43% Kursanstieg) ausgeschlossen. Depotfilter: 2 offene Positionen, Robinhood (unveraendert, kein Nachkauf mangels verifizierbarem Flow-Score) und Oracle (weiterhin ueber der 8%-Nachkaufschwelle, Software/Cloud schwaechster Sektor der Watchlist mit Oe -4,74% auf 5 Tage) - Depotfilter-Regel (2+ Positionen >10% Verlust) nicht ausgeloest. Ergebnis: Kein Trade. Kapitalerhalt hat Vorrang - AMD als staerkster Kandidat fuer die P5-Bestaetigung zur US-Eroeffnung vorgemerkt, Caterpillar als Beobachtungskandidat trotz Volumen-Ausschluss.",
+  "kurzbegruendung": "NEUTRAL – Kein Trade. AMD einziger Wert ohne Anti-Bulltrap-Flag (Breakout ungeprüft), Iran-Oman-Eskalation und Renditesprung mahnen zur Vorsicht vor US-Open.",
   "sektor_rotation": [
     {
       "sektor": "Industrials",
       "trend": "positiv",
-      "kommentar": "Rang 1 von 11 (chg_5d +4,91%). Caterpillar bestand den Institutional Hold Test bei P5.5 klar (0 Anti-Bulltrap-Flags, RSI14 58,08, OBV-5T-Trend weiterhin positiv +4,72 Mio.) und bleibt bestes Setup des Tages, notiert aber weiterhin -3,58% unter der SMA50 - fruehe Akkumulationsphase ohne etabliertes Breakout-Level. Die zwingend erforderliche Breakout-Volumenbestaetigung bleibt strukturell nicht verifizierbar (last_volume nur 28.497 vs. Oe20 2.931.300 = 0,97%).",
+      "kommentar": "Rang 1 von 11 (chg_5d +5,26%), staerkstes Sektor-Momentum des gesamten Scans. Caterpillar mit 0 Anti-Bulltrap-Flags, RSI14 58,6 gesund, OBV-5T-Trend positiv (+6,35 Mio.) parallel zum Kurs, RS vs. NASDAQ/S&P500 klar positiv. Faellt jedoch mit Oe Tagesvolumen 3,01 Mio. Aktien unter die 5-Mio.-Mindestschwelle des Qualitaetsfilters - fuer eine volle Kaufempfehlung disqualifiziert, aber klarer Beobachtungskandidat fuer P5/P5.5.",
       "kandidaten": [
         { "name": "Caterpillar", "empfehlung": "Kauf" }
       ]
     },
     {
-      "sektor": "Semiconductors/AI",
-      "trend": "positiv",
-      "kommentar": "Rang 2 von 11 (Oe chg_5d +2,64%). AMD treibt den Sektor mit chg_5d +10,11% (staerkstes Momentum der gesamten Watchlist) und 0 Anti-Bulltrap-Flags, angetrieben von einer news-getriebenen 4,75-Mrd.-USD-Anleihe zur KI-Infrastruktur-Finanzierung; hat die formale P5.5-Bestaetigungskette noch nicht durchlaufen - fuer den morgigen P4-Lauf vorrangig zu pruefen. NVIDIA bleibt mit RSI14 76,0 ueberkauft, OBV jedoch wieder positiv (+32,23 Mio.). Broadcom weiterhin schwaechster Wert (chg_5d -6,54%).",
-      "kandidaten": [
-        { "name": "AMD (Advanced Micro Devices)", "empfehlung": "Kauf" },
-        { "name": "NVIDIA", "empfehlung": "Halten" },
-        { "name": "Broadcom", "empfehlung": "Verkauf" }
-      ]
-    },
-    {
       "sektor": "Fintech/Brokerage",
       "trend": "positiv",
-      "kommentar": "Rang 3 von 11 (chg_5d +1,41%). Robinhood (Depotposition) technisch weiterhin sauber (RSI14 55,33, 0 Anti-Bulltrap-Flags), aber institutionelle Akkumulation deutlich verlangsamt (OBV-5T-Trend +4,50 Mio., P4 noch +30,05 Mio.) - kein Nachkauf-, aber auch kein Verkaufsgrund.",
+      "kommentar": "Rang 2 von 11 (chg_5d +1,83%). Robinhood (Depotposition) technisch sauber, 0 Anti-Bulltrap-Flags, RSI14 55,9, OBV-5T-Trend leicht positiv (+14,5 Mio.) - kein Nachkauf mangels verifizierbarem institutionellem Flow-Score, aber auch kein Verkaufsgrund.",
       "kandidaten": [
         { "name": "Robinhood", "empfehlung": "Halten" }
       ]
     },
     {
+      "sektor": "Semiconductors/AI",
+      "trend": "positiv",
+      "kommentar": "Rang 3 von 11 (Oe chg_5d +1,36%, stark verzerrt durch Broadcom-Schwaeche). AMD liefert mit chg_5d +7,76% das staerkste Einzelmomentum und ist der einzige Wert der gesamten Watchlist ganz ohne Anti-Bulltrap-Flag (RSI14 60,3, OBV-5T-Trend +61,0 Mio. parallel zum Kurs, SOX bestaetigt mit +5,62%) - bestes Setup des Tages, Breakout-Bestaetigung aber erst nach US-Open pruefbar. NVIDIA bleibt mit 2 Anti-Bulltrap-Flags (RSI14 75,0 ueberkauft, OBV faellt -50,7 Mio. trotz steigendem Kurs) ausgeschlossen. Broadcom schwaechster Wert des Sektors (chg_5d -7,10%, unter SMA20).",
+      "kandidaten": [
+        { "name": "AMD (Advanced Micro Devices)", "empfehlung": "Kauf" },
+        { "name": "NVIDIA", "empfehlung": "Verkauf" },
+        { "name": "Broadcom", "empfehlung": "Verkauf" }
+      ]
+    },
+    {
+      "sektor": "MedTech",
+      "trend": "neutral",
+      "kommentar": "Rang 4 von 11, praktisch seitwaerts (chg_5d -0,78%). Intuitive Surgical mit 0 Anti-Bulltrap-Flags und leicht positivem OBV-Trend, aber kein echtes Breakout-Setup und Oe Tagesvolumen (3,40 Mio.) unter der Mindestschwelle - nur Beobachtungsstatus.",
+      "kandidaten": [
+        { "name": "Intuitive Surgical", "empfehlung": "Halten" }
+      ]
+    },
+    {
+      "sektor": "Technology",
+      "trend": "negativ",
+      "kommentar": "Rang 5 von 11 (chg_5d -0,87%). Apple tief ueberverkauft (RSI14 22,0), klar unter SMA20 (-3,71%) - kein Bodenbildungssignal, kein Einstieg empfehlenswert.",
+      "kandidaten": [
+        { "name": "Apple", "empfehlung": "Verkauf" }
+      ]
+    },
+    {
       "sektor": "Payments",
       "trend": "neutral",
-      "kommentar": "Rang 4 von 11, praktisch flach (Oe chg_5d -0,25%). Visa (-0,34%) und Mastercard (-0,15%) beide ohne klaren Impuls - reine Beobachtungspositionen.",
+      "kommentar": "Rang 6 von 11, praktisch flach (Oe chg_5d -0,43%). Visa (-0,69%, leicht unter SMA20) und Mastercard (-0,16%, seitwaerts) beide ohne klaren Impuls.",
       "kandidaten": [
         { "name": "Visa", "empfehlung": "Halten" },
         { "name": "Mastercard", "empfehlung": "Halten" }
@@ -42,7 +58,7 @@
     {
       "sektor": "Defense/Industrials",
       "trend": "negativ",
-      "kommentar": "Rang 5 von 11, knapper Vorsprung vor Defense (chg_5d -0,44%). RTX Corporation ohne Kursstaerke, RS-Kriterium gegen NASDAQ/S&P500 verfehlt, kein Einstieg empfehlenswert.",
+      "kommentar": "Rang 7 von 11 (chg_5d -1,11%). RTX Corporation ohne Kursstaerke, kein Einstieg empfehlenswert.",
       "kandidaten": [
         { "name": "RTX Corporation", "empfehlung": "Verkauf" }
       ]
@@ -50,32 +66,16 @@
     {
       "sektor": "Defense",
       "trend": "negativ",
-      "kommentar": "Rang 6 von 11, aus den Top-5 gefallen (Oe chg_5d -0,49%). Lockheed Martin bestaetigt das Fake-Breakout-Signal endgueltig: Kurs faellt ueber den gesamten Handelstag von 607,88 USD (P4) auf 597,44 USD (P1), chg_5d dreht von +3,39% auf -0,95%, institutionelle Nachfrage klar abgeebbt (OBV-5T-Trend nur noch +161.849 vs. +738.216 bei P4) - nach mehr als einer Woche als sauberstem Kandidaten der Watchlist ein klarer Trendbruch. Northrop Grumman ebenfalls schwach (chg_5d -0,03%).",
+      "kommentar": "Rang 8 von 11 (Oe chg_5d -1,45%). Lockheed Martin (-1,56%) und Northrop Grumman (-1,33%) beide ohne institutionellen Rueckenwind, aus den Top-5-Sektoren gefallen.",
       "kandidaten": [
         { "name": "Lockheed Martin", "empfehlung": "Verkauf" },
         { "name": "Northrop Grumman", "empfehlung": "Verkauf" }
       ]
     },
     {
-      "sektor": "MedTech",
-      "trend": "negativ",
-      "kommentar": "Rang 7 von 11 (chg_5d -0,77%). Intuitive Surgical bleibt seit P5.5 im Negativen, RS-Kriterium verfehlt, aus den Top-5-Sektoren gefallen.",
-      "kandidaten": [
-        { "name": "Intuitive Surgical", "empfehlung": "Verkauf" }
-      ]
-    },
-    {
-      "sektor": "Technology",
-      "trend": "negativ",
-      "kommentar": "Rang 8 von 11 (chg_5d -1,39%). Apple weiterhin tief ueberverkauft (RSI14 21,48), klar unter SMA20 (-4,20%) - kein Bodenbildungssignal erkennbar.",
-      "kandidaten": [
-        { "name": "Apple", "empfehlung": "Verkauf" }
-      ]
-    },
-    {
       "sektor": "Cybersecurity",
       "trend": "negativ",
-      "kommentar": "Rang 9 von 11 (chg_5d -1,48%). Palo Alto Networks bleibt ueberdehnt (RSI14 75,25, Abstand SMA50 +15,54%) - kein Einstieg empfehlenswert.",
+      "kommentar": "Rang 9 von 11 (chg_5d -2,41%). Palo Alto Networks ueberdehnt (RSI14 73,1 >72, 1 Anti-Bulltrap-Flag, Abstand SMA50 +14,47% nahe der 15%-Warnschwelle) - kein Einstieg empfehlenswert.",
       "kandidaten": [
         { "name": "Palo Alto Networks", "empfehlung": "Verkauf" }
       ]
@@ -83,7 +83,7 @@
     {
       "sektor": "Healthcare",
       "trend": "negativ",
-      "kommentar": "Rang 10 von 11 (chg_5d -3,69%). UnitedHealth Group tief ueberverkauft (RSI14 25,23), klar unter SMA20/SMA50, kein Reversal-Signal.",
+      "kommentar": "Rang 10 von 11 (chg_5d -3,21%). UnitedHealth Group tief ueberverkauft (RSI14 26,0), klar unter SMA20/SMA50, kein Reversal-Signal erkennbar.",
       "kandidaten": [
         { "name": "UnitedHealth Group", "empfehlung": "Verkauf" }
       ]
@@ -91,11 +91,11 @@
     {
       "sektor": "Software/Cloud",
       "trend": "negativ",
-      "kommentar": "Schwaechster Sektor der Watchlist (Rang 11 von 11, Oe chg_5d -3,94%). Microsoft (-4,21%), ServiceNow (-6,43%) und Salesforce (-2,89%) alle schwach; Oracle (Depotposition) mit Buchverlust -8,97% hat die 8%-Nachkaufschwelle ueberschritten - kein Nachkauf mehr zulaessig, engmaschig zu beobachten.",
+      "kommentar": "Schwaechster Sektor der Watchlist (Rang 11 von 11, Oe chg_5d -4,74%). Microsoft (-5,08%, 2 Anti-Bulltrap-Flags: RSI14 76,6 und Abstand SMA50 +16,08%), ServiceNow (-7,64%) und Salesforce (-3,31%) alle schwach; Oracle (Depotposition, -8,97% Buchverlust) hat die 8%-Nachkaufschwelle ueberschritten - kein Nachkauf mehr zulaessig, engmaschig zu beobachten.",
       "kandidaten": [
         { "name": "Microsoft", "empfehlung": "Verkauf" },
         { "name": "ServiceNow", "empfehlung": "Verkauf" },
-        { "name": "Salesforce", "empfehlung": "Halten" },
+        { "name": "Salesforce", "empfehlung": "Verkauf" },
         { "name": "Oracle", "empfehlung": "Halten" }
       ]
     }
