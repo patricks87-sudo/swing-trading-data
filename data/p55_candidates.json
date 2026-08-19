@@ -1,29 +1,22 @@
 {
-  "generated_at_utc": "2026-08-18T15:19:07Z",
-  "run_date": "2026-08-18",
+  "generated_at_utc": "2026-08-19T15:15:12Z",
+  "run_date": "2026-08-19",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "AMD und Caterpillar fallen seit P5 weiter unter SMA20/50 zurueck (Institutional Hold Test gescheitert), Robinhood-Depotposition haelt sich ohne Handlungsbedarf. Institutioneller Marktfilter (VIX>18, SOX<NASDAQ) blockiert ohnehin jede Neuposition - Kein Trade.",
+  "kurzbegruendung": "SOX-Proxy bricht auf Tagesbasis -4,84% ein, VIX-Proxy bleibt >18. Mastercard haelt Staerke ohne bestaetigten Breakout, Lockheed Martin faellt weiter zurueck - Kein Trade.",
   "kandidaten": [
     {
-      "ticker": "AMD",
-      "name": "AMD (Advanced Micro Devices)",
-      "sector": "Semiconductors/AI",
-      "status": "Nicht bestanden",
-      "begruendung": "Der beim P5-Lauf erkannte Fake-Breakout bestaetigt sich und verschaerft sich weiter: Abstand SMA20 verschlechtert sich von +2,35% (P4) ueber -0,69% (P5) auf -3,12% (P5.5), Abstand SMA50 von -0,80% (P4) ueber -4,37% (P5) auf -6,79% (P5.5). Der 5-Tage-Trend kollabiert von +7,76% (P4) ueber +2,92% (P5) auf nur noch +0,27% (P5.5). OBV-5T-Trend bleibt zwar weiterhin positiv (+42,7 Mio., P5: +43,0 Mio.) und RSI14 mit 59,04 unauffaellig - aber ohne Rueckeroberung des Breakout-Niveaus ist das kein Kaufsignal. Institutional Hold Test klar nicht bestanden."
-    },
-    {
-      "ticker": "CAT",
-      "name": "Caterpillar",
-      "sector": "Industrials",
-      "status": "Nicht bestanden",
-      "begruendung": "Faellt seit P5 erstmals unter SMA20 zurueck (-1,53%, war bei P5 noch +0,31%, bei P4 +3,18%), Abstand SMA50 -7,82%. 5-Tage-Trend dreht von +1,43% (P5) auf -0,54% (P5.5) ins Negative. Zusaetzlich zum bereits bei P4/P5 identifizierten Volumenfilter (Oe Tagesvolumen 2,85 Mio. < 5-Mio.-Mindestschwelle) damit jetzt auch technisch das Breakout-Niveau verloren. RSI14 62,66 unauffaellig, OBV-5T-Trend weiterhin leicht positiv (+4,12 Mio.), reicht aber nicht fuer einen bestandenen Hold Test. Sektor Industrials faellt von Rang 1 auf Rang 6 von 11 zurueck."
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "sector": "Fintech/Brokerage",
+      "ticker": "MA",
+      "name": "Mastercard",
+      "sector": "Payments",
       "status": "Teilweise",
-      "begruendung": "Bereits bestehende Depotposition (Kauf 99,88 USD/86,20€, aktuell 92,585 USD/79,92€, Buchverlust -7,30%, unter der 10%-Schwelle). Faellt wie AMD und Caterpillar unter SMA20 (-1,54%) und SMA50 (-6,91%) zurueck, 5-Tage-Trend -1,90%. RSI14 54,55 weiterhin gesund, 0 Anti-Bulltrap-Flags, OBV-5T-Trend deutlich positiv (+26,08 Mio.) - keine institutionelle Distribution erkennbar trotz Kursschwaeche. Kein Nachkauf-Anlass, aber auch kein Verkaufsgrund."
+      "begruendung": "Setzt die seit P4 begonnene Erholung fort: Kurs steigt von 574,10 USD (P5) auf 581,33 USD (P5.5, +1,26% intraday), RSI14 erholt sich von 47,2 auf 53,07 (gesund, nicht ueberkauft), 5-Tage-Trend verbessert sich weiter von +2,57% auf +3,86%. OBV-5T-Trend bleibt durchgehend positiv und legt leicht zu (+5,34 Mio. auf +5,37 Mio.) - konsistente Akkumulation seit P4 (+2,25 Mio.) ohne Unterbrechung. Sektor Payments verbessert sich auf Rang 2 von 11 (Oe chg_5d +3,36%, zuvor +2,01%), MA schlaegt den eigenen Sektordurchschnitt sowie S&P500 (-0,06%) und NASDAQ (-0,76%) klar. ABER: wie bereits im P4-Lauf dokumentiert liegt kein eigentliches Breakout-Niveau vor (kein neues Hoch), wodurch der Institutional-Hold-Test im engeren Sinne (Halten ueber Breakout-Level/VWAP) nicht vollstaendig pruefbar ist. Die intraday-Volumenentwicklung zwischen 16:00-17:00 Uhr (Punkt 3 des P5.5-Prompts) ist strukturell nicht verifizierbar, da das last_volume-Feld nur eine kurze Momentaufnahme abbildet und nicht mit dem 20-Tage-Durchschnitt vergleichbar ist (bekannte Datenluecke). Damit trotz klar positiver Preis-, RSI-, OBV- und RS-Entwicklung nur ein teilweise bestandener Test - fuer eine volle Kaufbestaetigung fehlt die Breakout- und Volumenverifikation."
+    },
+    {
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "sector": "Defense",
+      "status": "Nicht bestanden",
+      "begruendung": "Der bereits im P5-Lauf via Fake-Breakout-Filter verworfene Kandidat bestaetigt seine Schwaeche: Kurs faellt weiter leicht von 602,06 USD (P5) auf 600,54 USD (P5.5, -0,25% intraday), 5-Tage-Trend verschlechtert sich von -0,77% auf -1,02%, RSI14 kuehlt weiter ab (61,67 auf 60,9), Abstand SMA20 schrumpft weiter (2,22% auf 1,97%). OBV-5T-Trend bleibt zwar nominell positiv, stagniert aber nahe Null (86 Tsd. auf 76 Tsd.) - keine institutionelle Kaufbestaetigung erkennbar. Sektor Defense verbessert sich zwar leicht auf Rang 5 von 11 (Oe chg_5d +0,54%, zuvor +0,035%), LMT selbst bleibt aber klar hinter Northrop Grumman (+2,1%) und RTX Corporation (+0,85%) zurueck - die relative Sektorschwaeche des Einzeltitels bestaetigt sich. Institutional Hold Test damit klar nicht bestanden, Kandidat bleibt verworfen."
     }
   ]
 }
