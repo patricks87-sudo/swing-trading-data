@@ -1,48 +1,48 @@
 {
-  "generated_at_utc": "2026-08-18T13:00:56Z",
-  "run_date": "2026-08-18",
+  "generated_at_utc": "2026-08-19T13:01:34Z",
+  "run_date": "2026-08-19",
   "candidates": [
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "sector": "Payments",
+      "score": "hoch",
+      "begruendung": "Einziger Wert der gesamten Watchlist mit ueberdurchschnittlichem Tagesvolumen (3,91 Mio. vs. 20T-Oe 3,03 Mio., +29%) UND steigendem OBV-5-Tage-Trend (+2,25 Mio.) parallel zum Kursanstieg (+2,29% auf 5 Tage) - klassisches Akkumulationsmuster ohne Divergenz. RSI14 57,6 (gesund, nicht ueberkauft), Abstand SMA20 nur +2,2%, Abstand SMA50 +7,85% - kein Ueberdehnungsrisiko, 0 Anti-Bulltrap-Flags. Sektor Payments auf Rang 3 von 11 der Sektorrotation (Oe chg_5d +1,34%). ABER: kein eigentlicher Breakout (kein neues Hoch), institutionelle Bestaetigung ueber mehrere Tage (2+ Akkumulationstage) sowie Options Flow strukturell nicht verifizierbar - fuer eine volle Kaufempfehlung reicht das Setup heute nicht aus, aber staerkster Beobachtungskandidat fuer P5."
+    },
+    {
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "sector": "Defense",
+      "score": "mittel",
+      "begruendung": "Sektor Defense fuehrt die Sektorrotation klar an (Oe chg_5d +1,955%). RSI14 65,9 gesund, 0 Anti-Bulltrap-Flags, Abstand SMA20 +3,86%, Abstand SMA50 +11,29%, OBV-5-Tage-Trend leicht positiv (+1,12 Mio.). ABER: Tagesvolumen mit 0,90 Mio. unter dem 20T-Durchschnitt (1,23 Mio.) - keine institutionelle Volumenbestaetigung trotz sauberem Chartbild. Fuer P5 als Beobachtungskandidat vormerken."
+    },
+    {
+      "ticker": "NOC",
+      "name": "Northrop Grumman",
+      "sector": "Defense",
+      "score": "niedrig",
+      "begruendung": "Sektor Defense staerkster der Watchlist, aber RSI14 78,35 klar ueberkauft (1 Anti-Bulltrap-Flag), Abstand SMA20 +5,6%, Abstand SMA50 +8,93%, Tagesvolumen unter 20T-Durchschnitt. Deutlich ueberdehnt - kein Einstieg empfehlenswert."
+    },
     {
       "ticker": "AMD",
       "name": "AMD (Advanced Micro Devices)",
       "sector": "Semiconductors/AI",
-      "score": "hoch",
-      "begruendung": "Einziger Wert der gesamten Watchlist ohne jedes Anti-Bulltrap-Flag: RSI14 60,3 (gesund, nicht ueberkauft), Abstand SMA20 nur +2,35%, Abstand SMA50 -0,8% - kein Ueberdehnungsrisiko trotz +7,76% auf 5 Tage. OBV-5-Tage-Trend klar positiv (+61,0 Mio.) parallel zum Kursanstieg - keine Divergenz. Sektor Semiconductors/AI unter den Top-3 der Sektorrotation (chg_5d +1,36% ggue. NASDAQ +1,25%), SOX-Proxy bestaetigt mit +5,62% klar staerker als NASDAQ. Relative Staerke vs. Sektor, NASDAQ und S&P 500 jeweils positiv erfuellt. Oe Tagesvolumen 28,3 Mio. (Qualitaetsfilter erfuellt), keine Earnings in den naechsten 7 Handelstagen erkennbar. Einziger offener Punkt: institutionelle Breakout-Bestaetigung (Volumen, Options Flow) ist vor US-Open strukturell nicht verifizierbar - CRV nur auf Basis des 10%-Kursziels klar ueber 2,5:1, auf Basis des 5%-Ziels knapp darunter."
+      "score": "niedrig",
+      "begruendung": "Nach dem am 18.08. bestaetigten Fake-Breakout weiterhin unter SMA20 (-1,42%) und SMA50 (-5,1%), trotz OBV-5-Tage-Trend wieder leicht positiv (+19,4 Mio.) und Kursanstieg +2,12% auf 5 Tage. Kein Volumenueberschuss, Sektor Semiconductors/AI nur Rang 6 von 11 (Oe chg_5d -1,84%, belastet durch Broadcom -8,67%). Zu fruehes Stadium fuer eine Kaufempfehlung."
     },
     {
       "ticker": "CAT",
       "name": "Caterpillar",
       "sector": "Industrials",
-      "score": "mittel",
-      "begruendung": "Staerkstes Sektor-Momentum des gesamten Scans: Industrials fuehrt die Sektorrotation mit +5,26% auf 5 Tage klar an. 0 Anti-Bulltrap-Flags, RSI14 58,6 gesund, OBV-5-Tage-Trend positiv (+6,35 Mio.) parallel zum Kursanstieg, Abstand SMA20 +3,18%. Relative Staerke vs. NASDAQ und S&P 500 klar positiv. ABER: Oe Tagesvolumen liegt mit 3,01 Mio. Aktien unter der Mindestanforderung von 5 Mio. aus dem Qualitaetsfilter (Punkt 5) - disqualifiziert fuer eine volle institutionelle Kaufempfehlung trotz starkem Chartbild. Fuer P5/P5.5 als Beobachtungskandidat vormerken, falls sich das Volumen zum US-Open normalisiert."
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "sector": "Fintech/Brokerage",
-      "score": "mittel",
-      "begruendung": "Bereits bestehende Depotposition (kein neuer Kandidat im eigentlichen Sinn, daher hier nur zur Einordnung). Sektor Fintech/Brokerage auf Rang 2 der Sektorrotation (chg_5d +1,83%), 0 Anti-Bulltrap-Flags, RSI14 55,9 gesund, OBV-5-Tage-Trend leicht positiv (+14,5 Mio.). Kein Nachkaufsignal, da institutioneller Flow-Score mangels Options-Flow-Daten strukturell nicht verifizierbar bleibt (siehe Portfolio-Bewertung)."
-    },
-    {
-      "ticker": "ISRG",
-      "name": "Intuitive Surgical",
-      "sector": "MedTech",
       "score": "niedrig",
-      "begruendung": "Sektor MedTech auf Rang 4 der Sektorrotation, 0 Anti-Bulltrap-Flags, RSI14 66,7 im gesunden Bereich, OBV-5-Tage-Trend leicht positiv. Aber kein eigentliches Breakout-Setup (chg_5d nur -0,78%, seitwaerts) und Oe Tagesvolumen mit 3,40 Mio. ebenfalls unter der 5-Mio.-Mindestschwelle - fuer heute nur Beobachtungsstatus."
+      "begruendung": "Sektor Industrials von Rang 1 (Vortage) auf Rang 5 von 11 zurueckgefallen (chg_5d -0,3%). Kurs weiterhin unter SMA20 (-1,31%) und SMA50 (-7,61%), Tagesvolumen mit 2,27 Mio. klar unter der 5-Mio.-Mindestschwelle des Qualitaetsfilters. Kein valides Setup."
     },
     {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "sector": "Cybersecurity",
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "sector": "Software/Cloud",
       "score": "niedrig",
-      "begruendung": "1 Anti-Bulltrap-Flag (RSI14 73,1 > 72 ueberkauft), Abstand SMA50 mit +14,47% nahe der 15%-Warnschwelle - deutlich ueberdehnt. Sektor Cybersecurity aktuell nicht in den Top 5 der Sektorrotation (chg_5d -2,41%). Kein Einstieg empfehlenswert."
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors/AI",
-      "score": "niedrig",
-      "begruendung": "2 Anti-Bulltrap-Flags: RSI14 75,0 (>72 ueberkauft) und OBV faellt (-50,7 Mio. auf 5 Tage) trotz steigendem Kurs (+3,43%) - klassische Distributions-Divergenz. Trotz starkem Sektor (Semiconductors/AI Top 3) damit fuer eine Kaufempfehlung ausgeschlossen (Anti-Bulltrap-Filter: Ausschluss ab 2 erfuellten Kriterien)."
+      "begruendung": "Bestehende Depotposition (Buchverlust -11,99%), daher kein neuer Kandidat im eigentlichen Sinn. Bemerkenswert: OBV-5-Tage-Trend positiv (+9,62 Mio.) trotz fallendem Kurs (-1,85% auf 5 Tage) - moegliche bullische Divergenz, aber Sektor Software/Cloud schwaechster der Watchlist (Rang 11 von 11, Oe chg_5d -3,31%). Formale Depotbewertung inkl. Teilverkaufs-Pruefung erfolgt im P1-Lauf."
     }
   ]
 }
