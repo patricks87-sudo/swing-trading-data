@@ -1,22 +1,29 @@
 {
-  "generated_at_utc": "2026-08-19T15:15:12Z",
-  "run_date": "2026-08-19",
+  "generated_at_utc": "2026-08-20T15:15:00Z",
+  "run_date": "2026-08-20",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "SOX-Proxy bricht auf Tagesbasis -4,84% ein, VIX-Proxy bleibt >18. Mastercard haelt Staerke ohne bestaetigten Breakout, Lockheed Martin faellt weiter zurueck - Kein Trade.",
+  "kurzbegruendung": "Nur Mastercard haelt sich seit dem US-Open im Plus (+0,80%), Apple und Robinhood fallen unter ihren Eroeffnungskurs zurueck - ohne Breakout- und Volumenbestaetigung kein Trade.",
   "kandidaten": [
     {
       "ticker": "MA",
       "name": "Mastercard",
       "sector": "Payments",
       "status": "Teilweise",
-      "begruendung": "Setzt die seit P4 begonnene Erholung fort: Kurs steigt von 574,10 USD (P5) auf 581,33 USD (P5.5, +1,26% intraday), RSI14 erholt sich von 47,2 auf 53,07 (gesund, nicht ueberkauft), 5-Tage-Trend verbessert sich weiter von +2,57% auf +3,86%. OBV-5T-Trend bleibt durchgehend positiv und legt leicht zu (+5,34 Mio. auf +5,37 Mio.) - konsistente Akkumulation seit P4 (+2,25 Mio.) ohne Unterbrechung. Sektor Payments verbessert sich auf Rang 2 von 11 (Oe chg_5d +3,36%, zuvor +2,01%), MA schlaegt den eigenen Sektordurchschnitt sowie S&P500 (-0,06%) und NASDAQ (-0,76%) klar. ABER: wie bereits im P4-Lauf dokumentiert liegt kein eigentliches Breakout-Niveau vor (kein neues Hoch), wodurch der Institutional-Hold-Test im engeren Sinne (Halten ueber Breakout-Level/VWAP) nicht vollstaendig pruefbar ist. Die intraday-Volumenentwicklung zwischen 16:00-17:00 Uhr (Punkt 3 des P5.5-Prompts) ist strukturell nicht verifizierbar, da das last_volume-Feld nur eine kurze Momentaufnahme abbildet und nicht mit dem 20-Tage-Durchschnitt vergleichbar ist (bekannte Datenluecke). Damit trotz klar positiver Preis-, RSI-, OBV- und RS-Entwicklung nur ein teilweise bestandener Test - fuer eine volle Kaufbestaetigung fehlt die Breakout- und Volumenverifikation."
+      "begruendung": "Einziger P4-Kandidat, der den Institutional Hold Test im Preisverhalten besteht: Kurs steigt seit dem US-Open von 573,87 USD (P5, 15:35 MESZ) auf 578,45 USD (P5.5, 17:09 MESZ), das entspricht +0,80% intraday bzw. 496,31 EUR (EUR/USD 0,858). Damit klar oberhalb des Eroeffnungskurses und mit deutlicher relativer Staerke gegenueber S&P500-Proxy (-0,06% seit Open), NASDAQ-Proxy (-0,14%) und dem Gesamtmarkt. RSI14 verbessert sich im Fenster von 50,71 auf 54,54 (gesund, weit von der Ueberkauft-Zone), Abstand SMA20 waechst von +1,35% auf +2,12%, Abstand SMA50 von +7,09% auf +7,93%. OBV-5T-Trend legt im Fenster weiter zu (+906.983 auf +942.479) - konsistente, wenn auch betragsmaessig kleine Akkumulation ohne Unterbrechung seit dem P4-Lauf. ABER: Wie bereits in P4 und P5 dokumentiert existiert kein definiertes Breakout-Niveau (kein neues Hoch), sodass das Kernkriterium 'Halten ueber Breakout-Level/VWAP' nicht vollstaendig pruefbar ist. Die vom P5.5-Prompt geforderte Volumenakkumulation im Fenster 16:00-17:00 Uhr (Punkt 3) ist strukturell nicht verifizierbar: das last_volume-Feld zeigt nur 38.806 Stueck gegenueber einem 20-Tage-Durchschnitt von 2,94 Mio. und bildet damit lediglich eine Momentaufnahme ab (bekannte Datenluecke, keine Schaetzung vorgenommen). Ergebnis: teilweise bestanden - bestes Setup des Tages, aber ohne institutionelle Volumenbestaetigung kein valider Einstieg."
     },
     {
-      "ticker": "LMT",
-      "name": "Lockheed Martin",
-      "sector": "Defense",
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
       "status": "Nicht bestanden",
-      "begruendung": "Der bereits im P5-Lauf via Fake-Breakout-Filter verworfene Kandidat bestaetigt seine Schwaeche: Kurs faellt weiter leicht von 602,06 USD (P5) auf 600,54 USD (P5.5, -0,25% intraday), 5-Tage-Trend verschlechtert sich von -0,77% auf -1,02%, RSI14 kuehlt weiter ab (61,67 auf 60,9), Abstand SMA20 schrumpft weiter (2,22% auf 1,97%). OBV-5T-Trend bleibt zwar nominell positiv, stagniert aber nahe Null (86 Tsd. auf 76 Tsd.) - keine institutionelle Kaufbestaetigung erkennbar. Sektor Defense verbessert sich zwar leicht auf Rang 5 von 11 (Oe chg_5d +0,54%, zuvor +0,035%), LMT selbst bleibt aber klar hinter Northrop Grumman (+2,1%) und RTX Corporation (+0,85%) zurueck - die relative Sektorschwaeche des Einzeltitels bestaetigt sich. Institutional Hold Test damit klar nicht bestanden, Kandidat bleibt verworfen."
+      "begruendung": "Institutional Hold Test klar nicht bestanden: Kurs faellt seit dem US-Open von 318,39 USD (P5) auf 316,88 USD (P5.5), also -0,47% intraday bzw. 271,88 EUR - damit unter dem Eroeffnungskurs und schwaecher als S&P500-Proxy (-0,06%) und NASDAQ-Proxy (-0,14%). Relative Staerke seit Open somit negativ gegen alle Referenzen. Der Abstand zum SMA20 schrumpft im Fenster von +0,80% auf +0,34%, der Wert naehert sich damit dem Verlust der wichtigsten kurzfristigen Unterstuetzung. RSI14 faellt von 60,95 auf 59,54. Positiv bleibt allein der weiterhin sehr hohe OBV-5T-Trend (+93,91 Mio., leicht steigend gegenueber +93,59 Mio. zum Open) - die Akkumulation der Vortage besteht fort, wird intraday aber nicht durch das Preisverhalten bestaetigt (Divergenz). Gemaess P5.5-Kriterium 2 (Halten ueber Eroeffnungskurs) ist der Kandidat damit zu verwerfen."
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sector": "Fintech/Brokerage",
+      "status": "Nicht bestanden",
+      "begruendung": "Schwaechster der drei geprueften Kandidaten: Kurs faellt seit dem US-Open von 96,36 USD (P5) auf 95,28 USD (P5.5), das sind -1,12% intraday bzw. 81,75 EUR - deutlich schwaecher als S&P500-Proxy (-0,06%) und NASDAQ-Proxy (-0,14%), relative Staerke im Fenster klar negativ. Der Wert notiert weiterhin unter dem SMA50 (-4,60%, im Fenster von -3,54% verschlechtert), der 5-Tage-Trend liegt bei -4,12%. Der OBV-5T-Trend faellt im Fenster von +7,54 Mio. auf +7,08 Mio. zurueck - die im P4-Lauf festgestellte Akkumulation setzt sich intraday nicht fort. Sektor Fintech/Brokerage bleibt mit Rang 8 von 11 (chg_5d -4,12%) schwach und wertet den Titel zusaetzlich ab. Zudem handelt es sich um eine bestehende Depotposition (Einstand 99,88 USD, aktuell ca. -4,6% Buchverlust), kein Kandidat fuer eine Neuposition. Institutional Hold Test nicht bestanden."
     }
   ]
 }
