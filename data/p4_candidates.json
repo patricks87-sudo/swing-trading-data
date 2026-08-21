@@ -1,41 +1,41 @@
 {
-  "generated_at_utc": "2026-08-20T13:00:02Z",
-  "run_date": "2026-08-20",
+  "generated_at_utc": "2026-08-21T12:55:00Z",
+  "run_date": "2026-08-21",
   "candidates": [
     {
       "ticker": "MA",
       "name": "Mastercard",
       "sector": "Payments",
       "score": "hoch",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +1,72%, SMA50 +7,38%, RSI14 46,9, 5T +2,5%) - sauberstes technisches Bild der gesamten Watchlist. OBV-5T-Trend leicht positiv (+2,89 Mio.), relative Stärke klar positiv vs. NASDAQ (5T -1,05%) und S&P500 (5T -0,44%). Sektor Payments Rang 2 von 11 der Sektorrotation (Ø chg_5d +2,1%). ABER: Tagesvolumen (2,46 Mio.) unter 20T-Durchschnitt (3,04 Mio.) - keine institutionelle Volumenbestätigung, kein neues Hoch/Breakout. Stärkster Beobachtungskandidat für P5."
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +1,35%, SMA50 +7,09%, RSI14 50,69). 5T +1,20% gegen einen fallenden Gesamtmarkt, OBV-5T-Trend positiv (+2,92 Mio.), relative Stärke klar positiv vs. NASDAQ (5T -2,89%) und S&P500 (5T -1,96%). Sektor Payments Rang 2 von 11. Kein bestätigter Breakout, kein neues Hoch - weiterhin nur Beobachtungskandidat."
     },
     {
       "ticker": "AAPL",
       "name": "Apple",
       "sector": "Technology",
       "score": "mittel",
-      "begruendung": "0 Anti-Bulltrap-Flags, RSI14 37,47 (nicht überhitzt), starker OBV-5T-Trend (+133,84 Mio.) trotz nur moderatem Kursanstieg (5T +4,82%) - mögliche frühe Akkumulation. RS klar positiv vs. NASDAQ und S&P500. Sektor Technology Rang 1 von 11 (nur durch Apple repräsentiert, geringe Aussagekraft). ABER: nur knapp über SMA20 (+0,25%), Tagesvolumen (50,0 Mio.) leicht unter 20T-Durchschnitt (53,0 Mio.) - kein bestätigter Breakout."
+      "begruendung": "0 Anti-Bulltrap-Flags, RSI14 52,53 (unauffällig), stärkster OBV-5T-Trend der gesamten Watchlist (+53,1 Mio.) bei nur moderatem Kursanstieg (5T +1,98%) - mögliche frühe Akkumulation. RS klar positiv vs. NASDAQ und S&P500. Sektor Technology Rang 1 von 11 (nur durch Apple repräsentiert, geringe Aussagekraft). Kurs knapp unter SMA20 (-1,34%) - kein bestätigter Breakout."
     },
     {
       "ticker": "HOOD",
       "name": "Robinhood",
       "sector": "Fintech/Brokerage",
-      "score": "mittel",
-      "begruendung": "0 Anti-Bulltrap-Flags, Tagesvolumen (24,06 Mio.) deutlich über 20T-Durchschnitt (17,86 Mio., +35%), OBV-5T-Trend stark positiv (+23,69 Mio.) - klares Akkumulationssignal. RS positiv vs. NASDAQ/S&P500. Sektor Fintech/Brokerage Rang 3 von 11. ABER: Kurs weiterhin unter SMA50 (-3,89%), kein Nahe-52-Wochen-Hoch erkennbar - Institutioneller-Kapitalfluss-Kriterium unvollständig erfüllt. Bestehende Depotposition mit deutlichem Buchverlust (siehe Depotfilter)."
+      "score": "niedrig",
+      "begruendung": "0 Anti-Bulltrap-Flags, Tagesvolumen (25,1 Mio.) +37% über 20T-Durchschnitt (18,3 Mio.). ABER: OBV-5T-Trend jetzt klar negativ (-16,5 Mio.) - Umkehr von Akkumulation zu Distribution gegenüber dem letzten Lauf trotz erhöhtem Volumen. Sektor Fintech/Brokerage nur Rang 7 von 11. Bestehende Depotposition mit deutlichem Buchverlust (siehe Depotfilter im market_barometer)."
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "Software/Cloud",
       "score": "niedrig",
-      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA50 +16,26% > 15%-Schwelle). Relative Stärke negativ vs. NASDAQ (5T -1,65% vs. -1,05%) und S&P500 (-0,44%) - RS-Kriterium nicht erfüllt (-10 Punkte). OBV-5T-Trend zwar positiv (+21,13 Mio.), aber Kurs rückläufig - Divergenz statt Bestätigung."
+      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA50 +15,07% > 15%-Schwelle). Relative Stärke negativ vs. NASDAQ (5T -3,17% vs. -2,89%) - RS-Kriterium nicht erfüllt. Sektor Software/Cloud Rang 3 von 11, aber Sektor intern uneinheitlich (Oracle -9,06%)."
     },
     {
-      "ticker": "ISRG",
-      "name": "Intuitive Surgical",
-      "sector": "MedTech",
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Semiconductors/AI",
       "score": "niedrig",
-      "begruendung": "1 Anti-Bulltrap-Flag (RSI14 76,67 > 72 - überkauft). Relative Stärke negativ vs. S&P500 (5T -0,88% vs. -0,44%). OBV-5T-Trend nur marginal positiv (+0,36 Mio.). Deutlich überdehnt, kein Einstieg empfehlenswert."
+      "begruendung": "0 Anti-Bulltrap-Flags formal erfüllt, aber deutlichste institutionelle Distribution der gesamten Watchlist: OBV-5T-Trend -461,5 Mio. bei weiterhin erhöhtem RSI14 (67,36) und einem Kursrückgang von erst -3,75% - der Verkaufsdruck ist im Kurs noch nicht vollständig abgebildet. Sektor Semiconductors/AI nur Rang 9 von 11."
     }
   ]
 }
