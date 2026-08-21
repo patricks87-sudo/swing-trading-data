@@ -1,29 +1,43 @@
 {
-  "generated_at_utc": "2026-08-20T15:15:00Z",
-  "run_date": "2026-08-20",
+  "generated_at_utc": "2026-08-21T15:16:15Z",
+  "run_date": "2026-08-21",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Nur Mastercard haelt sich seit dem US-Open im Plus (+0,80%), Apple und Robinhood fallen unter ihren Eroeffnungskurs zurueck - ohne Breakout- und Volumenbestaetigung kein Trade.",
+  "kurzbegruendung": "Mastercard besteht den Institutional Hold Test klar, Apple nur teilweise - beide ohne bestätigtes Breakout-Level. Institutioneller Marktfilter (SOX<NASDAQ, VIX-Proxy>18) blockiert weiterhin jede Kaufempfehlung.",
   "kandidaten": [
     {
       "ticker": "MA",
       "name": "Mastercard",
       "sector": "Payments",
-      "status": "Teilweise",
-      "begruendung": "Einziger P4-Kandidat, der den Institutional Hold Test im Preisverhalten besteht: Kurs steigt seit dem US-Open von 573,87 USD (P5, 15:35 MESZ) auf 578,45 USD (P5.5, 17:09 MESZ), das entspricht +0,80% intraday bzw. 496,31 EUR (EUR/USD 0,858). Damit klar oberhalb des Eroeffnungskurses und mit deutlicher relativer Staerke gegenueber S&P500-Proxy (-0,06% seit Open), NASDAQ-Proxy (-0,14%) und dem Gesamtmarkt. RSI14 verbessert sich im Fenster von 50,71 auf 54,54 (gesund, weit von der Ueberkauft-Zone), Abstand SMA20 waechst von +1,35% auf +2,12%, Abstand SMA50 von +7,09% auf +7,93%. OBV-5T-Trend legt im Fenster weiter zu (+906.983 auf +942.479) - konsistente, wenn auch betragsmaessig kleine Akkumulation ohne Unterbrechung seit dem P4-Lauf. ABER: Wie bereits in P4 und P5 dokumentiert existiert kein definiertes Breakout-Niveau (kein neues Hoch), sodass das Kernkriterium 'Halten ueber Breakout-Level/VWAP' nicht vollstaendig pruefbar ist. Die vom P5.5-Prompt geforderte Volumenakkumulation im Fenster 16:00-17:00 Uhr (Punkt 3) ist strukturell nicht verifizierbar: das last_volume-Feld zeigt nur 38.806 Stueck gegenueber einem 20-Tage-Durchschnitt von 2,94 Mio. und bildet damit lediglich eine Momentaufnahme ab (bekannte Datenluecke, keine Schaetzung vorgenommen). Ergebnis: teilweise bestanden - bestes Setup des Tages, aber ohne institutionelle Volumenbestaetigung kein valider Einstieg."
+      "status": "Bestanden",
+      "begruendung": "Kurs seit P5 weiter gestiegen (575,53 -> 579,39 USD, +0,67%) gegen einen nahezu unveränderten Gesamtmarkt (NASDAQ-Proxy 5T -2,52%, S&P500-Proxy 5T -1,32%, beide seit P5 kaum verändert). RSI14 57,29 (gesund, weit unter der 72er-Überhitzungsschwelle), weiterhin 0 Anti-Bulltrap-Flags (Abstand SMA20 +1,97%, SMA50 +7,76% - beide klar unter den Grenzwerten 8%/15%). OBV-5T-Trend bleibt leicht positiv und stabil (+469.136 ggü. rund +449.000 bei P5) - konsistente, wenn auch moderate institutionelle Akkumulation ohne Unterbrechung seit dem P4-Lauf. Relative Stärke weiterhin klar positiv gegen NASDAQ, S&P500 und den eigenen Sektor (Payments Ø 5T +1,73%, Mastercard 5T +1,77% - über Sektordurchschnitt). Institutional Hold Test bestanden. Einschränkung: weiterhin kein definiertes Breakout-Niveau, kein neues Hoch - das für Abschnitt 6 (Second-Chance Breakout) und eine A-Klassifikation erforderliche Ausbruchssignal fehlt weiterhin, ebenso die laut Prompt bevorzugte Volumenbestätigung im Fenster 16:00-17:00 Uhr (last_volume 21.190 Stück vs. 20T-Ø 2,97 Mio. - reine Momentaufnahme, bekannte Datenlücke, kein Wert geschätzt)."
     },
     {
       "ticker": "AAPL",
       "name": "Apple",
       "sector": "Technology",
-      "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test klar nicht bestanden: Kurs faellt seit dem US-Open von 318,39 USD (P5) auf 316,88 USD (P5.5), also -0,47% intraday bzw. 271,88 EUR - damit unter dem Eroeffnungskurs und schwaecher als S&P500-Proxy (-0,06%) und NASDAQ-Proxy (-0,14%). Relative Staerke seit Open somit negativ gegen alle Referenzen. Der Abstand zum SMA20 schrumpft im Fenster von +0,80% auf +0,34%, der Wert naehert sich damit dem Verlust der wichtigsten kurzfristigen Unterstuetzung. RSI14 faellt von 60,95 auf 59,54. Positiv bleibt allein der weiterhin sehr hohe OBV-5T-Trend (+93,91 Mio., leicht steigend gegenueber +93,59 Mio. zum Open) - die Akkumulation der Vortage besteht fort, wird intraday aber nicht durch das Preisverhalten bestaetigt (Divergenz). Gemaess P5.5-Kriterium 2 (Halten ueber Eroeffnungskurs) ist der Kandidat damit zu verwerfen."
+      "status": "Teilweise",
+      "begruendung": "Kurs seit P5 leicht gestiegen (308,03 -> 309,55 USD, +0,49%) und hält sich damit über dem P5-Niveau/Eröffnungskurs. RSI14 57,04 (leicht gestiegen), 5-Tage-Trend verbessert sich weiter auf +1,18% (P5: +0,69%), relative Stärke gegen NASDAQ (5T -2,52%) und S&P500 (5T -1,32%) bleibt klar positiv. OBV-5T-Trend weiterhin stark positiv (+24,47 Mio., nahezu unverändert ggü. P5 mit +24,8 Mio.) - anhaltende institutionelle Akkumulation. ABER: Kurs notiert weiterhin unter SMA20 (-1,53%, P5: -1,99%) - kein Breakout-Level erobert oder gehalten, das Kernkriterium aus Abschnitt 2 (\"gehalten über Breakout-Level\") ist damit nicht erfüllt, auch wenn der Eröffnungskurs/das P5-Niveau gehalten wird. Institutional Hold Test daher nur teilweise bestanden - kein valider Einstieg ohne Breakout-Bestätigung."
     },
     {
       "ticker": "HOOD",
       "name": "Robinhood",
       "sector": "Fintech/Brokerage",
       "status": "Nicht bestanden",
-      "begruendung": "Schwaechster der drei geprueften Kandidaten: Kurs faellt seit dem US-Open von 96,36 USD (P5) auf 95,28 USD (P5.5), das sind -1,12% intraday bzw. 81,75 EUR - deutlich schwaecher als S&P500-Proxy (-0,06%) und NASDAQ-Proxy (-0,14%), relative Staerke im Fenster klar negativ. Der Wert notiert weiterhin unter dem SMA50 (-4,60%, im Fenster von -3,54% verschlechtert), der 5-Tage-Trend liegt bei -4,12%. Der OBV-5T-Trend faellt im Fenster von +7,54 Mio. auf +7,08 Mio. zurueck - die im P4-Lauf festgestellte Akkumulation setzt sich intraday nicht fort. Sektor Fintech/Brokerage bleibt mit Rang 8 von 11 (chg_5d -4,12%) schwach und wertet den Titel zusaetzlich ab. Zudem handelt es sich um eine bestehende Depotposition (Einstand 99,88 USD, aktuell ca. -4,6% Buchverlust), kein Kandidat fuer eine Neuposition. Institutional Hold Test nicht bestanden."
+      "begruendung": "5-Tage-Performance weiterhin sehr stark (+11,41%), RSI14 69,95 nahe der Überhitzungszone, Abstand SMA20 +13,51% - Anti-Bulltrap-Kriterium (>8%) klar ausgelöst. OBV-5T-Trend bleibt trotz der Kursstärke klar negativ (-1.512.290) - anhaltende Preis/OBV-Divergenz, die Rallye wird nicht von institutioneller Akkumulation getragen. Institutional Hold Test nicht bestanden. Bestehende Depotposition (Einstand 99,88 USD): aktuell rechnerischer Buchgewinn von rund +6,6% - kein Verkaufsgrund, aber auch kein Nachkaufkandidat; formale Depotbewertung erfolgt im P1-Lauf."
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Software/Cloud",
+      "status": "Nicht bestanden",
+      "begruendung": "Anti-Bulltrap-Flag bleibt ausgelöst (Abstand SMA50 +15,47%, über der 15%-Schwelle). 5-Tage-Performance -2,14%, damit schwächer als NASDAQ (-2,52%) nur marginal besser, keine klare relative Stärke. OBV-5T-Trend negativ (-5.422.965). Institutional Hold Test nicht bestanden."
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Semiconductors/AI",
+      "status": "Nicht bestanden",
+      "begruendung": "OBV-5T-Trend bleibt mit -387.604.058 mit deutlichem Abstand die stärkste institutionelle Distribution der gesamten Watchlist (nahezu unverändert ggü. P5 mit -385,7 Mio.) - anhaltender, unverminderter Verkaufsdruck. 5-Tage-Performance -4,29%, Sektor Semiconductors/AI bleibt mit Ø 5T -6,69% einer der schwächsten Sektoren der Watchlist. Institutional Hold Test klar nicht bestanden."
     }
   ]
 }
