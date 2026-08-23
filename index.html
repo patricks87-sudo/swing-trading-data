@@ -105,6 +105,9 @@
   <h2>P5.5 &ndash; Second-Chance-Check</h2>
   <div id="p55candidates"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P5.5-Lauf befüllt.</div></div>
 
+  <h2>Kandidaten-Tracking (Performance seit Aufnahme)</h2>
+  <div id="candidateTracking" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
+
   <h2>Top-Empfehlung des Tages</h2>
   <div id="top3"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
 
@@ -272,6 +275,30 @@ function renderP55Candidates(data) {
     }).join("");
 }
 
+function renderCandidateTracking(data) {
+  const el = document.getElementById("candidateTracking");
+  if (!data || !data.kandidaten || !data.kandidaten.length) return;
+  const empCls = (e) => e === "Kauf" ? "emp-kauf" : e === "Verkauf" ? "emp-verkauf" : "emp-halten";
+  const eurFmt = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" });
+  const rows = data.kandidaten.slice().sort((a, b) => (b.performance_pct || 0) - (a.performance_pct || 0)).map((k) => {
+    const perf = typeof k.performance_pct === "number" ? k.performance_pct : null;
+    const perfCls = perf === null ? "" : (perf >= 0 ? "color:var(--green)" : "color:var(--red)");
+    const perfText = perf === null ? "–" : (perf >= 0 ? "+" : "") + perf.toFixed(2) + "%";
+    return '<tr>' +
+      '<td>' + (k.name || k.ticker) + '<div class="cand-sector">' + (k.sector || "") + '</div></td>' +
+      '<td>' + (k.aufnahmedatum || "-") + '<div class="timestamp">' + (k.aufnahmequelle || "") + (k.aufnahme_score ? " · " + k.aufnahme_score : "") + '</div></td>' +
+      '<td>' + (typeof k.aufnahme_kurs_eur === "number" ? eurFmt.format(k.aufnahme_kurs_eur) : "-") + '</td>' +
+      '<td>' + (typeof k.aktueller_kurs_eur === "number" ? eurFmt.format(k.aktueller_kurs_eur) : "-") + '</td>' +
+      '<td style="' + perfCls + '; font-weight:700;">' + perfText + '</td>' +
+      '<td>' + (k.handelstage_in_liste != null ? k.handelstage_in_liste : "-") + '</td>' +
+      '<td><span class="emp-badge ' + empCls(k.empfehlung) + '">' + (k.empfehlung || "-") + '</span></td>' +
+      '</tr>' +
+      (k.letzte_einschaetzung ? '<tr><td colspan="7" class="cand-begr" style="padding-top:0;">' + k.letzte_einschaetzung + '</td></tr>' : "");
+  }).join("");
+  el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Stand: ' + fmtTime(data.generated_at_utc) + (data.hinweis ? ' &middot; ' + data.hinweis : '') + '</div>' +
+    '<table><thead><tr><th>Kandidat</th><th>Aufnahme</th><th>Einstieg</th><th>Aktuell</th><th>Performance</th><th>Handelstage</th><th>Empfehlung</th></tr></thead><tbody>' + rows + '</tbody></table>';
+}
+
 function renderTop3(data) {
   const el = document.getElementById("top3");
   if (!data || !data.top3 || !data.top3.length) return;
@@ -384,7 +411,7 @@ function renderHeadlines(data) {
 }
 
 function renderNewsToday(data) { const el = document.getElementById("newsToday"); if (!data || !data.entries || !data.entries.length) return; el.innerHTML = data.entries.slice().reverse().map((e) => { const items = (e.headlines || []).map((h) => '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a><div class="src">' + (h.source || "") + '</div></div>').join(""); return '<div style="margin-bottom:14px;"><div class="timestamp" style="font-weight:600;">' + (e.time_local || "") + ' Uhr</div>' + items + '</div>'; }).join(""); } async function init() {
-  const [p4, candidates, p55Candidates, top3, barometer, portfolio, bewertung, headlines, newsToday] = await Promise.all([
+  const [p4, candidates, p55Candidates, top3, barometer, portfolio, bewertung, headlines, newsToday, candidateTracking] = await Promise.all([
     fetchJson("p4_latest.json"),
     fetchJson("p4_candidates.json"),
     fetchJson("p55_candidates.json"),
@@ -393,6 +420,7 @@ function renderNewsToday(data) { const el = document.getElementById("newsToday")
     fetchJson("portfolio.json"),
     fetchJson("portfolio_bewertung.json"),
     fetchJson("headlines.json"), fetchJson("news_summary_today.json"),
+    fetchJson("candidate_tracking.json"),
   ]);
   const eurRate = await fetchEurRate(p4);
   renderAmpel(barometer, p4);
@@ -400,6 +428,7 @@ function renderNewsToday(data) { const el = document.getElementById("newsToday")
   renderIndices(p4);
   renderCandidates(candidates);
   renderP55Candidates(p55Candidates);
+  renderCandidateTracking(candidateTracking);
   renderTop3(top3);
   renderPortfolio(portfolio, bewertung, p4, barometer, eurRate);
   renderHeadlines(headlines); renderNewsToday(newsToday);
@@ -408,4 +437,3 @@ init();
 </script>
 </body>
 </html>
-
