@@ -1,6 +1,5 @@
 {
-  "generated_at_utc": "2026-08-23T10:00:00Z",
-  "hinweis": "Rückwirkend am 23.08.2026 aus den dokumentierten P4/P5/P5.5/P1-Läufen rekonstruiert (Sonntag, kein Handelstag). Ab dem nächsten P1-Lauf wird diese Datei automatisch fortgeführt.",
+  "generated_at_utc": "2026-08-24T15:44:24Z",
   "kandidaten": [
     {
       "ticker": "LMT",
@@ -11,13 +10,13 @@
       "aufnahme_score": "hoch",
       "aufnahme_kurs_usd": 606.72,
       "aufnahme_kurs_eur": 526.03,
-      "aktueller_kurs_usd": 567.86,
-      "aktueller_kurs_eur": 486.09,
-      "performance_pct": -6.41,
-      "handelstage_in_liste": 7,
+      "aktueller_kurs_usd": 563.22,
+      "aktueller_kurs_eur": 482.12,
+      "performance_pct": -7.17,
+      "handelstage_in_liste": 8,
       "status": "aktiv",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Am 13.08. als sauberster Kandidat der Watchlist aufgenommen (0 Anti-Bulltrap-Flags, RS-Kriterium vollständig erfüllt). P5.5 vom 17.08. bestätigte ein Fake-Breakout-Signal; seither unter der SMA20 (-3,4%), OBV-5T-Trend negativ, RSI auf 43,5 abgekühlt. These technisch widerlegt, aber Performance noch über der -8%-Ausschlussschwelle."
+      "letzte_einschaetzung": "Trend bleibt schwach: RSI14 auf 40,89 gefallen, Kurs 4,0% unter SMA20, OBV-5T-Trend weiterhin negativ (-2,66 Mio.). Performance seit Aufnahme jetzt -7,17%, nähert sich der -8%-Ausschlussschwelle, hält sich aber noch knapp über SMA50 (+2,62%)."
     },
     {
       "ticker": "CAT",
@@ -28,13 +27,13 @@
       "aufnahme_score": "hoch",
       "aufnahme_kurs_usd": 856.57,
       "aufnahme_kurs_eur": 740.08,
-      "aktueller_kurs_usd": 820.76,
-      "aktueller_kurs_eur": 702.57,
-      "performance_pct": -4.18,
-      "handelstage_in_liste": 5,
-      "status": "aktiv",
+      "aktueller_kurs_usd": 809.71,
+      "aktueller_kurs_eur": 693.11,
+      "performance_pct": -5.47,
+      "handelstage_in_liste": 6,
+      "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Institutional Hold Test am 17.08. (P5.5) bestanden, danach aber nie ein bestätigtes Breakout-Level erreicht. Notiert weiterhin klar unter der SMA50 (-9,35%), Kurs seit Aufnahme rückläufig."
+      "letzte_einschaetzung": "Kurs ist am 24.08. mit -10,41% erstmals klar unter die SMA50 gefallen (Invalidierungskriterium ausgelöst) - These endgültig widerlegt. Performance seit Aufnahme -5,47%, OBV-5T-Trend weiterhin negativ (-7,34 Mio.). Rotation aus der aktiven Liste."
     },
     {
       "ticker": "MA",
@@ -45,13 +44,13 @@
       "aufnahme_score": "hoch",
       "aufnahme_kurs_usd": 574.31,
       "aufnahme_kurs_eur": 496.20,
-      "aktueller_kurs_usd": 580.02,
-      "aktueller_kurs_eur": 496.62,
-      "performance_pct": 0.99,
-      "handelstage_in_liste": 3,
+      "aktueller_kurs_usd": 596.57,
+      "aktueller_kurs_eur": 510.66,
+      "performance_pct": 3.88,
+      "handelstage_in_liste": 4,
       "status": "aktiv",
-      "empfehlung": "Halten",
-      "letzte_einschaetzung": "Einziger volumen- und OBV-bestätigter Kandidat seit Aufnahme, weiterhin 0 Anti-Bulltrap-Flags, hält sich über SMA20 (+2,08%) und SMA50 (+7,88%). Bislang aber weiterhin kein bestätigtes Breakout-Level."
+      "empfehlung": "Kauf",
+      "letzte_einschaetzung": "Institutional Hold Test am 24.08. (P5.5) klar bestanden, RSI14 auf 67,02 gestiegen (noch unter der 72er-Schwelle), weiterhin 0 Anti-Bulltrap-Flags, OBV-5T-Trend positiv und leicht zulegend (+5,76 Mio.). Performance seit Aufnahme jetzt +3,88%. Zweitbestes Setup der Watchlist, weiterhin ohne bestätigtes Breakout-Level."
     },
     {
       "ticker": "AAPL",
@@ -62,13 +61,81 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 311.32,
       "aufnahme_kurs_eur": 266.49,
-      "aktueller_kurs_usd": 311.32,
-      "aktueller_kurs_eur": 266.49,
-      "performance_pct": 0.0,
+      "aktueller_kurs_usd": 311.755,
+      "aktueller_kurs_eur": 266.86,
+      "performance_pct": 0.14,
+      "handelstage_in_liste": 2,
+      "status": "aktiv",
+      "empfehlung": "Halten",
+      "letzte_einschaetzung": "Seitwärtsbewegung nahe der SMA20 (-0,42%), RSI14 neutral bei 52,96, OBV-5T-Trend leicht positiv (+16,58 Mio.). Am 24.08. kein neues P4-Signal (nicht mehr in der Kandidatenliste). Performance seit Aufnahme +0,14% - weiterhin zu früh für ein Urteil."
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "sector": "Payments",
+      "aufnahmedatum": "2026-08-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "hoch",
+      "aufnahme_kurs_usd": 371.04,
+      "aufnahme_kurs_eur": 317.57,
+      "aktueller_kurs_usd": 381.35,
+      "aktueller_kurs_eur": 326.44,
+      "performance_pct": 2.78,
+      "handelstage_in_liste": 1,
+      "status": "aktiv",
+      "empfehlung": "Kauf",
+      "letzte_einschaetzung": "Am 24.08. mit Score 'hoch' neu aus P4 aufgenommen (0 Anti-Bulltrap-Flags, stärkste relative Stärke der gesamten Watchlist). Institutional Hold Test (P5.5) klar bestanden, RSI14 61,27 gesund, OBV-5T-Trend deutlich positiv (+25,65 Mio.). Sauberstes Setup des Tages, aber weiterhin ohne bestätigtes Breakout-Level - kein Neueinstieg trotz intakter These."
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-08-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 128.48,
+      "aufnahme_kurs_eur": 109.98,
+      "aktueller_kurs_usd": 128.20,
+      "aktueller_kurs_eur": 109.74,
+      "performance_pct": -0.22,
       "handelstage_in_liste": 1,
       "status": "aktiv",
       "empfehlung": "Halten",
-      "letzte_einschaetzung": "Erst am 21.08. aufgenommen – stärkster OBV-5T-Trend der gesamten Watchlist, aber weiterhin knapp unter SMA20 (-0,99%). Institutional Hold Test bislang nur 'Teilweise' bestanden. Für ein Urteil noch zu früh."
+      "letzte_einschaetzung": "Am 24.08. mit Score 'mittel' aus P4 aufgenommen. Anti-Bulltrap-Flag aktiv (Abstand SMA50 +17,16% > 15%-Schwelle), RSI14 62,80. OBV-5T-Trend stark positiv (+44,16 Mio.), aber Institutional Hold Test (P5.5) nur 'Teilweise' bestanden wegen der Überdehnung - kein valider Einstieg."
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-08-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 483.24,
+      "aufnahme_kurs_eur": 413.65,
+      "aktueller_kurs_usd": 488.65,
+      "aktueller_kurs_eur": 418.29,
+      "performance_pct": 1.12,
+      "handelstage_in_liste": 1,
+      "status": "aktiv",
+      "empfehlung": "Halten",
+      "letzte_einschaetzung": "Am 24.08. mit Score 'mittel' aus P4 aufgenommen. Relative Stärke gegenüber dem Gesamtmarkt schwach (5T +1,73%, kaum Outperformance), RSI14 47,16 neutral, Anti-Bulltrap-Flag SMA50 (+15,85%) knapp aktiv. OBV-5T-Trend stark positiv (+46,73 Mio.) bei fehlender Kursbestätigung - stille Akkumulation, Institutional Hold Test nur 'Teilweise' bestanden."
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sector": "Fintech/Brokerage",
+      "aufnahmedatum": "2026-08-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 108.13,
+      "aufnahme_kurs_eur": 92.56,
+      "aktueller_kurs_usd": 108.25,
+      "aktueller_kurs_eur": 92.66,
+      "performance_pct": 0.11,
+      "handelstage_in_liste": 1,
+      "status": "aktiv",
+      "empfehlung": "Halten",
+      "letzte_einschaetzung": "Am 24.08. mit Score 'mittel' aus P4 aufgenommen (zusätzlich bestehende Depotposition). Anti-Bulltrap-Flag SMA20 (+14,54%) aktiv, RSI14 68,89 nähert sich der Überhitzungszone. Institutional Hold Test (P5.5) nur 'Teilweise' bestanden wegen Preis/OBV-Divergenz. Für die Depotposition wird separat ein Teilverkauf empfohlen (siehe portfolio_bewertung.json)."
     }
   ]
 }
