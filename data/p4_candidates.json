@@ -1,41 +1,76 @@
 {
-  "generated_at_utc": "2026-08-21T12:55:00Z",
-  "run_date": "2026-08-21",
+  "generated_at_utc": "2026-08-24T13:00:00Z",
+  "run_date": "2026-08-24",
   "candidates": [
     {
       "ticker": "MA",
       "name": "Mastercard",
       "sector": "Payments",
       "score": "hoch",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +1,35%, SMA50 +7,09%, RSI14 50,69). 5T +1,20% gegen einen fallenden Gesamtmarkt, OBV-5T-Trend positiv (+2,92 Mio.), relative Stärke klar positiv vs. NASDAQ (5T -2,89%) und S&P500 (5T -1,96%). Sektor Payments Rang 2 von 11. Kein bestätigter Breakout, kein neues Hoch - weiterhin nur Beobachtungskandidat."
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +2,18%, SMA50 +7,99%, RSI14 58,18). 5T +1,99% gegen einen fallenden Gesamtmarkt, RS vs. NASDAQ (5T -2,41%) +4,40 Punkte, vs. S&P500 (5T -1,37%) +3,36 Punkte. OBV-5T-Trend positiv (+2,65 Mio.). Sektor Payments Rang 2 von 11. Kein bestätigter Breakout - weiterhin Beobachtungskandidat."
     },
     {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "sector": "Technology",
+      "ticker": "V",
+      "name": "Visa",
+      "sector": "Payments",
+      "score": "hoch",
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +1,58%, SMA50 +5,18%, RSI14 55,86). 5T +1,89%, RS vs. NASDAQ +4,30 Punkte, vs. S&P500 +3,26 Punkte. OBV-5T-Trend deutlich positiv (+9,96 Mio., stärker als Mastercard). Sektor Payments Rang 2 von 11. Sauberstes Setup der Watchlist, aber kein bestätigter Breakout."
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
       "score": "mittel",
-      "begruendung": "0 Anti-Bulltrap-Flags, RSI14 52,53 (unauffällig), stärkster OBV-5T-Trend der gesamten Watchlist (+53,1 Mio.) bei nur moderatem Kursanstieg (5T +1,98%) - mögliche frühe Akkumulation. RS klar positiv vs. NASDAQ und S&P500. Sektor Technology Rang 1 von 11 (nur durch Apple repräsentiert, geringe Aussagekraft). Kurs knapp unter SMA20 (-1,34%) - kein bestätigter Breakout."
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "sector": "Fintech/Brokerage",
-      "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags, Tagesvolumen (25,1 Mio.) +37% über 20T-Durchschnitt (18,3 Mio.). ABER: OBV-5T-Trend jetzt klar negativ (-16,5 Mio.) - Umkehr von Akkumulation zu Distribution gegenüber dem letzten Lauf trotz erhöhtem Volumen. Sektor Fintech/Brokerage nur Rang 7 von 11. Bestehende Depotposition mit deutlichem Buchverlust (siehe Depotfilter im market_barometer)."
+      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA50 +17,96% > 15%-Schwelle; SMA20 +7,12% knapp unter 8%-Schwelle). RSI14 66,63. 5T +3,61%, RS vs. NASDAQ +6,02, vs. S&P500 +4,98 Punkte. OBV-5T-Trend stark positiv (+24,14 Mio.). Sektor Software/Cloud Rang 3 von 11. Trotz guter RS wegen Überdehnung kein sauberer Einstieg."
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "Software/Cloud",
-      "score": "niedrig",
-      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA50 +15,07% > 15%-Schwelle). Relative Stärke negativ vs. NASDAQ (5T -3,17% vs. -2,89%) - RS-Kriterium nicht erfüllt. Sektor Software/Cloud Rang 3 von 11, aber Sektor intern uneinheitlich (Oracle -9,06%)."
+      "score": "mittel",
+      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA50 +15,10%, knapp über 15%-Schwelle). RSI14 46,98 unauffällig. 5T -2,45% - RS vs. NASDAQ -0,04, vs. S&P500 -1,08 Punkte, damit RS-Kriterium (staerker als Markt) nicht erfuellt. OBV-5T-Trend aber positiv (+16,88 Mio.) bei fallendem Kurs - moegliche fruehe Akkumulation trotz schwacher Kurs-RS. Sektor Software/Cloud Rang 3 von 11."
     },
     {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors/AI",
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sector": "Fintech/Brokerage",
+      "score": "mittel",
+      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA20 +15,18% > 8%-Schwelle). RSI14 71,14 (knapp unter 72er-Schwelle) und 5T +13,15% (knapp unter 15%-Schwelle) - zwei weitere Warnsignale nahe am Kipppunkt, formal aber nicht ausgeloest. Staerkster OBV-5T-Trend der gesamten Watchlist (+47,75 Mio.) und mit Abstand beste RS (vs. NASDAQ +15,56, vs. S&P500 +14,52 Punkte). Sektor Fintech/Brokerage Rang 1 von 11. Trotz starker institutioneller Bestaetigung wegen Ueberdehnung kein Neueinstieg."
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Software/Cloud",
       "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags formal erfüllt, aber deutlichste institutionelle Distribution der gesamten Watchlist: OBV-5T-Trend -461,5 Mio. bei weiterhin erhöhtem RSI14 (67,36) und einem Kursrückgang von erst -3,75% - der Verkaufsdruck ist im Kurs noch nicht vollständig abgebildet. Sektor Semiconductors/AI nur Rang 9 von 11."
+      "begruendung": "2 Anti-Bulltrap-Flags (Abstand SMA20 +8,62% > 8%, SMA50 +19,80% > 15%) - Anti-Bulltrap-Filter formal ausgeloest, damit als Kaufkandidat disqualifiziert. RSI14 67,55, 5T +6,61%. OBV-5T-Trend zwar positiv (+15,75 Mio.), aendert an der Ueberdehnung aber nichts. Sektor Software/Cloud Rang 3 von 11."
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "sector": "Software/Cloud",
+      "score": "niedrig",
+      "begruendung": "0 Anti-Bulltrap-Flags, aber kein Akkumulationssignal: OBV-5T-Trend negativ (-8,88 Mio.), 5T -2,69%, RS vs. NASDAQ -0,28 und vs. S&P500 -1,32 Punkte (schwaecher als Gesamtmarkt). RSI14 54,56 unauffaellig. Schwaechster Wert im ansonsten staerkeren Sektor Software/Cloud (Rang 3 von 11)."
+    },
+    {
+      "ticker": "ISRG",
+      "name": "Intuitive Surgical",
+      "sector": "MedTech",
+      "score": "niedrig",
+      "begruendung": "0 Anti-Bulltrap-Flags, aber kein valides Signal: OBV-5T-Trend nahezu flach (+0,39 Mio.), 5T -3,98%, RS vs. NASDAQ -1,57 und vs. S&P500 -2,61 Punkte. RSI14 51,91 neutral. Sektor MedTech Rang 7 von 11."
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group",
+      "sector": "Healthcare",
+      "score": "niedrig",
+      "begruendung": "RSI14 31,39 stark ueberverkauft, aber OBV-5T-Trend negativ (-13,79 Mio.) - keine institutionelle Akkumulation trotz Ueberverkauftheit. 5T -2,89%, unter SMA20 (-3,91%) und SMA50 (-5,72%). Defensiver Beobachtungskandidat (Sektor Healthcare), aber aktuell kein Kaufsignal."
+    },
+    {
+      "ticker": "NOC",
+      "name": "Northrop Grumman",
+      "sector": "Defense",
+      "score": "niedrig",
+      "begruendung": "0 Anti-Bulltrap-Flags, aber schwach: OBV-5T-Trend leicht negativ (-2,73 Mio.), 5T -5,95%, RS vs. NASDAQ -3,54 und vs. S&P500 -4,58 Punkte. RSI14 51,07. Defensiver Sektor (Defense, Rang 9 von 11), aktuell ohne institutionelle Bestaetigung."
     }
   ]
 }
