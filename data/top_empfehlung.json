@@ -1,21 +1,21 @@
 {
-  "generated_at_utc": "2026-08-24T15:44:24Z",
+  "generated_at_utc": "2026-08-25T15:47:07Z",
   "top3": [
     {
       "ticker": "V",
       "name": "Visa",
-      "begruendung": "#1 Beste Portfolio-Chance heute (ohne Freigabe): Sauberstes Setup der gesamten Watchlist - 0 Anti-Bulltrap-Flags, RSI14 61,27 im gesunden Bereich, stärkste relative Stärke vs. NASDAQ und S&P500 der ganzen Liste, deutlich positiver und weiter zulegender OBV-5T-Trend (+25,65 Mio.). Institutional Hold Test (P5.5) klar bestanden. Fehlt weiterhin: ein von P4 definiertes, bestätigtes Breakout-Level - ohne diese Bestätigung kein Neueinstieg. Für morgen die erste Beobachtungspriorität."
+      "begruendung": "#1 Beste Portfolio-Chance heute (ohne Freigabe): Weiterhin das sauberste Setup der gesamten Watchlist - 0 Anti-Bulltrap-Flags, RSI14 62,56 im gesunden Bereich, deutlich positiver OBV-5T-Trend (+26,99 Mio.), stärkste relative Stärke gegenüber NASDAQ (5T -0,94%) und S&P500 (5T -0,28%). Institutional Hold Test (P5.5) nur 'Teilweise' bestanden, da weiterhin kein von P4 definiertes, bestätigtes Breakout-Level vorliegt - ohne diese Bestätigung kein Neueinstieg. Erste Beobachtungspriorität für morgen."
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "begruendung": "#2 Zweitbeste Alternative: Stärkster OBV-5T-Trend der gesamten Watchlist (+39,40 Mio.) - stille institutionelle Akkumulation setzt sich seit Tagen fort. Kurs hat sich als einziger P4-Kandidat seit dem P5.5-Snapshot sogar leicht erholt. Bleibt aber technisch überdehnt (Abstand SMA50 +15,34% > 15%-Schwelle) und die 5-Tages-Kursbewegung (+1,48%) bestätigt die Akkumulation bisher nicht klar - kein valider Trigger."
     },
     {
       "ticker": "MA",
       "name": "Mastercard",
-      "begruendung": "#2 Zweitbeste Alternative: Ebenfalls 0 Anti-Bulltrap-Flags und bestandener Institutional Hold Test, RSI14 mit 67,02 aber schon näher an der Überhitzungszone als Visa, OBV-5T-Trend positiv, jedoch deutlich schwächer (+5,76 Mio. gegenüber +25,65 Mio. bei Visa). Gleiche Einschränkung: kein bestätigtes Breakout-Level, daher heute kein Einstieg."
-    },
-    {
-      "ticker": "NOW",
-      "name": "ServiceNow",
-      "begruendung": "#3 Watchlist-Kandidat: Stärkster OBV-5T-Trend der vier P4-Kandidaten mit Score hoch/mittel (+44,16 Mio.), aber weiterhin mit aktivem Anti-Bulltrap-Flag (Abstand SMA50 +17,16% > 15%-Schwelle) technisch überdehnt. Institutional Hold Test nur teilweise bestanden - für einen Neueinstieg müsste sich die Überdehnung erst über Zeit oder einen gesunden Pullback abbauen."
+      "begruendung": "#3 Watchlist-Kandidat: 0 Anti-Bulltrap-Flags, RSI14 kühlt von 68,41 (P4) auf 65,87 leicht ab und entfernt sich von der Überhitzungszone, OBV-5T-Trend positiv aber schwächer als bei Visa (+4,83 Mio.). Institutional Hold Test nur 'Teilweise' bestanden, gleiche Einschränkung wie bei Visa: kein bestätigtes Breakout-Level."
     }
   ],
-  "gesamteinschaetzung": "P1-Lauf 24.08.2026, Analysefenster 17:15-18:00 MESZ. Regime NEUTRAL (real-VIX ~15,9-16, S&P500 weiterhin über SMA50, aber NASDAQ/SOX im kurzfristigen Abwärtstrend). Visa und Mastercard bleiben mit Abstand die stärksten Kandidaten der Watchlist und haben den Institutional Hold Test heute klar bestanden - beiden fehlt aber durchgängig seit dem P4-Lauf ein bestätigtes Breakout-Level, das Second-Chance-Volumenmuster ist im automatisierten Feed mangels Intraday-Zeitreihen nicht verifizierbar (Datenbasis unvollständig). ServiceNow und Microsoft sind technisch überdehnt bzw. ohne Kursbestätigung, Robinhood zeigt eine Preis/OBV-Divergenz. Gemäß Projektgrundsatz 'Kapitalerhalt vor Renditemaximierung, im Zweifel keine Position eröffnen' wird daher trotz guter relativer Stärke kein neuer Trade freigegeben - der vierte Kein-Trade-Schritt der heutigen Bestätigungskette P4->P5->P5.5->P1. Für das bestehende Depot werden für beide Positionen (Robinhood, Oracle) Teilverkäufe zur Risikoreduktion bzw. Gewinnsicherung empfohlen (Details siehe data/portfolio_bewertung.json). Im Kandidaten-Tracking wurde Caterpillar wegen eines SMA50-Bruchs aus der aktiven Liste rotiert, Visa/ServiceNow/Microsoft/Robinhood wurden neu aufgenommen. Kein Trade. Kapitalerhalt hat Vorrang."
+  "gesamteinschaetzung": "P1-Lauf 25.08.2026, Analysefenster 17:47 MESZ. Marktregime RISK-OFF (unverändert seit der P5.5-Rückstufung: NASDAQ- und SOX-Proxy geben die Open-Erholung wieder ab, VIX-Proxy weiterhin an der 18er-Schwelle, realer Chip-Ausverkauf laut Websuche vor den NVIDIA-Zahlen am Mittwoch 26.08. - Broadcom und Micron deutlich im Minus). Von den fünf P4-Kandidaten mit Score hoch/mittel (Visa, Mastercard, ServiceNow, Salesforce, Microsoft) hat keiner den Institutional Hold Test (P5.5) vollständig bestanden - Visa/Mastercard/Microsoft nur 'Teilweise' (Niveau und Akkumulation halten, aber ohne bestätigtes Breakout-Level), ServiceNow und Salesforce 'Nicht bestanden' (klarer Rücksetzer seit P5, nachlassendes Momentum). Damit setzt sich die Kein-Trade-Kette von P4 über P5 und P5.5 bis P1 fort - der vierte Bestätigungsschritt in Folge ohne freigegebenen Trade. Gemäß Projektgrundsatz 'Kapitalerhalt vor Renditemaximierung, im Zweifel keine Position eröffnen' wird kein neuer Trade eröffnet. Für das bestehende Depot wird bei Robinhood (stark überdehnt trotz stärkstem Sektor, +20,7% in 5 Tagen) und bei Oracle (Haltedauer seit 19.07. deutlich über dem Swing-Rahmen, weiterhin im Buchverlust) je ein Teilverkauf zur Risikoreduktion empfohlen (Details siehe data/portfolio_bewertung.json). Im Kandidaten-Tracking wurde Salesforce neu aus P4 aufgenommen (Score mittel), ServiceNow und Salesforce wurden wegen nicht bestandenem Institutional Hold Test auf Empfehlung 'Verkauf' herabgestuft. Kein Trade. Kapitalerhalt hat Vorrang."
 }
