@@ -1,43 +1,43 @@
 {
-  "generated_at_utc": "2026-08-24T15:18:21Z",
-  "run_date": "2026-08-24",
+  "generated_at_utc": "2026-08-25T15:22:00Z",
+  "run_date": "2026-08-25",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Visa und Mastercard bestehen den Institutional Hold Test klar und bauen ihre relative Stärke weiter aus - beide aber weiterhin ohne bestätigtes Breakout-Level und ohne auswertbare Second-Chance-Volumendaten. ServiceNow, Microsoft und Robinhood nur teilweise bestanden.",
+  "kurzbegruendung": "Visa, Mastercard und Microsoft halten ihr Niveau bzw. bauen die OBV-Akkumulation weiter aus, aber ohne bestätigtes Breakout-Level bleibt kein valider Trigger. ServiceNow und Salesforce haben seit P5 an Momentum verloren - Institutional Hold Test insgesamt nur teilweise bestanden, kein Second-Chance-Setup erreicht die Einstiegsschwelle.",
   "kandidaten": [
     {
       "ticker": "V",
       "name": "Visa",
       "sector": "Payments",
-      "status": "Bestanden",
-      "begruendung": "Kurs seit P5 weiter gestiegen (379,17 -> 381,65 USD, +0,65%) gegen einen weiterhin schwachen Gesamtmarkt (NASDAQ-Proxy 5T -3,35%, S&P500-Proxy 5T -1,23%). RSI14 61,49 (gesund, deutlich unter der 72er-Überhitzungsschwelle, seit P5 von 59,58 moderat gestiegen). Weiterhin 0 Anti-Bulltrap-Flags (Abstand SMA20 +4,21%, SMA50 +7,81% - beide klar unter den Grenzwerten 8%/15%). OBV-5T-Trend legt seit P5 nochmals zu (+25,52 Mio. -> +25,63 Mio.) - ununterbrochene institutionelle Akkumulation seit dem P4-Lauf. Relative Stärke hat sich weiter verbessert: RS vs. NASDAQ +9,71 Punkte (P5: +8,96), RS vs. S&P500 +7,59 Punkte (P5: +6,87), RS vs. eigenem Sektor Payments (Ø 5T +6,31%) leicht über Sektordurchschnitt. Institutional Hold Test klar bestanden - stärkstes Setup der gesamten Watchlist. Einschränkung: weiterhin kein von P4 definiertes Breakout-Level, kein bestätigtes neues Hoch - das für Abschnitt 6 (Second-Chance Breakout) benötigte Ausbruchssignal sowie die laut Prompt bevorzugte Volumenbestätigung im Fenster 16:00-17:00 Uhr sind im Feed nicht auswertbar (last_volume 329.220 Stück ist erkennbar nur eine Momentaufnahme gegenüber 20T-Ø 50,55 Mio. bei AAPL bzw. 7,05 Mio. bei Visa selbst - bekannte Datenlücke, kein Wert geschätzt)."
+      "status": "Teilweise",
+      "begruendung": "Kurs seit P5 nahezu unverändert (382,66 -> 382,42 USD, -0,06%), RSI14 stabil bei 63,29 (P5: 63,46), klar unter der 72er-Überhitzungsschwelle. OBV-5T-Trend hält bei +27,30 Mio. (P5: +27,17 Mio.) - ununterbrochene institutionelle Akkumulation seit P4. Relative Stärke bleibt die beste der Watchlist (Sektor Payments Rang 2 von 11, Ø 5T +4,53%). Institutional Hold Test hinsichtlich Niveau und Akkumulation bestanden, aber weiterhin kein von P4 bestätigtes Breakout-Level und keine auswertbaren Volumendaten für das Fenster 16:00-17:00 Uhr (last_volume ist im Feed nur eine Momentaufnahme, bekannte Datenlücke) - daher insgesamt nur teilweise bestanden, kein valider Trigger."
     },
     {
       "ticker": "MA",
       "name": "Mastercard",
       "sector": "Payments",
-      "status": "Bestanden",
-      "begruendung": "Kurs seit P5 weiter gestiegen (593,81 -> 597,45 USD, +0,61%) parallel zu Visa. RSI14 67,40 (seit P5 von 65,76 gestiegen, noch unter der 72er-Schwelle, aber näher an der Überhitzungszone als Visa). Weiterhin 0 Anti-Bulltrap-Flags (Abstand SMA20 +4,72%, SMA50 +10,66% - beide unter den Grenzwerten). OBV-5T-Trend bleibt positiv und legt leicht zu (+5,68 Mio. -> +5,75 Mio.) - konsistente, aber gegenüber Visa deutlich schwächere institutionelle Akkumulation (Faktor ~4,5 geringeres Volumen im Trend). Relative Stärke ebenfalls verbessert: RS vs. NASDAQ +9,61 Punkte (P5: +8,90), RS vs. S&P500 +7,49 Punkte (P5: +6,81). Institutional Hold Test bestanden. Einschränkung: identisch zu Visa - kein definiertes Breakout-Niveau, keine auswertbaren Volumendaten für das 16:00-17:00-Uhr-Fenster (Datenbasis unvollständig)."
+      "status": "Teilweise",
+      "begruendung": "Kurs seit P5 leicht rückläufig (599,10 -> 597,66 USD, -0,24%), RSI14 kühlt von 68,29 auf 67,05 ab und entfernt sich von der Überhitzungszone. OBV-5T-Trend bleibt stabil positiv (+4,84 Mio. vs. +4,87 Mio.), aber deutlich schwächer als bei Visa. Institutional Hold Test hinsichtlich Niveau bestanden, jedoch identisch zu Visa ohne definiertes Breakout-Niveau und ohne auswertbare Volumendaten für das 16:00-17:00-Uhr-Fenster - daher nur teilweise bestanden."
     },
     {
       "ticker": "NOW",
       "name": "ServiceNow",
       "sector": "Software/Cloud",
-      "status": "Teilweise",
-      "begruendung": "Kurs seit P5 leicht rückläufig (129,47 -> 129,08 USD, -0,30%), RSI14 von 64,16 auf 63,81 leicht gesunken - keine neue Kursstärke seit dem Open. Anti-Bulltrap-Flag bleibt aktiv (Abstand SMA50 +17,95%, weiterhin über der 15%-Schwelle; SMA20 mit +6,58% knapp unter der 8%-Schwelle). OBV-5T-Trend bleibt trotz der leichten Kursschwäche positiv und legt minimal zu (+44,36 Mio. -> +44,51 Mio.) - Smart Money akkumuliert weiter, auch wenn der Kurs kurz pausiert. Institutional Hold Test wegen der bereits bei P4 ausgelösten Überdehnung nur teilweise bestanden - kein valider Neueinstieg."
+      "status": "Nicht bestanden",
+      "begruendung": "Kurs seit P5 spürbar rückläufig (128,84 -> 127,14 USD, -1,32%) - deutlich stärkerer Rücksetzer als bei Visa/Mastercard. OBV-5T-Trend leicht abgeschwächt (+17,86 Mio. vs. +18,06 Mio.), SMA50-Abstand bleibt mit +15,66% über der 15%-Schwelle (Anti-Bulltrap-Flag weiterhin aktiv). Institutional Hold Test nicht bestanden - weder Kurs noch Momentum konnten seit dem Open gehalten werden."
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Software/Cloud",
+      "status": "Nicht bestanden",
+      "begruendung": "Kurs seit P5 rückläufig (208,19 -> 207,35 USD, -0,40%), RSI14 von 64,76 auf 61,79 gefallen. OBV-5T-Trend deutlich abgeschwächt (+7,51 Mio. vs. +7,59 Mio., zuvor bereits von +21,77 Mio. bei P4 gefallen), SMA50-Abstand weiterhin +17,63% über der Schwelle. Institutional Hold Test nicht bestanden - Momentum lässt seit P4/P5 kontinuierlich nach."
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "Software/Cloud",
       "status": "Teilweise",
-      "begruendung": "Kurs seit P5 nahezu unverändert (486,39 -> 486,80 USD, +0,08%), RSI14 mit 45,79 weiterhin neutral ohne Momentum-Bestätigung. Anti-Bulltrap-Flag bleibt knapp aktiv (Abstand SMA50 +15,42%, minimal über der 15%-Schwelle). OBV-5T-Trend steigt seit P5 weiter (+46,54 Mio. -> +46,69 Mio.) - stille institutionelle Akkumulation trotz seitwärts laufendem Kurs, ein möglicherweise frühes Signal, aber ohne RSI- oder Kursbestätigung kein valides Setup. Institutional Hold Test nur teilweise bestanden."
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "sector": "Fintech/Brokerage",
-      "status": "Teilweise",
-      "begruendung": "Kurs seit P5 deutlich erholt (105,66 -> 107,78 USD, +2,01%), RSI14 von 64,68 auf 68,18 gestiegen (nähert sich der Überhitzungszone). Anti-Bulltrap-Kriterium (Abstand SMA20, bereits bei P4/P5 ausgelöst) hat sich weiter verschärft (11,95% -> 14,07%). OBV-5T-Trend jedoch seit P5 leicht rückläufig (+36,21 Mio. -> +35,98 Mio.) - eine Preis/Volumen-Divergenz: die Kurserholung wird nicht von zusätzlicher institutioneller Akkumulation getragen. Institutional Hold Test daher nur teilweise bestanden. Bestehende Depotposition (Einstand 99,88 USD): aktuell rechnerischer Buchgewinn von rund +7,9% - kein Verkaufsgrund, aber auch kein Nachkaufkandidat; formale Depotbewertung erfolgt im P1-Lauf."
+      "begruendung": "Kurs seit P5 als einziger Kandidat gestiegen (485,72 -> 489,66 USD, +0,81%), RSI14 bei neutralen 51,59. OBV-5T-Trend legt als stärkster im Sektor weiter zu (+39,37 Mio. vs. +39,19 Mio.) - stille institutionelle Akkumulation setzt sich fort. Institutional Hold Test hinsichtlich Akkumulation bestanden, aber SMA50-Abstand bleibt mit +15,55% knapp über der Schwelle und die 5-Tages-Performance ist mit +1,67% weiterhin zu schwach für eine klare Kursbestätigung - daher nur teilweise bestanden, kein valider Neueinstieg."
     }
   ]
 }
