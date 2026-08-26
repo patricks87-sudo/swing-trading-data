@@ -1,43 +1,36 @@
 {
-  "generated_at_utc": "2026-08-25T15:22:00Z",
-  "run_date": "2026-08-25",
+  "generated_at_utc": "2026-08-26T16:05:55Z",
+  "run_date": "2026-08-26",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Visa, Mastercard und Microsoft halten ihr Niveau bzw. bauen die OBV-Akkumulation weiter aus, aber ohne bestätigtes Breakout-Level bleibt kein valider Trigger. ServiceNow und Salesforce haben seit P5 an Momentum verloren - Institutional Hold Test insgesamt nur teilweise bestanden, kein Second-Chance-Setup erreicht die Einstiegsschwelle.",
+  "kurzbegruendung": "Visa, Mastercard und Microsoft halten ihr Niveau und die OBV-Akkumulation weitgehend seit P5, aber weiterhin ohne von P4 bestätigtes Breakout-Level. ServiceNow bleibt trotz leichter Kurserholung im OBV-Abfluss. Institutional Hold Test insgesamt nicht bestanden, kein Second-Chance-Setup.",
   "kandidaten": [
     {
       "ticker": "V",
       "name": "Visa",
       "sector": "Payments",
       "status": "Teilweise",
-      "begruendung": "Kurs seit P5 nahezu unverändert (382,66 -> 382,42 USD, -0,06%), RSI14 stabil bei 63,29 (P5: 63,46), klar unter der 72er-Überhitzungsschwelle. OBV-5T-Trend hält bei +27,30 Mio. (P5: +27,17 Mio.) - ununterbrochene institutionelle Akkumulation seit P4. Relative Stärke bleibt die beste der Watchlist (Sektor Payments Rang 2 von 11, Ø 5T +4,53%). Institutional Hold Test hinsichtlich Niveau und Akkumulation bestanden, aber weiterhin kein von P4 bestätigtes Breakout-Level und keine auswertbaren Volumendaten für das Fenster 16:00-17:00 Uhr (last_volume ist im Feed nur eine Momentaufnahme, bekannte Datenlücke) - daher insgesamt nur teilweise bestanden, kein valider Trigger."
+      "begruendung": "Kurs seit P5 nahezu unverändert (382,65 -> 382,44 USD, -0,05%), RSI14 stabil bei 61,15 (P5: 61,39), klar unter der 72er-Überhitzungsschwelle. OBV-5T-Trend hält bei +28,00 Mio. (P5: +28,05 Mio.) - ununterbrochene institutionelle Akkumulation seit P4/P5. Abstand SMA20 +3,97% und SMA50 +7,30% (P5: +4,02%/+7,36%), weiterhin 0 Anti-Bulltrap-Flags. Relative Stärke bleibt die beste der Watchlist. Institutional Hold Test hinsichtlich Niveau und Akkumulation bestanden, aber weiterhin kein von P4 bestätigtes Breakout-Level - daher insgesamt nur teilweise bestanden, kein valider Trigger."
     },
     {
       "ticker": "MA",
       "name": "Mastercard",
       "sector": "Payments",
       "status": "Teilweise",
-      "begruendung": "Kurs seit P5 leicht rückläufig (599,10 -> 597,66 USD, -0,24%), RSI14 kühlt von 68,29 auf 67,05 ab und entfernt sich von der Überhitzungszone. OBV-5T-Trend bleibt stabil positiv (+4,84 Mio. vs. +4,87 Mio.), aber deutlich schwächer als bei Visa. Institutional Hold Test hinsichtlich Niveau bestanden, jedoch identisch zu Visa ohne definiertes Breakout-Niveau und ohne auswertbare Volumendaten für das 16:00-17:00-Uhr-Fenster - daher nur teilweise bestanden."
-    },
-    {
-      "ticker": "NOW",
-      "name": "ServiceNow",
-      "sector": "Software/Cloud",
-      "status": "Nicht bestanden",
-      "begruendung": "Kurs seit P5 spürbar rückläufig (128,84 -> 127,14 USD, -1,32%) - deutlich stärkerer Rücksetzer als bei Visa/Mastercard. OBV-5T-Trend leicht abgeschwächt (+17,86 Mio. vs. +18,06 Mio.), SMA50-Abstand bleibt mit +15,66% über der 15%-Schwelle (Anti-Bulltrap-Flag weiterhin aktiv). Institutional Hold Test nicht bestanden - weder Kurs noch Momentum konnten seit dem Open gehalten werden."
-    },
-    {
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "sector": "Software/Cloud",
-      "status": "Nicht bestanden",
-      "begruendung": "Kurs seit P5 rückläufig (208,19 -> 207,35 USD, -0,40%), RSI14 von 64,76 auf 61,79 gefallen. OBV-5T-Trend deutlich abgeschwächt (+7,51 Mio. vs. +7,59 Mio., zuvor bereits von +21,77 Mio. bei P4 gefallen), SMA50-Abstand weiterhin +17,63% über der Schwelle. Institutional Hold Test nicht bestanden - Momentum lässt seit P4/P5 kontinuierlich nach."
+      "begruendung": "Kurs seit P5 leicht gestiegen (596,07 -> 597,82 USD, +0,29%), RSI14 von 63,27 auf 64,76 gestiegen, weiterhin klar unter der Überhitzungszone. OBV-5T-Trend bleibt stabil positiv (+4,52 Mio. vs. +4,56 Mio.). Institutional Hold Test hinsichtlich Niveau bestanden, aber Ø Tagesvolumen bleibt unter der 5-Mio.-Schwelle - der Qualitätsfilter aus P4 bleibt verletzt, daher nur teilweise bestanden."
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "Software/Cloud",
       "status": "Teilweise",
-      "begruendung": "Kurs seit P5 als einziger Kandidat gestiegen (485,72 -> 489,66 USD, +0,81%), RSI14 bei neutralen 51,59. OBV-5T-Trend legt als stärkster im Sektor weiter zu (+39,37 Mio. vs. +39,19 Mio.) - stille institutionelle Akkumulation setzt sich fort. Institutional Hold Test hinsichtlich Akkumulation bestanden, aber SMA50-Abstand bleibt mit +15,55% knapp über der Schwelle und die 5-Tages-Performance ist mit +1,67% weiterhin zu schwach für eine klare Kursbestätigung - daher nur teilweise bestanden, kein valider Neueinstieg."
+      "begruendung": "Kurs seit P5 leicht rückläufig (495,88 -> 494,71 USD, -0,24%), RSI14 46,82 -> 45,81 neutral. OBV-5T-Trend bleibt der stärkste der gesamten Watchlist (+38,93 Mio. -> +39,13 Mio.) - stille institutionelle Akkumulation setzt sich trotz leichtem Kursrückgang fort. Anti-Bulltrap-Flag SMA50 bleibt aktiv (Abstand +16,21%, P5: +16,48%), weiterhin kein bestätigtes Breakout-Level - Institutional Hold Test nur teilweise bestanden."
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
+      "status": "Nicht bestanden",
+      "begruendung": "Kurs seit P5 leicht erholt (124,43 -> 125,45 USD, +0,82%), RSI14 58,42 -> 59,88. Trotz der Kurserholung bleibt der OBV-5T-Trend deutlich negativ (-16,86 Mio. -> -17,02 Mio.) - fortgesetzte institutionelle Distribution statt Akkumulation. Institutional Hold Test hinsichtlich Smart-Money-Analyse nicht bestanden - die Erholung wird nicht von Volumen-Akkumulation getragen."
     }
   ]
 }
