@@ -1,69 +1,76 @@
 {
-  "generated_at_utc": "2026-08-26T13:04:22Z",
-  "run_date": "2026-08-26",
+  "generated_at_utc": "2026-08-27T12:57:46Z",
+  "run_date": "2026-08-27",
   "candidates": [
     {
       "ticker": "V",
       "name": "Visa",
       "sector": "Payments",
       "score": "hoch",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +4,63%, SMA50 +8,13%, beide klar unter den Warnschwellen; RSI14 64,47; chg_5d +5,46% < 15%). OBV-5T-Trend deutlich positiv, parallel zum Kursanstieg - konsistente institutionelle Akkumulation. Ø Tagesvolumen 7,25 Mio. Aktien, Qualitätsfilter erfüllt. Sektor Payments Rang 2 von 11 (Ø 5T +4,91%). Sauberstes Setup des Tages, aber weiterhin kein von P4 bestätigtes Breakout-Level - Beobachtungskandidat."
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +4,35% < 8%, SMA50 +7,70% < 15%; RSI14 62,86 < 72; chg_5d +5,02% < 15%). OBV-5T-Trend deutlich positiv (+22,00 Mio.), parallel zum Kursanstieg - konsistente institutionelle Akkumulation. Kurs klar über SMA20 und SMA50. Sektor Payments Rang 2 von 11 (Ø 5T +4,67%), stärkster Sektor mit zwei Werten. Sauberstes Setup des Tages, aber weiterhin kein von P4 bestätigtes Breakout-Level und Tagesvolumen unter dem 20T-Durchschnitt (Datenstand vorbörslich) - Beobachtungskandidat."
     },
     {
       "ticker": "MA",
       "name": "Mastercard",
       "sector": "Payments",
       "score": "mittel",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +4,69%, SMA50 +10,56%; RSI14 68,52, nähert sich der 72er-Schwelle, aber formal nicht ausgelöst; chg_5d +4,36% < 15%). OBV-5T-Trend leicht positiv. Ø Tagesvolumen jedoch nur 3,13 Mio. Aktien - liegt unter der 5-Mio.-Schwelle des Qualitätsfilters, daher auf 'mittel' abgestuft trotz sauberer Technik. Sektor Payments Rang 2 von 11."
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +4,22%, SMA50 +9,95%; RSI14 65,34; chg_5d +4,31%). OBV-5T-Trend leicht positiv (+1,46 Mio.). Ø Tagesvolumen 3,11 Mio. Aktien liegt unter der 5-Mio.-Schwelle des Qualitätsfilters, daher auf 'mittel' abgestuft trotz sauberer Technik. Sektor Payments Rang 2 von 11."
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "sector": "Software/Cloud",
+      "score": "mittel",
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +2,87%, SMA50 +4,16%; RSI14 54,92; chg_5d +3,52%). OBV-5T-Trend positiv (+21,69 Mio.), Kurs über beiden gleitenden Durchschnitten - solide, aber nicht überhitzte Technik. Bestehende Depotposition seit 19.07.2026, Haltedauer bereits deutlich über dem üblichen Swing-Rahmen - kein Neueinstiegskandidat, primär Beobachtung im Rahmen der Depotposition."
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "Software/Cloud",
       "score": "mittel",
-      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA50 +16,02% > 15%-Schwelle; SMA20 +1,82% unauffällig, RSI14 53,0, chg_5d +2,09% < 15%). Stärkster OBV-5T-Trend der Watchlist (+58,83 Mio.) bei moderater Kursbewegung - stille Akkumulation ohne valides Einstiegssignal. Sektor Software/Cloud Rang 3 von 11 (Ø 5T +3,66%)."
+      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA50 +16,59% > 15%-Schwelle; SMA20 +1,67% unauffällig, RSI14 47,24, chg_5d +2,49% < 15%). OBV-5T-Trend mit +59,24 Mio. weiterhin einer der stärksten der Watchlist - stille Akkumulation, aber wegen der Überdehnung ggü. SMA50 kein sauberer Neueinstieg."
     },
     {
-      "ticker": "NOW",
-      "name": "ServiceNow",
-      "sector": "Software/Cloud",
+      "ticker": "AMD",
+      "name": "AMD (Advanced Micro Devices)",
+      "sector": "Semiconductors/AI",
       "score": "mittel",
-      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA50 +15,54% > 15%-Schwelle; SMA20 +4,2% unauffällig, RSI14 62,35, chg_5d +6,29% < 15%). OBV-5T-Trend positiv (+5,75 Mio.), konsistent mit Kursanstieg. Sektor Software/Cloud Rang 3 von 11. Wegen Überdehnung ggü. SMA50 kein sauberer Neueinstieg."
+      "begruendung": "0 Anti-Bulltrap-Flags, OBV-5T-Trend positiv (+45,73 Mio.) bei chg_5d +3,11% - Erholung mit beginnender institutioneller Akkumulation, Kurs aber noch unter SMA20 (-0,43%) und SMA50 (-5,26%), kein bestätigter Trendwechsel. Sektor Semiconductors/AI durch NVIDIA-Rekordzahlen und die angekündigte 12,9-Mrd.-USD-Übernahme von Hugging Face (vorbörslich +6% bei NVIDIA) mit positivem Newsflow, der sich im vorbörslichen Datenstand noch nicht in den Indikatoren zeigt - P5 sollte die Eröffnungsreaktion des gesamten Sektors prüfen."
     },
     {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "sector": "Fintech/Brokerage",
-      "score": "niedrig",
-      "begruendung": "2 Anti-Bulltrap-Flags (chg_5d +22,46% > 15%-Schwelle; Abstand SMA20 +17,69% > 8%-Schwelle) - formal ausgeschlossen. RSI14 68,85, OBV-5T-Trend stark positiv (+52,91 Mio.). Sektor Fintech/Brokerage weiterhin Rang 1 von 11 (5T +22,46%), aber stark überhitzt. Bestehende Depotposition, aktuell rund +12,2% im Plus - kein Nachkauf, kein Neueinstiegskandidat."
-    },
-    {
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "sector": "Software/Cloud",
-      "score": "niedrig",
-      "begruendung": "Technisch ordentlich (1 Anti-Bulltrap-Flag: Abstand SMA50 +16,71% > 15%-Schwelle; SMA20 +5,19% unauffällig, RSI14 60,15, chg_5d +4,87%), aber Salesforce meldet HEUTE nach US-Börsenschluss Quartalszahlen - Qualitätsfilter (keine Earnings in den nächsten 7 Handelstagen) verletzt. Damit unabhängig von der Technik kein Einstiegskandidat."
+      "ticker": "UNH",
+      "name": "UnitedHealth Group",
+      "sector": "Healthcare",
+      "score": "mittel",
+      "begruendung": "0 Anti-Bulltrap-Flags, OBV-5T-Trend positiv (+5,97 Mio.), chg_5d +3,19%, RSI14 47,59. Kurs jedoch noch knapp unter SMA20 (-0,36%) und unter SMA50 (-2,95%) - Akkumulationssignal vorhanden, aber kein bestätigter Aufwärtstrend. Sektor Healthcare Rang 3 von 11."
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "Semiconductors/AI",
       "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags, aber schwaches Signal: chg_5d -3,04%, RSI14 42,45, OBV-5T-Trend deutlich negativ (-302,87 Mio.) - keine institutionelle Akkumulation. Zusätzlich meldet NVIDIA HEUTE nach US-Börsenschluss die Quartalszahlen (Optionsmarkt preist laut Websuche eine Kursbewegung von rund 280 Mrd. USD ein) - Qualitätsfilter verletzt, kein Einstieg vor den Zahlen. Sektor Semiconductors/AI Rang 6 von 11."
+      "begruendung": "Vorbörslicher Datenstand (vor US-Handelsbeginn) zeigt noch chg_5d -3,63%, RSI14 39,4 und deutlich negativen OBV-5T-Trend (-349,27 Mio.) - technisch keine Akkumulation erkennbar. ABER: NVIDIA meldete gestern nach US-Börsenschluss Rekordzahlen (Umsatz +106% auf 96,2 Mrd. USD, Prognose deutlich über Erwartungen) und kündigte eine 12,9-Mrd.-USD-Übernahme von Hugging Face an - Aktie vorbörslich rund +6%, Nasdaq-100-Futures +1%. Die aktuellen Kennzahlen bilden diesen Katalysator noch nicht ab (Datenstand vor Handelsbeginn) - zentraler Beobachtungskandidat für P5 zur Bestätigung der Eröffnungsreaktion, aktuell aber kein bestätigtes Setup."
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sector": "Fintech/Brokerage",
+      "score": "niedrig",
+      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA20 +12,85% > 8%-Schwelle; chg_5d +13,33% < 15%, RSI14 66,94 < 72, Abstand SMA50 +7,33% < 15% - jeweils formal noch unter der Schwelle). OBV-5T-Trend weiterhin positiv (+14,55 Mio.), aber Momentum kühlt gegenüber den Vortagen spürbar ab. Bestehende Depotposition, deutlich im Plus - überdehnt, kein Neueinstiegskandidat."
     },
     {
       "ticker": "AVGO",
       "name": "Broadcom",
       "sector": "Semiconductors/AI",
       "score": "niedrig",
-      "begruendung": "RSI14 17,94 - extrem überverkauft, aber kein Akkumulationssignal: chg_5d -6,12%, unter SMA20 (-9,37%) und SMA50 (-7,93%), OBV-5T-Trend negativ (-32,97 Mio.). Sektor Semiconductors/AI Rang 6 von 11 und zusätzlich durch die Nvidia-Zahlen heute Abend mit Spillover-Risiko belastet - kein valides Einstiegssignal trotz technischer Überverkauftheit."
+      "begruendung": "RSI14 15,74 - extrem überverkauft, aber kein Akkumulationssignal: chg_5d -1,9%, unter SMA20 (-9,5%), OBV-5T-Trend negativ (-16,52 Mio.). Könnte über Spillover-Effekte von den starken NVIDIA-Zahlen profitieren, aktuell aber kein valides Einstiegssignal."
     },
     {
-      "ticker": "ORCL",
-      "name": "Oracle",
-      "sector": "Software/Cloud",
+      "ticker": "CAT",
+      "name": "Caterpillar",
+      "sector": "Industrials",
       "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags, aber nur schwaches Momentum: chg_5d +1,38%, RSI14 50,36, OBV-5T-Trend positiv (+30,10 Mio.) bei praktisch unauffälliger Kursbewegung. Bestehende Depotposition seit 19.07.2026, aktuell rund -10,8% Buchverlust, Haltedauer deutlich über dem üblichen Swing-Rahmen - Depotfilter-relevant, aber kein Neueinstiegskandidat."
+      "begruendung": "RSI14 39,82, unter SMA20 (-2,0%) und deutlich unter SMA50 (-8,63%), OBV-5T-Trend nur marginal positiv (+0,49 Mio.) - kein valides Setup."
     }
   ]
 }
