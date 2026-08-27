@@ -1,13 +1,13 @@
 {
-  "generated_at_utc": "2026-08-26T16:05:55Z",
-  "status": "RISK-OFF",
-  "begruendung": "P1-Lauf 26.08.2026, Daily Institutional Swing Portfolio Builder (Analysefenster ca. 18:05 MESZ, Datenstand p1_latest.json 15:46 UTC / 17:46 MESZ, Institutional Hold Test p55_latest.json 15:54 UTC / 17:54 MESZ). EUR/USD 0,857. Hinweis zur Datenlage: Der geplante automatische P1-Lauf verzögerte sich durch eine GitHub-weite Actions-Störung (ca. 15:09-15:46 UTC), zusätzlich war der planmäßige P5.5-Lauf betroffen und wurde nachträglich manuell nachgeholt (p55_latest.json 15:54 UTC) - die Analyse basiert damit auf vollständigen, aber gegenüber dem Normalfenster leicht verschobenen Tagesdaten. 1. MARKTREGIME: NASDAQ-Proxy 710,97 (RSI14 47,03, 5T -0,71%), weiterhin unter SMA20 (-0,51%) und knapp unter SMA50 (-0,19%) - Kriterium 'NASDAQ über 20-DMA' bleibt verfehlt. S&P500-Proxy 766,05 (RSI14 46,95, 5T -0,39%), knapp unter SMA20 (-0,08%), klar über SMA50 (+1,74%). VIX-Proxy 17,90 (5T -2,24%) bleibt knapp unter der 18er-Schwelle - technisch erfüllt, aber laut Websuche handelt der Markt insgesamt vorsichtig/leicht abwartend vor den NVIDIA-Zahlen heute Abend (S&P 500 gibt vor der Veröffentlichung leicht nach), keine echte Risk-On-Bestätigung. SOX-Proxy 514,61 (5T -0,97%) bleibt schwächer als NASDAQ (-0,97% vs. -0,71%) - Kriterium 'SOX stärker als NASDAQ' verfehlt. OBV-5T-Trend bei NASDAQ (-13,83 Mio.) und S&P500 (-11,39 Mio.) weiterhin negativ (Distribution auf Indexebene), Russell2000 leicht positiv (+2,79 Mio.). Marktbreite (A/D-Linie, %-Aktien über 50-DMA) weiterhin nicht im Feed enthalten - Datenbasis insoweit unvollständig. Websuche bestätigt: Kern-PCE Juli wie erwartet bei 3,3% YoY (keine hawkishe Überraschung), aber Intuit-Aktie bricht trotz übertroffener Zahlen ~10% ein (schwacher Ausblick, belastet Software-Werte breiter), und der Markt bleibt insgesamt in Wartestellung vor den NVIDIA-Zahlen nach US-Börsenschluss (Optionsmarkt preist laut Yahoo Finance eine mögliche Kursbewegung von rund 280 Mrd. USD ein). Einordnung: von den prüfbaren Kernkriterien bleiben 2 verfehlt (NASDAQ unter 20-DMA, SOX schwächer als NASDAQ), bei fehlender Marktbreiten-Bestätigung und spürbarer Vorsicht vor dem Tagesevent -> RISK-OFF bestätigt, unverändert seit der P5.5-Rückstufung vom 25.08. Sechster Kein-Trade-Tag in Folge. 2. RISIKOSTEUERUNG: RISK-OFF -> keine neuen Positionen bzw. maximal ein defensiver Ausnahme-Trade; Zusatzwarnung (VIX>25 oder S&P500 unter 50-DMA) greift nicht (VIX 17,9; S&P500 klar über SMA50). 3. SEKTORROTATION (5T-Performance, gleiche Sektorliste wie P4, berechnet aus p1_latest.json): 1. Fintech/Brokerage +14,02% (nur Robinhood, deutlich abgekühlt ggü. Vortagen), 2. Payments +4,39% (Visa +4,61%, Mastercard +4,16%), 3. Healthcare +3,42% (UnitedHealth Group), 4. Software/Cloud +0,72% (Microsoft +2,28%, Oracle +3,24%, ServiceNow -1,48%, Salesforce -1,15% - durch Intuit-Selloff und Salesforce-Zahlen heute Abend belastet), 5. Industrials +0,70% (Caterpillar), 6. Semiconductors/AI -0,57% (AMD +4,08% stützt, NVIDIA -2,86% und Broadcom -2,93% vor den NVIDIA-Zahlen belastend), 7. Technology -1,13% (Apple), 8. Defense/Industrials -3,78% (RTX Corporation), 9. Defense -4,65% (Lockheed Martin, Northrop Grumman), 10. Cybersecurity -5,99% (Palo Alto Networks), 11. MedTech -7,33% (Intuitive Surgical, schwächster Sektor). 4.-9. KANDIDATENANALYSE (P4-Kandidaten Score hoch/mittel: Visa, Mastercard, Microsoft, ServiceNow) - Institutional Hold Test (P5.5, siehe p55_candidates.json) heute: Visa, Mastercard und Microsoft nur 'Teilweise' bestanden (Niveau und OBV-Akkumulation halten weitgehend, aber weiterhin kein von P4 bestätigtes Breakout-Level bzw. bei Mastercard zusätzlich Volumen-Qualitätsfilter verletzt), ServiceNow 'Nicht bestanden' (Kurserholung nicht von Akkumulation getragen, OBV-Trend bleibt negativ). Damit erreicht kein Kandidat die für Punkt 14 (Handlungsempfehlung) nötige vollständige Bestätigungskette (Institutioneller Flow >=90/100, Gesamtscore >=92/100, bestätigtes Breakout-Level, CRV >=2,5:1). 10. TRADE SETUP/POSITIONSGRÖSSE/RANKING: entfällt, kein Kandidat erreicht ein vollständig bestätigtes Setup. 11. NACHKAUFREGEL (Depot): Oracle liegt mit -8,49% zwar nahe der 5-8%-Nachkaufzone, aber Marktregime ist RISK-OFF (Nachkauf-Voraussetzung Risk-On-Bestätigung nicht erfüllt), Software/Cloud-Sektor ist nur neutral (Rang 4, zusätzlich durch Intuit-Selloff belastet) - kein Nachkauf. Robinhood liegt deutlich im Plus, Nachkaufregel (5-8% im Minus) nicht einschlägig. 12. LANG & SCHWARZ HANDELSCHECK: entfällt mangels valider Kandidaten. 13. FINALE PORTFOLIOENTSCHEIDUNG: RISK-OFF erlaubt maximal einen defensiven Ausnahme-Trade; kein Kandidat erfüllt bestätigtes Breakout-Level plus vollständige institutionelle Bestätigung. Ergebnis: Kein Trade. Kapitalerhalt hat Vorrang - insbesondere vor dem NVIDIA-Ergebnis heute Abend, das die Volatilität in Semiconductors/AI und darüber hinaus kurzfristig deutlich erhöhen kann. Bestwatch für die kommenden Tage: Visa (sauberstes Setup, Akkumulation hält durchgehend seit P4), Microsoft (stärkste OBV-Zuflüsse der Watchlist) - erneute Prüfung nach den NVIDIA-Zahlen und bei einer Verbesserung der Marktbreite (NASDAQ zurück über 20-DMA, SOX stärker als NASDAQ). Für das bestehende Depot wird bei Robinhood (weiterhin überdehnt, Anti-Bulltrap-Flag SMA20 aktiv) und bei Oracle (Haltedauer seit 19.07. weit über dem Swing-Rahmen von 21 Handelstagen, weiterhin im Buchverlust) je ein Teilverkauf zur Risikoreduktion empfohlen (Details siehe data/portfolio_bewertung.json).",
-  "kurzbegruendung": "RISK-OFF bestätigt vor den NVIDIA-Zahlen heute Abend: NASDAQ unter 20-DMA, SOX schwächer, kein P4-Kandidat mit bestätigtem Breakout. Kein Trade, 6. Tag in Folge.",
+  "generated_at_utc": "2026-08-27T13:04:12Z",
+  "status": "NEUTRAL",
+  "begruendung": "P4-Lauf 27.08.2026, Institutioneller Swing-Scanner (Analysefenster ca. 14:54-15:04 MESZ, Datenstand p4_latest.json 12:54 UTC, also vorbörslich vor US-Handelsbeginn 15:30 MESZ). EUR/USD 0,858. 1. MARKTREGIME: NASDAQ-Proxy 711,37 (RSI14 47,37, 5T -0,66%), knapp unter SMA20 (-0,46%) und knapp unter SMA50 (-0,14%) - Kriterium 'NASDAQ über 20-DMA' bleibt verfehlt. S&P500-Proxy 766,08 (RSI14 46,99, 5T -0,39%), knapp unter SMA20 (-0,07%), über SMA50 (+1,74%). VIX-Proxy 17,83 (5T -2,62%) bleibt knapp unter der 18er-Schwelle - Kriterium technisch erfüllt. SOX-Proxy 515,40 (5T -0,82%) bleibt schwächer als NASDAQ (-0,82% vs. -0,66%) - Kriterium 'SOX stärker als NASDAQ' verfehlt. Positiv: OBV-5T-Trend dreht bei NASDAQ (+4,89 Mio.) und S&P500 (+15,92 Mio.) von Distribution auf Akkumulation, Russell2000 leicht negativ (-7,34 Mio.). Marktbreite (NYSE A/D-Linie, %-Aktien über 50-DMA) weiterhin nicht im Feed enthalten - Datenbasis insoweit unvollständig, nicht durch Websuche zuverlässig nachlieferbar. Websuche bestätigt einen deutlich positiven Newsflow seit Handelsschluss gestern: NVIDIA meldete Rekordzahlen (Umsatz +106% auf 96,2 Mrd. USD, Prognose klar über Erwartungen) und kündigte eine 12,9-Mrd.-USD-Übernahme von Hugging Face an - Aktie vorbörslich rund +6%, Nasdaq-100-Futures +1%, S&P-500-Futures +0,5%, zusätzlich stützen solide Zahlen von Salesforce und CrowdStrike den Techsektor. Die für heute zuvor erwartete Jackson-Hole-Rede von Fed-Chef Kevin Warsh findet laut aktueller Recherche nicht heute, sondern erst morgen (Freitag) statt - kein unmittelbarer Katalysator heute, aber weiterhin Unsicherheitsfaktor für die kommenden Handelstage. Einordnung: von den fünf Risk-On-Kriterien sind 2 klar verfehlt (NASDAQ unter 20-DMA, SOX schwächer als NASDAQ) und 2 mangels Datenverfügbarkeit nicht prüfbar (A/D-Ratio, %-Aktien über 50-DMA) - das entspricht laut Punkt 1 der Prompt-Kriterien einer Einstufung als NEUTRAL (1-2 verfehlte Kriterien), gestützt durch den Wechsel der Index-OBV-Trends von Distribution zu Akkumulation und den klar positiven vorbörslichen Newsflow. Der vorbörsliche Datenstand (vor US-Handelsbeginn) bildet die heutige NVIDIA-Rally jedoch noch nicht in den Kursindikatoren ab - P5 zur US-Eröffnung muss die tatsächliche Reaktion bestätigen. 2. RISIKOSTEUERUNG: NEUTRAL -> maximal zwei Kaufempfehlungen möglich, sofern Einzelkriterien erfüllt sind. 3. SEKTORROTATION (5T-Performance, aus p4_latest.json): 1. Fintech/Brokerage +13,33% (nur Robinhood, Momentum kühlt gegenüber Vortagen ab), 2. Payments +4,67% (Visa +5,02%, Mastercard +4,31%), 3. Healthcare +3,19% (UnitedHealth Group), 4. Software/Cloud +1,17% (Oracle +3,52%, Microsoft +2,49%, Salesforce -0,23%, ServiceNow -1,10%), 5. Industrials +0,71% (Caterpillar), 6. Semiconductors/AI -0,81% (AMD +3,11% stützt, NVIDIA -3,63% und Broadcom -1,90% belasten den 5-Tage-Durchschnitt noch, obwohl NVIDIA vorbörslich +6% notiert - Katalysator noch nicht in der Kennzahl), 7. Technology -1,07% (Apple), 8. Defense/Industrials -3,79% (RTX Corporation), 9. Defense -4,82% (Lockheed Martin, Northrop Grumman), 10. Cybersecurity -5,68% (Palo Alto Networks), 11. MedTech -6,86% (Intuitive Surgical, schwächster Sektor). 4.-9. KANDIDATENANALYSE (siehe data/p4_candidates.json, Top-Scores Visa/hoch, Mastercard/Oracle/Microsoft/AMD/UnitedHealth Group/mittel): Visa bleibt das sauberste Setup der Watchlist (0 Anti-Bulltrap-Flags, klar positiver OBV-Trend, über beiden SMAs), erreicht aber wie alle Kandidaten kein von P4 bestätigtes Breakout-Level mit Volumenbestätigung (Tagesvolumen vorbörslich durchgehend unter dem 20-Tage-Schnitt, Datenstand vor Handelsbeginn daher nur eingeschränkt aussagekräftig). NVIDIA trotz starkem Newsflow aktuell technisch noch ohne Akkumulationssignal (OBV-5T -349,27 Mio.) - zentraler Beobachtungskandidat für P5. Kein Kandidat erreicht damit die für Punkt 14 (Handlungsempfehlung) nötige vollständige Bestätigungskette (Institutioneller Flow >=90/100, Gesamtscore >=92/100, bestätigtes Breakout-Level, CRV >=2,5:1). 10. TRADE SETUP/POSITIONSGRÖSSE/RANKING: entfällt, kein Kandidat erreicht ein vollständig bestätigtes Setup. 11. NACHKAUFREGEL (Depot): entfällt für P4 (Depotprüfung erfolgt im P1-Lauf). 12. LANG & SCHWARZ HANDELSCHECK: entfällt mangels valider Kandidaten. 13. FINALE HANDLUNGSEMPFEHLUNG: Unabhängig von der Ampel-Einstufung NEUTRAL greift der institutionelle Marktfilter (Pflichtprüfung, Abschnitt 15B des P4-Prompts): mit NASDAQ unter 20-DMA UND SOX schwächer als NASDAQ sind bereits 2 von 5 Blockadekriterien erfüllt - das Regelwerk schreibt in diesem Fall zwingend 'keine Empfehlung' vor, unabhängig von der Einzelqualität der Kandidaten. Ergebnis: Kein Trade. Kapitalerhalt hat Vorrang. Bestwatch für P5 zur US-Eröffnung: Visa (sauberstes Setup), NVIDIA und der gesamte Semiconductors/AI-Sektor (starker Newsflow, Bestätigung der Eröffnungsreaktion und Volumen entscheidend), Microsoft und AMD als weitere Beobachtungskandidaten. Für das bestehende Depot (Robinhood, Oracle) erfolgt die reguläre Bewertung im P1-Lauf.",
+  "kurzbegruendung": "NEUTRAL: NASDAQ unter 20-DMA, SOX schwächer, aber Index-OBV dreht positiv und starker NVIDIA-Newsflow vorbörslich. Institutioneller Marktfilter blockiert dennoch jede Kaufempfehlung - Kein Trade.",
   "sektor_rotation": [
     {
       "sektor": "Fintech/Brokerage",
       "trend": "positiv",
-      "kommentar": "Rang 1 von 11 (5T +14,02%, weiter abgekühlt ggü. Vortagen). Robinhood 109,20 USD (93,58 EUR), RSI14 67,78, weiterhin über SMA20 (+13,49%) - Anti-Bulltrap-Kriterium technisch noch aktiv. Bestehende Depotposition, deutlich im Plus, Teilverkauf zur Risikoreduktion empfohlen.",
+      "kommentar": "Rang 1 von 11 (5T +13,33%, Momentum kühlt gegenüber Vortagen weiter ab). Robinhood 108,54 USD (93,13 EUR), RSI14 66,94, über SMA20 (+12,85%) - Anti-Bulltrap-Flag technisch aktiv. Bestehende Depotposition, deutlich im Plus.",
       "kandidaten": [
         { "name": "Robinhood", "empfehlung": "Halten" }
       ]
@@ -15,7 +15,7 @@
     {
       "sektor": "Payments",
       "trend": "positiv",
-      "kommentar": "Rang 2 von 11 (Ø 5T +4,39%). Visa 382,40 USD (327,72 EUR), RSI14 61,10, 0 Anti-Bulltrap-Flags, OBV-5T-Trend weiterhin stark positiv (+28,00 Mio.) - sauberstes Setup der Watchlist, aber weiterhin ohne bestätigtes Breakout-Level. Mastercard 597,60 USD (512,14 EUR), RSI14 64,57, ebenfalls 0 Flags, Ø Tagesvolumen bleibt unter der 5-Mio.-Schwelle.",
+      "kommentar": "Rang 2 von 11 (Ø 5T +4,67%). Visa 383,90 USD (329,47 EUR), RSI14 62,86, 0 Anti-Bulltrap-Flags, OBV-5T-Trend positiv (+22,00 Mio.) - sauberstes Setup der Watchlist, weiterhin ohne bestätigtes Breakout-Level. Mastercard 598,47 USD (513,49 EUR), RSI14 65,34, ebenfalls 0 Flags, Ø Tagesvolumen bleibt unter der 5-Mio.-Schwelle.",
       "kandidaten": [
         { "name": "Visa", "empfehlung": "Kauf" },
         { "name": "Mastercard", "empfehlung": "Halten" }
@@ -24,7 +24,7 @@
     {
       "sektor": "Healthcare",
       "trend": "neutral",
-      "kommentar": "Rang 3 von 11 (5T +3,42%). UnitedHealth Group 401,91 USD (344,44 EUR), RSI14 48,34, knapp unter SMA20 (-0,15%), unter SMA50 (-2,74%) - keine klare institutionelle Bestätigung.",
+      "kommentar": "Rang 3 von 11 (5T +3,19%). UnitedHealth Group 401,01 USD (344,07 EUR), RSI14 47,59, knapp unter SMA20 (-0,36%), unter SMA50 (-2,95%) - OBV-Trend positiv, aber kein bestätigter Aufwärtstrend.",
       "kandidaten": [
         { "name": "UnitedHealth Group", "empfehlung": "Halten" }
       ]
@@ -32,18 +32,18 @@
     {
       "sektor": "Software/Cloud",
       "trend": "neutral",
-      "kommentar": "Rang 4 von 11 (Ø 5T +0,72%, durch Intuit-Selloff und bevorstehende Salesforce-Zahlen belastet). Microsoft 495,36 USD (424,55 EUR), RSI14 46,38, weiterhin stärkster OBV-5T-Trend der Watchlist (+39,12 Mio.), aber Anti-Bulltrap-Flag SMA50 (+16,36%) bleibt aktiv, kein Breakout-Level bestätigt. ServiceNow 125,32 USD (107,40 EUR) bleibt trotz leichter Erholung im OBV-Abfluss. Salesforce 203,72 USD (174,59 EUR) meldet heute Abend Zahlen - Earnings-Filter verletzt. Oracle 148,48 USD (127,28 EUR, Depotposition), weiterhin im Buchverlust, Haltedauer weit über dem Swing-Rahmen.",
+      "kommentar": "Rang 4 von 11 (Ø 5T +1,17%). Oracle 148,87 USD (127,73 EUR, Depotposition) mit positivem OBV-Trend (+21,69 Mio.) und 0 Anti-Bulltrap-Flags - solideste Technik im Sektor. Microsoft 496,37 USD (425,89 EUR), RSI14 47,24, stärkster OBV-5T-Trend der Watchlist (+59,24 Mio.), aber Anti-Bulltrap-Flag SMA50 (+16,59%) bleibt aktiv. ServiceNow 125,80 USD (107,94 EUR) mit negativem OBV-Trend. Salesforce 205,62 USD (176,42 EUR) mit negativem OBV-Trend und Anti-Bulltrap-Flag SMA50 (+16,13%) trotz gestern gemeldeter solider Zahlen.",
       "kandidaten": [
+        { "name": "Oracle", "empfehlung": "Halten" },
         { "name": "Microsoft", "empfehlung": "Halten" },
         { "name": "ServiceNow", "empfehlung": "Verkauf" },
-        { "name": "Salesforce", "empfehlung": "Verkauf" },
-        { "name": "Oracle", "empfehlung": "Halten" }
+        { "name": "Salesforce", "empfehlung": "Verkauf" }
       ]
     },
     {
       "sektor": "Industrials",
       "trend": "neutral",
-      "kommentar": "Rang 5 von 11 (5T +0,70%). Caterpillar 821,83 USD (704,29 EUR), RSI14 39,78, unter SMA20 (-2,01%) und SMA50 (-8,64%) - kein valides Setup.",
+      "kommentar": "Rang 5 von 11 (5T +0,71%). Caterpillar 821,93 USD (705,42 EUR), RSI14 39,82, unter SMA20 (-2,0%) und SMA50 (-8,63%) - kein valides Setup.",
       "kandidaten": [
         { "name": "Caterpillar", "empfehlung": "Verkauf" }
       ]
@@ -51,9 +51,9 @@
     {
       "sektor": "Semiconductors/AI",
       "trend": "neutral",
-      "kommentar": "Rang 6 von 11 (Ø 5T -0,57%), Markt in Wartestellung vor den NVIDIA-Zahlen heute Abend (Optionsmarkt preist laut Websuche eine mögliche Kursbewegung von ca. 280 Mrd. USD ein). NVIDIA 211,34 USD (181,12 EUR, 5T -2,86%), OBV-5T-Trend weiterhin stark negativ (-207,59 Mio.), meldet heute Abend Zahlen - kein Einstieg vor dem Event. AMD 485,45 USD (416,11 EUR, 5T +4,08%) mit positivem OBV-Trend, stützt den Sektor. Broadcom 351,85 USD (301,54 EUR), RSI14 15,15 extrem überverkauft, weiterhin ohne Akkumulationssignal.",
+      "kommentar": "Rang 6 von 11 (Ø 5T -0,81% im vorbörslichen Datenstand), aber mit dem stärksten positiven Newsflow des Tages: NVIDIA 209,66 USD (179,89 EUR) meldete gestern nach Handelsschluss Rekordzahlen und eine 12,9-Mrd.-USD-Übernahme von Hugging Face, Aktie vorbörslich rund +6% - im vorbörslichen Datenstand aber noch OBV-5T stark negativ (-349,27 Mio.), zentraler Beobachtungskandidat für P5. AMD 480,93 USD (412,64 EUR, 5T +3,11%) mit positivem OBV-Trend stützt den Sektor. Broadcom 355,59 USD (305,10 EUR), RSI14 15,74 extrem überverkauft, ohne Akkumulationssignal, könnte von Spillover-Effekten profitieren.",
       "kandidaten": [
-        { "name": "NVIDIA", "empfehlung": "Verkauf" },
+        { "name": "NVIDIA", "empfehlung": "Halten" },
         { "name": "AMD (Advanced Micro Devices)", "empfehlung": "Halten" },
         { "name": "Broadcom", "empfehlung": "Verkauf" }
       ]
@@ -61,7 +61,7 @@
     {
       "sektor": "Technology",
       "trend": "negativ",
-      "kommentar": "Rang 7 von 11 (5T -1,13%, nur Apple). Apple 313,26 USD (268,46 EUR), RSI14 51,07, knapp über SMA20 (+0,97%) - keine klare institutionelle Akkumulation.",
+      "kommentar": "Rang 7 von 11 (5T -1,07%, nur Apple). Apple 313,45 USD (268,94 EUR), RSI14 51,31, knapp über SMA20 (+1,03%) - keine klare institutionelle Akkumulation, OBV-Trend negativ.",
       "kandidaten": [
         { "name": "Apple", "empfehlung": "Halten" }
       ]
@@ -69,7 +69,7 @@
     {
       "sektor": "Defense/Industrials",
       "trend": "negativ",
-      "kommentar": "Rang 8 von 11 (5T -3,78%). RTX Corporation 212,03 USD (181,71 EUR), RSI14 32,30 überverkauft, unter SMA20 (-2,92%), OBV-5T-Trend negativ - kein defensiver Ersatzkandidat trotz RISK-OFF.",
+      "kommentar": "Rang 8 von 11 (5T -3,79%). RTX Corporation 211,99 USD (181,89 EUR), RSI14 32,22 überverkauft, unter SMA20 (-2,94%), OBV-5T-Trend negativ - kein defensiver Ersatzkandidat.",
       "kandidaten": [
         { "name": "RTX Corporation", "empfehlung": "Verkauf" }
       ]
@@ -77,7 +77,7 @@
     {
       "sektor": "Defense",
       "trend": "negativ",
-      "kommentar": "Rang 9 von 11 (Ø 5T -4,65%). Lockheed Martin 566,29 USD (485,31 EUR, 5T -3,88%) und Northrop Grumman 551,30 USD (472,46 EUR, 5T -5,41%), beide mit negativem OBV-Trend - keine institutionelle Bestätigung. Lockheed Martin ist Kandidaten-Tracking-Eintrag, Performance seit Aufnahme nähert sich der Invalidierungsschwelle.",
+      "kommentar": "Rang 9 von 11 (Ø 5T -4,82%). Lockheed Martin 565,62 USD (485,30 EUR, 5T -3,99%) und Northrop Grumman 549,95 USD (471,86 EUR, 5T -5,64%), beide mit negativem OBV-Trend - keine institutionelle Bestätigung.",
       "kandidaten": [
         { "name": "Lockheed Martin", "empfehlung": "Verkauf" },
         { "name": "Northrop Grumman", "empfehlung": "Verkauf" }
@@ -86,7 +86,7 @@
     {
       "sektor": "Cybersecurity",
       "trend": "negativ",
-      "kommentar": "Rang 10 von 11 (5T -5,99%). Palo Alto Networks 338,21 USD (289,85 EUR), unter SMA20 (-6,56%), OBV-5T-Trend negativ - kein Einstieg empfehlenswert.",
+      "kommentar": "Rang 10 von 11 (5T -5,68%). Palo Alto Networks 339,31 USD (291,14 EUR), unter SMA20 (-6,27%), OBV-5T-Trend negativ - kein Einstieg empfehlenswert.",
       "kandidaten": [
         { "name": "Palo Alto Networks", "empfehlung": "Verkauf" }
       ]
@@ -94,7 +94,7 @@
     {
       "sektor": "MedTech",
       "trend": "negativ",
-      "kommentar": "Rang 11 von 11 (5T -7,33%, schwächster Sektor). Intuitive Surgical 368,55 USD (315,89 EUR), unter SMA20 (-3,21%) und SMA50 (-4,46%), OBV-5T-Trend negativ - keine institutionelle Bestätigung.",
+      "kommentar": "Rang 11 von 11 (5T -6,86%, schwächster Sektor). Intuitive Surgical 370,42 USD (317,86 EUR), unter SMA20 (-2,75%) und SMA50 (-3,99%), OBV-5T-Trend negativ - keine institutionelle Bestätigung.",
       "kandidaten": [
         { "name": "Intuitive Surgical", "empfehlung": "Halten" }
       ]
