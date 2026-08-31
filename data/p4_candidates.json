@@ -1,76 +1,76 @@
 {
-  "generated_at_utc": "2026-08-28T13:01:31Z",
-  "run_date": "2026-08-28",
+  "generated_at_utc": "2026-08-31T13:00:37Z",
+  "run_date": "2026-08-31",
   "candidates": [
     {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors/AI",
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Software/Cloud",
       "score": "hoch",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +4,96% < 8%, SMA50 +9,52% < 15%; RSI14 53,50 < 72; chg_5d +5,13% < 15%). OBV-5T-Trend leicht positiv (+5,55 Mio.) bei außergewöhnlichem Tagesvolumen von 297,2 Mio. Aktien (2,4x des 20T-Durchschnitts von 125,1 Mio.) - klares Signal für starkes institutionelles Interesse nach dem Rekordquartal vom 26.08. (Umsatz 96,2 Mrd. USD, +106% YoY; Q3-Guidance 108 Mrd. USD; Aktie +8,7% am 27.08.). Kurs 227,98 USD (195,60 EUR). Wichtige Einschränkung: Sektor Semiconductors/AI wird vom SOX-Proxy weiterhin gebremst (SOX 5T +0,59% < NASDAQ +1,43%, SOX unter eigener SMA20/50) - der institutionelle Marktfilter (Sektor-Momentum) ist damit für den Gesamtsektor NICHT bestätigt, obwohl NVIDIA selbst stark ist. Zentraler Beobachtungskandidat für P5 zur Prüfung, ob sich die Eröffnungsreaktion und der Sektor gemeinsam bestätigen."
+      "begruendung": "Nur 1 Anti-Bulltrap-Flag (Abstand SMA50 +19,24% > 15%-Schwelle; SMA20 +4,09% unauffällig, RSI14 55,04 < 72, chg_5d +6,27% < 15%) - unter der Ausschlussschwelle von 2 Kriterien. OBV-5T-Trend mit +115,38 Mio. der mit Abstand stärkste Wert der gesamten Watchlist - klare anhaltende institutionelle Akkumulation. Kurs 513,53 USD (442,66 EUR), klar über SMA20 und SMA50. Sauberstes Gesamtsetup des heutigen Laufs, aber wegen der Überdehnung ggü. SMA50 kein optimaler Neueinstiegspunkt (Pullback zur SMA20 um 493 USD/425 EUR wäre saubereres Setup). Mit konservativem ATR-Stop (2x ATR14) ergibt sich ein CRV von rund 1,8:1 - unter der P4-Mindestschwelle von 2,5:1, daher aktuell kein Kaufsignal trotz bester Qualität der Watchlist."
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "score": "mittel",
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +3,18%, SMA50 +2,47%, RSI14 64,31, chg_5d +3,35% - alle unter den Schwellenwerten). OBV-5T-Trend deutlich positiv (+113,86 Mio.), stabiler Aufwärtstrend über beiden gleitenden Durchschnitten. Kurs 319,70 USD (275,58 EUR). Wichtiger Sonderfaktor: Führungswechsel an der Unternehmensspitze zum 01.09.2026 (Tim Cook wird Executive Chairman, John Ternus neuer CEO) - seit April 2026 angekündigt und damit kein Überraschungsereignis, aber als bevorstehendes Unternehmensereignis erhöhte Unsicherheit rund um die Eröffnung des neuen Handelstages, daher Score nur 'mittel' statt 'hoch'."
     },
     {
       "ticker": "V",
       "name": "Visa",
       "sector": "Payments",
-      "score": "hoch",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +3,01% < 8%, SMA50 +6,23% < 15%; RSI14 67,69 < 72; chg_5d +3,81% < 15%). OBV-5T-Trend positiv (+9,21 Mio.), synchron zum Kursanstieg - konsistente institutionelle Akkumulation, kein Divergenzsignal. Kurs 379,66 USD (325,75 EUR), klar über SMA20 und SMA50. RS stärker als Sektor (Payments Ø 5T +3,47%), NASDAQ (+1,43%) und S&P 500 (+1,11%). Erneut das sauberste Setup der Watchlist, aber weiterhin ohne von P4 bestätigtes Breakout-Level - Beobachtungskandidat für P5."
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "sector": "Software/Cloud",
       "score": "mittel",
-      "begruendung": "1 Anti-Bulltrap-Flag (Abstand SMA50 +18,02% > 15%-Schwelle; SMA20 +2,88% unauffällig, RSI14 53,54 < 72, chg_5d +4,97% < 15%). OBV-5T-Trend mit +108,64 Mio. der mit Abstand stärkste der gesamten Watchlist - anhaltende institutionelle Akkumulation, aber wegen der Überdehnung ggü. SMA50 kein sauberer Neueinstiegspunkt. Kurs 505,06 USD (433,34 EUR)."
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +3,32%, SMA50 +6,47%, RSI14 70,58 - nähert sich der 72er-Schwelle, chg_5d +2,85%). OBV-5T-Trend positiv (+7,18 Mio.), synchron zum Kursanstieg - keine Divergenz. Kurs 381,60 USD (328,94 EUR), RS stärker als Sektor-Durchschnitt (Payments Ø 5T +2,69%) und NASDAQ (+0,42%). Weiterhin sauberes Setup, aber RSI nahe der Überhitzungsschwelle - Beobachtungskandidat, kein Neueinstieg mit ausreichendem Puffer nach oben."
     },
     {
       "ticker": "ORCL",
       "name": "Oracle",
       "sector": "Software/Cloud",
       "score": "mittel",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +4,11%, SMA50 +6,85%; RSI14 54,52; chg_5d +6,95%). OBV-5T-Trend deutlich positiv (+67,29 Mio.), Kurs über beiden gleitenden Durchschnitten - solide, nicht überhitzte Technik. Kurs 151,94 USD (130,36 EUR). Bestehende Depotposition seit 19.07.2026, Haltedauer bereits deutlich über dem üblichen Swing-Rahmen - kein Neueinstiegskandidat, primär Beobachtung im Rahmen der bestehenden Position."
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD (Advanced Micro Devices)",
-      "sector": "Semiconductors/AI",
-      "score": "mittel",
-      "begruendung": "0 Anti-Bulltrap-Flags, OBV-5T-Trend positiv (+14,72 Mio.) bei chg_5d +1,54% - beginnende institutionelle Akkumulation im Zuge des positiven NVIDIA-Newsflows, Kurs aber weiterhin unter SMA20 (-1,22%) und SMA50 (-5,98%) - kein bestätigter Trendwechsel. Kurs 476,67 USD (408,98 EUR). Sektor insgesamt (SOX-Proxy) weiterhin schwächer als NASDAQ."
-    },
-    {
-      "ticker": "UNH",
-      "name": "UnitedHealth Group",
-      "sector": "Healthcare",
-      "score": "mittel",
-      "begruendung": "0 Anti-Bulltrap-Flags, OBV-5T-Trend positiv (+6,80 Mio.), chg_5d +2,65%, RSI14 40,62. Kurs weiterhin unter SMA20 (-1,52%) und SMA50 (-4,34%) - Akkumulationssignal vorhanden, aber kein bestätigter Aufwärtstrend. Kurs 395,05 USD (338,95 EUR). Defensive Ergänzungsoption bei Healthcare."
-    },
-    {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "sector": "Technology",
-      "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags, aber nur schwaches Momentum: chg_5d +1,05%, RSI14 51,57, OBV-5T-Trend moderat positiv (+28,20 Mio.). Kurs 314,58 USD (269,91 EUR), knapp über SMA20/SMA50 - stabil, aber kein ausgeprägtes institutionelles Signal."
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "sector": "Cybersecurity",
-      "score": "niedrig",
-      "begruendung": "Formal 0 Anti-Bulltrap-Schwellenwerte überschritten, aber klare OBV-Divergenz: Kurs +9,52% in 5 Tagen bei gleichzeitig negativem OBV-5T-Trend (-2,35 Mio.) - Kursanstieg ohne institutionelle Bestätigung, erhöhtes Rückschlagrisiko. Kurs 382,85 USD (328,49 EUR). Kein valides Einstiegssignal, nur Beobachtung."
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +2,63%, SMA50 +6,57%, RSI14 49,81, chg_5d +2,99%). OBV-5T-Trend dreht deutlich ins Positive (+30,07 Mio.) nach zuvor stark negativer kumulierter OBV-Linie (-726,83 Mio.) - beginnendes Re-Akkumulationssignal, aber auf sehr kurzer Basis, noch nicht bestätigt. Kurs 150,85 USD (130,03 EUR). Bestehende Depotposition seit 19.07.2026 (Kaufkurs 162,24 USD) - Haltedauer bereits deutlich über dem üblichen Swing-Rahmen, aktuell kein Neueinstiegskandidat, primär Beobachtung im Rahmen der bestehenden Position."
     },
     {
       "ticker": "RTX",
       "name": "RTX Corporation",
       "sector": "Defense/Industrials",
       "score": "niedrig",
-      "begruendung": "RSI14 32,64 (überverkauft), Kurs unter SMA20 (-2,85%), OBV-5T-Trend leicht positiv (+3,84 Mio.) trotz seitwärts/leicht rückläufigem Kurs (chg_5d -0,10%) - möglicher früher Stabilisierungsversuch, aber noch kein bestätigtes Reversal. Kurs 212,08 USD (181,96 EUR). Defensive Beobachtungsoption."
+      "begruendung": "RSI14 29,86 (überverkauft), Kurs unter SMA20 (-2,94%), OBV-5T-Trend positiv (+6,38 Mio.) trotz nahezu unverändertem Kurs (chg_5d +0,86%) - möglicher früher Stabilisierungsversuch/leise Akkumulation bei schwachem Kurs, aber noch kein bestätigtes Reversal oder Breakout. Kurs 211,71 USD (182,49 EUR). Defensive Beobachtungsoption aus dem Rüstungssektor."
     },
     {
-      "ticker": "AVGO",
-      "name": "Broadcom",
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Cybersecurity",
+      "score": "niedrig",
+      "begruendung": "Formal 0 Anti-Bulltrap-Schwellenwerte überschritten (Abstand SMA20 +1,29%, SMA50 +8,20%, RSI14 45,25, chg_5d +3,83%), aber klare OBV-Divergenz: Kursanstieg bei gleichzeitig negativem OBV-5T-Trend (-13,31 Mio.) - Kursbewegung ohne institutionelle Bestätigung, erhöhtes Rückschlagrisiko. Kurs 371,59 USD (320,31 EUR). Kein valides Einstiegssignal, nur Beobachtung."
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "sector": "Payments",
+      "score": "niedrig",
+      "begruendung": "1 Anti-Bulltrap-Flag (RSI14 72,78 > 72-Schwelle; Abstand SMA20 +3,34%, SMA50 +8,60%, chg_5d +2,53% - übrige Kriterien unauffällig). OBV-5T-Trend negativ (-4,67 Mio.) bei gleichzeitig überhitztem RSI - beginnende Distributionswarnung trotz Kursnähe zum Hoch. Kurs 595,30 USD (513,15 EUR). Kein Einstiegssignal, Überhitzungsrisiko."
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Software/Cloud",
+      "score": "niedrig",
+      "begruendung": "4 von 11 Anti-Bulltrap-Kriterien erfüllt (RSI14 80,44 > 72; chg_5d +22,39% > 15%; Abstand SMA20 +25,75% > 8%; Abstand SMA50 +41,52% > 15%) - damit klar über der Ausschlussschwelle von 2 Kriterien, formal ein Lehrbuch-Blow-off nach dem Q2-Ergebnis und der Anthropic-KI-Partnerschaft vom 26.-27.08. Kurs 256,00 USD (220,67 EUR). Trotz starkem OBV-5T-Trend (+55,31 Mio.) aktuell kein Einstiegskandidat, sondern Überdehnungs-Warnung - allenfalls nach deutlichem Pullback (>8-10%) und Konsolidierung erneut prüfen."
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
+      "score": "niedrig",
+      "begruendung": "2 von 11 Anti-Bulltrap-Kriterien erfüllt (Abstand SMA20 +15,33% > 8%; Abstand SMA50 +29,12% > 15%; RSI14 67,46 und chg_5d +12,63% jeweils noch unter den harten Schwellen) - erreicht damit die Ausschlussschwelle von 2 Kriterien trotz positivem OBV-5T-Trend (+22,15 Mio.). Kurs 144,71 USD (124,74 EUR). Zu stark überdehnt für einen Neueinstieg, Beobachtung auf Pullback."
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
       "sector": "Semiconductors/AI",
       "score": "niedrig",
-      "begruendung": "RSI14 22,87 - extrem überverkauft, aber kein Akkumulationssignal: chg_5d +2,06%, weiterhin unter SMA20 (-5,24%) und SMA50 (-3,89%), OBV-5T-Trend negativ (-15,77 Mio.). Kurs 371,54 USD (318,78 EUR). Könnte über Spillover-Effekte der starken NVIDIA-Zahlen profitieren, aktuell aber kein valides Einstiegssignal - reiner Contrarian-Watch."
+      "begruendung": "0 formale Anti-Bulltrap-Schwellenwerte überschritten (Abstand SMA20 -0,23%, SMA50 +4,38%, RSI14 50,00, chg_5d +1,32%), aber deutliche OBV-Divergenz: Kurs nahezu unverändert/leicht positiv, während die OBV-Linie sowohl kumuliert (-48,28 Mio.) als auch im 5-Tage-Trend (-88,46 Mio.) klar negativ ist - typisches Distributionssignal nach der Rekordquartalsreaktion vom 26.08. Kurs 217,55 USD (187,52 EUR). Kein Kaufsignal, Sektor (SOX-Proxy) bremst zusätzlich (5T -2,20%, unter SMA20/SMA50)."
     }
   ]
 }
