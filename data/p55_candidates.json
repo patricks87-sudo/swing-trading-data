@@ -1,50 +1,36 @@
 {
-  "generated_at_utc": "2026-08-28T15:30:00Z",
-  "run_date": "2026-08-28",
+  "generated_at_utc": "2026-08-31T15:13:20Z",
+  "run_date": "2026-08-31",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "NEUTRAL nach Warsh-Rede: Visa/Microsoft halten mit institutionellem Flow, aber ohne bestätigtes Breakout-Level. NVIDIA fällt zurück (Sell-the-News). Kein A+-Setup - Kein Trade.",
+  "kurzbegruendung": "Kein A+-Setup: Visa mit OBV-Umschwung ins Negative verworfen, Microsoft technisch stark aber weiter überdehnt ohne CRV, Apple kühlt vor CEO-Wechsel ab. Kein Trade.",
   "kandidaten": [
-    {
-      "ticker": "V",
-      "name": "Visa",
-      "sector": "Payments",
-      "status": "Bestanden",
-      "begruendung": "Kurs legt weiter zu: 379,66 USD (P5, ~15:38 MESZ) auf 382,79 USD (328,43 EUR, P5.5), +0,82% und damit stärker als NASDAQ (+0,23%) und S&P500 (+0,44%) im selben Fenster - klare relative Stärke, auch nach der Warsh-Rede. RSI14 steigt weiter auf 71,28 (nähert sich der 72er-Überhitzungsschwelle). OBV-5T-Trend bleibt positiv (+2,58 Mio.), wenn auch schwächer als zuvor. Mastercard bestätigt die Sektorstärke (591,73 -> 596,44 USD, +0,80%). Institutional Hold Test damit bestanden - Visa hält sich über dem P5-Niveau und zeigt fortgesetzte, wenn auch abkühlende, institutionelle Nachfrage. Weiterhin aber kein von P4 bestätigtes Breakout-Level und laut Datenfeed ungewöhnlich niedriges Tagesvolumen (Datenlücke Intraday-Fenster/Volumenbasis nicht verlässlich vergleichbar) - reicht für ein A+-Setup nicht aus, bleibt bester Beobachtungskandidat."
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors/AI",
-      "status": "Nicht bestanden",
-      "begruendung": "Kurs fällt von 227,98 USD (P5-Referenz, faktisch Vortagesschluss vom 27.08. nach dem Rekordquartal) auf 223,80 USD (192,02 EUR) zurück, -1,83% - damit schwächer als NASDAQ (+0,23%) und S&P500 (+0,44%) im selben Fenster: klassische 'Sell-the-News'-Reaktion, wie im P5-Lauf bereits als Risiko benannt. SOX-Proxy fällt im gleichen Zeitraum um -1,40% und bestätigt die Sektorschwäche zusätzlich. OBV-Bild uneinheitlich (Rohwert fällt von 276,6 Mio. auf 143,5 Mio., während der 5T-Trend von +5,55 Mio. auf +103,3 Mio. springt) - vermutlich Verschiebung des Beobachtungsfensters durch den neuen Handelstag, keine verlässliche Akkumulationsaussage möglich (Datenlücke). Institutional Hold Test nicht bestanden: kein Halten des Vortagesniveaus, Sektor bleibt Bremser. Kandidat verworfen."
-    },
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "Software/Cloud",
+      "status": "Bestanden",
+      "begruendung": "Kurs pausiert leicht: 513,53 USD (P5, ~15:40 MESZ) auf 511,65 USD (441,04 EUR, P5.5), -0,37% - hält sich aber klar über SMA20 (+3,46%) und SMA50 (+18,08%). OBV-5T-Trend bleibt mit +98,03 Mio. mit weitem Abstand der stärkste der gesamten Watchlist, wenn auch leicht abgekühlt gegenüber dem P5-Wert (+115,38 Mio.) - institutioneller Flow bleibt eindeutig bestätigt. Institutional Hold Test damit bestanden: kein Abverkauf, keine Distribution erkennbar. Gegenläufig bleibt der Abstand zur SMA50 mit +18,08% klar über der 15%-Überdehnungsschwelle (Anti-Bulltrap-Flag aus P4 unverändert aktiv), ein sauberer Pullback zur SMA20 (~494 USD/426 EUR) ist weiterhin nicht erfolgt - CRV bleibt unter der Mindestschwelle. Kein Neueinstieg trotz bestandenem Hold Test."
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
       "status": "Teilweise",
-      "begruendung": "Kurs setzt die Rally fort: 505,06 USD (P5) auf 514,625 USD (441,55 EUR, P5.5), +1,89% - stärkste Einzelbewegung aller geprüften Kandidaten und deutlich über beiden Indizes. OBV-5T-Trend bleibt mit +86,4 Mio. der stärkste der gesamten Watchlist, absolute OBV-Höhe steigt weiter (150,97 Mio. -> 175,01 Mio.). Institutioneller Flow damit eindeutig bestätigt. Gegenläufig: Abstand zur SMA50 weitet sich von +18,02% (P5) auf +19,49% (P5.5) aus und liegt damit klar über der 15%-Überdehnungsschwelle (Anti-Bulltrap-Flag aus P4 bestätigt sich und verschärft sich) - erhöhtes Chase-Risiko bei einem Neueinstieg auf diesem Niveau. Hold Test technisch bestanden, aber kein sauberer Einstiegspunkt mehr."
+      "begruendung": "Kurs gibt nach: 319,70 USD (P5) auf 315,35 USD (271,83 EUR, P5.5), -1,36%. Bleibt zwar über SMA20 (+1,58%) und SMA50 (+0,96%), doch sowohl Kurs- als auch OBV-Momentum haben seit dem P5-Lauf spürbar nachgelassen: OBV-5T-Trend fällt von +113,86 Mio. auf +78,94 Mio. (-31%), RSI14 kühlt von 64,31 auf 62,74. Zusätzlich belastet der offizielle CEO-Wechsel zum 01.09.2026 (John Ternus übernimmt von Tim Cook, der Executive Chairman wird) die Unsicherheit rund um den heutigen Handelsschluss. Ohne Intraday-Volumendaten (erste 15/30 Minuten - Datenlücke, nicht im Feed enthalten) keine abschließende institutionelle A+-Bestätigung möglich. Hold Test nur teilweise bestanden: Level halten, aber Flow schwächt sich ab - kein Einstiegssignal."
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "sector": "Payments",
+      "status": "Nicht bestanden",
+      "begruendung": "Kurs seitwärts: 381,60 USD (P5) auf 381,12 USD (328,53 EUR, P5.5), -0,13% - auf den ersten Blick unauffällig. Entscheidend ist jedoch der OBV-5T-Trend: dieser kippt von +7,18 Mio. (P5, noch positiv) auf -1,34 Mio. (P5.5, negativ) - klarer Umschwung von Akkumulation zu beginnender Distribution trotz seitwärts tendierendem Kurs. RSI14 kühlt zwar leicht von 70,58 auf 68,97 ab und entfernt sich etwas von der Überhitzungsschwelle, das ändert aber nichts am Distributionssignal. Sektor-Pendant Mastercard bestätigt die Schwäche: OBV-5T-Trend ebenfalls negativ (-7,81 Mio., von -4,67 Mio. verschlechtert) bei RSI14 72,59 weiterhin über der 72er-Schwelle. Institutional Hold Test nicht bestanden - keine fortgesetzte institutionelle Nachfrage mehr erkennbar. Kandidat für heute verworfen."
     },
     {
       "ticker": "ORCL",
       "name": "Oracle",
       "sector": "Software/Cloud",
       "status": "Neutral",
-      "begruendung": "Kurs steigt moderat von 151,94 USD (P5) auf 152,96 USD (131,24 EUR, P5.5), +0,67%. RSI14 leicht rückläufig (54,52 -> 51,86). OBV-Rohwert bleibt tief negativ und verschlechtert sich sogar leicht (-702,5 Mio. -> -709,1 Mio.), OBV-5T-Trend bleibt zwar positiv, schwächt sich aber ab (+67,3 Mio. -> +47,8 Mio.) - gemischtes Bild. Bestehende Depotposition seit 19.07.2026, laut P4-Analyse kein Neueinstiegskandidat mehr (Haltedauer bereits deutlich über dem üblichen Swing-Rahmen) - keine Institutional-Hold-Test-Bewertung als Neueinstieg vorgenommen, reguläre Einschätzung erfolgt im P1-Lauf über data/portfolio_bewertung.json."
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD (Advanced Micro Devices)",
-      "sector": "Semiconductors/AI",
-      "status": "Nicht bestanden",
-      "begruendung": "Kurs praktisch unverändert: 476,67 USD (P5) auf 475,44 USD (407,93 EUR, P5.5), -0,26%. Bleibt weiterhin unter SMA20 (-1,47%) und SMA50 (-6,09%) - kein bestätigter Trendwechsel trotz positivem NVIDIA-Newsflow der Vortage. OBV-5T-Trend bricht von +14,72 Mio. (P5) auf nur noch +0,30 Mio. (P5.5) ein - institutionelle Akkumulation kommt praktisch zum Erliegen. Sektor (SOX-Proxy) bleibt mit -1,40% im Beobachtungsfenster der schwächste Index. Kein valides Setup."
-    },
-    {
-      "ticker": "UNH",
-      "name": "UnitedHealth Group",
-      "sector": "Healthcare",
-      "status": "Nicht bestanden",
-      "begruendung": "Kurs nahezu unverändert: 395,05 USD (P5) auf 395,41 USD (339,30 EUR, P5.5), +0,09%. RSI14 weiter rückläufig (40,62 -> 39,40). OBV kippt von positiv (+33,7 Mio.) auf negativ (-5,89 Mio.) - Hinweis auf beginnende Distribution statt fortgesetzter Akkumulation. Bleibt weiterhin unter SMA20 (-1,20%) und SMA50 (-4,23%) - kein bestätigter Aufwärtstrend, kein Einstiegssignal."
+      "begruendung": "Bestehende Depotposition seit 19.07.2026 (Kaufkurs 162,24 USD), laut P4-Analyse bereits kein Neueinstiegskandidat mehr (Haltedauer deutlich über dem üblichen Swing-Rahmen) - daher keine reguläre Institutional-Hold-Test-Bewertung als Neueinstieg. Zur Einordnung: Kurs 150,85 USD (P5) auf 149,72 USD (129,06 EUR, P5.5), -0,75%, damit rund -7,7% unter dem Einstandskurs. OBV-5T-Trend setzt die Re-Akkumulation seit dem P4-Lauf fort und stärkt sich sogar leicht (+44,14 Mio. statt +30,07 Mio.) - ermutigendes Signal auf sehr kurzer Basis, die kumulierte OBV-Linie bleibt aber weiterhin tief negativ (-710,10 Mio.), kein bestätigter Trendwechsel. Reguläre Bewertung der bestehenden Position erfolgt im P1-Lauf über data/portfolio_bewertung.json."
     }
   ]
 }
