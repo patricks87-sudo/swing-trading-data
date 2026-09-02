@@ -1,76 +1,76 @@
 {
-  "generated_at_utc": "2026-09-01T13:02:23.157Z",
-  "run_date": "2026-09-01",
+  "generated_at_utc": "2026-09-02T13:00:53.686Z",
+  "run_date": "2026-09-02",
   "candidates": [
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "Software/Cloud",
       "score": "hoch",
-      "begruendung": "Nur 1 Anti-Bulltrap-Flag (Abstand SMA50 +17,10% > 15%-Schwelle; Abstand SMA20 +2,62%, RSI14 52,23, chg_5d +4,10% jeweils unauffällig) - unter der Ausschlussschwelle von 2 Kriterien. OBV-5T-Trend mit +71,54 Mio. mit weitem Abstand der stärkste Wert der gesamten Watchlist - klare institutionelle Akkumulation, keine Divergenz. Kurs 507,29 USD (436,78 EUR), klar über SMA20 und SMA50. Sauberstes Gesamtsetup des heutigen Laufs, aber wegen der Überdehnung ggü. SMA50 kein optimaler Neueinstiegspunkt (Pullback zur SMA20 um 494,33 USD/425,60 EUR wäre saubereres Setup). Mit konservativem ATR-Stop (2x ATR14 = 19,63 USD) und 8%-Kursziel ergibt sich ein CRV von rund 2,1:1 - unter der P4-Mindestschwelle von 2,5:1, daher trotz bester Qualität aktuell kein Kaufsignal."
+      "begruendung": "0 von 4 Anti-Bulltrap-Kriterien erfüllt (Abstand SMA20 +1,27%, Abstand SMA50 +14,94% knapp unter der 15%-Schwelle, RSI14 55,88, chg_5d +1,89% - alle unauffällig). OBV-5T-Trend mit +32,32 Mio. klar positiv und ohne Divergenz - sauberste institutionelle Bestätigung der gesamten Watchlist. Kurs 501,02 USD (432,38 EUR), klar über SMA20/SMA50. Bei Stop auf 2x ATR14 (19,38 USD, Stop bei 481,64 USD/415,66 EUR) und 8%-Kursziel (541,10 USD/466,97 EUR) ergibt sich ein CRV von rund 2,07:1 - unter der P4-Mindestschwelle von 2,5:1, daher trotz bestem Gesamtsetup aktuell kein Kaufsignal."
     },
     {
       "ticker": "AAPL",
       "name": "Apple",
       "sector": "Technology",
       "score": "mittel",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +2,03%, SMA50 +1,43%, RSI14 65,12, chg_5d +2,10% - alle unter den Schwellenwerten). OBV-5T-Trend deutlich positiv (+38,56 Mio.), stabiler Aufwärtstrend über beiden gleitenden Durchschnitten, keine Überdehnung. Kurs 316,85 USD (272,81 EUR). Solides, unauffälliges Setup ohne Extremwerte, aber ohne den institutionellen Schub von Microsoft - Beobachtungskandidat, aktuell keine Breakout-Bestätigung."
-    },
-    {
-      "ticker": "ORCL",
-      "name": "Oracle",
-      "sector": "Software/Cloud",
-      "score": "mittel",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +1,20%, SMA50 +5,88%, RSI14 53,82, chg_5d +4,68%). OBV-5T-Trend positiv (+28,55 Mio.), Kurs hält SMA20/SMA50. Kurs 149,12 USD (128,39 EUR). Bestehende Depotposition seit 19.07.2026 - Haltedauer bereits deutlich über dem üblichen Swing-Rahmen von 5-15 Handelstagen, Handelsvolumen heute unterdurchschnittlich (0,67x Ø) - beginnende Stabilisierung, aber kein frischer Neueinstiegskandidat, primär Beobachtung im Rahmen der bestehenden Position."
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors/AI",
-      "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +0,93%, SMA50 +5,83%, RSI14 52,54, chg_5d +5,90%), OBV-5T-Trend mit +170,24 Mio. sogar der stärkste Einzelwert der gesamten Watchlist - auf Aktienebene die deutlichste institutionelle Akkumulation. Kurs 220,78 USD (190,09 EUR). Trotzdem nur 'niedrig' eingestuft: Der Halbleitersektor (SOX-Proxy) notiert -3,52% unter der eigenen SMA20 und underperformt die NASDAQ auf 5-Tage-Sicht (+0,96% vs. +1,48%) - der institutionelle Sektorfilter (Pflichtkriterium 15A: Sektor muss über SMA20 liegen und den Markt outperformen) blockiert damit trotz starker Einzelwert-Dynamik jede Kaufempfehlung."
+      "begruendung": "1 von 4 Anti-Bulltrap-Kriterien erfüllt (RSI14 75,37 > 72-Schwelle; Abstand SMA20 +4,44%, Abstand SMA50 +3,90%, chg_5d +4,91% jeweils unauffällig). OBV-5T-Trend mit +116,28 Mio. der mit Abstand stärkste Wert der gesamten Watchlist - klare institutionelle Akkumulation, aber RSI-Überhitzung signalisiert Chase-Risiko statt sauberem Einstieg. Kurs 325,13 USD (280,59 EUR). CRV bei 2x-ATR-Stop und 8%-Ziel nur rund 1,95:1 - ebenfalls unter der Mindestschwelle, Beobachtungskandidat auf Pullback."
     },
     {
       "ticker": "RTX",
       "name": "RTX Corporation",
       "sector": "Defense/Industrials",
       "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags, aber RSI14 26,64 (überverkauft) und Kurs weiter unter SMA20 (-4,57%). OBV-5T-Trend leicht positiv (+6,28 Mio.) trotz nahezu unverändertem/leicht negativem 5T-Kurs (-0,71%) - möglicher früher Stabilisierungsversuch, aber noch kein bestätigtes Reversal oder Breakout. Kurs 207,73 USD (178,85 EUR). Angesichts der Eskalation am Persischen Golf (Iran-Konflikt, Tankerangriffe) ein Sektor mit potenziellem geopolitischem Rückenwind, aktuell aber charttechnisch noch ohne Bestätigung - reine Beobachtungsoption."
+      "begruendung": "0 Anti-Bulltrap-Flags, aber RSI14 25,56 (überverkauft) und Kurs weiter unter SMA20 (-5,47%). OBV-5T-Trend mit -1,64 Mio. nur noch leicht negativ (bislang leicht positiv) - Stabilisierungsversuch verliert an Fahrt, kein bestätigtes Reversal. Kurs 205,16 USD (177,05 EUR). Trotz möglichem geopolitischem Rückenwind durch die eskalierende Golf-Krise (Hormus-Zwischenfälle) charttechnisch weiterhin ohne institutionelle Bestätigung - reine Beobachtungsoption."
     },
     {
-      "ticker": "CRM",
-      "name": "Salesforce",
+      "ticker": "ORCL",
+      "name": "Oracle",
       "sector": "Software/Cloud",
       "score": "niedrig",
-      "begruendung": "4 von 4 geprüften Anti-Bulltrap-Kriterien erfüllt (RSI14 80,78 > 72; chg_5d +23,19% > 15%; Abstand SMA20 +24,32% > 8%; Abstand SMA50 +40,73% > 15%) - weit über der Ausschlussschwelle von 2 Kriterien, klassischer Blow-off-Chart trotz starkem OBV-5T-Trend (+85,90 Mio.). Kurs 257,54 USD (221,74 EUR). Kein Einstiegskandidat, sondern akute Überdehnungswarnung - allenfalls nach deutlichem Pullback (>8-10%) und Konsolidierung erneut prüfen."
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 -3,95%, SMA50 +0,82%, RSI14 37,45, chg_5d -2,38%), aber OBV-5T-Trend mit -10,44 Mio. negativ bei insgesamt stark negativem Gesamt-OBV (-762,6 Mio.) - anhaltende institutionelle Distribution, keine Stabilisierung erkennbar. Kurs 141,32 USD (121,96 EUR). Bestehende Depotposition (Kaufkurs 162,24 USD) liegt rund -12,9% unter Einstand und damit weiter im Minus als am Vortag - kein Neueinstiegskandidat, kritische Beobachtung der bestehenden Position."
     },
     {
-      "ticker": "NOW",
-      "name": "ServiceNow",
-      "sector": "Software/Cloud",
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Semiconductors/AI",
       "score": "niedrig",
-      "begruendung": "3 von 4 geprüften Anti-Bulltrap-Kriterien erfüllt (Abstand SMA20 +16,37% > 8%; Abstand SMA50 +30,81% > 15%; chg_5d +15,57% > 15%; RSI14 69,42 knapp unter der 72er-Schwelle) - über der Ausschlussschwelle von 2 Kriterien trotz stark positivem OBV-5T-Trend (+57,00 Mio.). Kurs 147,99 USD (127,42 EUR). Zu stark überdehnt für einen Neueinstieg, Beobachtung auf Pullback."
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 -0,73%, SMA50 +4,14%, RSI14 44,58, chg_5d +2,06%), aber OBV-5T-Trend mit -58,35 Mio. der negativste Wert der gesamten Watchlist - Distribution statt Akkumulation trotz stabilem Kurs. Kurs 217,44 USD (187,65 EUR). Zusätzlich vom institutionellen Sektorfilter blockiert: SOX-Proxy notiert -5,17% unter eigener SMA20 und underperformt die NASDAQ auf 5-Tage-Sicht (-2,67% vs. -0,43%) - Pflichtkriterium 15A nicht erfüllt."
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "sector": "Cybersecurity",
       "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +3,67%, SMA50 +10,67%, RSI14 49,45, chg_5d +8,90%), OBV-5T-Trend nahezu flach (+0,90 Mio.) trotz des Kursanstiegs - keine klare institutionelle Bestätigung. Kurs 382,13 USD (329,01 EUR). Entscheidender Ausschlussgrund: Palo Alto Networks legt heute (01.09.) Quartalszahlen vor - Qualitätsfilter (keine Earnings in den nächsten 7 Handelstagen) verletzt, damit unabhängig von der Chartqualität kein Kandidat für einen Neueinstieg."
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 -1,71%, SMA50 +4,40%, RSI14 42,57, chg_5d +6,53%), aber OBV-5T-Trend mit -3,26 Mio. trotz des Kursanstiegs ins Negative gedreht - keine institutionelle Bestätigung des Preisanstiegs, klassische Divergenz. Kurs 362,09 USD (312,44 EUR). Kein Einstiegssignal, Beobachtung auf Bestätigung durch steigendes OBV."
     },
     {
       "ticker": "AVGO",
       "name": "Broadcom",
       "sector": "Semiconductors/AI",
       "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags, RSI14 26,23 deutlich überverkauft, Kurs weiter unter SMA20 (-5,03%) und SMA50 (-3,88%). OBV-5T-Trend trotz leicht positivem 5T-Kurs (+3,23%) negativ (-10,74 Mio.) - klassische bearishe Divergenz, kein institutioneller Akkumulationsnachweis. Kurs 370,34 USD (318,86 EUR). Zusätzlich vom schwachen SOX-Sektorfilter belastet - reiner Contrarian-Watch, keine Bestätigung."
+      "begruendung": "0 Anti-Bulltrap-Flags, RSI14 26,06 deutlich überverkauft, Kurs weiter unter SMA20 (-4,61%) und SMA50 (-3,94%). OBV-5T-Trend trotz leicht positivem 5T-Kurs (+3,63%) mit -11,26 Mio. negativ - bearishe Divergenz ohne institutionellen Akkumulationsnachweis. Kurs 369,68 USD (319,03 EUR). Zusätzlich meldet Broadcom laut Marktberichten heute (02.09.) Quartalszahlen - Qualitätsfilter (keine Earnings in den nächsten 7 Handelstagen) verletzt, damit unabhängig von der Chartqualität kein Kandidat für einen Neueinstieg."
     },
     {
-      "ticker": "V",
-      "name": "Visa",
-      "sector": "Payments",
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Software/Cloud",
       "score": "niedrig",
-      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +2,52%, SMA50 +5,54%, RSI14 66,55, chg_5d -0,79%), aber OBV-5T-Trend negativ (-8,02 Mio.) bei gleichzeitig moderat positivem Kursniveau - beginnende Distributionswarnung, keine institutionelle Bestätigung. Kurs 379,37 USD (326,60 EUR). Kein Einstiegssignal, Sektor Payments insgesamt schwach (Mastercard ebenfalls mit negativem OBV-Trend)."
+      "begruendung": "4 von 4 geprüften Anti-Bulltrap-Kriterien erfüllt (RSI14 84,46 > 72; chg_5d +25,48% > 15%; Abstand SMA20 +22,61% > 8%; Abstand SMA50 +39,39% > 15%) - weit über der Ausschlussschwelle von 2 Kriterien, klassischer Blow-off-Chart trotz starkem OBV-5T-Trend (+112,19 Mio.). Kurs 258,11 USD (222,75 EUR). Kein Einstiegskandidat, sondern akute Überdehnungswarnung - allenfalls nach deutlichem Pullback (>8-10%) und Konsolidierung erneut prüfen."
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
+      "score": "niedrig",
+      "begruendung": "2 von 4 geprüften Anti-Bulltrap-Kriterien erfüllt (Abstand SMA20 +11,29% > 8%; Abstand SMA50 +25,20% > 15%; RSI14 66,29 und chg_5d +12,52% jeweils noch unter der Schwelle) - an der Ausschlussschwelle trotz stark positivem OBV-5T-Trend (+52,86 Mio.). Kurs 142,90 USD (123,32 EUR). Zu stark überdehnt für einen Neueinstieg, Beobachtung auf Pullback."
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sector": "Fintech/Brokerage",
+      "score": "niedrig",
+      "begruendung": "0 Anti-Bulltrap-Flags (Abstand SMA20 +4,09%, SMA50 +2,23%, RSI14 57,58), aber chg_5d -7,65% und OBV-5T-Trend mit -22,18 Mio. deutlich negativ - Momentum dreht spürbar trotz Kurs über SMA20/50. Kurs 103,51 USD (89,33 EUR). Bestehende Depotposition (Kaufkurs 99,88 USD) liegt aktuell noch rund +3,6% im Plus, strukturell intakt, aber abschwächendes Momentum verdient Beobachtung."
     }
   ]
 }
