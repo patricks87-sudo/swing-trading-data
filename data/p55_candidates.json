@@ -1,29 +1,22 @@
 {
-  "generated_at_utc": "2026-09-01T15:20:00.000Z",
-  "run_date": "2026-09-01",
+  "generated_at_utc": "2026-09-02T15:16:16.000Z",
+  "run_date": "2026-09-02",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein A+-Setup: Oracle bricht unter SMA20, Microsoft hält Support aber ohne CRV-Trigger, Apple jetzt überkauft (RSI 74,7). Kein Trade.",
+  "kurzbegruendung": "Institutional Hold Test nicht bestanden: Microsoft hält Support nur knapp bei stagnierendem OBV-Flow, Apple bleibt überkauft (RSI 72,6) mit abnehmendem Momentum. Kein Trade.",
   "kandidaten": [
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "Software/Cloud",
-      "status": "Bestanden",
-      "begruendung": "Kurs pausiert/pullbackt leicht von 507,29 USD (P4) auf 500,595 USD (431,01 EUR, P5.5), -1,33% - hält sich aber weiterhin über SMA20 (494,72 USD/425,98 EUR, +1,19%) und nähert sich damit der von P4 als sauberer bezeichneten Einstiegszone. OBV-5T-Trend bleibt mit +51,83 Mio. klar positiv (P4: +71,54 Mio., leichte Abkühlung, aber institutioneller Flow intakt, keine Distribution). Abstand zur SMA50 sinkt auf 14,85% und liegt damit erstmals seit P4 (17,10%) unter der 15%-Anti-Bulltrap-Schwelle - technische Verbesserung. Institutional Hold Test bestanden: kein Abverkauf, keine Distribution. Ohne verifizierbare Intraday-Volumendaten (erste 15/30 Handelsminuten, Options Flow - Datenbasis unvollständig, nicht im Feed enthalten) und ohne erkennbares neues Hoch zwischen 16:00-17:00 Uhr bleibt dies aber ein Halten der Unterstützung, kein bestätigter Second-Chance-Breakout. Rechnerisches CRV (Entry ca. 431 EUR, Stop 2xATR14 ca. 16,7 EUR, Ziel1 +8%) liegt bei rund 2,1:1 - nur knapp ausreichend, kein Neueinstieg."
+      "status": "Teilweise",
+      "begruendung": "Kurs bei 497,575 USD (429,41 EUR) praktisch unverändert zum P5-Open-Niveau (497,415 USD) - Support wird gehalten, kein Abverkauf. Aber Abstand zur SMA20 (495,25) ist mit nur noch +0,47% hauchdünn, kein klar bestätigtes Breakout-Level. OBV-5T-Trend mit +11,41 Mio. gegenüber P5 (+11,55 Mio.) nahezu unverändert - institutioneller Flow stagniert, keine fortgesetzte Akkumulation zwischen 16:00-17:00 Uhr erkennbar, keine Second-Chance-Breakout-Bestätigung. RSI14 50,48 neutral. Relative Stärke leicht positiv (chg_5d +0,24% vs. NASDAQ -0,46%/S&P500 -0,10%), aber ohne Volumenbeschleunigung kein Kaufsignal. Rechnerisches CRV bleibt bei rund 2,1:1 weiterhin unter der Mindestschwelle. Institutional Hold Test: Level gehalten, aber keine Bestätigung durch anziehenden institutionellen Flow - kein Einstieg."
     },
     {
       "ticker": "AAPL",
       "name": "Apple",
       "sector": "Technology",
-      "status": "Teilweise",
-      "begruendung": "Kurs und Momentum haben sich seit P4 nochmals verstärkt: 316,85 USD auf 323,87 USD (278,85 EUR), chg_5d von +2,10% auf +4,51%, OBV-5T-Trend von +38,56 Mio. auf +65,24 Mio. - Institutional Hold Test damit im engeren Sinne bestanden (kein Abverkauf, im Gegenteil beschleunigte Akkumulation). Entscheidender Haken: RSI14 ist auf 74,66 gestiegen und liegt damit erstmals über der 72er-Anti-Bulltrap-Schwelle (P4: 65,12) - ein Neueinstieg wäre ein Chase in eine bereits überkaufte Bewegung, kein sauberes Second-Chance-Setup. Status daher 'Teilweise': Level und Flow bestätigt, aber kein Einstiegssignal wegen Überkauftheit."
-    },
-    {
-      "ticker": "ORCL",
-      "name": "Oracle",
-      "sector": "Software/Cloud",
       "status": "Nicht bestanden",
-      "begruendung": "Deutlicher Bruch seit P4: Kurs fällt von 149,12 USD auf 142,305 USD (122,52 EUR, -4,57%), Unterstützung SMA20 verloren (P4: +1,20% darüber, jetzt -3,31% darunter), RSI14 bricht von 53,82 auf 38,24 ein, 5-Tage-Veränderung dreht von +4,68% auf -1,70%. OBV-5T-Trend bleibt zwar mit +15,00 Mio. positiv, ist aber gegenüber P4 (+28,55 Mio.) deutlich abgeschwächt - keine ausreichende Gegenwehr gegen den Kursrückgang. Institutional Hold Test nicht bestanden: Unterstützung eindeutig verloren. Bestehende Depotposition (Kaufkurs 162,24 USD) liegt damit rund -12,3% im Minus - bereits deutlich über dem üblichen Swing-Zeitrahmen gehalten (seit 19.07.2026); Detailbewertung/Handlungsempfehlung zur Position erfolgt im P1-Lauf."
+      "begruendung": "Kurs bei 324,55 USD (280,09 EUR) leicht unter dem P5-Open-Niveau (325,24 USD), kein neues Hoch zwischen 16:00-17:00 Uhr erkennbar. RSI14 mit 72,6 weiterhin über der 72er-Anti-Bulltrap-Schwelle (P5: 73,67) - Chase-Risiko unverändert bestehen geblieben. OBV-5T-Trend mit +81,84 Mio. gegenüber P5 (+82,33 Mio.) und P4 (+116,28 Mio.) weiter abgeschwächt - institutionelle Kaufdynamik lässt seit dem Open spürbar nach statt zuzunehmen, keine fortgesetzte Akkumulation. Trotz weiterhin positiver relativer Stärke (chg_5d +3,54% vs. NASDAQ -0,46%) fehlt die für ein Second-Chance-Setup nötige Bestätigung durch Volumenanstieg und neue Hochs. Institutional Hold Test nicht bestanden: Level nicht gehalten (leichter Rückgang seit Open), abnehmendes Momentum, weiterhin überkauft - klar kein Einstieg."
     }
   ]
 }
