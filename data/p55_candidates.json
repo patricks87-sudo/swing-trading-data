@@ -1,22 +1,29 @@
 {
-  "generated_at_utc": "2026-09-02T15:16:16.000Z",
-  "run_date": "2026-09-02",
+  "generated_at_utc": "2026-09-03T15:16:14Z",
+  "run_date": "2026-09-03",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Institutional Hold Test nicht bestanden: Microsoft hält Support nur knapp bei stagnierendem OBV-Flow, Apple bleibt überkauft (RSI 72,6) mit abnehmendem Momentum. Kein Trade.",
+  "kurzbegruendung": "Institutional Hold Test negativ: NVIDIA-OBV von +275 Mio. auf -22 Mio. gedreht (Sektorfilter aktiv), Apple/ServiceNow bereits zu weit gelaufen für sauberen Einstieg. Kein Trade.",
   "kandidaten": [
     {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "sector": "Software/Cloud",
-      "status": "Teilweise",
-      "begruendung": "Kurs bei 497,575 USD (429,41 EUR) praktisch unverändert zum P5-Open-Niveau (497,415 USD) - Support wird gehalten, kein Abverkauf. Aber Abstand zur SMA20 (495,25) ist mit nur noch +0,47% hauchdünn, kein klar bestätigtes Breakout-Level. OBV-5T-Trend mit +11,41 Mio. gegenüber P5 (+11,55 Mio.) nahezu unverändert - institutioneller Flow stagniert, keine fortgesetzte Akkumulation zwischen 16:00-17:00 Uhr erkennbar, keine Second-Chance-Breakout-Bestätigung. RSI14 50,48 neutral. Relative Stärke leicht positiv (chg_5d +0,24% vs. NASDAQ -0,46%/S&P500 -0,10%), aber ohne Volumenbeschleunigung kein Kaufsignal. Rechnerisches CRV bleibt bei rund 2,1:1 weiterhin unter der Mindestschwelle. Institutional Hold Test: Level gehalten, aber keine Bestätigung durch anziehenden institutionellen Flow - kein Einstieg."
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Semiconductors/AI",
+      "status": "Nicht bestanden",
+      "begruendung": "Kurs 226,03 USD (195,06 EUR), leicht über P4-Niveau (224,41 USD). Institutional Hold Test klar nicht bestanden: OBV-5T-Trend ist von +275,42 Mio. (P4, stärkster Wert der Watchlist) auf -22,22 Mio. gedreht - deutliche Umkehr von Akkumulation zu Distribution trotz leicht steigendem Kurs, keine Fortsetzung der institutionellen Käufe. Strukturelles Ausschlusskriterium (SOX-Sektorfilter, Punkt 15A) bleibt aktiv und hat sich weiter verschärft: SOX-Proxy jetzt -4,95% unter SMA20 (P4: -4,69%), -7,75% unter SMA50, RSI14 nur noch 28,41, 5T-Performance -5,13% gegenüber NASDAQ -0,81% - deutliche Sektor-Underperformance. Relative Stärke von NVIDIA selbst ebenfalls schwach (chg_5d -0,86%, schlechter als NASDAQ und S&P500). Kein Second-Chance-Setup, keine Smart-Money-Bestätigung erkennbar."
     },
     {
       "ticker": "AAPL",
       "name": "Apple",
       "sector": "Technology",
-      "status": "Nicht bestanden",
-      "begruendung": "Kurs bei 324,55 USD (280,09 EUR) leicht unter dem P5-Open-Niveau (325,24 USD), kein neues Hoch zwischen 16:00-17:00 Uhr erkennbar. RSI14 mit 72,6 weiterhin über der 72er-Anti-Bulltrap-Schwelle (P5: 73,67) - Chase-Risiko unverändert bestehen geblieben. OBV-5T-Trend mit +81,84 Mio. gegenüber P5 (+82,33 Mio.) und P4 (+116,28 Mio.) weiter abgeschwächt - institutionelle Kaufdynamik lässt seit dem Open spürbar nach statt zuzunehmen, keine fortgesetzte Akkumulation. Trotz weiterhin positiver relativer Stärke (chg_5d +3,54% vs. NASDAQ -0,46%) fehlt die für ein Second-Chance-Setup nötige Bestätigung durch Volumenanstieg und neue Hochs. Institutional Hold Test nicht bestanden: Level nicht gehalten (leichter Rückgang seit Open), abnehmendes Momentum, weiterhin überkauft - klar kein Einstieg."
+      "status": "Teilweise",
+      "begruendung": "Kurs 329,80 USD (284,61 EUR), weiter gestiegen von 324,96 USD bei P4. OBV-5T-Trend bleibt positiv, aber deutlich abgeschwächt (+17,27 Mio. gegenüber +49,25 Mio. bei P4) - institutionelle Kaufdynamik lässt spürbar nach statt zuzunehmen. RSI14 von 73,31 auf 75,71 weiter ins überkaufte Terrain gelaufen, die Anti-Bulltrap-Schwelle von 72 wird damit noch klarer verletzt. Abstand SMA20 +5,41% (P4: +4,15%), Abstand SMA50 +4,94% - Erweiterung setzt sich fort, Chase-Risiko hoch. Relative Stärke bleibt intakt (chg_5d +4,84% vs. NASDAQ -0,81%/S&P500 -0,05%), aber ohne belastbare Volumenbestätigung der Rally seit dem Open (Datenlücke: Intraday-Volumenfenster nicht im Feed verfügbar) kein sauberer Second-Chance-Einstieg. Institutional Hold Test nur teilweise bestanden: Level gehalten und OBV weiterhin positiv, aber Überhitzung und abnehmendes Momentum sprechen gegen einen Neueinstieg."
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
+      "status": "Teilweise",
+      "begruendung": "Kurs 144,16 USD (124,41 EUR), weiter gestiegen von 136,72 USD bei P4 (+5,44%). Institutioneller Flow bleibt positiv (OBV-5T-Trend +23,81 Mio.), aber schwächer als bei P4 (+51,39 Mio.) - Akkumulation setzt sich fort, verliert aber an Kraft. Überdehnung gegenüber SMA50 hat sich von +18,94% auf +24,32% weiter verschärft, Abstand SMA20 von +5,67% auf +10,28% gestiegen - der Anti-Bulltrap-Filter greift damit inzwischen bei mehreren Kriterien. RSI14 von 58,02 auf 65,95 gestiegen, noch unter der 72er-Schwelle, aber klar Richtung überkauft. Relative Stärke weiterhin gut (chg_5d +4,14% vs. NASDAQ -0,81%). Trotz anhaltendem institutionellem Interesse kein Einstieg - die Rally ist bereits zu weit gelaufen, Pullback-Risiko deutlich erhöht. Institutional Hold Test nur teilweise bestanden."
     }
   ]
 }
