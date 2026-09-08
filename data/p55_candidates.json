@@ -1,36 +1,36 @@
 {
-  "generated_at_utc": "2026-09-07T15:14:42Z",
-  "run_date": "2026-09-07",
+  "generated_at_utc": "2026-09-08T17:08:00Z",
+  "run_date": "2026-09-08",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade: US-Börsen heute wegen Labor Day geschlossen, keine echten Intraday-/Eröffnungsdaten. Alle P4-Kandidaten weiterhin blockiert (Sektorfilter, kein Breakout oder Earnings-Sperre).",
+  "kurzbegruendung": "Kein Trade: NVIDIA-Sektorfilter erstmals erfüllt, Volumenbestätigung aber weiter nicht verifizierbar und Kurs seit P4 leicht rückläufig. AMD-OBV-Divergenz verschärft sich trotz Kurssprung. ORCL earnings-gesperrt. Kapitalerhalt hat Vorrang.",
   "kandidaten": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "Semiconductors/AI",
-      "status": "Neutral",
-      "begruendung": "Institutional Hold Test heute nicht valide durchführbar - Labor Day, US-Börsen geschlossen, keine echten Eröffnungskurs-/VWAP-/Breakout-Daten (Kurs = unveränderter Freitagsschluss 230,36 USD / 198,24 EUR). OBV-5T-Trend bleibt mit +441,68 Mio. mit großem Abstand die stärkste institutionelle Akkumulation der Watchlist, 0 von 4 Anti-Bulltrap-Kriterien erfüllt. Der strukturelle Sektor-Pflichtfilter (SOX-Proxy weiterhin -0,68%/-3,43% unter eigener SMA20/50) bleibt jedoch unverändert aktiv, zusätzlich fehlt weiterhin die Volumenbestätigung (letztes Volumen nur +4,7% über 20T-Ø, statt geforderten ≥40%). Kein Einstieg heute, Wiedervorlage am nächsten regulären Handelstag (Di., 08.09.2026), sobald SOX die eigene SMA20 zurückerobert bzw. ein Ausbruch mit Volumenbestätigung vorliegt."
+      "status": "Teilweise",
+      "begruendung": "Institutioneller Sektor-Pflichtfilter jetzt erstmals erfüllt: SOX-Proxy notiert +1,44% über eigener SMA20 (P4 noch -0,68%). NVIDIA bleibt mit Abstand stärkster OBV-Flow der Watchlist (5T-Trend +315,63 Mio.), wenn auch etwas schwächer als beim P4-Lauf (+441,68 Mio.) und beim P5-Lauf (+317,16 Mio.) - Akkumulation flacht intraday leicht ab, bleibt aber klar positiv. Kurs 227,28 USD (195,46 EUR) notiert weiterhin klar über SMA20 (+3,04%) und SMA50 (+7,58%), RSI14 55,34 neutral, aber der Kurs ist seit dem P4-Anker (230,36 USD) um -1,34% zurückgefallen statt ein neues Hoch zu bilden - kein bestätigter Second-Chance-Breakout. Die für den Institutional Hold Test geforderte Bestätigung über Eröffnungskurs/VWAP kann mangels dieser Datenpunkte im Feed nicht geprüft werden (bekannte Datenlücke), ebenso die geforderte Volumenbestätigung (last_volume-Feld bildet erkennbar nur einen kleinen Einzel-Print ab, nicht vergleichbar mit dem 20T-Ø von 123,17 Mio.). Bestes Institutional-Flow-Profil der Watchlist, aber ohne verifizierbare Bestätigung und mit leicht rückläufigem statt neuem Hoch reicht es nicht für ein Trade-Signal. Wiedervorlage P1/nächster Handelstag."
     },
     {
       "ticker": "AMD",
       "name": "AMD (Advanced Micro Devices)",
       "sector": "Semiconductors/AI",
       "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test heute nicht valide durchführbar (Feiertag, keine Intraday-Daten). Strukturell weiterhin vom Sektor-Pflichtfilter blockiert (SOX-Proxy unter eigener SMA20/50), zusätzlich unveränderte leicht bearishe OBV-Divergenz (5T-Trend -10,90 Mio. bei gleichzeitig steigendem Kurs +2,58% 5T) und kein bestätigtes Breakout-Level (nur +0,50% über SMA20, -4,35% unter SMA50). Kein Setup."
+      "begruendung": "Kurs springt seit P4 deutlich von 477,57 auf 505,26 USD (+5,80%) und erobert damit sowohl SMA20 (+5,93%) als auch erstmals SMA50 (+1,27%) zurück, RSI14 steigt auf 56,97, 5-Tage-Performance jetzt +7,34%. ABER: Der OBV-5-Tage-Trend verschärft sich von -10,90 Mio. (P4) über -23,32 Mio. (P5) auf jetzt -23,01 Mio. weiterhin klar negativ - die Rally wird nicht von institutioneller Akkumulation getragen, sondern zeigt eine sich vertiefende Preis-Volumen-Divergenz (klassisches Warnsignal für eine nicht-institutionell getragene, retail-/short-covering-getriebene Bewegung). Der Sektorfilter ist zwar jetzt erfüllt (SOX über SMA20), aber der Smart-Money-Test (Kriterium 3) scheitert eindeutig. Kein Setup trotz Kurssprung."
     },
     {
       "ticker": "UNH",
       "name": "UnitedHealth Group",
       "sector": "Healthcare",
       "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test heute nicht valide durchführbar (Feiertag, keine Intraday-Daten). Kurs verharrt nahe SMA20 (+0,06%), aber weiterhin -3,55% unter SMA50 - es existiert kein bestätigtes Breakout-/VWAP-Level, das gehalten werden könnte. OBV-5T-Trend nur leicht positiv (+1,16 Mio.). Bleibt reiner Beobachtungskandidat, aktuell kein valides Setup."
+      "begruendung": "Kurs ist seit dem P4-Anker (397,14 USD) leicht auf 395,62 USD zurückgefallen (-0,38%) und damit knapp unter die SMA20 gerutscht (-0,16%, P4 noch +0,06%) - kein Halten über einem Ausbruchsniveau. Weiterhin -3,76% unter der SMA50. OBV-5T-Trend zwar mit +6,87 Mio. leicht positiv und gegenüber P4 (+1,16 Mio.) sogar verbessert, aber ohne bestätigten Breakout bleibt das ein reines Beobachtungssignal, kein Institutional-Hold-Setup. Defensiver Wiedervorlage-Kandidat, insbesondere falls Risk-Off-Modus greift."
     },
     {
       "ticker": "ORCL",
       "name": "Oracle",
       "sector": "Software/Cloud",
-      "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test entfällt - Aktie ist durch den Qualitätsfilter (bestätigter Earnings-Termin 10.09.2026, innerhalb der nächsten Handelstage) unabhängig von der technischen Lage für Neu-/Nachkäufe gesperrt, obwohl technisch weiterhin der stärkste Titel des Sektors (OBV-5T +31,88 Mio., klar über SMA20/50). Bestandsposition (10 Stück) bleibt bis zur Zahlenveröffentlichung reines Halten, kein Nachkauf."
+      "status": "Neutral",
+      "begruendung": "Technisch mit Abstand stärkster Kandidat: Kurs 163,77 USD (140,84 EUR), +3,14% seit P4-Anker, OBV-5T-Trend beschleunigt weiter auf +48,86 Mio. (P4: +31,88 Mio.), 5-Tage-Performance +9,82%. Allerdings triggern jetzt erstmals 2 von 4 Anti-Bulltrap-Kriterien (Abstand SMA20 +9,95% > 8%; Abstand SMA50 +16,86% > 15%), RSI14 bei 69,52 nähert sich der Überkauft-Schwelle (72) - zunehmende Überdehnung trotz starkem institutionellem Fluss. Unabhängig von der Technik bleibt die Aktie durch den bestätigten Earnings-Termin (10.09.2026, innerhalb der nächsten Handelstage) für jeden Neu-/Nachkauf gesperrt. Bestandsposition (10 Stück) bleibt bis zur Zahlenveröffentlichung reines Halten - kein P5.5-Trade-Kandidat, relevant für P1-Portfoliobewertung."
     }
   ]
 }
