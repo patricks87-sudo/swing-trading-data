@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-08T15:45:44Z",
+  "generated_at_utc": "2026-09-09T15:46:51Z",
   "kandidaten": [
     {
       "ticker": "LMT",
@@ -16,7 +16,7 @@
       "handelstage_in_liste": 12,
       "status": "ausgeschieden (zeitlimit)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Nach 12 Handelstagen weiterhin ohne Trade und mit -7,37% die schwächste Performance der aktiven Liste (nahe der -8%-Invalidierungsschwelle), RSI14 33,82 weiterhin überverkauft, Kurs bleibt unter SMA20. Mit der Neuaufnahme von NVIDIA (P4-Score hoch) wird die Obergrenze von 10 aktiven Einträgen überschritten - LMT rotiert als Eintrag mit der schwächsten Performance seit Aufnahme aus der aktiven Liste."
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert (Rotation bereits am 08.09. erfolgt)."
     },
     {
       "ticker": "MA",
@@ -27,13 +27,13 @@
       "aufnahme_score": "hoch",
       "aufnahme_kurs_usd": 574.31,
       "aufnahme_kurs_eur": 496.20,
-      "aktueller_kurs_usd": 567.99,
-      "aktueller_kurs_eur": 488.47,
-      "performance_pct": -1.10,
-      "handelstage_in_liste": 14,
-      "status": "aktiv",
+      "aktueller_kurs_usd": 566.81,
+      "aktueller_kurs_eur": 487.46,
+      "performance_pct": -1.31,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "OBV-5T-Trend bleibt negativ (-5,06 Mio.), RSI14 46,04 unauffällig, Kurs weiterhin unter SMA20 (-2,06%), aber über SMA50 (+1,59%). Performance seit Aufnahme -1,10% (leicht rückläufig ggü. Vortag). Kein Reversal-Signal, Verkaufssignal bleibt bestehen."
+      "letzte_einschaetzung": "15 Handelstage in der Liste erreicht, ohne dass daraus ein tatsächlicher Trade wurde (Zeitlimit) - OBV-5T-Trend weiterhin negativ (-4,45 Mio.), RSI14 45,70 unauffällig, Kurs unter SMA20 (-2,33%), aber über SMA50 (+1,16%). Performance seit Aufnahme -1,31%. Kein Reversal-Signal, rotiert planmäßig aus der aktiven Liste."
     },
     {
       "ticker": "AAPL",
@@ -44,13 +44,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 311.32,
       "aufnahme_kurs_eur": 266.49,
-      "aktueller_kurs_usd": 316.23,
-      "aktueller_kurs_eur": 271.96,
-      "performance_pct": 1.58,
-      "handelstage_in_liste": 12,
+      "aktueller_kurs_usd": 313.42,
+      "aktueller_kurs_eur": 269.54,
+      "performance_pct": 0.67,
+      "handelstage_in_liste": 13,
       "status": "aktiv",
-      "empfehlung": "Halten",
-      "letzte_einschaetzung": "OBV-5T-Trend dreht wieder leicht positiv (+16,60 Mio., zuvor -24,18 Mio.) - erste Andeutung einer Trendwende im institutionellen Fluss, RSI14 55,96 unauffällig, Kurs +0,86% über SMA20. Performance seit Aufnahme +1,58%. Noch kein bestätigter Breakout, aber die verbesserte Flow-Lage rechtfertigt eine Hochstufung von Verkauf auf Halten zur weiteren Beobachtung."
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Die gestrige Verbesserung des OBV-5T-Trends hat sich nicht bestätigt - heute wieder klar negativ (-71,86 Mio., zuvor +16,60 Mio.), RSI14 fällt auf 46,45, Kurs rutscht zurück unter SMA20 (-0,17%, zuvor +0,86%). Performance seit Aufnahme nur noch +0,67%. Rückstufung von Halten auf Verkauf - institutionelle Distribution setzt sich fort, keine bestätigte Trendwende."
     },
     {
       "ticker": "V",
@@ -61,13 +61,13 @@
       "aufnahme_score": "hoch",
       "aufnahme_kurs_usd": 371.04,
       "aufnahme_kurs_eur": 317.57,
-      "aktueller_kurs_usd": 367.91,
-      "aktueller_kurs_eur": 316.30,
-      "performance_pct": -0.84,
-      "handelstage_in_liste": 11,
+      "aktueller_kurs_usd": 367.19,
+      "aktueller_kurs_eur": 315.78,
+      "performance_pct": -1.04,
+      "handelstage_in_liste": 12,
       "status": "aktiv",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "OBV-5T-Trend bleibt mit -1,13 Mio. negativ, wenn auch deutlich weniger stark als zuvor (-7,78 Mio.) - Distributionsdruck lässt leicht nach, aber noch kein positives Signal. RSI14 53,51 unauffällig. Performance seit Aufnahme -0,84%. Verkaufssignal bleibt bestehen."
+      "letzte_einschaetzung": "OBV-5T-Trend nähert sich mit -0,17 Mio. weiter der Nulllinie (zuvor -1,13 Mio.) - Distributionsdruck praktisch abgebaut, aber noch kein positives Signal. RSI14 51,60 unauffällig. Performance seit Aufnahme -1,04%. Verkaufssignal bleibt bestehen, Beobachtung auf mögliches Reversal."
     },
     {
       "ticker": "NOW",
@@ -84,7 +84,7 @@
       "handelstage_in_liste": 6,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "2 von 11 Anti-Bulltrap-Kriterien erfüllt (Abstand SMA20 +15,80%, SMA50 +30,14% - beide über den Schwellenwerten) trotz jetzt wieder positivem OBV-5T-Trend (+31,46 Mio.) - Überdehnungskriterium der Invalidierungsregel ausgelöst, Performance seit Aufnahme +14,58%. Kandidat wird als überdehnt aus der aktiven Liste genommen, kein Nachjagen des Kurses."
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert."
     },
     {
       "ticker": "MSFT",
@@ -95,13 +95,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 483.24,
       "aufnahme_kurs_eur": 413.65,
-      "aktueller_kurs_usd": 493.16,
-      "aktueller_kurs_eur": 424.12,
-      "performance_pct": 2.05,
-      "handelstage_in_liste": 11,
+      "aktueller_kurs_usd": 492.48,
+      "aktueller_kurs_eur": 423.53,
+      "performance_pct": 1.91,
+      "handelstage_in_liste": 12,
       "status": "aktiv",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "OBV-5T-Trend bleibt mit -30,54 Mio. klar negativ, wenn auch etwas weniger stark als zuvor (-57,54 Mio.) - institutionelle Distribution hält an, lässt aber leicht nach. RSI14 56,77 unauffällig. Performance seit Aufnahme +2,05%. Verkaufssignal bleibt bestehen."
+      "letzte_einschaetzung": "OBV-5T-Trend bleibt mit -28,11 Mio. klar negativ, kaum verändert zum Vortag - institutionelle Distribution hält unverändert an. RSI14 54,91 unauffällig. Performance seit Aufnahme +1,91%. Verkaufssignal bleibt bestehen."
     },
     {
       "ticker": "HOOD",
@@ -118,7 +118,7 @@
       "handelstage_in_liste": 10,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "3 Anti-Bulltrap-Kriterien gleichzeitig erfüllt (Abstand SMA20 +20,33% > 8%, Abstand SMA50 +21,40% > 15%, 5-Tage-Kursanstieg +19,36% > 15%) - klare Überdehnung, Invalidierungskriterium der Kandidaten-Liste ausgelöst. OBV-5T-Trend dreht zwar kräftig positiv (+61,57 Mio.) - die Rally wird von institutionellem Kapital mitgetragen -, das ändert aber nichts an der technischen Überdehnung. Performance seit Aufnahme +15,09%. Als überdehnt aus der aktiven Liste genommen, kein Nachjagen des Kurses (bestehende Depotposition separat in data/portfolio_bewertung.json bewertet: heute erstmals alle 4 Anti-Bulltrap-Flags gleichzeitig ausgelöst, Teilverkauf empfohlen)."
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert (bestehende Depotposition separat in data/portfolio_bewertung.json bewertet: Teilverkauf weiterhin empfohlen)."
     },
     {
       "ticker": "CRM",
@@ -135,7 +135,7 @@
       "handelstage_in_liste": 3,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Nach den Quartalszahlen vom 26.08. (u.a. KI-Wachstum und Bewertungsgewinn aus der Anthropic-Beteiligung) mit RSI14 79,80 und vier gleichzeitigen Anti-Bulltrap-Flags stark überkauft - als invalidiert (Blow-off-Überdehnung) aus der aktiven Liste genommen, kein Nachjagen des Kurses."
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert."
     },
     {
       "ticker": "CAT",
@@ -152,7 +152,7 @@
       "handelstage_in_liste": 6,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Kurs war am 24.08. mit -10,41% erstmals klar unter die SMA50 gefallen (Invalidierungskriterium ausgelöst) - These endgültig widerlegt. OBV-5T-Trend weiterhin negativ. Rotation aus der aktiven Liste bleibt bestehen."
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert."
     },
     {
       "ticker": "ORCL",
@@ -169,7 +169,7 @@
       "handelstage_in_liste": 8,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Erstmals 2 von 4 Anti-Bulltrap-Kriterien gleichzeitig ausgelöst (Abstand SMA20 +10,03% > 8%, Abstand SMA50 +16,94% > 15%) - Invalidierungskriterium der Kandidaten-Liste erfüllt, Performance seit Aufnahme +10,72%. Als Fresh-Entry-Kandidat aus der aktiven Liste genommen, kein Nachjagen des Kurses. Zusätzlich bis zum Earnings-Termin am 10.09.2026 ohnehin für jeden Neu-/Nachkauf gesperrt. Die bestehende Depotposition (10 Stück) wird davon unberührt separat in data/portfolio_bewertung.json bewertet: Halten, kein Nachkauf vor den Zahlen."
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert. Die bestehende Depotposition (10 Stück) wird davon unberührt separat in data/portfolio_bewertung.json bewertet: Halten, kein Nachkauf vor den Zahlen am 10.09.2026."
     },
     {
       "ticker": "AMD",
@@ -186,7 +186,7 @@
       "handelstage_in_liste": 3,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Kurs ist mit -7,53% Abstand klar unter die SMA50 gefallen (Invalidierungskriterium ausgelöst), OBV-5T-Trend bleibt mit +1,70 Mio. praktisch bei null - institutionelle Akkumulation weiterhin zum Erliegen gekommen. Performance seit Aufnahme -1,73%. Aus der aktiven Liste genommen, These widerlegt."
+      "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert. Siehe separater Neueintrag vom 09.09.2026 unten (neues P4-Signal mit Score hoch)."
     },
     {
       "ticker": "UNH",
@@ -203,7 +203,7 @@
       "handelstage_in_liste": 3,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Kurs bleibt unter SMA50 (-5,21%, Invalidierungskriterium ausgelöst), OBV-5T-Trend weiterhin negativ (-5,25 Mio.) - anhaltende institutionelle Distribution. Performance seit Aufnahme -1,81%. Aus der aktiven Liste genommen."
+      "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert. Siehe separater Neueintrag vom 09.09.2026 unten (neues P4-Signal mit Score mittel)."
     },
     {
       "ticker": "NVDA",
@@ -214,13 +214,47 @@
       "aufnahme_score": "hoch",
       "aufnahme_kurs_usd": 223.59,
       "aufnahme_kurs_eur": 191.84,
-      "aktueller_kurs_usd": 226.58,
-      "aktueller_kurs_eur": 194.86,
-      "performance_pct": 1.34,
-      "handelstage_in_liste": 7,
+      "aktueller_kurs_usd": 224.34,
+      "aktueller_kurs_eur": 192.93,
+      "performance_pct": 0.34,
+      "handelstage_in_liste": 8,
       "status": "aktiv",
       "empfehlung": "Kauf",
-      "letzte_einschaetzung": "Institutioneller Flow bleibt mit Abstand der stärkste der gesamten Watchlist (OBV-5T-Trend +315,32 Mio.), 0 Anti-Bulltrap-Flags, RSI14 54,80 gesund, Kurs weiterhin klar über SMA20 (+2,74%)/SMA50 (+7,26%). Der zuvor blockierende Sektor-Pflichtfilter (SOX-Proxy) ist seit dem P5.5-Lauf erstmals erfüllt (+1,69% über eigener SMA20). Externe Recherche bestätigt zusätzlich stark bullishe Optionspositionierung. These vollständig intakt, ein Einstieg wäre nach den P4-Kriterien heute gerechtfertigt - Hochstufung von Halten auf Kauf. Tatsächliche Umsetzung im P1-Lauf dennoch ausgesetzt: kein bestätigter neuer Hoch-/Volumennachweis, zusätzlich ist das Depot mit 2 offenen Positionen bereits am Limit."
+      "letzte_einschaetzung": "Institutioneller Flow bleibt mit Abstand der stärkste der gesamten Watchlist (OBV-5T-Trend +306,43 Mio., praktisch auf dem Niveau der letzten Tage stabilisiert), 0 Anti-Bulltrap-Flags, RSI14 54,75 gesund, Sektor-Pflichtfilter (SOX-Proxy) weiterhin erfüllt (+1,41% über SMA20). These vollständig intakt, ein Einstieg wäre nach den P4-Kriterien heute gerechtfertigt. Tatsächliche Umsetzung im P1-Lauf dennoch ausgesetzt: weiterhin kein bestätigter neuer Hoch-/Volumennachweis, zusätzlich ist das Depot mit 2 offenen Positionen bereits am Limit."
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD (Advanced Micro Devices)",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-09-09",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "hoch",
+      "aufnahme_kurs_usd": 505.74,
+      "aufnahme_kurs_eur": 434.94,
+      "aktueller_kurs_usd": 520.10,
+      "aktueller_kurs_eur": 447.29,
+      "performance_pct": 2.84,
+      "handelstage_in_liste": 1,
+      "status": "aktiv",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Neuaufnahme: P4-Score heute hoch (0 von 4 Anti-Bulltrap-Kriterien nach P4-Definition), aber der P5.5-Institutional-Hold-Test zeigte eine klare Preis-Volumen-Divergenz (Kurssprung +2,96% seit P4 bei nur +21,16 Mio. OBV) und den Bruch der 8%-Anti-Bulltrap-Schwelle zur SMA20 (aktuell +8,51%) - erhöhtes Bulltrap-Risiko bleibt auch zum P1-Zeitpunkt bestehen, RSI14 68,32 erhöht. Trotz formal hohem P4-Score technisch kein sauberer Einstiegskandidat - Verkauf/kein Einstieg empfohlen, Wiedervorlage erst nach Abkühlung."
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group",
+      "sector": "Healthcare",
+      "aufnahmedatum": "2026-09-09",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 400.84,
+      "aufnahme_kurs_eur": 344.72,
+      "aktueller_kurs_usd": 390.59,
+      "aktueller_kurs_eur": 335.91,
+      "performance_pct": -2.56,
+      "handelstage_in_liste": 1,
+      "status": "aktiv",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Neuaufnahme: P4-Score heute mittel (erste Stabilisierungsansätze knapp über SMA20 zum Analysezeitpunkt), aber der P5.5-Institutional-Hold-Test wurde klar nicht bestanden (Kurs brach unter SMA20 und tiefer unter SMA50 ein, -3,07% seit P4-Anker). Bis zum P1-Zeitpunkt nur leichte Erholung, weiterhin unter SMA20 (-1,35%) und SMA50 (-4,88%) - keine bestätigte Trendwende, Verkauf/kein Einstieg empfohlen."
     }
   ]
 }
