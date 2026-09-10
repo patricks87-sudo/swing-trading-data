@@ -1,36 +1,36 @@
 {
-  "generated_at_utc": "2026-09-09T15:16:44Z",
-  "run_date": "2026-09-09",
+  "generated_at_utc": "2026-09-10T15:16:32Z",
+  "run_date": "2026-09-10",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade: NVIDIA stärkster OBV-Flow, aber kein neues Hoch. AMD reißt die 8%-Bulltrap-Schwelle. UnitedHealth Group bricht ein, Oracle bleibt earnings-gesperrt.",
+  "kurzbegruendung": "Kein Trade: NVIDIA und UnitedHealth Group fallen im Institutional Hold Test durch (Kursbruch/OBV dreht negativ), AMD ohne Trigger, Oracle bleibt earnings-gesperrt.",
   "kandidaten": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "Semiconductors/AI",
-      "status": "Teilweise",
-      "begruendung": "Institutioneller OBV-5T-Flow bleibt mit +306,64 Mio. mit großem Abstand der stärkste der gesamten Watchlist (P4: +197,99 Mio. -> P5: +307,66 Mio. -> P5.5: +306,64 Mio. - Akkumulation hat sich seit dem Open auf sehr hohem Niveau stabilisiert, keine weitere Beschleunigung, aber auch kein Abbau). Sektor-Pflichtfilter weiterhin erfüllt: SOX-Proxy +1,63% über eigener SMA20, 5T +6,3%. ABER: Kurs 224,53 USD (193,10 EUR) ist seit dem P4-Anker (225,73 USD) leicht um -0,53% zurückgefallen statt ein neues Hoch zu bilden (P5-Anker 225,68 USD -> nochmals -0,51%) - kein bestätigter Second-Chance-Breakout. Abstand zu SMA20 (+1,67%) und SMA50 (+6,0%) nimmt seit P4 kontinuierlich ab, RSI14 mit 54,9 neutral. Volumenbestätigung und Eröffnungskurs-/VWAP-Test mangels OHLC-/Intraday-Volumendaten weiterhin nicht verifizierbar (bekannte Datenlücke). Bestes Institutional-Flow-Profil der Watchlist, aber ohne neue Hochs und ohne verifizierbare Volumenbestätigung reicht es nicht für ein Trade-Signal. Wiedervorlage P1/nächster Handelstag."
+      "status": "Nicht bestanden",
+      "begruendung": "Institutional Hold Test NICHT bestanden: Kurs fällt seit dem P4-Anker (223,67 USD / 192,36 EUR) auf 218,52 USD (187,93 EUR, -2,30%) und rutscht klar unter SMA20 (-0,91%, P4: +1,30%) - statt eines bestätigten Ausbruchs ein klarer Bruch der Haltezone. 5-Tage-Performance dreht von +2,87% (P4) auf -2,62% (P5.5). OBV-5T-Trend zwar weiterhin positiv (+63,04 Mio.), aber gegenüber P4 (+221,44 Mio.) massiv eingebrochen (-71%) und seit dem US-Open praktisch stagnierend (P5: +64,05 Mio. -> P5.5: +63,04 Mio.) - die institutionelle Akkumulationsdynamik aus P4 hat sich kontinuierlich abgeschwächt. Bester Flow-Wert der Watchlist bleibt NVIDIA nominell, aber ohne Kursbestätigung wertlos. Sektor SOX-Proxy nur noch bei -0,01% zur SMA20 (P4: +1,67%) - auch der Sektorvorteil ist verpufft. Kein Second-Chance-Setup, Kandidat für heute klar verworfen."
     },
     {
       "ticker": "AMD",
       "name": "AMD (Advanced Micro Devices)",
       "sector": "Semiconductors/AI",
-      "status": "Teilweise",
-      "begruendung": "Kurs springt seit dem P4-Anker (505,74 USD) deutlich auf 520,71 USD (447,81 EUR, +2,96%, neues Tageshoch) und übertrifft damit auch den P5-Stand (514,07 USD) weiter. 5-Tage-Performance jetzt +13,29% (P4: +7,44%). ABER: Abstand zur SMA20 überschreitet erstmals die 8%-Anti-Bulltrap-Schwelle (P4: +6,02% -> P5: +7,32% -> P5.5: +8,63%), RSI14 klettert auf 68,45 (P4: 57,11) und nähert sich der Überkauft-Schwelle von 72 - die Überdehnung hat sich seit dem Open deutlich beschleunigt. OBV-5T-Trend bleibt zwar positiv (+21,16 Mio., P5: +20,87 Mio.), aber die Zunahme ist gegenüber dem kräftigen Kurssprung verschwindend gering - der starke Preisanstieg wird nicht proportional von institutioneller Akkumulation getragen (Preis-Volumen-Divergenz, ähnliches Muster wie am Vortag, als AMD deswegen durchfiel). Sektorfilter erfüllt (SOX über SMA20), Smart-Money-Bestätigung (Kriterium 3) aber nur schwach. Klar erhöhtes Bulltrap-Risiko trotz starkem Kurs - kein Trade-Setup heute, Wiedervorlage nur bei Abkühlung/Konsolidierung."
+      "status": "Neutral",
+      "begruendung": "Kein aktiver Trigger zu testen (P4 bereits ohne Kaufsignal wegen Überdehnung). Kurs kommt seit P4 leicht zurück: 521,10 USD -> 509,31 USD (438,00 EUR, -2,26%), 5-Tage-Performance von +13,38% (P4) auf +11,43% abgeschwächt. Abstand zur SMA20 verringert sich von +8,71% (P4) auf +5,96% - beginnender Abbau der Überdehnung, Kurs bleibt aber weiterhin klar über der ursprünglichen Pullback-Zielzone (479-490 USD / 412-421 EUR). OBV-5T-Trend legt von +43,14 Mio. (P4) auf +54,92 Mio. zu - moderate fortgesetzte Akkumulation trotz Kursrückgang, keine akute Distribution erkennbar. Weiterhin kein Einstiegslevel, Wiedervorlage bei echtem Pullback in die SMA20-Zone."
     },
     {
       "ticker": "UNH",
       "name": "UnitedHealth Group",
       "sector": "Healthcare",
       "status": "Nicht bestanden",
-      "begruendung": "Kurs fällt seit dem P4-Anker (400,84 USD) deutlich auf 388,52 USD (334,13 EUR, -3,07%) und rutscht klar unter SMA20 (-1,85%, P4 noch +1,09%) sowie tiefer unter SMA50 (-5,37%, P4: -2,52%) - eindeutiger Bruch statt Halten über einem Ausbruchsniveau. 5-Tage-Performance dreht von +2,94% (P4) auf -1,96% (P5.5). OBV-5T-Trend zwar noch positiv (+10,00 Mio.), aber ohne jede Preisunterstützung. Institutional Hold Test klar nicht bestanden - Kandidat für heute verworfen, bleibt defensiver Beobachtungskandidat für Risk-Off-Szenarien."
+      "begruendung": "Institutional Hold Test NICHT bestanden: Die zarte Bodenbildungs-These aus P4 (stille Akkumulation trotz leicht rückläufigem Kurs) bestätigt sich nicht. Kurs 390,57 USD (335,89 EUR), seit P4 (393,06 USD) um -0,63% weiter gefallen, bleibt klar unter SMA20 (-1,20%, P4: -0,76%) und SMA50 (-4,78%, P4: -4,29%). Entscheidend: OBV-5T-Trend dreht von +2,50 Mio. (P4, das eigentliche Kaufargument) auf -0,83 Mio. (P5.5) - die institutionelle Akkumulation, die den P4-Kandidatenstatus begründet hat, ist nicht mehr vorhanden. 5-Tage-Performance verschlechtert sich von -0,82% auf -2,27%. Kein Reversal-Signal, Kandidat verworfen, bleibt defensiver Beobachtungskandidat für Risk-Off-Szenarien."
     },
     {
       "ticker": "ORCL",
       "name": "Oracle",
       "sector": "Software/Cloud",
       "status": "Neutral",
-      "begruendung": "Technisch weiterhin mit Abstand stärkster institutioneller Flow der Watchlist nach NVIDIA: OBV-5T-Trend bleibt seit P4 auf sehr hohem Niveau (+85,58 Mio. -> +110,84 Mio.), Kurs hält sich mit 161,42 USD (138,82 EUR) nahezu auf dem P4-Niveau (162,52 USD, -0,68%). ABER: Abstand SMA20 (+7,84%) und SMA50 (+14,98%) bleiben nahe bzw. an den 8%/15%-Anti-Bulltrap-Schwellen, RSI14 66,75 weiterhin erhöht - Überdehnung bleibt hoch. Unverändert entscheidend: Quartalszahlen morgen (10.09.2026) nach US-Börsenschluss sperren jeden Neu-/Nachkauf gemäß Qualitätsfilter. Bestandsposition (10 Stück) bleibt bis zur Zahlenveröffentlichung reines Halten - kein P5.5-Trade-Kandidat, relevant für P1-Portfoliobewertung."
+      "begruendung": "Kein P5.5-Kandidat im engeren Sinn (P4-Score 'niedrig', Bestandsposition), aber institutionell weiterhin auffällig: OBV-5T-Trend bleibt mit +61,53 Mio. der zweitstärkste Flow-Wert der Watchlist nach NVIDIA. Kurs 158,62 USD (136,41 EUR) leicht rückläufig ggü. P4 (161,63 USD, -1,86%), 5-Tage-Performance bleibt mit +8,83% stark. Entscheidend bleibt der Quartalsbericht (Q1 FY2027) heute nach US-Börsenschluss - der Qualitätsfilter (keine Earnings in 5 Handelstagen) sperrt jeden Neu-/Nachkauf weiterhin zwingend. Bestandsposition (10 Stück, Kaufkurs 162,24 USD) bleibt bis zur Zahlenveröffentlichung reines Halten, relevant für den morgigen P1-Lauf."
     }
   ]
 }
