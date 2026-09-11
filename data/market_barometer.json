@@ -1,31 +1,31 @@
 {
-  "generated_at_utc": "2026-09-11T13:45:00Z",
+  "generated_at_utc": "2026-09-11T15:22:00Z",
   "status": "NEUTRAL",
-  "begruendung": "P5-Lauf 11.09.2026, Analysefenster ca. 15:35-15:45 MESZ (13:35-13:45 UTC), Datenstand p5_latest.json 13:35:51 UTC, EUR/USD 0,861. MARKTREGIME ZUM US-OPEN (Punkt 1): NASDAQ-Proxy 715,75 USD (616,26 EUR) liegt praktisch exakt auf der eigenen SMA20 (+0,01%) und knapp über SMA50 (+0,75%), RSI14 51,79 neutral, 5T -0,27%, OBV-5T-Trend jedoch negativ (-53,02 Mio.) - leichte Distribution trotz stabilem Kurs. S&P500-Proxy 765,775 USD (659,33 EUR) hauchdünn unter SMA20 (-0,15%), aber klar ÜBER SMA50 (+0,94%) - die gestrige 50-DMA-Warnung ist damit entschärft. RSI14 50,05 neutral, 5T -0,96%, OBV-5T-Trend deutlich negativ (-154,25 Mio.). Russell2000-Proxy bleibt die klare Schwachstelle: 291,23 USD (250,75 EUR), -1,85%/-1,72% unter SMA20/50, RSI14 nur 35,90, OBV-5T -49,44 Mio. - Marktbreite weiterhin angeschlagen. VIX-Proxy 17,43 (5T +2,83%), damit UNTER der gestrigen P4-Ablesung (18,16) und klar unter der Risk-Off-Schwelle von 25 - der CPI-Termin wurde ohne Schock verarbeitet. SOX-Proxy 523,70 USD (450,91 EUR), +0,62% über SMA20, 5T +4,28% weiterhin klar stärker als NASDAQ (-0,27%) und mit positivem OBV-5T-Trend (+18,03 Mio.) - Halbleiter bleiben die relative Stärke des Tages. Datenlücke: separate Volumendaten für Eröffnung/erste 15/30 Minuten sowie NYSE A/D-Linie/-Ratio strukturell nicht im Feed enthalten; das Feld 'last_volume' bildet erkennbar nur eine kleine Momentaufnahme ab und ist nicht mit dem 20-Tage-Volumendurchschnitt vergleichbar - institutioneller Flow zum Open damit nicht belastbar quantifizierbar, Wert nicht verfügbar. EXTERNE RECHERCHE (WebSearch): Der August-CPI-Bericht wurde heute 8:30 ET veröffentlicht - Gesamtrate wie erwartet (+0,4% MoM/+3,4% YoY), Kernrate mit +0,3% MoM etwas heißer als die erwarteten +0,2% (YoY-Kernrate +2,4% im Rahmen). Die Fed-Zinserhöhungswahrscheinlichkeit für die nächste Sitzung bleibt laut Marktkommentaren bei rund 70%. Ölpreise weiterhin rückläufig (WTI -3,35%, Brent -3,61%), geopolitisches Risiko (US-Iran-Spannungen, neue Sanktionen gegen eine 'große Bank') bleibt bestehen. Nach vier Verlusttagen in Folge zeigen sich die Futures leicht erholt. RISIKOSTEUERUNG (Punkt 2): Neutral-Regime erlaubt nur A+ Setups; die Zusatzwarnung (VIX>25 oder S&P500 unter 50-DMA) greift heute NICHT (VIX 17,43, S&P500 klar über SMA50). Dennoch bleibt die Marktbreite (Russell 2000) das Sorgenkind. KANDIDATENPRÜFUNG (Punkt 3-7, nur P4-Kandidaten mit Score hoch/mittel - siehe data/p4_candidates.json): AMD (434,96 EUR/505,175 USD) zeigt weiterhin das stärkste Kurs- und OBV-Momentum der Watchlist (OBV-5T jetzt +54,06 Mio., 5T +10,75%, RS klar positiv vs. S&P500/NASDAQ/Sektor), der Kurs hat sich seit dem P4-Lauf kaum verändert (503,60 USD zu Mittag, 505,175 USD zum Open) - kein sichtbarer Breakout-Schub zur Eröffnung, die bereits im P4-Lauf fehlende Volumenbestätigung ist mangels belastbarer Open-Volumendaten weiterhin NICHT nachweisbar. Kein A+ Setup, da institutioneller Flow zum Open nicht bestätigbar ist. Palo Alto Networks (290,51 EUR/337,41 USD) notiert weiterhin klar unter SMA20 (-4,58%) und SMA50 (-3,51%) - kein Breakout-Level erreicht oder gehalten, die Akkumulationsthese (OBV-5T weiterhin positiv, aber mit +12,01 Mio. gegenüber +18,92 Mio. beim P4-Lauf etwas abgeschwächt) bleibt unbestätigt. Beide Kandidaten damit ohne bestätigten institutionellen Kaufimpuls zur Eröffnung - kein A+ oder A Setup, Einstufung 'Kein Trade: fehlende Bestätigung' gemäß Punkt 5. Die übrigen P4-Titel des Tages (NVIDIA, Caterpillar, Oracle, Robinhood) waren bereits im P4-Lauf mit Score 'niedrig' explizit kein Setup bzw. reine Bestandsdepot-Fälle und werden im P5-Schritt konsequent nicht erneut geprüft. SEKTORROTATION (Details siehe sektor_rotation unten, Basis: Watchlist-Daten aus p5_latest.json): Halbleiter/KI weiterhin mit relativer Stärke (SOX vs. NASDAQ), aber uneinheitlich auf Einzeltitelebene; Software/Cloud und die meisten übrigen Sektoren in fortgesetzter institutioneller Distribution. QUALITÄTSFILTER / DATENLÜCKEN (Punkt 7, 15): Lang & Schwarz-Spread/Liquiditätscheck nicht im Feed abbildbar, aber angesichts fehlender Trade-Freigabe ohnehin nicht entscheidungsrelevant. Options Flow, Earnings-Kalender, Insiderverkäufe, Analystenrevisionen strukturell nicht im Feed enthalten - Datenbasis unvollständig, Werte nicht verfügbar. FINALE ENTSCHEIDUNG (Punkt 11): Neutral-Regime verlangt A+ Setups - weder AMD noch Palo Alto Networks erfüllen die institutionelle Flow-Bestätigung zum US-Open. Gemäß Projektgrundsatz 'Kapitalerhalt vor Renditemaximierung, im Zweifel keine Position eröffnen': Kein Trade. GESAMTEINSCHÄTZUNG: NEUTRAL, CPI-Termin ohne Schock verarbeitet (VIX sogar leicht rückläufig ggü. gestern), aber weiterhin schwache Marktbreite (Russell 2000) und keine zum Open bestätigten institutionellen Kaufimpulse bei den P4-Kandidaten. Kein Trade. Kapitalerhalt hat Vorrang.",
-  "kurzbegruendung": "NEUTRAL: CPI ohne Schock, VIX 17,4 unter Vortag, S&P500 über SMA50. AMD/Palo Alto Networks ohne Open-Bestätigung - Kein Trade, Kapitalerhalt hat Vorrang.",
+  "begruendung": "P5.5-Lauf 11.09.2026, Analysefenster ca. 17:05-17:15 MESZ (15:05-15:15 UTC), Datenstand p55_latest.json 15:07:40 UTC, EUR/USD 0,861 (90 Min. nach US-Open). MARKTREGIME-UPDATE (Punkt 1): NASDAQ-Proxy 715,90 USD (616,39 EUR), gegenüber dem Open (715,75 USD) praktisch unverändert (+0,02%), RSI14 51,90 neutral, OBV-5T-Trend weiterhin negativ (-52,80 Mio.). S&P500-Proxy 765,13 USD (658,78 EUR) hat seit dem Open (765,775 USD) leicht nachgegeben (-0,08%) und liegt nun wieder knapp unter SMA20 (-0,23%), bleibt aber über SMA50 (+0,86%); OBV-5T-Trend deutlich negativ (-153,88 Mio.). Russell2000-Proxy verschlechtert sich intraday spürbar: 289,47 USD (249,24 EUR), -0,60% seit Open, RSI14 auf 32,03 gefallen (Open: 35,90), -2,41%/-2,30% unter SMA20/50 - die Marktbreite bleibt die klare Schwachstelle des Tages und hat sich seit dem Open nicht verbessert. VIX-Proxy 17,41 (Open: 17,43), damit stabil niedrig und weiterhin klar unter der Risk-Off-Schwelle von 25 - kein Angst-Signal trotz schwacher Marktbreite. SOX-Proxy 528,09 USD (454,68 EUR), +1,42% über SMA20 (Open: +0,62%), 5T +5,16% - Halbleiter bauen ihre relative Stärke gegenüber NASDAQ (-0,25%) im Handelsverlauf sogar weiter aus, klar angeführt von AMD. Gesamtbild: kein einheitliches Risk-On (schwache Nebenwerte, negative OBV-Trends bei den Large-Cap-Indizes), aber auch kein Risk-Off (VIX niedrig und stabil, S&P500 über SMA50) - Regime bleibt NEUTRAL, das anfängliche CPI-Kurshoch ist im Handelsverlauf verpufft. Datenlücke: granulare Intraday-Volumenfenster (z.B. 16:00-17:00 Uhr) sowie NYSE A/D-Linie/-Ratio strukturell nicht im Feed enthalten; 'last_volume' bildet nur eine kleine Momentaufnahme ab - eine echte Volumenbeschleunigung ist daher nicht quantifizierbar, OBV-5T-Trend dient als Ersatzindikator (Wert nicht verfügbar). EXTERNE RECHERCHE (WebSearch): August-CPI wie erwartet (+0,4% MoM/+3,4% YoY), Kernrate mit +0,3% MoM etwas heißer als erwartet - Fed-Zinserhöhungswahrscheinlichkeit für die nächste Sitzung laut Marktkommentaren weiterhin bei rund 80%. Der erste CPI-Kurssprung von Nasdaq/S&P500 ist laut Presseberichten binnen der ersten 90 Handelsminuten bereits wieder abgeschmolzen, was sich mit dem Feed deckt. Oracle-Aktie bleibt nach starken Quartalszahlen (Cloud +121% YoY, RPO 664 Mrd. USD) gefragt. Ölpreise (WTI) bleiben nach den Gewinnmitnahmen der Vorwoche volatil, anhaltende US-Iran-Spannungen begrenzen weitere Rückgänge. INSTITUTIONAL HOLD TEST (Punkt 2-7, nur P4-Kandidaten mit Score hoch/mittel - siehe data/p4_candidates.json und data/p55_candidates.json): AMD (442,73 EUR/514,21 USD) hat den Eröffnungskurs klar verteidigt und ist seit dem Open (505,175 USD) um weitere +1,8% auf ein neues Tageshoch gestiegen - Second-Chance-Breakout-Muster bestätigt. OBV-5T-Trend bleibt über P4/P5/P5.5 hinweg stabil positiv (+39,17 -> +54,06 -> +54,26 Mio.), RSI14 62,13 noch unter der 72er-Schwelle, relative Stärke sehr hoch (5T +12,73% vs. SOX +5,16% vs. S&P500 -1,04%). Einschränkung: Abstand zur SMA20 hat sich auf +6,70% ausgeweitet (nahe der 8%-Anti-Bulltrap-Schwelle), belastbare Volumenbeschleunigung 16:00-17:00 Uhr mangels Datengranularität nicht quantifizierbar. Institutional Hold Test bestanden - Tradingplan: Kaufen über 443,00 EUR, Stop 434,90 EUR, Ziel 1 467,60 EUR (CRV ca. 3,0:1), Ziel 2 483,90 EUR (CRV ca. 5,0:1), Positionsgröße 9 Stück (Kapitalbedarf 3.987 EUR, Risiko 72,90 EUR von max. 75 EUR), Qualitätsscore 74/100 - bestes und einziges Institutional-Flow-Setup des Tages. Palo Alto Networks (283,45 EUR/329,21 USD) ist seit dem Open (337,41 USD) weiter um -2,4% gefallen, Abstand zur SMA20 hat sich von -4,58% auf -6,79% vertieft, OBV-5T-Momentum schwächt sich weiter ab (+18,92 -> +12,01 -> +11,96 Mio.) und 5T-Performance ist von +3,05% (P4) auf -0,82% gedreht - Institutional Hold Test klar nicht bestanden, Kandidat verworfen. SEKTOR-ROTATION (Details siehe sektor_rotation unten, Basis: Watchlist-Daten aus p55_latest.json): Kapitalzufluss konzentriert sich weiter auf Halbleiter/KI (angeführt von AMD), während Software/Cloud, Payments, Defense, Healthcare und Fintech/Brokerage in fortgesetzter institutioneller Distribution verharren - eine schmale, kaum breit getragene Rally. RISIKO-OFF-SPEZIALMODUS (Punkt 7): greift nicht (VIX 17,41 klar unter 25, S&P500 über SMA50). QUALITÄTSFILTER/DATENLÜCKEN: Options Flow, Earnings-Kalender, Insiderverkäufe, Analystenrevisionen, Lang & Schwarz-Spread strukturell nicht im Feed enthalten - Datenbasis unvollständig, Werte nicht verfügbar. FINALE AUSWAHL (Punkt 10-11): Neutral-Regime erlaubt max. 1 Trade - AMD ist das einzige Setup, das den Institutional Hold Test besteht und die Ranking-Kriterien (institutioneller Flow, RS vs. S&P500/Sektor, Momentum) klar erfüllt. GESAMTEINSCHÄTZUNG: NEUTRAL, das anfängliche CPI-Kurshoch ist verpufft, Marktbreite (Russell 2000) bleibt schwach, aber AMD zeigt als Einzeltitel bestätigten institutionellen Kaufdruck und einen validen Second-Chance-Breakout - ein Trade gemäß Kapitalerhalt-Grundsatz mit definiertem Risiko (max. 75 EUR).",
+  "kurzbegruendung": "NEUTRAL: CPI-Kurshoch verpufft, Russell 2000 schwach, VIX niedrig. AMD besteht Institutional Hold Test (neues Tageshoch) - ein Trade: Kaufen über 443€, Stop 434,90€, CRV ca. 3:1.",
   "sektor_rotation": [
     {
       "sektor": "Semiconductors/AI",
-      "trend": "neutral",
-      "kommentar": "SOX-Proxy 5T +4,28% weiterhin klar stärker als NASDAQ (-0,27%) und mit positivem OBV-5T-Trend (+18,03 Mio.). Einzeltitel uneinheitlich: AMD (434,96 EUR) mit stärkstem Kurs- und OBV-Momentum (OBV-5T +54,06 Mio.), aber weiterhin ohne belastbare Volumenbestätigung zum Open - kein Neueinstieg. NVIDIA (189,19 EUR) mit weiter vertiefter Distribution (OBV-5T -175,93 Mio., zuvor -41,37 Mio.) bei fallendem Kurs (5T -3,82%). Broadcom (312,75 EUR) OBV-5T ins Positive gedreht (+13,47 Mio., zuvor -46,79 Mio.), Kurs aber weiterhin unter SMA20/50 - erste Stabilisierung, noch kein Kaufsignal.",
+      "trend": "positiv",
+      "kommentar": "SOX-Proxy baut relative Stärke weiter aus (5T +5,16%, +1,42% über SMA20) und übertrifft NASDAQ (-0,25%) klar. AMD (442,73 EUR) verteidigt den Eröffnungskurs und markiert ein neues Tageshoch, OBV-5T-Trend stabil positiv (+54,26 Mio.) - einziges bestätigtes Institutional-Flow-Setup des Tages, Tradingplan aktiv. NVIDIA (189,55 EUR) bleibt mit tief negativem OBV-5T-Trend (-175,17 Mio.) und fallendem Kurs (5T -3,63%) in klarer Distribution. Broadcom (313,46 EUR) OBV-5T weiterhin leicht positiv (+13,67 Mio.), Kurs aber weiterhin unter SMA20/50 - Stabilisierung ohne Kaufsignal.",
       "kandidaten": [
-        { "name": "AMD (Advanced Micro Devices)", "empfehlung": "Halten" },
+        { "name": "AMD (Advanced Micro Devices)", "empfehlung": "Kauf" },
         { "name": "NVIDIA", "empfehlung": "Verkauf" },
         { "name": "Broadcom", "empfehlung": "Halten" }
       ]
     },
     {
       "sektor": "Cybersecurity",
-      "trend": "neutral",
-      "kommentar": "Palo Alto Networks (290,51 EUR) weiterhin klar unter SMA20 (-4,58%) und SMA50 (-3,51%) - kein Breakout-Level erreicht. OBV-5T-Trend bleibt positiv, hat sich aber von +18,92 Mio. (P4) auf +12,01 Mio. abgeschwächt - Akkumulationsmuster intakt, aber kein bestätigter Trendwechsel zum US-Open.",
+      "trend": "negativ",
+      "kommentar": "Palo Alto Networks (283,45 EUR) fällt seit dem Open weiter (-2,4%), Abstand zur SMA20 vertieft sich auf -6,79%. OBV-5T-Trend bleibt zwar nominell positiv, schwächt sich aber Lauf für Lauf weiter ab (+18,92 -> +12,01 -> +11,96 Mio.) - Institutional Hold Test nicht bestanden, kein Einstieg.",
       "kandidaten": [
-        { "name": "Palo Alto Networks", "empfehlung": "Halten" }
+        { "name": "Palo Alto Networks", "empfehlung": "Verkauf" }
       ]
     },
     {
       "sektor": "Software/Cloud",
       "trend": "negativ",
-      "kommentar": "Oracle (134,58 EUR, Depotposition) OBV-5T-Trend ins Negative gedreht (-18,61 Mio., zuvor +6,21 Mio.) - der earnings-getriebene Kaufimpuls vom Vortag verpufft bereits, Kurs bleibt unter SMA200. Microsoft (427,57 EUR) OBV-5T -33,84 Mio., 5T -2,65%. ServiceNow (115,44 EUR) OBV-5T -23,95 Mio., 5T -7,91%. Salesforce (213,75 EUR, RSI14 71,4 überkauft) OBV-5T -50,54 Mio., 5T -6,12% - Sektor insgesamt in fortgesetzter institutioneller Distribution.",
+      "kommentar": "Oracle (131,54 EUR, Depotposition) OBV-5T-Trend bleibt negativ (-19,91 Mio.), Kurs weiterhin unter SMA200 - der Earnings-Kaufimpuls ist verpufft. Microsoft (425,65 EUR) OBV-5T -33,72 Mio., 5T -3,08%. ServiceNow (112,97 EUR) OBV-5T -23,73 Mio., 5T -9,88%. Salesforce (213,70 EUR, RSI14 71,4 überkauft) OBV-5T -50,43 Mio., 5T -6,14% - Sektor bleibt in breiter institutioneller Distribution, auch 90 Min. nach Open keine Besserung.",
       "kandidaten": [
         { "name": "Oracle", "empfehlung": "Halten" },
         { "name": "Microsoft", "empfehlung": "Verkauf" },
@@ -36,7 +36,7 @@
     {
       "sektor": "Technology",
       "trend": "negativ",
-      "kommentar": "Apple (286,30 EUR) OBV-5T-Trend weiterhin klar negativ und sogar vertieft (-70,69 Mio., zuvor -33,57 Mio.) bei RSI14 70,75 nahe überkauft - anhaltende institutionelle Distribution trotz Kursnähe zu den gleitenden Durchschnitten.",
+      "kommentar": "Apple (288,91 EUR) RSI14 72,26 nun überkauft, OBV-5T-Trend weiterhin klar negativ (-70,16 Mio.) - Kurs steigt, aber institutionell wird verkauft statt gekauft, eine klassische bearishe Divergenz.",
       "kandidaten": [
         { "name": "Apple", "empfehlung": "Verkauf" }
       ]
@@ -44,7 +44,7 @@
     {
       "sektor": "Defense",
       "trend": "negativ",
-      "kommentar": "Lockheed Martin (455,36 EUR, RSI14 30,8, -5,26% unter SMA20) und Northrop Grumman (448,19 EUR, RSI14 28,9, -4,39% unter SMA20) weiterhin überverkauft, OBV-5T-Trends nur marginal positiv (+0,35 Mio. / +0,53 Mio.) - kein belastbares institutionelles Kaufinteresse.",
+      "kommentar": "Lockheed Martin (451,13 EUR, RSI14 29,2) und Northrop Grumman (445,07 EUR, RSI14 26,5) bleiben tief überverkauft und weiter unter SMA20/50, OBV-5T-Trends nur marginal positiv - kein belastbares institutionelles Kaufinteresse erkennbar.",
       "kandidaten": [
         { "name": "Lockheed Martin", "empfehlung": "Verkauf" },
         { "name": "Northrop Grumman", "empfehlung": "Verkauf" }
@@ -53,7 +53,7 @@
     {
       "sektor": "Defense/Industrials",
       "trend": "negativ",
-      "kommentar": "RTX Corporation (171,48 EUR) RSI14 26,0 extrem überverkauft, -4,67% unter SMA20, OBV-5T weiterhin negativ (-7,09 Mio.) - kein Reversal-Signal.",
+      "kommentar": "RTX Corporation (169,55 EUR) RSI14 21,2 extrem überverkauft, -5,68% unter SMA20, OBV-5T weiterhin negativ (-7,12 Mio.) - kein Reversal-Signal in Sicht.",
       "kandidaten": [
         { "name": "RTX Corporation", "empfehlung": "Verkauf" }
       ]
@@ -61,7 +61,7 @@
     {
       "sektor": "Healthcare",
       "trend": "negativ",
-      "kommentar": "UnitedHealth Group (334,83 EUR) OBV-5T-Trend negativ (-10,58 Mio.), Kurs unter SMA20 (-1,47%) und SMA50 (-5,00%), 5T -3,01% - keine institutionelle Akkumulation erkennbar.",
+      "kommentar": "UnitedHealth Group (326,87 EUR) OBV-5T-Trend negativ (-10,70 Mio.), Kurs unter SMA20 (-3,70%) und SMA50 (-7,22%), 5T -5,32% - keine institutionelle Akkumulation erkennbar.",
       "kandidaten": [
         { "name": "UnitedHealth Group", "empfehlung": "Verkauf" }
       ]
@@ -69,7 +69,7 @@
     {
       "sektor": "MedTech",
       "trend": "neutral",
-      "kommentar": "Intuitive Surgical (321,03 EUR) RSI14 46,1, nahezu auf SMA20 (-0,22%), OBV-5T leicht positiv (+0,52 Mio., zuvor -1,23 Mio.) - erste, noch schwache Stabilisierung ohne klares Kaufsignal.",
+      "kommentar": "Intuitive Surgical (316,92 EUR) RSI14 42,5, leicht unter SMA20 (-1,44%), OBV-5T leicht positiv (+0,58 Mio.) - weiterhin schwache Stabilisierung ohne klares Kaufsignal.",
       "kandidaten": [
         { "name": "Intuitive Surgical", "empfehlung": "Halten" }
       ]
@@ -77,7 +77,7 @@
     {
       "sektor": "Payments",
       "trend": "negativ",
-      "kommentar": "Visa (318,85 EUR, OBV-5T -17,85 Mio., 5T -2,22%) und Mastercard (488,52 EUR, OBV-5T -8,18 Mio., 5T -3,12%) beide mit anhaltend negativem institutionellem Flow.",
+      "kommentar": "Visa (318,34 EUR, OBV-5T -17,82 Mio., 5T -2,39%) und Mastercard (488,30 EUR, OBV-5T -8,17 Mio., 5T -3,17%) beide mit anhaltend negativem institutionellem Flow, keine Besserung seit dem Open.",
       "kandidaten": [
         { "name": "Visa", "empfehlung": "Verkauf" },
         { "name": "Mastercard", "empfehlung": "Verkauf" }
@@ -86,7 +86,7 @@
     {
       "sektor": "Industrials",
       "trend": "neutral",
-      "kommentar": "Caterpillar (705,98 EUR) OBV-5T leicht positiv (+0,88 Mio.), RSI14 47,3 neutral, weiterhin -4,24% unter SMA50 - Stabilisierungsansatz ohne belastbare Volumenbestätigung.",
+      "kommentar": "Caterpillar (705,05 EUR) OBV-5T leicht positiv (+0,90 Mio.), RSI14 46,9 neutral, weiterhin -4,36% unter SMA50 - Stabilisierungsansatz ohne belastbare Volumenbestätigung.",
       "kandidaten": [
         { "name": "Caterpillar", "empfehlung": "Halten" }
       ]
@@ -94,7 +94,7 @@
     {
       "sektor": "Fintech/Brokerage",
       "trend": "negativ",
-      "kommentar": "Robinhood (96,18 EUR, Depotposition) mit weiter vertiefter bearisher Preis-Volumen-Divergenz - Kurs 5T -10,44%, OBV-5T-Trend deutlich negativ (-84,89 Mio., zuvor -33,22 Mio.). Kein Nachkauf, weiterhin im Fokus für Gewinnsicherung/Risikoprüfung (siehe P1/portfolio_bewertung.json).",
+      "kommentar": "Robinhood (98,65 EUR, Depotposition) mit weiter negativem OBV-5T-Trend (-84,55 Mio.) trotz steigendem Kurs seit dem Vortag - bearishe Preis-Volumen-Divergenz bleibt bestehen, kein Nachkauf, weiterhin im Fokus für Gewinnsicherung (siehe P1/portfolio_bewertung.json).",
       "kandidaten": [
         { "name": "Robinhood", "empfehlung": "Halten" }
       ]
