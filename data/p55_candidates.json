@@ -1,36 +1,22 @@
 {
-  "generated_at_utc": "2026-09-10T15:16:32Z",
-  "run_date": "2026-09-10",
-  "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade: NVIDIA und UnitedHealth Group fallen im Institutional Hold Test durch (Kursbruch/OBV dreht negativ), AMD ohne Trigger, Oracle bleibt earnings-gesperrt.",
+  "generated_at_utc": "2026-09-11T15:11:00Z",
+  "run_date": "2026-09-11",
+  "ergebnis": "Trade",
+  "kurzbegruendung": "AMD besteht den Institutional Hold Test (neues Tageshoch seit Open, OBV-5T weiter positiv, starke RS vs. S&P500/Sektor) - Tradingplan: Kaufen über 443,00€, Stop 434,90€, CRV ca. 3:1. Palo Alto Networks fällt durch (Kurs seit Open weiter gefallen, unter SMA20/50, OBV-Momentum schwächt sich ab).",
   "kandidaten": [
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors/AI",
-      "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test NICHT bestanden: Kurs fällt seit dem P4-Anker (223,67 USD / 192,36 EUR) auf 218,52 USD (187,93 EUR, -2,30%) und rutscht klar unter SMA20 (-0,91%, P4: +1,30%) - statt eines bestätigten Ausbruchs ein klarer Bruch der Haltezone. 5-Tage-Performance dreht von +2,87% (P4) auf -2,62% (P5.5). OBV-5T-Trend zwar weiterhin positiv (+63,04 Mio.), aber gegenüber P4 (+221,44 Mio.) massiv eingebrochen (-71%) und seit dem US-Open praktisch stagnierend (P5: +64,05 Mio. -> P5.5: +63,04 Mio.) - die institutionelle Akkumulationsdynamik aus P4 hat sich kontinuierlich abgeschwächt. Bester Flow-Wert der Watchlist bleibt NVIDIA nominell, aber ohne Kursbestätigung wertlos. Sektor SOX-Proxy nur noch bei -0,01% zur SMA20 (P4: +1,67%) - auch der Sektorvorteil ist verpufft. Kein Second-Chance-Setup, Kandidat für heute klar verworfen."
-    },
     {
       "ticker": "AMD",
       "name": "AMD (Advanced Micro Devices)",
       "sector": "Semiconductors/AI",
-      "status": "Neutral",
-      "begruendung": "Kein aktiver Trigger zu testen (P4 bereits ohne Kaufsignal wegen Überdehnung). Kurs kommt seit P4 leicht zurück: 521,10 USD -> 509,31 USD (438,00 EUR, -2,26%), 5-Tage-Performance von +13,38% (P4) auf +11,43% abgeschwächt. Abstand zur SMA20 verringert sich von +8,71% (P4) auf +5,96% - beginnender Abbau der Überdehnung, Kurs bleibt aber weiterhin klar über der ursprünglichen Pullback-Zielzone (479-490 USD / 412-421 EUR). OBV-5T-Trend legt von +43,14 Mio. (P4) auf +54,92 Mio. zu - moderate fortgesetzte Akkumulation trotz Kursrückgang, keine akute Distribution erkennbar. Weiterhin kein Einstiegslevel, Wiedervorlage bei echtem Pullback in die SMA20-Zone."
+      "status": "Bestanden",
+      "begruendung": "Kurs seit US-Open klar weiter gestiegen (505,175 USD zum Open -> 514,21 USD 90 Min. später, +1,8%), damit oberhalb des Eröffnungskurses/Institutional-Hold-Levels gehalten und neues Tageshoch erreicht (Second-Chance-Breakout-Muster). OBV-5T-Trend bleibt über alle drei Läufe hinweg klar positiv und stabil (P4 +39,17 Mio. -> P5 +54,06 Mio. -> P5.5 +54,26 Mio.) - kontinuierliche institutionelle Akkumulation ohne Anzeichen von Distribution. RSI14 62,13 (steigend von 59,99 zum Open), noch unter der 72er-Bulltrap-Schwelle. Relative Stärke sehr hoch: 5T +12,73% vs. SOX-Proxy +5,16% und S&P500 -1,04%. Einschränkung: Abstand zur SMA20 hat sich auf +6,70% ausgeweitet (nah an der 8%-Anti-Bulltrap-Schwelle aus dem P4-Screening) und eine belastbare Bestätigung der Volumenbeschleunigung zwischen 16:00-17:00 Uhr ist mangels intraday-granularer Volumendaten im Feed nicht quantifizierbar (Datenbasis unvollständig - Wert nicht verfügbar; OBV-Trend dient als Ersatzindikator). Ergebnis: Institutional Hold Test bestanden, einziges Setup des Tages."
     },
     {
-      "ticker": "UNH",
-      "name": "UnitedHealth Group",
-      "sector": "Healthcare",
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Cybersecurity",
       "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test NICHT bestanden: Die zarte Bodenbildungs-These aus P4 (stille Akkumulation trotz leicht rückläufigem Kurs) bestätigt sich nicht. Kurs 390,57 USD (335,89 EUR), seit P4 (393,06 USD) um -0,63% weiter gefallen, bleibt klar unter SMA20 (-1,20%, P4: -0,76%) und SMA50 (-4,78%, P4: -4,29%). Entscheidend: OBV-5T-Trend dreht von +2,50 Mio. (P4, das eigentliche Kaufargument) auf -0,83 Mio. (P5.5) - die institutionelle Akkumulation, die den P4-Kandidatenstatus begründet hat, ist nicht mehr vorhanden. 5-Tage-Performance verschlechtert sich von -0,82% auf -2,27%. Kein Reversal-Signal, Kandidat verworfen, bleibt defensiver Beobachtungskandidat für Risk-Off-Szenarien."
-    },
-    {
-      "ticker": "ORCL",
-      "name": "Oracle",
-      "sector": "Software/Cloud",
-      "status": "Neutral",
-      "begruendung": "Kein P5.5-Kandidat im engeren Sinn (P4-Score 'niedrig', Bestandsposition), aber institutionell weiterhin auffällig: OBV-5T-Trend bleibt mit +61,53 Mio. der zweitstärkste Flow-Wert der Watchlist nach NVIDIA. Kurs 158,62 USD (136,41 EUR) leicht rückläufig ggü. P4 (161,63 USD, -1,86%), 5-Tage-Performance bleibt mit +8,83% stark. Entscheidend bleibt der Quartalsbericht (Q1 FY2027) heute nach US-Börsenschluss - der Qualitätsfilter (keine Earnings in 5 Handelstagen) sperrt jeden Neu-/Nachkauf weiterhin zwingend. Bestandsposition (10 Stück, Kaufkurs 162,24 USD) bleibt bis zur Zahlenveröffentlichung reines Halten, relevant für den morgigen P1-Lauf."
+      "begruendung": "Kurs seit US-Open weiter gefallen (337,41 USD zum Open -> 329,21 USD 90 Min. später, -2,4%), Eröffnungskurs/Hold-Level klar nicht gehalten. Abstand zur SMA20 hat sich von -4,58% (Open) auf -6,79% vertieft, SMA50-Abstand von -3,51% auf -5,81%. OBV-5T-Trend zwar weiterhin positiv, aber mit abnehmender Dynamik (P4 +18,92 Mio. -> P5 +12,01 Mio. -> P5.5 +11,96 Mio.) - Akkumulationsimpuls verpufft. RSI14 auf 41,08 gefallen (P4: 46,53), 5T-Performance von +3,05% (P4) auf -0,82% (P5.5) gedreht - die im P4-Screening beobachtete stille Akkumulation hat sich nicht in einen Breakout übersetzt. Ergebnis: Institutional Hold Test nicht bestanden, Kandidat verworfen."
     }
   ]
 }
