@@ -1,48 +1,69 @@
 {
-  "generated_at_utc": "2026-09-11T12:58:16Z",
-  "run_date": "2026-09-11",
+  "generated_at_utc": "2026-09-14T13:01:45Z",
+  "run_date": "2026-09-14",
   "candidates": [
     {
       "ticker": "AMD",
       "name": "AMD (Advanced Micro Devices)",
       "sector": "Semiconductors/AI",
       "score": "mittel",
-      "begruendung": "0 von 4 Anti-Bulltrap-Kernkriterien verletzt (Abstand SMA20 +4,83% <8%, Abstand SMA50 +1,32% <15%, RSI14 60,54 <72, chg_5d +10,18% <15%), OBV-5T-Trend positiv (+39,17 Mio.) bestätigt die Aufwärtsbewegung grundsätzlich. ABER: letztes Handelsvolumen 15,96 Mio. liegt UNTER dem 20-Tage-Ø (18,00 Mio., -11,4%) - Breakout-Qualitätskriterium 'Volumen ≥40% über Ø' klar verfehlt (-10 Punkte), keine echte Ausbruchsbestätigung. Sektor-Pflichtfilter erfüllt: SOX-Proxy 5T +3,19% klar stärker als NASDAQ (-0,08%). Kurs 433,60 EUR (503,60 USD). Bereits +4,83% über SMA20 - kein sauberes Pullback-Setup, eher verlängerte Rallye ohne Volumenbestätigung. Keine Kaufempfehlung; Wiedervorlage bei Konsolidierung Richtung SMA20-Zone (ca. 480 USD / 413 EUR) oder bei klarer Volumenbestätigung zur US-Eröffnung (P5)."
+      "begruendung": "0 von 4 Anti-Bulltrap-Kernkriterien verletzt (Abstand SMA20 +7,07% <8%, Abstand SMA50 +3,94% <15%, RSI14 62,56 <72, chg_5d +13,15% <15%) - beide Näherungswerte (SMA20-Abstand, 5-Tage-Kursanstieg) laufen aber bereits nahe an die jeweiligen Schwellen heran. OBV-5T-Trend klar positiv (+72,99 Mio.), einziges Semiconductor/AI-Papier mit bestätigter Akkumulation. ABER: Handelsvolumen 19,00 Mio. liegt nur +5,46% über dem 20-Tage-Ø (18,02 Mio.) - Breakout-Kriterium 'Volumen ≥40% über Ø' klar verfehlt (-10 Punkte), keine echte Ausbruchsbestätigung. Zusätzlich akutes Sektorrisiko: Laut Presseberichten (Bloomberg, 14.09.) sind Halbleiterwerte im Vorbörsenhandel nach einer KI-Sicherheitswarnung von Anthropic-CEO Dario Amodei eingebrochen (Marvell -7,59%, Lam Research -8%) - SOX-Bestätigung für den heutigen Handelstag daher fraglich, obwohl der SOX-Proxy auf 5-Tage-Basis noch klar stärker ist als der NASDAQ (+4,95% vs. -0,39%). Kurs 444,90 EUR (516,13 USD). Keine Kaufempfehlung; Bestätigung zur US-Eröffnung (P5) zwingend erforderlich, insbesondere ob der Sektor die Vorbörsen-Schwäche wieder aufholt."
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "sector": "Cybersecurity",
       "score": "mittel",
-      "begruendung": "0 von 4 Anti-Bulltrap-Kriterien verletzt (RSI14 46,53 neutral, chg_5d +3,05%). Pullback von -5,06% zur SMA20 (im Zielband 3-8%) bei UNTERDURCHSCHNITTLICHEM Volumen (4,67 Mio. vs. Ø 6,06 Mio., -22,9%) und POSITIVEM OBV-5T-Trend (+18,92 Mio.) - Muster einer stillen Akkumulation während eines geringvolumigen Pullbacks (Pullback-Qualitätskriterien größtenteils erfüllt). Kein Nachweis für 'höheres Tief als vorheriger Pullback' möglich (keine historische Pullback-Vergleichsserie im Feed). Kurs 291,44 EUR (338,49 USD), weiterhin unter SMA20 (356,52 USD / 307,00 EUR) und SMA50 (349,97 USD / 301,32 EUR) - kein bestätigter Trendwechsel, aber bester Akkumulations-Fingerabdruck der heutigen Watchlist. Keine Kaufempfehlung; Wiedervorlage bei Rückeroberung der SMA20-Zone mit steigendem Volumen."
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors/AI",
-      "score": "niedrig",
-      "begruendung": "Warnsignal: OBV-5T-Trend ist heute klar negativ (-41,37 Mio.) bei gleichzeitig fallendem Kurs (chg_5d -2,70%, unter SMA20 -0,98%) - die in den Vortagen beobachtete starke institutionelle Akkumulation ist damit endgültig in Distribution umgeschlagen (Fortsetzung des bereits in market_barometer.json vom 10.09. dokumentierten Abstufungstrends). RSI14 50,99 neutral. Kurs 188,01 EUR (218,36 USD). Kein Setup, aus dem aktiven Beobachtungsfokus weiter zurückgestuft."
+      "begruendung": "0 von 4 Anti-Bulltrap-Kernkriterien verletzt (RSI14 41,45 neutral, chg_5d -0,39%). Kurs liegt -6,40% unter SMA20 und -5,41% unter SMA50 - kein bestätigter Trendwechsel, aber Handelsvolumen von 4,68 Mio. liegt -22,8% UNTER dem 20-Tage-Ø (6,06 Mio.) bei gleichzeitig POSITIVEM OBV-5T-Trend (+7,34 Mio.) - klassisches Muster einer geringvolumigen, stillen Akkumulation während eines Pullbacks. Zusätzlich positiver externer Katalysator: Cybersecurity-Werte (u.a. CrowdStrike, Palo Alto Networks) legten laut Presseberichten zuletzt nach starken Quartalszahlen deutlich zu. Kurs 284,98 EUR (330,65 USD). Keine Kaufempfehlung; Wiedervorlage bei Rückeroberung der SMA20-Zone (ca. 353,25 USD / 304,50 EUR) mit steigendem Volumen."
     },
     {
       "ticker": "CAT",
       "name": "Caterpillar",
       "sector": "Industrials",
-      "score": "niedrig",
-      "begruendung": "0 von 4 Anti-Bulltrap-Kriterien verletzt, RSI14 46,39 neutral, chg_5d +1,61%, OBV-5T-Trend leicht positiv (+3,23 Mio.), aber Handelsvolumen 1,78 Mio. liegt unter dem 20-Tage-Ø (2,38 Mio., -25,2%) - Stabilisierungsansatz ohne Volumenbestätigung. Kurs 693,11 EUR (805,00 USD), weiterhin -6,36% unter SMA50. Kein bestätigter Trendwechsel."
+      "score": "mittel",
+      "begruendung": "0 von 4 Anti-Bulltrap-Kernkriterien verletzt, RSI14 46,78 neutral, chg_5d +2,30%. Kurs hält sich nahezu exakt an der SMA20 (+0,16%), OBV-5T-Trend leicht positiv (+2,71 Mio.) - bestätigt den moderaten Aufwärtsimpuls grundsätzlich. Handelsvolumen 1,82 Mio. liegt aber -22,3% unter dem 20-Tage-Ø (2,35 Mio.) - keine Volumenbestätigung. Weiterhin -4,39% unter SMA50, übergeordneter Trend also noch nicht invalidiert. Kurs 705,61 EUR (818,57 USD). Kein bestätigter Trendwechsel; Beobachtungskandidat."
     },
     {
-      "ticker": "ORCL",
-      "name": "Oracle",
+      "ticker": "NOC",
+      "name": "Northrop Grumman",
+      "sector": "Defense",
+      "score": "niedrig",
+      "begruendung": "0 von 4 Anti-Bulltrap-Kernkriterien verletzt, RSI14 27,31 stark überverkauft, chg_5d -1,75%. OBV-5T-Trend minimal positiv (+1,12 Mio.) trotz fallendem Kurs - leichte Divergenz, aber bei einem Volumen von nur 0,59 Mio. (-20,8% unter Ø 0,74 Mio.) nicht belastbar. Kurs 447,35 EUR (518,97 USD). Kein Kaufsignal, nur Beobachtung auf mögliche Bodenbildung."
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "sector": "Semiconductors/AI",
+      "score": "niedrig",
+      "begruendung": "0 von 4 Anti-Bulltrap-Kernkriterien verletzt, RSI14 45,15 neutral, chg_5d +1,35%. OBV-5T-Trend leicht positiv (+34,56 Mio.), aber Kurs bleibt -5,51% unter SMA50 - keine Trendbestätigung. Zusätzlich vom selben akuten Sektorrisiko betroffen wie AMD/NVDA (KI-Sicherheitswarnung belastet Halbleiterwerte laut heutigen Presseberichten). Kurs 312,04 EUR (361,99 USD). Kein Setup."
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "score": "niedrig",
+      "begruendung": "0 von 4 Anti-Bulltrap-Kernkriterien verletzt (RSI14 70,62 knapp unter der 72er-Schwelle), chg_5d +1,24%. ABER: klare bearishe Preis-Volumen-Divergenz - OBV-5T-Trend deutlich negativ (-20,05 Mio.) trotz steigendem Kurs und erhöhtem Handelsvolumen (50,66 Mio., +19,1% über Ø 42,53 Mio.) - Warnsignal für nachlassenden institutionellen Rückhalt bei einem bereits überkauft laufenden Titel. Kurs 286,42 EUR (332,27 USD). Kein Setup, im Gegenteil Vorsicht geboten."
+    },
+    {
+      "ticker": "ISRG",
+      "name": "Intuitive Surgical",
+      "sector": "MedTech",
+      "score": "niedrig",
+      "begruendung": "0 von 4 Anti-Bulltrap-Kernkriterien verletzt, RSI14 43,34 neutral, chg_5d -0,18%. OBV-5T-Trend leicht positiv (+3,87 Mio.) bei überdurchschnittlichem Volumen (3,35 Mio., +48,4% über Ø 2,26 Mio.) - kurzfristig leichte Stabilisierung. Strukturell aber weiterhin -19,7% unter der SMA200 (459,85 USD) - der übergeordnete langfristige Abwärtstrend überwiegt klar das kurzfristige Signal. Kurs 318,13 EUR (369,15 USD). Kein Setup."
+    },
+    {
+      "ticker": "RTX",
+      "name": "RTX Corporation",
+      "sector": "Defense",
+      "score": "niedrig",
+      "begruendung": "0 von 4 Anti-Bulltrap-Kernkriterien verletzt, RSI14 21,94 extrem überverkauft, chg_5d -2,20%. OBV-5T-Trend weiterhin klar negativ (-10,77 Mio.) - bestätigt fortgesetzte Distribution trotz der extremen Überverkauftheit, keine Bodenbildung erkennbar. Kurs 170,40 EUR (197,68 USD). Kein Kaufsignal."
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
       "sector": "Software/Cloud",
       "score": "niedrig",
-      "begruendung": "ACHTUNG - Earnings-Reaktion: Oracle hat die Q1-FY2027-Zahlen gestern (10.09.2026) nach US-Börsenschluss veröffentlicht (extern bestätigt); die heutige Kurs-/Volumenbewegung (chg_5d +4,93%, Handelsvolumen 55,60 Mio. vs. Ø 23,93 Mio., +132,4%) ist damit primär ereignisgetrieben und kein organisches institutionelles Akkumulationssignal. Kurs bleibt zudem unter der SMA200 (167,89 USD) - der übergeordnete Abwärtstrend ist trotz der Erholung nicht invalidiert. OBV-5T-Trend positiv (+6,21 Mio.), RSI14 59,16 neutral. Kurs 131,68 EUR (152,94 USD). Kein Neu-Setup; Bestandsposition im Depot bleibt Halten-Fall (siehe P1)."
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "sector": "Fintech/Brokerage",
-      "score": "niedrig",
-      "begruendung": "0 von 4 Anti-Bulltrap-Kernkriterien verletzt (Abstand SMA20 +6,51% <8%, RSI14 62,89 <72), ABER klare bearishe Preis-Volumen-Divergenz: OBV-5T-Trend deutlich negativ (-33,22 Mio.) trotz Kursanstieg von +5,93% in 5 Tagen - Distribution trotz steigendem Kurs, ein zentrales Anti-Bulltrap-Warnsignal. Kurs 97,58 EUR (113,33 USD). Kein Nachkauf; bestehende Depotposition weiter zur Gewinnsicherung im Fokus (siehe P1/portfolio_bewertung.json)."
+      "begruendung": "0 von 4 Anti-Bulltrap-Kernkriterien verletzt, RSI14 57,49 neutral, chg_5d -2,84%. Kurs hält sich knapp über SMA20 (+0,24%), aber OBV-5T-Trend negativ (-19,32 Mio.) bei unterdurchschnittlichem Volumen (14,51 Mio., -30,2% unter Ø 20,80 Mio.) - keine institutionelle Bestätigung. Kurs 427,15 EUR (495,63 USD). Kein Setup."
     }
   ]
 }
