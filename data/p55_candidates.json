@@ -1,22 +1,29 @@
 {
-  "generated_at_utc": "2026-09-11T15:11:00Z",
-  "run_date": "2026-09-11",
+  "generated_at_utc": "2026-09-14T15:07:47Z",
+  "run_date": "2026-09-14",
   "ergebnis": "Trade",
-  "kurzbegruendung": "AMD besteht den Institutional Hold Test (neues Tageshoch seit Open, OBV-5T weiter positiv, starke RS vs. S&P500/Sektor) - Tradingplan: Kaufen über 443,00€, Stop 434,90€, CRV ca. 3:1. Palo Alto Networks fällt durch (Kurs seit Open weiter gefallen, unter SMA20/50, OBV-Momentum schwächt sich ab).",
+  "kurzbegruendung": "Palo Alto Networks besteht den Institutional Hold Test (SMA20/50 seit P5 zurückerobert, OBV-5T weiter positiv, RS-Anstieg durch Cybersecurity-Rotation) - Tradingplan: Kaufen über 320,89€, Stop 300,84€, CRV ca. 2:1. AMD und Caterpillar fallen durch (Breakout-Level bzw. gleitende Durchschnitte weiterhin nicht zurückerobert).",
   "kandidaten": [
-    {
-      "ticker": "AMD",
-      "name": "AMD (Advanced Micro Devices)",
-      "sector": "Semiconductors/AI",
-      "status": "Bestanden",
-      "begruendung": "Kurs seit US-Open klar weiter gestiegen (505,175 USD zum Open -> 514,21 USD 90 Min. später, +1,8%), damit oberhalb des Eröffnungskurses/Institutional-Hold-Levels gehalten und neues Tageshoch erreicht (Second-Chance-Breakout-Muster). OBV-5T-Trend bleibt über alle drei Läufe hinweg klar positiv und stabil (P4 +39,17 Mio. -> P5 +54,06 Mio. -> P5.5 +54,26 Mio.) - kontinuierliche institutionelle Akkumulation ohne Anzeichen von Distribution. RSI14 62,13 (steigend von 59,99 zum Open), noch unter der 72er-Bulltrap-Schwelle. Relative Stärke sehr hoch: 5T +12,73% vs. SOX-Proxy +5,16% und S&P500 -1,04%. Einschränkung: Abstand zur SMA20 hat sich auf +6,70% ausgeweitet (nah an der 8%-Anti-Bulltrap-Schwelle aus dem P4-Screening) und eine belastbare Bestätigung der Volumenbeschleunigung zwischen 16:00-17:00 Uhr ist mangels intraday-granularer Volumendaten im Feed nicht quantifizierbar (Datenbasis unvollständig - Wert nicht verfügbar; OBV-Trend dient als Ersatzindikator). Ergebnis: Institutional Hold Test bestanden, einziges Setup des Tages."
-    },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "sector": "Cybersecurity",
+      "status": "Bestanden",
+      "begruendung": "Klassisches Second-Chance-Breakout-Setup (Punkt 6): Nachdem die Aktie beim US-Open noch -1,44%/-0,92% unter SMA20/50 notierte (P5, 13:35 UTC), wurden beide gleitenden Durchschnitte 90 Minuten später souverän zurückerobert (jetzt +5,57% über SMA20 bei 352,65 USD bzw. +6,36% über SMA50 bei 350,03 USD). Kurs 372,28 USD (320,89 EUR), damit seit P5 nochmals +7,5% im Plus. OBV-5T-Trend bleibt über alle drei Läufe hinweg durchgehend positiv (P4 +1,90 Mio. -> P5 +1,72 Mio. -> P5.5 +1,90 Mio.) - stabile institutionelle Akkumulation ohne Abschwächung. RSI14 55,52, damit klar unter der 72er-Bulltrap-Schwelle und noch Spielraum nach oben. 5-Tage-Momentum beschleunigt sich deutlich (P5: +3,92% -> P5.5: +11,71%). Fundamentaler Rückenwind bestätigt sich extern: Laut Presseberichten (Benzinga, 14.09.) rotieren Anleger aktiv in Cybersecurity-Werte im Zuge der KI-Sicherheitsdebatte (Palo Alto Networks +4,95%, CrowdStrike +6,08%, Okta +3,57% im Tagesverlauf) - Cybersecurity gilt als Nutznießer erhöhter Sicherheitsausgaben und als von einer möglichen KI-Entwicklungsverlangsamung abgeschirmt. Einschränkung: Intraday-Volumenbeschleunigung zwischen 16:00-17:00 Uhr laut Datenbasis nicht separat quantifizierbar (bekannte Datenlücke, OBV-Trend dient als Ersatzindikator). Ergebnis: Institutional Hold Test bestanden, bestes Setup des Tages."
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD (Advanced Micro Devices)",
+      "sector": "Semiconductors/AI",
       "status": "Nicht bestanden",
-      "begruendung": "Kurs seit US-Open weiter gefallen (337,41 USD zum Open -> 329,21 USD 90 Min. später, -2,4%), Eröffnungskurs/Hold-Level klar nicht gehalten. Abstand zur SMA20 hat sich von -4,58% (Open) auf -6,79% vertieft, SMA50-Abstand von -3,51% auf -5,81%. OBV-5T-Trend zwar weiterhin positiv, aber mit abnehmender Dynamik (P4 +18,92 Mio. -> P5 +12,01 Mio. -> P5.5 +11,96 Mio.) - Akkumulationsimpuls verpufft. RSI14 auf 41,08 gefallen (P4: 46,53), 5T-Performance von +3,05% (P4) auf -0,82% (P5.5) gedreht - die im P4-Screening beobachtete stille Akkumulation hat sich nicht in einen Breakout übersetzt. Ergebnis: Institutional Hold Test nicht bestanden, Kandidat verworfen."
+      "begruendung": "Der Breakout-Versuch war bereits beim US-Open gescheitert (P5: Kurs fiel ca. -6% unter das Vorbörsenniveau auf 484,21 USD). 90 Minuten später nur marginale Erholung auf 485,39 USD (418,39 EUR, +0,24%) - Kurs hat sich zwar knapp über die SMA20 zurückgekämpft (+1,0%), bleibt aber weiterhin klar unter der SMA50 (-2,12%). Das 5-Tage-Momentum ist von +13,15% (P4-Screening) auf nur noch +1,64% eingebrochen - der ursprüngliche Breakout-Impuls ist faktisch aufgebraucht. OBV-5T-Trend zwar weiterhin positiv (+52,89 Mio.), aber ohne neue Kaufdynamik seit dem Open. Zusätzlich bleibt das Halbleiter-Sektorrisiko akut (SOX-Proxy weiterhin -3,86%/-6,07% unter SMA20/50). Ergebnis: Institutional Hold Test nicht bestanden, kein Trade."
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar",
+      "sector": "Industrials",
+      "status": "Nicht bestanden",
+      "begruendung": "Hatte bereits beim US-Open die SMA20-Unterstützung verloren (P5: -4,23%, zuvor im P4-Screening noch +0,16%). 90 Minuten später nur eine minimale Stabilisierung auf 783,45 USD (675,29 EUR, +0,58% ggü. P5), aber weiterhin deutlich unter SMA20 (-3,7%) und SMA50 (-8,11%). OBV-5T-Trend praktisch neutral (+0,51 Mio.) - keine erkennbare institutionelle Akkumulation. 5-Tage-Performance zusätzlich auf -3,75% verschlechtert. Ergebnis: Institutional Hold Test nicht bestanden, kein Trade."
     }
   ]
 }
