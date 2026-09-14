@@ -1,23 +1,23 @@
 {
-  "generated_at_utc": "2026-09-14T13:01:45Z",
-  "status": "NEUTRAL",
-  "begruendung": "P4-Lauf 14.09.2026, Analysefenster ca. 14:45 MESZ (12:45 UTC), Datenstand p4_latest.json 12:51:06 UTC, EUR/USD 0,862. MARKTREGIME (Punkt 1, nur 3 von 5 Ampel-Kriterien im Feed verifizierbar): NASDAQ-Proxy 616,23 EUR (714,88 USD) knapp UNTER SMA20 (-0,11%), aber über SMA50 (+0,63%), RSI14 51,13 neutral, 5T -0,39%, OBV-5T-Trend negativ (-27,05 Mio.) - Kriterium 'NASDAQ über 20-DMA' damit NICHT erfüllt. S&P500-Proxy 658,82 EUR (764,29 USD), -0,34% unter SMA20, +0,75% über SMA50, 5T -1,15%, OBV-5T-Trend deutlich negativ (-108,88 Mio.). Russell2000-Proxy bleibt klare Schwachstelle: 249,02 EUR (288,89 USD), RSI14 nur 30,65 (überverkauft), -2,60%/-2,49% unter SMA20/50, 5T -2,13%. VIX-Proxy 17,30, damit knapp unter der Risk-On-Schwelle von 18 - ABER Vorbehalt: Datenstand 12:51 UTC liegt vor Handelsbeginn, laut Presseberichten fielen die NASDAQ-Futures im Vorbörsenhandel bereits um -1,45% (QQQ auf 704,48 USD) - der reale VIX dürfte inzwischen höher liegen als der Snapshot zeigt. SOX-Proxy 454,33 EUR (527,07 USD), +1,24% über eigener SMA20, 5T +4,95% - auf Basis der Handelsdaten weiterhin klar stärkster Index und stärker als NASDAQ (-0,39% 5T), ABER akut gefährdet: siehe externe Recherche. Kriterien-Bilanz: 1 von 3 verifizierbaren Ampel-Kriterien bestätigt nicht erfüllt (NASDAQ<20DMA), die zwei strukturell fehlenden Kriterien (NYSE A/D-Linie/-Ratio, % Aktien über 50-DMA) bleiben wie in jedem Lauf nicht verfügbar (Datenlücke, 'Wert nicht verfügbar') und werden daher nicht automatisch als 'nicht erfüllt' gewertet. GESAMTBILD: kein klares Risk-On (NASDAQ unter GD20, Marktbreite/Russell weiterhin schwach, S&P500- und NASDAQ-OBV negativ), aber auch kein eindeutiges Risk-Off anhand der verifizierbaren Kriterien - Regime bleibt NEUTRAL, aber fragil und mit Tendenz Richtung Risk-Off, daher konservativ max. 1 statt 2 mögliche Kaufempfehlungen. EXTERNE RECHERCHE (WebSearch, Stand Vorbörse 14.09.): Ölpreise schießen wegen eskalierender Nahost-Spannungen (Houthi-Angriffe auf Saudi-Arabien, Pipeline-Ausfälle) nach oben - WTI +2,25% auf 102,30 USD, Brent +2,56% auf 107,30 USD - klar risikoaverser Impuls. Anthropic-CEO Dario Amodei warnte vor zu schneller KI-Entwicklung aus Sicherheitsgründen; Halbleiterwerte brachen daraufhin vorbörslich massiv ein (Marvell -7,59%, Lam Research -8%) - direktes akutes Risiko für die Watchlist-Titel NVIDIA, AMD (Advanced Micro Devices) und Broadcom sowie für die SOX-Proxy-Stärke aus den Handelsdaten, die dieses Ereignis noch nicht abbildet. Gegenläufig: Cybersecurity-Werte (CrowdStrike, Palo Alto Networks) legten nach starken Quartalszahlen deutlich zu - einziger klar positiver Sektorimpuls aus der Presse. Zusätzlich Fed-Sitzung diese Woche (Mittwoch) mit rund 85% eingepreister Wahrscheinlichkeit für eine Zinserhöhung - ein weiterer Belastungsfaktor für wachstumsstarke/technologielastige Titel. KANDIDATEN (siehe data/p4_candidates.json): AMD (444,90 EUR/516,13 USD) zeigt technisch das stärkste Setup der gesamten Watchlist (OBV-5T +72,99 Mio., 0/4 Anti-Bulltrap-Kriterien verletzt), scheitert aber am Breakout-Volumenkriterium (+5,46% statt ≥40% über Ø) und steht zusätzlich unter dem akuten Sektor-Nachrichtenrisiko der heutigen KI-Sicherheitsdebatte - keine Kaufempfehlung, Bestätigung zur US-Eröffnung (P5) zwingend erforderlich. Palo Alto Networks (284,98 EUR/330,65 USD) zeigt eine stille, geringvolumige Akkumulation (OBV-5T +7,34 Mio. bei -22,8% unterdurchschnittlichem Volumen) gestützt durch den positiven Sektor-Newsflow, bleibt aber unter SMA20/50 - Beobachtungskandidat. Caterpillar (705,61 EUR/818,57 USD) stabilisiert sich moderat an der SMA20 mit leicht positivem OBV, aber ohne Volumenbestätigung. Kein Titel erreicht die für eine Kaufempfehlung nötigen harten Schwellen (Institutioneller Flow ≥90/100, Gesamtscore ≥92/100, Bulltrap-Risiko ≤30, CRV ≥2,5:1, SOX bestätigt, keine negativen News) - insbesondere die Vorgabe 'keine negativen News' und 'SOX bestätigt' werden durch die heutige KI-Sicherheits-Nachrichtenlage für alle Semiconductor/AI-Kandidaten verletzt. SEKTOR-ROTATION (Details siehe sektor_rotation unten): Auf 5-Tage-Basis weiterhin von Semiconductors/AI angeführt (überwiegend AMD-getrieben), gefolgt von Industrials, Technology, MedTech und Cybersecurity - die Semiconductor/AI-Führung ist jedoch durch die heutige Nachrichtenlage akut infrage gestellt. Software/Cloud, Defense, Healthcare, Payments und Fintech/Brokerage bleiben in fortgesetzter institutioneller Distribution. BESTANDSDEPOT: keine Bewertung im P4-Lauf (siehe P1 später am Handelstag für data/portfolio_bewertung.json); Robinhood und Oracle zeigen im aktuellen Datenstand weiterhin die bereits aus den Vorläufen bekannten bearishen Preis-Volumen-Divergenzen bzw. volumenstarke Distribution. FINALE AUSWAHL: Kein Kandidat erfüllt die Kriterien für eine Top-3-Handlungsempfehlung. GESAMTEINSCHÄTZUNG: NEUTRAL mit Tendenz Richtung Risk-Off - NASDAQ unter GD20, schwache Marktbreite (Russell 2000), akuter Nachrichtenschock im Halbleitersektor (KI-Sicherheitswarnung) und Ölpreis-Spike durch Nahost-Eskalation vor der Fed-Sitzung diese Woche. Kein Trade - Kapitalerhalt hat Vorrang, AMD und Palo Alto Networks bleiben die wichtigsten Beobachtungskandidaten zur US-Eröffnung.",
-  "kurzbegruendung": "NEUTRAL, Tendenz Risk-Off: NASDAQ unter GD20, Ölpreis-Schock (Nahost) und KI-Sicherheitswarnung belasten Halbleiter vorbörslich. Kein Trade - Kapitalerhalt hat Vorrang.",
+  "generated_at_utc": "2026-09-14T13:35:46Z",
+  "status": "RISK-OFF",
+  "begruendung": "P5-Lauf 14.09.2026, Analysefenster 15:35 MESZ (13:35 UTC), Datenstand p5_latest.json 13:35:46 UTC, EUR/USD 0,862. MARKTREGIME ZUM US-OPEN (Punkt 1): Die vorbörslichen Warnsignale aus dem P4-Lauf haben sich zur Eröffnung bestätigt. NASDAQ-Proxy 703,34 USD, jetzt klar UNTER SMA20 (-1,53%) UND SMA50 (-0,97%), RSI14 47,82, 5T -2,17%, OBV-5T-Trend negativ (-59,95 Mio.). S&P500-Proxy 758,69 USD, -0,95% unter SMA20 und praktisch auf der SMA50 (-0,03%) - damit greift die Zusatzwarnung 'S&P500 unter 50 DMA: Momentum-Trades eingeschränkt'. Russell2000-Proxy 287,93 USD, RSI14 nur 31,79 (überverkauft), -2,64%/-2,76% unter SMA20/50, 5T -2,73% - Marktbreite bleibt die klare Schwachstelle. VIX-Proxy 17,88, damit zwar noch knapp unter der Risk-On-Schwelle von 18, aber 5T +5,18% und OBV-5T-Trend positiv (+4,46 Mio.) - Risikoaversion nimmt zu. SOX-Proxy 495,78 USD, jetzt -4,27%/-6,48% unter SMA20/50, 5T -4,63% - die Vorbörsen-Schwäche des Halbleitersektors hat sich zur Eröffnung voll bestätigt und in einen handelsbestätigten Abwärtstrend verwandelt. GESAMTBILD: Alle vier auswertbaren Indizes (NASDAQ, S&P500, Russell2000, SOX) notieren unter ihrem GD20, drei davon zusätzlich mit negativem OBV-5T-Trend - Marktregime wird zu RISK-OFF hochgestuft (vorher NEUTRAL mit Tendenz Risk-Off im P4-Lauf). EXTERNE RECHERCHE (WebSearch, Stand US-Open 14.09.): KI-Sicherheitswarnungen von Anthropic-CEO Dario Amodei und OpenAI-Chef Sam Altman ('Tempo der Fähigkeitsentwicklung muss zur Risikoprävention passen') haben sich zum Haupttreiber des Ausverkaufs entwickelt - Nasdaq-100-Futures fielen laut Presseberichten um -1,6%, Speicherchip-Werte wie Micron und SanDisk brachen um bis zu 6% ein, SK Hynix in Asien um 7%. Zusätzlich verschärfter Ölpreis-Schock (WTI +3,24% auf 103,29 USD, Brent nahe 108 USD) durch Pipeline-Ausfälle in Saudi-Arabien, sowie gestiegene Fed-Zinserhöhungswahrscheinlichkeit (rund 86%) vor der Sitzung am Mittwoch - beides zusätzliche Belastungsfaktoren. KANDIDATENANALYSE (nur P4-Kandidaten, Punkt 3-7): AMD (417,39 EUR/484,21 USD) ist zur Eröffnung deutlich unter das Vortagesniveau gefallen (ca. -6% ggü. Vorbörsenkurs) und damit klar vom akuten Sektor-Newsrisiko getroffen worden - der Eröffnungsfilter (Aktie fällt >1% bei schwachem Sektor/NASDAQ) greift, Fake-Breakout-Filter bestätigt (Schwäche vs. Sektor). Trotz weiterhin positivem OBV-5T (+53,27 Mio.) keine belastbare institutionelle Bestätigung zur Eröffnung - kein Trade. Palo Alto Networks (298,52 EUR/346,31 USD) setzt die Erholung fort (+4,75% ggü. P4-Kurs, gestützt durch starke Quartalszahlen), bleibt aber weiterhin unter SMA20 (-1,44%) und SMA50 (-0,92%) - das Breakout-Level (SMA20-Zone ca. 351 USD) wurde beim Open nicht zurückerobert, institutionelle Bestätigung durch Volumen zur Eröffnung laut Datenbasis nicht verfügbar (bekannte Datenlücke Intraday-Volumenfenster) - Setup vorhanden, aber unbestätigt (Klassifikation B), kein Trade. Die übrigen sieben P4-Kandidaten (Caterpillar, Northrop Grumman, Broadcom, Apple, Intuitive Surgical, RTX Corporation, Microsoft) zeigen zur Eröffnung keine neue institutionelle Bestätigung; Caterpillar und Broadcom wurden zusätzlich von der allgemeinen Marktschwäche (Industrials/Russell 2000 bzw. Halbleiter-Sektorschock) getroffen und notieren nun deutlich unter ihren gleitenden Durchschnitten. SEKTOR-ROTATIONS-BESTÄTIGUNG (Punkt 4): Semiconductors/AI von Verdachtsfall zu bestätigtem Schwächesektor geworden (SOX -4,63% 5T, klar unter SMA20/50). Cybersecurity bleibt einziger Sektor mit echtem fundamentalem und technischem Rückenwind. Industrials von 'positiv' auf 'negativ' herabgestuft, da Caterpillar zur Eröffnung die SMA20-Unterstützung verloren hat. LANG & SCHWARZ HANDELSCHECK (Punkt 7): entfällt, da kein Kandidat die vorgelagerten Kriterien erfüllt. FINALE AUSWAHL (Punkt 11): Im Risk-Off-Regime sind nur Ausnahme-Setups zulässig - kein Kandidat erreicht die dafür nötige A/A+-Klassifikation mit vollständig bestätigtem institutionellem Flow. GESAMTEINSCHÄTZUNG: RISK-OFF - KI-Sicherheitswarnung hat den Chip-Sektor zur Eröffnung real getroffen (AMD-Breakout gescheitert, SOX unter GD20/GD50), Marktbreite bleibt schwach (Russell 2000 überverkauft), zusätzlicher Gegenwind durch Ölpreis-Schock und steigende Fed-Zinserhöhungswahrscheinlichkeit. Kein Trade - Kapitalerhalt hat Vorrang. Palo Alto Networks bleibt der einzige Beobachtungskandidat für eine mögliche Bestätigung im Tagesverlauf (P5.5).",
+  "kurzbegruendung": "RISK-OFF: Chip-Ausverkauf durch KI-Sicherheitswarnung bestätigt sich zur Eröffnung (SOX -4,6% 5T), Nasdaq/Russell unter GD20, Ölpreis-Schock vor Fed. Kein Trade - Kapitalerhalt hat Vorrang.",
   "sektor_rotation": [
     {
       "sektor": "Semiconductors/AI",
       "trend": "negativ",
-      "kommentar": "Auf 5-Tage-Basis mit +3,35% Durchschnitt (SOX-Proxy 5T +4,95%) rein rechnerisch weiterhin der stärkste Sektor, getragen fast ausschließlich von AMD (444,90 EUR, +13,15% 5T, OBV-5T +72,99 Mio.) - allerdings ohne Volumenbestätigung des Breakouts (+5,46% statt ≥40% über Ø). NVIDIA (188,16 EUR) bleibt mit dem klar negativsten OBV-5T-Trend der gesamten Watchlist (-265,14 Mio.) in tiefer institutioneller Distribution. Broadcom (312,04 EUR) mit leicht positivem OBV (+34,56 Mio.), aber weiterhin unter SMA50. Akutes Risiko für den gesamten Sektor: Laut Presseberichten brachen Halbleiterwerte (Marvell -7,59%, Lam Research -8%) im Vorbörsenhandel nach einer KI-Sicherheitswarnung von Anthropic-CEO Dario Amodei ein - dieser Nachrichtenschock ist in den obigen 5-Tage-Kennzahlen noch nicht abgebildet und stellt die Sektor-Führung akut infrage.",
+      "kommentar": "Zur US-Eröffnung hat sich das vorbörsliche Warnsignal voll bestätigt: SOX-Proxy jetzt -4,27%/-6,48% unter SMA20/50, 5T -4,63%. NVIDIA (180,74 EUR/209,68 USD) mit weiterhin klar negativem OBV-5T-Trend (-400,77 Mio.) in tiefer institutioneller Distribution und -8,98% auf 5-Tage-Sicht - stärkster Verlierer der Watchlist. AMD (417,39 EUR/484,21 USD) fiel zur Eröffnung ca. -6% unter das Vorbörsenniveau, Breakout-Versuch damit gescheitert (Eröffnungsfilter/Fake-Breakout-Filter greifen), trotz weiterhin positivem OBV-5T (+53,27 Mio.). Broadcom (299,52 EUR/347,48 USD) ebenfalls von der Sektorschwäche erfasst, jetzt -4,86%/-9,23% unter SMA20/50.",
       "kandidaten": [
         { "name": "AMD (Advanced Micro Devices)", "empfehlung": "Halten" },
         { "name": "NVIDIA", "empfehlung": "Verkauf" },
-        { "name": "Broadcom", "empfehlung": "Halten" }
+        { "name": "Broadcom", "empfehlung": "Verkauf" }
       ]
     },
     {
       "sektor": "Cybersecurity",
       "trend": "positiv",
-      "kommentar": "Palo Alto Networks (284,98 EUR) notiert zwar weiterhin -6,40%/-5,41% unter SMA20/50, zeigt aber bei unterdurchschnittlichem Volumen (-22,8% unter Ø) einen positiven OBV-5T-Trend (+7,34 Mio.) - Muster einer stillen Akkumulation. Gestützt wird dies durch einen positiven externen Katalysator: Cybersecurity-Werte (u.a. CrowdStrike, Palo Alto Networks) legten laut Presseberichten nach starken Quartalszahlen zuletzt deutlich zu - der einzige Sektor mit sowohl technischem als auch fundamentalem Rückenwind heute.",
+      "kommentar": "Palo Alto Networks (298,52 EUR/346,31 USD) setzt die Erholung nach starken Quartalszahlen fort (+4,75% ggü. P4-Kurs, 5T +3,92%), mit positivem OBV-5T-Trend (+1,72 Mio.). Bleibt aber weiterhin -1,44%/-0,92% unter SMA20/50 - Breakout-Level noch nicht zurückerobert, einziger Sektor mit sowohl technischem als auch fundamentalem Rückenwind im schwachen Gesamtmarkt.",
       "kandidaten": [
         { "name": "Palo Alto Networks", "empfehlung": "Kauf" }
       ]
@@ -25,26 +25,26 @@
     {
       "sektor": "Software/Cloud",
       "trend": "negativ",
-      "kommentar": "Sektor bleibt in breiter institutioneller Distribution: Microsoft (427,15 EUR, OBV-5T -19,32 Mio., 5T -2,84%), Salesforce (213,53 EUR, RSI14 71,2 überkauft, OBV kumuliert -134,68 Mio., zusätzlich +24,73% über SMA50 - Anti-Bulltrap-Warnsignal) und ServiceNow (114,24 EUR, OBV-5T -13,24 Mio., 5T -8,97%) zeigen anhaltenden Kapitalabfluss. Oracle (129,54 EUR, Depotposition) mit stark negativem OBV (kumuliert -797,02 Mio., 5T-Trend -99,64 Mio.) bei rund 3-fach erhöhtem Handelsvolumen (79,52 Mio. vs. Ø 26,68 Mio.) - deutliches Distributionssignal.",
+      "kommentar": "Salesforce (219,95 EUR/255,16 USD) mit RSI14 73,47 klar überkauft und +27,33% über SMA50 - deutliches Anti-Bulltrap-Warnsignal, OBV-5T-Trend negativ (-30,32 Mio.). ServiceNow (120,68 EUR/140,00 USD) mit leicht negativem OBV-5T (-0,67 Mio.). Oracle (121,59 EUR/141,06 USD, Depotposition) mit stark negativem OBV-5T-Trend (-126,32 Mio.) und 5T -11,16% - deutliches fortgesetztes Distributionssignal. Microsoft (428,18 EUR/496,72 USD) mit nur noch leicht negativem OBV-5T (-1,17 Mio.), Kurs klar über SMA50 (+8,98%).",
       "kandidaten": [
         { "name": "Oracle", "empfehlung": "Verkauf" },
-        { "name": "Microsoft", "empfehlung": "Verkauf" },
+        { "name": "Salesforce", "empfehlung": "Verkauf" },
         { "name": "ServiceNow", "empfehlung": "Verkauf" },
-        { "name": "Salesforce", "empfehlung": "Verkauf" }
+        { "name": "Microsoft", "empfehlung": "Halten" }
       ]
     },
     {
       "sektor": "Technology",
-      "trend": "negativ",
-      "kommentar": "Apple (286,42 EUR) mit RSI14 70,62 knapp unter überkauft und klar negativem OBV-5T-Trend (-20,05 Mio.) trotz steigendem Kurs (+1,24% 5T) und erhöhtem Volumen (+19,1% über Ø) - eine der deutlichsten bearishen Preis-Volumen-Divergenzen der Watchlist.",
+      "trend": "neutral",
+      "kommentar": "Apple (285,69 EUR/331,43 USD) mit RSI14 69,02 weiterhin nahe der Überkauft-Schwelle (72) und +4,26% über SMA20 - OBV-5T-Trend hat sich von negativ auf positiv gedreht (+19,45 Mio.), damit vorerst keine akute bearishe Divergenz mehr, aber die Überdehnung bleibt ein Risiko für neue Käufe.",
       "kandidaten": [
-        { "name": "Apple", "empfehlung": "Verkauf" }
+        { "name": "Apple", "empfehlung": "Halten" }
       ]
     },
     {
       "sektor": "Defense",
       "trend": "negativ",
-      "kommentar": "Lockheed Martin (451,85 EUR, RSI14 29,3) und Northrop Grumman (447,35 EUR, RSI14 27,3) bleiben beide tief überverkauft und unter SMA20/50. Northrop zeigt eine minimale positive OBV-Divergenz (+1,12 Mio.), aber ohne Volumenbestätigung - kein belastbares institutionelles Kaufinteresse.",
+      "kommentar": "Lockheed Martin (453,47 EUR/526,07 USD, RSI14 30,26) und Northrop Grumman (450,58 EUR/522,72 USD, RSI14 31,72) bleiben beide überverkauft und unter SMA20/50, ohne belastbare Volumenbestätigung einer Bodenbildung.",
       "kandidaten": [
         { "name": "Lockheed Martin", "empfehlung": "Verkauf" },
         { "name": "Northrop Grumman", "empfehlung": "Halten" }
@@ -53,7 +53,7 @@
     {
       "sektor": "Defense/Industrials",
       "trend": "negativ",
-      "kommentar": "RTX Corporation (170,40 EUR) mit RSI14 21,94 extrem überverkauft, -5,34% unter SMA20, OBV-5T weiterhin klar negativ (-10,77 Mio.) - trotz extremer Überverkauftheit kein Reversal-Signal erkennbar.",
+      "kommentar": "RTX Corporation (168,76 EUR/195,80 USD) mit RSI14 20,80 extrem überverkauft, OBV-5T weiterhin klar negativ (-7,97 Mio.) - fortgesetzte Distribution trotz extremer Überverkauftheit, kein Reversal-Signal.",
       "kandidaten": [
         { "name": "RTX Corporation", "empfehlung": "Verkauf" }
       ]
@@ -61,7 +61,7 @@
     {
       "sektor": "Healthcare",
       "trend": "negativ",
-      "kommentar": "UnitedHealth Group (326,78 EUR) mit negativem OBV-5T-Trend (-18,07 Mio.), Kurs unter SMA20 (-3,83%) und SMA50 (-7,35%), 5T -5,45% - keine institutionelle Akkumulation erkennbar.",
+      "kommentar": "UnitedHealth Group (329,64 EUR/382,46 USD) mit negativem OBV-5T-Trend (-12,50 Mio.), unter SMA20 (-2,74%) und SMA50 (-6,33%), 5T -3,70% - keine institutionelle Akkumulation erkennbar.",
       "kandidaten": [
         { "name": "UnitedHealth Group", "empfehlung": "Verkauf" }
       ]
@@ -69,7 +69,7 @@
     {
       "sektor": "MedTech",
       "trend": "neutral",
-      "kommentar": "Intuitive Surgical (318,13 EUR) mit leicht positivem OBV-5T-Trend (+3,87 Mio.) bei überdurchschnittlichem Volumen (+48,4% über Ø), RSI14 43,3, knapp unter SMA20 (-1,17%) - kurzfristige Stabilisierung, aber strukturell weiterhin -19,7% unter der SMA200 - der langfristige Abwärtstrend überwiegt.",
+      "kommentar": "Intuitive Surgical (323,47 EUR/375,25 USD) mit positivem OBV-5T-Trend (+5,95 Mio.), RSI14 51,15, knapp über SMA20 (+0,73%) - kurzfristige Stabilisierung hält an, langfristiger Abwärtstrend (SMA200) bleibt aber die übergeordnete Belastung.",
       "kandidaten": [
         { "name": "Intuitive Surgical", "empfehlung": "Halten" }
       ]
@@ -77,7 +77,7 @@
     {
       "sektor": "Payments",
       "trend": "negativ",
-      "kommentar": "Visa (319,31 EUR, OBV-5T -14,36 Mio., 5T -2,19%) und Mastercard (490,64 EUR, OBV-5T -6,14 Mio., 5T -2,82%) beide mit anhaltend negativem institutionellem Flow.",
+      "kommentar": "Visa (323,84 EUR/375,69 USD, OBV-5T -9,71 Mio.) und Mastercard (497,23 EUR/576,83 USD, OBV-5T -4,36 Mio.) beide weiterhin mit negativem institutionellem Flow, RSI14 42,2 bzw. 32,9.",
       "kandidaten": [
         { "name": "Visa", "empfehlung": "Verkauf" },
         { "name": "Mastercard", "empfehlung": "Verkauf" }
@@ -85,16 +85,16 @@
     },
     {
       "sektor": "Industrials",
-      "trend": "positiv",
-      "kommentar": "Caterpillar (705,61 EUR) hält sich nahezu exakt an der SMA20 (+0,16%) mit leicht positivem OBV-5T-Trend (+2,71 Mio.) und positivem 5-Tage-Kurs (+2,30%), allerdings ohne Volumenbestätigung (-22,3% unter Ø) und weiterhin -4,39% unter SMA50 - moderater, aber noch unbestätigter Stabilisierungsansatz.",
+      "trend": "negativ",
+      "kommentar": "Caterpillar (671,47 EUR/778,97 USD) hat zur Eröffnung die SMA20-Unterstützung klar verloren (-4,23%, zuvor +0,16% im P4-Lauf) und notiert jetzt -8,62% unter SMA50, 5T -4,30% - von der allgemeinen Marktschwäche (Ölpreis-Schock, Russell 2000) erfasst, Stabilisierungsversuch aus dem P4-Lauf ist gescheitert.",
       "kandidaten": [
-        { "name": "Caterpillar", "empfehlung": "Kauf" }
+        { "name": "Caterpillar", "empfehlung": "Verkauf" }
       ]
     },
     {
       "sektor": "Fintech/Brokerage",
       "trend": "negativ",
-      "kommentar": "Robinhood (97,04 EUR, Depotposition) mit klar negativem OBV-5T-Trend (-104,71 Mio.) bei einem 5-Tage-Kursrückgang von -9,74% - fortgesetzte Distribution, keine Verbesserung erkennbar.",
+      "kommentar": "Robinhood (98,48 EUR/114,25 USD, Depotposition) mit klar negativem OBV-5T-Trend (-80,91 Mio.), 5T -6,44% - fortgesetzte Distribution.",
       "kandidaten": [
         { "name": "Robinhood", "empfehlung": "Verkauf" }
       ]
