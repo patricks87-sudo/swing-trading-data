@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-14T15:45:37Z",
+  "generated_at_utc": "2026-09-15T17:40:00Z",
   "kandidaten": [
     {
       "ticker": "LMT",
@@ -11,7 +11,7 @@
       "aufnahme_kurs_usd": 606.72,
       "aufnahme_kurs_eur": 526.03,
       "aktueller_kurs_usd": 562.03,
-      "aktueller_kurs_eur": 482.30,
+      "aktueller_kurs_eur": 482.3,
       "performance_pct": -7.37,
       "handelstage_in_liste": 12,
       "status": "ausgeschieden (zeitlimit)",
@@ -26,7 +26,7 @@
       "aufnahmequelle": "P4",
       "aufnahme_score": "hoch",
       "aufnahme_kurs_usd": 574.31,
-      "aufnahme_kurs_eur": 496.20,
+      "aufnahme_kurs_eur": 496.2,
       "aktueller_kurs_usd": 566.81,
       "aktueller_kurs_eur": 487.46,
       "performance_pct": -1.31,
@@ -265,13 +265,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 338.49,
       "aufnahme_kurs_eur": 291.44,
-      "aktueller_kurs_usd": 372.52,
-      "aktueller_kurs_eur": 321.09,
-      "performance_pct": 10.06,
-      "handelstage_in_liste": 2,
+      "aktueller_kurs_usd": 372.71,
+      "aktueller_kurs_eur": 322.77,
+      "performance_pct": 10.75,
+      "handelstage_in_liste": 3,
       "status": "aktiv",
-      "empfehlung": "Kauf",
-      "letzte_einschaetzung": "Hochstufung von Verkauf auf Kauf: Institutional Hold Test (P5.5) heute klar bestanden - seit dem P5-Open beide gleitenden Durchschnitte souverän zurückerobert (SMA20 +5,63%, SMA50 +6,42%), OBV-5T-Trend über alle vier Tagesläufe (P4->P1) durchgehend positiv und stabil, 5-Tage-Momentum beschleunigt auf +11,78%. Fundamental gestützt durch die bestätigte Cybersecurity-Sektorrotation im Zuge der KI-Sicherheitsdebatte. Performance seit Aufnahme +10,06%. P1 wählt Palo Alto Networks als einzige neue Position des Tages (Tradingplan: Kaufen über 320,89€, Stop 300,84€)."
+      "empfehlung": "Halten",
+      "letzte_einschaetzung": "Institutional Hold Test bleibt bestanden: Kurs haelt deutlich ueber SMA20 (+5,71%) und SMA50 (+6,38%), OBV-5-Tage-Trend stabil positiv (+7,46 Mio.), RSI14 58,83 unauffaellig. Seit dem P5.5-Check praktisch unveraendert - kein neuer Ausbruchsimpuls, Konsolidierung statt neuer Tageshochs. Nach dem starken Lauf (+10,75% seit Aufnahme) aktuell kein attraktives CRV fuer einen frischen Einstieg, zusaetzlich FOMC-Zinsentscheid morgen (16.09., Zinserhoehung laut aktueller Recherche inzwischen zu 92,7% eingepreist). Kein Trade heute, weiter beobachten auf Pullback Richtung SMA20-Zone (~305 EUR)."
     },
     {
       "ticker": "CAT",
@@ -282,13 +282,64 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 786.54,
       "aufnahme_kurs_eur": 677.96,
-      "aktueller_kurs_usd": 786.54,
-      "aktueller_kurs_eur": 677.96,
-      "performance_pct": 0.0,
+      "aktueller_kurs_usd": 782.035,
+      "aktueller_kurs_eur": 677.24,
+      "performance_pct": -0.11,
+      "handelstage_in_liste": 2,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Invalidiert: Institutional Hold Test bereits am Aufnahmetag nicht bestanden und seither keine Verbesserung - Kurs bleibt klar unter SMA20 (-3,29%) und SMA50 (-7,87%), OBV-5-Tage-Trend ist von leicht positiv (+0,51 Mio.) auf negativ (-4,36 Mio.) gedreht - keine institutionelle Bestaetigung, Distributionssignal statt Akkumulation. These gemaess Rotationsregel invalidiert, rotiert aus der aktiven Liste."
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD (Advanced Micro Devices)",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-09-15",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 493.41,
+      "aufnahme_kurs_eur": 427.29,
+      "aktueller_kurs_usd": 503.6,
+      "aktueller_kurs_eur": 436.12,
+      "performance_pct": 2.07,
       "handelstage_in_liste": 1,
       "status": "aktiv",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Neu aufgenommen (P4-Score mittel, moderater Aufwärtsimpuls nahe SMA20 bei unterdurchschnittlichem Volumen). Institutional Hold Test (P5.5) am Aufnahmetag jedoch bereits nicht bestanden: Kurs bleibt klar unter SMA20 (-3,34%) und SMA50 (-7,75%), OBV-5T-Trend nahezu neutral (+0,51 Mio.) - keine institutionelle Bestätigung, kein Kaufsignal heute."
+      "letzte_einschaetzung": "Neu aufgenommen (P4-Score mittel, isolierte OBV-Staerke bei knapp verfehltem Volumenkriterium). Institutional Hold Test (P5.5) am Aufnahmetag bereits nicht bestanden: OBV-5-Tage-Trend von +28,57 Mio. (P4) auf nur noch +0,66 Mio. eingebrochen, Sektor bestaetigt weiterhin nicht (SOX-Proxy 5T -5,48%, klar schwaecher als NASDAQ). Kein Kaufsignal heute."
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "aufnahmedatum": "2026-09-15",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 333.08,
+      "aufnahme_kurs_eur": 288.45,
+      "aktueller_kurs_usd": 329.55,
+      "aktueller_kurs_eur": 285.39,
+      "performance_pct": -1.06,
+      "handelstage_in_liste": 1,
+      "status": "aktiv",
+      "empfehlung": "Halten",
+      "letzte_einschaetzung": "Neu aufgenommen (P4-Score mittel). Staerkster OBV-5-Tage-Trend der gesamten Watchlist (+93,91 Mio.), Kurs haelt ueber SMA20/50 (+3,25%/+3,37%), RSI14 66,80 noch unter der Anti-Bulltrap-Schwelle. Gesunde Akkumulation ohne Ausbruchstrigger - kein Setup fuer eine Kaufempfehlung heute, aber staerkster Beobachtungskandidat neben Palo Alto Networks."
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-09-15",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 142.35,
+      "aufnahme_kurs_eur": 123.28,
+      "aktueller_kurs_usd": 144.77,
+      "aktueller_kurs_eur": 125.37,
+      "performance_pct": 1.7,
+      "handelstage_in_liste": 1,
+      "status": "aktiv",
+      "empfehlung": "Halten",
+      "letzte_einschaetzung": "Neu aufgenommen (P4-Score mittel). Staerkste Intraday-Dynamik der geprueften Kandidaten, OBV-5-Tage-Trend beschleunigt auf +31,65 Mio., RSI14 62,4 unauffaellig. Strukturell jedoch mit +19,65% klar ueber der 15%-Anti-Bulltrap-Schwelle zur SMA50 ueberdehnt - ein Anti-Bulltrap-Flag aktiv. Kein sauberes Setup heute, weiter beobachten."
     }
   ]
 }
