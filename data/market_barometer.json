@@ -1,31 +1,31 @@
 {
-  "generated_at_utc": "2026-09-16T15:42:29Z",
-  "status": "NEUTRAL",
-  "begruendung": "Marktregime NEUTRAL mit Tendenz Risk-Off. Der zentrale Treiber heute ist der ausstehende FOMC-Zinsentscheid um 20:00 MESZ - Futures-Maerkte preisen mit rund 92,5% Wahrscheinlichkeit die erste Zinserhoehung seit drei Jahren ein, die Marktreaktion haengt massgeblich von der begleitenden Kommunikation von Fed-Chair Kevin Warsh ab. Technisch zeigen NASDAQ (Proxy QQQ, +0,07% ueber SMA50) und S&P 500 (Proxy SPY, +0,12% ueber SMA50) eine Seitwaertsbewegung direkt an der mittelfristigen Trendlinie, beide jedoch weiterhin deutlich ueber der SMA200 (langfristiger Aufwaertstrend intakt). Der Russell 2000 (Proxy IWM) ist mit -2,65%/-3,15% unter SMA20/50 klar schwaecher - die Marktbreite ist duenn, bestaetigt durch die schwache Sitzung vom Vortag (nur rund 32% der Aktien im Plus, ueber 350 neue 52-Wochen-Tiefs). Der SOX-Proxy (SOXX) fällt auf 5-Tage-Sicht um -4,39% und liegt -3,60% unter der SMA50 - Halbleiter bleiben Belastungsfaktor. Der 5-Tage-OBV-Trend ist bei allen vier Aktienindex-Proxies negativ (NASDAQ -66,28 Mio., S&P 500 -86,93 Mio., Russell 2000 -51,50 Mio., SOX-Proxy -6,15 Mio.) - marktweite institutionelle Vorsicht vor dem Zinsentscheid. Gegenlaeufig: VIX bei niedrigen 17,38 (deutlich unter den Warnschwellen 20/25) signalisiert keine Panik, sondern eher Abwarten. Oelpreis bleibt wegen US-Iran-Spannungen ueber 100 USD/Barrel, Anleiherenditen erhoeht. Fazit: Kapitalerhalt hat Vorrang - keine neuen Positionen vor der Fed-Entscheidung, auch wenn einzelne Watchlist-Werte (Palo Alto Networks, Apple) technisch klar fuehren.",
-  "kurzbegruendung": "NEUTRAL/Risk-Off: FOMC-Entscheid heute 20 Uhr MESZ offen, Marktbreite schwach, 5T-OBV negativ - kein Trade vor der Entscheidung.",
+  "generated_at_utc": "2026-09-17T13:00:13Z",
+  "status": "RISK-OFF",
+  "begruendung": "Marktregime RISK-OFF. Der FOMC hat am Vortag (16.09.) den Leitzins um 25 Basispunkte auf 3,75-4,00% angehoben - die erste Erhöhung seit drei Jahren. Fed-Chef Kevin Warsh betonte in der Pressekonferenz anhaltende Inflationsrisiken, woraufhin die Marktreaktion von einer ersten moderat positiven Bewegung in einen Abverkauf drehte (Dow zeitweise -600 Punkte) und die US-Staatsanleihenrendite (10 Jahre) auf rund 5% sprang. Die heutige Sitzung (17.09., P4-Analysezeitpunkt) zeigt eine leichte Stabilisierung, das technische Bild bleibt aber klar angeschlagen: NASDAQ Composite (Proxy QQQ) liegt mit -1,12% unter der SMA20 und der SOX-Proxy (SOXX) fällt auf 5-Tage-Sicht um -5,63% und damit deutlich stärker als der NASDAQ (-1,62%) - beide Kernkriterien der Marktampel nicht erfüllt. Die Marktbreite ist mit nur rund 34% der Aktien über der 50-Tage-Linie (Stand 15.09., externe Recherche, da im Feed nicht enthalten) weit von der 60%-Schwelle für Risk-On entfernt und rutscht damit unter die 35%-Warnschwelle des institutionellen Marktfilters. Die NYSE Advance/Decline-Linie ist im automatischen Feed nicht verfügbar (bekannte Datenlücke) - angesichts der schwachen Marktbreite ist jedoch von einem negativen A/D-Verhältnis auszugehen. Einziges Gegenargument: VIX bei 17,67 knapp unter der 18er-Schwelle, also keine akute Panik, sondern eher Unsicherheit nach dem Zinsentscheid. In Summe sind mindestens 3 von 5 Marktampel-Kriterien verletzt (Risk-Off: 3+ Kriterien) und mindestens 3 von 5 Kriterien des verpflichtenden institutionellen Marktfilters (Abschnitt 15B: NASDAQ unter 20-DMA, SOX schwächer als NASDAQ, Marktbreite unter 35%) - dieser Filter blockiert damit zwingend jede Kaufempfehlung, unabhängig von der Ampel-Regel 'maximal eine Kaufempfehlung' im Risk-Off-Fall. Auf Einzeltitelebene bleiben Palo Alto Networks (Cybersecurity, +12,10% 5T, OBV klar positiv) und Apple (Technology, stärkster OBV-5-Tage-Trend der Watchlist) technisch die führenden Werte, dürfen aber wegen des Marktfilter-Blocks heute nicht als Kauf empfohlen werden. Defensive Sektoren aus der Watchlist (Defense: Lockheed Martin, Northrop Grumman) zeigen nur eine schwache Erholung von überverkauften RSI-Niveaus ohne bestätigten Boden; Utilities, Insurance und Infrastructure sind in der 16-Werte-Watchlist nicht abgedeckt (Datenlücke). Depotfilter: Die bestehende Position Oracle (Software/Cloud) liegt bei aktuellem Kurs rechnerisch rund -23% im Buchverlust (Kauf 162,24 EUR, aktuell ca. 124,41 EUR), Robinhood rund -9% (Kauf 99,88 EUR, aktuell ca. 90,74 EUR) - beide mit klar negativem 5-Tage-OBV-Trend. Nur eine Position liegt über der 10%-Verlustschwelle, die formale 'keine neue Position bei 2+ Positionen mit >10% Buchverlust'-Regel greift damit noch nicht, verstärkt aber zusätzlich die Kapitalerhalt-Priorität. Fazit: Kein Trade heute - Kapitalerhalt hat Vorrang.",
+  "kurzbegruendung": "RISK-OFF: Fed-Zinserhöhung auf 3,75-4%, Renditen bei 5%, Marktbreite schwach (~34% über 50-DMA), NASDAQ/SOX unter Trigger - Marktfilter blockiert jeden Trade heute.",
   "sektor_rotation": [
     {
       "sektor": "Technology",
       "trend": "positiv",
-      "kommentar": "Apple mit +5,54% auf 5-Tage-Sicht und dem staerksten OBV-5-Tage-Trend der gesamten Watchlist (+128,73 Mio.) klar fuehrend, haelt deutlich ueber SMA20/50.",
+      "kommentar": "Apple mit +5,41% auf 5-Tage-Sicht und dem mit Abstand stärksten OBV-5-Tage-Trend der gesamten Watchlist (+164,17 Mio.) weiterhin klar führend, RSI14 mit 67,48 aber bereits erhöht.",
       "kandidaten": [
-        {"name": "Apple", "empfehlung": "Kauf"}
+        {"name": "Apple", "empfehlung": "Halten"}
       ]
     },
     {
       "sektor": "Semiconductors/AI",
       "trend": "negativ",
-      "kommentar": "Durchgehend negativer OBV-5-Tage-Trend bei NVIDIA (-238,36 Mio.), AMD (-4,43 Mio.) und Broadcom (-59,81 Mio.), SOX-Proxy -4,39% auf 5-Tage-Sicht und -3,60% unter SMA50 - institutionelle Distribution ueberwiegt trotz vereinzelt fester Kurse.",
+      "kommentar": "SOX-Proxy fällt auf 5-Tage-Sicht um -5,63% und liegt damit deutlich schwächer als der NASDAQ. NVIDIA (OBV-5-Tage-Trend -142,96 Mio.) und Broadcom (-6,83% 5T, OBV -37,21 Mio.) klar in institutioneller Distribution, AMD trotz isoliert positivem OBV-Trend ohne Sektor-Bestätigung.",
       "kandidaten": [
         {"name": "NVIDIA", "empfehlung": "Verkauf"},
-        {"name": "AMD (Advanced Micro Devices)", "empfehlung": "Verkauf"},
+        {"name": "AMD (Advanced Micro Devices)", "empfehlung": "Halten"},
         {"name": "Broadcom", "empfehlung": "Verkauf"}
       ]
     },
     {
       "sektor": "Software/Cloud",
       "trend": "neutral",
-      "kommentar": "Uneinheitliches Bild: Microsoft und ServiceNow mit stabilem positivem OBV-Trend, Salesforce per Anti-Bulltrap-Filter ausgeschlossen (RSI14 71,38, SMA50-Ueberdehnung +23,29%), Oracle mit dem staerksten negativen OBV-5-Tage-Trend der gesamten Watchlist (-210,11 Mio.) und Kurs unter SMA200 klar der Schwachpunkt des Sektors.",
+      "kommentar": "Uneinheitliches Bild: Microsoft und ServiceNow mit stabilem positivem OBV-Trend, Salesforce per Anti-Bulltrap-Filter ausgeschlossen (Abstand SMA50 +22,88%, bearishe OBV-Divergenz), Oracle (Depotposition) mit deutlich negativem 5-Tage-OBV-Trend und rechnerisch rund -23% Buchverlust klar der Schwachpunkt des Sektors.",
       "kandidaten": [
         {"name": "Microsoft", "empfehlung": "Halten"},
         {"name": "Salesforce", "empfehlung": "Verkauf"},
@@ -36,15 +36,15 @@
     {
       "sektor": "Cybersecurity",
       "trend": "positiv",
-      "kommentar": "Palo Alto Networks bleibt mit +13,21% auf 5-Tage-Sicht und stabil positivem OBV-Trend (+18,59 Mio.) der staerkste Wert der gesamten Watchlist, zusaetzlich von Wall-Street-Kurszielerhoehungen wegen des KI-Sicherheitsbooms unterstuetzt.",
+      "kommentar": "Palo Alto Networks bleibt mit +12,10% auf 5-Tage-Sicht und stabil positivem OBV-Trend (+23,74 Mio.) der technisch stärkste Wert der gesamten Watchlist - trotzdem heute wegen des Marktfilter-Blocks keine Kaufempfehlung.",
       "kandidaten": [
-        {"name": "Palo Alto Networks", "empfehlung": "Kauf"}
+        {"name": "Palo Alto Networks", "empfehlung": "Halten"}
       ]
     },
     {
       "sektor": "Defense",
       "trend": "neutral",
-      "kommentar": "Lockheed Martin und Northrop Grumman erholen sich leicht von ueberverkauften RSI-Niveaus (RSI14 35,3 bzw. 38,4) mit moderat positivem OBV-Trend, halten aber weiterhin unter SMA20/50 - keine bestaetigte Trendwende.",
+      "kommentar": "Lockheed Martin und Northrop Grumman erholen sich leicht von überverkauften RSI-Niveaus (34,4 bzw. 35,8) mit moderat positivem OBV-Trend, halten aber weiterhin unter SMA20/50 - keine bestätigte Trendwende, defensive Beobachtungskandidaten im Risk-Off-Umfeld.",
       "kandidaten": [
         {"name": "Lockheed Martin", "empfehlung": "Halten"},
         {"name": "Northrop Grumman", "empfehlung": "Halten"}
@@ -52,16 +52,16 @@
     },
     {
       "sektor": "Defense/Industrials",
-      "trend": "negativ",
-      "kommentar": "RTX Corporation mit RSI14 17,18 extrem ueberverkauft, aber ohne bestaetigte institutionelle Akkumulation und weiterhin klar unter SMA20/50 - kein Boden erkennbar.",
+      "trend": "neutral",
+      "kommentar": "RTX Corporation mit RSI14 15,79 extrem überverkauft, OBV-Gesamtniveau aber weiterhin klar negativ - keine bestätigte institutionelle Akkumulation, kein Boden erkennbar.",
       "kandidaten": [
-        {"name": "RTX Corporation", "empfehlung": "Verkauf"}
+        {"name": "RTX Corporation", "empfehlung": "Halten"}
       ]
     },
     {
       "sektor": "Industrials",
       "trend": "negativ",
-      "kommentar": "Caterpillar mit -3,33% auf 5-Tage-Sicht und negativem OBV-Trend (-4,62 Mio.), Kurs unter SMA20/50 - kein Akkumulationssignal.",
+      "kommentar": "Caterpillar mit -4,03% auf 5-Tage-Sicht und negativem OBV-Trend (-7,29 Mio.), Kurs unter SMA20/50 - kein Akkumulationssignal, fortgesetzte Schwäche.",
       "kandidaten": [
         {"name": "Caterpillar", "empfehlung": "Verkauf"}
       ]
@@ -69,7 +69,7 @@
     {
       "sektor": "Healthcare",
       "trend": "negativ",
-      "kommentar": "UnitedHealth Group mit -3,55% auf 5-Tage-Sicht, negativem OBV-Trend (-11,68 Mio.) und Kurs unter SMA20/50 weiterhin schwach.",
+      "kommentar": "UnitedHealth Group mit -4,53% auf 5-Tage-Sicht, negativem OBV-Trend (-16,15 Mio.) und Kurs klar unter SMA20/50 - weiterhin schwach, RSI14 bei 30,23 überverkauft ohne Stabilisierung.",
       "kandidaten": [
         {"name": "UnitedHealth Group", "empfehlung": "Verkauf"}
       ]
@@ -77,7 +77,7 @@
     {
       "sektor": "MedTech",
       "trend": "positiv",
-      "kommentar": "Intuitive Surgical mit +9,34% auf 5-Tage-Sicht und positivem OBV-Trend erholt sich kraeftig, bleibt aber strukturell deutlich unter der SMA200 - kein sauberes Setup.",
+      "kommentar": "Intuitive Surgical mit +8,22% auf 5-Tage-Sicht und positivem OBV-Trend erholt sich kräftig, bleibt aber strukturell rund -16% unter der SMA200 - kein sauberes Setup.",
       "kandidaten": [
         {"name": "Intuitive Surgical", "empfehlung": "Halten"}
       ]
@@ -85,7 +85,7 @@
     {
       "sektor": "Payments",
       "trend": "neutral",
-      "kommentar": "Visa und Mastercard mit ueberverkauften RSI-Werten (36,6 bzw. 29,2) und nur leicht positivem/flachem OBV-Trend - kein klarer Katalysator.",
+      "kommentar": "Visa und Mastercard mit überverkauften RSI-Werten (35,9 bzw. 28,1) und nur leicht positivem/negativem OBV-Trend - kein klarer Katalysator in beide Richtungen.",
       "kandidaten": [
         {"name": "Visa", "empfehlung": "Halten"},
         {"name": "Mastercard", "empfehlung": "Halten"}
@@ -94,7 +94,7 @@
     {
       "sektor": "Fintech/Brokerage",
       "trend": "negativ",
-      "kommentar": "Robinhood mit -8,95% auf 5-Tage-Sicht und deutlich negativem OBV-Trend (-48,16 Mio.) unter Druck, Kurs unter SMA20 gefallen - bestehende Depotposition mit Teilverkauf-Empfehlung.",
+      "kommentar": "Robinhood (Depotposition) mit -9,42% auf 5-Tage-Sicht und deutlich negativem OBV-Trend (-81,44 Mio.) unter Druck, rechnerisch rund -9% Buchverlust seit Kauf.",
       "kandidaten": [
         {"name": "Robinhood", "empfehlung": "Verkauf"}
       ]
