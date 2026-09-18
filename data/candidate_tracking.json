@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-17T15:50:00Z",
+  "generated_at_utc": "2026-09-18T15:53:00Z",
   "kandidaten": [
     {
       "ticker": "LMT",
@@ -118,7 +118,7 @@
       "handelstage_in_liste": 10,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert (bestehende Depotposition separat in data/portfolio_bewertung.json bewertet: Verkaufen empfohlen)."
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert (bestehende Depotposition separat in data/portfolio_bewertung.json bewertet)."
     },
     {
       "ticker": "CRM",
@@ -169,7 +169,7 @@
       "handelstage_in_liste": 8,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert. Die bestehende Depotposition (10 Stück) wird davon unberührt separat in data/portfolio_bewertung.json bewertet: weiterhin Verkaufen (Post-Earnings-Kaufimpuls verpufft, Kurs unter SMA200)."
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert. Die bestehende Depotposition (10 Stück) wird davon unberührt separat in data/portfolio_bewertung.json bewertet."
     },
     {
       "ticker": "AMD",
@@ -186,7 +186,7 @@
       "handelstage_in_liste": 3,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert. Siehe separater Eintrag vom 09.09.2026 unten (aktiv, aktuell Kauf)."
+      "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert. Siehe separater Eintrag vom 15.09.2026 unten (aktiv)."
     },
     {
       "ticker": "UNH",
@@ -237,7 +237,7 @@
       "handelstage_in_liste": 4,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Invalidiert: Institutional Hold Test (P5.5) heute nicht bestanden - Kurs mit -1,25% unter die SMA50 gefallen, 5-Tage-Momentum von +13,15% (P4-Screening) auf nur noch +1,64% eingebrochen, Breakout-Versuch bereits beim US-Open gescheitert. OBV-5T-Trend zwar weiterhin positiv (+52,85 Mio.), aber ohne neue Kaufdynamik. Performance seit Aufnahme -3,16%. These gemäß Rotationsregel invalidiert, rotiert aus der aktiven Liste. Zusätzliches Sektorrisiko durch anhaltende SOX-Schwäche."
+      "letzte_einschaetzung": "Invalidiert: Institutional Hold Test (P5.5) nicht bestanden - Kurs mit -1,25% unter die SMA50 gefallen, 5-Tage-Momentum von +13,15% (P4-Screening) auf nur noch +1,64% eingebrochen, Breakout-Versuch bereits beim US-Open gescheitert. OBV-5T-Trend zwar weiterhin positiv (+52,85 Mio.), aber ohne neue Kaufdynamik. Performance seit Aufnahme -3,16%. These gemäß Rotationsregel invalidiert, rotiert aus der aktiven Liste. Zusätzliches Sektorrisiko durch anhaltende SOX-Schwäche."
     },
     {
       "ticker": "UNH",
@@ -265,13 +265,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 338.49,
       "aufnahme_kurs_eur": 291.44,
-      "aktueller_kurs_usd": 376.55,
-      "aktueller_kurs_eur": 327.24,
-      "performance_pct": 11.24,
-      "handelstage_in_liste": 5,
+      "aktueller_kurs_usd": 360.46,
+      "aktueller_kurs_eur": 313.96,
+      "performance_pct": 6.49,
+      "handelstage_in_liste": 6,
       "status": "aktiv",
       "empfehlung": "Kauf",
-      "letzte_einschaetzung": "P1-Update: Kurs weiter auf 376,55 USD (327,24 EUR) gestiegen (+11,24% seit Aufnahme), OBV-5-Tage-Trend bleibt mit +19,17 Mio. stabil positiv, RSI14 47,80 unauffällig nach Abkühlung vom P4-Hoch - weiterhin stärkster Kandidat der Watchlist, Einstieg aber nach wie vor durch den übergeordneten institutionellen Marktfilter (SOX schwächer als NASDAQ, Marktbreite ~34%) blockiert."
+      "letzte_einschaetzung": "P1-Update: Kurs vom Tageshoch (376,55 USD, P4/Vortag) auf 360,46 USD (313,96 EUR) zurueckgefallen, bleibt aber mit +6,49% seit Aufnahme weiter im Plus. OBV-5-Tage-Trend weiterhin klar positiv (+17,36 Mio.), RSI14 46,19 neutral, kein Anti-Bulltrap-Kriterium verletzt, Kurs bleibt ueber SMA50 (+2,2%). Institutional Hold Test (P5.5) heute nicht bestanden (Kurs fiel unter das P4-Niveau zurueck, Cybersecurity zaehlte laut Marktberichten zu den schwaechsten Sektoren des 'Hexensabbat'-Freitags), These aber nicht invalidiert. Einstieg bleibt durch den uebergeordneten institutionellen Marktfilter (Risk-Off, SOX schwaecher als NASDAQ, schwache Marktbreite) blockiert - weiterhin bester Einzeltitel-Setup der Watchlist, Watch-Level bei Stabilisierung Richtung SMA20-Zone (~354 USD / ~308 EUR)."
     },
     {
       "ticker": "CAT",
@@ -299,13 +299,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 493.41,
       "aufnahme_kurs_eur": 427.29,
-      "aktueller_kurs_usd": 543.75,
-      "aktueller_kurs_eur": 472.52,
+      "aktueller_kurs_usd": 543.73,
+      "aktueller_kurs_eur": 473.61,
       "performance_pct": 10.2,
-      "handelstage_in_liste": 3,
+      "handelstage_in_liste": 4,
       "status": "aktiv",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "P1-Update: Kurs weiter auf 543,75 USD (472,52 EUR) gestiegen (+10,20% seit Aufnahme), Abstand SMA20 mit +11,84% klar ueber der 8%-Warnschwelle (Ueberdehnung), RSI14 66,87 naehert sich der 72er-Schwelle. Institutional Hold Test (P5.5) heute nicht bestanden: Sektor bestaetigt weiterhin nicht (SOX-Proxy 5T nur +0,13%, NVIDIA OBV -35,69 Mio., Broadcom OBV -12,94 Mio., beide in Distribution) - isoliertes, ueberdehntes Setup ohne Sektor-Rueckhalt, technisch geschwaechte These, aus aktiver Beobachtung nehmen empfohlen."
+      "letzte_einschaetzung": "P1-Update: Kurs stagniert bei 543,73 USD (473,61 EUR, +10,20% seit Aufnahme, praktisch unveraendert zum Vortag). RSI14 mit 70,52 unmittelbar an der 72er-Ueberhitzungsschwelle, Abstand SMA20 mit +10,98% weiterhin klar ueber der 8%-Warnschwelle - Titel bleibt strukturell ueberdehnt. Sektor bestaetigt weiterhin nicht (SOX-Proxy 5T -0,50% schwaecher als NASDAQ +0,23%, Broadcom mit negativem OBV-Trend). These technisch geschwaecht, aus aktiver Beobachtung nehmen weiterhin empfohlen."
     },
     {
       "ticker": "AAPL",
@@ -316,13 +316,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 333.08,
       "aufnahme_kurs_eur": 288.45,
-      "aktueller_kurs_usd": 333.26,
-      "aktueller_kurs_eur": 289.6,
-      "performance_pct": 0.05,
-      "handelstage_in_liste": 3,
+      "aktueller_kurs_usd": 334.645,
+      "aktueller_kurs_eur": 291.48,
+      "performance_pct": 0.47,
+      "handelstage_in_liste": 4,
       "status": "aktiv",
       "empfehlung": "Kauf",
-      "letzte_einschaetzung": "P1-Update: Konsolidiert nahezu unveraendert seit Aufnahme (333,26 USD / 289,60 EUR, +0,05%), OBV-5-Tage-Trend bleibt mit +94,50 Mio. mit Abstand der staerkste Wert der gesamten Watchlist, RSI14 67,32 naehert sich der 72er-Bulltrap-Schwelle - solides, aber wenig dynamisches Setup, Einstieg weiterhin nur durch den institutionellen Marktfilter blockiert."
+      "letzte_einschaetzung": "P1-Update: Kurs nahezu unveraendert bei 334,65 USD (291,48 EUR, +0,47% seit Aufnahme). OBV-5-Tage-Trend bleibt mit +79,56 Mio. mit Abstand der staerkste Wert der gesamten Watchlist - institutionelle Akkumulation haelt an, wenn auch etwas abgeschwaecht ggue. Vorwoche (+94,50 Mio.). RSI14 63,61 neutral-bis-erhoeht, keine akute Ueberhitzung. Solides, aber weiterhin nur durch den institutionellen Marktfilter (Risk-Off) blockiertes Setup."
     },
     {
       "ticker": "NOW",
@@ -333,13 +333,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 142.35,
       "aufnahme_kurs_eur": 123.28,
-      "aktueller_kurs_usd": 139.575,
-      "aktueller_kurs_eur": 121.29,
-      "performance_pct": -1.95,
-      "handelstage_in_liste": 3,
+      "aktueller_kurs_usd": 136.59,
+      "aktueller_kurs_eur": 118.97,
+      "performance_pct": -4.05,
+      "handelstage_in_liste": 4,
       "status": "aktiv",
-      "empfehlung": "Halten",
-      "letzte_einschaetzung": "P1-Update: OBV-5-Tage-Trend bleibt mit nur +3,55 Mio. auf sehr niedrigem Niveau (Einbruch von urspruenglich +17,55 Mio. bei Aufnahme) - institutionelle Nachfrage weiterhin schwach trotz stabilem Kurs (121,29 EUR, -1,95% seit Aufnahme), Abstand SMA50 mit +14,27% knapp unter der 15%-Warnschwelle. Kein sauberes Setup, weiter beobachten."
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "P1-Update: Kurs weiter auf 136,59 USD (118,97 EUR) gefallen (-4,05% seit Aufnahme), naehert sich der SMA20 (Abstand nur noch -0,12%). OBV-5-Tage-Trend hat sich von anfaenglich +17,55 Mio. auf -16,98 Mio. gedreht - klare institutionelle Distribution trotz stabilem 5-Tage-Kurs (+3,06%), klassische bearishe Divergenz. Institutional Hold Test (P5.5) heute erneut nicht bestanden. These zunehmend geschwaecht, Verkauf/aus aktiver Beobachtung nehmen empfohlen, auch wenn Zeit- und Verlustlimit (-8%) noch nicht erreicht sind."
     }
   ]
 }
