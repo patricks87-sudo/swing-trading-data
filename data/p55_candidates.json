@@ -1,36 +1,36 @@
 {
-  "generated_at_utc": "2026-09-17T15:16:06Z",
-  "run_date": "2026-09-17",
+  "generated_at_utc": "2026-09-18T15:14:15Z",
+  "run_date": "2026-09-18",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Palo Alto Networks und Apple bestehen den Institutional Hold Test mit sauberer Erholung bzw. stabiler Konsolidierung, ServiceNow nur teilweise (OBV-Akkumulation bricht trotz Kurserholung ein), AMD fällt durch (>8% über SMA20 überdehnt, Sektor SOX/NVIDIA/Broadcom weiter in Distribution). Institutioneller Marktfilter (SOX schwächer als NASDAQ, Marktbreite <35% angenommen) blockiert zusätzlich jede Empfehlung. Kein Trade - Kapitalerhalt hat Vorrang.",
+  "kurzbegruendung": "Kein Trade: Alle vier P4-Kandidaten geben seit dem US-Open weiter nach, institutionelle Kaufbestätigung fehlt in jedem Fall.",
   "kandidaten": [
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "sector": "Cybersecurity",
-      "status": "Bestanden",
-      "begruendung": "Institutional Hold Test bestanden, mit deutlicher Erholung: Kurs von 326,44 EUR (P4, 14:45 MESZ) über den Rückfall auf 318,67 EUR beim US-Open (P5, -2,4%) bis auf jetzt 328,87 EUR (378,48 USD) gestiegen - damit +0,74% über dem ursprünglichen P4-Niveau und +3,20% über dem Open-Tief. RSI14 erholt sich von 44,7 (P5) auf 48,49, bleibt aber unter dem P4-Niveau von 59,79 und weit unter der 72er-Bulltrap-Schwelle - die Erholung wirkt eher wie ein technischer Rebound als eine neue Kaufwelle. Abstand SMA20 +7,0% (nahe, aber noch unter der 8%-Schwelle), Abstand SMA50 +7,42% (<15%), 5-Tage-Change +11,81% (<15%, aber weiterhin erhöht) - kein Anti-Bulltrap-Kriterium verletzt. OBV-5-Tage-Trend bleibt mit +19,17 Mio. stabil auf dem seit dem US-Open erreichten Niveau (P5: rund +19,05 Mio.) - fortgesetzte, aber nicht beschleunigte institutionelle Akkumulation. Kein separat quantifizierbares Second-Chance-Volumenfenster (16:00-17:00 Uhr) verfügbar (bekannte Datenlücke, Intraday-Volumen); OBV-Trend als Ersatzindikator zeigt Fortsetzung statt Beschleunigung. Sektor Cybersecurity ohne weiteren Watchlist-Titel nicht unabhängig gegenprüfbar (Datenlücke). Bestes Einzel-Setup des Tages, aber weiterhin ohne Kaufempfehlung: Institutioneller Marktfilter (SOX schwächer als NASDAQ, Marktbreite konservativ <35% angenommen) blockiert jede Empfehlung. Bleibt stärkster Beobachtungskandidat für P1 und den nächsten Handelstag."
+      "status": "Nicht bestanden",
+      "begruendung": "Institutional Hold Test klar nicht bestanden: Kurs fällt durchgehend weiter - von 326,68 EUR (375,06 USD, P4 14:59 UTC) über 321,68 EUR (369,30 USD, P5-Open) auf jetzt nur noch 313,60 EUR (360,05 USD, -2,50% ggü. Open, -4,14% laut externer Marktberichte auf Tagesbasis). Der Titel hält weder das P4-Breakout-Niveau noch den Eröffnungskurs. RSI14 fällt von 49,17 (Open) auf 46,06 - Momentum kühlt weiter ab statt sich zu bestätigen. Abstand SMA20 schmilzt von +4,17% (Open) auf nur noch +1,69%, 5-Tage-Change von +11,69% auf +8,89% - der komplette Breakout-Aufschlag seit P4 baut sich intraday ab. OBV-5-Tage-Trend stagniert bei +17,38 Mio. (Open: +17,45 Mio.) - keine frische institutionelle Nachkaufwelle trotz Kursrückgang, d.h. keine Stützung durch Smart Money erkennbar. Externe Marktberichte (TheStreet) führen Cybersecurity explizit als Verliersektor des Tages. Second-Chance-Setup (Kriterium 6) klar verfehlt - statt Konsolidierung mit neuem Hoch liegt ein fortgesetzter Abverkauf vor. Kandidat verworfen, bleibt aber weiterhin der technisch sauberste Titel der Watchlist fuer eine spaetere Wiederaufnahme bei Stabilisierung."
     },
     {
       "ticker": "AAPL",
       "name": "Apple",
       "sector": "Technology",
-      "status": "Bestanden",
-      "begruendung": "Institutional Hold Test bestanden, stabile Seitwärtskonsolidierung: Kurs von 288,86 EUR (P4) über nahezu unverändert (P5) auf jetzt 289,16 EUR (332,76 USD) - praktisch unverändert (+0,10% ggü. P4). RSI14 mit 67,01 nahezu identisch zum P4-Wert (67,48), bleibt knapp unter der 72er-Bulltrap-Schwelle. Abstand SMA20 +3,6% und SMA50 +4,1% (P4: +3,75%/+4,12%, nahezu deckungsgleich), 5-Tage-Change kühlt im gleitenden Fenster auf +1,89% ab (P4: +5,41%). OBV-5-Tage-Trend bleibt mit +94,46 Mio. mit Abstand der stärkste der gesamten Watchlist, praktisch unverändert seit dem US-Open (P5: +94,19 Mio.) - institutionelle Akkumulation hält an, hat sich aber gegenüber dem P4-Höchststand (+164,17 Mio.) klar abgeschwächt. Sektor Technology ohne weiteren Watchlist-Titel nicht unabhängig gegenprüfbar. Solides, aber wenig dynamisches Setup - keine Kaufempfehlung, der Institutionelle Marktfilter blockiert ohnehin."
-    },
-    {
-      "ticker": "NOW",
-      "name": "ServiceNow",
-      "sector": "Software/Cloud",
       "status": "Teilweise",
-      "begruendung": "Institutional Hold Test nur teilweise bestanden: Kurs erholt sich deutlich vom Open-Rückgang (P4: 121,52 EUR -> P5: 118,44 EUR, -2,5%) auf jetzt 121,19 EUR (139,46 USD) - nahezu wieder auf P4-Niveau (-0,27%) und +2,32% über dem Open-Tief. RSI14 erholt sich von 48,3 (P5) auf 50,88, bleibt aber unter dem P4-Wert (59,93). Abstand SMA20 +2,2% (<8%, unauffällig), Abstand SMA50 mit +14,17% erstmals seit P4 (+15,06%, damals verletzt) wieder unter der 15%-Anti-Bulltrap-Schwelle - leichte Entspannung. 5-Tage-Change +6,32% nahezu wie P4 (+6,64%). Kritischer Schwachpunkt: OBV-5-Tage-Trend bricht von +17,55 Mio. (P4) auf nur noch +3,57 Mio. ein - die institutionelle Akkumulation ist trotz Kurserholung praktisch zum Stillstand gekommen, ein Warnsignal (Kurs erholt sich, aber die Nachfrage dahinter lässt spürbar nach). Sektorbestätigung fehlt: Software/Cloud insgesamt gemischt bis schwach (Microsoft nahezu flach, Salesforce mit +18,42% Abstand zur SMA50 stark überdehnt, Oracle mit OBV-Trend -119,62 Mio. weiterhin in schwerer institutioneller Distribution). Kein sauberes A+-Setup, keine Kaufempfehlung."
+      "begruendung": "Institutional Hold Test nur teilweise bestanden: Kurs rutscht von 293,34 EUR (336,72 USD, P5-Open) leicht auf 291,62 EUR (334,81 USD, -0,57%) und liegt damit knapp unter dem Eröffnungskurs - kein sauberer Hold, aber auch kein Bruch. RSI14 kühlt weiter von 66,10 (Open) auf 63,80 ab, ohne in den überhitzten Bereich vorgedrungen zu sein - eher gesunde Konsolidierung als Distribution. Abstand SMA20 bleibt mit +3,79% deutlich unter der 8%-Warnschwelle, 5-Tage-Change verflacht von +1,34% auf +0,76%. Entscheidend: OBV-5-Tage-Trend bleibt mit +79,64 Mio. (Open: +80,06 Mio.) nahezu unveraendert auf dem mit Abstand hoechsten Niveau der gesamten Watchlist - die institutionelle Akkumulation haelt an, es findet keine Distribution statt. Kein frisches Second-Chance-Breakout-Setup zwischen 16:00-17:00 Uhr erkennbar (Kurs seitwaerts/leicht ruecklaeufig statt neuer Hochs), daher trotz stabiler Grundstruktur kein aktives Kaufsignal fuer heute. Weiterhin solider Beobachtungskandidat ohne Dringlichkeit."
     },
     {
       "ticker": "AMD",
       "name": "AMD (Advanced Micro Devices)",
       "sector": "Semiconductors/AI",
       "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test nicht bestanden: Kurs legt seit P4 durchgehend weiter zu (445,36 EUR -> P5: 459,48 EUR, +3,2% -> P5.5: 472,43 EUR (543,65 USD), +2,82% ggü. P5 bzw. +6,08% ggü. P4) - der stärkste Kursanstieg aller vier Kandidaten. Genau dieser Anstieg löst den Anti-Bulltrap-Filter aus: Abstand zur SMA20 klettert von +6,26% (P4) auf +11,82% - klar über der 8%-Warnschwelle, ein eindeutiges Überdehnungssignal. RSI14 steigt von 59,19 (P4) auf 66,85 und nähert sich der 72er-Schwelle. 5-Tage-Change dreht von -1,65% (P4) auf +7,95% - ein sehr scharfer Kursanstieg in kurzer Zeit. OBV-5-Tage-Trend zwar mit +33,85 Mio. deutlich höher als bei P4 (+17,54 Mio.) - frische Akkumulation vorhanden -, doch das ändert nichts am zentralen Ausschlussgrund: Der Sektor bestätigt weiterhin nicht. SOX-Proxy bleibt mit 5-Tage-Change nur +0,13% klar schwächer als NASDAQ (+0,86%) und -1,62% unter der eigenen SMA50; NVIDIA (OBV-Trend -35,84 Mio.) und Broadcom (chg_5d -3,08%, OBV-Trend -12,99 Mio.) befinden sich beide weiterhin in klarer institutioneller Distribution. AMD läuft damit isoliert und überdehnt, ohne breite Sektor-Unterstützung - genau das Bulltrap-Muster, vor dem der Scanner warnt. Kandidat verworfen."
+      "begruendung": "Institutional Hold Test nicht bestanden: Kurs faellt von 478,35 EUR (549,205 USD, P5-Open) auf 473,01 EUR (543,07 USD, -1,12%) - kein Fortsetzungskauf nach dem Open, sondern ein Rueckzug von der Eroeffnungsspitze. RSI14 bleibt mit 70,28 (Open: 71,64) weiterhin unmittelbar an der 72er-Ueberhitzungsschwelle, Abstand SMA20 mit +10,85% (Open: +12,03%) trotz leichtem Rueckgang klar ueber der 8%-Warnschwelle - der Titel bleibt strukturell ueberdehnt. Zentraler Ausschlussgrund unveraendert: Sektor bestaetigt weiterhin nicht - SOX-Proxy mit 5-Tage-Change -0,41% klar schwaecher als der NASDAQ-Proxy (+0,37%), keine breite Halbleiter-Teilnahme am Anstieg. OBV-5-Tage-Trend mit +42,75 Mio. praktisch unveraendert zum Open (+43,05 Mio.) - keine beschleunigte institutionelle Nachfrage trotz weiterhin hohem Kursniveau. Kandidat verworfen: Ueberdehnung und fehlende Sektor-Ruecken-deckung bestehen unveraendert fort."
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
+      "status": "Nicht bestanden",
+      "begruendung": "Institutional Hold Test nicht bestanden: Kurs rutscht von 119,33 EUR (137,005 USD, P5-Open) auf 119,16 EUR (136,82 USD, -0,13%) knapp unter den Eroeffnungskurs und testet damit fast exakt die SMA20 (Abstand nur noch +0,04%, Open: +0,17%) - keine Stuetzung von unten erkennbar. RSI14 nahezu unveraendert bei 42,78 (Open: 42,93), neutral bis leicht schwach. Entscheidender Schwachpunkt bleibt der institutionelle Fluss: OBV-5-Tage-Trend verschlechtert sich weiter von -16,83 Mio. (Open) auf -16,95 Mio. - anhaltende Distribution trotz positivem 5-Tage-Kurs (+3,24%), eine klassische bearishe Divergenz. Kein Second-Chance-Setup, kein institutioneller Rueckhalt. Kandidat verworfen."
     }
   ]
 }
