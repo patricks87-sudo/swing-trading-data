@@ -68,9 +68,6 @@
   th { text-align: left; color: var(--muted); font-weight: 600; padding: 8px 6px; border-bottom: 1px solid var(--border); font-size: 11px; text-transform: uppercase; }
   td { padding: 10px 6px; border-bottom: 1px solid var(--border); }
   tr:last-child td { border-bottom: none; }
-  .del-btn { background: none; border: 1px solid var(--border); color: var(--muted); border-radius: 6px; padding: 4px 8px; cursor: pointer; font-size: 12px; }
-  .del-btn:hover { border-color: var(--red); color: var(--red); }
-  .total-row td { font-weight: 700; border-top: 2px solid var(--border); }
   .headline { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
   .headline:last-child { border-bottom: none; }
   .headline a { color: var(--text); text-decoration: none; }
@@ -80,11 +77,10 @@
   .footer-link { display: inline-block; margin-top: 32px; padding: 12px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); text-decoration: none; font-size: 14px; }
   .footer-link:hover { border-color: var(--green); }
   .timestamp { color: var(--muted); font-size: 11px; margin-top: 6px; }
-  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--card); border: 1px solid var(--green); color: var(--text); padding: 10px 18px; border-radius: 8px; font-size: 13px; display: none; }
 
-  /* Mobile: die zwei datenreichen Tabellen (Kandidaten-Tracking, Meine
-     Positionen) werden unter 640px zu Karten mit Label:Wert-Paaren statt
-     einer gequetschten Tabelle - besser lesbar auf dem Handy. */
+  /* Mobile: die datenreiche Tabelle (Kandidaten-Tracking) wird unter 640px
+     zu Karten mit Label:Wert-Paaren statt einer gequetschten Tabelle -
+     besser lesbar auf dem Handy. */
   @media (max-width: 640px) {
     body { padding: 14px; }
     h1 { font-size: 19px; }
@@ -92,7 +88,6 @@
     table.responsive-mobile thead { display: none; }
     table.responsive-mobile, table.responsive-mobile tbody, table.responsive-mobile tr { display: block; width: 100%; }
     table.responsive-mobile tr { margin-bottom: 12px; border: 1px solid var(--border); border-radius: 10px; padding: 4px 12px; }
-    table.responsive-mobile tr.total-row { border-color: var(--green); }
     table.responsive-mobile td { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); text-align: right; }
     table.responsive-mobile td:last-child { border-bottom: none; }
     table.responsive-mobile td::before { content: attr(data-label); color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .03em; text-align: left; flex-shrink: 0; }
@@ -129,12 +124,8 @@
   <h2>Top-Empfehlung des Tages</h2>
   <div id="top3"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
 
-  <h2>Meine Positionen</h2>
-  <div id="portfolio" class="card"><div class="placeholder">Lade Portfolio...</div></div>
-
   <a class="footer-link" href="https://claude.ai/cowork/project/019f79db-3af1-7716-a5bd-b16bf5c14770" target="_blank">Heutige Analyse in Claude öffnen &rarr;</a>
 </div>
-<div id="toast" class="toast"></div>
 
 <script>
 const REPO_BASE = "https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/data/";
@@ -149,41 +140,12 @@ async function fetchJson(name) {
   }
 }
 
-async function fetchEurRate(p4) {
-  try {
-    const r = await fetch("https://api.frankfurter.dev/v1/latest?from=USD&to=EUR", { cache: "no-store" });
-    if (r.ok) {
-      const j = await r.json();
-      if (j && j.rates && typeof j.rates.EUR === "number") return j.rates.EUR;
-    }
-  } catch (e) {}
-  return (p4 && typeof p4.eurusd === "number") ? p4.eurusd : null;
-}
-
 function fmtTime(iso) {
   if (!iso) return "";
   try {
     const d = new Date(iso);
     return d.toLocaleString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }) + " UTC-Quelle";
   } catch (e) { return iso; }
-}
-
-function showToast(msg) {
-  const t = document.getElementById("toast");
-  t.textContent = msg;
-  t.style.display = "block";
-  setTimeout(() => { t.style.display = "none"; }, 4000);
-}
-
-function copyText(text) {
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(
-      () => showToast('Kopiert: "' + text + '" – jetzt in den Claude-Chat einfügen.'),
-      () => showToast('Bitte manuell in den Claude-Chat schreiben: "' + text + '"')
-    );
-  } else {
-    showToast('Bitte in den Claude-Chat schreiben: "' + text + '"');
-  }
 }
 
 function computeAmpelFromIndices(idx) {
@@ -329,96 +291,6 @@ function renderTop3(data) {
     '<div class="timestamp">Stand: ' + fmtTime(data.generated_at_utc) + '</div></div>';
 }
 
-function sectorRankMap(barometer) {
-  const map = {};
-  if (barometer && barometer.sektor_rotation) {
-    barometer.sektor_rotation.forEach((s, i) => { map[s.sektor] = i; });
-  }
-  return map;
-}
-
-function renderPortfolio(portfolio, bewertung, p4, barometer, eurRate) {
-  const el = document.getElementById("portfolio");
-  const positions = (portfolio && portfolio.positions) || [];
-  if (!positions.length) { el.innerHTML = '<div class="placeholder">Keine Positionen hinterlegt.</div>'; return; }
-  const empfehlungen = {};
-  if (bewertung && bewertung.positionen) {
-    bewertung.positionen.forEach((p) => { empfehlungen[p.id] = p; });
-  }
-  const rank = sectorRankMap(barometer);
-  const sorted = positions.slice().sort((a, b) => {
-    const ra = rank[a.sector] !== undefined ? rank[a.sector] : 999;
-    const rb = rank[b.sector] !== undefined ? rank[b.sector] : 999;
-    if (ra !== rb) return ra - rb;
-    return (a.sector || "").localeCompare(b.sector || "");
-  });
-  const eurFmt = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" });
-  let totalEur = 0, totalUsdEquiv = 0, totalPnlEur = 0, totalPnlUsdEquiv = 0, pnlCount = 0, missingLive = false;
-  const rows = sorted.map((p) => {
-    const hasRealEur = typeof p.buy_price_eur === "number";
-    const buyEur = hasRealEur ? p.buy_price_eur : (eurRate ? p.buy_price * eurRate : null);
-    const investedEur = buyEur !== null ? buyEur * p.quantity : null;
-    if (investedEur !== null) totalEur += investedEur;
-    const buyUsdEquiv = (buyEur !== null && eurRate) ? buyEur / eurRate : null;
-    const investedUsdEquiv = (investedEur !== null && eurRate) ? investedEur / eurRate : null;
-    if (investedUsdEquiv !== null) totalUsdEquiv += investedUsdEquiv;
-    const emp = empfehlungen[p.id];
-    const empText = emp ? emp.empfehlung + (emp.begruendung ? " – " + emp.begruendung : "") : "noch keine Bewertung";
-    const liveInfo = p4 && p4.watchlist ? p4.watchlist[p.ticker] : null;
-    const currentPrice = liveInfo && liveInfo.close !== null ? liveInfo.close : null;
-    let pnlHtml;
-    if (currentPrice !== null && investedEur !== null) {
-      const currentValueUsd = currentPrice * p.quantity;
-      const currentValueEur = eurRate ? currentValueUsd * eurRate : null;
-      const pnlEur = currentValueEur !== null ? currentValueEur - investedEur : null;
-      const pnlPct = (pnlEur !== null && investedEur) ? (pnlEur / investedEur) * 100 : null;
-      const pnlUsdEquiv = (pnlEur !== null && eurRate) ? pnlEur / eurRate : null;
-      if (pnlEur !== null) {
-        totalPnlEur += pnlEur;
-        if (pnlUsdEquiv !== null) totalPnlUsdEquiv += pnlUsdEquiv;
-        pnlCount++;
-      }
-      const cls = pnlEur >= 0 ? "var(--green)" : "var(--red)";
-      const sign = pnlEur >= 0 ? "+" : "";
-      pnlHtml = pnlEur !== null
-        ? '<td data-label="Gewinn/Verlust" style="color:' + cls + '">' + sign + pnlPct.toFixed(2) + '%' +
-          '<div class="timestamp" style="color:' + cls + '">' + sign + eurFmt.format(pnlEur) +
-          (pnlUsdEquiv !== null ? ' <span style="color:var(--muted)">(' + sign + pnlUsdEquiv.toFixed(2) + ' USD)</span>' : '') +
-          '</div></td>'
-        : '<td data-label="Gewinn/Verlust" style="color:var(--muted)">noch keine Live-Daten</td>';
-    } else {
-      missingLive = true;
-      pnlHtml = '<td data-label="Gewinn/Verlust" style="color:var(--muted)">noch keine Live-Daten</td>';
-    }
-    return '<tr>' +
-      '<td data-label="Position">' + p.name +
-        (p.sector ? '<div class="cand-sector">' + p.sector + '</div>' : '') + '</td>' +
-      '<td data-label="Kaufkurs">' + (buyEur !== null ? eurFmt.format(buyEur) : (p.buy_price.toFixed(2) + ' ' + (p.currency || "USD"))) +
-        (buyUsdEquiv !== null ? '<div class="timestamp">≈ ' + buyUsdEquiv.toFixed(2) + ' USD</div>' : '') + '</td>' +
-      '<td data-label="Stück">' + p.quantity + '</td>' +
-      '<td data-label="Investiert">' + (investedEur !== null ? eurFmt.format(investedEur) : "–") +
-        (investedUsdEquiv !== null ? '<div class="timestamp">≈ ' + investedUsdEquiv.toFixed(2) + ' USD</div>' : '') + '</td>' +
-      pnlHtml +
-      '<td data-label="Empfehlung" style="color:var(--muted)">' + empText + '</td>' +
-      '<td class="mobile-full"><button class="del-btn" data-name="' + p.name + '">Löschen</button></td>' +
-      '</tr>';
-  }).join("");
-  const totalPnlCls = totalPnlEur >= 0 ? "var(--green)" : "var(--red)";
-  const totalPnlSign = totalPnlEur >= 0 ? "+" : "";
-  const totalPnlCell = pnlCount > 0
-    ? '<td data-label="Gewinn/Verlust" style="color:' + totalPnlCls + '">' + totalPnlSign + eurFmt.format(totalPnlEur) +
-      '<div class="timestamp" style="color:' + totalPnlCls + '">' + totalPnlSign + totalPnlUsdEquiv.toFixed(2) + ' USD</div>' +
-      (missingLive ? '<div class="timestamp">(unvollständig)</div>' : '') + '</td>'
-    : '<td data-label="Gewinn/Verlust" style="color:var(--muted)">noch keine Live-Daten</td>';
-  el.innerHTML = '<table class="responsive-mobile"><thead><tr><th>Position</th><th>Kaufkurs</th><th>Stück</th><th>Investiert</th><th>Gewinn/Verlust</th><th>Empfehlung</th><th></th></tr></thead>' +
-    '<tbody>' + rows + '<tr class="total-row"><td colspan="3" class="mobile-full">Gesamtinvestitionssumme</td><td data-label="Investiert">' + eurFmt.format(totalEur) +
-      '<div class="timestamp">≈ ' + totalUsdEquiv.toFixed(2) + ' USD</div></td>' + totalPnlCell + '<td colspan="2" class="mobile-full"></td></tr></tbody></table>' +
-    '<div class="timestamp">Sortiert nach Sektorrotation' + (eurRate ? ' · EUR-Kurs: 1 USD ≈ ' + eurRate.toFixed(4) + ' EUR (tagesaktuell)' : '') + '. Alle Beträge in Euro (echter Einstiegskurs), USD als Umrechnung zur Orientierung. Klicke "Löschen", um den passenden Chat-Befehl zu kopieren – die eigentliche Änderung bestätigst du dann im Claude-Chat.</div>';
-  el.querySelectorAll(".del-btn").forEach((btn) => {
-    btn.addEventListener("click", () => copyText("Lösche Position " + btn.dataset.name));
-  });
-}
-
 function renderHeadlines(data) {
   const el = document.getElementById("headlines");
   if (!data || !data.headlines || !data.headlines.length) return;
@@ -429,18 +301,15 @@ function renderHeadlines(data) {
 }
 
 function renderNewsToday(data) { const el = document.getElementById("newsToday"); if (!data || !data.entries || !data.entries.length) return; el.innerHTML = data.entries.slice().reverse().map((e) => { const items = (e.headlines || []).map((h) => '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a><div class="src">' + (h.source || "") + '</div></div>').join(""); return '<div style="margin-bottom:14px;"><div class="timestamp" style="font-weight:600;">' + (e.time_local || "") + ' Uhr</div>' + items + '</div>'; }).join(""); } async function init() {
-  const [p4, candidates, p55Candidates, top3, barometer, portfolio, bewertung, headlines, newsToday, candidateTracking] = await Promise.all([
+  const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking] = await Promise.all([
     fetchJson("p4_latest.json"),
     fetchJson("p4_candidates.json"),
     fetchJson("p55_candidates.json"),
     fetchJson("top_empfehlung.json"),
     fetchJson("market_barometer.json"),
-    fetchJson("portfolio.json"),
-    fetchJson("portfolio_bewertung.json"),
     fetchJson("headlines.json"), fetchJson("news_summary_today.json"),
     fetchJson("candidate_tracking.json"),
   ]);
-  const eurRate = await fetchEurRate(p4);
   renderAmpel(barometer, p4);
   renderSektorrotation(barometer);
   renderIndices(p4);
@@ -448,7 +317,6 @@ function renderNewsToday(data) { const el = document.getElementById("newsToday")
   renderP55Candidates(p55Candidates);
   renderCandidateTracking(candidateTracking);
   renderTop3(top3);
-  renderPortfolio(portfolio, bewertung, p4, barometer, eurRate);
   renderHeadlines(headlines); renderNewsToday(newsToday);
 }
 init();
