@@ -136,15 +136,15 @@ INDEX_SYMBOLS = {
     "NASDAQ_COMPOSITE": "QQQ",
     "SP500": "SPY",
     "RUSSELL2000": "IWM",
-    # Bis 19.09.2026 VIXY (ETF-Proxy) - durch Rollverluste/Contango bei
-    # gehaltenen VIX-Futures strukturell zu hohe Werte, was die Risk-Off-
-    # Ampel zu empfindlich gemacht hat. Seit 20.09.2026: echter CBOE-VIX-
-    # Index direkt (kein Rollverlust, da aus Optionspreisen berechnet statt
-    # aus gehaltenen Futures-Kontrakten). Falls "VIX" im Twelve-Data-
-    # Free-Tier nicht verfuegbar sein sollte (Fehler/leere Werte im
-    # naechsten Lauf pruefen): Fallback auf "VIXM" (mittelfristige
-    # VIX-Futures-ETN, deutlich weniger Rollverlust als VIXY).
-    "VIX": "VIX",
+    # Testlauf am 20.09.2026 bestaetigt: "VIX" ist im genutzten Twelve-Data-
+    # Free-Tier NICHT verfuegbar (HTTP 404). Bis 19.09.2026 war hier VIXY
+    # (ETF-Proxy) hinterlegt - durch Rollverluste/Contango bei gehaltenen
+    # VIX-Futures strukturell zu hohe Werte, was die Risk-Off-Ampel zu
+    # empfindlich gemacht hat. Seit dem Testlauf: VIXM (mittelfristige
+    # VIX-Futures-ETN) als dokumentierter Fallback - deutlich weniger
+    # Rollverlust als VIXY, da auf Futures mit 4-7 Monaten Restlaufzeit
+    # statt der vordersten (volatilsten) Kontrakte basierend.
+    "VIX": "VIXM",
     # SOX (Philadelphia Semiconductor Index) ist auf dem Free-Tier evtl. nicht
     # direkt verfuegbar - SOXX (ETF) dient hier als Naeherungswert.
     "SOX_PROXY": "SOXX",
@@ -172,13 +172,22 @@ def fetch_time_series(symbol: str, interval: str = "1day", outputsize: int = 260
     max_retries = 4
     backoff_seconds = 15
     for attempt in range(max_retries + 1):
-        r = requests.get(f"{BASE_URL}/time_series", params=params, timeout=20)
-        if r.status_code == 429 and attempt < max_retries:
-            print(f"429 fuer {symbol}, Versuch {attempt + 1}/{max_retries + 1} - warte {backoff_seconds}s")
-            time.sleep(backoff_seconds)
-            backoff_seconds *= 2
-            continue
-        r.raise_for_status()
+        try:
+            r = requests.get(f"{BASE_URL}/time_series", params=params, timeout=20)
+            if r.status_code == 429 and attempt < max_retries:
+                print(f"429 fuer {symbol}, Versuch {attempt + 1}/{max_retries + 1} - warte {backoff_seconds}s")
+                time.sleep(backoff_seconds)
+                backoff_seconds *= 2
+                continue
+            r.raise_for_status()
+        except requests.exceptions.RequestException as e:
+            # Seit 20.09.2026: ein einzelnes fehlerhaftes Symbol (z.B. 404,
+            # weil ein Symbol im gebuchten Tarif nicht existiert) bricht nicht
+            # mehr den kompletten Lauf ab - stattdessen wird der Fehler wie
+            # ein regulaerer API-Fehler behandelt (siehe snapshot_is_healthy
+            # Circuit Breaker, der weiterhin prueft, dass genug ANDERE Werte
+            # da sind, bevor gespeichert/committet wird).
+            return {"error": f"HTTP-Fehler: {e}"}
         data = r.json()
         if data.get("status") == "error":
             return {"error": data.get("message", "unknown error")}
