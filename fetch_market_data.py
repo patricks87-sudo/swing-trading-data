@@ -31,35 +31,102 @@ API_KEY = os.environ.get("TWELVEDATA_API_KEY", "")
 BASE_URL = "https://api.twelvedata.com"
 
 # Watchlist: die Ticker, die P4 als Kandidaten pruefen soll.
-# Erweitere/kuerze diese Liste je nach Free-Tier-Budget (8 Calls/Min, 800/Tag).
+# Erweitert (20.09.2026) von 18 auf 50 Werte, damit alle 19 Projekt-Sektoren
+# abgedeckt sind - vorher waren z.B. Financials, Insurance, Energy, Utilities,
+# Infrastructure, Materials, Consumer Discretionary und Transportation gar
+# nicht vertreten, wodurch Sektorrotation in diese Bereiche unsichtbar blieb.
+# Dient seit dem Umbau (20.09.2026) zusaetzlich als Stichprobe fuer die
+# Markt-Breadth-Berechnung (siehe compute_breadth) - je breiter, desto
+# repraesentativer. Erweitere/kuerze je nach Free-Tier-Budget
+# (8 Calls/Min, 800/Tag - 50 Watchlist + 5 Indizes = 55 Calls/Lauf, bei 4-6
+# Laeufen/Tag ca. 220-330 Calls/Tag, klar unter dem Limit).
 WATCHLIST = [
-    "AAPL", "MSFT", "NVDA", "AMD", "AVGO", "CRM", "PANW", "NOW",
-    "LMT", "NOC", "RTX", "UNH", "ISRG", "V", "MA", "CAT",
-    "HOOD", "ORCL",
+    # Semiconductors/AI
+    "NVDA", "AMD", "AVGO", "TSM", "ASML", "MRVL", "SMCI", "QCOM",
+    # Software/Cloud
+    "MSFT", "CRM", "NOW", "ORCL", "ADBE", "SNOW", "PLTR",
+    # Cybersecurity
+    "PANW", "CRWD", "ZS", "FTNT",
+    # Defense
+    "LMT", "NOC", "RTX", "GD",
+    # Financials
+    "JPM", "GS", "MS",
+    # Insurance
+    "PGR", "TRV",
+    # Payments / Fintech-Brokerage
+    "V", "MA", "HOOD", "COIN",
+    # Healthcare / MedTech
+    "UNH", "ISRG", "TMO",
+    # Energy
+    "XOM", "CVX",
+    # Utilities
+    "NEE", "DUK",
+    # Industrials / Infrastructure
+    "CAT", "DE", "URI",
+    # Materials
+    "LIN", "FCX",
+    # Consumer Discretionary
+    "AMZN", "HD", "TSLA",
+    # Transportation
+    "UNP", "UPS",
+    # Technology
+    "AAPL",
 ]
 
 # Statische Sektor-Zuordnung je Ticker - Grundlage fuer das
 # Sektorrotations-Barometer im Cockpit (index.html). Rein informativ,
 # beeinflusst die Kursdaten nicht.
 SECTOR_MAP = {
-    "AAPL": "Technology",
-    "MSFT": "Software/Cloud",
     "NVDA": "Semiconductors/AI",
     "AMD": "Semiconductors/AI",
     "AVGO": "Semiconductors/AI",
+    "TSM": "Semiconductors/AI",
+    "ASML": "Semiconductors/AI",
+    "MRVL": "Semiconductors/AI",
+    "SMCI": "Semiconductors/AI",
+    "QCOM": "Semiconductors/AI",
+    "MSFT": "Software/Cloud",
     "CRM": "Software/Cloud",
-    "PANW": "Cybersecurity",
     "NOW": "Software/Cloud",
+    "ORCL": "Software/Cloud",
+    "ADBE": "Software/Cloud",
+    "SNOW": "Software/Cloud",
+    "PLTR": "Software/Cloud",
+    "PANW": "Cybersecurity",
+    "CRWD": "Cybersecurity",
+    "ZS": "Cybersecurity",
+    "FTNT": "Cybersecurity",
     "LMT": "Defense",
     "NOC": "Defense",
     "RTX": "Defense/Industrials",
-    "UNH": "Healthcare",
-    "ISRG": "MedTech",
+    "GD": "Defense",
+    "JPM": "Financials",
+    "GS": "Financials",
+    "MS": "Financials",
+    "PGR": "Insurance",
+    "TRV": "Insurance",
     "V": "Payments",
     "MA": "Payments",
-    "CAT": "Industrials",
     "HOOD": "Fintech/Brokerage",
-    "ORCL": "Software/Cloud",
+    "COIN": "Fintech/Brokerage",
+    "UNH": "Healthcare",
+    "ISRG": "MedTech",
+    "TMO": "MedTech",
+    "XOM": "Energy",
+    "CVX": "Energy",
+    "NEE": "Utilities",
+    "DUK": "Utilities",
+    "CAT": "Industrials",
+    "DE": "Industrials",
+    "URI": "Industrials/Infrastructure",
+    "LIN": "Materials",
+    "FCX": "Materials",
+    "AMZN": "Consumer Discretionary",
+    "HD": "Consumer Discretionary",
+    "TSLA": "Consumer Discretionary",
+    "UNP": "Transportation",
+    "UPS": "Transportation",
+    "AAPL": "Technology",
 }
 
 # Marktbreite / Indizes (Twelve Data Symbole - vor Produktivbetrieb einmal
@@ -69,7 +136,15 @@ INDEX_SYMBOLS = {
     "NASDAQ_COMPOSITE": "QQQ",
     "SP500": "SPY",
     "RUSSELL2000": "IWM",
-    "VIX": "VIXY",
+    # Bis 19.09.2026 VIXY (ETF-Proxy) - durch Rollverluste/Contango bei
+    # gehaltenen VIX-Futures strukturell zu hohe Werte, was die Risk-Off-
+    # Ampel zu empfindlich gemacht hat. Seit 20.09.2026: echter CBOE-VIX-
+    # Index direkt (kein Rollverlust, da aus Optionspreisen berechnet statt
+    # aus gehaltenen Futures-Kontrakten). Falls "VIX" im Twelve-Data-
+    # Free-Tier nicht verfuegbar sein sollte (Fehler/leere Werte im
+    # naechsten Lauf pruefen): Fallback auf "VIXM" (mittelfristige
+    # VIX-Futures-ETN, deutlich weniger Rollverlust als VIXY).
+    "VIX": "VIX",
     # SOX (Philadelphia Semiconductor Index) ist auf dem Free-Tier evtl. nicht
     # direkt verfuegbar - SOXX (ETF) dient hier als Naeherungswert.
     "SOX_PROXY": "SOXX",
@@ -168,6 +243,15 @@ def compute_indicators(values):
     if len(df) >= 6:
         chg_5d = round((close - df["close"].iloc[-6]) / df["close"].iloc[-6] * 100, 2)
 
+    # 1-Tages-Veraenderung - seit 20.09.2026 zusaetzlich zu chg_5d_pct, wird
+    # fuer die watchlist-basierte Advance/Decline-Berechnung gebraucht
+    # (siehe compute_breadth).
+    chg_1d = None
+    if len(df) >= 2:
+        prev = df["close"].iloc[-2]
+        if prev:
+            chg_1d = round((close - prev) / prev * 100, 2)
+
     return {
         "close": round(close, 4),
         "rsi14": round(last["rsi14"], 2) if pd.notna(last["rsi14"]) else None,
@@ -180,8 +264,44 @@ def compute_indicators(values):
         "pct_from_sma20": pct_from(last["sma20"]),
         "pct_from_sma50": pct_from(last["sma50"]),
         "chg_5d_pct": chg_5d,
+        "chg_1d_pct": chg_1d,
         "avg_volume_20d": round(df["volume"].tail(20).mean(), 0),
         "last_volume": round(df["volume"].iloc[-1], 0),
+    }
+
+
+def compute_breadth(watchlist: dict) -> dict:
+    """Markt-Breadth-Kennzahlen, seit 20.09.2026 aus der (jetzt 50 Werte
+    grossen) Watchlist selbst berechnet. Ersetzt die im Feed strukturell
+    fehlende NYSE Advance/Decline-Linie und "% Aktien ueber 50 DMA" (siehe
+    Wissensdokument, Abschnitt "Bekannte Datenluecken") durch echte, aus den
+    tatsaechlich abgerufenen Kursdaten berechnete Werte, statt sie per
+    Websuche zu schaetzen oder stillschweigend als "nicht erfuellt" zu
+    werten - genau das hatte die Risk-Off-Ampel zuvor strukturell zu
+    empfindlich gemacht.
+    """
+    entries = [v for v in watchlist.values() if isinstance(v, dict) and "error" not in v]
+
+    with_sma50 = [e for e in entries if isinstance(e.get("close"), (int, float)) and isinstance(e.get("sma50"), (int, float))]
+    above_sma50 = [e for e in with_sma50 if e["close"] > e["sma50"]]
+
+    with_chg1d = [e for e in entries if isinstance(e.get("chg_1d_pct"), (int, float))]
+    advancers = [e for e in with_chg1d if e["chg_1d_pct"] > 0]
+    decliners = [e for e in with_chg1d if e["chg_1d_pct"] < 0]
+
+    if decliners:
+        ad_ratio = round(len(advancers) / len(decliners), 2)
+    elif advancers:
+        ad_ratio = float(len(advancers))  # keine Verlierer -> sehr breit positiv
+    else:
+        ad_ratio = None
+
+    return {
+        "pct_above_sma50": round(len(above_sma50) / len(with_sma50) * 100, 1) if with_sma50 else None,
+        "advance_decline_ratio": ad_ratio,
+        "advancers": len(advancers),
+        "decliners": len(decliners),
+        "sample_size": len(entries),
     }
 
 
@@ -210,6 +330,8 @@ def build_snapshot(run_label: str):
         if isinstance(result, dict) and "error" not in result:
             result["sector"] = SECTOR_MAP.get(ticker, "Unknown")
         snapshot["watchlist"][ticker] = result
+
+    snapshot["breadth"] = compute_breadth(snapshot["watchlist"])
 
     return snapshot
 

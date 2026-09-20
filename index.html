@@ -81,6 +81,24 @@
   .footer-link:hover { border-color: var(--green); }
   .timestamp { color: var(--muted); font-size: 11px; margin-top: 6px; }
   .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--card); border: 1px solid var(--green); color: var(--text); padding: 10px 18px; border-radius: 8px; font-size: 13px; display: none; }
+
+  /* Mobile: die zwei datenreichen Tabellen (Kandidaten-Tracking, Meine
+     Positionen) werden unter 640px zu Karten mit Label:Wert-Paaren statt
+     einer gequetschten Tabelle - besser lesbar auf dem Handy. */
+  @media (max-width: 640px) {
+    body { padding: 14px; }
+    h1 { font-size: 19px; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)); gap: 8px; }
+    table.responsive-mobile thead { display: none; }
+    table.responsive-mobile, table.responsive-mobile tbody, table.responsive-mobile tr { display: block; width: 100%; }
+    table.responsive-mobile tr { margin-bottom: 12px; border: 1px solid var(--border); border-radius: 10px; padding: 4px 12px; }
+    table.responsive-mobile tr.total-row { border-color: var(--green); }
+    table.responsive-mobile td { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); text-align: right; }
+    table.responsive-mobile td:last-child { border-bottom: none; }
+    table.responsive-mobile td::before { content: attr(data-label); color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .03em; text-align: left; flex-shrink: 0; }
+    table.responsive-mobile td.mobile-full { display: block; text-align: left; }
+    table.responsive-mobile td.mobile-full::before { content: none; }
+  }
 </style>
 </head>
 <body>
@@ -234,7 +252,7 @@ function renderSektorrotation(barometer) {
 function renderIndices(p4) {
   const el = document.getElementById("indices");
   if (!p4 || !p4.indices) { el.innerHTML = '<div class="placeholder">Keine Daten verfügbar.</div>'; return; }
-  const names = { NASDAQ_COMPOSITE: "Nasdaq (QQQ)", SP500: "S&P 500 (SPY)", RUSSELL2000: "Russell 2000 (IWM)", VIX: "VIX (VIXY)", SOX_PROXY: "Semiconductors (SOXX)" };
+  const names = { NASDAQ_COMPOSITE: "Nasdaq (QQQ)", SP500: "S&P 500 (SPY)", RUSSELL2000: "Russell 2000 (IWM)", VIX: "VIX", SOX_PROXY: "Semiconductors (SOXX)" };
   el.innerHTML = Object.keys(names).map((k) => {
     const v = p4.indices[k];
     if (!v || v.close == null) return "";
@@ -285,18 +303,18 @@ function renderCandidateTracking(data) {
     const perfCls = perf === null ? "" : (perf >= 0 ? "color:var(--green)" : "color:var(--red)");
     const perfText = perf === null ? "–" : (perf >= 0 ? "+" : "") + perf.toFixed(2) + "%";
     return '<tr>' +
-      '<td>' + (k.name || k.ticker) + '<div class="cand-sector">' + (k.sector || "") + '</div></td>' +
-      '<td>' + (k.aufnahmedatum || "-") + '<div class="timestamp">' + (k.aufnahmequelle || "") + (k.aufnahme_score ? " · " + k.aufnahme_score : "") + '</div></td>' +
-      '<td>' + (typeof k.aufnahme_kurs_eur === "number" ? eurFmt.format(k.aufnahme_kurs_eur) : "-") + '</td>' +
-      '<td>' + (typeof k.aktueller_kurs_eur === "number" ? eurFmt.format(k.aktueller_kurs_eur) : "-") + '</td>' +
-      '<td style="' + perfCls + '; font-weight:700;">' + perfText + '</td>' +
-      '<td>' + (k.handelstage_in_liste != null ? k.handelstage_in_liste : "-") + '</td>' +
-      '<td><span class="emp-badge ' + empCls(k.empfehlung) + '">' + (k.empfehlung || "-") + '</span></td>' +
+      '<td data-label="Kandidat">' + (k.name || k.ticker) + '<div class="cand-sector">' + (k.sector || "") + '</div></td>' +
+      '<td data-label="Aufnahme">' + (k.aufnahmedatum || "-") + '<div class="timestamp">' + (k.aufnahmequelle || "") + (k.aufnahme_score ? " · " + k.aufnahme_score : "") + '</div></td>' +
+      '<td data-label="Einstieg">' + (typeof k.aufnahme_kurs_eur === "number" ? eurFmt.format(k.aufnahme_kurs_eur) : "-") + '</td>' +
+      '<td data-label="Aktuell">' + (typeof k.aktueller_kurs_eur === "number" ? eurFmt.format(k.aktueller_kurs_eur) : "-") + '</td>' +
+      '<td data-label="Performance" style="' + perfCls + '; font-weight:700;">' + perfText + '</td>' +
+      '<td data-label="Handelstage">' + (k.handelstage_in_liste != null ? k.handelstage_in_liste : "-") + '</td>' +
+      '<td data-label="Empfehlung"><span class="emp-badge ' + empCls(k.empfehlung) + '">' + (k.empfehlung || "-") + '</span></td>' +
       '</tr>' +
-      (k.letzte_einschaetzung ? '<tr><td colspan="7" class="cand-begr" style="padding-top:0;">' + k.letzte_einschaetzung + '</td></tr>' : "");
+      (k.letzte_einschaetzung ? '<tr><td colspan="7" class="cand-begr mobile-full" style="padding-top:0;">' + k.letzte_einschaetzung + '</td></tr>' : "");
   }).join("");
   el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Stand: ' + fmtTime(data.generated_at_utc) + (data.hinweis ? ' &middot; ' + data.hinweis : '') + '</div>' +
-    '<table><thead><tr><th>Kandidat</th><th>Aufnahme</th><th>Einstieg</th><th>Aktuell</th><th>Performance</th><th>Handelstage</th><th>Empfehlung</th></tr></thead><tbody>' + rows + '</tbody></table>';
+    '<table class="responsive-mobile"><thead><tr><th>Kandidat</th><th>Aufnahme</th><th>Einstieg</th><th>Aktuell</th><th>Performance</th><th>Handelstage</th><th>Empfehlung</th></tr></thead><tbody>' + rows + '</tbody></table>';
 }
 
 function renderTop3(data) {
@@ -363,38 +381,38 @@ function renderPortfolio(portfolio, bewertung, p4, barometer, eurRate) {
       const cls = pnlEur >= 0 ? "var(--green)" : "var(--red)";
       const sign = pnlEur >= 0 ? "+" : "";
       pnlHtml = pnlEur !== null
-        ? '<td style="color:' + cls + '">' + sign + pnlPct.toFixed(2) + '%' +
+        ? '<td data-label="Gewinn/Verlust" style="color:' + cls + '">' + sign + pnlPct.toFixed(2) + '%' +
           '<div class="timestamp" style="color:' + cls + '">' + sign + eurFmt.format(pnlEur) +
           (pnlUsdEquiv !== null ? ' <span style="color:var(--muted)">(' + sign + pnlUsdEquiv.toFixed(2) + ' USD)</span>' : '') +
           '</div></td>'
-        : '<td style="color:var(--muted)">noch keine Live-Daten</td>';
+        : '<td data-label="Gewinn/Verlust" style="color:var(--muted)">noch keine Live-Daten</td>';
     } else {
       missingLive = true;
-      pnlHtml = '<td style="color:var(--muted)">noch keine Live-Daten</td>';
+      pnlHtml = '<td data-label="Gewinn/Verlust" style="color:var(--muted)">noch keine Live-Daten</td>';
     }
     return '<tr>' +
-      '<td>' + p.name +
+      '<td data-label="Position">' + p.name +
         (p.sector ? '<div class="cand-sector">' + p.sector + '</div>' : '') + '</td>' +
-      '<td>' + (buyEur !== null ? eurFmt.format(buyEur) : (p.buy_price.toFixed(2) + ' ' + (p.currency || "USD"))) +
+      '<td data-label="Kaufkurs">' + (buyEur !== null ? eurFmt.format(buyEur) : (p.buy_price.toFixed(2) + ' ' + (p.currency || "USD"))) +
         (buyUsdEquiv !== null ? '<div class="timestamp">≈ ' + buyUsdEquiv.toFixed(2) + ' USD</div>' : '') + '</td>' +
-      '<td>' + p.quantity + '</td>' +
-      '<td>' + (investedEur !== null ? eurFmt.format(investedEur) : "–") +
+      '<td data-label="Stück">' + p.quantity + '</td>' +
+      '<td data-label="Investiert">' + (investedEur !== null ? eurFmt.format(investedEur) : "–") +
         (investedUsdEquiv !== null ? '<div class="timestamp">≈ ' + investedUsdEquiv.toFixed(2) + ' USD</div>' : '') + '</td>' +
       pnlHtml +
-      '<td style="color:var(--muted)">' + empText + '</td>' +
-      '<td><button class="del-btn" data-name="' + p.name + '">Löschen</button></td>' +
+      '<td data-label="Empfehlung" style="color:var(--muted)">' + empText + '</td>' +
+      '<td class="mobile-full"><button class="del-btn" data-name="' + p.name + '">Löschen</button></td>' +
       '</tr>';
   }).join("");
   const totalPnlCls = totalPnlEur >= 0 ? "var(--green)" : "var(--red)";
   const totalPnlSign = totalPnlEur >= 0 ? "+" : "";
   const totalPnlCell = pnlCount > 0
-    ? '<td style="color:' + totalPnlCls + '">' + totalPnlSign + eurFmt.format(totalPnlEur) +
+    ? '<td data-label="Gewinn/Verlust" style="color:' + totalPnlCls + '">' + totalPnlSign + eurFmt.format(totalPnlEur) +
       '<div class="timestamp" style="color:' + totalPnlCls + '">' + totalPnlSign + totalPnlUsdEquiv.toFixed(2) + ' USD</div>' +
       (missingLive ? '<div class="timestamp">(unvollständig)</div>' : '') + '</td>'
-    : '<td style="color:var(--muted)">noch keine Live-Daten</td>';
-  el.innerHTML = '<table><thead><tr><th>Position</th><th>Kaufkurs</th><th>Stück</th><th>Investiert</th><th>Gewinn/Verlust</th><th>Empfehlung</th><th></th></tr></thead>' +
-    '<tbody>' + rows + '<tr class="total-row"><td colspan="3">Gesamtinvestitionssumme</td><td>' + eurFmt.format(totalEur) +
-      '<div class="timestamp">≈ ' + totalUsdEquiv.toFixed(2) + ' USD</div></td>' + totalPnlCell + '<td colspan="2"></td></tr></tbody></table>' +
+    : '<td data-label="Gewinn/Verlust" style="color:var(--muted)">noch keine Live-Daten</td>';
+  el.innerHTML = '<table class="responsive-mobile"><thead><tr><th>Position</th><th>Kaufkurs</th><th>Stück</th><th>Investiert</th><th>Gewinn/Verlust</th><th>Empfehlung</th><th></th></tr></thead>' +
+    '<tbody>' + rows + '<tr class="total-row"><td colspan="3" class="mobile-full">Gesamtinvestitionssumme</td><td data-label="Investiert">' + eurFmt.format(totalEur) +
+      '<div class="timestamp">≈ ' + totalUsdEquiv.toFixed(2) + ' USD</div></td>' + totalPnlCell + '<td colspan="2" class="mobile-full"></td></tr></tbody></table>' +
     '<div class="timestamp">Sortiert nach Sektorrotation' + (eurRate ? ' · EUR-Kurs: 1 USD ≈ ' + eurRate.toFixed(4) + ' EUR (tagesaktuell)' : '') + '. Alle Beträge in Euro (echter Einstiegskurs), USD als Umrechnung zur Orientierung. Klicke "Löschen", um den passenden Chat-Befehl zu kopieren – die eigentliche Änderung bestätigst du dann im Claude-Chat.</div>';
   el.querySelectorAll(".del-btn").forEach((btn) => {
     btn.addEventListener("click", () => copyText("Lösche Position " + btn.dataset.name));
