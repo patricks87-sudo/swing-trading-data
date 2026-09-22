@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-21T15:52:00Z",
+  "generated_at_utc": "2026-09-22T15:49:52Z",
   "kandidaten": [
     {
       "ticker": "LMT",
@@ -169,7 +169,7 @@
       "handelstage_in_liste": 8,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert. Die bestehende Depotposition (10 Stueck) wird davon unberuehrt separat in data/portfolio_bewertung.json bewertet."
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert. Die bestehende Depotposition (10 Stueck) wird davon unberuehrt separat in data/portfolio_bewertung.json bewertet (heute: Verkauf empfohlen wegen fundamentaler Bonitaetsrisiken)."
     },
     {
       "ticker": "AMD",
@@ -186,7 +186,7 @@
       "handelstage_in_liste": 3,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert. Siehe separater Eintrag vom 15.09.2026 (heute ebenfalls invalidiert)."
+      "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert."
     },
     {
       "ticker": "UNH",
@@ -203,58 +203,7 @@
       "handelstage_in_liste": 3,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert. Siehe separater Eintrag vom 09.09.2026."
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors/AI",
-      "aufnahmedatum": "2026-08-28",
-      "aufnahmequelle": "P4",
-      "aufnahme_score": "hoch",
-      "aufnahme_kurs_usd": 223.59,
-      "aufnahme_kurs_eur": 191.84,
-      "aktueller_kurs_usd": 211.94,
-      "aktueller_kurs_eur": 182.69,
-      "performance_pct": -5.21,
-      "handelstage_in_liste": 11,
-      "status": "ausgeschieden (invalidiert)",
-      "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Invalidiert: Kurs mit -0,46% unter die SMA50 gefallen (erstmals seit Aufnahme). OBV-5T-Trend blieb mit -401,97 Mio. der klar negativste Wert der gesamten Watchlist, institutionelle Distribution setzte sich fort. Performance seit Aufnahme -5,21%. These gemaess Rotationsregel invalidiert, aus der aktiven Liste genommen. Siehe separater, neuer Eintrag vom 21.09.2026 (heute erneut aufgenommen, klar bestaetigt)."
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD (Advanced Micro Devices)",
-      "sector": "Semiconductors/AI",
-      "aufnahmedatum": "2026-09-09",
-      "aufnahmequelle": "P4",
-      "aufnahme_score": "hoch",
-      "aufnahme_kurs_usd": 505.74,
-      "aufnahme_kurs_eur": 434.94,
-      "aktueller_kurs_usd": 489.78,
-      "aktueller_kurs_eur": 422.19,
-      "performance_pct": -3.16,
-      "handelstage_in_liste": 4,
-      "status": "ausgeschieden (invalidiert)",
-      "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Invalidiert: Institutional Hold Test (P5.5) nicht bestanden - Kurs mit -1,25% unter die SMA50 gefallen, 5-Tage-Momentum von +13,15% (P4-Screening) auf nur noch +1,64% eingebrochen, Breakout-Versuch bereits beim US-Open gescheitert. Performance seit Aufnahme -3,16%. These gemaess Rotationsregel invalidiert, rotiert aus der aktiven Liste."
-    },
-    {
-      "ticker": "UNH",
-      "name": "UnitedHealth Group",
-      "sector": "Healthcare",
-      "aufnahmedatum": "2026-09-09",
-      "aufnahmequelle": "P4",
-      "aufnahme_score": "mittel",
-      "aufnahme_kurs_usd": 400.84,
-      "aufnahme_kurs_eur": 344.72,
-      "aktueller_kurs_usd": 391.355,
-      "aktueller_kurs_eur": 336.57,
-      "performance_pct": -2.37,
-      "handelstage_in_liste": 2,
-      "status": "ausgeschieden (invalidiert)",
-      "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Institutional Hold Test blieb nicht bestanden: Kurs weiterhin unter SMA20 (-1,01%) und SMA50 (-4,59%), OBV-5T-Trend blieb negativ - da der Kurs im zweiten Check in Folge unter der SMA50 verharrte, wurde die These gemaess Rotationsregel als invalidiert eingestuft und aus der aktiven Liste genommen (Stand 10.09.2026, seither nicht mehr aktualisiert)."
+      "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert."
     },
     {
       "ticker": "CAT",
@@ -271,7 +220,7 @@
       "handelstage_in_liste": 2,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Invalidiert: Institutional Hold Test bereits am Aufnahmetag nicht bestanden und seither keine Verbesserung - Kurs bleibt klar unter SMA20 (-3,29%) und SMA50 (-7,87%), OBV-5-Tage-Trend ist von leicht positiv (+0,51 Mio.) auf negativ (-4,36 Mio.) gedreht - keine institutionelle Bestaetigung, Distributionssignal statt Akkumulation. These gemaess Rotationsregel invalidiert, rotiert aus der aktiven Liste."
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert."
     },
     {
       "ticker": "PANW",
@@ -282,13 +231,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 338.49,
       "aufnahme_kurs_eur": 291.44,
-      "aktueller_kurs_usd": 371.52,
-      "aktueller_kurs_eur": 323.59,
-      "performance_pct": 9.76,
-      "handelstage_in_liste": 7,
+      "aktueller_kurs_usd": 367.54,
+      "aktueller_kurs_eur": 320.49,
+      "performance_pct": 9.97,
+      "handelstage_in_liste": 8,
       "status": "aktiv",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "P1-Update: Heutiger P4-Scan stuft Palo Alto Networks nur noch als 'niedrig' ein - Distributionskerze nach starkem Lauf (chg_1d -3,06% bei fast doppeltem Volumen), gesamter Cybersecurity-Sektor strukturell ueberdehnt. OBV-5T-Trend erstmals seit Aufnahme negativ (-8,28 Mio.). Kein formales Invalidierungskriterium ausgeloest, aber Vorsicht geboten - aus aktiver Kaufbeobachtung genommen, Watch auf Stabilisierung."
+      "letzte_einschaetzung": "P1-Update: Heutiger P4-Scan stuft Palo Alto Networks erneut nicht als hoch/mittel-Kandidat ein, OBV-5T-Trend bleibt negativ (-9,57 Mio.), Cybersecurity-Sektor insgesamt weiterhin strukturell ueberdehnt (CrowdStrike/Zscaler) - kein Einstiegssignal, aus aktiver Kaufbeobachtung genommen, Watch auf Stabilisierung."
     },
     {
       "ticker": "AMD",
@@ -305,7 +254,7 @@
       "handelstage_in_liste": 5,
       "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Invalidiert trotz starker Performance (+23,83% seit Aufnahme): 3 neue Anti-Bulltrap-Kriterien seit Aufnahme erfuellt (RSI14 78,07 >72, Abstand SMA20 +22,78% >8%, 5-Tage-Anstieg +23,83% >15%) - Setup jetzt strukturell stark ueberdehnt, gemaess Rotationsregel aus der aktiven Liste genommen trotz des grossen Kursgewinns."
+      "letzte_einschaetzung": "Invalidiert trotz starker Performance (+23,83% seit Aufnahme): 3 neue Anti-Bulltrap-Kriterien seit Aufnahme erfuellt - Setup strukturell stark ueberdehnt, gemaess Rotationsregel aus der aktiven Liste genommen trotz des grossen Kursgewinns."
     },
     {
       "ticker": "AAPL",
@@ -316,13 +265,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 333.08,
       "aufnahme_kurs_eur": 288.45,
-      "aktueller_kurs_usd": 337.64,
-      "aktueller_kurs_eur": 294.08,
-      "performance_pct": 1.37,
-      "handelstage_in_liste": 5,
+      "aktueller_kurs_usd": 342.85,
+      "aktueller_kurs_eur": 298.97,
+      "performance_pct": 3.65,
+      "handelstage_in_liste": 6,
       "status": "aktiv",
       "empfehlung": "Halten",
-      "letzte_einschaetzung": "P1-Update: OBV-5-Tage-Trend erstmals seit Aufnahme ins Negative gedreht (-45,06 Mio., zuvor durchgehend stark positiv) - erste Divergenz zwischen stabilem Kurs und nachlassender institutioneller Akkumulation. Noch keine Anti-Bulltrap-Flags verletzt, aber Signal schwaecht sich sichtbar ab."
+      "letzte_einschaetzung": "P1-Update: OBV-5-Tage-Trend heute wieder klar positiv (+21,61 Mio.), nachdem er gestern erstmals seit Aufnahme negativ war - Divergenz vorerst aufgeloest. Kein Anti-Bulltrap-Flag verletzt, aber Apple heute erneut nicht unter den P4-Kandidaten hoch/mittel - solide, aber kein frisches Kaufsignal."
     },
     {
       "ticker": "NOW",
@@ -331,15 +280,15 @@
       "aufnahmedatum": "2026-09-15",
       "aufnahmequelle": "P4",
       "aufnahme_score": "mittel",
-      "aufnahme_kurs_usd": 142.35,
-      "aufnahme_kurs_eur": 123.28,
-      "aktueller_kurs_usd": 136.745,
-      "aktueller_kurs_eur": 119.1,
-      "performance_pct": -3.94,
-      "handelstage_in_liste": 5,
+      "aufnahme_kurs_usd": 135.77,
+      "aufnahme_kurs_eur": 118.39,
+      "aktueller_kurs_usd": 135.77,
+      "aktueller_kurs_eur": 118.39,
+      "performance_pct": -3.97,
+      "handelstage_in_liste": 6,
       "status": "aktiv",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "P1-Update: OBV-5-Tage-Trend bleibt klar negativ (-53,32 Mio.), institutionelle Distribution setzt sich trotz nur moderatem Kursrueckgang fort - klassische bearishe Divergenz, weiterhin Verkauf/aus aktiver Beobachtung nehmen empfohlen."
+      "letzte_einschaetzung": "P1-Update: OBV-5-Tage-Trend bleibt klar negativ (-28,38 Mio.), institutionelle Distribution setzt sich trotz nur moderatem Kursrueckgang (-3,97% seit Aufnahme) fort - klassische bearishe Divergenz, weiterhin Verkauf/aus aktiver Beobachtung nehmen empfohlen."
     },
     {
       "ticker": "NVDA",
@@ -350,13 +299,13 @@
       "aufnahme_score": "hoch",
       "aufnahme_kurs_usd": 222.27,
       "aufnahme_kurs_eur": 193.6,
-      "aktueller_kurs_usd": 225.19,
-      "aktueller_kurs_eur": 196.14,
-      "performance_pct": 1.31,
-      "handelstage_in_liste": 1,
+      "aktueller_kurs_usd": 228.405,
+      "aktueller_kurs_eur": 199.17,
+      "performance_pct": 2.88,
+      "handelstage_in_liste": 2,
       "status": "aktiv",
       "empfehlung": "Kauf",
-      "letzte_einschaetzung": "Bestes Institutional-Flow-Setup der gesamten Watchlist, Institutional Hold Test (P5.5) klar bestanden, OBV-5T-Trend +469,72 Mio. mit weitem Abstand staerkster Wert der Watchlist - heute aktive Kaufempfehlung (Top-Chance #1)."
+      "letzte_einschaetzung": "P1-Update: Institutional Hold Test zum dritten Mal in Folge (P4/P5/P5.5) klar bestanden, OBV-5T-Trend mit +491,74 Mio. weiterhin mit weitem Abstand staerkster Wert der Watchlist - heute klarer Tagesfavorit (Top-Chance #1), Einstieg haengt jedoch von der Freigabe eines Depot-Slots ab (Depot aktuell 2/2 belegt)."
     },
     {
       "ticker": "TMO",
@@ -367,13 +316,13 @@
       "aufnahme_score": "hoch",
       "aufnahme_kurs_usd": 651.45,
       "aufnahme_kurs_eur": 567.41,
-      "aktueller_kurs_usd": 656.615,
-      "aktueller_kurs_eur": 571.91,
-      "performance_pct": 0.79,
-      "handelstage_in_liste": 1,
+      "aktueller_kurs_usd": 662.63,
+      "aktueller_kurs_eur": 577.85,
+      "performance_pct": 1.84,
+      "handelstage_in_liste": 2,
       "status": "aktiv",
-      "empfehlung": "Kauf",
-      "letzte_einschaetzung": "Institutional Hold Test bestanden, MedTech weiterhin staerkster Sektor neben Halbleitern, aber deutlich schwaecheres OBV-Signal (+5,55 Mio.) als NVIDIA - attraktiver Beobachtungskandidat, kein aktiver Trade heute (Neutral-Regime = max. 1 Position)."
+      "empfehlung": "Halten",
+      "letzte_einschaetzung": "P1-Update: RSI14 bei 77,81 weiterhin klar ueber der 72er-Anti-Bulltrap-Schwelle (wachsende Ueberhitzung statt Entspannung) - trotz solidem OBV-Trend kein Einstieg, Beobachtung auf Abkuehlung."
     },
     {
       "ticker": "MRVL",
@@ -384,13 +333,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 244.25,
       "aufnahme_kurs_eur": 212.74,
-      "aktueller_kurs_usd": 254.42,
-      "aktueller_kurs_eur": 221.6,
-      "performance_pct": 4.16,
-      "handelstage_in_liste": 1,
-      "status": "aktiv",
+      "aktueller_kurs_usd": 262.335,
+      "aktueller_kurs_eur": 228.72,
+      "performance_pct": 7.51,
+      "handelstage_in_liste": 2,
+      "status": "ausgeschieden (invalidiert)",
       "empfehlung": "Verkauf",
-      "letzte_einschaetzung": "Institutional Hold Test (P5.5) nur teilweise bestanden - seit P4 drei neue Anti-Bulltrap-Kriterien erfuellt (Abstand SMA20 +10,96%, SMA50 +17,12%, 5T-Anstieg +15,77%), RSI14 70,29 nahe Ueberhitzung. Trotz starkem OBV strukturell zu weit gelaufen, kein Einstieg."
+      "letzte_einschaetzung": "Invalidiert: RSI14 heute erstmals ueber die 72er-Schwelle geklettert (73,52), zusammen mit weiterhin verletzten Abstand-SMA20 (+13,99% >8%), Abstand-SMA50 (+20,74% >15%) und 5-Tage-Anstieg (+18,33% >15%) sind damit 4 Anti-Bulltrap-Kriterien gleichzeitig verletzt - trotz positiver Performance (+7,51%) strukturell zu weit gelaufen, rotiert gemaess Regel aus der aktiven Liste."
     },
     {
       "ticker": "TSM",
@@ -401,13 +350,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 434.67,
       "aufnahme_kurs_eur": 378.69,
-      "aktueller_kurs_usd": 441.31,
-      "aktueller_kurs_eur": 384.38,
-      "performance_pct": 1.53,
-      "handelstage_in_liste": 1,
+      "aktueller_kurs_usd": 445.855,
+      "aktueller_kurs_eur": 388.79,
+      "performance_pct": 2.67,
+      "handelstage_in_liste": 2,
       "status": "aktiv",
       "empfehlung": "Kauf",
-      "letzte_einschaetzung": "Institutional Hold Test bestanden, sauberer Fortsetzungs-Hold ohne neue Warnsignale, solide zweitbeste Alternative zu NVIDIA - kein aktiver Trade heute (Neutral-Regime = max. 1 Position)."
+      "letzte_einschaetzung": "P1-Update: Institutional Hold Test erneut bestanden, keine Anti-Bulltrap-Flags verletzt, bestes CRV der Gruppe (ca. 3,0:1) - These weiterhin intakt, Einstieg waere nach P4-Kriterien heute gerechtfertigt, aber kein aktiver Trade wegen Neutral-Regime (max. 1 Position) und staerkerem NVIDIA-Signal."
     },
     {
       "ticker": "ASML",
@@ -418,13 +367,13 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 1679.92,
       "aufnahme_kurs_eur": 1463.21,
-      "aktueller_kurs_usd": 1699.505,
-      "aktueller_kurs_eur": 1480.27,
-      "performance_pct": 1.17,
-      "handelstage_in_liste": 1,
+      "aktueller_kurs_usd": 1723.57,
+      "aktueller_kurs_eur": 1502.95,
+      "performance_pct": 2.72,
+      "handelstage_in_liste": 2,
       "status": "aktiv",
-      "empfehlung": "Halten",
-      "letzte_einschaetzung": "Institutional Hold Test neutral bewertet - moderater Kursfortschritt, aber weiterhin unter der SMA50, kein klares Kaufsignal."
+      "empfehlung": "Kauf",
+      "letzte_einschaetzung": "P1-Update: Kurs hat die SMA50 heute nach oben durchbrochen (Abstand jetzt +0,19%), keine Anti-Bulltrap-Flags verletzt, relative Staerke sehr stark (5T +8,3%) - technische Basis deutlich verbessert, aber schwaecheres institutionelles Flow-Signal als NVIDIA/Taiwan Semiconductor, kein aktiver Trade heute."
     },
     {
       "ticker": "ISRG",
@@ -435,13 +384,30 @@
       "aufnahme_score": "mittel",
       "aufnahme_kurs_usd": 393.33,
       "aufnahme_kurs_eur": 342.6,
-      "aktueller_kurs_usd": 395.72,
-      "aktueller_kurs_eur": 344.67,
-      "performance_pct": 0.61,
-      "handelstage_in_liste": 1,
+      "aktueller_kurs_usd": 401.52,
+      "aktueller_kurs_eur": 350.13,
+      "performance_pct": 2.2,
+      "handelstage_in_liste": 2,
       "status": "aktiv",
       "empfehlung": "Halten",
-      "letzte_einschaetzung": "Institutional Hold Test teilweise bestanden, kurzfristiger Hold technisch gegeben, aber Kurs bleibt rund -13% unter der SMA200 - kein bestaetigter institutioneller Trendfortsetzungs-Setup, reiner Beobachtungskandidat."
+      "letzte_einschaetzung": "P1-Update: RSI14 auf 70,81 gestiegen, naehert sich der Ueberhitzungsschwelle (72), kein Anti-Bulltrap-Flag formal verletzt. Kurs bleibt strukturell rund -11,5% unter SMA200 - Erholung bleibt Mean-Reversion in einem noch nicht invalidierten Abwaertstrend, kein bestaetigter institutioneller Trendfortsetzungs-Setup."
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-09-22",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 362.995,
+      "aufnahme_kurs_eur": 316.53,
+      "aktueller_kurs_usd": 362.995,
+      "aktueller_kurs_eur": 316.53,
+      "performance_pct": 0.0,
+      "handelstage_in_liste": 1,
+      "status": "aktiv",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Neu aufgenommen (P4-Score mittel): 0 von 5 Anti-Bulltrap-Kriterien verletzt, positiver OBV-5T-Trend (+118,28 Mio.), aber Institutional Hold Test (P5.5) noch am selben Tag nicht bestanden - Kurs notiert weiterhin unter SMA50 und zusaetzlich unter SMA200, keine frische institutionelle Kaufbestaetigung, CRV mit ca. 2,1:1 unter der Mindestschwelle. Kein Einstieg, nur Beobachtung."
     }
   ]
 }
