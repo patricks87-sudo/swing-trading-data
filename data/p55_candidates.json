@@ -1,50 +1,43 @@
 {
-  "generated_at_utc": "2026-09-22T15:20:00Z",
-  "run_date": "2026-09-22",
+  "generated_at_utc": "2026-09-23T15:18:15+00:00",
+  "run_date": "2026-09-23",
   "ergebnis": "Trade",
-  "kurzbegruendung": "Trade: NVIDIA bestätigt dominanten Institutional Flow auch 90+ Min. nach US-Open ununterbrochen (P4→P5→P5.5) - einziger Trade im Neutral-Regime (max. 1 laut Punkt 10).",
+  "kurzbegruendung": "Trade: NVIDIA hält Trend und dominanten Institutional Flow trotz breiter Marktschwäche (10J-Rendite >5%) - einziger Trade im Neutral-Regime. Taiwan Semiconductor zweitbester Fluss ohne Einstieg, Broadcom fällt unter SMA20/50 durch.",
   "kandidaten": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "Semiconductors/AI",
       "status": "Bestanden",
-      "begruendung": "Institutional Hold Test klar bestanden - dritte Bestätigung in Folge (P4 RSI14 56,3 → P5 60,58 → jetzt 61,21; Kurs 199,38 EUR, +0,35% seit P5). Abstand SMA20 +3,69%, Abstand SMA50 +6,3% - beide klar unter den Anti-Bulltrap-Schwellen (8%/15%). OBV-5-Tage-Trend weiterhin mit weitem Abstand der stärkste institutionelle Kapitalzufluss der gesamten Watchlist (+491,51 Mio., P4: +578,58 Mio., P5: +490,85 Mio. - Akkumulation hält unvermindert an). Relative Stärke bestätigt: NVIDIA (chg_5d +7,77%) outperformt NASDAQ-Proxy (+5,71%) und S&P500-Proxy (+2,14%) deutlich; Sektor Semiconductors/AI mit Ø 5T rund +11,2% weiterhin stärkster Sektor, SOX-Proxy chg_5d +13,19%. Tagesgewinn +0,56%, Kurs hält seit dem Open durchgehend die Gewinne. Datenlücke: kein VWAP und keine Intraday-Volumenfenster (15:30-16:00 vs. 16:00-17:00 Uhr) im automatisierten Feed verfügbar - Second-Chance-Kriterium aus Punkt 6 daher nicht exakt verifizierbar, ersatzweise über den durchgehend positiven Kursverlauf seit P4 plausibilisiert. Bestes Institutional-Flow-Setup des heutigen Scans - Trade wird eröffnet."
+      "begruendung": "Institutional Hold Test klar bestanden: Kurs hält trotz breiter Marktschwäche (NASDAQ-Proxy -0,72%, SOX-Proxy -1,74% heute) klar über SMA20 (+2,17%) und SMA50 (+4,92%), RSI14 von zuletzt überkauften Werten auf gesunde 51,7 abgekühlt - keine der 5 Anti-Bulltrap-Schwellen verletzt. OBV-5-Tage-Trend bleibt mit +486,6 Mio. mit weitem Abstand der stärkste institutionelle Kapitalzufluss der gesamten 50er-Watchlist - Akkumulation hält auch am heutigen Pullback-Tag unvermindert an (klassisches Second-Chance-Muster). Relative Stärke bestätigt: chg_5d +5,65% schlägt S&P500-Proxy (+2,1%) deutlich, liegt nahe an NASDAQ-Proxy (+5,3%). Sektor Semiconductors/AI mit Ø 5T rund +9,7% weiterhin stärkster Sektor der Watchlist. Datenlücke: kein VWAP und keine Intraday-Volumenfenster (15:30-16:00 vs. 16:00-17:00 Uhr) im automatisierten Feed verfügbar - Second-Chance-Kriterium aus Punkt 6 daher nicht exakt verifizierbar, ersatzweise über SMA-Halt und anhaltend positiven OBV-Trend plausibilisiert. Bestes Institutional-Flow-Setup des heutigen Scans - Trade wird eröffnet."
     },
     {
       "ticker": "TSM",
       "name": "Taiwan Semiconductor",
       "sector": "Semiconductors/AI",
       "status": "Bestanden",
-      "begruendung": "Institutional Hold Test bestanden: Kurs steigt weiter von 389,08 EUR (P5) auf 389,22 EUR (+0,04%), RSI14 67,34 (P5: 67,29) unverändert moderat, Abstand SMA20 +4,87%, Abstand SMA50 +6,76% - beide weit von den Anti-Bulltrap-Schwellen entfernt. OBV-5-Tage-Trend weiterhin klar positiv (+45,93 Mio., P4: +36,31 Mio.) - kontinuierliche Akkumulation. Bestes CRV der geprüften Kandidaten (rund 3,0:1), solide Liquidität (Ø Volumen 9,3 Mio. Aktien/Tag). Sauberer, unauffälliger Fortsetzungs-Hold - zweitbester institutioneller Fluss nach NVIDIA, aber wegen Neutral-Regime (max. 1 Trade) heute kein aktiver Einstieg, bleibt Top-Beobachtungskandidat für morgen."
-    },
-    {
-      "ticker": "TMO",
-      "name": "Thermo Fisher Scientific",
-      "sector": "MedTech",
-      "status": "Teilweise",
-      "begruendung": "Institutional Hold Test nur teilweise bestanden: RSI14 setzt die Überhitzung fort und steigt weiter von 66,7 (P4) über 74,69 (P5) auf jetzt 77,31 - klar über der 72er-Anti-Bulltrap-Schwelle und damit ein wachsendes Warnsignal statt einer Entspannung. Kurs zwar weiter im Plus (575,69 EUR, +0,73% seit P5), Abstand SMA20 +5,4% und SMA50 +10,74% bleiben unauffällig, OBV-5-Tage-Trend weiterhin nur moderat positiv. Ø Tagesvolumen (1,98 Mio. Aktien) bleibt unter der 5-Mio.-Liquiditätsschwelle. Sektor MedTech mit Ø 5T rund +4,6% kein klarer Outperformer mehr ggü. NASDAQ (+5,71%). Trotz technisch fortgesetztem Hold: kein Einstieg wegen der zunehmenden RSI-Überdehnung, Kandidat für heute verworfen, Beobachtung auf Abkühlung."
+      "begruendung": "Institutional Hold Test bestanden: Kurs hält trotz -0,82% heute weiterhin klar über SMA20 (+4,88%) und SMA50 (+7,05%), RSI14 66,21 moderat bullisch, keine Anti-Bulltrap-Schwelle verletzt. OBV-5-Tage-Trend positiv (+46,4 Mio.) - klar schwächerer institutioneller Fluss als NVIDIA, aber zweitbester der geprüften Kandidaten. Relative Stärke stark: chg_5d +7,32% schlägt S&P500-Proxy (+2,1%) und NASDAQ-Proxy (+5,3%) deutlich, bestes CRV der Gruppe (rund 2,85:1). Sauberer, unauffälliger Fortsetzungs-Hold, aber wegen Neutral-Regime (max. 1 Trade laut Punkt 10, Kriterium 5 der Marktampel - nur 54% der Watchlist über SMA50 statt geforderter 60% - nicht erfüllt) heute kein aktiver Einstieg, bleibt Top-Beobachtungskandidat."
     },
     {
       "ticker": "AVGO",
       "name": "Broadcom",
       "sector": "Semiconductors/AI",
       "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test nicht bestanden: Kurs zwar leicht im Plus seit P5 (313,38 EUR → 315,94 EUR, +0,82%), notiert aber weiterhin unter der SMA50 (Abstand -4,27%) und jetzt zusätzlich unter der SMA200 (-1,74%) - kein bestätigter Aufwärtstrend. Tagesveränderung mit -0,07% praktisch flach, keine frische institutionelle Kaufbestätigung trotz insgesamt positivem OBV-5-Tage-Trend (+117,71 Mio.). CRV bereits im P4-Scan mit rund 2,1:1 unter der Mindestschwelle. Kein Einstieg, Kandidat verworfen."
+      "begruendung": "Institutional Hold Test nicht bestanden: größter Tagesverlust der geprüften Kandidaten (-2,13%), Kurs fällt dabei unter SMA20 (-0,71%) und SMA50 (-5,61%) - Breakout-Level nicht gehalten, kein bestätigter Aufwärtstrend mehr. OBV-5-Tage-Trend zwar weiterhin positiv (+115,1 Mio., Akkumulations-Divergenz zum fallenden Kurs), reicht aber nicht aus, um den technischen Bruch der kurzfristigen Trendstruktur auszugleichen. CRV bereits im P4-Scan mit rund 2,17:1 unter der Mindestschwelle. Kein Einstieg, Kandidat für heute verworfen."
     },
     {
       "ticker": "ASML",
       "name": "ASML Holding",
       "sector": "Semiconductors/AI",
-      "status": "Bestanden",
-      "begruendung": "Institutional Hold Test bestanden - deutliche Verbesserung seit dem Open: Kurs steigt von 1.493,90 EUR (P5, damals -1,56% unter SMA50) auf jetzt 1.505,94 EUR (+0,81% seit P5, Tagesgewinn +0,92% - stärkster Tagesgewinn der sechs geprüften Kandidaten) und hat die SMA50 dabei nach oben durchbrochen (Abstand jetzt +0,38%). RSI14 55,78 unauffällig, Abstand SMA200 weiterhin gesund bei rund +14%. OBV-5-Tage-Trend positiv, aber mit +6,58 Mio. vergleichsweise schwach - klar schwächerer institutioneller Fluss als NVIDIA und Taiwan Semiconductor. Relative Stärke stark: chg_5d +8,51% schlägt sowohl S&P500 (+2,14%) als auch NASDAQ (+5,71%) deutlich. Damit ein echtes Second-Chance-Setup (Kriterium 6), aber wegen des im Vergleich schwächeren Institutionellen Flusses (Ranking-Kriterium 1) nicht der Tagestrade - bleibt aussichtsreicher Beobachtungskandidat mit jetzt verbesserter technischer Basis."
+      "status": "Teilweise",
+      "begruendung": "Institutional Hold Test nur teilweise bestanden: Kurs hält knapp über SMA20 (+2,37%) und ganz knapp über SMA50 (+0,37%) trotz -1,24% heute - Level formal gehalten, aber ohne Sicherheitsabstand. OBV-5-Tage-Trend mit nur +6,4 Mio. auffällig schwach - deutlich schwächerer institutioneller Fluss als NVIDIA und Taiwan Semiconductor, kaum Bestätigung durch Smart Money. Bereits im P4-Scan als Liquiditätsschwachpunkt vermerkt (Ø nur rund 1,2 Mio. Aktien/Tag, unter der 5-Mio.-Schwelle). Kein Einstieg, bleibt Beobachtungskandidat mit gemischtem Bild."
     },
     {
       "ticker": "ISRG",
       "name": "Intuitive Surgical",
       "sector": "MedTech",
       "status": "Teilweise",
-      "begruendung": "Institutional Hold Test teilweise bestanden: Kurs legt weiter zu (347,69 EUR P5 → 349,61 EUR, +0,55%), RSI14 springt jedoch deutlich von 61,72 (P5) auf jetzt 70,28 - nähert sich der Überhitzungsschwelle. OBV-5-Tage-Trend bleibt positiv (+12,4 Mio.), Tagesveränderung mit -0,18% aber bereits leicht negativ trotz Momentum-Beschleunigung - erstes Anzeichen für nachlassenden Schwung. Strukturelles Gegenargument bleibt bestehen: Kurs notiert weiterhin rund -11,6% unter der SMA200, die Erholung findet in einem übergeordnet noch nicht invalidierten Abwärtstrend statt (Mean-Reversion, keine bestätigte institutionelle Trendfortsetzung im Sinne von Abschnitt 3). Ø Tagesvolumen (2,29 Mio.) weiterhin unter der 5-Mio.-Schwelle. Kein Kaufsignal, reiner Beobachtungskandidat."
+      "begruendung": "Institutional Hold Test nur teilweise bestanden: Kurs hält trotz -0,37% heute weiterhin über SMA20 (+6,6%) und SMA50 (+7,2%), OBV-5-Tage-Trend positiv (+12,1 Mio.), RSI14 68,74 nähert sich aber wieder der Überhitzungsschwelle. Strukturelles Gegenargument bleibt bestehen: Kurs notiert weiterhin rund -11,5% unter der SMA200 - die Erholung findet in einem übergeordnet noch nicht invalidierten Abwärtstrend statt (Mean-Reversion, keine bestätigte institutionelle Trendfortsetzung). Ø Tagesvolumen (2,3 Mio.) weiterhin unter der 5-Mio.-Liquiditätsschwelle. Kein Kaufsignal, reiner Beobachtungskandidat."
     }
   ]
 }
