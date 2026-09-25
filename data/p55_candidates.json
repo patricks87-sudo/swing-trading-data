@@ -1,43 +1,57 @@
 {
-  "generated_at_utc": "2026-09-24T15:20:19+00:00",
-  "run_date": "2026-09-24",
+  "generated_at_utc": "2026-09-25T15:20:45Z",
+  "run_date": "2026-09-25",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade: Nur Taiwan Semiconductor besteht den Hold-Test, aber ohne bestätigten Breakout. NVIDIA/Deere schwächen ab, Caterpillar/Broadcom brechen unter die Trendlinien - Kapitalerhalt hat Vorrang.",
+  "kurzbegruendung": "Kein Trade: Institutionelle Flows kühlen bei fast allen P4-Kandidaten ab, kein klar bestätigter Second-Chance-Breakout - Kapitalerhalt hat Vorrang.",
   "kandidaten": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "Semiconductors/AI",
-      "status": "Teilweise",
-      "begruendung": "Institutional Hold Test nur teilweise bestanden: Kurs fällt heute um -1,70% und notiert mit pct_from_sma20 von -0,03% praktisch exakt auf der SMA20 (P5-Stand noch +2,17%) - das Breakout-Level wird damit nicht mehr mit Sicherheitsabstand gehalten. SMA50 (+2,84%) bleibt intakt, RSI14 mit 42,71 deutlich abgekühlt, keine Anti-Bulltrap-Schwelle verletzt. OBV-5-Tage-Trend bleibt mit +305,7 Mio. weiterhin mit Abstand stärkster institutioneller Zufluss der 50er-Watchlist, ist aber gegenüber P5 (+306,2 Mio.) und P4 (+400,7 Mio.) im Tagesverlauf spürbar rückläufig - Akkumulation hält an, aber ohne die für ein klares Second-Chance-Signal nötige Beschleunigung. Sektor Semiconductors/AI heute mit SOX-Proxy -1,64% ebenfalls rot, keine frische Sektor-Bestätigung. Kein Einstieg, bleibt Beobachtungskandidat."
+      "status": "Nicht bestanden",
+      "begruendung": "Institutional Hold Test nicht bestanden: OBV-5-Tage-Trend bricht von +229,9 Mio. beim P4-Lauf (13:06 UTC) auf nur noch +40,5 Mio. ein - der mit Abstand stärkste institutionelle Zufluss des Vormittags ist im Tagesverlauf fast vollständig verpufft. RSI14 fällt von 45,5 auf 43,1, die 5-Tage-Performance schwächt sich von +2,39% auf +1,04% ab, der Abstand zur SMA50 schrumpft von +4,15% auf +3,99%. Kein Anti-Bulltrap-Kriterium verletzt, Kurs bleibt technisch stabil über SMA20/50, aber ohne die für einen Second-Chance-Trade nötige institutionelle Fortsetzung. Aktueller Kurs rund 255,51€. Kein Einstieg, bleibt Top-Beobachtungskandidat."
     },
     {
       "ticker": "TSM",
       "name": "Taiwan Semiconductor",
       "sector": "Semiconductors/AI",
-      "status": "Bestanden",
-      "begruendung": "Institutional Hold Test bestanden: Kurs hält trotz -0,75% heute weiterhin klar über SMA20 (+3,41%) und SMA50 (+5,73%), RSI14 62,52 moderat bullisch ohne Überhitzung, keine Anti-Bulltrap-Schwelle verletzt. OBV-5-Tage-Trend bleibt positiv (+23,8 Mio.), wenngleich gegenüber dem P5-Stand (+46,4 Mio.) im Tagesverlauf abgeschwächt - Akkumulation setzt sich fort, aber ohne neue Kaufwelle. Relative Stärke intakt: chg_5d +3,01% schlägt S&P500-Proxy (+0,22%) klar, weiterhin bestes CRV der geprüften Gruppe. Sauberster, unauffälligster Fortsetzungs-Hold des heutigen Second-Chance-Checks, liefert aber kein verifizierbares 'lautes' Breakout-Muster (keine Intraday-Volumenfenster 16:00-17:00 im Feed verfügbar, Datenbasis unvollständig) - bleibt daher Top-Beobachtungskandidat statt aktivem Einstieg."
+      "status": "Teilweise",
+      "begruendung": "Institutional Hold Test teilweise bestanden: Kurs hält sich weiterhin klar über SMA20 (+5,03%) und SMA50 (+7,55%) und outperformt sowohl NASDAQ-Proxy (+3,97% vs. +3,10% 5T) als auch S&P500-Proxy (+3,97% vs. +1,03%) - relative Stärke bleibt intakt. OBV-5-Tage-Trend aber von +31,6 Mio. (P4) auf +18,8 Mio. abgeschwächt, RSI14 von 66,1 auf 62,1 zurückgenommen - Struktur hält, Momentum kühlt spürbar ab. Kein verifizierbares 'lautes' Breakout-Muster mit neuen Hochs im 16:00-17:00-Fenster feststellbar (Intraday-Zeitfenster im Feed nicht verfügbar, Datenbasis unvollständig). Aktueller Kurs rund 514,12€. Sauberster Fortsetzungs-Hold der geprüften Gruppe, aber ohne neue Kaufwelle - bleibt Beobachtungskandidat statt aktivem Einstieg."
     },
     {
       "ticker": "DE",
       "name": "Deere & Company",
       "sector": "Industrials",
-      "status": "Teilweise",
-      "begruendung": "Institutional Hold Test nur teilweise bestanden: größter Tagesverlust seit dem P4-Scan (-1,85% heute), Kurs hält zwar noch über SMA20 (+2,56%, war beim P4-Lauf noch +4,97%) und SMA50 (+8,97%), aber mit klar schrumpfendem Sicherheitsabstand. 5-Tage-Momentum bricht deutlich ein (chg_5d nur noch +1,57% statt zuvor +5,98%), OBV-5-Tage-Trend nahezu zum Erliegen gekommen (+2,01 Mio. statt +3,27 Mio. beim P4-Lauf) - deutliches Nachlassen der institutionellen Kauforder im Tagesverlauf, zeitgleich mit dem breiten Rückschlag im Industrials-Sektor (Caterpillar -1,89%). Kein Einstieg, Beobachtungsstatus bleibt, Trendstruktur aber angeschlagen."
+      "status": "Nicht bestanden",
+      "begruendung": "Institutional Hold Test nicht bestanden: Abstand zur SMA20 schmilzt von +2,36% (P4) auf nur noch +0,57%, der Abstand zur SMA50 von +8,75% auf +7,06%, die 5-Tage-Performance von +1,36% auf +0,30% - der Kurs nähert sich seinen Breakout-Levels von unten an statt sie zu bestätigen. OBV-5-Tage-Trend bleibt mit +3,08 Mio. weiterhin klar unter der institutionellen Signalschwelle, Ø Tagesvolumen bereits beim P4-Lauf unter der 5-Mio.-Liquiditätsschwelle vermerkt. Aktueller Kurs rund 780,44€. Kein Einstieg, Kandidat für heute verworfen."
     },
     {
       "ticker": "CAT",
       "name": "Caterpillar",
       "sector": "Industrials",
       "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test nicht bestanden: Kurs fällt um -1,89% und rutscht dabei unter die SMA20 (-0,74%, war beim P4-Lauf noch +1,01%), notiert weiterhin unter der SMA50 (-4,03%, verschlechtert von -2,46%). 5-Tage-Trend dreht ins Negative (chg_5d -0,23% statt zuvor +3,74%) - die am Vormittag beobachtete beginnende Erholung ist im Tagesverlauf vollständig zunichtegemacht. OBV-5-Tage-Trend zwar weiterhin leicht positiv (+7,35 Mio.), reicht aber nicht aus, um den Bruch der kurzfristigen Trendstruktur auszugleichen. Kein Einstieg, Kandidat für heute verworfen."
+      "begruendung": "Institutional Hold Test nicht bestanden: OBV-5-Tage-Trend bricht von +5,2 Mio. (P4) auf nur noch +0,43 Mio. ein - die bereits am Vormittag schwache institutionelle Signallage hat sich weiter abgeschwächt. RSI14 fällt von 51,8 auf 48,8, Kurs bleibt weiterhin unter der SMA50 (-2,21%), keine bestätigte Trendfortsetzung. Aktueller Kurs rund 922,33€. Kein Einstieg, Kandidat für heute verworfen."
     },
     {
       "ticker": "AVGO",
       "name": "Broadcom",
       "sector": "Semiconductors/AI",
       "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test nicht bestanden: größter Tagesverlust der gesamten geprüften Gruppe (-2,13%), Kurs fällt dabei weiter unter SMA20 (-3,17%, verschlechtert von -1,18% beim P4-Lauf) und SMA50 (-7,84%, verschlechtert von -6,07%) - das Breakout-Level wird klar nicht gehalten. OBV-5-Tage-Trend zwar weiterhin positiv (+67,4 Mio.), gegenüber dem P4-Stand (+92,2 Mio.) aber bereits rückläufig, während der Kurs gleichzeitig weiter fällt - beginnende Akkumulations-/Kurs-Divergenz. Das im P4-Scan vermerkte mögliche Auftragsrisiko im Zusammenhang mit einem chinesischen Rechenzentrumsprojekt bleibt aktuell. Kein Einstieg, Kandidat für heute verworfen."
+      "begruendung": "Institutional Hold Test nicht bestanden: Der beim P4-Lauf erkennbare beginnende OBV-Turnaround (+46,8 Mio.) ist auf nur noch +3,07 Mio. praktisch verpufft - keine Fortsetzung der am Vormittag vermuteten Trendwende. Kurs bleibt weiterhin klar unter SMA20 (-1,66%) und SMA50 (-6,52%), RSI14 mit 46,5 neutral. Aktueller Kurs rund 400,52€. Kein Einstieg, Kandidat für heute verworfen."
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
+      "sector": "Software/Cloud",
+      "status": "Teilweise",
+      "begruendung": "Institutional Hold Test teilweise bestanden: weiterhin mit Abstand stärkster OBV-5-Tage-Trend der gesamten Watchlist (+101,4 Mio.), wenn auch etwas abgeschwächt gegenüber dem P4-Stand (+141,0 Mio.) - institutioneller Rückhalt bleibt vorhanden. RSI14 aber auf 73,3 gestiegen (überkauft) und Kurs weiterhin +16,97% über der SMA50 - bleibt nach dem bereits im P4-Lauf angewandten Anti-Bulltrap-Filter (>15% über SMA50) technisch überdehnt disqualifiziert. Aktueller Kurs rund 218,19€. Trotz stärkstem institutionellem Signal kein sauberer Einstieg, Beobachtung auf Pullback."
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "sector": "Consumer Discretionary",
+      "status": "Teilweise",
+      "begruendung": "Institutional Hold Test teilweise bestanden: OBV-5-Tage-Trend deutlich verstärkt (von +20,5 Mio. beim P4-Lauf auf +71,6 Mio.) - möglicher Hinweis auf Akkumulation trotz Schwäche. Tageskurs aber -1,61% im Minus, Abstand zur SMA20 schrumpft von +3,60% auf +1,69% und zur SMA50 von +8,41% auf +6,78% - kein klassischer Breakout-Tag mit neuen Hochs, eher ein Rücksetzer mit divergentem, noch unbestätigtem OBV-Signal. Aktueller Kurs rund 423,05€. Kein Einstieg, Bestätigung an einem ruhigeren Tag abwarten."
     }
   ]
 }
