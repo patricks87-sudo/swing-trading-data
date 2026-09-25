@@ -1,102 +1,161 @@
 {
-  "generated_at_utc": "2026-09-24T15:50:33Z",
+  "generated_at_utc": "2026-09-25T13:06:14Z",
   "status": "NEUTRAL",
-  "begruendung": "P1-Lauf 24.09.2026 (Datenstand 15:36 UTC / rund 17:36 MESZ, finaler Portfolio-Check des Handelstags). Marktregime nach den 5 etablierten Risk-On-Kriterien weiterhin nur 3 von 5 erfüllt: VIX (Proxy) bei 13,02 klar unter der 18er-Schwelle, NASDAQ-Proxy mit +2,22% weiterhin über SMA20, SOX-Proxy (chg_5d +7,12%) weiterhin deutlich stärker als NASDAQ-Proxy (chg_5d +2,58%). Die beiden fehlenden Kriterien haben sich im Tagesverlauf weiter verschlechtert: Watchlist-Advance/Decline-Ratio fällt von 0,72 (P4) über 0,48 (P5) und 0,43 (P5.5) auf zuletzt nur noch 0,39 (14 Advancer/36 Decliner von 50), und weiterhin nur 50,0% der Watchlist-Werte über SMA50 (unter der 60%-Schwelle). Einstufung bleibt damit unverändert NEUTRAL - laut P1-Prompt ist im Neutral-Regime maximal 1 neue Position zulässig.\n\nMakro-Hintergrund: Die 10-Jahres-US-Rendite verharrt bei rund 5,11% (höchster Stand seit 2007), begünstigt durch einen überraschend starken PMI-Bericht (stärkstes Geschäftswachstum seit über fünf Jahren) und gestiegene Fed-Zinserhöhungserwartungen für Oktober (laut Marktkommentaren rund 70%). Zusätzlich belasten steigende Ölpreise (WTI knapp über 93 USD, Brent knapp unter 105 USD) durch eskalierende US-Iran-Spannungen. Alle vier Leitindizes des Feeds notieren zum P1-Stand im Minus (NASDAQ-Proxy chg_1d -0,78%, S&P-500-Proxy -0,56%, Russell-2000-Proxy -0,91%, SOX-Proxy -1,71%), der Russell-2000-Proxy bleibt mit RSI14 22,8 tief überverkauft. Einzelne negative Unternehmensmeldungen (Oracle: Force-Majeure-Mitteilung zu einem Rechenzentrumsprojekt, heute erneut -5,12%; Starbucks: rund 250 Filialschließungen; MGM Resorts: geplatzte 18-Mrd.-Dollar-Übernahme) verstärken die vorsichtige Grundstimmung zusätzlich.\n\nInstitutional Hold Test der P4-Kandidaten mit Score hoch/mittel (NVIDIA, Taiwan Semiconductor, Deere & Company, Caterpillar, Broadcom), Ergebnis aus dem P5.5-Lauf, zum P1-Stand bestätigt: Nur Taiwan Semiconductor besteht den Test klar (hält SMA20/SMA50 mit Abstand, RSI14 62,9 gesund, OBV-5-Tage-Trend weiter positiv, beste relative Stärke ggü. S&P 500, bestes CRV der Gruppe). NVIDIA (Kurs exakt auf der SMA20, OBV-5-Tage-Trend von +400,7 Mio. (P4) auf +305,7 Mio. (P1) rückläufig) und Deere & Company (5-Tage-Momentum von +5,98% auf +1,57% eingebrochen, OBV-Trend nahezu zum Stillstand gekommen) bestehen den Test nur teilweise. Caterpillar (unter die SMA20/SMA50 gerutscht, 5-Tage-Trend ins Negative gedreht) und Broadcom (weiter unter SMA20/SMA50, größter Tagesverlust der Gruppe) bestehen den Test nicht und werden verworfen - beide werden heute dennoch neu in data/candidate_tracking.json aufgenommen (P4-Score mittel) und dort noch am Aufnahmetag als 'ausgeschieden (invalidiert)' markiert, da der Kurs bereits unter der SMA50 notiert. Für keinen der verbliebenen Kandidaten liegt eine über den automatisierten Feed verifizierbare Bestätigung einer frischen Second-Chance-Breakout-Volumenbeschleunigung vor (Datenbasis unvollständig: kein VWAP, keine Intraday-Volumenfenster).\n\nDepot-Status: 2 von 2 möglichen Positionen belegt (Robinhood, Oracle). Oracle vertieft die Verluste weiter (heute erneut -5,12%, rund -15,5% unter Kaufkurs, klar unter SMA20 und SMA200, negativer OBV-Trend) - Verkauf bleibt empfohlen (siehe portfolio_bewertung.json). Robinhood bleibt mit rund +20,7% profitabel im mit Abstand stärksten Sektor des Tages (Fintech/Brokerage) - wird gehalten.\n\nFinale Handlungsempfehlung (P1): Da im NEUTRAL-Regime nur A+-Setups mit klarer institutioneller Kaufbestätigung zulässig sind, sich die Marktbreite über den gesamten Handelstag kontinuierlich verschlechtert hat (A/D-Ratio 0,72 -> 0,48 -> 0,43 -> 0,39) und selbst der stärkste verbliebene Kandidat (Taiwan Semiconductor) keine frische, verifizierbare Second-Chance-Breakout-Bestätigung liefert, überwiegt weiterhin das Kapitalerhalt-Prinzip: Kein Trade. Kapitalerhalt hat Vorrang.",
-  "kurzbegruendung": "NEUTRAL: A/D-Ratio verschlechtert sich zum Tagesende auf 0,39, Renditen auf 19-Jahres-Hoch belasten breit - nur Taiwan Semiconductor besteht den Hold-Test klar, kein Trade, Oracle-Verkauf empfohlen.",
+  "begruendung": "P4-Lauf 25.09.2026 (Datenstand 12:51 UTC / rund 14:51 MESZ). Marktregime nach den 5 etablierten Risk-On-Kriterien nur 3 von 5 erfüllt: VIX bei 12,98 klar unter der 18er-Schwelle, NASDAQ-Proxy mit +2,97% über SMA20, SOX-Proxy (chg_5d +9,05%) deutlich stärker als NASDAQ-Proxy (chg_5d +3,37%). Die beiden fehlenden Kriterien: Watchlist-Advance/Decline-Ratio bei nur 0,52 (17 Advancer/33 Decliner von 50, unter der 1,0-Schwelle) und nur 54,0% der Watchlist-Werte über SMA50 (unter der 60%-Schwelle). Einstufung damit NEUTRAL - maximal 2 Kaufempfehlungen laut Marktampel-Logik zulässig. Der institutionelle Marktfilter aus Abschnitt 15B blockiert Empfehlungen formal nicht (nur 1 von 5 Breadth-Kriterien verletzt, Schwelle liegt bei ≥2).\n\nMakro-Hintergrund: Die 10-Jahres-US-Rendite steigt auf rund 5,225% (höchster Stand seit 2007), die 30-jährige auf 5,502% (höchster Stand seit 2004) - anhaltende Zinsvolatilität bleibt ein Belastungsfaktor für Aktienbewertungen. Gegenläufig stützen fallende Ölpreise (WTI -1,8% auf 92,89 USD, Brent -1,1% auf 105,40 USD) im Zuge möglicher US-Iran-Gespräche über die Straße von Hormus die Stimmung, ebenso ein 11,6-Mrd.-USD-Cloud-Deal von Akamai Technologies mit Anthropic als positives Einzelsignal für den Tech-Sektor.\n\nSektorrotation: Fünf Sektoren mit klar positiver relativer 5-Tage-Stärke ggü. S&P 500 (+0,60%) angeführt von Brokers (Ø +12,27%, v.a. Coinbase Global und Robinhood), Cybersecurity (Ø +5,47%), Semiconductors (Ø +5,33%), AI (Ø +4,18%) und MedTech (Ø +3,61%). Problem: Fast alle Einzelwerte in diesen Spitzensektoren sind bereits technisch überdehnt. Von den Aktien mit bestätigter institutioneller Akkumulation (Outperformance vs. NASDAQ/S&P 500/Sektor plus steigender OBV-5-Tage-Trend) verletzen AMD (4 von 5 Anti-Bulltrap-Kriterien), Marvell Technology und CrowdStrike (je 3 von 5), Palantir Technologies, Coinbase Global und Zscaler (je 2 von 5) mindestens 2 Kriterien aus Abschnitt 6 und sind damit für eine Kaufempfehlung formal ausgeschlossen - klassisches Chasing-Risiko nach einem bereits weit gelaufenen Move. Die einzigen Watchlist-Werte mit sauberem Institutional-Flow-Profil (0 von 5 Anti-Bulltrap-Kriterien, positiver OBV-5-Tage-Trend, Outperformance vs. NASDAQ und S&P 500) sind NVIDIA (OBV-5-Tage-Trend +229,9 Mio. - stärkster Zufluss der gesamten Watchlist, RSI14 nur 45,5) und Taiwan Semiconductor (bestes CRV der 'hoch'-Kandidaten mit 2,82:1). Für beide lässt sich der Institutioneller-Flow-Score und Gesamtscore nach Abschnitt 14 mangels echter Options-Flow-/Block-Trade-Daten, NYSE-A/D-Linie und 52-Wochen-Hoch-Bezug jedoch nicht verlässlich auf die harten Schwellen ≥85/≥88 verifizieren (Datenbasis unvollständig) - beide bleiben reine Beobachtungskandidaten für P5.\n\nDepot-Status: 2 Positionen offen (Robinhood, Oracle), kein Depotfilter-Ausschluss (nur 1 von 2 Positionen mit Buchverlust, Schwelle liegt bei ≥2 Positionen mit >10% Verlust). Robinhood bleibt mit rund +21% deutlich profitabel im mit Abstand stärksten Sektor des Tages (Brokers) - wird gehalten. Oracle vertieft die Verluste weiter (rund -14% unter Kaufkurs, RSI14 nur 36,9, 5-Tage-Trend -7,34%, heute allein -3,47%, OBV-5-Tage-Trend klar negativ bei -64,8 Mio.) - technisches Bild bleibt schwach, tendiert Richtung Verkaufssignal.\n\nFinale Handlungsempfehlung (P4): Trotz insgesamt konstruktivem Marktregime (VIX niedrig, NASDAQ und SOX über ihren gleitenden Durchschnitten) verhindert die enge Marktbreite (A/D-Ratio 0,52, nur 54% über SMA50) zusammen mit der technischen Überdehnung fast aller Spitzenkandidaten aus den führenden Sektoren eine belastbare Kaufempfehlung. Die zwei technisch saubersten Kandidaten (NVIDIA, Taiwan Semiconductor) lassen sich mangels Options-Flow- und Marktbreite-Detaildaten nicht zuverlässig auf die harten Institutional-Flow-/Gesamtscore-Schwellen verifizieren. Kapitalerhalt hat Vorrang: Kein Trade. Kapitalerhalt hat Vorrang.",
+  "kurzbegruendung": "NEUTRAL: Marktbreite schwach (A/D 0,52, 54% über SMA50), Top-Sektoren Brokers/Cyber/Semis technisch überdehnt - kein Trade, Kapitalerhalt hat Vorrang.",
   "sektor_rotation": [
     {
-      "sektor": "Technology",
-      "trend": "neutral",
-      "kommentar": "Apple mit chg_1d -0,28% erneut nahezu unverändert, RSI14 58,5 neutral, bleibt komfortabel über SMA20 (+2,44%) und SMA50 (+4,48%) - stabilster Einzelwert der Watchlist an einem insgesamt roten Tag, aber ohne frisches Signal. OBV-5-Tage-Trend dreht heute allerdings erstmals negativ (-42,79 Mio.).",
-      "kandidaten": [
-        { "name": "Apple", "empfehlung": "Halten" }
-      ]
-    },
-    {
-      "sektor": "Semiconductors",
+      "sektor": "Brokers",
       "trend": "positiv",
-      "kommentar": "5-Tage-Trend mit Ø rund +3,8% weiterhin positiv, SOX-Proxy bestätigt strukturell (chg_5d +7,12% vs. NASDAQ-Proxy +2,58%), der gesamte Sektor bleibt heute aber rot. Nur Taiwan Semiconductor besteht den Institutional Hold Test klar, NVIDIA fällt exakt auf die SMA20 zurück (nur teilweise bestanden), Broadcom fällt weiter unter SMA20/50 (nicht bestanden, heute mit P4-Score mittel neu aufgenommen und sofort wieder invalidiert). AMD strukturell weiterhin extrem überdehnt (RSI14 80,0, +22% über SMA50), Qualcomm weiterhin mit negativem OBV-Trend trotz Kursanstieg (Distributionssignal), ASML Holding heute wegen belastender Nachrichtenlage (gestoppte Verkäufe von Chipmaschinen nach Europa, Exportkontroll-Bedenken) auf P4-Score 'niedrig' herabgestuft und zusätzlich knapp unter die SMA50 gefallen.",
+      "kommentar": "Mit Abstand stärkstes 5-Tage-Momentum der gesamten Watchlist (Ø +12,27%, Coinbase Global +14,51%, Robinhood +10,03%), beide mit klar positivem OBV-5-Tage-Trend. Beide aber bereits >8% über SMA20 und >15% über SMA50 gedehnt (Coinbase Global damit formal für eine Kaufempfehlung disqualifiziert). Robinhood mit gesünderem RSI14 (45,9) und nur 1 von 5 Anti-Bulltrap-Kriterien verletzt - Depotposition bleibt mit rund +21% profitabel und wird gehalten, kein Neueinstieg.",
       "kandidaten": [
-        { "name": "NVIDIA", "empfehlung": "Halten" },
-        { "name": "Taiwan Semiconductor", "empfehlung": "Kauf" },
-        { "name": "Broadcom", "empfehlung": "Verkauf" },
-        { "name": "AMD (Advanced Micro Devices)", "empfehlung": "Verkauf" },
-        { "name": "Marvell Technology", "empfehlung": "Verkauf" },
-        { "name": "Qualcomm", "empfehlung": "Verkauf" },
-        { "name": "ASML Holding", "empfehlung": "Verkauf" },
-        { "name": "Super Micro Computer", "empfehlung": "Verkauf" }
-      ]
-    },
-    {
-      "sektor": "AI",
-      "trend": "positiv",
-      "kommentar": "NVIDIA bleibt mit OBV-5-Tage-Trend von +305,65 Mio. weiterhin klar der stärkste institutionelle Zufluss der 50er-Watchlist, dieser Wert ist gegenüber dem P4-Stand (+400,7 Mio.) und dem Vortag (+486 Mio.) aber spürbar rückläufig, der Kurs fällt exakt auf die SMA20 zurück - keine frische Kaufbestätigung, Institutional Hold Test nur teilweise bestanden. Palantir Technologies bleibt mit +9,07% 5-Tage-Trend der robusteste AI-Wert des Tages.",
-      "kandidaten": [
-        { "name": "NVIDIA", "empfehlung": "Halten" },
-        { "name": "Palantir Technologies", "empfehlung": "Halten" },
-        { "name": "Broadcom", "empfehlung": "Verkauf" }
-      ]
-    },
-    {
-      "sektor": "Software",
-      "trend": "negativ",
-      "kommentar": "Sektor bleibt klar negativ: Oracle bricht nach einer Force-Majeure-Mitteilung zu einem Rechenzentrumsprojekt weiter ein (heute erneut -5,12%, rund -15,5% unter dem Kaufkurs der bestehenden Depotposition), Adobe (RSI14 24,4, -8,7% unter SMA20) und Salesforce (RSI14 34,1) technisch weiterhin am schwächsten. Palantir Technologies und ServiceNow stützen den Sektor am ehesten.",
-      "kandidaten": [
-        { "name": "Microsoft", "empfehlung": "Halten" },
-        { "name": "Palantir Technologies", "empfehlung": "Halten" },
-        { "name": "Salesforce", "empfehlung": "Verkauf" },
-        { "name": "Adobe", "empfehlung": "Verkauf" },
-        { "name": "ServiceNow", "empfehlung": "Verkauf" },
-        { "name": "Oracle", "empfehlung": "Verkauf" }
-      ]
-    },
-    {
-      "sektor": "Cloud",
-      "trend": "negativ",
-      "kommentar": "Oracle belastet den Sektor weiterhin am stärksten (heute erneut -5,12%), Snowflake und ServiceNow neutral bis leicht schwach (OBV-Trend bei ServiceNow weiterhin negativ), Microsoft mit -0,89% unter SMA20 ebenfalls ohne Rückhalt - kein Kaufsignal im Sektor.",
-      "kandidaten": [
-        { "name": "Microsoft", "empfehlung": "Halten" },
-        { "name": "ServiceNow", "empfehlung": "Verkauf" },
-        { "name": "Snowflake", "empfehlung": "Halten" },
-        { "name": "Oracle", "empfehlung": "Verkauf" }
+        { "name": "Robinhood", "empfehlung": "Halten" },
+        { "name": "Coinbase Global", "empfehlung": "Halten" }
       ]
     },
     {
       "sektor": "Cybersecurity",
       "trend": "positiv",
-      "kommentar": "Weiterhin stärkster Wachstumssektor: alle vier Werte mit RSI14 zwischen 73 und 80 klar überkauft, 5-Tage-Trend zwischen +4,0% (Fortinet) und +8,8% (Zscaler). Trotz breiter Marktschwäche halten CrowdStrike, Zscaler und Fortinet ihre Kurse heute vergleichsweise stabil - bemerkenswerte relative Stärke, aber technisch bereits sehr überdehnt für Neueinstiege.",
+      "kommentar": "Zweitstärkster Sektor (Ø +5,47%), aber alle vier Werte mit RSI14 zwischen 73 und 80 klar überkauft. Zscaler (+8,69% 5T, 3 von 5 Anti-Bulltrap-Kriterien verletzt) und CrowdStrike (3 von 5 verletzt) am weitesten gelaufen. Fortinet mit negativem OBV-Trend trotz steigendem Kurs (Distributionssignal, Abschnitt 6) - einziges Warnsignal im sonst starken Sektor. Kein Kandidat für einen Neueinstieg.",
       "kandidaten": [
         { "name": "Palo Alto Networks", "empfehlung": "Halten" },
         { "name": "CrowdStrike", "empfehlung": "Halten" },
         { "name": "Zscaler", "empfehlung": "Halten" },
-        { "name": "Fortinet", "empfehlung": "Halten" }
+        { "name": "Fortinet", "empfehlung": "Verkauf" }
       ]
     },
     {
-      "sektor": "Industrials",
-      "trend": "negativ",
-      "kommentar": "Deutlicher Rückschlag im Tagesverlauf: Deere & Company (heute neuer P4-Kandidat mit Score 'hoch', bestes CRV der Watchlist, aber Institutional Hold Test nur 'Teilweise' bestanden - 5-Tage-Momentum von +5,98% auf +1,57% eingebrochen) und Caterpillar (unter SMA20/SMA50 gerutscht, Hold Test 'Nicht bestanden', heute mit P4-Score mittel neu aufgenommen und sofort wieder invalidiert) verlieren beide klar. United Rentals hält sich vergleichsweise stabil, bleibt aber unter der SMA50.",
+      "sektor": "Semiconductors",
+      "trend": "positiv",
+      "kommentar": "Drittstärkster Sektor (Ø +5,33%), SOX-Proxy bestätigt strukturell klar (chg_5d +9,05% vs. NASDAQ +3,37%). NVIDIA und Taiwan Semiconductor mit sauberstem Institutional-Flow-Profil der gesamten Watchlist (P4-Score 'hoch', siehe candidates.json), aber ohne verifizierbaren Options-Flow keine formale Kaufempfehlung. AMD strukturell extrem überdehnt (RSI14 81,8, +25% über SMA50, +15,4% in 5 Tagen - 4 von 5 Anti-Bulltrap-Kriterien verletzt), Marvell Technology ähnlich überkauft (RSI14 73,3). Qualcomm mit negativem OBV-Trend trotz Kursanstieg (Distributionssignal). ASML Holding und Broadcom technisch sauber, aber mit Ø-Volumen unter bzw. Kurs weiter unter der SMA50.",
       "kandidaten": [
-        { "name": "Deere & Company", "empfehlung": "Halten" },
-        { "name": "Caterpillar", "empfehlung": "Verkauf" },
+        { "name": "NVIDIA", "empfehlung": "Kauf" },
+        { "name": "Taiwan Semiconductor", "empfehlung": "Kauf" },
+        { "name": "AMD (Advanced Micro Devices)", "empfehlung": "Halten" },
+        { "name": "Broadcom", "empfehlung": "Halten" },
+        { "name": "Marvell Technology", "empfehlung": "Halten" },
+        { "name": "Qualcomm", "empfehlung": "Verkauf" },
+        { "name": "ASML Holding", "empfehlung": "Kauf" },
+        { "name": "Super Micro Computer", "empfehlung": "Halten" }
+      ]
+    },
+    {
+      "sektor": "AI",
+      "trend": "positiv",
+      "kommentar": "NVIDIA bleibt mit OBV-5-Tage-Trend von +229,9 Mio. der klar stärkste institutionelle Zufluss der gesamten 50er-Watchlist, RSI14 mit 45,5 noch weit von überkauft entfernt - sauberstes Akkumulationsmuster des Tages, aber 5-Tage-Performance (+2,39%) noch unter NASDAQ. Palantir Technologies mit stärkstem Kursmomentum (+9,28% 5T, OBV +141,0 Mio.), aber bereits 2 von 5 Anti-Bulltrap-Kriterien verletzt - zu weit gelaufen für einen Neueinstieg.",
+      "kandidaten": [
+        { "name": "NVIDIA", "empfehlung": "Kauf" },
+        { "name": "Palantir Technologies", "empfehlung": "Halten" },
+        { "name": "Broadcom", "empfehlung": "Halten" }
+      ]
+    },
+    {
+      "sektor": "MedTech",
+      "trend": "positiv",
+      "kommentar": "Solider Sektor (Ø +3,61%): Intuitive Surgical technisch sauber (0 von 5 Anti-Bulltrap-Kriterien verletzt, RSI14 69,0, OBV-5-Tage-Trend positiv), aber Ø Tagesvolumen mit 2,38 Mio. Aktien unter der 5-Mio.-Liquiditätsschwelle - formaler Qualitätsfilter verfehlt. Thermo Fisher Scientific mit RSI14 77,2 bereits überkauft.",
+      "kandidaten": [
+        { "name": "Intuitive Surgical", "empfehlung": "Kauf" },
+        { "name": "Thermo Fisher Scientific", "empfehlung": "Halten" }
+      ]
+    },
+    {
+      "sektor": "Materials",
+      "trend": "positiv",
+      "kommentar": "Leicht positiv (Ø +1,92%): Linde und Freeport-McMoRan beide mit moderatem Aufwärtstrend und positivem OBV-5-Tage-Trend, aber ohne ausgeprägtes institutionelles Signal - solide, aber unauffällig.",
+      "kandidaten": [
+        { "name": "Linde", "empfehlung": "Halten" },
+        { "name": "Freeport-McMoRan", "empfehlung": "Kauf" }
+      ]
+    },
+    {
+      "sektor": "Infrastructure",
+      "trend": "positiv",
+      "kommentar": "United Rentals mit leicht positivem 5-Tage-Trend (+1,91%) und knapp über SMA20, aber weiterhin unter SMA50 und mit sehr geringem absolutem Handelsvolumen (0,44 Mio. Aktien) - nur Beobachtung.",
+      "kandidaten": [
         { "name": "United Rentals", "empfehlung": "Halten" }
       ]
     },
     {
-      "sektor": "Defense",
-      "trend": "negativ",
-      "kommentar": "Weiterhin schwächster Industrials-naher Sektor: RTX Corporation (RSI14 20,9) und General Dynamics tief überverkauft und deutlich unter SMA50, Lockheed Martin und Northrop Grumman mit leicht negativem 5-Tage-Trend - kein bestätigter Boden erkennbar.",
+      "sektor": "Industrials",
+      "trend": "neutral",
+      "kommentar": "Deere & Company mit bestem CRV der gesamten Watchlist (3,04:1) und sauberem Chartbild, aber schwachem OBV-Signal und Volumen unter der Liquiditätsschwelle. Caterpillar noch unter SMA50 - beginnende Erholung, kein bestätigter Trend.",
       "kandidaten": [
-        { "name": "Lockheed Martin", "empfehlung": "Halten" },
-        { "name": "Northrop Grumman", "empfehlung": "Verkauf" },
-        { "name": "RTX Corporation", "empfehlung": "Verkauf" },
-        { "name": "General Dynamics", "empfehlung": "Verkauf" }
+        { "name": "Deere & Company", "empfehlung": "Kauf" },
+        { "name": "Caterpillar", "empfehlung": "Halten" }
+      ]
+    },
+    {
+      "sektor": "Healthcare",
+      "trend": "neutral",
+      "kommentar": "UnitedHealth Group mit RSI14 26,2 weiterhin überverkauft, 5-Tage-Trend nahe null (-0,05%), OBV-5-Tage-Trend aber leicht positiv - erste Stabilisierungsanzeichen, aber noch keine institutionelle Kaufbestätigung.",
+      "kandidaten": [
+        { "name": "UnitedHealth Group", "empfehlung": "Halten" }
+      ]
+    },
+    {
+      "sektor": "Payments",
+      "trend": "neutral",
+      "kommentar": "Visa und Mastercard beide nahezu unverändert über 5 Tage, RSI14 im mittleren 30er-Bereich, OBV-5-Tage-Trend bei beiden leicht negativ - unauffällig, kein Signal in beide Richtungen.",
+      "kandidaten": [
+        { "name": "Visa", "empfehlung": "Halten" },
+        { "name": "Mastercard", "empfehlung": "Halten" }
+      ]
+    },
+    {
+      "sektor": "Consumer Discretionary",
+      "trend": "neutral",
+      "kommentar": "Gemischtes Bild: Tesla mit sauberstem Chartbild (RSI14 51,0, 0 von 5 Anti-Bulltrap-Kriterien verletzt, OBV positiv), Amazon neutral, Home Depot dagegen klar angeschlagen (RSI14 27,9, -11,0% unter SMA50, OBV-5-Tage-Trend deutlich negativ).",
+      "kandidaten": [
+        { "name": "Tesla", "empfehlung": "Kauf" },
+        { "name": "Amazon", "empfehlung": "Halten" },
+        { "name": "Home Depot", "empfehlung": "Halten" }
+      ]
+    },
+    {
+      "sektor": "Technology",
+      "trend": "neutral",
+      "kommentar": "Apple mit RSI14 58,3 neutral, bleibt komfortabel über SMA20 (+2,39%) und SMA50 (+4,43%), 5-Tage-Trend aber leicht negativ (-0,32%) und OBV-5-Tage-Trend negativ (-67,2 Mio.) - stabil, aber ohne frisches Kaufsignal.",
+      "kandidaten": [
+        { "name": "Apple", "empfehlung": "Halten" }
+      ]
+    },
+    {
+      "sektor": "Software",
+      "trend": "negativ",
+      "kommentar": "Sektor insgesamt schwach (Ø -1,02%): Oracle bricht weiter ein (5-Tage-Trend -7,34%, davon -3,47% allein heute, OBV-5-Tage-Trend -64,8 Mio.) - bestehende Depotposition rund -14% im Minus, technisches Bild bleibt schwach. Adobe (RSI14 24,2, OBV negativ) ebenfalls angeschlagen. Palantir Technologies stützt den Sektor am ehesten, ist aber bereits überdehnt.",
+      "kandidaten": [
+        { "name": "Microsoft", "empfehlung": "Verkauf" },
+        { "name": "Palantir Technologies", "empfehlung": "Halten" },
+        { "name": "Salesforce", "empfehlung": "Halten" },
+        { "name": "Adobe", "empfehlung": "Verkauf" },
+        { "name": "ServiceNow", "empfehlung": "Halten" },
+        { "name": "Oracle", "empfehlung": "Verkauf" }
+      ]
+    },
+    {
+      "sektor": "Energy",
+      "trend": "negativ",
+      "kommentar": "ExxonMobil und Chevron beide leicht negativ über 5 Tage (Ø -1,74%) - fallende Ölpreise durch mögliche US-Iran-Entspannung belasten den Sektor heute, RSI14 bei beiden aber noch neutral, kein akutes Verkaufssignal.",
+      "kandidaten": [
+        { "name": "ExxonMobil", "empfehlung": "Halten" },
+        { "name": "Chevron", "empfehlung": "Halten" }
+      ]
+    },
+    {
+      "sektor": "Cloud",
+      "trend": "negativ",
+      "kommentar": "Oracle belastet den Sektor am stärksten (-7,34% 5T, klar negativer OBV-Trend), Microsoft mit negativem OBV-Trend trotz stabilem Kurs (leichtes Distributionssignal), ServiceNow und Snowflake unauffällig - kein Kaufsignal im Sektor.",
+      "kandidaten": [
+        { "name": "Microsoft", "empfehlung": "Verkauf" },
+        { "name": "ServiceNow", "empfehlung": "Halten" },
+        { "name": "Snowflake", "empfehlung": "Halten" },
+        { "name": "Oracle", "empfehlung": "Verkauf" }
       ]
     },
     {
       "sektor": "Financials",
       "trend": "negativ",
-      "kommentar": "Sektor bleibt trotz steigender Zinsen (eigentlich margenpositiv für Banken) unter Druck: JPMorgan Chase, Goldman Sachs und Morgan Stanley alle mit RSI14 um 20 tief überverkauft und mit negativem 5-Tage-Trend. JPMorgan Chase mit weiterhin leicht positivem OBV-Trend am stabilsten, Morgan Stanley am schwächsten.",
+      "kommentar": "Trotz steigender Zinsen (eigentlich margenpositiv für Banken) unter Druck: JPMorgan Chase, Goldman Sachs und Morgan Stanley alle mit RSI14 um 20-23 tief überverkauft, alle unter SMA50 und mit negativem OBV-Trend bei Goldman Sachs und Morgan Stanley. JPMorgan Chase mit noch leicht positivem OBV-Trend am stabilsten.",
       "kandidaten": [
         { "name": "JPMorgan Chase", "empfehlung": "Halten" },
         { "name": "Goldman Sachs", "empfehlung": "Verkauf" },
@@ -104,101 +163,41 @@
       ]
     },
     {
-      "sektor": "Brokers",
-      "trend": "positiv",
-      "kommentar": "Weiterhin mit Abstand stärkstes 5-Tage-Momentum der gesamten Watchlist (Robinhood +9,78%, Coinbase Global +12,75%), beide technisch bereits deutlich über SMA50 gedehnt, aber mit klar positivem OBV-Trend - Robinhood-Depotposition bleibt mit rund +20,7% profitabel, kein Neueinstieg trotz anhaltend starkem Fluss.",
-      "kandidaten": [
-        { "name": "Robinhood", "empfehlung": "Halten" },
-        { "name": "Coinbase Global", "empfehlung": "Halten" }
-      ]
-    },
-    {
-      "sektor": "Payments",
+      "sektor": "Defense",
       "trend": "negativ",
-      "kommentar": "Visa und Mastercard bleiben mit RSI14 um 30 und negativem 5-Tage-Trend technisch schwach, zeigen sich heute in einem insgesamt roten Markt aber vergleichsweise stabil - für eine Kaufbestätigung reicht es noch nicht.",
+      "kommentar": "Schwächster Industrials-naher Sektor (Ø -3,40%): RTX Corporation (RSI14 18,8) und General Dynamics (RSI14 17,8) tief überverkauft und deutlich unter SMA50, Lockheed Martin und Northrop Grumman mit leicht negativem 5-Tage-Trend - kein bestätigter Boden erkennbar.",
       "kandidaten": [
-        { "name": "Visa", "empfehlung": "Halten" },
-        { "name": "Mastercard", "empfehlung": "Halten" }
+        { "name": "Lockheed Martin", "empfehlung": "Halten" },
+        { "name": "Northrop Grumman", "empfehlung": "Halten" },
+        { "name": "RTX Corporation", "empfehlung": "Verkauf" },
+        { "name": "General Dynamics", "empfehlung": "Verkauf" }
       ]
     },
     {
       "sektor": "Insurance",
       "trend": "negativ",
-      "kommentar": "Weiterhin schwächster Sektor der Watchlist: Progressive mit RSI14 18,5 und deutlich negativem 5-Tage-Trend am schwächsten, Travelers mit moderaterem Rückgang.",
+      "kommentar": "Schwächster Sektor der Watchlist neben Utilities/Transportation: Progressive mit RSI14 18,6 und -6,53% 5-Tage-Trend am schwächsten, Travelers mit moderaterem Rückgang. Beide mit negativem OBV-Trend.",
       "kandidaten": [
         { "name": "Progressive", "empfehlung": "Verkauf" },
         { "name": "Travelers", "empfehlung": "Halten" }
       ]
     },
     {
-      "sektor": "Healthcare",
+      "sektor": "Transportation",
       "trend": "negativ",
-      "kommentar": "UnitedHealth Group bleibt mit RSI14 21,5 tief überverkauft, mit weiterhin negativem OBV-5-Tage-Trend - für eine institutionelle Bestätigung einer Bodenbildung reicht es noch nicht.",
+      "kommentar": "Schwächster zyklischer Sektor (Ø -5,54%): UPS (RSI14 25,1, -8,11% 5T) am schwächsten, Union Pacific (RSI14 28,1) ebenfalls tief überverkauft, beide mit negativem OBV-Trend ohne bestätigten Boden.",
       "kandidaten": [
-        { "name": "UnitedHealth Group", "empfehlung": "Halten" }
-      ]
-    },
-    {
-      "sektor": "MedTech",
-      "trend": "positiv",
-      "kommentar": "Solider Sektor: Intuitive Surgical mit weiterhin sauberem technischem Bild (RSI14 69,5, klar über SMA20/50), bleibt aber durch die am 23.09. bekanntgewordene Vergeltungsklage eines ehemaligen Mitarbeiters mit Nachrichtenrisiko belastet (P4-Score heute 'niedrig'). Thermo Fisher Scientific weiterhin überhitzt (RSI14 75,1) und mit heute erstmals leicht negativem OBV-Trend.",
-      "kandidaten": [
-        { "name": "Intuitive Surgical", "empfehlung": "Halten" },
-        { "name": "Thermo Fisher Scientific", "empfehlung": "Verkauf" }
-      ]
-    },
-    {
-      "sektor": "Energy",
-      "trend": "positiv",
-      "kommentar": "Einer der wenigen grünen Sektoren des Tages: ExxonMobil und Chevron profitieren vom Ölpreisanstieg durch die eskalierenden US-Iran-Spannungen.",
-      "kandidaten": [
-        { "name": "ExxonMobil", "empfehlung": "Kauf" },
-        { "name": "Chevron", "empfehlung": "Halten" }
+        { "name": "Union Pacific", "empfehlung": "Halten" },
+        { "name": "UPS", "empfehlung": "Halten" }
       ]
     },
     {
       "sektor": "Utilities",
       "trend": "negativ",
-      "kommentar": "Sektor bleibt durch den Renditeanstieg auf ein Mehrjahreshoch am stärksten belastet: NextEra Energy (RSI14 12,4) und Duke Energy (RSI14 16,4) beide extrem überverkauft ohne erkennbaren institutionellen Rückhalt.",
+      "kommentar": "Schwächster Sektor der gesamten Watchlist (Ø -5,72%): Durch den Renditeanstieg auf ein Mehrjahrzehnte-Hoch am stärksten belastet - NextEra Energy (RSI14 11,8) und Duke Energy (RSI14 15,6) beide extrem überverkauft, beide mit klar negativem OBV-Trend ohne institutionellen Rückhalt.",
       "kandidaten": [
         { "name": "NextEra Energy", "empfehlung": "Verkauf" },
         { "name": "Duke Energy", "empfehlung": "Verkauf" }
-      ]
-    },
-    {
-      "sektor": "Infrastructure",
-      "trend": "neutral",
-      "kommentar": "United Rentals hält sich knapp über der SMA20, bleibt aber mit sehr geringem absolutem Handelsvolumen unter der 5-Mio.-Liquiditätsschwelle - nur Beobachtung.",
-      "kandidaten": [
-        { "name": "United Rentals", "empfehlung": "Halten" }
-      ]
-    },
-    {
-      "sektor": "Materials",
-      "trend": "neutral",
-      "kommentar": "Linde und Freeport-McMoRan beide moderat schwächer, keine akute Verkaufsdynamik, aber auch kein frisches Kaufsignal.",
-      "kandidaten": [
-        { "name": "Linde", "empfehlung": "Halten" },
-        { "name": "Freeport-McMoRan", "empfehlung": "Halten" }
-      ]
-    },
-    {
-      "sektor": "Consumer Discretionary",
-      "trend": "negativ",
-      "kommentar": "Amazon, Home Depot (RSI14 28,0 überverkauft) und Tesla alle heute im Minus. Tesla bleibt mit +7,98% über SMA50 charttechnisch am saubersten, Home Depot mit rund -11% unter SMA50 am schwächsten.",
-      "kandidaten": [
-        { "name": "Tesla", "empfehlung": "Halten" },
-        { "name": "Amazon", "empfehlung": "Halten" },
-        { "name": "Home Depot", "empfehlung": "Verkauf" }
-      ]
-    },
-    {
-      "sektor": "Transportation",
-      "trend": "negativ",
-      "kommentar": "Weiterhin schwächster zyklischer Sektor: UPS (RSI14 26,5) am schwächsten, Union Pacific (RSI14 28,2) ebenfalls tief überverkauft ohne bestätigten Boden.",
-      "kandidaten": [
-        { "name": "Union Pacific", "empfehlung": "Verkauf" },
-        { "name": "UPS", "empfehlung": "Verkauf" }
       ]
     }
   ]
