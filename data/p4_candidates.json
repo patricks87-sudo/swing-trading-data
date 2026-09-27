@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-25T13:06:14Z",
+  "generated_at_utc": "2026-09-27T10:00:12Z",
   "run_date": "2026-09-25",
   "candidates": [
     {
@@ -7,70 +7,72 @@
       "name": "NVIDIA",
       "sector": "Semiconductors/AI",
       "score": "hoch",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 45,5, Abstand SMA20 +1,21%, Abstand SMA50 +4,15%, 5-Tage-Anstieg +2,39%, OBV steigt synchron mit dem Kurs). OBV-5-Tage-Trend mit +229,9 Mio. mit weitem Abstand der stärkste institutionelle Zufluss der gesamten 50er-Watchlist. Handelsvolumen heute 76,4 Mio. vs. Ø 126,5 Mio. Aktien (60% des Schnitts) - ruhige Akkumulation statt lauter Breakout-Tag, RSI mit 45,5 noch weit von überkauft entfernt (viel Spielraum). Einschränkung: 5-Tage-Kursentwicklung (+2,39%) liegt knapp unter NASDAQ (+3,37%) und deutlich unter dem eigenen Sektor-Ø (+5,33%) - noch kein bestätigter Ausbruch, eher stille Akkumulation vor dem Move. CRV bei 1,5x-ATR14-Stop und 10%-Kursziel: 2,77:1. Institutioneller-Flow- und Gesamtscore nach Abschnitt 14 lassen sich ohne echte Options-Flow-/Block-Trade-Daten, NYSE-A/D-Linie und 52-Wochen-Hoch-Bezug nicht verlässlich auf die harten Schwellen ≥85/≥88 verifizieren (Datenbasis unvollständig) - trotz stärkstem institutionellem Signal des Tages keine formale P4-Kaufempfehlung, Top-Beobachtungskandidat für P5."
+      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 43,7, Abstand SMA20 +1,50%, Abstand SMA50 +4,21%, 5-Tage-Anstieg +1,26%, OBV steigt synchron). Mit +128,3 Mio. eindeutig stärkster OBV-5-Tage-Trend der gesamten Watchlist am tatsächlichen Freitagsschlusskurs (Ø Tagesvolumen 116,1 Mio. vs. aktuelles Volumen 89,8 Mio. - Kapitalfluss-Ampel daher 'gelb', nicht 'grün': Zufluss klar positiv, aber ohne überdurchschnittliches Tagesvolumen). Langfristiger Trendkontext: Bestätigt (SMA200 steigend, 60-Tage-Performance +13,91%, 10 von 10 Handelstagen über SMA200) - der kurzfristige Kapitalfluss wird hier durch einen intakten längerfristigen Aufwärtstrend gestützt. CRV bei 1,5x-ATR14-Stop/10%-Ziel: 2,87:1. Options Flow aktuell nicht verfügbar (yfinance im automatisierten Feed noch nicht installiert, siehe Setup-Doku).",
+      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gruen", "optionsflow": "unbekannt" }
     },
     {
-      "ticker": "TSM",
-      "name": "Taiwan Semiconductor",
-      "sector": "Semiconductors/AI",
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Software/Cloud",
       "score": "hoch",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 66,1, Abstand SMA20 +5,16%, Abstand SMA50 +7,58%, 5-Tage-Anstieg +4,86%, OBV steigt). OBV-5-Tage-Trend klar positiv (+31,6 Mio.), Handelsvolumen heute 7,71 Mio. vs. Ø 10,05 Mio. Aktien (etwas unter Schnitt, kein Distributionssignal). Outperformt sowohl NASDAQ (+4,86% vs. +3,37%) als auch S&P 500 (+4,86% vs. +0,60%) über 5 Tage, Sektor Semiconductors/AI insgesamt zweitstärkster Sektor der Watchlist. Nächste Quartalszahlen laut Recherche voraussichtlich Mitte Oktober 2026 - außerhalb des 7-Handelstage-Fensters, keine aktuellen negativen Unternehmensereignisse gefunden. Bestes CRV der 'hoch'-Kandidaten: 2,82:1 bei 1,5x-ATR14-Stop und 10%-Ziel. Gleiche Einschränkung wie NVIDIA: Institutioneller-Flow-/Gesamtscore mangels Options-Flow-/Block-Trade-Daten nicht auf ≥85/≥88 verifizierbar - Top-Beobachtungskandidat für P5."
-    },
-    {
-      "ticker": "DE",
-      "name": "Deere & Company",
-      "sector": "Industrials",
-      "score": "mittel",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 50,3, Abstand SMA20 +2,36%, Abstand SMA50 +8,75%, 5-Tage-Anstieg +1,36%). Bestes CRV der gesamten Watchlist (3,04:1 bei 1,5x-ATR14-Stop/10%-Ziel), aber OBV-5-Tage-Trend mit nur +0,86 Mio. sehr schwach ausgeprägt und Ø Tagesvolumen mit 1,35 Mio. Aktien klar unter der 5-Mio.-Liquiditätsschwelle aus Abschnitt 5 - sauberes Chartbild, aber kein starkes institutionelles Flusssignal. Sektor Industrials heute nur neutral (Ø 5T +1,10%). Reine Beobachtung."
-    },
-    {
-      "ticker": "CAT",
-      "name": "Caterpillar",
-      "sector": "Industrials",
-      "score": "mittel",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 51,8, Abstand SMA20 +0,27%, Abstand SMA50 -3,02%, 5-Tage-Anstieg +0,84%). OBV-5-Tage-Trend leicht positiv (+5,2 Mio.), Kurs aber noch unter SMA50 - beginnende Erholung statt bestätigter Trend. Ø Tagesvolumen 2,40 Mio. Aktien unter der 5-Mio.-Schwelle. CRV 2,59:1. Solider Sektorname, aber ohne bestätigtes institutionelles Signal - Beobachtung."
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom",
-      "sector": "Semiconductors/AI",
-      "score": "mittel",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt, RSI14 mit 45,9 neutral, OBV-5-Tage-Trend deutlich positiv (+46,8 Mio.) trotz negativem OBV-Gesamtstand - Anzeichen einer beginnenden Trendwende. Kurs aber weiterhin unter SMA50 (-7,08%) und unter SMA20 (-2,40%) - noch keine bestätigte Trendfortsetzung im Sinne von Abschnitt 3. Ø Tagesvolumen 27,7 Mio. Aktien (Liquiditätsfilter erfüllt). CRV 2,28:1. Beobachtung auf Bestätigung über SMA20/50."
+      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 59,9, Abstand SMA20 +3,23%, Abstand SMA50 +8,48%, 5-Tage-Anstieg +4,53%). OBV-5-Tage-Trend deutlich positiv (+47,2 Mio.) bei Tagesvolumen 38,2 Mio. klar über dem 20-Tage-Ø von 21,8 Mio. - Kapitalfluss-Ampel 'grün'. Langfristiger Trendkontext: Bestätigt (SMA200 steigend, 60-Tage-Performance +34,32%, durchgehend über SMA200). Sauberstes technisches Bild der heutigen Liste, bestes CRV: 3,14:1 (1,5x-ATR14-Stop/10%-Ziel). Options Flow aktuell nicht verfügbar (yfinance-Installation im Workflow fehlt noch).",
+      "ampel": { "kapitalfluss": "gruen", "trendkontext": "gruen", "optionsflow": "unbekannt" }
     },
     {
       "ticker": "PLTR",
       "name": "Palantir Technologies",
       "sector": "Software/Cloud",
       "score": "mittel",
-      "begruendung": "Anti-Bulltrap-Warnsignal: 2 von 5 Kriterien verletzt (Abstand SMA20 +8,07% >8%, Abstand SMA50 +18,28% >15%) - laut Abschnitt 6 formal disqualifiziert für eine Kaufempfehlung. OBV-5-Tage-Trend mit +141,0 Mio. aber der zweitstärkste institutionelle Zufluss der gesamten Watchlist, RSI14 mit 61,2 noch nicht überkauft, Ø Tagesvolumen 27,5 Mio. Aktien deutlich über der Liquiditätsschwelle, outperformt NASDAQ, S&P 500 und eigenen Sektor klar. CRV 2,10:1. Stärkstes Momentum im Software-Sektor, aber technisch bereits zu weit gelaufen für einen Neueinstieg - auf Pullback zur SMA20 beobachten."
+      "begruendung": "1 von 5 prüfbaren Anti-Bulltrap-Kriterien knapp verletzt (Abstand SMA50 +15,70%, minimal über der 15%-Schwelle) - unter 2 verletzten Kriterien noch nicht formal disqualifiziert, aber ein Warnsignal. Zweitstärkster OBV-5-Tage-Trend der Watchlist (+84,0 Mio.), Tagesvolumen mit 17,8 Mio. aber unter dem 20-Tage-Ø von 26,4 Mio. - Kapitalfluss-Ampel 'gelb'. Langfristiger Trendkontext: Bestätigt (SMA200 steigend, 60-Tage-Performance +50,86%, durchgehend über SMA200) - stärkster Langfrist-Trend der gesamten Liste. RSI14 mit 69,4 noch nicht überkauft. CRV 2,17:1.",
+      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gruen", "optionsflow": "unbekannt" }
+    },
+    {
+      "ticker": "TSM",
+      "name": "Taiwan Semiconductor",
+      "sector": "Semiconductors/AI",
+      "score": "mittel",
+      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 61,5, Abstand SMA20 +4,75%, Abstand SMA50 +7,24%, 5-Tage-Anstieg +3,67%). OBV-5-Tage-Trend positiv, aber gegenüber dem Vortagesstand spürbar abgeschwächt (+11,0 Mio. vs. zuvor +31,6 Mio.) - Kapitalfluss-Ampel 'gelb'. Langfristiger Trendkontext: Bestätigt (SMA200 steigend, 60-Tage-Performance +1,44%, durchgehend über SMA200) - Struktur bleibt intakt, aber ohne frische Kaufwelle am tatsächlichen Freitagsschluss. CRV 2,94:1.",
+      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gruen", "optionsflow": "unbekannt" }
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "sector": "Financials",
+      "score": "mittel",
+      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt, aber auch kein Breakout: RSI14 32,8 weiterhin erholungsbedürftig, Kurs noch unter SMA50 (-2,91%). OBV-5-Tage-Trend positiv (+6,3 Mio.) bei Tagesvolumen 11,5 Mio. über dem 20-Tage-Ø von 7,7 Mio. - Kapitalfluss-Ampel 'grün', erste Stabilisierungsanzeichen im ansonsten schwachen Financials-Sektor. Langfristiger Trendkontext: Bestätigt (SMA200 steigend, 60-Tage-Performance +2,69%, durchgehend über SMA200). CRV 3,20:1. Frühindikator für eine mögliche Bodenbildung, aber noch kein bestätigter Einstieg.",
+      "ampel": { "kapitalfluss": "gruen", "trendkontext": "gruen", "optionsflow": "unbekannt" }
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "score": "mittel",
+      "begruendung": "1 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 74,4, knapp über der 72er-Schwelle). Abstand SMA20 (+3,54%) und SMA50 (+5,98%) unauffällig, 5-Tage-Anstieg +1,47% moderat. OBV-5-Tage-Trend positiv (+49,3 Mio.), Tagesvolumen mit 30,0 Mio. aber unter dem 20-Tage-Ø von 42,9 Mio. - Kapitalfluss-Ampel 'gelb'. Langfristiger Trendkontext: Bestätigt (SMA200 steigend, 60-Tage-Performance +15,86%, durchgehend über SMA200). CRV 3,33:1, das beste der Liste, aber leicht überkaufte Kurzfrist-Lage.",
+      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gruen", "optionsflow": "unbekannt" }
     },
     {
       "ticker": "TSLA",
       "name": "Tesla",
       "sector": "Consumer Discretionary",
       "score": "mittel",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 51,0, Abstand SMA20 +3,60%, Abstand SMA50 +8,41%, 5-Tage-Anstieg +3,21%). OBV-5-Tage-Trend positiv (+20,5 Mio.), Ø Tagesvolumen 38,9 Mio. Aktien klar über Liquiditätsschwelle. 5-Tage-Performance (+3,21%) liegt aber knapp unter NASDAQ (+3,37%) und der eigene Sektor Consumer Discretionary insgesamt nur neutral (Ø 5T -0,31%, von HD/AMZN-Schwäche belastet). CRV 2,17:1. Sauberstes Chartbild im Sektor, aber ohne klare Sektor-Bestätigung - Beobachtung."
+      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 63,9, Abstand SMA20 +1,76%, Abstand SMA50 +6,85%, 5-Tage-Anstieg +2,15%), OBV-5-Tage-Trend positiv (+26,3 Mio.) - kurzfristig unauffällig positiv. Bemerkenswerte Divergenz beim Langfristigen Trendkontext: 'Fehlt' (SMA200 fallend, 60-Tage-Performance -12,51%, 0 von 10 Handelstagen über SMA200) - genau das Szenario, für das dieser Zusatzfilter eingeführt wurde: kurzfristig positiver Kapitalfluss trotz gebrochenem längerfristigem Trend. CRV 2,21:1. Trotz sauberer Kurzfrist-Technik wegen des Trendkontext-Warnsignals nur Beobachtung, kein Einstieg.",
+      "ampel": { "kapitalfluss": "gruen", "trendkontext": "rot", "optionsflow": "unbekannt" }
+    },
+    {
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "sector": "Semiconductors/AI",
+      "score": "niedrig",
+      "begruendung": "Anti-Bulltrap-Warnsignal: 2 von 5 Kriterien verletzt (Abstand SMA20 +10,95% >8%, Abstand SMA50 +23,49% >15%) - formal disqualifiziert für eine Kaufempfehlung. Trotzdem mit +121,7 Mio. der zweitstärkste OBV-5-Tage-Trend der Watchlist bei Tagesvolumen 49,2 Mio. deutlich über dem 20-Tage-Ø von 38,0 Mio. - Kapitalfluss-Ampel 'grün', Langfristiger Trendkontext ebenfalls 'Bestätigt' (60-Tage-Performance +56,46%). CRV mit 1,24:1 aber klar unter der 2,5:1-Mindestschwelle - der hohe ATR14 relativ zum Kurs macht den Stop unverhältnismäßig teuer. Stärkstes Setup der Liste, aber technisch zu weit gelaufen und mit zu schlechtem CRV für einen Neueinstieg - nur zur Beobachtung.",
+      "ampel": { "kapitalfluss": "gruen", "trendkontext": "gruen", "optionsflow": "unbekannt" }
     },
     {
       "ticker": "ISRG",
       "name": "Intuitive Surgical",
       "sector": "MedTech",
       "score": "niedrig",
-      "begruendung": "Technisch sauber (0 von 5 Anti-Bulltrap-Kriterien verletzt: RSI14 69,0, Abstand SMA20 +5,93%, Abstand SMA50 +6,86%, 5-Tage-Anstieg +4,17%), OBV-5-Tage-Trend positiv (+9,6 Mio.), Sektor MedTech moderat positiv. Ø Tagesvolumen aber nur 2,38 Mio. Aktien - klar unter der 5-Mio.-Liquiditätsschwelle aus Abschnitt 5 (Qualitätsfilter formal verfehlt). CRV 2,38:1. Trotz sauberer Technik wegen der Liquiditätsschwelle nur Beobachtung, keine Kaufempfehlung."
-    },
-    {
-      "ticker": "ASML",
-      "name": "ASML Holding",
-      "sector": "Semiconductors/AI",
-      "score": "niedrig",
-      "begruendung": "Technisch sauber (0 von 5 Anti-Bulltrap-Kriterien verletzt: RSI14 57,2, Abstand SMA20 +2,16%, Abstand SMA50 +0,24%, 5-Tage-Anstieg +5,70%), OBV-5-Tage-Trend leicht positiv (+2,5 Mio.). Ø Tagesvolumen mit nur 1,31 Mio. Aktien deutlich unter der 5-Mio.-Liquiditätsschwelle aus Abschnitt 5 (hochpreisiger Titel, Regelabweichung wird vermerkt). CRV 2,09:1. Trotz stabilem Sektor-Umfeld aktuell kein Kaufkandidat, reine Beobachtung."
-    },
-    {
-      "ticker": "COIN",
-      "name": "Coinbase Global",
-      "sector": "Fintech/Brokerage",
-      "score": "niedrig",
-      "begruendung": "Anti-Bulltrap-Warnsignal: 2 von 5 Kriterien verletzt (Abstand SMA20 +8,16% >8%, Abstand SMA50 +17,36% >15%) - formal disqualifiziert. RSI14 mit 53,0 noch moderat, OBV-5-Tage-Trend positiv (+43,9 Mio.), stärkster Sektor der Watchlist (Fintech/Brokerage, Ø 5T +12,27%). CRV mit 1,13:1 deutlich unter der 2,5:1-Mindestschwelle. Zu weit gelaufen für einen Neueinstieg trotz starkem Sektor-Rückenwind - nur zur Beobachtung."
+      "begruendung": "1 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 73,8, knapp über 72). Ø Tagesvolumen nur 2,41 Mio. Aktien - klar unter der 5-Mio.-Liquiditätsschwelle aus Abschnitt 5 (Qualitätsfilter formal verfehlt). OBV-5-Tage-Trend zwar positiv (+7,2 Mio.), Langfristiger Trendkontext aber 'Fehlt' (SMA200 fallend, 0 von 10 Handelstagen über SMA200, 60-Tage-Performance nur +0,70%) - kurzfristiges Signal ohne längerfristige Bestätigung. CRV 2,30:1. Wegen Liquiditätsschwelle und schwachem Trendkontext trotz positivem Kurzfrist-OBV nur Beobachtung.",
+      "ampel": { "kapitalfluss": "gruen", "trendkontext": "rot", "optionsflow": "unbekannt" }
     }
   ]
 }
