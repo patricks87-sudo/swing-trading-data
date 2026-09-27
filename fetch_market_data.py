@@ -238,7 +238,8 @@ def compute_indicators(values):
 
     df["sma20"] = df["close"].rolling(20).mean()
     df["sma50"] = df["close"].rolling(50).mean()
-    df["sma200"] = df["close"].rolling(200).mean() if len(df) >= 200 else None
+    sma200_series = df["close"].rolling(200).mean() if len(df) >= 200 else pd.Series([None] * len(df))
+    df["sma200"] = sma200_series
 
     last = df.iloc[-1]
     close = last["close"]
@@ -261,6 +262,44 @@ def compute_indicators(values):
         if prev:
             chg_1d = round((close - prev) / prev * 100, 2)
 
+    # ------------------------------------------------------------------
+    # Langfristiger Trendkontext (ergaenzt 27.09.2026)
+    # Nutzer-Feedback: sich nur auf den kurzfristigen (5/20/60-Tage-OBV-
+    # basierten) institutionellen Kapitalfluss zu verlassen ist zu
+    # eindimensional, weil praktisch jeder andere Filter im System
+    # (Anti-Bulltrap, Breakout-Qualitaet, institutioneller Marktfilter)
+    # letztlich auf demselben Volumen-/Kurs-Signal aufsetzt. Diese drei
+    # Felder liefern eine zweite, unabhaengige Zeitachse (60 Handelstage
+    # statt 5/20/60-Tage-OBV), berechnet aus denselben ohnehin schon
+    # abgerufenen 260 Handelstagen Historie - kein zusaetzlicher API-Call
+    # noetig. Ziel: Aktien erkennen, bei denen kurzfristiger Flow einem
+    # laengerfristigen Abwaertstrend widerspricht (verdeckte Bulltrap-
+    # Gefahr trotz bestandener 5/20-Tage-Kriterien).
+    chg_60d = None
+    if len(df) >= 61:
+        chg_60d = round((close - df["close"].iloc[-61]) / df["close"].iloc[-61] * 100, 2)
+
+    sma200_trend = None
+    if len(sma200_series) >= 221 and pd.notna(sma200_series.iloc[-1]) and pd.notna(sma200_series.iloc[-21]):
+        sma200_now = sma200_series.iloc[-1]
+        sma200_20d_ago = sma200_series.iloc[-21]
+        diff_pct = (sma200_now - sma200_20d_ago) / sma200_20d_ago * 100
+        if diff_pct > 0.1:
+            sma200_trend = "steigend"
+        elif diff_pct < -0.1:
+            sma200_trend = "fallend"
+        else:
+            sma200_trend = "seitwaerts"
+
+    pct_above_sma200_10d = None
+    if len(df) >= 10 and pd.notna(sma200_series.iloc[-1]):
+        last10_close = df["close"].tail(10)
+        last10_sma200 = sma200_series.tail(10)
+        valid_mask = last10_sma200.notna()
+        if valid_mask.sum() > 0:
+            above = (last10_close[valid_mask] > last10_sma200[valid_mask]).sum()
+            pct_above_sma200_10d = round(above / valid_mask.sum() * 100, 1)
+
     return {
         "close": round(close, 4),
         "rsi14": round(last["rsi14"], 2) if pd.notna(last["rsi14"]) else None,
@@ -274,6 +313,9 @@ def compute_indicators(values):
         "pct_from_sma50": pct_from(last["sma50"]),
         "chg_5d_pct": chg_5d,
         "chg_1d_pct": chg_1d,
+        "chg_60d_pct": chg_60d,
+        "sma200_trend": sma200_trend,
+        "pct_above_sma200_10d": pct_above_sma200_10d,
         "avg_volume_20d": round(df["volume"].tail(20).mean(), 0),
         "last_volume": round(df["volume"].iloc[-1], 0),
     }
@@ -284,7 +326,7 @@ def compute_breadth(watchlist: dict) -> dict:
     grossen) Watchlist selbst berechnet. Ersetzt die im Feed strukturell
     fehlende NYSE Advance/Decline-Linie und "% Aktien ueber 50 DMA" (siehe
     Wissensdokument, Abschnitt "Bekannte Datenluecken") durch echte, aus den
-    tatsaechlich abgerufenen Kursdaten berechnete Werte, statt sie per
+    tatsaechlich abgerufenen Kursdaten berechneten Werte, statt sie per
     Websuche zu schaetzen oder stillschweigend als "nicht erfuellt" zu
     werten - genau das hatte die Risk-Off-Ampel zuvor strukturell zu
     empfindlich gemacht.
