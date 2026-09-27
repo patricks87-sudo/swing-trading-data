@@ -19,7 +19,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 
 import requests
 
@@ -202,6 +202,76 @@ def fetch_eurusd():
     except Exception as e:
         return {"error": str(e)}
 
+
+def fetch_options_flow(ticker: str):
+    """Optionsflow-Proxy ueber yfinance (ergaenzt 27.09.2026).
+
+    Der kostenlose Twelve-Data-Plan bietet keinerlei Optionsdaten, CBOE
+    veroeffentlicht kostenlos nur Marktaggregate statt Einzelwerte pro Aktie
+    (siehe Wissensdokument). yfinance ist die einzige kostenlose Quelle mit
+    echten Call/Put-Volumen und Open-Interest-Werten je Einzeltitel - aber
+    ein inoffizieller, nicht unterstuetzter Zugriff auf Yahoo Finance. Diese
+    Funktion ist deshalb bewusst so gebaut, dass ein Fehlschlag NUR dieses
+    eine Feld auf "available": False setzt (kennzeichnen statt schaetzen,
+    siehe Bekannte Datenluecken) und NIE den gesamten Lauf gefaehrdet - der
+    Circuit Breaker (snapshot_is_healthy) prueft ausschliesslich Kursdaten.
+
+    Waehlt die naechste Verfallsfrist im vom P4-Prompt vorgegebenen Fenster
+    von 1-8 Wochen (7-56 Kalendertage) und aggregiert Call-/Put-Volumen
+    sowie Call-Open-Interest ueber alle Strikes dieser Verfallsfrist. Die
+    Einschaetzung (bullisch/neutral/bearisch) ist ein Volumen-Heuristik-Proxy,
+    kein echter Block-Trade-/Smart-Money-Indikator wie bei kostenpflichtigen
+    Anbietern (Polygon, Unusual Whales usw.).
+    """
+    try:
+        import yfinance as yf
+
+        tk = yf.Ticker(ticker)
+        expirations = tk.options
+        if not expirations:
+            return {"available": False, "reason": "keine Optionsketten bei yfinance gefunden"}
+
+        today = date.today()
+        target = None
+        for exp in expirations:
+            exp_date = datetime.strptime(exp, "%Y-%m-%d").date()
+            days_out = (exp_date - today).days
+            if 7 <= days_out <= 56:
+                target = exp
+                break
+        if target is None:
+            # Fallback: naechstliegende Verfallsfrist ueberhaupt, falls keine
+            # im 1-8-Wochen-Fenster liegt (z.B. bei duennem Options-Markt)
+            target = expirations[0]
+
+        chain = tk.option_chain(target)
+        call_volume = int(chain.calls["volume"].fillna(0).sum())
+        call_oi = int(chain.calls["openInterest"].fillna(0).sum())
+        put_volume = int(chain.puts["volume"].fillna(0).sum())
+
+        call_put_ratio = round(call_volume / put_volume, 2) if put_volume > 0 else None
+        call_oi_ratio = round(call_volume / call_oi, 2) if call_oi > 0 else None
+
+        if call_put_ratio is not None and call_put_ratio >= 1.5 and (call_oi_ratio or 0) >= 0.3:
+            einschaetzung = "bullisch"
+        elif call_put_ratio is not None and call_put_ratio <= 0.7:
+            einschaetzung = "bearisch"
+        else:
+            einschaetzung = "neutral"
+
+        return {
+            "available": True,
+            "expiration": target,
+            "call_volume": call_volume,
+            "call_open_interest": call_oi,
+            "put_volume": put_volume,
+            "call_put_volume_ratio": call_put_ratio,
+            "call_volume_oi_ratio": call_oi_ratio,
+            "einschaetzung": einschaetzung,
+        }
+    except Exception as e:
+        return {"available": False, "error": str(e)}
+
 # ---------------------------------------------------------------------------
 # Indikatoren selbst berechnen
 # ---------------------------------------------------------------------------
@@ -321,12 +391,72 @@ def compute_indicators(values):
     }
 
 
+def compute_ampel(indicators: dict) -> dict:
+    """Ampel-Prinzip (ergaenzt 27.09.2026, Nutzer-Feedback): fasst die drei
+    Dimensionen institutioneller Kapitalfluss, langfristiger Trendkontext
+    und Optionsflow je Watchlist-Titel zu einer Grün/Gelb/Rot-Klassifikation
+    zusammen - unabhaengig von der eigentlichen Kauf/Halten/Verkauf- bzw.
+    Kauf-hohe-Qualitaet/Kauf-solide/Beobachten/Kein-Trade-Bewertung, die
+    P4/P1 weiterhin selbst treffen. Wird bewusst hier im Skript berechnet
+    (nicht von Claude im Prompt), damit die Klassifikation bei jedem Lauf
+    exakt nach denselben Regeln erfolgt.
+    """
+
+    def ampel_kapitalfluss():
+        obv_trend = indicators.get("obv_trend_5d")
+        last_vol = indicators.get("last_volume")
+        avg_vol = indicators.get("avg_volume_20d")
+        if obv_trend is None:
+            return "unbekannt"
+        if obv_trend > 0 and last_vol is not None and avg_vol is not None and last_vol > avg_vol:
+            return "gruen"
+        if obv_trend < 0:
+            return "rot"
+        return "gelb"
+
+    def ampel_trendkontext():
+        trend = indicators.get("sma200_trend")
+        chg60 = indicators.get("chg_60d_pct")
+        pct_above = indicators.get("pct_above_sma200_10d")
+        if trend is None or chg60 is None or pct_above is None:
+            return "unbekannt"
+        erfuellt = 0
+        if trend == "steigend":
+            erfuellt += 1
+        if chg60 > 0:
+            erfuellt += 1
+        if pct_above == 100:
+            erfuellt += 1
+        if erfuellt == 3:
+            return "gruen"
+        if erfuellt == 2:
+            return "gelb"
+        return "rot"
+
+    def ampel_optionsflow():
+        flow = indicators.get("options_flow") or {}
+        if not flow.get("available"):
+            return "unbekannt"
+        einschaetzung = flow.get("einschaetzung")
+        if einschaetzung == "bullisch":
+            return "gruen"
+        if einschaetzung == "bearisch":
+            return "rot"
+        return "gelb"
+
+    return {
+        "kapitalfluss": ampel_kapitalfluss(),
+        "trendkontext": ampel_trendkontext(),
+        "optionsflow": ampel_optionsflow(),
+    }
+
+
 def compute_breadth(watchlist: dict) -> dict:
     """Markt-Breadth-Kennzahlen, seit 20.09.2026 aus der (jetzt 50 Werte
     grossen) Watchlist selbst berechnet. Ersetzt die im Feed strukturell
     fehlende NYSE Advance/Decline-Linie und "% Aktien ueber 50 DMA" (siehe
     Wissensdokument, Abschnitt "Bekannte Datenluecken") durch echte, aus den
-    tatsaechlich abgerufenen Kursdaten berechneten Werte, statt sie per
+    tatsaechlich abgerufenen Kursdaten berechnete Werte, statt sie per
     Websuche zu schaetzen oder stillschweigend als "nicht erfuellt" zu
     werten - genau das hatte die Risk-Off-Ampel zuvor strukturell zu
     empfindlich gemacht.
@@ -380,6 +510,9 @@ def build_snapshot(run_label: str):
         result = compute_indicators(vals) if isinstance(vals, list) else vals
         if isinstance(result, dict) and "error" not in result:
             result["sector"] = SECTOR_MAP.get(ticker, "Unknown")
+            result["options_flow"] = fetch_options_flow(ticker)
+            time.sleep(1)  # yfinance hat kein dokumentiertes hartes Rate-Limit, kurze Pause aus Ruecksicht
+            result["ampel"] = compute_ampel(result)
         snapshot["watchlist"][ticker] = result
 
     snapshot["breadth"] = compute_breadth(snapshot["watchlist"])
@@ -393,7 +526,10 @@ def snapshot_is_healthy(snapshot: dict) -> bool:
     zurueckgab, obwohl GitHub Actions den Lauf als 'erfolgreich' meldete -
     alle Werte im Cockpit blieben leer. Diese Funktion prueft, ob ein
     Mindestanteil der Indizes/Watchlist-Eintraege echte Kurswerte enthaelt,
-    BEVOR das Ergebnis gespeichert und committet wird."""
+    BEVOR das Ergebnis gespeichert und committet wird. Prueft bewusst NUR
+    Kursdaten (Twelve Data) - ein Ausfall des yfinance-Optionsflow-Proxys
+    (options_flow.available = False) darf den Lauf niemals blockieren, da
+    yfinance ein inoffizieller, weniger zuverlaessiger Datenzugang ist."""
     entries = list(snapshot.get("indices", {}).values()) + list(snapshot.get("watchlist", {}).values())
     if not entries:
         return False
