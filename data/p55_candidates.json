@@ -1,64 +1,43 @@
 {
-  "generated_at_utc": "2026-09-28T15:21:23Z",
-  "run_date": "2026-09-28",
-  "ergebnis": "Trade",
-  "kurzbegruendung": "Trade: NVIDIA mit fundamental bestätigter institutioneller Stärke (Rekord-Buyback, +2% trotz -3% im Halbleitersektor) - bestes Setup trotz insgesamt angespanntem Marktumfeld.",
+  "generated_at_utc": "2026-09-29T15:33:00Z",
+  "run_date": "2026-09-29",
+  "ergebnis": "Kein Trade",
+  "kurzbegruendung": "Kein Trade: Kein P4-Kandidat besteht den Hold Test voll – NVIDIA/Taiwan Semiconductor nur teilweise (hinken dem Halbleiter-Sektor +2,1% hinterher), Energy und Palo Alto Networks im Minus; Marktbreite sehr schwach (A/D 0,22).",
   "kandidaten": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "Semiconductors/AI",
-      "status": "Bestanden",
-      "begruendung": "Institutional Hold Test bestanden - bestes Signal des Tages: +2,04% trotz eines schwachen Halbleitertages (SOX-Proxy -3,14%, u.a. Qualcomm -6,12%, AMD -4,96%) und trotz insgesamt negativem Gesamtmarkt (NASDAQ-Proxy -1,45%, S&P500-Proxy -0,84%). Auslöser laut Websuche: Vorstand genehmigt Rekord-Aktienrückkaufprogramm über 150 Mrd. USD - eines der größten Einzelrückkaufprogramme der Börsengeschichte (Quelle: Bloomberg, 28.09.2026); AMD und Broadcom profitierten explizit NICHT mit, reine Einzeltitel-Story statt Sektor-Rally. RSI14 mit 54,7 nicht überkauft, OBV-5-Tage-Trend weiter klar positiv (+20,6 Mio.), Kurs weiter über SMA20/50. Institutional Hold Test damit sowohl technisch als auch fundamental bestätigt. Aktueller Kurs rund 201,67€. Ausgewähltes Trade-Setup des Tages.",
-      "verified_by_search": true
+      "status": "Teilweise",
+      "begruendung": "Institutional Hold Test nur teilweise bestanden: +0,76% und damit stärker als S&P500-Proxy (-0,19%) und im Plus wie der NASDAQ-Proxy (+0,25%), aber schwächer als der Halbleiter-Sektor (SOX-Proxy +2,07%) – keine relative Stärke im eigenen Sektor. OBV-5-Tage-Trend positiv (+65,7 Mio.), Kurs 3,5% über SMA20, RSI14 58,5 nicht überdehnt. Kapitalfluss-Ampel nur gelb, Options Flow, VWAP und Intraday-Volumen nicht verfügbar (Datenbasis unvollständig). Aktueller Kurs rund 202,7€. Bleibt Beobachtungskandidat, kein Einstieg bei nur NEUTRAL-Regime und extrem schwacher Marktbreite."
+    },
+    {
+      "ticker": "TSM",
+      "name": "Taiwan Semiconductor",
+      "sector": "Semiconductors/AI",
+      "status": "Teilweise",
+      "begruendung": "Institutional Hold Test nur teilweise bestanden: +0,75% im Plus, aber klar schwächer als der Sektor (SOX-Proxy +2,07%). OBV-5-Tage-Trend leicht negativ (-2,2 Mio.), Kapitalfluss-Ampel rot; Trend intakt (5,1% über SMA20, steigende SMA200), RSI14 62,1. Earnings am 14.10.2026 nähern sich. Aktueller Kurs rund 401,1€. Kein Einstieg, Beobachtung."
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "sector": "Energy",
+      "status": "Nicht bestanden",
+      "begruendung": "Institutional Hold Test nicht bestanden: -0,66% am Tag und leicht unter der SMA20 (-0,8%) – Kurs hält die Pullback-Zone nicht mit Aufwärtsimpuls. OBV-5-Tage-Trend zwar positiv (+26,8 Mio.), RSI14 44,8; belastend: fallender Ölpreis bei US-Iran-Gesprächen. Aktueller Kurs rund 141,9€. Verworfen."
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "sector": "Energy",
+      "status": "Nicht bestanden",
+      "begruendung": "Institutional Hold Test nicht bestanden: -0,68% am Tag, 2,1% unter SMA20, RSI14 36,6. OBV-5-Tage-Trend positiv (+19,9 Mio.), aber keine Fortsetzung nach oben; Öl-/Geopolitik-Risiko (Iran-Gespräche). Aktueller Kurs rund 180,2€. Verworfen."
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "sector": "Cybersecurity",
-      "status": "Bestanden",
-      "begruendung": "Institutional Hold Test bestanden: +2,2% deutlich stärker als Gesamtmarkt, Teil einer breiten Sektorbewegung - Cybersecurity als einziger der 20 Sektoren durchgehend im Plus (Zscaler +2,88%, CrowdStrike +1,63%, Fortinet +0,91%). OBV-5-Tage-Trend positiv (+5,6 Mio.), RSI14 68,2 noch nicht überkauft. Kein zweiter aktiver Einstieg trotz bestandenem Test: CRV aus dem P4-Lauf mit 1,43:1 bereits unterdurchschnittlich - Kapitalerhalt hat Vorrang vor einem zweiten gleichzeitigen Trade an einem Tag mit insgesamt angespannter Marktbreite. Aktueller Kurs rund 336,27€. Bestätigter Beobachtungskandidat für ein sauberes CRV-Setup.",
-      "verified_by_search": false
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "sector": "Software",
-      "status": "Teilweise",
-      "begruendung": "Institutional Hold Test nur teilweise bestanden: Tagesverlust -1,48% bewegt sich im Rahmen des breiten Marktrückgangs (NASDAQ-Proxy -1,45%), keine relative Stärke erkennbar. OBV-5-Tage-Trend bleibt mit +19,1 Mio. positiv, Kurs hält sich weiter über SMA20 (+1,75%). Software-Sektor insgesamt schwach. Aktueller Kurs rund 446,51€. Kein Einstieg, bleibt Beobachtungskandidat.",
-      "verified_by_search": false
-    },
-    {
-      "ticker": "TSM",
-      "name": "Taiwan Semiconductor",
-      "sector": "Semiconductors",
-      "status": "Teilweise",
-      "begruendung": "Institutional Hold Test teilweise bestanden: -1,2% in etwa im Rahmen des Gesamtmarkts, aber klar besser als der eigene Sektor (SOX-Proxy -3,14%). OBV-5-Tage-Trend nur noch leicht positiv (+0,9 Mio.), RSI14 53,5 neutral. Kurs hält sich weiterhin über SMA20/50, aber ohne ausreichend starke Fortsetzung für einen aktiven Einstieg. Aktueller Kurs rund 390,89€. Beobachtungskandidat.",
-      "verified_by_search": false
-    },
-    {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "sector": "Technology",
-      "status": "Teilweise",
-      "begruendung": "Institutional Hold Test teilweise bestanden: Kurs nahezu unverändert (-0,13%) und damit deutlich stärker als NASDAQ-Proxy (-1,45%) und S&P500-Proxy (-0,84%) - Kurs hält sich über SMA20 (+3,08%). RSI14 mit 80,6 aber weiterhin extrem überkauft, OBV-5-Tage-Trend positiv (+13,8 Mio.) ohne frische Kaufwelle. Erhöhtes Rückschlagrisiko durch die Überdehnung - kein Neueinstieg auf aktuellem Niveau. Aktueller Kurs rund 299,10€. Beobachtungskandidat.",
-      "verified_by_search": false
-    },
-    {
-      "ticker": "TMO",
-      "name": "Thermo Fisher Scientific",
-      "sector": "MedTech",
-      "status": "Teilweise",
-      "begruendung": "Institutional Hold Test teilweise bestanden: Kurs nahezu unverändert (-0,16%), hält sich klar über SMA20 (+6,11%). RSI14 mit 85,8 aber extrem überkauft, OBV-5-Tage-Trend nahezu flach (+0,2 Mio.) - keine frische institutionelle Akkumulation erkennbar, nur passives Halten auf hohem Niveau. Kein Neueinstieg vertretbar. Aktueller Kurs rund 591,76€. Beobachtungskandidat.",
-      "verified_by_search": false
-    },
-    {
-      "ticker": "PLTR",
-      "name": "Palantir Technologies",
-      "sector": "Software",
-      "status": "Teilweise",
-      "begruendung": "Institutional Hold Test teilweise bestanden: -0,78% klar besser als der Gesamtmarkt, OBV-5-Tage-Trend weiterhin mit Abstand am stärksten in der gesamten Watchlist (+61,8 Mio.). RSI14 mit 74,2 aber überkauft, zusätzlich mit Abstand zur SMA50 knapp über der 15%-Anti-Bulltrap-Schwelle (+14,03%) markiert. Kein Neueinstieg trotz starkem institutionellem Signal. Aktueller Kurs rund 165,28€. Beobachtungskandidat.",
-      "verified_by_search": false
+      "status": "Nicht bestanden",
+      "begruendung": "Institutional Hold Test nicht bestanden: -2,61% am Tag und schwächster P4-Kandidat, gesamter Cybersecurity-Sektor im Minus (CrowdStrike 0,0%, Zscaler -1,0%, Fortinet -1,2%). OBV-5-Tage-Trend nur leicht positiv (+3,4 Mio.), RSI14 66,2, 5,5% über SMA20. Aktueller Kurs rund 335,7€. Verworfen."
     }
   ]
 }
