@@ -1,86 +1,15 @@
 {
-  "generated_at_utc": "2026-09-28T13:05:27Z",
-  "run_date": "2026-09-28",
+  "generated_at_utc": "2026-09-29T13:03:00Z",
+  "run_date": "2026-09-29",
   "candidates": [
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "sector": "Software",
-      "score": "hoch",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 59,9, Abstand SMA20 +3,23%, Abstand SMA50 +8,48%, 5-Tage-Anstieg +4,53%, OBV-5-Tage-Trend +47,2 Mio. synchron zum Kursanstieg). Tagesvolumen 38,2 Mio. klar über dem 20-Tage-Ø von 21,8 Mio. – Kapitalfluss-Ampel 'grün'. Langfristiger Trendkontext: Bestätigt (SMA200 steigend, 60-Tage-Performance +34,32%, 100% der letzten 10 Handelstage über SMA200). Sauberstes technisches Bild der heutigen Liste, kein Anti-Bulltrap-Warnsignal. CRV (1,5×ATR14-Stop / 10%-Ziel): 3,14:1. Sektor Software trotz schwacher 5-Tage-Sektorbreite (viele Peers mit roter Kapitalfluss-Ampel: Oracle, Adobe, Salesforce, ServiceNow) mit stärkster 60-Tage-Outperformance ggü. S&P 500 – MSFT ist innerhalb des Sektors klarer Screening-Gewinner statt Sektor-Trittbrettfahrer. Options Flow nicht verfügbar (yfinance-Modul im Workflow fehlt).",
-      "ampel": { "kapitalfluss": "gruen", "trendkontext": "gruen", "optionsflow": "unbekannt" }
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors",
-      "score": "hoch",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 43,7, Abstand SMA20 +1,50%, Abstand SMA50 +4,21%, 5-Tage-Anstieg +1,26%, OBV-5-Tage-Trend +128,3 Mio. synchron). Tagesvolumen 89,8 Mio. unter dem 20-Tage-Ø von 116,1 Mio. – Kapitalfluss-Ampel daher 'gelb', nicht 'grün': Zufluss eindeutig positiv, aber ohne überdurchschnittliches Tagesvolumen. Langfristiger Trendkontext: Bestätigt (SMA200 steigend, 60-Tage-Performance +13,91%, 100% über SMA200). Sektor Semiconductors mit stärkster 5-Tage-Outperformance aller 20 Sektoren (Ø +6,45% vs. S&P 500 +1,27%). CRV: 2,87:1. RSI moderat, keine Überdehnung – sauberer Pullback im intakten Aufwärtstrend. Options Flow nicht verfügbar (yfinance-Modul fehlt).",
-      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gruen", "optionsflow": "unbekannt" }
-    },
-    {
-      "ticker": "TSM",
-      "name": "Taiwan Semiconductor",
-      "sector": "Semiconductors",
-      "score": "mittel",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 61,5, Abstand SMA20 +4,75%, Abstand SMA50 +7,24%, 5-Tage-Anstieg +3,67%, OBV-5-Tage-Trend +11,0 Mio. synchron). Kapitalfluss-Ampel 'gelb' (Tagesvolumen 7,75 Mio. leicht unter 20-Tage-Ø von 9,8 Mio.). Langfristiger Trendkontext: Bestätigt (SMA200 steigend, 100% über SMA200), aber 60-Tage-Performance mit nur +1,44% klar schwächer als Sektorkollegen NVIDIA/AMD/Marvell – Struktur intakt, aber ohne frische Kaufwelle. CRV: 2,95:1. Einstufung mittel statt hoch wegen der im Sektorvergleich schwächeren mittelfristigen Dynamik.",
-      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gruen", "optionsflow": "unbekannt" }
-    },
-    {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "sector": "Technology",
-      "score": "mittel",
-      "begruendung": "1 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 74,4, knapp über der 72er-Schwelle – Filter greift erst ab 2 verletzten Kriterien). Abstand SMA20 (+3,54%) und SMA50 (+5,98%) unauffällig, 5-Tage-Anstieg +1,47% moderat, OBV-5-Tage-Trend +49,3 Mio. synchron. Kapitalfluss-Ampel 'gelb' (Tagesvolumen 30,0 Mio. unter 20-Tage-Ø von 42,9 Mio.). Langfristiger Trendkontext: Bestätigt (60-Tage-Performance +15,86%, 100% über SMA200). CRV: 3,34:1, das beste der heutigen Liste. Leicht überkaufte Kurzfrist-Lage – daher Einstufung mittel statt hoch.",
-      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gruen", "optionsflow": "unbekannt" }
-    },
-    {
-      "ticker": "TMO",
-      "name": "Thermo Fisher Scientific",
-      "sector": "MedTech",
-      "score": "mittel",
-      "begruendung": "1 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 78,1, klar überkauft; Abstand SMA20 +6,71% und SMA50 +11,71% jeweils noch unter den 8%/15%-Schwellen – Filter greift nicht). OBV-5-Tage-Trend +2,5 Mio. leicht positiv. Kapitalfluss-Ampel 'gelb'. Langfristiger Trendkontext: Bestätigt (60-Tage-Performance +31,49%, 100% über SMA200) – MedTech zählt zu den fünf stärksten Sektoren des Tages. CRV: 2,92:1. Erhöhtes Überdehnungsrisiko durch den hohen RSI-Wert – kein Neueinstieg auf aktuellem Niveau empfohlen, nur zur Beobachtung auf Pullback.",
-      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gruen", "optionsflow": "unbekannt" }
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "sector": "Cybersecurity",
-      "score": "mittel",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 67,0, Abstand SMA20 +3,83%, Abstand SMA50 +5,11%, 5-Tage-Anstieg +3,07%, OBV-5-Tage-Trend +10,9 Mio. synchron). Kapitalfluss-Ampel 'gelb'. Langfristiger Trendkontext: Bestätigt (60-Tage-Performance +6,45%, 100% über SMA200). Sektor Cybersecurity mit starker 60-Tage-Outperformance (+19,47% vs. S&P 500 +3,43%), getrübt durch den Zscaler-Einbruch (CRO-Abgang) im selben Sektor. CRV: 1,43:1 (durch relativ hohen ATR14 gedämpft). Letzter Handelstag mit -3,89% als kurzfristiges Warnsignal zu beobachten – daher Einstufung mittel.",
-      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gruen", "optionsflow": "unbekannt" }
-    },
-    {
-      "ticker": "PLTR",
-      "name": "Palantir Technologies",
-      "sector": "Software",
-      "score": "mittel",
-      "begruendung": "1 von 5 prüfbaren Anti-Bulltrap-Kriterien knapp verletzt (Abstand SMA50 +15,70%, minimal über der 15%-Schwelle – unter 2 verletzten Kriterien noch nicht formal disqualifiziert, aber Warnsignal). RSI14 69,4 noch nicht überkauft, OBV-5-Tage-Trend +84,0 Mio. stark positiv, Tagesvolumen 17,8 Mio. unter 20-Tage-Ø von 26,4 Mio. – Kapitalfluss-Ampel 'gelb'. Langfristiger Trendkontext: Bestätigt, stärkste 60-Tage-Performance der gesamten Watchlist (+50,86%). CRV: 2,17:1. Wegen der bereits erreichten Überdehnung ggü. SMA50 nur Einstufung mittel.",
-      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gruen", "optionsflow": "unbekannt" }
-    },
-    {
-      "ticker": "ASML",
-      "name": "ASML Holding",
-      "sector": "Semiconductors",
-      "score": "niedrig",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 53,0, Abstand SMA20 +3,41%, Abstand SMA50 +1,54%, 5-Tage-Anstieg +3,81%, OBV-5-Tage-Trend leicht positiv). Kapitalfluss-Ampel 'gelb'. Langfristiger Trendkontext nur 'Teilweise' bestätigt (SMA200 steigend und 100% über SMA200, aber 60-Tage-Performance mit -5,38% negativ) – kurzfristiger Aufwärtsimpuls ohne vollständige mittelfristige Bestätigung. CRV: 2,22:1. Technisch unauffällig, aber ohne klares Alleinstellungsmerkmal ggü. stärkeren Sektorkollegen NVIDIA/TSM – Einstufung niedrig.",
-      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gelb", "optionsflow": "unbekannt" }
-    },
-    {
-      "ticker": "FTNT",
-      "name": "Fortinet",
-      "sector": "Cybersecurity",
-      "score": "niedrig",
-      "begruendung": "1 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt: OBV-5-Tage-Trend fällt (-3,8 Mio.) trotz steigendem Kurs (5-Tage-Anstieg +2,13%) – klassisches Divergenzsignal, daher Kapitalfluss-Ampel 'rot' trotz grünem Trendkontext (60-Tage-Performance +9,11%, 100% über SMA200, SMA200 steigend). RSI14 mit 70,2 noch knapp unter der 72er-Schwelle. CRV: 1,72:1. Die Divergenz zwischen kurzfristigem Kapitalabfluss und intaktem längerfristigem Trend spricht gegen einen aktiven Neuaufbau – nur zur Beobachtung.",
-      "ampel": { "kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "unbekannt" }
-    },
-    {
-      "ticker": "DE",
-      "name": "Deere & Company",
-      "sector": "Industrials",
-      "score": "niedrig",
-      "begruendung": "0 von 5 prüfbaren Anti-Bulltrap-Kriterien verletzt (RSI14 48,5, Abstand SMA20 +1,19%, Abstand SMA50 +7,74%, 5-Tage-Anstieg +0,95%, OBV-5-Tage-Trend leicht positiv). Kapitalfluss-Ampel 'gelb'. Langfristiger Trendkontext: Bestätigt (60-Tage-Performance +10,01%, 100% über SMA200). CRV: 2,94:1. Sektor Industrials zählt mit gewichteter Sektorbewertung aber nicht zu den Top-5-Sektoren des Tages (Caterpillar als zweiter Sektorwert klar schwächer) – daher trotz sauberer Einzeltechnik nur Einstufung niedrig.",
-      "ampel": { "kapitalfluss": "gelb", "trendkontext": "gruen", "optionsflow": "unbekannt" }
-    }
+    {"ticker":"NVDA","name":"NVIDIA","sector":"Semiconductors/AI","score":"hoch","ampel":{"kapitalfluss":"gruen","trendkontext":"gruen","optionsflow":"unbekannt"},"begruendung":"Stärkster Kandidat: Kapitalfluss- und Trendkontext-Ampel grün, OBV steigend (+160 Mio 5T), 60T +17,5% vs. NASDAQ +3,4%, RSI14 53,8, nur 2,9% über SMA20 (kein Überdehnungssignal). Rückenwind durch um 150 Mrd. USD erhöhtes Aktienrückkaufprogramm. Aktueller Kurs ca. 201 EUR. Gesamtscore aber unter der Schwelle (u.a. Options Flow nicht verfügbar, Marktregime nur NEUTRAL) - Beobachtungsliste, kein Kauf."},
+    {"ticker":"TSM","name":"Taiwan Semiconductor","sector":"Semiconductors/AI","score":"mittel","ampel":{"kapitalfluss":"gelb","trendkontext":"gruen","optionsflow":"unbekannt"},"begruendung":"Intakter Aufwärtstrend (steigende SMA200, 60T +4,3%), RSI14 58, OBV leicht steigend, relativ stabil in schwachem Halbleitertag. Earnings am 14.10.2026 (ca. 11 Handelstage) - noch außerhalb der 7-Tage-Sperre, aber Ereignisrisiko nähert sich. Kapitalfluss nur gelb. Aktueller Kurs ca. 398 EUR."},
+    {"ticker":"XOM","name":"ExxonMobil","sector":"Energy","score":"mittel","ampel":{"kapitalfluss":"gelb","trendkontext":"gruen","optionsflow":"unbekannt"},"begruendung":"Energy als positiver Sektor (Ölpreis ca. 92 USD WTI, aber fallend bei US-Iran-Gesprächen). OBV +41 Mio (5T), 60T +18,6%, Kurs direkt an der SMA20 (Pullback-Zone), RSI14 53. Risiko: Ölpreis ist stark schlagzeilengetrieben (Iran/Hormus); ein Abkommen könnte den Sektor belasten. Aktueller Kurs ca. 143 EUR."},
+    {"ticker":"CVX","name":"Chevron","sector":"Energy","score":"mittel","ampel":{"kapitalfluss":"gelb","trendkontext":"gruen","optionsflow":"unbekannt"},"begruendung":"Ähnliches Bild wie ExxonMobil: OBV steigend, 60T +22%, 1,5% unter SMA20 (Pullback), RSI14 45. Gleiches Öl-/Geopolitik-Risiko. Aktueller Kurs ca. 181 EUR."},
+    {"ticker":"PANW","name":"Palo Alto Networks","sector":"Cybersecurity","score":"mittel","ampel":{"kapitalfluss":"gelb","trendkontext":"gruen","optionsflow":"unbekannt"},"begruendung":"Cybersecurity ist der stärkste Sektor (5T-Ø ca. +1,6%), 5T +5,5%, 1T +4,6%. Aber bereits 8,3% über SMA20 und RSI14 70,3 - nah an Überdehnung (ein Anti-Bulltrap-Kriterium erfüllt), CRV zuletzt zu niedrig. Aktueller Kurs ca. 345 EUR."},
+    {"ticker":"PLTR","name":"Palantir Technologies","sector":"Software/Cloud","score":"niedrig","ampel":{"kapitalfluss":"gelb","trendkontext":"gruen","optionsflow":"unbekannt"},"begruendung":"Starker Trend (60T +45%), OBV steigend, aber RSI14 72,7 (Überdehnung) und 13,6% über SMA50; Software-Sektor insgesamt schwach. Kein Einstieg auf aktuellem Niveau. Aktueller Kurs ca. 165 EUR."},
+    {"ticker":"SMCI","name":"Super Micro Computer","sector":"Semiconductors/AI","score":"niedrig","ampel":{"kapitalfluss":"gelb","trendkontext":"gruen","optionsflow":"unbekannt"},"begruendung":"60T +53%, 18% über SMA50 (Überdehnung), 1T -3,4%; sehr volatil. Nur Beobachtung. Aktueller Kurs ca. 37 EUR."},
+    {"ticker":"ASML","name":"ASML Holding","sector":"Semiconductors/AI","score":"niedrig","ampel":{"kapitalfluss":"gruen","trendkontext":"gruen","optionsflow":"unbekannt"},"begruendung":"Ampeln grün, 5T +3,5%, RSI14 50,7 - scheitert aber am Liquiditätsfilter (Ø Volumen ca. 1,3 Mio < 5 Mio Aktien, ADR). Aktueller Kurs ca. 1.557 EUR."},
+    {"ticker":"DE","name":"Deere & Company","sector":"Industrials","score":"niedrig","ampel":{"kapitalfluss":"gelb","trendkontext":"gruen","optionsflow":"unbekannt"},"begruendung":"Solider Trend (60T +11%), RSI14 54,8, nahe SMA20, aber Ø Volumen ca. 1,4 Mio < 5 Mio Aktien (Liquiditätsfilter) und Sektor Industrials ohne institutionellen Rückenwind. Aktueller Kurs ca. 606 EUR."}
   ]
 }
