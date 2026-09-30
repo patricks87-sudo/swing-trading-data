@@ -1,43 +1,36 @@
 {
-  "generated_at_utc": "2026-09-29T15:33:00Z",
-  "run_date": "2026-09-29",
+  "generated_at_utc": "2026-09-30T15:20:00Z",
+  "run_date": "2026-09-30",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade: Kein P4-Kandidat besteht den Hold Test voll – NVIDIA/Taiwan Semiconductor nur teilweise (hinken dem Halbleiter-Sektor +2,1% hinterher), Energy und Palo Alto Networks im Minus; Marktbreite sehr schwach (A/D 0,22).",
+  "kurzbegruendung": "Kein Trade: Kein P4-Kandidat besteht den Hold Test voll - Microsoft, Taiwan Semiconductor und ExxonMobil nur teilweise (Kapitalfluss-Ampel jeweils gelb/rot), Chevron neutral; Regime NEUTRAL, Intraday-Daten (VWAP, Volumen) nicht verfügbar.",
   "kandidaten": [
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors/AI",
-      "status": "Teilweise",
-      "begruendung": "Institutional Hold Test nur teilweise bestanden: +0,76% und damit stärker als S&P500-Proxy (-0,19%) und im Plus wie der NASDAQ-Proxy (+0,25%), aber schwächer als der Halbleiter-Sektor (SOX-Proxy +2,07%) – keine relative Stärke im eigenen Sektor. OBV-5-Tage-Trend positiv (+65,7 Mio.), Kurs 3,5% über SMA20, RSI14 58,5 nicht überdehnt. Kapitalfluss-Ampel nur gelb, Options Flow, VWAP und Intraday-Volumen nicht verfügbar (Datenbasis unvollständig). Aktueller Kurs rund 202,7€. Bleibt Beobachtungskandidat, kein Einstieg bei nur NEUTRAL-Regime und extrem schwacher Marktbreite."
-    },
     {
       "ticker": "TSM",
       "name": "Taiwan Semiconductor",
       "sector": "Semiconductors/AI",
       "status": "Teilweise",
-      "begruendung": "Institutional Hold Test nur teilweise bestanden: +0,75% im Plus, aber klar schwächer als der Sektor (SOX-Proxy +2,07%). OBV-5-Tage-Trend leicht negativ (-2,2 Mio.), Kapitalfluss-Ampel rot; Trend intakt (5,1% über SMA20, steigende SMA200), RSI14 62,1. Earnings am 14.10.2026 nähern sich. Aktueller Kurs rund 401,1€. Kein Einstieg, Beobachtung."
+      "begruendung": "Hold Test nur teilweise bestanden: +0,45% zum Vortag, stärker als der Halbleiter-Sektor (SOX-Proxy -0,17%), aber schwächer als S&P500 (+0,52%) und NASDAQ (+0,72%). OBV-5-Tage-Trend positiv (+17,9 Mio.), Kurs 5,2% über SMA20, RSI14 68,9. Kapitalfluss-Ampel seit heute Morgen von grün auf gelb verschlechtert. Aktueller Kurs rund 404,9€. Earnings am 15.10.2026 nähern sich. VWAP, Intraday-Volumen und Options Flow nicht verfügbar (Datenbasis unvollständig). Beobachtung, kein Einstieg."
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Software/Cloud",
+      "status": "Teilweise",
+      "begruendung": "Hold Test nur teilweise bestanden: +1,71% und damit stärker als S&P500 und NASDAQ, aber schwächer als der Softwaresektor (Salesforce +3,3%, ServiceNow +3,2%, Snowflake +4,4%). OBV-5-Tage-Trend negativ (-19,1 Mio.) - keine Akkumulation, Kapitalfluss-Ampel rot (heute Morgen noch grün). Kurs 3,4% über SMA20, RSI14 64. Aktueller Kurs rund 456,6€. Intraday-Bestätigung nicht verfügbar. Kein Einstieg."
     },
     {
       "ticker": "XOM",
       "name": "ExxonMobil",
       "sector": "Energy",
-      "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test nicht bestanden: -0,66% am Tag und leicht unter der SMA20 (-0,8%) – Kurs hält die Pullback-Zone nicht mit Aufwärtsimpuls. OBV-5-Tage-Trend zwar positiv (+26,8 Mio.), RSI14 44,8; belastend: fallender Ölpreis bei US-Iran-Gesprächen. Aktueller Kurs rund 141,9€. Verworfen."
+      "status": "Teilweise",
+      "begruendung": "Auf Tagesbasis positiv: +1,10%, stärker als S&P500/NASDAQ und Chevron, Kurs hat die SMA20 zurückerobert (+0,2%), OBV-5-Tage-Trend positiv (+5,3 Mio.), RSI14 46. Gegen einen Trade sprechen: Kapitalfluss-Ampel nur gelb, Hold Test am 29.09. nicht bestanden, Ölpreis schlagzeilengetrieben (Iran-Sanktionen), VWAP und Intraday-Volumen nicht verfügbar. Aktueller Kurs rund 143,9€. Beobachtung."
     },
     {
       "ticker": "CVX",
       "name": "Chevron",
       "sector": "Energy",
-      "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test nicht bestanden: -0,68% am Tag, 2,1% unter SMA20, RSI14 36,6. OBV-5-Tage-Trend positiv (+19,9 Mio.), aber keine Fortsetzung nach oben; Öl-/Geopolitik-Risiko (Iran-Gespräche). Aktueller Kurs rund 180,2€. Verworfen."
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "sector": "Cybersecurity",
-      "status": "Nicht bestanden",
-      "begruendung": "Institutional Hold Test nicht bestanden: -2,61% am Tag und schwächster P4-Kandidat, gesamter Cybersecurity-Sektor im Minus (CrowdStrike 0,0%, Zscaler -1,0%, Fortinet -1,2%). OBV-5-Tage-Trend nur leicht positiv (+3,4 Mio.), RSI14 66,2, 5,5% über SMA20. Aktueller Kurs rund 335,7€. Verworfen."
+      "status": "Neutral",
+      "begruendung": "Kein klares Signal: +0,44% zum Vortag, aber weiterhin 1,8% unter SMA20 und schwächer als S&P500/NASDAQ und ExxonMobil. OBV-5-Tage-Trend positiv (+5,9 Mio.), RSI14 39, Kapitalfluss-Ampel gelb. Gleiches Öl-/Geopolitik-Risiko wie ExxonMobil. Aktueller Kurs rund 181,1€. Beobachtung."
     }
   ]
 }
