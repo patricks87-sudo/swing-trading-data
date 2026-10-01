@@ -1,36 +1,43 @@
 {
-  "generated_at_utc": "2026-09-30T15:20:00Z",
-  "run_date": "2026-09-30",
+  "generated_at_utc": "2026-10-01T15:30:00Z",
+  "run_date": "2026-10-01",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade: Kein P4-Kandidat besteht den Hold Test voll - Microsoft, Taiwan Semiconductor und ExxonMobil nur teilweise (Kapitalfluss-Ampel jeweils gelb/rot), Chevron neutral; Regime NEUTRAL, Intraday-Daten (VWAP, Volumen) nicht verfügbar.",
+  "kurzbegruendung": "Kein Trade: Kein P4-Kandidat besteht den Hold Test voll - NVIDIA, Taiwan Semiconductor, Microsoft und ExxonMobil nur teilweise, Amazon nicht bestanden; Marktbreite schwach (A/D 0,52), S&P500 unter SMA20/50, Intraday-Daten (VWAP, Volumen) nicht verfügbar.",
   "kandidaten": [
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Semiconductors/AI",
+      "status": "Teilweise",
+      "begruendung": "Relative Stärke gut: +0,16% zum Vortag gegen S&P500 -0,42%, NASDAQ -0,28% und Halbleiter-Proxy +0,06%; Kurs 2,4% über SMA20, OBV-5-Tage-Trend steigend (+253 Mio.), RSI14 64. Aber: Kapitalfluss-Ampel nur gelb, Options Flow unbekannt, Marktbreite verschlechtert, VWAP/Eröffnungskurs/Intraday-Volumen nicht verfügbar - Hold Test nicht vollständig prüfbar. Aktueller Kurs rund 202 EUR (Stop-Idee ca. 195 EUR, CRV ca. 2,3:1). Beobachtung, kein Einstieg."
+    },
     {
       "ticker": "TSM",
       "name": "Taiwan Semiconductor",
       "sector": "Semiconductors/AI",
       "status": "Teilweise",
-      "begruendung": "Hold Test nur teilweise bestanden: +0,45% zum Vortag, stärker als der Halbleiter-Sektor (SOX-Proxy -0,17%), aber schwächer als S&P500 (+0,52%) und NASDAQ (+0,72%). OBV-5-Tage-Trend positiv (+17,9 Mio.), Kurs 5,2% über SMA20, RSI14 68,9. Kapitalfluss-Ampel seit heute Morgen von grün auf gelb verschlechtert. Aktueller Kurs rund 404,9€. Earnings am 15.10.2026 nähern sich. VWAP, Intraday-Volumen und Options Flow nicht verfügbar (Datenbasis unvollständig). Beobachtung, kein Einstieg."
+      "begruendung": "-0,30% zum Vortag: stärker als S&P500 (-0,42%), aber schwächer als Halbleiter-Proxy (+0,06%) und NVIDIA. OBV-5-Tage-Trend praktisch flach (+0,9 Mio.), Kurs 3,8% über SMA20, RSI14 64, Kapitalfluss gelb. Aktueller Kurs rund 401 EUR. Earnings am 15.10.2026 nähern sich. VWAP/Intraday-Volumen nicht verfügbar. Beobachtung."
     },
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "Software/Cloud",
       "status": "Teilweise",
-      "begruendung": "Hold Test nur teilweise bestanden: +1,71% und damit stärker als S&P500 und NASDAQ, aber schwächer als der Softwaresektor (Salesforce +3,3%, ServiceNow +3,2%, Snowflake +4,4%). OBV-5-Tage-Trend negativ (-19,1 Mio.) - keine Akkumulation, Kapitalfluss-Ampel rot (heute Morgen noch grün). Kurs 3,4% über SMA20, RSI14 64. Aktueller Kurs rund 456,6€. Intraday-Bestätigung nicht verfügbar. Kein Einstieg."
+      "begruendung": "+0,27% zum Vortag, stärker als S&P500 und NASDAQ, aber schwächer als Salesforce (+1,5%) und ServiceNow (+1,3%). OBV-5-Tage-Trend positiv (+24,9 Mio.), Kurs 2,6% über SMA20, RSI14 61, 60T +34% (weit gelaufen), Kapitalfluss gelb. Aktueller Kurs rund 454 EUR. Intraday-Bestätigung nicht verfügbar. Kein Einstieg."
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "status": "Nicht bestanden",
+      "begruendung": "-1,11% zum Vortag, klar schwächer als S&P500 (-0,42%) und NASDAQ (-0,28%); Kurs 2,2% unter SMA20 und 3,8% unter SMA50, RSI14 37,7. Zwar OBV-5-Tage-Trend stark steigend (+77 Mio.), aber keine Rückkehr der Käufer im Kursverlauf erkennbar; Sektor Consumer Discretionary schwach. Aktueller Kurs rund 217 EUR. Verworfen."
     },
     {
       "ticker": "XOM",
       "name": "ExxonMobil",
       "sector": "Energy",
       "status": "Teilweise",
-      "begruendung": "Auf Tagesbasis positiv: +1,10%, stärker als S&P500/NASDAQ und Chevron, Kurs hat die SMA20 zurückerobert (+0,2%), OBV-5-Tage-Trend positiv (+5,3 Mio.), RSI14 46. Gegen einen Trade sprechen: Kapitalfluss-Ampel nur gelb, Hold Test am 29.09. nicht bestanden, Ölpreis schlagzeilengetrieben (Iran-Sanktionen), VWAP und Intraday-Volumen nicht verfügbar. Aktueller Kurs rund 143,9€. Beobachtung."
-    },
-    {
-      "ticker": "CVX",
-      "name": "Chevron",
-      "sector": "Energy",
-      "status": "Neutral",
-      "begruendung": "Kein klares Signal: +0,44% zum Vortag, aber weiterhin 1,8% unter SMA20 und schwächer als S&P500/NASDAQ und ExxonMobil. OBV-5-Tage-Trend positiv (+5,9 Mio.), RSI14 39, Kapitalfluss-Ampel gelb. Gleiches Öl-/Geopolitik-Risiko wie ExxonMobil. Aktueller Kurs rund 181,1€. Beobachtung."
+      "begruendung": "+0,61% zum Vortag, stärker als S&P500/NASDAQ, aber schwächer als Chevron (+1,0%); Kurs 0,65% über SMA20 (hält die Pullback-Zone), OBV-5-Tage-Trend leicht positiv (+5,9 Mio.), RSI14 46, Kapitalfluss gelb. Ölpreis schlagzeilengetrieben (Brent ca. 97-100 USD). Aktueller Kurs rund 144 EUR. VWAP/Intraday-Volumen nicht verfügbar. Beobachtung."
     }
   ]
 }
