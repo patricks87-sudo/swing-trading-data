@@ -154,6 +154,16 @@ EURUSD_URL = "https://api.exchangerate-api.com/v4/latest/USD"
 
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
+# Optionsflow-Schwellen fuer die Einschaetzung "bullisch" (siehe
+# fetch_options_flow). OPTIONS_BULLISH_OI_RATIO am 04.10.2026 von 0.3 auf
+# 0.15 gesenkt: im Testlauf erreichten mit 0.3 nur 1 von 50 Watchlist-Werten
+# "bullisch" (grosse, liquide Titel wie NVDA/MSFT haben ein sehr hohes Open
+# Interest, daher selten Tagesvolumen >= 30% davon), mit 0.15 waren es 10 -
+# die Optionsflow-Ampel unterscheidet damit ueberhaupt erst sinnvoll.
+OPTIONS_BULLISH_CP_RATIO = 1.5
+OPTIONS_BULLISH_OI_RATIO = 0.15
+OPTIONS_BEARISH_CP_RATIO = 0.7
+
 # ---------------------------------------------------------------------------
 # Datenabruf
 # ---------------------------------------------------------------------------
@@ -221,7 +231,8 @@ def fetch_options_flow(ticker: str):
     sowie Call-Open-Interest ueber alle Strikes dieser Verfallsfrist. Die
     Einschaetzung (bullisch/neutral/bearisch) ist ein Volumen-Heuristik-Proxy,
     kein echter Block-Trade-/Smart-Money-Indikator wie bei kostenpflichtigen
-    Anbietern (Polygon, Unusual Whales usw.).
+    Anbietern (Polygon, Unusual Whales usw.). Schwellen siehe
+    OPTIONS_BULLISH_* / OPTIONS_BEARISH_* oben.
     """
     try:
         import yfinance as yf
@@ -252,9 +263,13 @@ def fetch_options_flow(ticker: str):
         call_put_ratio = round(call_volume / put_volume, 2) if put_volume > 0 else None
         call_oi_ratio = round(call_volume / call_oi, 2) if call_oi > 0 else None
 
-        if call_put_ratio is not None and call_put_ratio >= 1.5 and (call_oi_ratio or 0) >= 0.3:
+        if (
+            call_put_ratio is not None
+            and call_put_ratio >= OPTIONS_BULLISH_CP_RATIO
+            and (call_oi_ratio or 0) >= OPTIONS_BULLISH_OI_RATIO
+        ):
             einschaetzung = "bullisch"
-        elif call_put_ratio is not None and call_put_ratio <= 0.7:
+        elif call_put_ratio is not None and call_put_ratio <= OPTIONS_BEARISH_CP_RATIO:
             einschaetzung = "bearisch"
         else:
             einschaetzung = "neutral"
