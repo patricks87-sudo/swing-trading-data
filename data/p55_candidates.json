@@ -1,36 +1,43 @@
 {
-  "generated_at_utc": "2026-10-02T15:25:00Z",
-  "run_date": "2026-10-02",
+  "generated_at_utc": "2026-10-05T15:25:00Z",
+  "run_date": "2026-10-05",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade: NVIDIA und Taiwan Semiconductor halten über den P4-Kursen, sind aber mit RSI 84-85 überhitzt; Microsoft und ExxonMobil nur flach - kein Kandidat mit bestätigtem institutionellem Flow, Intraday-Daten (VWAP, Volumen) nicht verfügbar.",
+  "kurzbegruendung": "Kein Trade: Amazon hält den P4-Kurs, aber nur flach; NVIDIA hält klar, ist mit RSI 84 aber überhitzt - kein Kandidat mit bestätigtem institutionellem Flow, Intraday-Daten (VWAP, Volumen) nicht verfügbar.",
   "kandidaten": [
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "status": "Teilweise",
+      "begruendung": "Hält den P4-Kurs (aktuell ca. 223,7 EUR vs. P4 ca. 223,6 EUR), Kurs exakt an der SMA20 (+0,1 %), 1T +0,0 % und damit schwächer als S&P500 (+0,4 %) und NASDAQ (+0,6 %). OBV 5T +76 Mio. klar steigend (stille Akkumulation), RSI14 54 nicht überdehnt, aber kein neues Tageshoch und keine Volumenbestätigung. VWAP/Intraday-Volumen nicht verfügbar. Beobachtung, kein Einstieg."
+    },
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "Semiconductors/AI",
       "status": "Teilweise",
-      "begruendung": "Hält klar über dem P4-Kurs (aktuell ca. 209 EUR vs. P4 ca. 205 EUR, Einstiegsidee gehalten), Tageshoch-Niveau, 1T +2,0 % (stärker als S&P500 +0,75 %, schwächer als Halbleiter-Proxy +2,9 %), OBV 5T +263 Mio. steigend. Aber RSI14 84, 5,2 % über SMA20, Kapitalfluss-Ampel gelb, Options Flow unbekannt; bei Einstieg über 209 EUR mit Stop ca. 198 EUR wäre das CRV unter 2:1. VWAP/Intraday-Volumen nicht verfügbar. Beobachtung, kein Einstieg."
+      "begruendung": "Hält klar über dem P4-Kurs (aktuell ca. 210,9 EUR vs. P4 ca. 208 EUR), 1T +1,4 %, OBV 5T +255 Mio. stark steigend, stärker als S&P500, schwächer als NASDAQ-Proxy nur knapp. Aber RSI14 84, 5,9 % über SMA20, Halbleiter-Proxy RSI 84 - überhitzt; bei Einstieg über 211 EUR wäre das CRV unter 2:1. VWAP/Intraday-Volumen nicht verfügbar. Beobachtung, kein Einstieg."
     },
     {
-      "ticker": "TSM",
-      "name": "Taiwan Semiconductor",
-      "sector": "Semiconductors/AI",
+      "ticker": "TMO",
+      "name": "Thermo Fisher Scientific",
+      "sector": "MedTech",
       "status": "Teilweise",
-      "begruendung": "Hält über dem P4-Kurs (aktuell ca. 418 EUR vs. P4 ca. 407 EUR), 1T +2,6 %, 5T +4,5 %, OBV 5T +17 Mio. leicht steigend. Aber RSI14 85, 6,8 % über SMA20, Kapitalfluss gelb, Earnings am 15.10.2026 nähern sich; Nachkauf auf Hochs ohne Konsolidierung nicht sinnvoll. Beobachtung."
+      "begruendung": "Kurs ca. 589 EUR über P4-Kurs (ca. 582 EUR), 1T +1,2 %, 2,1 % über SMA20, aber 5T -2,4 % und OBV 5T leicht fallend (-1,1 Mio.) - kein Zeichen institutioneller Käufer. Earnings voraussichtlich ca. 22.10. Beobachtung."
     },
     {
-      "ticker": "MSFT",
-      "name": "Microsoft",
+      "ticker": "SNOW",
+      "name": "Snowflake",
       "sector": "Software/Cloud",
       "status": "Neutral",
-      "begruendung": "Seitwärts auf P4-Niveau (aktuell ca. 457 EUR vs. P4 ca. 455 EUR), 1T +0,6 % und damit schwächer als NASDAQ (+1,2 %) und Halbleiter. OBV 5T -33 Mio. (Verteilung), 5T -0,1 %, Kapitalfluss-Ampel rot im aktuellen Feed, 60T +34 % bereits weit gelaufen. Keine institutionelle Käuferrückkehr erkennbar. Kein Einstieg."
+      "begruendung": "Kurs ca. 303,4 EUR, auf P4-Niveau (ca. 303 EUR), 1T +0,1 %, 2,1 % über SMA20, OBV 5T +11,8 Mio. leicht steigend, Sektor Software insgesamt schwach, ATR ca. 4 % (hohe Volatilität). Kein neuer Impuls. Beobachtung."
     },
     {
-      "ticker": "XOM",
-      "name": "ExxonMobil",
-      "sector": "Energy",
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Cybersecurity",
       "status": "Neutral",
-      "begruendung": "Hält die Pullback-Zone (aktuell ca. 145 EUR, unverändert zu P4; 0,5 % über SMA20), OBV 5T +28 Mio. steigend, aber 1T -0,1 % - hinkt dem Markt hinterher, da der Ölpreis heute fällt (Berichte über Freigaben staatlicher Reserven). Kapitalfluss gelb, kein neuer Impuls. Beobachtung."
+      "begruendung": "Kurs ca. 359,3 EUR (P4 ca. 358 EUR), 1T +0,2 %, 7,9 % über SMA20, OBV 5T nur +0,6 Mio. praktisch flach - Zufluss lässt nach. Weiterhin überdehnt, Einstieg nur nach Rücksetzer. Beobachtung."
     }
   ]
 }
