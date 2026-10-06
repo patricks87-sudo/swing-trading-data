@@ -1,43 +1,43 @@
 {
-  "generated_at_utc": "2026-10-05T15:25:00Z",
-  "run_date": "2026-10-05",
+  "generated_at_utc": "2026-10-06T15:17:00Z",
+  "run_date": "2026-10-06",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade: Amazon hält den P4-Kurs, aber nur flach; NVIDIA hält klar, ist mit RSI 84 aber überhitzt - kein Kandidat mit bestätigtem institutionellem Flow, Intraday-Daten (VWAP, Volumen) nicht verfügbar.",
+  "kurzbegruendung": "Kein Trade: Microsoft und Amazon halten über dem P4-Kurs, liegen aber über der Einstiegszone (CRV unter 2:1); Thermo Fisher fällt durch, Fortinet und Palo Alto Networks überdehnt - Intraday-Daten (VWAP, Volumen) nicht verfügbar.",
   "kandidaten": [
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Software/Cloud",
+      "status": "Bestanden",
+      "begruendung": "Hält klar über dem P4-Kurs (aktuell ca. 476 EUR vs. P4 ca. 468,5 EUR), 1T +1,6 % (stärker als S&P500 +0,8 % und NASDAQ +0,8 %), 5T +4,9 %, OBV 5T +52 Mio. steigend. Aber RSI14 78, 5,7 % über SMA20, und Kurs ca. 10 EUR über der Einstiegszone (ca. 465,7 EUR): CRV am aktuellen Kurs nur ca. 1,2:1. Hold-Test bestanden, aber nicht hinterherlaufen - Einstieg nur bei Rücksetzer. VWAP/Intraday-Volumen nicht verfügbar."
+    },
     {
       "ticker": "AMZN",
       "name": "Amazon",
       "sector": "Consumer Discretionary",
-      "status": "Teilweise",
-      "begruendung": "Hält den P4-Kurs (aktuell ca. 223,7 EUR vs. P4 ca. 223,6 EUR), Kurs exakt an der SMA20 (+0,1 %), 1T +0,0 % und damit schwächer als S&P500 (+0,4 %) und NASDAQ (+0,6 %). OBV 5T +76 Mio. klar steigend (stille Akkumulation), RSI14 54 nicht überdehnt, aber kein neues Tageshoch und keine Volumenbestätigung. VWAP/Intraday-Volumen nicht verfügbar. Beobachtung, kein Einstieg."
+      "status": "Bestanden",
+      "begruendung": "Hält über dem P4-Kurs (aktuell ca. 227,7 EUR vs. P4 ca. 224,2 EUR), 1T +1,6 %, 5T +3,5 %, OBV 5T +3,4 Mio. leicht steigend, RSI14 63, 1,6 % über SMA20. Kurs über der Einstiegszone (ca. 223,1 EUR), CRV am aktuellen Kurs nur ca. 1,3:1; Earnings-Termin weiter ungeklärt. Hold-Test bestanden, aber kein Einstieg zum jetzigen Kurs. VWAP/Intraday-Volumen nicht verfügbar."
     },
     {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Semiconductors/AI",
+      "ticker": "FTNT",
+      "name": "Fortinet",
+      "sector": "Cybersecurity",
       "status": "Teilweise",
-      "begruendung": "Hält klar über dem P4-Kurs (aktuell ca. 210,9 EUR vs. P4 ca. 208 EUR), 1T +1,4 % (stärker als S&P500 +0,4 %, NASDAQ +0,6 % und Halbleiter-Proxy -0,3 %), OBV 5T +255 Mio. stark steigend. Aber RSI14 84, 5,9 % über SMA20, Halbleiter-Proxy RSI 84 - überhitzt; bei Einstieg über 211 EUR wäre das CRV unter 2:1. VWAP/Intraday-Volumen nicht verfügbar. Beobachtung, kein Einstieg."
-    },
-    {
-      "ticker": "TMO",
-      "name": "Thermo Fisher Scientific",
-      "sector": "MedTech",
-      "status": "Teilweise",
-      "begruendung": "Kurs ca. 589 EUR über P4-Kurs (ca. 582 EUR), 1T +1,2 %, 2,1 % über SMA20, aber 5T -2,4 % und OBV 5T leicht fallend (-1,1 Mio.) - kein Zeichen institutioneller Käufer. Earnings voraussichtlich ca. 22.10. Beobachtung."
-    },
-    {
-      "ticker": "SNOW",
-      "name": "Snowflake",
-      "sector": "Software/Cloud",
-      "status": "Neutral",
-      "begruendung": "Kurs ca. 303,4 EUR, auf P4-Niveau (ca. 303 EUR), 1T +0,1 %, 2,1 % über SMA20, OBV 5T +11,8 Mio. leicht steigend, Sektor Software insgesamt schwach, ATR ca. 4 % (hohe Volatilität). Kein neuer Impuls. Beobachtung."
+      "begruendung": "Hält und steigt (aktuell ca. 169,1 EUR vs. P4 ca. 164,2 EUR), 1T +2,9 %, aber 9,1 % über SMA20 (über der 8-%-Grenze), RSI14 74, OBV 5T nur +6,7 Mio. Durch den Sprung überdehnt, CRV schlechter als bei P4 (ca. 1,8:1). Einstieg nur nach Rücksetzer Richtung SMA20."
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "sector": "Cybersecurity",
-      "status": "Neutral",
-      "begruendung": "Kurs ca. 359,3 EUR (P4 ca. 358 EUR), 1T +0,2 %, 7,9 % über SMA20, OBV 5T nur +0,6 Mio. praktisch flach - Zufluss lässt nach. Weiterhin überdehnt, Einstieg nur nach Rücksetzer. Beobachtung."
+      "status": "Teilweise",
+      "begruendung": "Kurs ca. 377,3 EUR (P4 ca. 362,8 EUR), 1T +4,0 %, 5T +8,9 %, OBV 5T +10 Mio. steigend, aber 11,6 % über SMA20, RSI14 70 und ATR-Stop weit entfernt - klar überdehnt, kein sinnvolles CRV. Einstieg nur nach Rücksetzer."
+    },
+    {
+      "ticker": "TMO",
+      "name": "Thermo Fisher Scientific",
+      "sector": "MedTech",
+      "status": "Nicht bestanden",
+      "begruendung": "Fällt unter Einstiegs- und P4-Niveau (aktuell ca. 588,5 EUR vs. P4 ca. 603,7 EUR, Einstieg ca. 600,1 EUR), 1T -2,5 %, 5T -2,9 %, OBV 5T negativ (-1,0 Mio.) - kein Zeichen institutioneller Käufer, schwächer als S&P500 und NASDAQ. Earnings 21.10. Kandidat verworfen."
     }
   ]
 }
