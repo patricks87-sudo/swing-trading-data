@@ -1,43 +1,36 @@
 {
-  "generated_at_utc": "2026-10-06T15:17:00Z",
-  "run_date": "2026-10-06",
+  "generated_at_utc": "2026-10-07T15:30:00Z",
+  "run_date": "2026-10-07",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade: Microsoft und Amazon halten über dem P4-Kurs, liegen aber über der Einstiegszone (CRV unter 2:1); Thermo Fisher fällt durch, Fortinet und Palo Alto Networks überdehnt - Intraday-Daten (VWAP, Volumen) nicht verfügbar.",
+  "kurzbegruendung": "Kein Trade: Alle vier Kandidaten halten ihr P4-Niveau, aber im roten Markt (Breite 0,35) fehlt belegbare institutionelle Käuferstärke - Intraday-Volumen und VWAP nicht verfügbar.",
   "kandidaten": [
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "sector": "Software/Cloud",
-      "status": "Bestanden",
-      "begruendung": "Hält klar über dem P4-Kurs (aktuell ca. 476 EUR vs. P4 ca. 468,5 EUR), 1T +1,6 % (stärker als S&P500 +0,8 % und NASDAQ +0,8 %), 5T +4,9 %, OBV 5T +52 Mio. steigend. Aber RSI14 78, 5,7 % über SMA20, und Kurs ca. 10 EUR über der Einstiegszone (ca. 465,7 EUR): CRV am aktuellen Kurs nur ca. 1,2:1. Hold-Test bestanden, aber nicht hinterherlaufen - Einstieg nur bei Rücksetzer. VWAP/Intraday-Volumen nicht verfügbar."
-    },
     {
       "ticker": "AMZN",
       "name": "Amazon",
       "sector": "Consumer Discretionary",
+      "status": "Teilweise",
+      "begruendung": "Hält über dem P4-Kurs (aktuell ca. 228,3 EUR vs. P4 ca. 227,8 EUR), 1T +0,2 % bei fallendem Markt (S&P 500 -0,6 %, NASDAQ -0,6 %) = relative Stärke, Optionsflow bullisch. Aber OBV 5T negativ (-4,7 Mio.), Kapitalfluss-Ampel jetzt rot, kein Volumenanstieg belegbar. Kurs über der Einstiegszone (225-227 EUR), kein Einstieg zum jetzigen Kurs. VWAP/Intraday-Volumen nicht verfügbar."
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "status": "Teilweise",
+      "begruendung": "Hält über dem P4-Kurs (aktuell ca. 298,2 EUR vs. P4 ca. 296,6 EUR), 1T +0,5 % gegen einen roten Markt, nur 0,3 % über SMA20, Optionsflow bullisch. Aber OBV 5T negativ (-6,6 Mio.) und 5T nur +0,7 % (schwächer als NASDAQ +2,1 %) - keine institutionelle Bestätigung. VWAP/Intraday-Volumen nicht verfügbar."
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "sector": "Energy",
+      "status": "Teilweise",
+      "begruendung": "Kurs ca. 145,7 EUR knapp unter P4 (ca. 146,2 EUR), 1T -0,35 % (leicht besser als Markt), OBV 5T steigend (+19,7 Mio.), 0,4 % über SMA20. Aber Optionsflow jetzt bärisch, 5T nur +0,7 %, ölpreisgetrieben (Event-Risiko Nahost/Hurrikan). Kein klares Kaufsignal."
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "sector": "Payments",
       "status": "Bestanden",
-      "begruendung": "Hält über dem P4-Kurs (aktuell ca. 227,7 EUR vs. P4 ca. 224,2 EUR), 1T +1,6 %, 5T +3,5 %, OBV 5T +3,4 Mio. leicht steigend, RSI14 63, 1,6 % über SMA20. Kurs über der Einstiegszone (ca. 223,1 EUR), CRV am aktuellen Kurs nur ca. 1,3:1; Earnings-Termin weiter ungeklärt. Hold-Test bestanden, aber kein Einstieg zum jetzigen Kurs. VWAP/Intraday-Volumen nicht verfügbar."
-    },
-    {
-      "ticker": "FTNT",
-      "name": "Fortinet",
-      "sector": "Cybersecurity",
-      "status": "Teilweise",
-      "begruendung": "Hält und steigt (aktuell ca. 169,1 EUR vs. P4 ca. 164,2 EUR), 1T +2,9 %, aber 9,1 % über SMA20 (über der 8-%-Grenze), RSI14 74, OBV 5T nur +6,7 Mio. Durch den Sprung überdehnt, CRV schlechter als bei P4 (ca. 1,8:1). Einstieg nur nach Rücksetzer Richtung SMA20."
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "sector": "Cybersecurity",
-      "status": "Teilweise",
-      "begruendung": "Kurs ca. 377,3 EUR (P4 ca. 362,8 EUR), 1T +4,0 %, 5T +8,9 %, OBV 5T +10 Mio. steigend, aber 11,6 % über SMA20, RSI14 70 und ATR-Stop weit entfernt - klar überdehnt, kein sinnvolles CRV. Einstieg nur nach Rücksetzer."
-    },
-    {
-      "ticker": "TMO",
-      "name": "Thermo Fisher Scientific",
-      "sector": "MedTech",
-      "status": "Nicht bestanden",
-      "begruendung": "Fällt unter Einstiegs- und P4-Niveau (aktuell ca. 588,5 EUR vs. P4 ca. 603,7 EUR, Einstieg ca. 600,1 EUR), 1T -2,5 %, 5T -2,9 %, OBV 5T negativ (-1,0 Mio.) - kein Zeichen institutioneller Käufer, schwächer als S&P500 und NASDAQ. Earnings 21.10. Kandidat verworfen."
+      "begruendung": "Hält über dem P4-Kurs (aktuell ca. 330,1 EUR vs. P4 ca. 329,5 EUR), 1T +0,2 % und 5T +3,4 % (stärker als S&P 500 +1,6 %), OBV 5T steigend (+17,4 Mio.), 1,0 % über SMA20; Payments als einziger Sektor mit Zufluss. Hold-Test bestanden, aber Volumenanstieg/VWAP nicht belegbar, Optionsflow neutral und Marktbreite schwach - für einen Trade nicht ausreichend überzeugend."
     }
   ]
 }
