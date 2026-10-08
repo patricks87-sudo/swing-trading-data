@@ -1,36 +1,15 @@
 {
-  "generated_at_utc": "2026-10-07T15:30:00Z",
-  "run_date": "2026-10-07",
+  "generated_at_utc": "2026-10-08T15:27:00Z",
+  "run_date": "2026-10-08",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade: Alle vier Kandidaten halten ihr P4-Niveau, aber im roten Markt (Breite 0,35) fehlt belegbare institutionelle Käuferstärke - Intraday-Volumen und VWAP nicht verfügbar.",
+  "kurzbegruendung": "Kein Trade: Märkte 90 Min. nach Eröffnung leicht im Minus, Payments (Visa, Mastercard) halten am besten, aber ohne belegte Volumen-/VWAP-Bestätigung – Kapitalerhalt hat Vorrang.",
   "kandidaten": [
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "sector": "Consumer Discretionary",
-      "status": "Teilweise",
-      "begruendung": "Hält über dem P4-Kurs (aktuell ca. 228,3 EUR vs. P4 ca. 227,8 EUR), 1T +0,2 % bei fallendem Markt (S&P 500 -0,6 %, NASDAQ -0,6 %) = relative Stärke, Optionsflow bullisch. Aber OBV 5T negativ (-4,7 Mio.), Kapitalfluss-Ampel jetzt rot, kein Volumenanstieg belegbar. Kurs über der Einstiegszone (225-227 EUR), kein Einstieg zum jetzigen Kurs. VWAP/Intraday-Volumen nicht verfügbar."
-    },
-    {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "sector": "Technology",
-      "status": "Teilweise",
-      "begruendung": "Hält über dem P4-Kurs (aktuell ca. 298,2 EUR vs. P4 ca. 296,6 EUR), 1T +0,5 % gegen einen roten Markt, nur 0,3 % über SMA20, Optionsflow bullisch. Aber OBV 5T negativ (-6,6 Mio.) und 5T nur +0,7 % (schwächer als NASDAQ +2,1 %) - keine institutionelle Bestätigung. VWAP/Intraday-Volumen nicht verfügbar."
-    },
-    {
-      "ticker": "XOM",
-      "name": "ExxonMobil",
-      "sector": "Energy",
-      "status": "Teilweise",
-      "begruendung": "Kurs ca. 145,7 EUR knapp unter P4 (ca. 146,2 EUR), 1T -0,35 % (leicht besser als Markt), OBV 5T steigend (+19,7 Mio.), 0,4 % über SMA20. Aber Optionsflow jetzt bärisch, 5T nur +0,7 %, ölpreisgetrieben (Event-Risiko Nahost/Hurrikan). Kein klares Kaufsignal."
-    },
-    {
-      "ticker": "V",
-      "name": "Visa",
-      "sector": "Payments",
-      "status": "Bestanden",
-      "begruendung": "Hält über dem P4-Kurs (aktuell ca. 330,1 EUR vs. P4 ca. 329,5 EUR), 1T +0,2 % und 5T +3,4 % (stärker als S&P 500 +1,6 %), OBV 5T steigend (+17,4 Mio.), 1,0 % über SMA20; Payments als einziger Sektor mit Zufluss. Hold-Test bestanden, aber Volumenanstieg/VWAP nicht belegbar, Optionsflow neutral und Marktbreite schwach - für einen Trade nicht ausreichend überzeugend."
-    }
+    {"ticker": "AMZN", "name": "Amazon", "sector": "Consumer Discretionary", "status": "Teilweise", "begruendung": "Tag -0,2 %, 2,9 % über SMA20 und knapp über SMA50, OBV 5T steigend, 5T +4,5 % (stärker als S&P-500-Proxy +1,5 %). Hält das Rücksetzer-Zielgebiet, aber kein neues Intraday-Hoch und keine belegte Volumenzunahme – Einstieg weiter nur bei Rücksetzer Richtung SMA20 (ca. 225-228 EUR)."},
+    {"ticker": "V", "name": "Visa", "sector": "Payments", "status": "Teilweise", "begruendung": "Tag +0,8 % bei leicht rotem Gesamtmarkt (S&P-500-Proxy -0,3 %), 1,9 % über SMA20, OBV steigend, 5T +4,2 %: klare relative Stärke und Sektorzufluss. Kurs ca. 335 EUR. Open-/VWAP-Halt und Intraday-Volumenanstieg sind im Feed nicht belegbar, P4-Volumen nur 0,73x – daher nur teilweise bestanden."},
+    {"ticker": "MA", "name": "Mastercard", "sector": "Payments", "status": "Teilweise", "begruendung": "Tag +0,9 %, 1,8 % über SMA20, OBV steigend, 5T +4,5 %, relative Stärke gegenüber S&P-500-Proxy und Sektor. Kurs ca. 513 EUR. Wie bei Visa fehlt die Volumen-/VWAP-Bestätigung (P4-Volumen 0,67x) – Beobachten, kein Trade."},
+    {"ticker": "PANW", "name": "Palo Alto Networks", "sector": "Cybersecurity", "status": "Neutral", "begruendung": "Tag -0,3 %, 4,9 % über SMA20 und 9,6 % über SMA50, RSI 67: Sektor stark (OBV 4/4 steigend), Aktie selbst aber ohne neue Hochs und bereits überdehnt. Einstieg nur nach Rücksetzer Richtung SMA20 (ca. 344 EUR)."},
+    {"ticker": "CAT", "name": "Caterpillar", "sector": "Industrials", "status": "Nicht bestanden", "begruendung": "Tag -0,9 %, 1,0 % unter SMA20 und 1,9 % unter SMA50, 5T -2,4 %; Industrials-Sektor schwächer als der Markt. Kein Halt der Niveaus – verworfen."},
+    {"ticker": "XOM", "name": "ExxonMobil", "sector": "Energy", "status": "Teilweise", "begruendung": "Tag +2,7 % (Ölpreissprung, Hormus-Tankerangriffe), 3,1 % über SMA20, aber OBV 5T fallend. Starker Kursverlauf, jedoch rein ereignisgetrieben mit Umkehrrisiko bei Entspannung und ohne institutionelle Volumenbestätigung."},
+    {"ticker": "AAPL", "name": "Apple", "sector": "Technology", "status": "Neutral", "begruendung": "Tag +0,3 %, 0,7 % über SMA20, OBV 5T deutlich steigend, 5T +2,2 %. Stabil und marktgleich, aber ohne Ausbruch oder relative Stärke, die einen Trade rechtfertigt."}
   ]
 }
