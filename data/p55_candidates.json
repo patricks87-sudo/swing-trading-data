@@ -1,15 +1,13 @@
 {
-  "generated_at_utc": "2026-10-08T15:27:00Z",
-  "run_date": "2026-10-08",
+  "generated_at_utc": "2026-10-09T15:25:00Z",
+  "run_date": "2026-10-09",
   "ergebnis": "Kein Trade",
-  "kurzbegruendung": "Kein Trade: Märkte 90 Min. nach Eröffnung leicht im Minus, Payments (Visa, Mastercard) halten am besten, aber ohne belegte Volumen-/VWAP-Bestätigung – Kapitalerhalt hat Vorrang.",
+  "kurzbegruendung": "Kein Trade: Gesamtmarkt 90 Min. nach Eröffnung leicht im Plus, Visa und Amazon halten, aber ohne belegte Volumen-/VWAP-Bestätigung und bei fallendem bzw. nur gelbem Kapitalfluss – Kapitalerhalt hat Vorrang.",
   "kandidaten": [
-    {"ticker": "AMZN", "name": "Amazon", "sector": "Consumer Discretionary", "status": "Teilweise", "begruendung": "Tag -0,2 %, 2,9 % über SMA20 und knapp über SMA50, OBV 5T steigend, 5T +4,5 % (stärker als S&P-500-Proxy +1,5 %). Hält das Rücksetzer-Zielgebiet, aber kein neues Intraday-Hoch und keine belegte Volumenzunahme – Einstieg weiter nur bei Rücksetzer Richtung SMA20 (ca. 225-228 EUR)."},
-    {"ticker": "V", "name": "Visa", "sector": "Payments", "status": "Teilweise", "begruendung": "Tag +0,8 % bei leicht rotem Gesamtmarkt (S&P-500-Proxy -0,3 %), 1,9 % über SMA20, OBV steigend, 5T +4,2 %: klare relative Stärke und Sektorzufluss. Kurs ca. 335 EUR. Open-/VWAP-Halt und Intraday-Volumenanstieg sind im Feed nicht belegbar, P4-Volumen nur 0,73x – daher nur teilweise bestanden."},
-    {"ticker": "MA", "name": "Mastercard", "sector": "Payments", "status": "Teilweise", "begruendung": "Tag +0,9 %, 1,8 % über SMA20, OBV steigend, 5T +4,5 %, relative Stärke gegenüber S&P-500-Proxy und Sektor. Kurs ca. 513 EUR. Wie bei Visa fehlt die Volumen-/VWAP-Bestätigung (P4-Volumen 0,67x) – Beobachten, kein Trade."},
-    {"ticker": "PANW", "name": "Palo Alto Networks", "sector": "Cybersecurity", "status": "Neutral", "begruendung": "Tag -0,3 %, 4,9 % über SMA20 und 9,6 % über SMA50, RSI 67: Sektor stark (OBV 4/4 steigend), Aktie selbst aber ohne neue Hochs und bereits überdehnt. Einstieg nur nach Rücksetzer Richtung SMA20 (ca. 344 EUR)."},
-    {"ticker": "CAT", "name": "Caterpillar", "sector": "Industrials", "status": "Nicht bestanden", "begruendung": "Tag -0,9 %, 1,0 % unter SMA20 und 1,9 % unter SMA50, 5T -2,4 %; Industrials-Sektor schwächer als der Markt. Kein Halt der Niveaus – verworfen."},
-    {"ticker": "XOM", "name": "ExxonMobil", "sector": "Energy", "status": "Teilweise", "begruendung": "Tag +2,7 % (Ölpreissprung, Hormus-Tankerangriffe), 3,1 % über SMA20, aber OBV 5T fallend. Starker Kursverlauf, jedoch rein ereignisgetrieben mit Umkehrrisiko bei Entspannung und ohne institutionelle Volumenbestätigung."},
-    {"ticker": "AAPL", "name": "Apple", "sector": "Technology", "status": "Neutral", "begruendung": "Tag +0,3 %, 0,7 % über SMA20, OBV 5T deutlich steigend, 5T +2,2 %. Stabil und marktgleich, aber ohne Ausbruch oder relative Stärke, die einen Trade rechtfertigt."}
+    {"ticker": "V", "name": "Visa", "sector": "Payments", "status": "Teilweise", "begruendung": "Tag +1,8 % bei grünem Gesamtmarkt (S&P-500-Proxy +0,4 %), 3,6 % über SMA20, 3,3 % über SMA50, OBV 5T steigend, 5T +5,9 %: klare relative Stärke und Payments mit Sektorzufluss. Kurs ca. 341 EUR. Open-/VWAP-Halt und Intraday-Volumenanstieg im Feed nicht belegbar, Kapitalfluss-Ampel nur gelb, bereits +5,9 % in 5 Tagen – kein Einstieg am Kurs, Rücksetzer Richtung SMA20 abwarten."},
+    {"ticker": "AMZN", "name": "Amazon", "sector": "Consumer Discretionary", "status": "Teilweise", "begruendung": "Tag +2,2 %, 3,1 % über SMA20 und knapp über SMA50, 5T +3,2 %: hält den Kursanstieg. Aber OBV 5T fallend und Kapitalfluss-Ampel rot – kein institutioneller Zufluss erkennbar, Volumen im Feed nicht belegbar. Kurs ca. 232 EUR, kein Trade."},
+    {"ticker": "XOM", "name": "ExxonMobil", "sector": "Energy", "status": "Neutral", "begruendung": "Tag +0,9 %, 4,0 % über SMA20, RSI 83 stark überkauft, OBV 5T nur minimal steigend. Rein ölpreis- und ereignisgetrieben mit hohem Umkehrrisiko bei Entspannung im Iran-Konflikt, keine institutionelle Volumenbestätigung. Kurs ca. 152 EUR."},
+    {"ticker": "NVDA", "name": "NVIDIA", "sector": "Semiconductors/AI", "status": "Neutral", "begruendung": "Tag +0,1 %, 1,8 % über SMA20, OBV 5T steigend, aber 5T -1,4 % und Halbleiter-Proxy 5T -4,7 % (schwächer als Nasdaq-Proxy). Kein neues Hoch, keine relative Stärke gegenüber dem Markt, Optionsflow nur neutral (Call/Put 2,06). Kurs ca. 206 EUR."},
+    {"ticker": "AAPL", "name": "Apple", "sector": "Technology", "status": "Nicht bestanden", "begruendung": "Tag -1,8 % bei grünem Gesamtmarkt, fällt unter die SMA20 (-0,3 %), RSI 45, 5T nur +0,2 %. Kein Halt der Niveaus, relative Schwäche gegenüber S&P-500-Proxy – verworfen. Kurs ca. 298 EUR."}
   ]
 }
