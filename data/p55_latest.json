@@ -1,6 +1,6 @@
 {
   "run": "p55",
-  "generated_at_utc": "2026-10-11T08:41:56.515277+00:00",
+  "generated_at_utc": "2026-10-11T10:21:08.898390+00:00",
   "eurusd": 0.892,
   "indices": {
     "NASDAQ_COMPOSITE": {
@@ -153,13 +153,13 @@
       "sector": "Semiconductors/AI",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-23",
-        "call_volume": 27831,
-        "call_open_interest": 135231,
-        "put_volume": 16461,
-        "call_put_volume_ratio": 1.69,
-        "call_volume_oi_ratio": 0.21,
-        "einschaetzung": "bullisch"
+        "expiration": "2026-10-19",
+        "call_volume": 0,
+        "call_open_interest": 0,
+        "put_volume": 0,
+        "call_put_volume_ratio": null,
+        "call_volume_oi_ratio": null,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -169,17 +169,17 @@
       "ampel": {
         "kapitalfluss": "rot",
         "trendkontext": "gruen",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 74.2,
+        "score": 69.2,
         "teilscores": {
           "kapitalfluss": 53.0,
           "relative_staerke": 43.0,
           "trendkontext": 100.0,
           "sektorstaerke": 67.0,
           "setup": 100.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 100.0
         },
         "stufe": "Kauf \u2013 solide",
@@ -323,13 +323,13 @@
       "sector": "Semiconductors/AI",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-19",
-        "call_volume": 0,
-        "call_open_interest": 0,
-        "put_volume": 0,
-        "call_put_volume_ratio": null,
-        "call_volume_oi_ratio": null,
-        "einschaetzung": "neutral"
+        "expiration": "2026-10-23",
+        "call_volume": 4301,
+        "call_open_interest": 24011,
+        "put_volume": 2779,
+        "call_put_volume_ratio": 1.55,
+        "call_volume_oi_ratio": 0.18,
+        "einschaetzung": "bullisch"
       },
       "earnings": {
         "available": true,
@@ -339,20 +339,20 @@
       "ampel": {
         "kapitalfluss": "gelb",
         "trendkontext": "rot",
-        "optionsflow": "gelb"
+        "optionsflow": "gruen"
       },
       "setup": {
-        "score": 46.7,
+        "score": 51.7,
         "teilscores": {
           "kapitalfluss": 94.0,
           "relative_staerke": 32.0,
           "trendkontext": 0.0,
           "sektorstaerke": 67.0,
           "setup": 10.0,
-          "optionsflow": 50.0,
+          "optionsflow": 100.0,
           "crv": 100.0
         },
-        "stufe": "Kein Setup",
+        "stufe": "Beobachten",
         "bulltrap_flags": [],
         "ausschluesse": [],
         "hinweise": [
@@ -4058,13 +4058,13 @@
       "sector": "Consumer Discretionary",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-23",
-        "call_volume": 24149,
-        "call_open_interest": 54128,
-        "put_volume": 13259,
-        "call_put_volume_ratio": 1.82,
-        "call_volume_oi_ratio": 0.45,
-        "einschaetzung": "bullisch"
+        "expiration": "2026-10-19",
+        "call_volume": 0,
+        "call_open_interest": 0,
+        "put_volume": 0,
+        "call_put_volume_ratio": null,
+        "call_volume_oi_ratio": null,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -4074,17 +4074,17 @@
       "ampel": {
         "kapitalfluss": "gruen",
         "trendkontext": "rot",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 61.8,
+        "score": 56.8,
         "teilscores": {
           "kapitalfluss": 83.0,
           "relative_staerke": 81.0,
           "trendkontext": 0.0,
           "sektorstaerke": 61.0,
           "setup": 65.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 0.0
         },
         "stufe": "Beobachten",
@@ -4307,13 +4307,13 @@
       "sector": "Technology",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-23",
-        "call_volume": 31112,
-        "call_open_interest": 47178,
-        "put_volume": 8951,
-        "call_put_volume_ratio": 3.48,
-        "call_volume_oi_ratio": 0.66,
-        "einschaetzung": "bullisch"
+        "expiration": "2026-10-19",
+        "call_volume": 0,
+        "call_open_interest": 0,
+        "put_volume": 0,
+        "call_put_volume_ratio": null,
+        "call_volume_oi_ratio": null,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -4323,20 +4323,20 @@
       "ampel": {
         "kapitalfluss": "gruen",
         "trendkontext": "gruen",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 78.8,
+        "score": 73.8,
         "teilscores": {
           "kapitalfluss": 86.0,
           "relative_staerke": 45.0,
           "trendkontext": 100.0,
           "sektorstaerke": 50.0,
           "setup": 100.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 100.0
         },
-        "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+        "stufe": "Kauf \u2013 solide",
         "bulltrap_flags": [],
         "ausschluesse": [],
         "hinweise": [],
@@ -4649,12 +4649,6 @@
       "sector": "MedTech"
     },
     {
-      "ticker": "AAPL",
-      "score": 78.8,
-      "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
-      "sector": "Technology"
-    },
-    {
       "ticker": "MSFT",
       "score": 78.7,
       "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
@@ -4691,10 +4685,10 @@
       "sector": "Semiconductors/AI"
     },
     {
-      "ticker": "NVDA",
-      "score": 74.2,
+      "ticker": "AAPL",
+      "score": 73.8,
       "stufe": "Kauf \u2013 solide",
-      "sector": "Semiconductors/AI"
+      "sector": "Technology"
     },
     {
       "ticker": "SMCI",
@@ -4718,6 +4712,12 @@
       "ticker": "TSM",
       "score": 70.1,
       "stufe": "Ausgeschlossen",
+      "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "NVDA",
+      "score": 69.2,
+      "stufe": "Kauf \u2013 solide",
       "sector": "Semiconductors/AI"
     },
     {
@@ -4763,12 +4763,6 @@
       "sector": "Semiconductors/AI"
     },
     {
-      "ticker": "TSLA",
-      "score": 61.8,
-      "stufe": "Beobachten",
-      "sector": "Consumer Discretionary"
-    },
-    {
       "ticker": "ISRG",
       "score": 61.3,
       "stufe": "Ausgeschlossen",
@@ -4787,6 +4781,12 @@
       "sector": "Energy"
     },
     {
+      "ticker": "TSLA",
+      "score": 56.8,
+      "stufe": "Beobachten",
+      "sector": "Consumer Discretionary"
+    },
+    {
       "ticker": "FCX",
       "score": 56.3,
       "stufe": "Beobachten",
@@ -4799,6 +4799,12 @@
       "sector": "Industrials/Infrastructure"
     },
     {
+      "ticker": "AVGO",
+      "score": 51.7,
+      "stufe": "Beobachten",
+      "sector": "Semiconductors/AI"
+    },
+    {
       "ticker": "PGR",
       "score": 51.6,
       "stufe": "Ausgeschlossen",
@@ -4807,12 +4813,6 @@
     {
       "ticker": "QCOM",
       "score": 47.2,
-      "stufe": "Kein Setup",
-      "sector": "Semiconductors/AI"
-    },
-    {
-      "ticker": "AVGO",
-      "score": 46.7,
       "stufe": "Kein Setup",
       "sector": "Semiconductors/AI"
     },
@@ -4969,6 +4969,25 @@
     "sitzung": "2026-10-09",
     "sp500_chg_seit_eroeffnung_pct": 0.3,
     "tests": {
+      "TMO": {
+        "available": true,
+        "status": "Teilweise",
+        "kriterien_erfuellt": 3,
+        "kriterien_bewertbar": 4,
+        "checks": {
+          "ueber_vwap": true,
+          "ueber_eroeffnung": true,
+          "staerker_als_sp500": true,
+          "volumen_ueber_schnitt": false
+        },
+        "eroeffnung": 650.0,
+        "letzter_kurs": 657.97,
+        "vwap": 657.95,
+        "chg_seit_eroeffnung_pct": 1.23,
+        "rs_vs_sp500_seit_eroeffnung": 0.93,
+        "relatives_volumen": 0.49,
+        "kerzen": 78
+      },
       "AAPL": {
         "available": true,
         "status": "Bestanden",
@@ -4981,14 +5000,14 @@
           "volumen_ueber_schnitt": true
         },
         "eroeffnung": 331.79,
-        "letzter_kurs": 336.63,
+        "letzter_kurs": 336.65,
         "vwap": 334.31,
         "chg_seit_eroeffnung_pct": 1.46,
-        "rs_vs_sp500_seit_eroeffnung": 1.16,
-        "relatives_volumen": 1.23,
+        "rs_vs_sp500_seit_eroeffnung": 1.17,
+        "relatives_volumen": 1.22,
         "kerzen": 78
       },
-      "V": {
+      "SNOW": {
         "available": true,
         "status": "Bestanden",
         "kriterien_erfuellt": 4,
@@ -4999,31 +5018,31 @@
           "staerker_als_sp500": true,
           "volumen_ueber_schnitt": true
         },
-        "eroeffnung": 375.79,
-        "letzter_kurs": 385.52,
-        "vwap": 382.92,
-        "chg_seit_eroeffnung_pct": 2.59,
-        "rs_vs_sp500_seit_eroeffnung": 2.29,
-        "relatives_volumen": 1.79,
+        "eroeffnung": 345.3,
+        "letzter_kurs": 368.92,
+        "vwap": 360.36,
+        "chg_seit_eroeffnung_pct": 6.84,
+        "rs_vs_sp500_seit_eroeffnung": 6.55,
+        "relatives_volumen": 2.78,
         "kerzen": 78
       },
-      "NVDA": {
+      "MSFT": {
         "available": true,
-        "status": "Nicht bestanden",
-        "kriterien_erfuellt": 0,
+        "status": "Teilweise",
+        "kriterien_erfuellt": 3,
         "kriterien_bewertbar": 4,
         "checks": {
-          "ueber_vwap": false,
-          "ueber_eroeffnung": false,
-          "staerker_als_sp500": false,
+          "ueber_vwap": true,
+          "ueber_eroeffnung": true,
+          "staerker_als_sp500": true,
           "volumen_ueber_schnitt": false
         },
-        "eroeffnung": 233.88,
-        "letzter_kurs": 229.34,
-        "vwap": 230.41,
-        "chg_seit_eroeffnung_pct": -1.94,
-        "rs_vs_sp500_seit_eroeffnung": -2.23,
-        "relatives_volumen": 0.73,
+        "eroeffnung": 528.23,
+        "letzter_kurs": 535.1,
+        "vwap": 533.38,
+        "chg_seit_eroeffnung_pct": 1.3,
+        "rs_vs_sp500_seit_eroeffnung": 1.0,
+        "relatives_volumen": 0.91,
         "kerzen": 78
       },
       "AMZN": {
@@ -5045,45 +5064,45 @@
         "relatives_volumen": 1.03,
         "kerzen": 78
       },
-      "XOM": {
+      "V": {
         "available": true,
-        "status": "Teilweise",
-        "kriterien_erfuellt": 2,
-        "kriterien_bewertbar": 4,
-        "checks": {
-          "ueber_vwap": false,
-          "ueber_eroeffnung": true,
-          "staerker_als_sp500": true,
-          "volumen_ueber_schnitt": false
-        },
-        "eroeffnung": 167.87,
-        "letzter_kurs": 168.95,
-        "vwap": 169.29,
-        "chg_seit_eroeffnung_pct": 0.64,
-        "rs_vs_sp500_seit_eroeffnung": 0.35,
-        "relatives_volumen": 0.81,
-        "kerzen": 78
-      },
-      "PANW": {
-        "available": true,
-        "status": "Teilweise",
-        "kriterien_erfuellt": 3,
+        "status": "Bestanden",
+        "kriterien_erfuellt": 4,
         "kriterien_bewertbar": 4,
         "checks": {
           "ueber_vwap": true,
           "ueber_eroeffnung": true,
           "staerker_als_sp500": true,
-          "volumen_ueber_schnitt": false
+          "volumen_ueber_schnitt": true
         },
-        "eroeffnung": 404.05,
-        "letzter_kurs": 418.94,
-        "vwap": 413.94,
-        "chg_seit_eroeffnung_pct": 3.69,
-        "rs_vs_sp500_seit_eroeffnung": 3.39,
-        "relatives_volumen": 0.96,
+        "eroeffnung": 375.79,
+        "letzter_kurs": 385.52,
+        "vwap": 383.25,
+        "chg_seit_eroeffnung_pct": 2.59,
+        "rs_vs_sp500_seit_eroeffnung": 2.29,
+        "relatives_volumen": 1.38,
         "kerzen": 78
       },
-      "PGR": {
+      "NOW": {
+        "available": true,
+        "status": "Nicht bestanden",
+        "kriterien_erfuellt": 1,
+        "kriterien_bewertbar": 4,
+        "checks": {
+          "ueber_vwap": true,
+          "ueber_eroeffnung": false,
+          "staerker_als_sp500": false,
+          "volumen_ueber_schnitt": false
+        },
+        "eroeffnung": 141.26,
+        "letzter_kurs": 140.87,
+        "vwap": 140.7,
+        "chg_seit_eroeffnung_pct": -0.28,
+        "rs_vs_sp500_seit_eroeffnung": -0.57,
+        "relatives_volumen": 0.66,
+        "kerzen": 78
+      },
+      "NVDA": {
         "available": true,
         "status": "Nicht bestanden",
         "kriterien_erfuellt": 0,
@@ -5094,69 +5113,50 @@
           "staerker_als_sp500": false,
           "volumen_ueber_schnitt": false
         },
-        "eroeffnung": 217.5,
-        "letzter_kurs": 217.42,
-        "vwap": 218.43,
-        "chg_seit_eroeffnung_pct": -0.04,
-        "rs_vs_sp500_seit_eroeffnung": -0.33,
-        "relatives_volumen": 0.52,
+        "eroeffnung": 233.88,
+        "letzter_kurs": 229.32,
+        "vwap": 230.41,
+        "chg_seit_eroeffnung_pct": -1.95,
+        "rs_vs_sp500_seit_eroeffnung": -2.24,
+        "relatives_volumen": 0.67,
         "kerzen": 78
       },
-      "TRV": {
+      "AMD": {
         "available": true,
-        "status": "Teilweise",
-        "kriterien_erfuellt": 2,
-        "kriterien_bewertbar": 4,
-        "checks": {
-          "ueber_vwap": true,
-          "ueber_eroeffnung": true,
-          "staerker_als_sp500": false,
-          "volumen_ueber_schnitt": false
-        },
-        "eroeffnung": 368.11,
-        "letzter_kurs": 368.92,
-        "vwap": 368.83,
-        "chg_seit_eroeffnung_pct": 0.22,
-        "rs_vs_sp500_seit_eroeffnung": -0.07,
-        "relatives_volumen": 0.77,
-        "kerzen": 78
-      },
-      "URI": {
-        "available": true,
-        "status": "Teilweise",
-        "kriterien_erfuellt": 3,
-        "kriterien_bewertbar": 4,
-        "checks": {
-          "ueber_vwap": true,
-          "ueber_eroeffnung": true,
-          "staerker_als_sp500": false,
-          "volumen_ueber_schnitt": true
-        },
-        "eroeffnung": 1055.0,
-        "letzter_kurs": 1056.81,
-        "vwap": 1056.09,
-        "chg_seit_eroeffnung_pct": 0.17,
-        "rs_vs_sp500_seit_eroeffnung": -0.12,
-        "relatives_volumen": 1.0,
-        "kerzen": 78
-      },
-      "ISRG": {
-        "available": true,
-        "status": "Teilweise",
-        "kriterien_erfuellt": 3,
+        "status": "Nicht bestanden",
+        "kriterien_erfuellt": 0,
         "kriterien_bewertbar": 4,
         "checks": {
           "ueber_vwap": false,
-          "ueber_eroeffnung": true,
-          "staerker_als_sp500": true,
-          "volumen_ueber_schnitt": true
+          "ueber_eroeffnung": false,
+          "staerker_als_sp500": false,
+          "volumen_ueber_schnitt": false
         },
-        "eroeffnung": 416.39,
-        "letzter_kurs": 424.12,
-        "vwap": 424.49,
-        "chg_seit_eroeffnung_pct": 1.86,
-        "rs_vs_sp500_seit_eroeffnung": 1.56,
-        "relatives_volumen": 1.04,
+        "eroeffnung": 625.54,
+        "letzter_kurs": 608.12,
+        "vwap": 613.26,
+        "chg_seit_eroeffnung_pct": -2.78,
+        "rs_vs_sp500_seit_eroeffnung": -3.08,
+        "relatives_volumen": 0.72,
+        "kerzen": 78
+      },
+      "SMCI": {
+        "available": true,
+        "status": "Nicht bestanden",
+        "kriterien_erfuellt": 1,
+        "kriterien_bewertbar": 4,
+        "checks": {
+          "ueber_vwap": true,
+          "ueber_eroeffnung": false,
+          "staerker_als_sp500": false,
+          "volumen_ueber_schnitt": false
+        },
+        "eroeffnung": 43.37,
+        "letzter_kurs": 41.86,
+        "vwap": 41.58,
+        "chg_seit_eroeffnung_pct": -3.48,
+        "rs_vs_sp500_seit_eroeffnung": -3.78,
+        "relatives_volumen": 0.88,
         "kerzen": 78
       }
     }
