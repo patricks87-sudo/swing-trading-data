@@ -102,6 +102,13 @@
   .tab.active { color: var(--text); border-bottom-color: var(--green); }
   .tab-panel[hidden] { display: none; }
   .hist-intro { color: var(--muted); font-size: 13px; margin: 16px 0 0 0; }
+  .hist-controls { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-bottom: 12px; font-size: 13px; color: var(--muted); }
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .seg button { background: none; border: none; color: var(--muted); font: inherit; font-size: 12px; font-weight: 600; padding: 6px 12px; cursor: pointer; }
+  .seg button + button { border-left: 1px solid var(--border); }
+  .seg button.on { background: rgba(46,204,113,.15); color: var(--text); }
+  .hist-sub { font-size: 13px; font-weight: 700; margin: 14px 0 6px 0; }
+  .hist-sub.top { color: var(--green); } .hist-sub.flop { color: var(--red); }
 
   /* Mobile: die datenreiche Tabelle (Kandidaten-Tracking) wird unter 640px
      zu Karten mit Label:Wert-Paaren statt einer gequetschten Tabelle -
@@ -420,13 +427,15 @@ function fwdCell(k, h) {
   return f ? pctHtml(f.ueberrendite_pct) : '<span class="timestamp">noch offen</span>';
 }
 
-function renderHistorie(data) {
-  const el = document.getElementById("historie");
-  if (!data || !data.kandidaten) return;
-  const raus = data.kandidaten.filter((k) => !isOpenStatus(k.status))
-    .sort((a, b) => (b.aufnahmedatum || "").localeCompare(a.aufnahmedatum || ""));
-  if (!raus.length) { el.innerHTML = '<div class="placeholder">Noch keine früheren Empfehlungen.</div>'; return; }
-  const rows = raus.map((k) => {
+const HIST = { data: null, ansicht: "topflop", kennzahl: "heute" };
+const KENNZAHLEN = {
+  heute: { label: "Bis heute", wert: (k) => k.ueberrendite_pct },
+  t10: { label: "Nach 10 Tagen", wert: (k) => ((k.forward || {})["10T"] || {}).ueberrendite_pct },
+  t5: { label: "Nach 5 Tagen", wert: (k) => ((k.forward || {})["5T"] || {}).ueberrendite_pct },
+};
+
+function histTable(list) {
+  const rows = list.map((k) => {
     const st = (k.status || "").replace(/^ausgeschieden /, "").replace(/[()]/g, "");
     return '<tr>' +
       '<td data-label="Kandidat">' + (k.name || k.ticker) + '<div class="cand-sector">' + (k.sector || "") + '</div></td>' +
@@ -438,9 +447,52 @@ function renderHistorie(data) {
       '<td data-label="Bis heute">' + pctHtml(k.ueberrendite_pct) + '<div class="timestamp">Aktie ' + (typeof k.performance_pct === "number" ? (k.performance_pct >= 0 ? "+" : "") + k.performance_pct.toFixed(2) + " %" : "–") + '</div></td>' +
       '</tr>';
   }).join("");
-  el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Werte = Überrendite gegenüber Nasdaq-100 in Prozentpunkten, gemessen ab dem Schlusskurs vor dem Aufnahmetag. Kurse: ' + fmtTime(data.kurse_aktualisiert_utc) + '</div>' +
-    '<table class="responsive-mobile"><thead><tr><th>Kandidat</th><th>Aufnahme</th><th>Ausgeschieden</th><th>Nach 5 Tagen</th><th>Nach 10 Tagen</th><th>Nach 20 Tagen</th><th>Bis heute</th></tr></thead><tbody>' + rows + '</tbody></table>';
+  return '<table class="responsive-mobile"><thead><tr><th>Kandidat</th><th>Aufnahme</th><th>Ausgeschieden</th><th>Nach 5 Tagen</th><th>Nach 10 Tagen</th><th>Nach 20 Tagen</th><th>Bis heute</th></tr></thead><tbody>' + rows + '</tbody></table>';
 }
+
+function segButtons(name, opts, aktiv) {
+  return '<span class="seg">' + opts.map(([v, l]) => '<button type="button" data-' + name + '="' + v + '" class="' + (v === aktiv ? "on" : "") + '">' + l + '</button>').join("") + '</span>';
+}
+
+function renderHistorie(data) {
+  if (data) HIST.data = data;
+  const el = document.getElementById("historie");
+  data = HIST.data;
+  if (!data || !data.kandidaten) return;
+  const raus = data.kandidaten.filter((k) => !isOpenStatus(k.status));
+  if (!raus.length) { el.innerHTML = '<div class="placeholder">Noch keine früheren Empfehlungen.</div>'; return; }
+  const kz = KENNZAHLEN[HIST.kennzahl];
+  const controls = '<div class="hist-controls">' +
+    '<span>Ansicht ' + segButtons("ansicht", [["topflop", "Top 5 &amp; Flop 5"], ["sortiert", "Alle nach Kennzahl"], ["datum", "Alle nach Datum"]], HIST.ansicht) + '</span>' +
+    (HIST.ansicht !== "datum" ? '<span>Kennzahl ' + segButtons("kennzahl", Object.keys(KENNZAHLEN).map((k) => [k, KENNZAHLEN[k].label]), HIST.kennzahl) + '</span>' : "") +
+    '</div>';
+  const mitWert = raus.filter((k) => typeof kz.wert(k) === "number").sort((a, b) => kz.wert(b) - kz.wert(a));
+  let body;
+  if (HIST.ansicht === "topflop") {
+    const top = mitWert.slice(0, 5);
+    const flop = mitWert.slice(-5).reverse().filter((k) => top.indexOf(k) < 0);
+    body = '<div class="hist-sub top">Top 5 – stärkste Überrendite (' + kz.label + ')</div>' + histTable(top) +
+      '<div class="hist-sub flop">Flop 5 – schwächste Überrendite (' + kz.label + ')</div>' + histTable(flop) +
+      '<div class="timestamp">' + mitWert.length + ' von ' + raus.length + ' Einträgen haben einen Wert für diese Kennzahl.</div>';
+  } else if (HIST.ansicht === "sortiert") {
+    const ohne = raus.filter((k) => typeof kz.wert(k) !== "number");
+    body = histTable(mitWert.concat(ohne));
+  } else {
+    body = histTable(raus.slice().sort((a, b) => (b.aufnahmedatum || "").localeCompare(a.aufnahmedatum || "")));
+  }
+  el.innerHTML = controls +
+    '<div class="timestamp" style="margin-bottom:8px;">Werte = Überrendite gegenüber Nasdaq-100 in Prozentpunkten, gemessen ab dem Schlusskurs vor dem Aufnahmetag. Kurse: ' + fmtTime(data.kurse_aktualisiert_utc) + '</div>' + body;
+}
+
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-ansicht],[data-kennzahl]");
+  if (!b) return;
+  if (b.dataset.ansicht) HIST.ansicht = b.dataset.ansicht;
+  if (b.dataset.kennzahl) HIST.kennzahl = b.dataset.kennzahl;
+  try { localStorage.setItem("histView", JSON.stringify({ a: HIST.ansicht, k: HIST.kennzahl })); } catch (err) {}
+  renderHistorie();
+});
+try { const v = JSON.parse(localStorage.getItem("histView") || "null"); if (v) { HIST.ansicht = v.a || HIST.ansicht; HIST.kennzahl = KENNZAHLEN[v.k] ? v.k : HIST.kennzahl; } } catch (err) {}
 
 function showTab(name) {
   document.querySelectorAll(".tab").forEach((t) => {
