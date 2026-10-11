@@ -1,9 +1,25 @@
 {
-  "generated_at_utc": "2026-10-09T15:50:00Z",
+  "generated_at_utc": "2026-10-11T11:10:00Z",
   "top3": [
-    {"ticker": "V", "name": "Visa", "begruendung": "#1 Watchlist-Kandidat, KEIN Einstieg am Kurs (ca. 341 EUR, bereits +6,2 % in 5 Tagen): Payments mit klarstem Kapitalzufluss, 3,9 % über SMA20, SMA200 steigend, Trendkontext Bestätigt; Kapitalfluss- und Optionsflow-Ampel aber nur gelb, P5.5 nur Teilweise. Einstieg erst bei Rücksetzer Richtung SMA20 (ca. 329 EUR), Stop ca. 320 EUR, Ziel 1 ca. 353 EUR, CRV ca. 2,7:1."},
-    {"ticker": "NVDA", "name": "NVIDIA", "begruendung": "#2 Zweitbeste Alternative, nur beobachten: Trendkontext Bestätigt (60 Tage +10,9 %), OBV 5 Tage steigend, Kurs ca. 205 EUR nahe SMA20; Halbleiter-Proxy 5 Tage -5,1 % bestätigt nicht, Kapitalfluss- und Optionsflow-Ampel gelb, P5.5 Neutral. Kein Einstieg, solange der Sektor schwächer als der Nasdaq bleibt."},
-    {"ticker": "TRV", "name": "Travelers", "begruendung": "#3 Watchlist-Kandidat (defensive Alternative): Trendkontext Bestätigt (SMA200 steigend, 60 Tage +9,0 %), 0,4 % über SMA20, aber OBV nur minimal steigend und Kapitalfluss gelb; kein klarer Zufluss, kein Setup am Kurs."}
+    {
+      "ticker": "TMO",
+      "name": "Thermo Fisher Scientific",
+      "aktion": "Limit-Order",
+      "begruendung": "Höchster Score (81,7, Kauf – hohe Qualität), MedTech Rang 2, Trend grün; P5.5 teilweise (Volumen nur 0,49-fach) → Limit 586,95 € (Stop 560,50 €, Ziel 1 639,87 €, Ziel 2 666,33 €), 2 Stück = 1.174 € Kapital, ca. 53 € Risiko. Zahlen am 21.10. (7 Handelstage, knapp außerhalb der Sperre)."
+    },
+    {
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "aktion": "Limit-Order",
+      "begruendung": "Score 78,2, alle Ampeln grün, P5.5 bestanden (+6,8 %, 2,8-faches Volumen). Kurs aber 9 % über SMA20 (Bulltrap-Flag) und CRV am Kurs 0 → Limit 300,56 € am SMA20 (Stop 282,60 €, Ziel 1 336,47 €, Ziel 2 354,43 €), 4 Stück = 1.202 €, ca. 72 € Risiko. Ein Kauf zum Kurs wäre trotz P5.5 'ja' unvorsichtig."
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "aktion": "Beobachten",
+      "begruendung": "Score 78,1, nächster in der Reihe, aber RSI14 über 72 und P5.5 nur teilweise → Limit am SMA20 (455,01 €) erst bei freiem Platz. Weitere Ersatzkandidaten: Apple, Amazon, Visa (P5.5 bestanden, kein freier Platz)."
+    }
   ],
-  "gesamteinschaetzung": "Kein Trade. Kapitalerhalt hat Vorrang. Marktregime NEUTRAL (S&P-500- und Nasdaq-Proxy über SMA20/SMA50, VIX-Proxy 12,8), aber 10-jährige US-Rendite bei 5,35 %, Ölpreissprung, Halbleiter und Small Caps schwach; kein P4-Kandidat besteht P5.5 voll (Visa und Amazon nur Teilweise, Apple nicht bestanden). Beobachtungsliste, Einstieg nur bei Rücksetzern mit Volumenbestätigung."
+  "gesamteinschaetzung": "RISK-ON (5/5), max. 2 neue Positionen, Depot leer. Empfohlen: zwei Limit-Orders (Thermo Fisher Scientific, Snowflake) mit zusammen ca. 2.376 € Kapital und ca. 125 € Risiko (Limit 150 €). Kein Kauf zum Kurs, da die zwei bestplatzierten Kandidaten Limit-Einstiege haben. Testlauf mit Freitagsdaten (09.10.), keine echten Orders.",
+  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2.41 Prozentpunkte über dem Nasdaq (n=28) – überwiegend liegengelassene Gewinne."
 }
