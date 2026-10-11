@@ -1,7 +1,23 @@
 {
-  "generated_at_utc": "2026-10-11T16:47:17.661033+00:00",
+  "generated_at_utc": "2026-10-11T17:18:57.565117+00:00",
   "waehrung": "EUR",
-  "eintraege": [],
+  "eintraege": [
+    {
+      "aktion": "kauf",
+      "test": true,
+      "datum": "2026-10-09",
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "stueck": 1.0,
+      "kurs_eur": 200.0,
+      "gebuehr_eur": 1.0,
+      "grund": "P1-Empfehlung",
+      "notiz": "Funktionstest des Journals",
+      "id": "T0001",
+      "erfasst_utc": "2026-10-11T17:18:57.560915+00:00",
+      "issue": 1
+    }
+  ],
   "positionen": [],
   "trades": [],
   "kennzahlen": {
