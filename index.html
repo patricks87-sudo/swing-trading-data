@@ -119,6 +119,20 @@
   .perf-chart svg { width: 100%; height: auto; display: block; }
   .perf-tip { position: absolute; pointer-events: none; background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 11px; color: var(--text); white-space: nowrap; display: none; }
 
+  .news-badge { display: inline-block; margin: 6px 6px 0 0; padding: 1px 7px; border-radius: 6px; font-size: 11px; cursor: help; }
+  .news-pos { background: rgba(46,204,113,.12); color: var(--green); } .news-neg { background: rgba(231,76,60,.12); color: var(--red); } .news-neu { background: rgba(148,163,184,.12); color: var(--muted); }
+  .jform { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+  .jform label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+  .jform input, .jform select, .jform textarea { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font: inherit; font-size: 14px; padding: 8px; }
+  .jform .full { grid-column: 1 / -1; }
+  .jform .chk { flex-direction: row; align-items: center; gap: 8px; }
+  .btn { background: rgba(46,204,113,.15); border: 1px solid var(--green); color: var(--text); border-radius: 8px; padding: 10px 18px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+  .btn:hover { background: rgba(46,204,113,.25); }
+  .btn-sm { background: none; border: 1px solid var(--border); color: var(--muted); border-radius: 6px; padding: 3px 8px; font: inherit; font-size: 11px; cursor: pointer; }
+  .btn-sm:hover { color: var(--text); border-color: var(--red); }
+  .jhint { color: var(--muted); font-size: 12px; margin-top: 10px; line-height: 1.5; }
+  .jmsg { margin-top: 10px; font-size: 13px; }
+  .storniert td { text-decoration: line-through; color: #6b7280; }
   /* Mobile: die datenreiche Tabelle (Kandidaten-Tracking) wird unter 640px
      zu Karten mit Label:Wert-Paaren statt einer gequetschten Tabelle -
      besser lesbar auf dem Handy. */
@@ -147,11 +161,15 @@
   <div class="tabs" role="tablist">
     <button class="tab active" role="tab" id="tab-heute" aria-controls="panel-heute" aria-selected="true" data-tab="heute">Heute</button>
     <button class="tab" role="tab" id="tab-historie" aria-controls="panel-historie" aria-selected="false" data-tab="historie">Historie &amp; Performance</button>
+    <button class="tab" role="tab" id="tab-journal" aria-controls="panel-journal" aria-selected="false" data-tab="journal">Journal</button>
   </div>
 
   <div class="tab-panel" id="panel-heute" role="tabpanel" aria-labelledby="tab-heute">
   <h2>Top-3-Schlagzeilen</h2>
   <div id="headlines" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten Analyse-Lauf befüllt.</div></div> <h2>Nachrichtenüberblick heute</h2> <div id="newsToday" class="card"><div class="placeholder">Noch keine Daten – wird im Laufe des Tages befüllt.</div></div>
+
+  <h2>News zu Kandidaten &amp; Depot</h2>
+  <div id="newsSignale" class="card"><div class="placeholder">Noch keine News-Signale &ndash; die Nachrichten-Aufgaben befüllen das ab dem nächsten Lauf.</div></div>
 
   <div id="ampel" class="ampel-box card" style="margin-top:32px;">Lade Marktstimmung...</div>
 
@@ -175,7 +193,7 @@
   </div>
 
   <div class="tab-panel" id="panel-historie" role="tabpanel" aria-labelledby="tab-historie" hidden>
-  <p class="hist-intro">Wie erfolgreich die Strategie war und alle früheren Empfehlungen, die nicht mehr aktiv sind – mit ihrer tatsächlichen Entwicklung seit Aufnahme. Die Kurse aktualisiert das Skript bei jedem P1-Lauf, auch für aussortierte Titel. Alles in USD, verglichen mit dem Nasdaq-100 (QQQ) im selben Zeitraum.</p>
+  <p class="hist-intro">Wie erfolgreich die Strategie war und alle früheren Empfehlungen, die nicht mehr aktiv sind – mit ihrer tatsächlichen Entwicklung seit Aufnahme. Die Kurse aktualisiert das Skript bei jedem P1-Lauf, auch für aussortierte Titel. Die Performance-Grafik simuliert ein 8.000-€-Depot mit deinen aktuellen Regeln (in EUR); die Tabellen darunter rechnen in USD gegen den Nasdaq-100 (QQQ).</p>
 
   <h2>Performance: Strategie vs. Nasdaq &amp; MSCI World</h2>
   <div id="performance" class="card"><div class="placeholder">Noch keine Daten &ndash; wird beim nächsten P1-Lauf berechnet.</div></div>
@@ -185,6 +203,42 @@
 
   <h2>Frühere Empfehlungen</h2>
   <div id="historie" class="card"><div class="placeholder">Noch keine Daten.</div></div>
+  </div>
+
+  <div class="tab-panel" id="panel-journal" role="tabpanel" aria-labelledby="tab-journal" hidden>
+  <p class="hist-intro">Hier trägst du ausgeführte Käufe und Verkäufe ein. Daraus entstehen automatisch dein Depot (das P1 täglich bewertet) und deine echte Trade-Bilanz.</p>
+
+  <h2>Neuer Eintrag</h2>
+  <div class="card">
+    <form id="jform" class="jform" autocomplete="off">
+      <label>Aktion<select name="aktion"><option value="kauf">Kauf</option><option value="verkauf">Verkauf</option></select></label>
+      <label>Datum<input type="date" name="datum" required></label>
+      <label>Aktie (Ticker)<input name="ticker" list="jticker" placeholder="z. B. NVDA" required></label>
+      <label>Stück<input name="stueck" inputmode="decimal" placeholder="z. B. 12" required></label>
+      <label>Kurs je Stück (€)<input name="kurs_eur" inputmode="decimal" placeholder="z. B. 154,20" required></label>
+      <label>Gebühr (€)<input name="gebuehr_eur" inputmode="decimal" value="1,00"></label>
+      <label data-nur="kauf">Schutz-Stop (€)<input name="stop_eur" inputmode="decimal" placeholder="aus der Empfehlung"></label>
+      <label>Grund<select name="grund">
+        <option data-fuer="kauf">P1-Empfehlung</option><option data-fuer="kauf">Eigene Idee</option>
+        <option data-fuer="verkauf">10-Tage-Regel</option><option data-fuer="verkauf">Schutz-Stop</option><option data-fuer="verkauf">News</option><option data-fuer="verkauf">Eigene Entscheidung</option>
+        <option>Sonstiges</option></select></label>
+      <label class="full">Notiz (optional)<textarea name="notiz" rows="2" placeholder="Was war dein Gedanke? Später Gold wert für die Auswertung."></textarea></label>
+      <label class="chk full"><input type="checkbox" name="test"> Testeintrag (wird gespeichert, zählt aber nicht fürs Depot)</label>
+      <div class="full"><button class="btn" type="submit">Eintrag absenden</button></div>
+    </form>
+    <datalist id="jticker"></datalist>
+    <div id="jmsg" class="jmsg"></div>
+    <div class="jhint">So funktioniert's: Nach „Eintrag absenden“ öffnet sich GitHub mit dem fertig ausgefüllten Eintrag – dort nur noch auf <b>„Create“</b> klicken. Etwa 30 Sekunden später ist der Eintrag gespeichert und erscheint hier nach dem Neuladen; die Bestätigung steht auch als Kommentar am Eintrag. Hinweis: Das Repository ist öffentlich, Einträge sind also für andere einsehbar (wie das Cockpit selbst).</div>
+  </div>
+
+  <h2>Offene Positionen</h2>
+  <div id="jPositionen" class="card"><div class="placeholder">Noch keine offenen Positionen im Journal.</div></div>
+
+  <h2>Abgeschlossene Trades</h2>
+  <div id="jTrades" class="card"><div class="placeholder">Noch keine abgeschlossenen Trades.</div></div>
+
+  <h2>Alle Einträge</h2>
+  <div id="jEintraege" class="card"><div class="placeholder">Noch keine Einträge.</div></div>
   </div>
 
   <a class="footer-link" href="https://claude.ai/cowork/project/019f79db-3af1-7716-a5bd-b16bf5c14770" target="_blank">Heutige Analyse in Claude öffnen &rarr;</a>
@@ -248,7 +302,7 @@ function renderRegimeKriterien(feed) {
   }).join("");
   const hinweise = (r.hinweise || []).map((h) => '<span class="na">' + h + "</span>").join("");
   return '<div class="krit">' + items + "</div>" +
-    '<div class="krit"><span>Feed-Regime: <b style="color:var(--text)">' + r.status + "</b> · max. neue Positionen: " + r.max_neue_positionen + (r.override ? " · " + r.override : "") + "</span>" + hinweise + "</div>";
+    '<div class="krit"><span>Feed-Regime: <b style="color:var(--text)">' + r.status + "</b> · max. neue Positionen heute: " + r.max_neue_positionen + (r.max_offene_positionen != null ? " · max. offen: " + r.max_offene_positionen : "") + (r.override ? " · " + r.override : "") + "</span>" + hinweise + "</div>";
 }
 
 function renderAmpel(barometer, p4, feed) {
@@ -334,11 +388,36 @@ function renderLevels(l) {
   if (!l || l.einstieg_eur == null) return "";
   return '<div class="levels">' +
     '<span>Einstieg <b>' + eur(l.einstieg_eur) + '</b>' + (l.einstieg_typ ? " (" + l.einstieg_typ + ")" : "") + '</span>' +
-    '<span>Stop <b>' + eur(l.stop_eur) + '</b></span>' +
-    '<span>Ziel 1 <b>' + eur(l.ziel1_eur) + '</b></span>' +
-    '<span>Ziel 2 <b>' + eur(l.ziel2_eur) + '</b></span>' +
+    '<span>Schutz-Stop <b>' + eur(l.stop_eur) + '</b></span>' +
+    '<span>Verkauf <b>nach 10 Handelstagen</b></span>' +
     (l.stueck != null ? '<span>Stück <b>' + l.stueck + '</b>' + (l.kapitalbedarf_eur != null ? " (" + eur(l.kapitalbedarf_eur) + ")" : "") + '</span>' : "") +
+    (l.risiko_eur != null ? '<span>Risiko <b>' + eur(l.risiko_eur) + '</b></span>' : "") +
     '</div>';
+}
+
+let FEED = null;
+function newsBadge(ticker) {
+  const n = FEED && FEED.watchlist && FEED.watchlist[ticker] && FEED.watchlist[ticker].news;
+  if (!n || !(n.signale || []).length) return "";
+  const tip = n.signale.map((x) => (x.einschaetzung === "positiv" ? "+ " : x.einschaetzung === "negativ" ? "− " : "· ") + (x.titel || "") + (x.quelle ? " (" + x.quelle + ")" : "")).join("\n").replace(/"/g, "&quot;");
+  const cls = n.ausschluss ? "news-neg" : n.korrektur_vorschlag > 0 ? "news-pos" : n.korrektur_vorschlag < 0 ? "news-neg" : "news-neu";
+  const txt = n.ausschluss ? "News: Ausschluss" : "News " + (n.positiv || 0) + "+ / " + (n.negativ || 0) + "−" + (n.korrektur_vorschlag ? " (" + (n.korrektur_vorschlag > 0 ? "+" : "") + n.korrektur_vorschlag + ")" : "");
+  return '<span class="news-badge ' + cls + '" title="' + tip + '">' + txt + '</span>';
+}
+
+function renderNewsSignale(data) {
+  const el = document.getElementById("newsSignale");
+  if (!data || !(data.signale || []).length) return;
+  const grenze = Date.now() - 3 * 864e5;
+  const list = data.signale.filter((s) => new Date(s.published_at || s.datum).getTime() >= grenze)
+    .sort((a, b) => String(b.published_at || b.datum).localeCompare(String(a.published_at || a.datum))).slice(0, 12);
+  if (!list.length) { el.innerHTML = '<div class="placeholder">Keine neuen Meldungen in den letzten 3 Tagen.</div>'; return; }
+  el.innerHTML = list.map((s) => {
+    const cls = s.einschaetzung === "positiv" ? "news-pos" : s.einschaetzung === "negativ" ? "news-neg" : "news-neu";
+    const titel = s.url ? '<a href="' + s.url + '" target="_blank" rel="noopener">' + (s.titel || "") + '</a>' : (s.titel || "");
+    return '<div class="headline"><span class="news-badge ' + cls + '" style="margin:0 8px 0 0;">' + (s.einschaetzung || "neutral") + (s.gewicht ? " · " + s.gewicht : "") + '</span><b>' + (s.name || s.ticker) + '</b> – ' + titel +
+      '<div class="src">' + [s.kategorie, s.quelle, pubInfo({ published_at: s.published_at })].filter(Boolean).join(" · ") + (s.kurz ? " – " + s.kurz : "") + '</div></div>';
+  }).join("") + '<div class="timestamp">Signale der Nachrichten-Aufgaben, letzte 3 Tage. Daraus rechnet der Feed die News-Korrektur am Score (max. ±10). Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
 }
 
 function renderCandidates(data) {
@@ -354,7 +433,7 @@ function renderCandidates(data) {
         '<div><span class="cand-ticker">' + (c.name || c.ticker) + '</span> <span class="cand-sector">' + (c.sector || "") + '</span></div>' +
         '<span class="score-badge ' + stufeCls(c.stufe, c.score) + '">' + badge + '</span></div>' +
         '<div class="cand-begr">' + (c.begruendung || "") + korr + '</div>' +
-        renderLevels(c.levels) + flags +
+        renderLevels(c.levels) + flags + newsBadge(c.ticker) +
         (c.earnings ? '<div class="timestamp">Earnings: ' + c.earnings + '</div>' : "") +
         renderMiniAmpel(c.ampel) + '</div>';
     }).join("") +
@@ -514,20 +593,19 @@ function showTab(name) {
     t.classList.toggle("active", on);
     t.setAttribute("aria-selected", on ? "true" : "false");
   });
-  document.getElementById("panel-heute").hidden = name !== "heute";
-  document.getElementById("panel-historie").hidden = name !== "historie";
+  ["heute", "historie", "journal"].forEach((p) => { document.getElementById("panel-" + p).hidden = name !== p; });
 }
 
 function initTabs() {
   document.querySelectorAll(".tab").forEach((t) => t.addEventListener("click", () => {
     showTab(t.dataset.tab);
-    history.replaceState(null, "", t.dataset.tab === "historie" ? "#historie" : location.pathname);
+    history.replaceState(null, "", t.dataset.tab === "heute" ? location.pathname : "#" + t.dataset.tab);
   }));
   document.addEventListener("click", (e) => {
     const a = e.target.closest("[data-goto]");
     if (a) { e.preventDefault(); showTab(a.dataset.goto); history.replaceState(null, "", "#historie"); window.scrollTo(0, 0); }
   });
-  showTab(location.hash === "#historie" ? "historie" : "heute");
+  showTab(["#historie", "#journal"].includes(location.hash) ? location.hash.slice(1) : "heute");
 }
 
 const PERF_FARBEN = { neu: "#2ecc71", alle: "#f1c40f", qqq: "#5dade2", urth: "#b39ddb" };
@@ -568,13 +646,18 @@ function renderPerformance(data) {
     '<line class="perf-cursor" x1="0" x2="0" y1="' + T + '" y2="' + (H - B) + '" stroke="#9aa0ab" stroke-width="1" stroke-dasharray="3 3" style="display:none"/></svg>';
 
   const st = (data.statistik || {}).neu || {};
-  const statTxt = st.trades ? 'Neue Regeln, simuliert: ' + st.trades + ' Trades (' + (st.offen || 0) + ' offen), Trefferquote ' + (st.trefferquote_pct != null ? st.trefferquote_pct + ' %' : '–') +
-    ', Ø Trade ' + fmtPct(st.schnitt_trade_pct) + ', bester ' + fmtPct(st.bester_trade_pct) + ', schlechtester ' + fmtPct(st.schlechtester_trade_pct) + '.' : "";
+  const eurS = (v) => (v == null ? "–" : (v >= 0 ? "+" : "") + v.toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €");
+  const ng = st.nicht_gekauft || {};
+  const ngTxt = [["plaetze", "keine freien Plätze"], ["risiko", "Risikobudget voll"], ["sektor", "Sektor-Limit"], ["kapital", "Kapital"], ["limit_verfallen", "Limit nicht erreicht"]]
+    .filter(([k]) => ng[k]).map(([k, t]) => ng[k] + "× " + t).join(", ");
+  const statTxt = st.trades_abgeschlossen != null ? 'Depot-Simulation: ' + eur(st.startkapital_eur) + ' → ' + eur(st.endwert_eur) + ', ' + st.trades_abgeschlossen + ' abgeschlossene Trades (' + (st.trades_offen || 0) + ' offen), Trefferquote ' +
+    (st.trefferquote_pct != null ? st.trefferquote_pct + ' %' : '–') + ', Ø Trade ' + eurS(st.schnitt_trade_eur) + ', bester ' + eurS(st.bester_trade_eur) + ', schlechtester ' + eurS(st.schlechtester_trade_eur) +
+    ', Gebühren ' + eur(st.gebuehren_eur) + ', max. ' + (st.max_gleichzeitig || 0) + ' Positionen gleichzeitig.' + (ngTxt ? ' Nicht gekauft: ' + ngTxt + '.' : '') : "";
 
   el.innerHTML = '<div class="perf-tiles">' + tiles + '</div>' +
     '<div class="perf-chart">' + svg + '<div class="perf-tip"></div></div>' +
     '<div class="timestamp">' + statTxt + '</div>' +
-    '<div class="timestamp">' + (data.hinweis || "") + ' Index = 100 am ' + new Date(data.start).toLocaleDateString("de-DE") + ', Werte in USD. Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
+    '<div class="timestamp">' + (data.hinweis || "") + ' Index = 100 am ' + new Date(data.start).toLocaleDateString("de-DE") + ', Werte in ' + (data.waehrung || "EUR") + '. Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
 
   const box = el.querySelector(".perf-chart"), svgEl = box.querySelector("svg"), tip = box.querySelector(".perf-tip"), cur = svgEl.querySelector(".perf-cursor");
   const move = (clientX) => {
@@ -652,8 +735,125 @@ function renderHeadlines(data) {
     (data.generated_at_utc ? '<div class="timestamp">Zusammengestellt: ' + fmtTime(data.generated_at_utc) + '</div>' : "");
 }
 
+
+// ---------------- Trade-Journal ----------------
+const JOURNAL_REPO = "https://github.com/patricks87-sudo/swing-trading-data/issues/new";
+let JOURNAL = null, P4C = null;
+const jNum = (v) => { if (v == null) return null; const t = String(v).trim().replace(/\s/g, ""); if (!t) return null; const n = Number(t.includes(",") ? t.replace(/\./g, "").replace(",", ".") : t); return isFinite(n) ? n : NaN; };
+const eurSig = (v) => (v == null ? "–" : '<span style="color:' + (v >= 0 ? "var(--green)" : "var(--red)") + '">' + (v >= 0 ? "+" : "") + v.toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €</span>");
+const dDE = (d) => (d ? new Date(d + "T12:00:00").toLocaleDateString("de-DE") : "–");
+
+function journalIssue(daten, titel) {
+  const body = "Journal-Eintrag aus dem Cockpit – bitte unverändert mit „Create“ absenden.\n\n```json\n" + JSON.stringify(daten, null, 2) + "\n```\n";
+  const url = JOURNAL_REPO + "?title=" + encodeURIComponent("[Trade] " + titel) + "&body=" + encodeURIComponent(body);
+  const w = window.open(url, "_blank");
+  if (w) w.opener = null; else location.href = url;
+}
+
+function jPosition(ticker) { return ((JOURNAL && JOURNAL.positionen) || []).find((p) => p.ticker === ticker); }
+function jKandidat(ticker) { return ((P4C && P4C.candidates) || []).find((c) => c.ticker === ticker); }
+
+function initJournalForm() {
+  const f = document.getElementById("jform");
+  if (!f) return;
+  f.datum.value = new Date().toLocaleDateString("sv-SE");
+  const sync = () => {
+    const kauf = f.aktion.value === "kauf";
+    f.querySelectorAll("[data-nur]").forEach((el) => { el.style.display = el.dataset.nur === f.aktion.value ? "" : "none"; });
+    let erste = null;
+    [...f.grund.options].forEach((o) => { const ok = !o.dataset.fuer || o.dataset.fuer === f.aktion.value; o.hidden = !ok; if (ok && !erste) erste = o; });
+    if (f.grund.selectedOptions[0] && f.grund.selectedOptions[0].hidden) f.grund.value = erste.value;
+    const t = f.ticker.value.trim().toUpperCase();
+    const pos = jPosition(t), k = jKandidat(t);
+    if (!kauf && pos && !f.stueck.value) f.stueck.value = String(pos.stueck).replace(".", ",");
+    if (kauf && k && k.levels) {
+      if (!f.stop_eur.value && k.levels.stop_eur) f.stop_eur.value = String(k.levels.stop_eur).replace(".", ",");
+      if (!f.stueck.value && k.levels.stueck) f.stueck.value = k.levels.stueck;
+    }
+  };
+  f.aktion.addEventListener("change", sync);
+  f.ticker.addEventListener("change", sync);
+  sync();
+  f.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const msg = document.getElementById("jmsg");
+    const d = {
+      aktion: f.aktion.value, datum: f.datum.value, ticker: f.ticker.value.trim().toUpperCase().split(/\s/)[0],
+      stueck: jNum(f.stueck.value), kurs_eur: jNum(f.kurs_eur.value), gebuehr_eur: jNum(f.gebuehr_eur.value),
+      grund: f.grund.value, notiz: f.notiz.value.trim(),
+    };
+    if (d.aktion === "kauf") d.stop_eur = jNum(f.stop_eur.value);
+    if (f.test.checked) d.test = true;
+    const fehler = [];
+    if (!/^[A-Z][A-Z0-9.\-]{0,9}$/.test(d.ticker)) fehler.push("Ticker fehlt");
+    if (!(d.stueck > 0)) fehler.push("Stück fehlt");
+    if (!(d.kurs_eur > 0)) fehler.push("Kurs fehlt");
+    if (Number.isNaN(d.gebuehr_eur) || Number.isNaN(d.stop_eur)) fehler.push("Gebühr/Stop ist keine Zahl");
+    if (d.stop_eur > 0 && d.kurs_eur > 0 && d.stop_eur >= d.kurs_eur) fehler.push("Schutz-Stop muss unter dem Kaufkurs liegen");
+    if (d.aktion === "verkauf" && !d.test) {
+      const pos = jPosition(d.ticker);
+      if (!pos) fehler.push(d.ticker + " ist laut Journal nicht im Depot");
+      else if (d.stueck > pos.stueck + 1e-9) fehler.push("nur " + pos.stueck + " Stück im Depot");
+    }
+    if (fehler.length) { msg.innerHTML = '<span style="color:var(--red)">Bitte prüfen: ' + fehler.join(", ") + '.</span>'; return; }
+    if (d.gebuehr_eur == null) d.gebuehr_eur = 1;
+    if (d.stop_eur == null) delete d.stop_eur;
+    const k = jKandidat(d.ticker); if (k && k.name) d.name = k.name;
+    journalIssue(d, (d.aktion === "kauf" ? "Kauf " : "Verkauf ") + d.stueck + " " + d.ticker + " zu " + d.kurs_eur.toFixed(2) + " €" + (d.test ? " (Test)" : ""));
+    msg.innerHTML = '<span style="color:var(--green)">GitHub wurde in einem neuen Tab geöffnet – dort auf „Create“ klicken.</span>';
+    f.stueck.value = ""; f.kurs_eur.value = ""; f.notiz.value = ""; f.stop_eur.value = ""; f.test.checked = false;
+  });
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-storno]");
+    if (!b) return;
+    if (!confirm("Eintrag " + b.dataset.storno + " stornieren? GitHub öffnet sich zum Bestätigen.")) return;
+    journalIssue({ aktion: "storno", ref: b.dataset.storno }, "Storno " + b.dataset.storno);
+  });
+}
+
+function renderJournal(j, feed) {
+  JOURNAL = j;
+  const dl = document.getElementById("jticker");
+  if (dl && feed && feed.watchlist) {
+    const namen = {};
+    ((P4C && P4C.candidates) || []).forEach((c) => { namen[c.ticker] = c.name; });
+    dl.innerHTML = Object.keys(feed.watchlist).sort().map((t) => '<option value="' + t + '">' + (namen[t] || "") + '</option>').join("");
+  }
+  if (!j) return;
+  const k = j.kennzahlen || {};
+  const pos = j.positionen || [];
+  const elP = document.getElementById("jPositionen");
+  const kopf = '<div class="bilanz-grid" style="margin-bottom:12px;">' +
+    '<div class="bilanz-card">Offene Positionen<div class="big">' + (k.offene_positionen || 0) + '</div>investiert ' + eur(k.investiert_eur) + '</div>' +
+    '<div class="bilanz-card">Unrealisiert<div class="big">' + eurSig(k.unrealisiert_eur) + '</div>zu aktuellen Kursen</div>' +
+    '<div class="bilanz-card">Realisiert<div class="big">' + eurSig(k.realisiert_eur) + '</div>nach Gebühren (' + eur(k.gebuehren_eur) + ')</div>' +
+    '<div class="bilanz-card">Abgeschlossen<div class="big">' + (k.trades_abgeschlossen || 0) + '</div>Trefferquote ' + (k.trefferquote_pct != null ? k.trefferquote_pct + " %" : "–") + '</div></div>';
+  elP.innerHTML = kopf + (pos.length ? '<table class="responsive-mobile"><thead><tr><th>Aktie</th><th>Stück</th><th>Einstand</th><th>Aktuell</th><th>Ergebnis</th><th>Stop</th><th>Tage</th><th>Verkauf bis</th></tr></thead><tbody>' +
+    pos.map((p) => '<tr><td data-label="Aktie"><b>' + (p.name || p.ticker) + '</b>' + (p.hinweis ? '<div class="flag" style="background:rgba(231,76,60,.12);color:var(--red)">' + p.hinweis + '</div>' : "") + '</td>' +
+      '<td data-label="Stück">' + p.stueck + '</td><td data-label="Einstand">' + eur(p.einstand_eur) + '</td><td data-label="Aktuell">' + eur(p.aktueller_kurs_eur) + '</td>' +
+      '<td data-label="Ergebnis">' + eurSig(p.unrealisiert_eur) + (p.unrealisiert_pct != null ? ' <span class="timestamp">(' + (p.unrealisiert_pct >= 0 ? "+" : "") + p.unrealisiert_pct.toFixed(1).replace(".", ",") + ' %)</span>' : "") + '</td>' +
+      '<td data-label="Stop">' + eur(p.stop_eur) + '</td><td data-label="Tage">' + p.handelstage_gehalten + ' / 10</td><td data-label="Verkauf bis">' + dDE(p.verkauf_spaetestens) + '</td></tr>').join("") +
+    '</tbody></table>' : '<div class="placeholder">Keine offenen Positionen.</div>') +
+    '<div class="timestamp">Kurse aus dem letzten Feed-Lauf: ' + fmtTime(j.kurse_stand_utc) + '</div>';
+
+  const tr = j.trades || [];
+  if (tr.length) document.getElementById("jTrades").innerHTML = '<table class="responsive-mobile"><thead><tr><th>Aktie</th><th>Kauf</th><th>Verkauf</th><th>Tage</th><th>Ergebnis</th><th>Grund Verkauf</th></tr></thead><tbody>' +
+    tr.map((t) => '<tr><td data-label="Aktie"><b>' + (t.name || t.ticker) + '</b></td><td data-label="Kauf">' + dDE(t.kaufdatum) + '</td><td data-label="Verkauf">' + dDE(t.verkaufsdatum) + '</td><td data-label="Tage">' + t.handelstage + '</td>' +
+      '<td data-label="Ergebnis">' + eurSig(t.ergebnis_eur) + (t.rendite_pct != null ? ' <span class="timestamp">(' + (t.rendite_pct >= 0 ? "+" : "") + t.rendite_pct.toFixed(1).replace(".", ",") + ' %)</span>' : "") + '</td><td data-label="Grund">' + (t.grund_verkauf || "–") + '</td></tr>').join("") + '</tbody></table>';
+
+  const ein = (j.eintraege || []).slice().reverse();
+  if (ein.length) document.getElementById("jEintraege").innerHTML = '<table class="responsive-mobile"><thead><tr><th>Nr.</th><th>Datum</th><th>Aktion</th><th>Aktie</th><th>Stück × Kurs</th><th>Grund / Notiz</th><th></th></tr></thead><tbody>' +
+    ein.map((x) => {
+      const st = x.aktion === "storno";
+      return '<tr class="' + (x.storniert ? "storniert" : "") + '"><td data-label="Nr.">' + x.id + '</td><td data-label="Datum">' + (st ? fmtTime(x.erfasst_utc) : dDE(x.datum)) + '</td>' +
+        '<td data-label="Aktion">' + (st ? "Storno " + x.ref : x.aktion === "kauf" ? "Kauf" : "Verkauf") + (x.test ? " (Test)" : "") + '</td><td data-label="Aktie">' + (x.name || x.ticker || "") + '</td>' +
+        '<td data-label="Stück × Kurs">' + (st ? "" : x.stueck + " × " + eur(x.kurs_eur)) + '</td><td data-label="Grund">' + [x.grund, x.notiz].filter(Boolean).join(" – ") + '</td>' +
+        '<td data-label="">' + (!st && !x.storniert ? '<button class="btn-sm" data-storno="' + x.id + '">Storno</button>' : "") + '</td></tr>';
+    }).join("") + '</tbody></table>';
+}
+
 function renderNewsToday(data) { const el = document.getElementById("newsToday"); if (!data || !data.entries || !data.entries.length) return; el.innerHTML = data.entries.slice().reverse().map((e) => { const items = (e.headlines || []).map(headlineHtml).join(""); return '<div style="margin-bottom:14px;"><div class="timestamp" style="font-weight:600;">' + (e.time_local || "") + ' Uhr</div>' + items + '</div>'; }).join(""); } async function init() {
-  const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking, filterBilanz, p1, p55, p5, performance] = await Promise.all([
+  const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking, filterBilanz, p1, p55, p5, performance, journal, newsSignale] = await Promise.all([
     fetchJson("p4_latest.json"),
     fetchJson("p4_candidates.json"),
     fetchJson("p55_candidates.json"),
@@ -666,8 +866,11 @@ function renderNewsToday(data) { const el = document.getElementById("newsToday")
     fetchJson("p55_latest.json"),
     fetchJson("p5_latest.json"),
     fetchJson("performance.json"),
+    fetchJson("journal.json"),
+    fetchJson("news_signals.json"),
   ]);
   const feed = latestFeed([p4, p5, p55, p1]);
+  FEED = feed; P4C = candidates;
   renderAmpel(barometer, p4, feed);
   renderSektorrotation(barometer);
   renderIndices(feed || p4);
@@ -679,8 +882,11 @@ function renderNewsToday(data) { const el = document.getElementById("newsToday")
   renderPerformance(performance);
   renderTop3(top3);
   renderHeadlines(headlines); renderNewsToday(newsToday);
+  renderNewsSignale(newsSignale);
+  renderJournal(journal, feed);
 }
 initTabs();
+initJournalForm();
 init();
 </script>
 </body>
