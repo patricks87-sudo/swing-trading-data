@@ -1,6 +1,6 @@
 {
   "run": "p1",
-  "generated_at_utc": "2026-10-11T08:51:17.439907+00:00",
+  "generated_at_utc": "2026-10-11T10:36:26.715846+00:00",
   "eurusd": 0.892,
   "indices": {
     "NASDAQ_COMPOSITE": {
@@ -153,13 +153,13 @@
       "sector": "Semiconductors/AI",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-23",
-        "call_volume": 27831,
-        "call_open_interest": 135231,
-        "put_volume": 16461,
-        "call_put_volume_ratio": 1.69,
-        "call_volume_oi_ratio": 0.21,
-        "einschaetzung": "bullisch"
+        "expiration": "2026-10-19",
+        "call_volume": 0,
+        "call_open_interest": 0,
+        "put_volume": 0,
+        "call_put_volume_ratio": null,
+        "call_volume_oi_ratio": null,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -169,17 +169,17 @@
       "ampel": {
         "kapitalfluss": "rot",
         "trendkontext": "gruen",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 74.2,
+        "score": 69.2,
         "teilscores": {
           "kapitalfluss": 53.0,
           "relative_staerke": 43.0,
           "trendkontext": 100.0,
           "sektorstaerke": 67.0,
           "setup": 100.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 100.0
         },
         "stufe": "Kauf \u2013 solide",
@@ -238,13 +238,13 @@
       "sector": "Semiconductors/AI",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-19",
-        "call_volume": 0,
-        "call_open_interest": 0,
-        "put_volume": 0,
-        "call_put_volume_ratio": null,
-        "call_volume_oi_ratio": null,
-        "einschaetzung": "neutral"
+        "expiration": "2026-10-23",
+        "call_volume": 8838,
+        "call_open_interest": 32152,
+        "put_volume": 14329,
+        "call_put_volume_ratio": 0.62,
+        "call_volume_oi_ratio": 0.27,
+        "einschaetzung": "bearisch"
       },
       "earnings": {
         "available": true,
@@ -254,22 +254,24 @@
       "ampel": {
         "kapitalfluss": "rot",
         "trendkontext": "gruen",
-        "optionsflow": "gelb"
+        "optionsflow": "rot"
       },
       "setup": {
-        "score": 74.5,
+        "score": 69.5,
         "teilscores": {
           "kapitalfluss": 52.0,
           "relative_staerke": 70.0,
           "trendkontext": 100.0,
           "sektorstaerke": 67.0,
           "setup": 100.0,
-          "optionsflow": 50.0,
+          "optionsflow": 0.0,
           "crv": 100.0
         },
-        "stufe": "Kauf \u2013 solide",
+        "stufe": "Ausgeschlossen",
         "bulltrap_flags": [],
-        "ausschluesse": [],
+        "ausschluesse": [
+          "Optionsflow b\u00e4risch"
+        ],
         "hinweise": [
           "Halbleiter-Sektor schw\u00e4cher als S&P 500 (nur f\u00fcr Halbleiter relevant)"
         ],
@@ -4058,13 +4060,13 @@
       "sector": "Consumer Discretionary",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-23",
-        "call_volume": 24149,
-        "call_open_interest": 54128,
-        "put_volume": 13259,
-        "call_put_volume_ratio": 1.82,
-        "call_volume_oi_ratio": 0.45,
-        "einschaetzung": "bullisch"
+        "expiration": "2026-10-19",
+        "call_volume": 0,
+        "call_open_interest": 0,
+        "put_volume": 0,
+        "call_put_volume_ratio": null,
+        "call_volume_oi_ratio": null,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -4074,17 +4076,17 @@
       "ampel": {
         "kapitalfluss": "gruen",
         "trendkontext": "rot",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 61.8,
+        "score": 56.8,
         "teilscores": {
           "kapitalfluss": 83.0,
           "relative_staerke": 81.0,
           "trendkontext": 0.0,
           "sektorstaerke": 61.0,
           "setup": 65.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 0.0
         },
         "stufe": "Beobachten",
@@ -4307,13 +4309,13 @@
       "sector": "Technology",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-23",
-        "call_volume": 31112,
-        "call_open_interest": 47178,
-        "put_volume": 8951,
-        "call_put_volume_ratio": 3.48,
-        "call_volume_oi_ratio": 0.66,
-        "einschaetzung": "bullisch"
+        "expiration": "2026-10-19",
+        "call_volume": 0,
+        "call_open_interest": 0,
+        "put_volume": 0,
+        "call_put_volume_ratio": null,
+        "call_volume_oi_ratio": null,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -4323,20 +4325,20 @@
       "ampel": {
         "kapitalfluss": "gruen",
         "trendkontext": "gruen",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 78.8,
+        "score": 73.8,
         "teilscores": {
           "kapitalfluss": 86.0,
           "relative_staerke": 45.0,
           "trendkontext": 100.0,
           "sektorstaerke": 50.0,
           "setup": 100.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 100.0
         },
-        "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+        "stufe": "Kauf \u2013 solide",
         "bulltrap_flags": [],
         "ausschluesse": [],
         "hinweise": [],
@@ -4649,12 +4651,6 @@
       "sector": "MedTech"
     },
     {
-      "ticker": "AAPL",
-      "score": 78.8,
-      "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
-      "sector": "Technology"
-    },
-    {
       "ticker": "MSFT",
       "score": 78.7,
       "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
@@ -4685,16 +4681,10 @@
       "sector": "Payments"
     },
     {
-      "ticker": "AMD",
-      "score": 74.5,
+      "ticker": "AAPL",
+      "score": 73.8,
       "stufe": "Kauf \u2013 solide",
-      "sector": "Semiconductors/AI"
-    },
-    {
-      "ticker": "NVDA",
-      "score": 74.2,
-      "stufe": "Kauf \u2013 solide",
-      "sector": "Semiconductors/AI"
+      "sector": "Technology"
     },
     {
       "ticker": "SMCI",
@@ -4718,6 +4708,18 @@
       "ticker": "TSM",
       "score": 70.1,
       "stufe": "Ausgeschlossen",
+      "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "AMD",
+      "score": 69.5,
+      "stufe": "Ausgeschlossen",
+      "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "NVDA",
+      "score": 69.2,
+      "stufe": "Kauf \u2013 solide",
       "sector": "Semiconductors/AI"
     },
     {
@@ -4763,12 +4765,6 @@
       "sector": "Semiconductors/AI"
     },
     {
-      "ticker": "TSLA",
-      "score": 61.8,
-      "stufe": "Beobachten",
-      "sector": "Consumer Discretionary"
-    },
-    {
       "ticker": "ISRG",
       "score": 61.3,
       "stufe": "Ausgeschlossen",
@@ -4785,6 +4781,12 @@
       "score": 59.7,
       "stufe": "Ausgeschlossen",
       "sector": "Energy"
+    },
+    {
+      "ticker": "TSLA",
+      "score": 56.8,
+      "stufe": "Beobachten",
+      "sector": "Consumer Discretionary"
     },
     {
       "ticker": "FCX",
