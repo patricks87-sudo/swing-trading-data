@@ -27,13 +27,24 @@ from statistics import mean
 
 REGIME_VIX_MAX = 20.0          # VIX unter diesem Wert = Kriterium erfuellt
 REGIME_VIX_PANIC = 30.0        # VIX darueber = immer RISK-OFF
-REGIME_MAX_POSITIONS = {"RISK-ON": 2, "NEUTRAL": 1, "RISK-OFF": 0}
+# Seit 11.10.2026 (Nutzer-Entscheidung): keine feste Obergrenze von 2 Plaetzen
+# mehr, sondern ein Risikobudget. Neue Positionen pro Tag je Regime, offene
+# Positionen insgesamt je Regime, zusaetzlich begrenzt durch Gesamtrisiko und
+# Kapital (siehe PORTFOLIO unten).
+REGIME_MAX_POSITIONS = {"RISK-ON": 2, "NEUTRAL": 1, "RISK-OFF": 0}      # neue pro Tag
+REGIME_MAX_OFFEN = {"RISK-ON": 5, "NEUTRAL": 3, "RISK-OFF": 0}          # offen insgesamt (RISK-OFF: keine neuen)
 
-STOP_ATR_MULT = 1.5            # Stop = Einstieg - 1,5 x ATR
-TARGET1_R = 2.0                # Ziel 1 = Einstieg + 2 x Risiko (CRV 2:1)
-TARGET2_R = 3.0                # Ziel 2 = Einstieg + 3 x Risiko (CRV 3:1)
-RISK_PER_TRADE_EUR = 75.0
-MAX_POSITION_EUR = 3000.0      # 2 Pakete a 1.500 EUR als Startposition
+DEPOT_EUR = 8000.0             # Referenz-Depotgroesse
+RISK_PER_TRADE_EUR = 75.0      # ca. 1 % des Depots
+MAX_GESAMTRISIKO_EUR = 375.0   # ca. 4 % des Depots ueber alle offenen Positionen
+MAX_POSITION_EUR = 2500.0      # max. Kapital je Position
+MAX_JE_SEKTOR = 2              # max. offene Positionen je Sektor
+
+# Ausstieg seit 11.10.2026: zeitbasiert nach 10 Handelstagen (in der Auswertung
+# die beste Variante), dazu ein weiter Schutz-Stop gegen Ausreisser.
+HALTEDAUER_TAGE = 10
+STOP_ATR_MULT = 2.0            # Schutz-Stop = Einstieg - 2 x ATR
+REF_ZIEL_R = 2.0               # nur fuer den CRV-Teilscore (Einstiegsnaehe), kein Verkaufsziel
 
 EARNINGS_BLOCK_TRADING_DAYS = 5
 MIN_AVG_VOLUME = 1_000_000
@@ -179,6 +190,7 @@ def compute_regime(indices: dict, breadth: dict, macro: dict) -> dict:
         "kriterien": kriterien,
         "override": override,
         "max_neue_positionen": REGIME_MAX_POSITIONS[status],
+        "max_offene_positionen": REGIME_MAX_OFFEN[status],
         "hinweise": hinweise,
         "kurztext": f"{status}: {erfuellt}/5 Kriterien erfüllt" + (f" ({override})" if override else ""),
     }
@@ -267,8 +279,10 @@ def _score_options(e):
 
 
 def compute_levels(e: dict, eurusd) -> dict:
-    """ATR-basierte Handelsmarken. Einstieg = aktueller Kurs, wenn er in der
-    Pullback-Zone liegt (max. 3 % ueber SMA20), sonst Limit an der SMA20."""
+    """Handelsmarken. Einstieg = aktueller Kurs, wenn er in der Pullback-Zone
+    liegt (max. 3 % ueber SMA20), sonst Limit an der SMA20. Schutz-Stop
+    2 x ATR, Ausstieg nach 10 Handelstagen (seit 11.10.2026, keine festen
+    Kursziele mehr)."""
     close, atr, sma20 = e.get("close"), e.get("atr14"), e.get("sma20")
     if not (_num(close) and _num(atr) and atr > 0):
         return {"available": False}
@@ -278,9 +292,8 @@ def compute_levels(e: dict, eurusd) -> dict:
         entry, entry_typ = close, "am aktuellen Kurs"
     risk = STOP_ATR_MULT * atr
     stop = entry - risk
-    t1 = entry + TARGET1_R * risk
-    t2 = entry + TARGET2_R * risk
-    crv_now = (t1 - close) / (close - stop) if close > stop else 0.0
+    ref = entry + REF_ZIEL_R * risk
+    crv_now = (ref - close) / (close - stop) if close > stop else 0.0
     fx = eurusd if _num(eurusd) else None
     risk_eur = risk * fx if fx else None
     stueck = int(RISK_PER_TRADE_EUR // risk_eur) if risk_eur else None
@@ -296,14 +309,11 @@ def compute_levels(e: dict, eurusd) -> dict:
         "einstieg_usd": round(entry, 2),
         "einstieg_typ": entry_typ,
         "stop_usd": round(stop, 2),
-        "ziel1_usd": round(t1, 2),
-        "ziel2_usd": round(t2, 2),
         "einstieg_eur": eur(entry),
         "stop_eur": eur(stop),
-        "ziel1_eur": eur(t1),
-        "ziel2_eur": eur(t2),
+        "ausstieg": f"spätestens nach {HALTEDAUER_TAGE} Handelstagen zum Schlusskurs",
+        "haltedauer_tage": HALTEDAUER_TAGE,
         "risiko_pct": round(risk / entry * 100, 2),
-        "ziel1_pct": round((t1 - entry) / entry * 100, 2),
         "crv_am_aktuellen_kurs": round(crv_now, 2),
         "stueck": stueck,
         "kapitalbedarf_eur": round(stueck * entry_eur, 0) if stueck is not None and entry_eur else None,
@@ -367,6 +377,52 @@ def compute_setup(e: dict, spy: dict, sector_stats: dict, eurusd) -> dict:
         "levels": levels,
         "wiedereinstieg_usd": round(e["sma20"], 2) if _num(e.get("sma20")) else None,
     }
+
+
+# ---------------------------------------------------------------------------
+# News-Signale (seit 11.10.2026): die Nachrichten-Aufgaben N1-N6/Sa/So
+# schreiben data/news_signals.json. Hier wird daraus deterministisch ein
+# Korrektur-Vorschlag (max. +/-10) und ggf. ein harter News-Ausschluss.
+# ---------------------------------------------------------------------------
+NEWS_GEWICHT = {"hoch": 5, "mittel": 3, "niedrig": 1}
+NEWS_KORREKTUR_TAGE = 3        # Kalendertage, die in die Score-Korrektur eingehen
+NEWS_AUSSCHLUSS_TAGE = 14      # Fenster fuer harte negative News
+NEWS_AUSSCHLUSS_KATEGORIEN = {"Gewinnwarnung", "Verfahren", "Bilanz"}
+
+
+def news_bewertung(signale: list, heute) -> dict:
+    """Fasst die News-Signale je Ticker zusammen."""
+    from datetime import date as _date
+
+    out = {}
+    for s in signale or []:
+        t = str(s.get("ticker") or "").upper()
+        if not t:
+            continue
+        try:
+            d = _date.fromisoformat(str(s.get("datum") or "")[:10])
+        except ValueError:
+            continue
+        alter = (heute - d).days
+        if alter < 0 or alter > NEWS_AUSSCHLUSS_TAGE:
+            continue
+        e = out.setdefault(t, {"positiv": 0, "negativ": 0, "neutral": 0, "punkte": 0,
+                               "ausschluss": None, "signale": []})
+        richtung = str(s.get("einschaetzung") or "neutral").lower()
+        kat = str(s.get("kategorie") or "Sonstiges")
+        if alter <= NEWS_KORREKTUR_TAGE:
+            e[richtung if richtung in ("positiv", "negativ") else "neutral"] += 1
+            g = NEWS_GEWICHT.get(str(s.get("gewicht") or "mittel").lower(), 3)
+            e["punkte"] += g if richtung == "positiv" else -g if richtung == "negativ" else 0
+        if (kat in NEWS_AUSSCHLUSS_KATEGORIEN and richtung == "negativ") or kat == "Übernahme":
+            e["ausschluss"] = e["ausschluss"] or f"News: {kat} ({d.isoformat()}) – {s.get('titel', '')}"[:160]
+        e["signale"].append({k: s.get(k) for k in ("datum", "published_at", "titel", "quelle", "url",
+                                                    "einschaetzung", "gewicht", "kategorie")})
+    for e in out.values():
+        e["korrektur_vorschlag"] = int(max(-10, min(10, e.pop("punkte"))))
+        e["signale"].sort(key=lambda x: str(x.get("published_at") or x.get("datum") or ""), reverse=True)
+        e["signale"] = e["signale"][:5]
+    return out
 
 
 # ---------------------------------------------------------------------------
