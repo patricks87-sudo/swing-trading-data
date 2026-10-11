@@ -1,0 +1,61 @@
+name: Trade-Journal
+
+# Verarbeitet Journal-Eintraege aus dem Cockpit (Registerkarte "Journal").
+# Das Cockpit oeffnet ein vorausgefuelltes Issue "[Trade] ..."; dieser
+# Workflow speichert den Eintrag in data/journal.json, leitet daraus
+# data/portfolio.json ab, kommentiert das Ergebnis und schliesst das Issue.
+# Nur Issues des Repo-Inhabers werden verarbeitet.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: trade-journal
+  cancel-in-progress: false
+
+jobs:
+  journal:
+    if: startsWith(github.event.issue.title, '[Trade]') && github.event.issue.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Eintrag verarbeiten
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python scripts/journal.py --issue
+
+      - name: Commit and push
+        run: |
+          git config user.name "market-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/journal.json data/portfolio.json
+          git diff --quiet --cached && exit 0
+          git commit -m "journal: Eintrag aus Issue #${{ github.event.issue.number }}"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
+
+      - name: Antwort ins Issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NR: ${{ github.event.issue.number }}
+        run: |
+          [ -f /tmp/journal_antwort.md ] || echo "Verarbeitung fehlgeschlagen – bitte die Actions-Logs prüfen." > /tmp/journal_antwort.md
+          gh issue comment "$NR" --body-file /tmp/journal_antwort.md
+          if [ "$(cat /tmp/journal_status 2>/dev/null)" = "ok" ]; then
+            gh issue close "$NR" --reason completed
+          else
+            gh issue close "$NR" --reason "not planned"
+          fi
