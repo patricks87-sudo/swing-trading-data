@@ -109,6 +109,13 @@
   .seg button.on { background: rgba(46,204,113,.15); color: var(--text); }
   .hist-sub { font-size: 13px; font-weight: 700; margin: 14px 0 6px 0; }
   .hist-sub.top { color: var(--green); } .hist-sub.flop { color: var(--red); }
+  .perf-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin-bottom: 14px; }
+  .perf-tile { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px; font-size: 12px; color: var(--muted); }
+  .perf-tile .big { font-size: 20px; font-weight: 700; margin: 4px 0 2px 0; }
+  .perf-tile .sw { display: inline-block; width: 10px; height: 3px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
+  .perf-chart { position: relative; }
+  .perf-chart svg { width: 100%; height: auto; display: block; }
+  .perf-tip { position: absolute; pointer-events: none; background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 11px; color: var(--text); white-space: nowrap; display: none; }
 
   /* Mobile: die datenreiche Tabelle (Kandidaten-Tracking) wird unter 640px
      zu Karten mit Label:Wert-Paaren statt einer gequetschten Tabelle -
@@ -117,6 +124,8 @@
     body { padding: 14px; }
     h1 { font-size: 19px; }
     .grid { grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)); gap: 8px; }
+    .perf-tiles { grid-template-columns: 1fr 1fr; }
+    .perf-tile .big { font-size: 17px; }
     table.responsive-mobile thead { display: none; }
     table.responsive-mobile, table.responsive-mobile tbody, table.responsive-mobile tr { display: block; width: 100%; }
     table.responsive-mobile tr { margin-bottom: 12px; border: 1px solid var(--border); border-radius: 10px; padding: 4px 12px; }
@@ -135,7 +144,7 @@
 
   <div class="tabs" role="tablist">
     <button class="tab active" role="tab" id="tab-heute" aria-controls="panel-heute" aria-selected="true" data-tab="heute">Heute</button>
-    <button class="tab" role="tab" id="tab-historie" aria-controls="panel-historie" aria-selected="false" data-tab="historie">Historie &amp; Bilanz</button>
+    <button class="tab" role="tab" id="tab-historie" aria-controls="panel-historie" aria-selected="false" data-tab="historie">Historie &amp; Performance</button>
   </div>
 
   <div class="tab-panel" id="panel-heute" role="tabpanel" aria-labelledby="tab-heute">
@@ -164,7 +173,10 @@
   </div>
 
   <div class="tab-panel" id="panel-historie" role="tabpanel" aria-labelledby="tab-historie" hidden>
-  <p class="hist-intro">Alle früheren Empfehlungen, die nicht mehr aktiv sind – mit ihrer tatsächlichen Entwicklung seit Aufnahme. Die Kurse aktualisiert das Skript bei jedem P1-Lauf, auch für aussortierte Titel. Alles in USD, verglichen mit dem Nasdaq-100 (QQQ) im selben Zeitraum.</p>
+  <p class="hist-intro">Wie erfolgreich die Strategie war und alle früheren Empfehlungen, die nicht mehr aktiv sind – mit ihrer tatsächlichen Entwicklung seit Aufnahme. Die Kurse aktualisiert das Skript bei jedem P1-Lauf, auch für aussortierte Titel. Alles in USD, verglichen mit dem Nasdaq-100 (QQQ) im selben Zeitraum.</p>
+
+  <h2>Performance: Strategie vs. Nasdaq &amp; MSCI World</h2>
+  <div id="performance" class="card"><div class="placeholder">Noch keine Daten &ndash; wird beim nächsten P1-Lauf berechnet.</div></div>
 
   <h2>Filter-Bilanz</h2>
   <div id="filterBilanz" class="card"><div class="placeholder">Noch keine Daten &ndash; wird beim nächsten P1-Lauf berechnet.</div></div>
@@ -516,6 +528,73 @@ function initTabs() {
   showTab(location.hash === "#historie" ? "historie" : "heute");
 }
 
+const PERF_FARBEN = { neu: "#2ecc71", alle: "#f1c40f", qqq: "#5dade2", urth: "#b39ddb" };
+
+function renderPerformance(data) {
+  const el = document.getElementById("performance");
+  if (!data || !data.reihen || !data.daten || !data.daten.length) return;
+  const fmtPct = (v) => (v == null ? "–" : (v >= 0 ? "+" : "") + v.toFixed(2).replace(".", ",") + " %");
+  const tiles = data.reihen.map((r) => {
+    const z = (data.zusammenfassung || {})[r.key] || {};
+    const v = z.gesamt_pct;
+    return '<div class="perf-tile"><div><span class="sw" style="background:' + (PERF_FARBEN[r.key] || "#888") + '"></span>' + r.label + '</div>' +
+      '<div class="big" style="color:' + (v == null ? "var(--muted)" : v >= 0 ? "var(--green)" : "var(--red)") + '">' + fmtPct(v) + '</div>' +
+      '<div>seit ' + new Date(data.start).toLocaleDateString("de-DE") + '</div></div>';
+  }).join("");
+
+  const W = 900, H = 320, L = 46, R = 12, T = 14, B = 30;
+  const alle = [];
+  data.reihen.forEach((r) => r.werte.forEach((v) => { if (v != null) alle.push(v); }));
+  let lo = Math.min.apply(null, alle), hi = Math.max.apply(null, alle);
+  const pad = Math.max(1, (hi - lo) * 0.08); lo -= pad; hi += pad;
+  const n = data.daten.length;
+  const x = (i) => L + (n > 1 ? i / (n - 1) : 0) * (W - L - R);
+  const y = (v) => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+  const ticks = [];
+  const step = Math.max(1, Math.ceil((hi - lo) / 6));
+  for (let t = Math.ceil(lo / step) * step; t <= hi; t += step) ticks.push(t);
+  const grid = ticks.map((t) => '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + y(t) + '" y2="' + y(t) + '" stroke="' + (t === 100 ? "#4b5160" : "#232733") + '" stroke-width="1"/>' +
+    '<text x="' + (L - 6) + '" y="' + (y(t) + 4) + '" fill="#9aa0ab" font-size="11" text-anchor="end">' + (t - 100 >= 0 ? "+" : "") + (t - 100) + '%</text>').join("");
+  const xl = [0, Math.floor((n - 1) / 2), n - 1].filter((v, i, a) => a.indexOf(v) === i).map((i) =>
+    '<text x="' + x(i) + '" y="' + (H - 8) + '" fill="#9aa0ab" font-size="11" text-anchor="' + (i === 0 ? "start" : i === n - 1 ? "end" : "middle") + '">' + new Date(data.daten[i]).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" }) + '</text>').join("");
+  const lines = data.reihen.slice().reverse().map((r) => {
+    let d = "", pen = false;
+    r.werte.forEach((v, i) => { if (v == null) { pen = false; return; } d += (pen ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1) + " "; pen = true; });
+    return '<path d="' + d + '" fill="none" stroke="' + (PERF_FARBEN[r.key] || "#888") + '" stroke-width="' + (r.key === "neu" ? 2.5 : 1.8) + '" stroke-linejoin="round" stroke-linecap="round"/>';
+  }).join("");
+  const svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Indexierte Entwicklung ab 100">' + grid + xl + lines +
+    '<line class="perf-cursor" x1="0" x2="0" y1="' + T + '" y2="' + (H - B) + '" stroke="#9aa0ab" stroke-width="1" stroke-dasharray="3 3" style="display:none"/></svg>';
+
+  const st = (data.statistik || {}).neu || {};
+  const statTxt = st.trades ? 'Neue Regeln, simuliert: ' + st.trades + ' Trades (' + (st.offen || 0) + ' offen), Trefferquote ' + (st.trefferquote_pct != null ? st.trefferquote_pct + ' %' : '–') +
+    ', Ø Trade ' + fmtPct(st.schnitt_trade_pct) + ', bester ' + fmtPct(st.bester_trade_pct) + ', schlechtester ' + fmtPct(st.schlechtester_trade_pct) + '.' : "";
+
+  el.innerHTML = '<div class="perf-tiles">' + tiles + '</div>' +
+    '<div class="perf-chart">' + svg + '<div class="perf-tip"></div></div>' +
+    '<div class="timestamp">' + statTxt + '</div>' +
+    '<div class="timestamp">' + (data.hinweis || "") + ' Index = 100 am ' + new Date(data.start).toLocaleDateString("de-DE") + ', Werte in USD. Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
+
+  const box = el.querySelector(".perf-chart"), svgEl = box.querySelector("svg"), tip = box.querySelector(".perf-tip"), cur = svgEl.querySelector(".perf-cursor");
+  const move = (clientX) => {
+    const rect = svgEl.getBoundingClientRect();
+    const sx = (clientX - rect.left) / rect.width * W;
+    let i = Math.round((sx - L) / (W - L - R) * (n - 1));
+    i = Math.max(0, Math.min(n - 1, i));
+    cur.setAttribute("x1", x(i)); cur.setAttribute("x2", x(i)); cur.style.display = "";
+    tip.innerHTML = '<b>' + new Date(data.daten[i]).toLocaleDateString("de-DE") + '</b><br>' + data.reihen.map((r) => {
+      const v = r.werte[i];
+      return '<span class="sw" style="display:inline-block;width:8px;height:3px;margin-right:5px;vertical-align:middle;background:' + (PERF_FARBEN[r.key] || "#888") + '"></span>' + r.label + ': ' + (v == null ? "–" : fmtPct(v - 100));
+    }).join("<br>");
+    tip.style.display = "block";
+    const px = (x(i) / W) * rect.width;
+    tip.style.left = Math.min(Math.max(0, px + 10), rect.width - tip.offsetWidth) + "px";
+    tip.style.top = "6px";
+  };
+  svgEl.addEventListener("mousemove", (e) => move(e.clientX));
+  svgEl.addEventListener("touchmove", (e) => { if (e.touches[0]) move(e.touches[0].clientX); }, { passive: true });
+  svgEl.addEventListener("mouseleave", () => { tip.style.display = "none"; cur.style.display = "none"; });
+}
+
 function renderFilterBilanz(data) {
   const el = document.getElementById("filterBilanz");
   if (!data || !data.gruppen || !data.gruppen.length) return;
@@ -554,7 +633,7 @@ function renderHeadlines(data) {
 }
 
 function renderNewsToday(data) { const el = document.getElementById("newsToday"); if (!data || !data.entries || !data.entries.length) return; el.innerHTML = data.entries.slice().reverse().map((e) => { const items = (e.headlines || []).map((h) => '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a><div class="src">' + (h.source || "") + '</div></div>').join(""); return '<div style="margin-bottom:14px;"><div class="timestamp" style="font-weight:600;">' + (e.time_local || "") + ' Uhr</div>' + items + '</div>'; }).join(""); } async function init() {
-  const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking, filterBilanz, p1, p55, p5] = await Promise.all([
+  const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking, filterBilanz, p1, p55, p5, performance] = await Promise.all([
     fetchJson("p4_latest.json"),
     fetchJson("p4_candidates.json"),
     fetchJson("p55_candidates.json"),
@@ -566,6 +645,7 @@ function renderNewsToday(data) { const el = document.getElementById("newsToday")
     fetchJson("p1_latest.json"),
     fetchJson("p55_latest.json"),
     fetchJson("p5_latest.json"),
+    fetchJson("performance.json"),
   ]);
   const feed = latestFeed([p4, p5, p55, p1]);
   renderAmpel(barometer, p4, feed);
@@ -576,6 +656,7 @@ function renderNewsToday(data) { const el = document.getElementById("newsToday")
   renderCandidateTracking(candidateTracking);
   renderHistorie(candidateTracking);
   renderFilterBilanz(filterBilanz);
+  renderPerformance(performance);
   renderTop3(top3);
   renderHeadlines(headlines); renderNewsToday(newsToday);
 }
