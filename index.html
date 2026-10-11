@@ -85,6 +85,18 @@
   .footer-link:hover { border-color: var(--green); }
   .timestamp { color: var(--muted); font-size: 11px; margin-top: 6px; }
 
+  .emp-neutral { background: rgba(148,163,184,.15); color: var(--muted); }
+  .krit { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 12px; color: var(--muted); }
+  .krit .ok { color: var(--green); } .krit .no { color: var(--red); } .krit .na { color: #6b7280; }
+  .levels { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 8px; font-size: 12px; }
+  .levels span b { color: var(--text); font-weight: 600; }
+  .levels span { color: var(--muted); }
+  .flag { display: inline-block; margin: 6px 6px 0 0; padding: 1px 7px; border-radius: 6px; font-size: 11px; background: rgba(241,196,15,.12); color: var(--yellow); }
+  .bilanz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+  .bilanz-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px; font-size: 12px; color: var(--muted); }
+  .bilanz-card .big { font-size: 18px; font-weight: 700; color: var(--text); margin: 4px 0; }
+  details summary { cursor: pointer; color: var(--muted); font-size: 13px; margin-top: 12px; }
+
   /* Mobile: die datenreiche Tabelle (Kandidaten-Tracking) wird unter 640px
      zu Karten mit Label:Wert-Paaren statt einer gequetschten Tabelle -
      besser lesbar auf dem Handy. */
@@ -125,8 +137,11 @@
   <h2>P5.5 &ndash; Second-Chance-Check</h2>
   <div id="p55candidates"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P5.5-Lauf befüllt.</div></div>
 
-  <h2>Kandidaten-Tracking (Performance seit Aufnahme)</h2>
+  <h2>Kandidaten-Tracking (aktiv &amp; überdehnt)</h2>
   <div id="candidateTracking" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
+
+  <h2>Filter-Bilanz (Kandidaten vs. Nasdaq)</h2>
+  <div id="filterBilanz" class="card"><div class="placeholder">Noch keine Daten &ndash; wird beim nächsten P1-Lauf berechnet.</div></div>
 
   <h2>Top-Empfehlung des Tages</h2>
   <div id="top3"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
@@ -177,7 +192,25 @@ function computeAmpelFromIndices(idx) {
   return { status: "NEUTRAL", reason: "Gemischtes Bild zwischen Indizes (automatisch aus Rohdaten berechnet)." };
 }
 
-function renderAmpel(barometer, p4) {
+function latestFeed(feeds) {
+  return feeds.filter((f) => f && f.generated_at_utc).sort((a, b) => new Date(b.generated_at_utc) - new Date(a.generated_at_utc))[0] || null;
+}
+
+function renderRegimeKriterien(feed) {
+  if (!feed || !feed.regime || !feed.regime.kriterien) return "";
+  const r = feed.regime;
+  const items = r.kriterien.map((k) => {
+    const cls = k.erfuellt === true ? "ok" : k.erfuellt === false ? "no" : "na";
+    const sym = k.erfuellt === true ? "✓" : k.erfuellt === false ? "✗" : "?";
+    const wert = typeof k.wert === "number" ? " (" + k.wert.toLocaleString("de-DE") + ")" : "";
+    return '<span class="' + cls + '">' + sym + " " + k.kriterium + wert + "</span>";
+  }).join("");
+  const hinweise = (r.hinweise || []).map((h) => '<span class="na">' + h + "</span>").join("");
+  return '<div class="krit">' + items + "</div>" +
+    '<div class="krit"><span>Feed-Regime: <b style="color:var(--text)">' + r.status + "</b> · max. neue Positionen: " + r.max_neue_positionen + (r.override ? " · " + r.override : "") + "</span>" + hinweise + "</div>";
+}
+
+function renderAmpel(barometer, p4, feed) {
   const el = document.getElementById("ampel");
   let status, reason, ts;
   if (barometer && barometer.status) {
@@ -199,13 +232,12 @@ function renderAmpel(barometer, p4) {
     '<div class="dot ' + color + '"></div>' +
     '<div><div class="ampel-status">' + status + '</div>' +
     '<div class="ampel-reason">' + reason + '</div>' +
-    '<div class="timestamp">Stand: ' + fmtTime(ts) + '</div></div>';
+    '<div class="timestamp">Stand: ' + fmtTime(ts) + '</div>' + renderRegimeKriterien(feed) + '</div>';
 }
 
 function renderSektorrotation(barometer) {
   const el = document.getElementById("sektorrotation");
   if (!barometer || !barometer.sektor_rotation || !barometer.sektor_rotation.length) return;
-  const empCls = (e) => e === "Kauf" ? "emp-kauf" : e === "Verkauf" ? "emp-verkauf" : "emp-halten";
   el.innerHTML = '<table class="sector-table"><thead><tr><th>Sektor</th><th>Kandidaten</th></tr></thead><tbody>' +
     barometer.sektor_rotation.map((s) => {
       const cls = s.trend === "positiv" ? "trend-positiv" : s.trend === "negativ" ? "trend-negativ" : "trend-neutral";
@@ -221,14 +253,15 @@ function renderSektorrotation(barometer) {
 function renderIndices(p4) {
   const el = document.getElementById("indices");
   if (!p4 || !p4.indices) { el.innerHTML = '<div class="placeholder">Keine Daten verfügbar.</div>'; return; }
+  const tnx = p4.macro && p4.macro.us10y;
   const names = { NASDAQ_COMPOSITE: "Nasdaq (QQQ)", SP500: "S&P 500 (SPY)", RUSSELL2000: "Russell 2000 (IWM)", VIX: "VIX", SOX_PROXY: "Semiconductors (SOXX)" };
   el.innerHTML = Object.keys(names).map((k) => {
     const v = p4.indices[k];
     if (!v || v.close == null) return "";
     return '<div class="idx-card"><div class="idx-name">' + names[k] + '</div>' +
       '<div class="idx-price">' + v.close + '</div>' +
-      '<div class="idx-rsi" style="color:var(--muted)">RSI ' + (v.rsi14 != null ? v.rsi14 : "-") + '</div></div>';
-  }).join("");
+      '<div class="idx-rsi" style="color:var(--muted)">' + (v.rsi14 != null ? "RSI " + v.rsi14 : (v.pct_from_sma20 != null ? "zu SMA20: " + v.pct_from_sma20 + " %" : "")) + '</div></div>';
+  }).join("") + (tnx && tnx.available ? '<div class="idx-card"><div class="idx-name">US-Rendite 10J</div><div class="idx-price">' + tnx.close + ' %</div><div class="idx-rsi" style="color:var(--muted)">20 Tage: ' + (tnx.chg_20d_abs >= 0 ? "+" : "") + tnx.chg_20d_abs + ' Pkt.</div></div>' : "");
 }
 
 function renderMiniAmpel(ampel) {
@@ -241,24 +274,58 @@ function renderMiniAmpel(ampel) {
   }).join("") + '</div>';
 }
 
+function stufeCls(stufe, score) {
+  if (stufe) {
+    if (stufe.startsWith("Kauf – hohe")) return "score-hoch";
+    if (stufe.startsWith("Kauf")) return "score-hoch";
+    if (stufe.startsWith("Beobachten")) return "score-mittel";
+    if (stufe.startsWith("Überdehnt")) return "score-mittel";
+    return "score-neutral";
+  }
+  return score === "hoch" ? "score-hoch" : score === "niedrig" ? "score-niedrig" : "score-mittel";
+}
+
+function eur(x) {
+  return typeof x === "number" ? x.toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €" : "–";
+}
+
+function renderLevels(l) {
+  if (!l || l.einstieg_eur == null) return "";
+  return '<div class="levels">' +
+    '<span>Einstieg <b>' + eur(l.einstieg_eur) + '</b>' + (l.einstieg_typ ? " (" + l.einstieg_typ + ")" : "") + '</span>' +
+    '<span>Stop <b>' + eur(l.stop_eur) + '</b></span>' +
+    '<span>Ziel 1 <b>' + eur(l.ziel1_eur) + '</b></span>' +
+    '<span>Ziel 2 <b>' + eur(l.ziel2_eur) + '</b></span>' +
+    (l.stueck != null ? '<span>Stück <b>' + l.stueck + '</b>' + (l.kapitalbedarf_eur != null ? " (" + eur(l.kapitalbedarf_eur) + ")" : "") + '</span>' : "") +
+    '</div>';
+}
+
 function renderCandidates(data) {
   const el = document.getElementById("candidates");
   if (!data || !data.candidates || !data.candidates.length) return;
   el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Stand: ' + fmtTime(data.generated_at_utc) + '</div>' +
     data.candidates.map((c) => {
-      const scoreCls = c.score === "hoch" ? "score-hoch" : c.score === "niedrig" ? "score-niedrig" : "score-mittel";
+      const isNum = typeof c.score === "number";
+      const badge = isNum ? (c.stufe || "") + " · " + c.score : (c.score || "-");
+      const korr = isNum && c.score_korrektur ? ' <span class="timestamp">(Feed ' + c.feed_score + ', News ' + (c.score_korrektur > 0 ? "+" : "") + c.score_korrektur + ')</span>' : "";
+      const flags = (c.bulltrap_flags || []).map((f) => '<span class="flag">' + f + '</span>').join("");
       return '<div class="cand-card"><div class="cand-top">' +
         '<div><span class="cand-ticker">' + (c.name || c.ticker) + '</span> <span class="cand-sector">' + (c.sector || "") + '</span></div>' +
-        '<span class="score-badge ' + scoreCls + '">' + (c.score || "-") + '</span></div>' +
-        '<div class="cand-begr">' + (c.begruendung || "") + '</div>' +
+        '<span class="score-badge ' + stufeCls(c.stufe, c.score) + '">' + badge + '</span></div>' +
+        '<div class="cand-begr">' + (c.begruendung || "") + korr + '</div>' +
+        renderLevels(c.levels) + flags +
+        (c.earnings ? '<div class="timestamp">Earnings: ' + c.earnings + '</div>' : "") +
         renderMiniAmpel(c.ampel) + '</div>';
-    }).join("");
+    }).join("") +
+    ((data.ausgeschlossen || []).length ? '<div class="timestamp">Ausgeschlossen: ' + data.ausgeschlossen.map((a) => a.name + " (" + a.grund + ")").join(" · ") + '</div>' : "");
 }
 
 function renderP55Candidates(data) {
   const el = document.getElementById("p55candidates");
   if (!data || !data.kandidaten || !data.kandidaten.length) return;
-  const ergebnisCls = data.ergebnis === "Trade" ? "score-hoch" : "score-niedrig";
+  const ergebnisCls = (data.ergebnis === "Trade" || data.ergebnis === "Trade möglich") ? "score-hoch" : "score-niedrig";
+  const chkLabels = { ueber_vwap: "über VWAP", ueber_eroeffnung: "über Eröffnung", staerker_als_sp500: "stärker als S&P 500", volumen_ueber_schnitt: "Volumen über Schnitt" };
+  const einstiegTxt = { ja: "Einstieg heute möglich", limit: "Limit-Order am Einstieg", nein: "heute kein Einstieg" };
   el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Stand: ' + fmtTime(data.generated_at_utc) + '</div>' +
     '<div class="cand-card" style="margin-bottom:10px;"><div class="cand-top">' +
       '<div><span class="cand-ticker">Ergebnis</span></div>' +
@@ -269,32 +336,78 @@ function renderP55Candidates(data) {
       return '<div class="cand-card"><div class="cand-top">' +
         '<div><span class="cand-ticker">' + (c.name || c.ticker) + '</span> <span class="cand-sector">' + (c.sector || "") + '</span></div>' +
         '<span class="score-badge ' + statusCls + '">' + (c.status || "-") + '</span></div>' +
-        '<div class="cand-begr">' + (c.begruendung || "") + '</div></div>';
+        '<div class="cand-begr">' + (c.begruendung || "") + '</div>' +
+        (c.checks ? '<div class="krit">' + Object.keys(chkLabels).map((k) => {
+          const v = c.checks[k];
+          return '<span class="' + (v === true ? "ok" : v === false ? "no" : "na") + '">' + (v === true ? "✓ " : v === false ? "✗ " : "? ") + chkLabels[k] + '</span>';
+        }).join("") + (c.relatives_volumen != null ? '<span>rel. Volumen ' + c.relatives_volumen + 'x</span>' : "") + '</div>' : "") +
+        (c.einstieg_heute ? '<div class="timestamp" style="font-weight:600;">' + (einstiegTxt[c.einstieg_heute] || c.einstieg_heute) + '</div>' : "") +
+        '</div>';
     }).join("");
+}
+
+function empCls(e) {
+  if (e === "Kauf") return "emp-kauf";
+  if (e === "Verkauf") return "emp-verkauf";
+  if (e === "Kein Einstieg") return "emp-neutral";
+  return "emp-halten";
+}
+
+function pctHtml(v) {
+  if (typeof v !== "number") return "–";
+  return '<span style="color:' + (v >= 0 ? "var(--green)" : "var(--red)") + ';font-weight:700;">' + (v >= 0 ? "+" : "") + v.toFixed(2) + " %</span>";
+}
+
+function isOpenStatus(st) {
+  const s = (st || "").toLowerCase();
+  return s === "aktiv" || s.indexOf("überdehnt") >= 0 || s.indexOf("ueberdehnt") >= 0;
+}
+
+function trackingRows(list) {
+  return list.map((k) => {
+    return '<tr>' +
+      '<td data-label="Kandidat">' + (k.name || k.ticker) + '<div class="cand-sector">' + (k.sector || "") + '</div></td>' +
+      '<td data-label="Aufnahme">' + (k.aufnahmedatum || "-") + '<div class="timestamp">' + (k.aufnahme_stufe || k.aufnahme_score || "") + '</div></td>' +
+      '<td data-label="Status">' + (k.status || "-") + (k.wiedereinstieg_eur ? '<div class="timestamp">Wiedereinstieg ' + eur(k.wiedereinstieg_eur) + '</div>' : "") + '</td>' +
+      '<td data-label="Aktie (USD)">' + pctHtml(k.performance_pct) + '</td>' +
+      '<td data-label="Nasdaq">' + pctHtml(k.nasdaq_performance_pct) + '</td>' +
+      '<td data-label="Überrendite">' + pctHtml(k.ueberrendite_pct) + '</td>' +
+      '<td data-label="Tage">' + (k.handelstage_seit_aufnahme != null ? k.handelstage_seit_aufnahme : (k.handelstage_in_liste != null ? k.handelstage_in_liste : "-")) + '</td>' +
+      '<td data-label="Empfehlung"><span class="emp-badge ' + empCls(k.empfehlung) + '">' + (k.empfehlung || "-") + '</span></td>' +
+      '</tr>' +
+      (k.letzte_einschaetzung ? '<tr><td colspan="8" class="cand-begr mobile-full" style="padding-top:0;">' + k.letzte_einschaetzung + '</td></tr>' : "");
+  }).join("");
+}
+
+function trackingTable(list) {
+  return '<table class="responsive-mobile"><thead><tr><th>Kandidat</th><th>Aufnahme</th><th>Status</th><th>Aktie (USD)</th><th>Nasdaq</th><th>Überrendite</th><th>Tage</th><th>Empfehlung</th></tr></thead><tbody>' + trackingRows(list) + '</tbody></table>';
 }
 
 function renderCandidateTracking(data) {
   const el = document.getElementById("candidateTracking");
   if (!data || !data.kandidaten || !data.kandidaten.length) return;
-  const empCls = (e) => e === "Kauf" ? "emp-kauf" : e === "Verkauf" ? "emp-verkauf" : "emp-halten";
-  const eurFmt = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" });
-  const rows = data.kandidaten.slice().sort((a, b) => (b.performance_pct || 0) - (a.performance_pct || 0)).map((k) => {
-    const perf = typeof k.performance_pct === "number" ? k.performance_pct : null;
-    const perfCls = perf === null ? "" : (perf >= 0 ? "color:var(--green)" : "color:var(--red)");
-    const perfText = perf === null ? "–" : (perf >= 0 ? "+" : "") + perf.toFixed(2) + "%";
-    return '<tr>' +
-      '<td data-label="Kandidat">' + (k.name || k.ticker) + '<div class="cand-sector">' + (k.sector || "") + '</div></td>' +
-      '<td data-label="Aufnahme">' + (k.aufnahmedatum || "-") + '<div class="timestamp">' + (k.aufnahmequelle || "") + (k.aufnahme_score ? " · " + k.aufnahme_score : "") + '</div></td>' +
-      '<td data-label="Einstieg">' + (typeof k.aufnahme_kurs_eur === "number" ? eurFmt.format(k.aufnahme_kurs_eur) : "-") + '</td>' +
-      '<td data-label="Aktuell">' + (typeof k.aktueller_kurs_eur === "number" ? eurFmt.format(k.aktueller_kurs_eur) : "-") + '</td>' +
-      '<td data-label="Performance" style="' + perfCls + '; font-weight:700;">' + perfText + '</td>' +
-      '<td data-label="Handelstage">' + (k.handelstage_in_liste != null ? k.handelstage_in_liste : "-") + '</td>' +
-      '<td data-label="Empfehlung"><span class="emp-badge ' + empCls(k.empfehlung) + '">' + (k.empfehlung || "-") + '</span></td>' +
-      '</tr>' +
-      (k.letzte_einschaetzung ? '<tr><td colspan="7" class="cand-begr mobile-full" style="padding-top:0;">' + k.letzte_einschaetzung + '</td></tr>' : "");
-  }).join("");
-  el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Stand: ' + fmtTime(data.generated_at_utc) + (data.hinweis ? ' &middot; ' + data.hinweis : '') + '</div>' +
-    '<table class="responsive-mobile"><thead><tr><th>Kandidat</th><th>Aufnahme</th><th>Einstieg</th><th>Aktuell</th><th>Performance</th><th>Handelstage</th><th>Empfehlung</th></tr></thead><tbody>' + rows + '</tbody></table>';
+  const sortFn = (a, b) => (b.ueberrendite_pct != null ? b.ueberrendite_pct : (b.performance_pct || 0)) - (a.ueberrendite_pct != null ? a.ueberrendite_pct : (a.performance_pct || 0));
+  const offen = data.kandidaten.filter((k) => isOpenStatus(k.status)).sort(sortFn);
+  const raus = data.kandidaten.filter((k) => !isOpenStatus(k.status)).sort((a, b) => (b.aufnahmedatum || "").localeCompare(a.aufnahmedatum || ""));
+  el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Stand Status: ' + fmtTime(data.generated_at_utc) +
+    (data.kurse_aktualisiert_utc ? ' &middot; Kurse: ' + fmtTime(data.kurse_aktualisiert_utc) : '') + ' &middot; Performance in USD seit Aufnahme, verglichen mit Nasdaq-100 (QQQ)</div>' +
+    (offen.length ? trackingTable(offen) : '<div class="placeholder">Aktuell keine aktiven Kandidaten.</div>') +
+    (raus.length ? '<details><summary>Aussortierte und getradete Kandidaten (' + raus.length + ')</summary>' + trackingTable(raus) + '</details>' : "");
+}
+
+function renderFilterBilanz(data) {
+  const el = document.getElementById("filterBilanz");
+  if (!data || !data.gruppen || !data.gruppen.length) return;
+  const card = (g) => {
+    const s10 = g.nach_10_tagen, s0 = g.seit_aufnahme;
+    const main = s10 || s0;
+    return '<div class="bilanz-card"><div>' + g.label + ' (' + g.eintraege + ')</div>' +
+      '<div class="big">' + (main ? pctHtml(main.schnitt_ueberrendite_pct) : "–") + '</div>' +
+      '<div>' + (s10 ? "Ø Überrendite nach 10 Tagen (n=" + s10.anzahl + ", Treffer " + s10.trefferquote_pct + " %)" : (s0 ? "Ø Überrendite seit Aufnahme (n=" + s0.anzahl + ")" : "")) + '</div></div>';
+  };
+  el.innerHTML = (data.fazit ? '<div style="font-size:13px;margin-bottom:10px;">' + data.fazit + '</div>' : "") +
+    '<div class="bilanz-grid">' + data.gruppen.map(card).join("") + '</div>' +
+    '<div class="timestamp">Überrendite = Aktie minus Nasdaq-100 im selben Zeitraum (USD). Positiv bei aussortierten Kandidaten heißt: Filter hat Gewinne liegen gelassen. Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
 }
 
 function renderTop3(data) {
@@ -303,9 +416,10 @@ function renderTop3(data) {
   el.innerHTML = '<div class="top3-box">' +
     data.top3.map((t, i) =>
       '<div class="top3-item"><div class="top3-rank">' + (i + 1) + '.</div>' +
-      '<div><div class="top3-ticker">' + (t.name || t.ticker) + '</div><div class="top3-begr">' + (t.begruendung || "") + '</div></div></div>'
+      '<div><div class="top3-ticker">' + (t.name || t.ticker) + (t.aktion ? ' <span class="emp-badge ' + (t.aktion === "Beobachten" ? "emp-halten" : "emp-kauf") + '">' + t.aktion + '</span>' : "") + '</div><div class="top3-begr">' + (t.begruendung || "") + '</div></div></div>'
     ).join("") +
     (data.gesamteinschaetzung ? '<div class="gesamt">' + data.gesamteinschaetzung + '</div>' : "") +
+    (data.filter_bilanz ? '<div class="timestamp">' + data.filter_bilanz + '</div>' : "") +
     '<div class="timestamp">Stand: ' + fmtTime(data.generated_at_utc) + '</div></div>';
 }
 
@@ -319,7 +433,7 @@ function renderHeadlines(data) {
 }
 
 function renderNewsToday(data) { const el = document.getElementById("newsToday"); if (!data || !data.entries || !data.entries.length) return; el.innerHTML = data.entries.slice().reverse().map((e) => { const items = (e.headlines || []).map((h) => '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a><div class="src">' + (h.source || "") + '</div></div>').join(""); return '<div style="margin-bottom:14px;"><div class="timestamp" style="font-weight:600;">' + (e.time_local || "") + ' Uhr</div>' + items + '</div>'; }).join(""); } async function init() {
-  const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking] = await Promise.all([
+  const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking, filterBilanz, p1, p55, p5] = await Promise.all([
     fetchJson("p4_latest.json"),
     fetchJson("p4_candidates.json"),
     fetchJson("p55_candidates.json"),
@@ -327,13 +441,19 @@ function renderNewsToday(data) { const el = document.getElementById("newsToday")
     fetchJson("market_barometer.json"),
     fetchJson("headlines.json"), fetchJson("news_summary_today.json"),
     fetchJson("candidate_tracking.json"),
+    fetchJson("filter_bilanz.json"),
+    fetchJson("p1_latest.json"),
+    fetchJson("p55_latest.json"),
+    fetchJson("p5_latest.json"),
   ]);
-  renderAmpel(barometer, p4);
+  const feed = latestFeed([p4, p5, p55, p1]);
+  renderAmpel(barometer, p4, feed);
   renderSektorrotation(barometer);
-  renderIndices(p4);
+  renderIndices(feed || p4);
   renderCandidates(candidates);
   renderP55Candidates(p55Candidates);
   renderCandidateTracking(candidateTracking);
+  renderFilterBilanz(filterBilanz);
   renderTop3(top3);
   renderHeadlines(headlines); renderNewsToday(newsToday);
 }
