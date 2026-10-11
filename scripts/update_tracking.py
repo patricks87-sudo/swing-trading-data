@@ -151,6 +151,15 @@ def update(eurusd=None):
     bilanz = build_bilanz(eintraege)
     with open(BILANZ, "w") as fh:
         json.dump(bilanz, fh, indent=2, ensure_ascii=False)
+
+    # Strategie-Performance vs. Nasdaq/MSCI World (seit 11.10.2026)
+    try:
+        import performance
+
+        performance.write(eintraege)
+        print("performance.json aktualisiert")
+    except Exception as e:
+        print(f"Performance-Berechnung fehlgeschlagen (Lauf laeuft weiter): {e}")
     return bilanz
 
 
