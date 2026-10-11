@@ -710,6 +710,23 @@ def build_snapshot(run_label: str):
     for ticker, entry in snapshot["watchlist"].items():
         if isinstance(entry, dict) and "error" not in entry:
             entry["setup"] = analysis.compute_setup(entry, spy, sectors, snapshot["eurusd"])
+
+    # News-Signale der Nachrichten-Aufgaben (data/news_signals.json)
+    try:
+        with open(os.path.join(OUTPUT_DIR, "news_signals.json")) as fh:
+            signale = json.load(fh).get("signale", [])
+        news = analysis.news_bewertung(signale, datetime.now(timezone.utc).date())
+    except Exception as e:
+        print(f"News-Signale nicht lesbar: {e}")
+        news = {}
+    for ticker, entry in snapshot["watchlist"].items():
+        if isinstance(entry, dict) and "setup" in entry:
+            n = news.get(ticker)
+            entry["news"] = n or {"positiv": 0, "negativ": 0, "neutral": 0, "korrektur_vorschlag": 0,
+                                  "ausschluss": None, "signale": []}
+            if n and n.get("ausschluss"):
+                entry["setup"].setdefault("ausschluesse", []).append(n["ausschluss"])
+                entry["setup"]["stufe"] = "Ausgeschlossen"
     ranking = sorted(
         (
             {"ticker": t, "score": e["setup"]["score"], "stufe": e["setup"]["stufe"], "sector": e.get("sector")}
@@ -727,9 +744,12 @@ def build_snapshot(run_label: str):
             "Beobachten": analysis.SCORE_BEOBACHTEN,
         },
         "stop_atr_mult": analysis.STOP_ATR_MULT,
-        "ziel1_r": analysis.TARGET1_R,
-        "ziel2_r": analysis.TARGET2_R,
+        "haltedauer_tage": analysis.HALTEDAUER_TAGE,
         "risiko_pro_trade_eur": analysis.RISK_PER_TRADE_EUR,
+        "max_gesamtrisiko_eur": analysis.MAX_GESAMTRISIKO_EUR,
+        "max_position_eur": analysis.MAX_POSITION_EUR,
+        "max_je_sektor": analysis.MAX_JE_SEKTOR,
+        "depot_eur": analysis.DEPOT_EUR,
         "earnings_sperre_handelstage": analysis.EARNINGS_BLOCK_TRADING_DAYS,
     }
 
@@ -799,6 +819,16 @@ def main():
             print("Kandidaten-Tracking und Filter-Bilanz aktualisiert")
         except Exception as e:
             print(f"Tracking-Update fehlgeschlagen (Lauf laeuft weiter): {e}")
+
+    # Trade-Journal: offene Positionen mit den frischen Kursen neu bewerten
+    # (schreibt data/journal.json und data/portfolio.json, ohne Netzabfrage).
+    try:
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts"))
+        import journal
+
+        journal.nur_bewerten()
+    except Exception as e:
+        print(f"Journal-Bewertung fehlgeschlagen (Lauf laeuft weiter): {e}")
 
 
 if __name__ == "__main__":
