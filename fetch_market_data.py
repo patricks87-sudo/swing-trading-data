@@ -23,6 +23,8 @@ from datetime import date, datetime, timezone
 
 import requests
 
+import analysis
+
 # ---------------------------------------------------------------------------
 # KONFIGURATION - hier anpassen
 # ---------------------------------------------------------------------------
@@ -136,15 +138,11 @@ INDEX_SYMBOLS = {
     "NASDAQ_COMPOSITE": "QQQ",
     "SP500": "SPY",
     "RUSSELL2000": "IWM",
-    # Testlauf am 20.09.2026 bestaetigt: "VIX" ist im genutzten Twelve-Data-
-    # Free-Tier NICHT verfuegbar (HTTP 404). Bis 19.09.2026 war hier VIXY
-    # (ETF-Proxy) hinterlegt - durch Rollverluste/Contango bei gehaltenen
-    # VIX-Futures strukturell zu hohe Werte, was die Risk-Off-Ampel zu
-    # empfindlich gemacht hat. Seit dem Testlauf: VIXM (mittelfristige
-    # VIX-Futures-ETN) als dokumentierter Fallback - deutlich weniger
-    # Rollverlust als VIXY, da auf Futures mit 4-7 Monaten Restlaufzeit
-    # statt der vordersten (volatilsten) Kontrakte basierend.
-    "VIX": "VIXM",
+    # VIX: seit 11.10.2026 NICHT mehr ueber Twelve Data. Vorher stand hier
+    # VIXM (VIX-Futures-ETN) - dessen Kurs ist aber kein VIX-Stand, die
+    # Regel "VIX < 18" verglich also einen Fondspreis mit einer Index-
+    # Schwelle. Der echte CBOE-VIX (^VIX) kommt jetzt kostenlos ueber
+    # yfinance, siehe fetch_macro() - ebenso die US-10J-Rendite (^TNX).
     # SOX (Philadelphia Semiconductor Index) ist auf dem Free-Tier evtl. nicht
     # direkt verfuegbar - SOXX (ETF) dient hier als Naeherungswert.
     "SOX_PROXY": "SOXX",
@@ -287,11 +285,140 @@ def fetch_options_flow(ticker: str):
     except Exception as e:
         return {"available": False, "error": str(e)}
 
+
+# ---------------------------------------------------------------------------
+# yfinance-Zusatzdaten (ergaenzt 11.10.2026, Umbau Filterlogik)
+# Alle Funktionen liefern bei Fehlern {"available": False, ...} und brechen
+# den Lauf nie ab - Kennzeichnen statt Schaetzen.
+# ---------------------------------------------------------------------------
+
+def _yf_daily_summary(symbol: str):
+    try:
+        import yfinance as yf
+
+        hist = yf.Ticker(symbol).history(period="6mo", interval="1d")
+        if hist is None or hist.empty:
+            return {"available": False, "reason": f"keine Daten fuer {symbol}"}
+        closes = hist["Close"].dropna()
+        close = float(closes.iloc[-1])
+        sma20 = float(closes.tail(20).mean()) if len(closes) >= 20 else None
+        sma50 = float(closes.tail(50).mean()) if len(closes) >= 50 else None
+        prev20 = float(closes.iloc[-21]) if len(closes) >= 21 else None
+        return {
+            "available": True,
+            "symbol": symbol,
+            "datum": str(closes.index[-1].date()),
+            "close": round(close, 2),
+            "sma20": round(sma20, 2) if sma20 else None,
+            "sma50": round(sma50, 2) if sma50 else None,
+            "pct_from_sma20": round((close - sma20) / sma20 * 100, 2) if sma20 else None,
+            "chg_20d_abs": round(close - prev20, 2) if prev20 else None,
+        }
+    except Exception as e:
+        return {"available": False, "error": str(e)}
+
+
+def fetch_macro():
+    """Echter CBOE-VIX und US-10J-Rendite (^TNX, in Prozent)."""
+    return {"vix": _yf_daily_summary("^VIX"), "us10y": _yf_daily_summary("^TNX")}
+
+
+def fetch_earnings(ticker: str):
+    """Naechster Earnings-Termin ueber yfinance + Handelstage bis dahin."""
+    try:
+        import numpy as np
+        import yfinance as yf
+
+        cal = yf.Ticker(ticker).calendar
+        dates = []
+        if isinstance(cal, dict):
+            raw = cal.get("Earnings Date") or []
+            dates = raw if isinstance(raw, (list, tuple)) else [raw]
+        elif cal is not None and hasattr(cal, "loc"):
+            try:
+                dates = list(cal.loc["Earnings Date"].values)
+            except Exception:
+                dates = []
+        today = date.today()
+        future = sorted(
+            d for d in (
+                (x.date() if hasattr(x, "date") and callable(x.date) else x) for x in dates
+            ) if isinstance(d, date) and d >= today
+        )
+        if not future:
+            return {"available": False, "reason": "kein kuenftiger Termin bei yfinance"}
+        nxt = future[0]
+        tage = int(np.busday_count(today, nxt))
+        return {"available": True, "datum": nxt.isoformat(), "handelstage_bis": tage}
+    except Exception as e:
+        return {"available": False, "error": str(e)}
+
+
+def _bars_by_session(hist):
+    """5-Minuten-Kerzen nach Handelstag (US-Ostkueste) gruppieren."""
+    sessions = {}
+    for ts, row in hist.iterrows():
+        d = ts.tz_convert("America/New_York").date() if ts.tzinfo else ts.date()
+        sessions.setdefault(d, []).append({
+            "open": float(row["Open"]), "high": float(row["High"]),
+            "low": float(row["Low"]), "close": float(row["Close"]),
+            "volume": 0.0 if row["Volume"] != row["Volume"] else float(row["Volume"]),  # NaN -> 0
+        })
+    return sessions
+
+
+def fetch_intraday_sessions(symbol: str):
+    try:
+        import yfinance as yf
+
+        hist = yf.Ticker(symbol).history(period="5d", interval="5m", prepost=False)
+        if hist is None or hist.empty:
+            return None
+        return _bars_by_session(hist)
+    except Exception as e:
+        print(f"Intraday-Fehler {symbol}: {e}")
+        return None
+
+
+def compute_hold_tests(tickers):
+    """P5.5: Institutional Hold Test fuer die P4-Kandidaten des Tages."""
+    spy_sessions = fetch_intraday_sessions("SPY")
+    if not spy_sessions:
+        return {"available": False, "reason": "SPY-Intraday nicht verfuegbar", "tests": {}}
+    session_day = max(spy_sessions)
+    spy_today = spy_sessions[session_day]
+    spy_chg = (spy_today[-1]["close"] - spy_today[0]["open"]) / spy_today[0]["open"] * 100
+    tests = {}
+    for t in tickers:
+        sessions = fetch_intraday_sessions(t)
+        time.sleep(0.5)
+        if not sessions or session_day not in sessions:
+            tests[t] = analysis.compute_hold_test([], [], spy_chg)
+            continue
+        prev = [sessions[d] for d in sorted(sessions) if d < session_day]
+        tests[t] = analysis.compute_hold_test(sessions[session_day], prev, spy_chg)
+    return {
+        "available": True,
+        "sitzung": session_day.isoformat(),
+        "sp500_chg_seit_eroeffnung_pct": round(spy_chg, 2),
+        "tests": tests,
+    }
+
+
+def load_p4_candidate_tickers():
+    path = os.path.join(OUTPUT_DIR, "p4_candidates.json")
+    try:
+        with open(path) as fh:
+            data = json.load(fh)
+        return [c["ticker"] for c in data.get("candidates", []) if c.get("ticker")][:10]
+    except Exception:
+        return []
+
 # ---------------------------------------------------------------------------
 # Indikatoren selbst berechnen
 # ---------------------------------------------------------------------------
 
-def compute_indicators(values):
+def compute_indicators(values, partial_last_bar: bool = False):
     import pandas as pd
 
     if not values or isinstance(values, dict):
@@ -385,6 +512,26 @@ def compute_indicators(values):
             above = (last10_close[valid_mask] > last10_sma200[valid_mask]).sum()
             pct_above_sma200_10d = round(above / valid_mask.sum() * 100, 1)
 
+    # ------------------------------------------------------------------
+    # Ergaenzt 11.10.2026 (Umbau Filterlogik): Felder fuer den
+    # deterministischen Score in analysis.py
+    chg_20d = None
+    if len(df) >= 21:
+        chg_20d = round((close - df["close"].iloc[-21]) / df["close"].iloc[-21] * 100, 2)
+    obv_trend_20d = round(df["obv"].iloc[-1] - df["obv"].iloc[-21], 0) if len(df) >= 21 else None
+    atr_pct = round(last["atr14"] / close * 100, 2) if pd.notna(last["atr14"]) and close else None
+    atr_pct_series = (df["atr14"] / df["close"] * 100).dropna()
+    atr_pct_avg60 = round(atr_pct_series.tail(60).mean(), 2) if len(atr_pct_series) >= 20 else None
+    # Volumen-Verhaeltnis immer auf Basis des letzten ABGESCHLOSSENEN
+    # Handelstags: waehrend der US-Sitzung (P5/P5.5/P1) ist die letzte
+    # Tageskerze unvollstaendig und liefert bei Twelve Data nur einen
+    # Bruchteil des Volumens (z.B. QQQ 125 Tsd. statt ~33 Mio.).
+    ref = -2 if partial_last_bar and len(df) >= 22 else -1
+    ref_vol = df["volume"].iloc[ref]
+    ref_avg = df["volume"].iloc[ref - 20:ref].mean() if len(df) >= 21 + (1 if ref == -2 else 0) else None
+    volume_ratio = round(ref_vol / ref_avg, 2) if ref_avg else None
+    high_20d = round(df["high"].iloc[-21:-1].max(), 4) if len(df) >= 21 else None
+
     return {
         "close": round(close, 4),
         "rsi14": round(last["rsi14"], 2) if pd.notna(last["rsi14"]) else None,
@@ -403,6 +550,14 @@ def compute_indicators(values):
         "pct_above_sma200_10d": pct_above_sma200_10d,
         "avg_volume_20d": round(df["volume"].tail(20).mean(), 0),
         "last_volume": round(df["volume"].iloc[-1], 0),
+        "chg_20d_pct": chg_20d,
+        "obv_trend_20d": obv_trend_20d,
+        "atr_pct": atr_pct,
+        "atr_pct_avg60": atr_pct_avg60,
+        "volume_ratio": volume_ratio,
+        "volume_ratio_basis": "Vortag (laufende Sitzung unvollständig)" if ref == -2 else "letzter Handelstag",
+        "high_20d": high_20d,
+        "partial_last_bar": partial_last_bar,
     }
 
 
@@ -485,6 +640,9 @@ def compute_breadth(watchlist: dict) -> dict:
     advancers = [e for e in with_chg1d if e["chg_1d_pct"] > 0]
     decliners = [e for e in with_chg1d if e["chg_1d_pct"] < 0]
 
+    with_chg5d = [e for e in entries if isinstance(e.get("chg_5d_pct"), (int, float))]
+    positive_5d = [e for e in with_chg5d if e["chg_5d_pct"] > 0]
+
     if decliners:
         ad_ratio = round(len(advancers) / len(decliners), 2)
     elif advancers:
@@ -495,6 +653,7 @@ def compute_breadth(watchlist: dict) -> dict:
     return {
         "pct_above_sma50": round(len(above_sma50) / len(with_sma50) * 100, 1) if with_sma50 else None,
         "advance_decline_ratio": ad_ratio,
+        "pct_positive_5d": round(len(positive_5d) / len(with_chg5d) * 100, 1) if with_chg5d else None,
         "advancers": len(advancers),
         "decliners": len(decliners),
         "sample_size": len(entries),
@@ -506,6 +665,8 @@ def compute_breadth(watchlist: dict) -> dict:
 # ---------------------------------------------------------------------------
 
 def build_snapshot(run_label: str):
+    # Ab P5 laeuft die US-Sitzung -> letzte Tageskerze ist unvollstaendig
+    partial = run_label in ("p5", "p55", "p1")
     snapshot = {
         "run": run_label,
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -517,20 +678,63 @@ def build_snapshot(run_label: str):
     for name, symbol in INDEX_SYMBOLS.items():
         vals = fetch_time_series(symbol, outputsize=260)
         time.sleep(8)
-        snapshot["indices"][name] = compute_indicators(vals) if isinstance(vals, list) else vals
+        snapshot["indices"][name] = compute_indicators(vals, partial) if isinstance(vals, list) else vals
+
+    macro = fetch_macro()
+    snapshot["macro"] = macro
+    # Cockpit/Prompts erwarten indices.VIX - jetzt der echte VIX
+    if macro["vix"].get("available"):
+        snapshot["indices"]["VIX"] = dict(macro["vix"], quelle="CBOE ^VIX via yfinance")
+    else:
+        snapshot["indices"]["VIX"] = {"error": "echter VIX nicht verfuegbar", "detail": macro["vix"]}
 
     for ticker in WATCHLIST:
         vals = fetch_time_series(ticker, outputsize=260)
         time.sleep(8)
-        result = compute_indicators(vals) if isinstance(vals, list) else vals
+        result = compute_indicators(vals, partial) if isinstance(vals, list) else vals
         if isinstance(result, dict) and "error" not in result:
             result["sector"] = SECTOR_MAP.get(ticker, "Unknown")
             result["options_flow"] = fetch_options_flow(ticker)
+            result["earnings"] = fetch_earnings(ticker)
             time.sleep(1)  # yfinance hat kein dokumentiertes hartes Rate-Limit, kurze Pause aus Ruecksicht
             result["ampel"] = compute_ampel(result)
         snapshot["watchlist"][ticker] = result
 
     snapshot["breadth"] = compute_breadth(snapshot["watchlist"])
+
+    # --- Deterministische Bewertung (analysis.py) ---
+    spy = snapshot["indices"].get("SP500") or {}
+    sectors = analysis.compute_sector_stats(snapshot["watchlist"], spy)
+    snapshot["sectors"] = sectors
+    snapshot["regime"] = analysis.compute_regime(snapshot["indices"], snapshot["breadth"], macro)
+    for ticker, entry in snapshot["watchlist"].items():
+        if isinstance(entry, dict) and "error" not in entry:
+            entry["setup"] = analysis.compute_setup(entry, spy, sectors, snapshot["eurusd"])
+    ranking = sorted(
+        (
+            {"ticker": t, "score": e["setup"]["score"], "stufe": e["setup"]["stufe"], "sector": e.get("sector")}
+            for t, e in snapshot["watchlist"].items()
+            if isinstance(e, dict) and "setup" in e
+        ),
+        key=lambda x: x["score"], reverse=True,
+    )
+    snapshot["ranking"] = ranking
+    snapshot["parameter"] = {
+        "score_gewichte": analysis.SCORE_WEIGHTS,
+        "score_stufen": {
+            "Kauf – hohe Qualität": analysis.SCORE_KAUF_HOCH,
+            "Kauf – solide": analysis.SCORE_KAUF,
+            "Beobachten": analysis.SCORE_BEOBACHTEN,
+        },
+        "stop_atr_mult": analysis.STOP_ATR_MULT,
+        "ziel1_r": analysis.TARGET1_R,
+        "ziel2_r": analysis.TARGET2_R,
+        "risiko_pro_trade_eur": analysis.RISK_PER_TRADE_EUR,
+        "earnings_sperre_handelstage": analysis.EARNINGS_BLOCK_TRADING_DAYS,
+    }
+
+    if run_label == "p55":
+        snapshot["hold_test"] = compute_hold_tests(load_p4_candidate_tickers())
 
     return snapshot
 
@@ -582,6 +786,19 @@ def main():
         json.dump(snapshot, f, indent=2)
 
     print(f"Geschrieben: {filepath}")
+
+    # Forward-Tracking + Filter-Bilanz (seit 11.10.2026) - beim P1-Lauf,
+    # damit Claude danach mit aktuellen Zahlen arbeitet. Fehler hier
+    # duerfen den Lauf nie abbrechen.
+    if args.run == "p1":
+        try:
+            sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts"))
+            import update_tracking
+
+            update_tracking.update(eurusd=snapshot.get("eurusd") if isinstance(snapshot.get("eurusd"), (int, float)) else None)
+            print("Kandidaten-Tracking und Filter-Bilanz aktualisiert")
+        except Exception as e:
+            print(f"Tracking-Update fehlgeschlagen (Lauf laeuft weiter): {e}")
 
 
 if __name__ == "__main__":
