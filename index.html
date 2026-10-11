@@ -80,6 +80,8 @@
   .headline a { color: var(--text); text-decoration: none; }
   .headline a:hover { text-decoration: underline; }
   .headline .src { color: var(--muted); font-size: 11px; margin-top: 2px; }
+  .pub { font-weight: 600; }
+  .pub-frisch { color: var(--green); } .pub-mittel { color: var(--yellow); } .pub-alt { color: var(--red); } .pub-na { color: #6b7280; font-weight: 400; }
   .placeholder { color: var(--muted); font-size: 13px; font-style: italic; padding: 12px 0; }
   .footer-link { display: inline-block; margin-top: 32px; padding: 12px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); text-decoration: none; font-size: 14px; }
   .footer-link:hover { border-color: var(--green); }
@@ -623,16 +625,34 @@ function renderTop3(data) {
     '<div class="timestamp">Stand: ' + fmtTime(data.generated_at_utc) + '</div></div>';
 }
 
+function pubInfo(h) {
+  const iso = h.published_at || h.veroeffentlicht;
+  if (!iso) return '<span class="pub pub-na">Zeitpunkt unbekannt</span>';
+  const d = new Date(iso);
+  if (isNaN(d)) return '<span class="pub pub-na">Zeitpunkt unbekannt</span>';
+  const min = Math.round((Date.now() - d.getTime()) / 60000);
+  let alter;
+  if (min < 60) alter = "vor " + Math.max(1, min) + " Min.";
+  else if (min < 48 * 60) alter = "vor " + Math.round(min / 60) + " Std.";
+  else alter = "vor " + Math.round(min / 1440) + " Tagen";
+  const cls = min <= 6 * 60 ? "pub-frisch" : min <= 24 * 60 ? "pub-mittel" : "pub-alt";
+  const txt = d.toLocaleString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+  return '<span class="pub ' + cls + '">' + txt + ' Uhr · ' + alter + '</span>';
+}
+
+function headlineHtml(h) {
+  return '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a>' +
+    '<div class="src">' + (h.source || "") + (h.source ? " · " : "") + pubInfo(h) + '</div></div>';
+}
+
 function renderHeadlines(data) {
   const el = document.getElementById("headlines");
   if (!data || !data.headlines || !data.headlines.length) return;
-  el.innerHTML = data.headlines.map((h) =>
-    '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a>' +
-    '<div class="src">' + (h.source || "") + '</div></div>'
-  ).join("");
+  el.innerHTML = data.headlines.map(headlineHtml).join("") +
+    (data.generated_at_utc ? '<div class="timestamp">Zusammengestellt: ' + fmtTime(data.generated_at_utc) + '</div>' : "");
 }
 
-function renderNewsToday(data) { const el = document.getElementById("newsToday"); if (!data || !data.entries || !data.entries.length) return; el.innerHTML = data.entries.slice().reverse().map((e) => { const items = (e.headlines || []).map((h) => '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a><div class="src">' + (h.source || "") + '</div></div>').join(""); return '<div style="margin-bottom:14px;"><div class="timestamp" style="font-weight:600;">' + (e.time_local || "") + ' Uhr</div>' + items + '</div>'; }).join(""); } async function init() {
+function renderNewsToday(data) { const el = document.getElementById("newsToday"); if (!data || !data.entries || !data.entries.length) return; el.innerHTML = data.entries.slice().reverse().map((e) => { const items = (e.headlines || []).map(headlineHtml).join(""); return '<div style="margin-bottom:14px;"><div class="timestamp" style="font-weight:600;">' + (e.time_local || "") + ' Uhr</div>' + items + '</div>'; }).join(""); } async function init() {
   const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking, filterBilanz, p1, p55, p5, performance] = await Promise.all([
     fetchJson("p4_latest.json"),
     fetchJson("p4_candidates.json"),
