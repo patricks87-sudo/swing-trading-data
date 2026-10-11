@@ -96,6 +96,12 @@
   .bilanz-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px; font-size: 12px; color: var(--muted); }
   .bilanz-card .big { font-size: 18px; font-weight: 700; color: var(--text); margin: 4px 0; }
   details summary { cursor: pointer; color: var(--muted); font-size: 13px; margin-top: 12px; }
+  .tabs { display: flex; gap: 6px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+  .tab { background: none; border: none; border-bottom: 2px solid transparent; color: var(--muted); font-size: 14px; font-weight: 600; padding: 10px 14px; cursor: pointer; font-family: inherit; }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--text); border-bottom-color: var(--green); }
+  .tab-panel[hidden] { display: none; }
+  .hist-intro { color: var(--muted); font-size: 13px; margin: 16px 0 0 0; }
 
   /* Mobile: die datenreiche Tabelle (Kandidaten-Tracking) wird unter 640px
      zu Karten mit Label:Wert-Paaren statt einer gequetschten Tabelle -
@@ -120,10 +126,16 @@
   <h1>Swing Trading Cockpit</h1>
   <div class="sub">Automatisch aktualisiert &middot; Datenquelle: GitHub Actions + Twelve Data + Claude-Analyse</div>
 
+  <div class="tabs" role="tablist">
+    <button class="tab active" role="tab" id="tab-heute" aria-controls="panel-heute" aria-selected="true" data-tab="heute">Heute</button>
+    <button class="tab" role="tab" id="tab-historie" aria-controls="panel-historie" aria-selected="false" data-tab="historie">Historie &amp; Bilanz</button>
+  </div>
+
+  <div class="tab-panel" id="panel-heute" role="tabpanel" aria-labelledby="tab-heute">
   <h2>Top-3-Schlagzeilen</h2>
   <div id="headlines" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten Analyse-Lauf befüllt.</div></div> <h2>Nachrichtenüberblick heute</h2> <div id="newsToday" class="card"><div class="placeholder">Noch keine Daten – wird im Laufe des Tages befüllt.</div></div>
 
-  <div id="ampel" class="ampel-box card">Lade Marktstimmung...</div>
+  <div id="ampel" class="ampel-box card" style="margin-top:32px;">Lade Marktstimmung...</div>
 
   <h2>Sektorrotation</h2>
   <div id="sektorrotation" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten Analyse-Lauf befüllt.</div></div>
@@ -137,14 +149,22 @@
   <h2>P5.5 &ndash; Second-Chance-Check</h2>
   <div id="p55candidates"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P5.5-Lauf befüllt.</div></div>
 
-  <h2>Kandidaten-Tracking (aktiv &amp; überdehnt)</h2>
+  <h2>Aktive Kandidaten (aktiv &amp; überdehnt)</h2>
   <div id="candidateTracking" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
-
-  <h2>Filter-Bilanz (Kandidaten vs. Nasdaq)</h2>
-  <div id="filterBilanz" class="card"><div class="placeholder">Noch keine Daten &ndash; wird beim nächsten P1-Lauf berechnet.</div></div>
 
   <h2>Top-Empfehlung des Tages</h2>
   <div id="top3"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
+  </div>
+
+  <div class="tab-panel" id="panel-historie" role="tabpanel" aria-labelledby="tab-historie" hidden>
+  <p class="hist-intro">Alle früheren Empfehlungen, die nicht mehr aktiv sind – mit ihrer tatsächlichen Entwicklung seit Aufnahme. Die Kurse aktualisiert das Skript bei jedem P1-Lauf, auch für aussortierte Titel. Alles in USD, verglichen mit dem Nasdaq-100 (QQQ) im selben Zeitraum.</p>
+
+  <h2>Filter-Bilanz</h2>
+  <div id="filterBilanz" class="card"><div class="placeholder">Noch keine Daten &ndash; wird beim nächsten P1-Lauf berechnet.</div></div>
+
+  <h2>Frühere Empfehlungen</h2>
+  <div id="historie" class="card"><div class="placeholder">Noch keine Daten.</div></div>
+  </div>
 
   <a class="footer-link" href="https://claude.ai/cowork/project/019f79db-3af1-7716-a5bd-b16bf5c14770" target="_blank">Heutige Analyse in Claude öffnen &rarr;</a>
 </div>
@@ -388,11 +408,60 @@ function renderCandidateTracking(data) {
   if (!data || !data.kandidaten || !data.kandidaten.length) return;
   const sortFn = (a, b) => (b.ueberrendite_pct != null ? b.ueberrendite_pct : (b.performance_pct || 0)) - (a.ueberrendite_pct != null ? a.ueberrendite_pct : (a.performance_pct || 0));
   const offen = data.kandidaten.filter((k) => isOpenStatus(k.status)).sort(sortFn);
-  const raus = data.kandidaten.filter((k) => !isOpenStatus(k.status)).sort((a, b) => (b.aufnahmedatum || "").localeCompare(a.aufnahmedatum || ""));
+  const raus = data.kandidaten.length - offen.length;
   el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Stand Status: ' + fmtTime(data.generated_at_utc) +
     (data.kurse_aktualisiert_utc ? ' &middot; Kurse: ' + fmtTime(data.kurse_aktualisiert_utc) : '') + ' &middot; Performance in USD seit Aufnahme, verglichen mit Nasdaq-100 (QQQ)</div>' +
     (offen.length ? trackingTable(offen) : '<div class="placeholder">Aktuell keine aktiven Kandidaten.</div>') +
-    (raus.length ? '<details><summary>Aussortierte und getradete Kandidaten (' + raus.length + ')</summary>' + trackingTable(raus) + '</details>' : "");
+    (raus ? '<div class="timestamp" style="margin-top:10px;">' + raus + ' frühere Empfehlungen stehen unter <a href="#historie" data-goto="historie" style="color:var(--text);">Historie &amp; Bilanz</a>.</div>' : "");
+}
+
+function fwdCell(k, h) {
+  const f = (k.forward || {})[h + "T"];
+  return f ? pctHtml(f.ueberrendite_pct) : '<span class="timestamp">noch offen</span>';
+}
+
+function renderHistorie(data) {
+  const el = document.getElementById("historie");
+  if (!data || !data.kandidaten) return;
+  const raus = data.kandidaten.filter((k) => !isOpenStatus(k.status))
+    .sort((a, b) => (b.aufnahmedatum || "").localeCompare(a.aufnahmedatum || ""));
+  if (!raus.length) { el.innerHTML = '<div class="placeholder">Noch keine früheren Empfehlungen.</div>'; return; }
+  const rows = raus.map((k) => {
+    const st = (k.status || "").replace(/^ausgeschieden /, "").replace(/[()]/g, "");
+    return '<tr>' +
+      '<td data-label="Kandidat">' + (k.name || k.ticker) + '<div class="cand-sector">' + (k.sector || "") + '</div></td>' +
+      '<td data-label="Aufnahme">' + (k.aufnahmedatum || "-") + '</td>' +
+      '<td data-label="Ausgeschieden">' + (st || "-") + '</td>' +
+      '<td data-label="Nach 5 Tagen">' + fwdCell(k, 5) + '</td>' +
+      '<td data-label="Nach 10 Tagen">' + fwdCell(k, 10) + '</td>' +
+      '<td data-label="Nach 20 Tagen">' + fwdCell(k, 20) + '</td>' +
+      '<td data-label="Bis heute">' + pctHtml(k.ueberrendite_pct) + '<div class="timestamp">Aktie ' + (typeof k.performance_pct === "number" ? (k.performance_pct >= 0 ? "+" : "") + k.performance_pct.toFixed(2) + " %" : "–") + '</div></td>' +
+      '</tr>';
+  }).join("");
+  el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Werte = Überrendite gegenüber Nasdaq-100 in Prozentpunkten, gemessen ab dem Schlusskurs vor dem Aufnahmetag. Kurse: ' + fmtTime(data.kurse_aktualisiert_utc) + '</div>' +
+    '<table class="responsive-mobile"><thead><tr><th>Kandidat</th><th>Aufnahme</th><th>Ausgeschieden</th><th>Nach 5 Tagen</th><th>Nach 10 Tagen</th><th>Nach 20 Tagen</th><th>Bis heute</th></tr></thead><tbody>' + rows + '</tbody></table>';
+}
+
+function showTab(name) {
+  document.querySelectorAll(".tab").forEach((t) => {
+    const on = t.dataset.tab === name;
+    t.classList.toggle("active", on);
+    t.setAttribute("aria-selected", on ? "true" : "false");
+  });
+  document.getElementById("panel-heute").hidden = name !== "heute";
+  document.getElementById("panel-historie").hidden = name !== "historie";
+}
+
+function initTabs() {
+  document.querySelectorAll(".tab").forEach((t) => t.addEventListener("click", () => {
+    showTab(t.dataset.tab);
+    history.replaceState(null, "", t.dataset.tab === "historie" ? "#historie" : location.pathname);
+  }));
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("[data-goto]");
+    if (a) { e.preventDefault(); showTab(a.dataset.goto); history.replaceState(null, "", "#historie"); window.scrollTo(0, 0); }
+  });
+  showTab(location.hash === "#historie" ? "historie" : "heute");
 }
 
 function renderFilterBilanz(data) {
@@ -453,10 +522,12 @@ function renderNewsToday(data) { const el = document.getElementById("newsToday")
   renderCandidates(candidates);
   renderP55Candidates(p55Candidates);
   renderCandidateTracking(candidateTracking);
+  renderHistorie(candidateTracking);
   renderFilterBilanz(filterBilanz);
   renderTop3(top3);
   renderHeadlines(headlines); renderNewsToday(newsToday);
 }
+initTabs();
 init();
 </script>
 </body>
