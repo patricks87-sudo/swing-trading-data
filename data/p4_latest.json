@@ -1,7 +1,7 @@
 {
   "run": "p4",
-  "generated_at_utc": "2026-10-11T09:48:57.937862+00:00",
-  "eurusd": 0.892,
+  "generated_at_utc": "2026-10-12T12:51:50.156304+00:00",
+  "eurusd": 0.893,
   "indices": {
     "NASDAQ_COMPOSITE": {
       "close": 751.27,
@@ -114,12 +114,12 @@
     "VIX": {
       "available": true,
       "symbol": "^VIX",
-      "datum": "2026-10-09",
-      "close": 14.84,
-      "sma20": 15.65,
-      "sma50": 15.49,
-      "pct_from_sma20": -5.2,
-      "chg_20d_abs": -1.0,
+      "datum": "2026-10-12",
+      "close": 15.51,
+      "sma20": 15.57,
+      "sma50": 15.48,
+      "pct_from_sma20": -0.41,
+      "chg_20d_abs": -1.59,
       "quelle": "CBOE ^VIX via yfinance"
     }
   },
@@ -153,13 +153,13 @@
       "sector": "Semiconductors/AI",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-23",
-        "call_volume": 27831,
-        "call_open_interest": 135231,
-        "put_volume": 16461,
-        "call_put_volume_ratio": 1.69,
-        "call_volume_oi_ratio": 0.21,
-        "einschaetzung": "bullisch"
+        "expiration": "2026-10-19",
+        "call_volume": 0,
+        "call_open_interest": 30375,
+        "put_volume": 0,
+        "call_put_volume_ratio": null,
+        "call_volume_oi_ratio": 0.0,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -169,17 +169,17 @@
       "ampel": {
         "kapitalfluss": "rot",
         "trendkontext": "gruen",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 72.0,
+        "score": 67.0,
         "teilscores": {
           "kapitalfluss": 42.0,
           "relative_staerke": 43.0,
           "trendkontext": 100.0,
           "sektorstaerke": 67.0,
           "setup": 100.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 100.0
         },
         "stufe": "Kauf \u2013 solide",
@@ -192,21 +192,26 @@
           "available": true,
           "einstieg_usd": 229.28,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 221.48,
-          "ziel1_usd": 244.88,
-          "ziel2_usd": 252.68,
-          "einstieg_eur": 204.52,
-          "stop_eur": 197.56,
-          "ziel1_eur": 218.43,
-          "ziel2_eur": 225.39,
-          "risiko_pct": 3.4,
-          "ziel1_pct": 6.8,
+          "stop_usd": 218.88,
+          "einstieg_eur": 204.75,
+          "stop_eur": 195.46,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.54,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 10,
-          "kapitalbedarf_eur": 2045.0,
-          "risiko_eur": 70.0
+          "stueck": 8,
+          "kapitalbedarf_eur": 1638.0,
+          "risiko_eur": 74.0
         },
         "wiedereinstieg_usd": 226.73
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "AMD": {
@@ -240,10 +245,10 @@
         "available": true,
         "expiration": "2026-10-19",
         "call_volume": 0,
-        "call_open_interest": 0,
+        "call_open_interest": 2041,
         "put_volume": 0,
         "call_put_volume_ratio": null,
-        "call_volume_oi_ratio": null,
+        "call_volume_oi_ratio": 0.0,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -277,21 +282,26 @@
           "available": true,
           "einstieg_usd": 608.1,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 574.83,
-          "ziel1_usd": 674.63,
-          "ziel2_usd": 707.9,
-          "einstieg_eur": 542.43,
-          "stop_eur": 512.75,
-          "ziel1_eur": 601.77,
-          "ziel2_eur": 631.45,
-          "risiko_pct": 5.47,
-          "ziel1_pct": 10.94,
+          "stop_usd": 563.74,
+          "einstieg_eur": 543.03,
+          "stop_eur": 503.42,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 7.29,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 2,
-          "kapitalbedarf_eur": 1085.0,
-          "risiko_eur": 59.0
+          "stueck": 1,
+          "kapitalbedarf_eur": 543.0,
+          "risiko_eur": 40.0
         },
         "wiedereinstieg_usd": 598.07
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "AVGO": {
@@ -325,10 +335,10 @@
         "available": true,
         "expiration": "2026-10-19",
         "call_volume": 0,
-        "call_open_interest": 0,
+        "call_open_interest": 2519,
         "put_volume": 0,
         "call_put_volume_ratio": null,
-        "call_volume_oi_ratio": null,
+        "call_volume_oi_ratio": 0.0,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -362,21 +372,26 @@
           "available": true,
           "einstieg_usd": 361.54,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 346.08,
-          "ziel1_usd": 392.46,
-          "ziel2_usd": 407.92,
-          "einstieg_eur": 322.49,
-          "stop_eur": 308.7,
-          "ziel1_eur": 350.08,
-          "ziel2_eur": 363.87,
-          "risiko_pct": 4.28,
-          "ziel1_pct": 8.55,
+          "stop_usd": 340.93,
+          "einstieg_eur": 322.86,
+          "stop_eur": 304.45,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 5.7,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 5,
-          "kapitalbedarf_eur": 1612.0,
-          "risiko_eur": 69.0
+          "stueck": 4,
+          "kapitalbedarf_eur": 1291.0,
+          "risiko_eur": 74.0
         },
         "wiedereinstieg_usd": 355.25
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "TSM": {
@@ -410,10 +425,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 3319,
-        "call_open_interest": 16215,
+        "call_open_interest": 17933,
         "put_volume": 2795,
         "call_put_volume_ratio": 1.19,
-        "call_volume_oi_ratio": 0.2,
+        "call_volume_oi_ratio": 0.19,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -449,21 +464,26 @@
           "available": true,
           "einstieg_usd": 453.31,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 436.44,
-          "ziel1_usd": 487.05,
-          "ziel2_usd": 503.92,
-          "einstieg_eur": 404.35,
-          "stop_eur": 389.31,
-          "ziel1_eur": 434.45,
-          "ziel2_eur": 449.49,
-          "risiko_pct": 3.72,
-          "ziel1_pct": 7.44,
+          "stop_usd": 430.82,
+          "einstieg_eur": 404.81,
+          "stop_eur": 384.72,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.96,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 4,
-          "kapitalbedarf_eur": 1617.0,
+          "stueck": 3,
+          "kapitalbedarf_eur": 1214.0,
           "risiko_eur": 60.0
         },
         "wiedereinstieg_usd": 450.47
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "ASML": {
@@ -497,10 +517,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 1083,
-        "call_open_interest": 3407,
+        "call_open_interest": 3644,
         "put_volume": 759,
         "call_put_volume_ratio": 1.43,
-        "call_volume_oi_ratio": 0.32,
+        "call_volume_oi_ratio": 0.3,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -536,21 +556,26 @@
           "available": true,
           "einstieg_usd": 1780.34,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 1707.21,
-          "ziel1_usd": 1926.59,
-          "ziel2_usd": 1999.72,
-          "einstieg_eur": 1588.06,
-          "stop_eur": 1522.83,
-          "ziel1_eur": 1718.52,
-          "ziel2_eur": 1783.75,
-          "risiko_pct": 4.11,
-          "ziel1_pct": 8.21,
+          "stop_usd": 1682.84,
+          "einstieg_eur": 1589.84,
+          "stop_eur": 1502.77,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 5.48,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 1,
-          "kapitalbedarf_eur": 1588.0,
-          "risiko_eur": 65.0
+          "stueck": 0,
+          "kapitalbedarf_eur": 0.0,
+          "risiko_eur": 0.0
         },
         "wiedereinstieg_usd": 1744.55
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "MRVL": {
@@ -584,10 +609,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 7518,
-        "call_open_interest": 13396,
+        "call_open_interest": 16565,
         "put_volume": 6782,
         "call_put_volume_ratio": 1.11,
-        "call_volume_oi_ratio": 0.56,
+        "call_volume_oi_ratio": 0.45,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -623,21 +648,26 @@
           "available": true,
           "einstieg_usd": 258.47,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 237.96,
-          "ziel1_usd": 299.5,
-          "ziel2_usd": 320.01,
-          "einstieg_eur": 230.56,
-          "stop_eur": 212.26,
-          "ziel1_eur": 267.15,
-          "ziel2_eur": 285.45,
-          "risiko_pct": 7.94,
-          "ziel1_pct": 15.87,
-          "crv_am_aktuellen_kurs": 0.65,
-          "stueck": 4,
-          "kapitalbedarf_eur": 922.0,
+          "stop_usd": 231.12,
+          "einstieg_eur": 230.81,
+          "stop_eur": 206.39,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 10.58,
+          "crv_am_aktuellen_kurs": 0.86,
+          "stueck": 3,
+          "kapitalbedarf_eur": 692.0,
           "risiko_eur": 73.0
         },
         "wiedereinstieg_usd": 258.47
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "SMCI": {
@@ -671,10 +701,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 5244,
-        "call_open_interest": 25856,
+        "call_open_interest": 31290,
         "put_volume": 2513,
         "call_put_volume_ratio": 2.09,
-        "call_volume_oi_ratio": 0.2,
+        "call_volume_oi_ratio": 0.17,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -708,21 +738,26 @@
           "available": true,
           "einstieg_usd": 41.86,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 38.54,
-          "ziel1_usd": 48.49,
-          "ziel2_usd": 51.81,
-          "einstieg_eur": 37.34,
-          "stop_eur": 34.38,
-          "ziel1_eur": 43.25,
-          "ziel2_eur": 46.21,
-          "risiko_pct": 7.92,
-          "ziel1_pct": 15.84,
+          "stop_usd": 37.44,
+          "einstieg_eur": 37.38,
+          "stop_eur": 33.43,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 10.56,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 25,
-          "kapitalbedarf_eur": 933.0,
-          "risiko_eur": 74.0
+          "stueck": 18,
+          "kapitalbedarf_eur": 673.0,
+          "risiko_eur": 71.0
         },
         "wiedereinstieg_usd": 41.17
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "QCOM": {
@@ -756,10 +791,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 2025,
-        "call_open_interest": 6451,
+        "call_open_interest": 8227,
         "put_volume": 399,
         "call_put_volume_ratio": 5.08,
-        "call_volume_oi_ratio": 0.31,
+        "call_volume_oi_ratio": 0.25,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -793,21 +828,26 @@
           "available": true,
           "einstieg_usd": 175.5,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 165.21,
-          "ziel1_usd": 196.07,
-          "ziel2_usd": 206.36,
-          "einstieg_eur": 156.55,
-          "stop_eur": 147.37,
-          "ziel1_eur": 174.9,
-          "ziel2_eur": 184.07,
-          "risiko_pct": 5.86,
-          "ziel1_pct": 11.72,
+          "stop_usd": 161.79,
+          "einstieg_eur": 156.72,
+          "stop_eur": 144.47,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 7.81,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 8,
-          "kapitalbedarf_eur": 1252.0,
+          "stueck": 6,
+          "kapitalbedarf_eur": 940.0,
           "risiko_eur": 73.0
         },
         "wiedereinstieg_usd": 185.91
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "MSFT": {
@@ -839,13 +879,13 @@
       "sector": "Software/Cloud",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-23",
-        "call_volume": 18471,
-        "call_open_interest": 55618,
-        "put_volume": 6556,
-        "call_put_volume_ratio": 2.82,
-        "call_volume_oi_ratio": 0.33,
-        "einschaetzung": "bullisch"
+        "expiration": "2026-10-19",
+        "call_volume": 0,
+        "call_open_interest": 3363,
+        "put_volume": 0,
+        "call_put_volume_ratio": null,
+        "call_volume_oi_ratio": 0.0,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -855,20 +895,20 @@
       "ampel": {
         "kapitalfluss": "gelb",
         "trendkontext": "gruen",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 78.1,
+        "score": 73.1,
         "teilscores": {
           "kapitalfluss": 84.0,
           "relative_staerke": 89.0,
           "trendkontext": 100.0,
           "sektorstaerke": 83.0,
           "setup": 40.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 0.0
         },
-        "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+        "stufe": "Kauf \u2013 solide",
         "bulltrap_flags": [
           "RSI14 > 72"
         ],
@@ -878,21 +918,26 @@
           "available": true,
           "einstieg_usd": 510.1,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 491.02,
-          "ziel1_usd": 548.26,
-          "ziel2_usd": 567.34,
-          "einstieg_eur": 455.01,
-          "stop_eur": 437.99,
-          "ziel1_eur": 489.05,
-          "ziel2_eur": 506.06,
-          "risiko_pct": 3.74,
-          "ziel1_pct": 7.48,
-          "crv_am_aktuellen_kurs": 0.3,
-          "stueck": 4,
-          "kapitalbedarf_eur": 1820.0,
+          "stop_usd": 484.66,
+          "einstieg_eur": 455.52,
+          "stop_eur": 432.8,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.99,
+          "crv_am_aktuellen_kurs": 0.51,
+          "stueck": 3,
+          "kapitalbedarf_eur": 1367.0,
           "risiko_eur": 68.0
         },
         "wiedereinstieg_usd": 510.1
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "CRM": {
@@ -926,10 +971,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 1497,
-        "call_open_interest": 3478,
+        "call_open_interest": 5510,
         "put_volume": 1176,
         "call_put_volume_ratio": 1.27,
-        "call_volume_oi_ratio": 0.43,
+        "call_volume_oi_ratio": 0.27,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -961,21 +1006,26 @@
           "available": true,
           "einstieg_usd": 229.13,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 217.45,
-          "ziel1_usd": 252.48,
-          "ziel2_usd": 264.16,
-          "einstieg_eur": 204.38,
-          "stop_eur": 193.97,
-          "ziel1_eur": 225.21,
-          "ziel2_eur": 235.63,
-          "risiko_pct": 5.1,
-          "ziel1_pct": 10.19,
+          "stop_usd": 213.56,
+          "einstieg_eur": 204.61,
+          "stop_eur": 190.71,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.79,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 7,
-          "kapitalbedarf_eur": 1431.0,
-          "risiko_eur": 73.0
+          "stueck": 5,
+          "kapitalbedarf_eur": 1023.0,
+          "risiko_eur": 70.0
         },
         "wiedereinstieg_usd": 235.79
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "NOW": {
@@ -1009,10 +1059,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 4472,
-        "call_open_interest": 15388,
+        "call_open_interest": 15921,
         "put_volume": 2909,
         "call_put_volume_ratio": 1.54,
-        "call_volume_oi_ratio": 0.29,
+        "call_volume_oi_ratio": 0.28,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -1044,21 +1094,26 @@
           "available": true,
           "einstieg_usd": 140.86,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 132.95,
-          "ziel1_usd": 156.69,
-          "ziel2_usd": 164.6,
-          "einstieg_eur": 125.65,
-          "stop_eur": 118.59,
-          "ziel1_eur": 139.76,
-          "ziel2_eur": 146.82,
-          "risiko_pct": 5.62,
-          "ziel1_pct": 11.24,
+          "stop_usd": 130.31,
+          "einstieg_eur": 125.79,
+          "stop_eur": 116.37,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 7.49,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 10,
-          "kapitalbedarf_eur": 1256.0,
-          "risiko_eur": 71.0
+          "stueck": 7,
+          "kapitalbedarf_eur": 881.0,
+          "risiko_eur": 66.0
         },
         "wiedereinstieg_usd": 137.35
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "ORCL": {
@@ -1092,10 +1147,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 12492,
-        "call_open_interest": 70365,
+        "call_open_interest": 73885,
         "put_volume": 9363,
         "call_put_volume_ratio": 1.33,
-        "call_volume_oi_ratio": 0.18,
+        "call_volume_oi_ratio": 0.17,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -1127,21 +1182,26 @@
           "available": true,
           "einstieg_usd": 141.4,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 132.24,
-          "ziel1_usd": 159.72,
-          "ziel2_usd": 168.88,
-          "einstieg_eur": 126.13,
-          "stop_eur": 117.96,
-          "ziel1_eur": 142.47,
-          "ziel2_eur": 150.64,
-          "risiko_pct": 6.48,
-          "ziel1_pct": 12.96,
+          "stop_usd": 129.19,
+          "einstieg_eur": 126.27,
+          "stop_eur": 115.36,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 8.64,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 9,
-          "kapitalbedarf_eur": 1135.0,
-          "risiko_eur": 74.0
+          "stueck": 6,
+          "kapitalbedarf_eur": 758.0,
+          "risiko_eur": 65.0
         },
         "wiedereinstieg_usd": 142.07
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "ADBE": {
@@ -1175,10 +1235,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 1016,
-        "call_open_interest": 2670,
+        "call_open_interest": 3940,
         "put_volume": 1380,
         "call_put_volume_ratio": 0.74,
-        "call_volume_oi_ratio": 0.38,
+        "call_volume_oi_ratio": 0.26,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -1210,21 +1270,26 @@
           "available": true,
           "einstieg_usd": 242.27,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 230.2,
-          "ziel1_usd": 266.41,
-          "ziel2_usd": 278.48,
-          "einstieg_eur": 216.1,
-          "stop_eur": 205.34,
-          "ziel1_eur": 237.64,
-          "ziel2_eur": 248.41,
-          "risiko_pct": 4.98,
-          "ziel1_pct": 9.96,
+          "stop_usd": 226.18,
+          "einstieg_eur": 216.35,
+          "stop_eur": 201.97,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.64,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 6,
-          "kapitalbedarf_eur": 1297.0,
-          "risiko_eur": 65.0
+          "stueck": 5,
+          "kapitalbedarf_eur": 1082.0,
+          "risiko_eur": 72.0
         },
         "wiedereinstieg_usd": 242.72
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "SNOW": {
@@ -1258,10 +1323,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 2633,
-        "call_open_interest": 3764,
+        "call_open_interest": 4894,
         "put_volume": 1164,
         "call_put_volume_ratio": 2.26,
-        "call_volume_oi_ratio": 0.7,
+        "call_volume_oi_ratio": 0.54,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -1295,21 +1360,26 @@
           "available": true,
           "einstieg_usd": 336.95,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 316.82,
-          "ziel1_usd": 377.21,
-          "ziel2_usd": 397.34,
-          "einstieg_eur": 300.56,
-          "stop_eur": 282.6,
-          "ziel1_eur": 336.47,
-          "ziel2_eur": 354.43,
-          "risiko_pct": 5.97,
-          "ziel1_pct": 11.95,
-          "crv_am_aktuellen_kurs": 0.16,
-          "stueck": 4,
-          "kapitalbedarf_eur": 1202.0,
+          "stop_usd": 310.11,
+          "einstieg_eur": 300.9,
+          "stop_eur": 276.93,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 7.97,
+          "crv_am_aktuellen_kurs": 0.37,
+          "stueck": 3,
+          "kapitalbedarf_eur": 903.0,
           "risiko_eur": 72.0
         },
         "wiedereinstieg_usd": 336.95
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "PLTR": {
@@ -1343,10 +1413,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 19521,
-        "call_open_interest": 29447,
+        "call_open_interest": 34571,
         "put_volume": 38263,
         "call_put_volume_ratio": 0.51,
-        "call_volume_oi_ratio": 0.66,
+        "call_volume_oi_ratio": 0.56,
         "einschaetzung": "bearisch"
       },
       "earnings": {
@@ -1384,21 +1454,26 @@
           "available": true,
           "einstieg_usd": 187.0,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 177.75,
-          "ziel1_usd": 205.48,
-          "ziel2_usd": 214.72,
-          "einstieg_eur": 166.8,
-          "stop_eur": 158.56,
-          "ziel1_eur": 183.29,
-          "ziel2_eur": 191.53,
-          "risiko_pct": 4.94,
-          "ziel1_pct": 9.89,
-          "crv_am_aktuellen_kurs": -0.11,
-          "stueck": 9,
-          "kapitalbedarf_eur": 1501.0,
-          "risiko_eur": 74.0
+          "stop_usd": 174.67,
+          "einstieg_eur": 166.99,
+          "stop_eur": 155.98,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.59,
+          "crv_am_aktuellen_kurs": 0.08,
+          "stueck": 6,
+          "kapitalbedarf_eur": 1002.0,
+          "risiko_eur": 66.0
         },
         "wiedereinstieg_usd": 187.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "PANW": {
@@ -1432,10 +1507,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 832,
-        "call_open_interest": 4424,
+        "call_open_interest": 4823,
         "put_volume": 1358,
         "call_put_volume_ratio": 0.61,
-        "call_volume_oi_ratio": 0.19,
+        "call_volume_oi_ratio": 0.17,
         "einschaetzung": "bearisch"
       },
       "earnings": {
@@ -1469,21 +1544,26 @@
           "available": true,
           "einstieg_usd": 389.72,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 365.34,
-          "ziel1_usd": 438.49,
-          "ziel2_usd": 462.88,
-          "einstieg_eur": 347.63,
-          "stop_eur": 325.88,
-          "ziel1_eur": 391.14,
-          "ziel2_eur": 412.89,
-          "risiko_pct": 6.26,
-          "ziel1_pct": 12.51,
-          "crv_am_aktuellen_kurs": 0.37,
-          "stueck": 3,
-          "kapitalbedarf_eur": 1043.0,
-          "risiko_eur": 65.0
+          "stop_usd": 357.21,
+          "einstieg_eur": 348.02,
+          "stop_eur": 318.99,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 8.34,
+          "crv_am_aktuellen_kurs": 0.58,
+          "stueck": 2,
+          "kapitalbedarf_eur": 696.0,
+          "risiko_eur": 58.0
         },
         "wiedereinstieg_usd": 389.72
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "CRWD": {
@@ -1517,10 +1597,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 2950,
-        "call_open_interest": 6509,
+        "call_open_interest": 9058,
         "put_volume": 2513,
         "call_put_volume_ratio": 1.17,
-        "call_volume_oi_ratio": 0.45,
+        "call_volume_oi_ratio": 0.33,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -1554,21 +1634,26 @@
           "available": true,
           "einstieg_usd": 257.71,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 242.33,
-          "ziel1_usd": 288.47,
-          "ziel2_usd": 303.85,
-          "einstieg_eur": 229.88,
-          "stop_eur": 216.16,
-          "ziel1_eur": 257.31,
-          "ziel2_eur": 271.03,
-          "risiko_pct": 5.97,
-          "ziel1_pct": 11.94,
-          "crv_am_aktuellen_kurs": 0.41,
-          "stueck": 5,
-          "kapitalbedarf_eur": 1149.0,
-          "risiko_eur": 69.0
+          "stop_usd": 237.2,
+          "einstieg_eur": 230.13,
+          "stop_eur": 211.82,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 7.96,
+          "crv_am_aktuellen_kurs": 0.63,
+          "stueck": 4,
+          "kapitalbedarf_eur": 921.0,
+          "risiko_eur": 73.0
         },
         "wiedereinstieg_usd": 257.71
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "ZS": {
@@ -1602,10 +1687,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 1951,
-        "call_open_interest": 2128,
+        "call_open_interest": 3204,
         "put_volume": 1516,
         "call_put_volume_ratio": 1.29,
-        "call_volume_oi_ratio": 0.92,
+        "call_volume_oi_ratio": 0.61,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -1641,21 +1726,26 @@
           "available": true,
           "einstieg_usd": 204.11,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 189.7,
-          "ziel1_usd": 232.92,
-          "ziel2_usd": 247.32,
-          "einstieg_eur": 182.06,
-          "stop_eur": 169.21,
-          "ziel1_eur": 207.76,
-          "ziel2_eur": 220.61,
-          "risiko_pct": 7.06,
-          "ziel1_pct": 14.12,
-          "crv_am_aktuellen_kurs": -0.02,
-          "stueck": 5,
-          "kapitalbedarf_eur": 910.0,
-          "risiko_eur": 64.0
+          "stop_usd": 184.9,
+          "einstieg_eur": 182.27,
+          "stop_eur": 165.11,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 9.41,
+          "crv_am_aktuellen_kurs": 0.18,
+          "stueck": 4,
+          "kapitalbedarf_eur": 729.0,
+          "risiko_eur": 69.0
         },
         "wiedereinstieg_usd": 204.11
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "FTNT": {
@@ -1689,10 +1779,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 284,
-        "call_open_interest": 2069,
+        "call_open_interest": 2427,
         "put_volume": 99,
         "call_put_volume_ratio": 2.87,
-        "call_volume_oi_ratio": 0.14,
+        "call_volume_oi_ratio": 0.12,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -1728,21 +1818,26 @@
           "available": true,
           "einstieg_usd": 178.82,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 170.66,
-          "ziel1_usd": 195.14,
-          "ziel2_usd": 203.3,
-          "einstieg_eur": 159.51,
-          "stop_eur": 152.22,
-          "ziel1_eur": 174.07,
-          "ziel2_eur": 181.35,
-          "risiko_pct": 4.56,
-          "ziel1_pct": 9.13,
-          "crv_am_aktuellen_kurs": 0.02,
-          "stueck": 10,
-          "kapitalbedarf_eur": 1595.0,
-          "risiko_eur": 73.0
+          "stop_usd": 167.93,
+          "einstieg_eur": 159.68,
+          "stop_eur": 149.97,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.09,
+          "crv_am_aktuellen_kurs": 0.22,
+          "stueck": 7,
+          "kapitalbedarf_eur": 1118.0,
+          "risiko_eur": 68.0
         },
         "wiedereinstieg_usd": 178.82
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "LMT": {
@@ -1776,10 +1871,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 434,
-        "call_open_interest": 2152,
+        "call_open_interest": 2351,
         "put_volume": 168,
         "call_put_volume_ratio": 2.58,
-        "call_volume_oi_ratio": 0.2,
+        "call_volume_oi_ratio": 0.18,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -1811,21 +1906,26 @@
           "available": true,
           "einstieg_usd": 509.59,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 494.35,
-          "ziel1_usd": 540.07,
-          "ziel2_usd": 555.31,
-          "einstieg_eur": 454.55,
-          "stop_eur": 440.96,
-          "ziel1_eur": 481.74,
-          "ziel2_eur": 495.34,
-          "risiko_pct": 2.99,
-          "ziel1_pct": 5.98,
+          "stop_usd": 489.27,
+          "einstieg_eur": 455.06,
+          "stop_eur": 436.92,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.99,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 5,
-          "kapitalbedarf_eur": 2273.0,
-          "risiko_eur": 68.0
+          "stueck": 4,
+          "kapitalbedarf_eur": 1820.0,
+          "risiko_eur": 73.0
         },
         "wiedereinstieg_usd": 519.06
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "NOC": {
@@ -1859,7 +1959,7 @@
         "available": true,
         "expiration": "2026-11-20",
         "call_volume": 256,
-        "call_open_interest": 2654,
+        "call_open_interest": 2653,
         "put_volume": 705,
         "call_put_volume_ratio": 0.36,
         "call_volume_oi_ratio": 0.1,
@@ -1897,21 +1997,26 @@
           "available": true,
           "einstieg_usd": 480.72,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 463.35,
-          "ziel1_usd": 515.46,
-          "ziel2_usd": 532.83,
-          "einstieg_eur": 428.8,
-          "stop_eur": 413.31,
-          "ziel1_eur": 459.79,
-          "ziel2_eur": 475.28,
-          "risiko_pct": 3.61,
-          "ziel1_pct": 7.23,
+          "stop_usd": 457.56,
+          "einstieg_eur": 429.28,
+          "stop_eur": 408.6,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.82,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 4,
-          "kapitalbedarf_eur": 1715.0,
+          "stueck": 3,
+          "kapitalbedarf_eur": 1288.0,
           "risiko_eur": 62.0
         },
         "wiedereinstieg_usd": 503.15
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "RTX": {
@@ -1945,11 +2050,11 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 406,
-        "call_open_interest": 1982,
+        "call_open_interest": 3102,
         "put_volume": 187,
         "call_put_volume_ratio": 2.17,
-        "call_volume_oi_ratio": 0.2,
-        "einschaetzung": "bullisch"
+        "call_volume_oi_ratio": 0.13,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -1959,17 +2064,17 @@
       "ampel": {
         "kapitalfluss": "rot",
         "trendkontext": "rot",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 22.5,
+        "score": 17.5,
         "teilscores": {
           "kapitalfluss": 4.0,
           "relative_staerke": 18.0,
           "trendkontext": 0.0,
           "sektorstaerke": 11.0,
           "setup": 10.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 100.0
         },
         "stufe": "Kein Setup",
@@ -1980,21 +2085,26 @@
           "available": true,
           "einstieg_usd": 185.97,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 180.66,
-          "ziel1_usd": 196.59,
-          "ziel2_usd": 201.9,
-          "einstieg_eur": 165.89,
-          "stop_eur": 161.15,
-          "ziel1_eur": 175.36,
-          "ziel2_eur": 180.09,
-          "risiko_pct": 2.86,
-          "ziel1_pct": 5.71,
+          "stop_usd": 178.89,
+          "einstieg_eur": 166.07,
+          "stop_eur": 159.75,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.81,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 15,
-          "kapitalbedarf_eur": 2488.0,
-          "risiko_eur": 71.0
+          "stueck": 11,
+          "kapitalbedarf_eur": 1827.0,
+          "risiko_eur": 70.0
         },
         "wiedereinstieg_usd": 188.94
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "GD": {
@@ -2028,10 +2138,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 159,
-        "call_open_interest": 157,
+        "call_open_interest": 180,
         "put_volume": 17,
         "call_put_volume_ratio": 9.35,
-        "call_volume_oi_ratio": 1.01,
+        "call_volume_oi_ratio": 0.88,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -2063,21 +2173,26 @@
           "available": true,
           "einstieg_usd": 331.27,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 321.79,
-          "ziel1_usd": 350.23,
-          "ziel2_usd": 359.71,
-          "einstieg_eur": 295.49,
-          "stop_eur": 287.04,
-          "ziel1_eur": 312.4,
-          "ziel2_eur": 320.86,
-          "risiko_pct": 2.86,
-          "ziel1_pct": 5.72,
+          "stop_usd": 318.63,
+          "einstieg_eur": 295.82,
+          "stop_eur": 284.54,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.82,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 8,
-          "kapitalbedarf_eur": 2364.0,
+          "stueck": 6,
+          "kapitalbedarf_eur": 1775.0,
           "risiko_eur": 68.0
         },
         "wiedereinstieg_usd": 340.5
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "JPM": {
@@ -2111,10 +2226,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 1278,
-        "call_open_interest": 6237,
+        "call_open_interest": 7158,
         "put_volume": 773,
         "call_put_volume_ratio": 1.65,
-        "call_volume_oi_ratio": 0.2,
+        "call_volume_oi_ratio": 0.18,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -2148,21 +2263,26 @@
           "available": true,
           "einstieg_usd": 332.99,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 324.4,
-          "ziel1_usd": 350.18,
-          "ziel2_usd": 358.78,
-          "einstieg_eur": 297.03,
-          "stop_eur": 289.36,
-          "ziel1_eur": 312.36,
-          "ziel2_eur": 320.03,
-          "risiko_pct": 2.58,
-          "ziel1_pct": 5.16,
+          "stop_usd": 321.53,
+          "einstieg_eur": 297.36,
+          "stop_eur": 287.13,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.44,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 9,
-          "kapitalbedarf_eur": 2673.0,
-          "risiko_eur": 69.0
+          "stueck": 7,
+          "kapitalbedarf_eur": 2082.0,
+          "risiko_eur": 72.0
         },
         "wiedereinstieg_usd": 339.37
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "GS": {
@@ -2196,10 +2316,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 1954,
-        "call_open_interest": 4025,
+        "call_open_interest": 4579,
         "put_volume": 1748,
         "call_put_volume_ratio": 1.12,
-        "call_volume_oi_ratio": 0.49,
+        "call_volume_oi_ratio": 0.43,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -2233,21 +2353,26 @@
           "available": true,
           "einstieg_usd": 895.32,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 865.85,
-          "ziel1_usd": 954.27,
-          "ziel2_usd": 983.74,
-          "einstieg_eur": 798.63,
-          "stop_eur": 772.34,
-          "ziel1_eur": 851.21,
-          "ziel2_eur": 877.49,
-          "risiko_pct": 3.29,
-          "ziel1_pct": 6.58,
+          "stop_usd": 856.02,
+          "einstieg_eur": 799.52,
+          "stop_eur": 764.43,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.39,
           "crv_am_aktuellen_kurs": 2.0,
           "stueck": 2,
-          "kapitalbedarf_eur": 1597.0,
-          "risiko_eur": 53.0
+          "kapitalbedarf_eur": 1599.0,
+          "risiko_eur": 70.0
         },
         "wiedereinstieg_usd": 924.42
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "MS": {
@@ -2281,10 +2406,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 832,
-        "call_open_interest": 2752,
+        "call_open_interest": 3165,
         "put_volume": 231,
         "call_put_volume_ratio": 3.6,
-        "call_volume_oi_ratio": 0.3,
+        "call_volume_oi_ratio": 0.26,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -2318,21 +2443,26 @@
           "available": true,
           "einstieg_usd": 190.02,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 183.74,
-          "ziel1_usd": 202.58,
-          "ziel2_usd": 208.85,
-          "einstieg_eur": 169.5,
-          "stop_eur": 163.9,
-          "ziel1_eur": 180.7,
-          "ziel2_eur": 186.3,
-          "risiko_pct": 3.3,
-          "ziel1_pct": 6.61,
+          "stop_usd": 181.65,
+          "einstieg_eur": 169.69,
+          "stop_eur": 162.21,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.4,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 13,
-          "kapitalbedarf_eur": 2203.0,
-          "risiko_eur": 73.0
+          "stueck": 10,
+          "kapitalbedarf_eur": 1697.0,
+          "risiko_eur": 75.0
         },
         "wiedereinstieg_usd": 195.99
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "PGR": {
@@ -2366,10 +2496,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 44,
-        "call_open_interest": 297,
+        "call_open_interest": 394,
         "put_volume": 39,
         "call_put_volume_ratio": 1.13,
-        "call_volume_oi_ratio": 0.15,
+        "call_volume_oi_ratio": 0.11,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -2403,21 +2533,26 @@
           "available": true,
           "einstieg_usd": 217.43,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 210.5,
-          "ziel1_usd": 231.3,
-          "ziel2_usd": 238.23,
-          "einstieg_eur": 193.95,
-          "stop_eur": 187.76,
-          "ziel1_eur": 206.32,
-          "ziel2_eur": 212.5,
-          "risiko_pct": 3.19,
-          "ziel1_pct": 6.38,
+          "stop_usd": 208.19,
+          "einstieg_eur": 194.16,
+          "stop_eur": 185.91,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.25,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 12,
-          "kapitalbedarf_eur": 2327.0,
+          "stueck": 9,
+          "kapitalbedarf_eur": 1747.0,
           "risiko_eur": 74.0
         },
         "wiedereinstieg_usd": 212.13
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "TRV": {
@@ -2451,10 +2586,10 @@
         "available": true,
         "expiration": "2026-11-20",
         "call_volume": 52,
-        "call_open_interest": 314,
+        "call_open_interest": 347,
         "put_volume": 29,
         "call_put_volume_ratio": 1.79,
-        "call_volume_oi_ratio": 0.17,
+        "call_volume_oi_ratio": 0.15,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -2490,21 +2625,26 @@
           "available": true,
           "einstieg_usd": 368.75,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 359.05,
-          "ziel1_usd": 388.15,
-          "ziel2_usd": 397.85,
-          "einstieg_eur": 328.92,
-          "stop_eur": 320.27,
-          "ziel1_eur": 346.23,
-          "ziel2_eur": 354.88,
-          "risiko_pct": 2.63,
-          "ziel1_pct": 5.26,
+          "stop_usd": 355.82,
+          "einstieg_eur": 329.29,
+          "stop_eur": 317.75,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.51,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 8,
-          "kapitalbedarf_eur": 2631.0,
+          "stueck": 6,
+          "kapitalbedarf_eur": 1976.0,
           "risiko_eur": 69.0
         },
         "wiedereinstieg_usd": 366.69
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "V": {
@@ -2538,10 +2678,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 1132,
-        "call_open_interest": 3322,
+        "call_open_interest": 4306,
         "put_volume": 781,
         "call_put_volume_ratio": 1.45,
-        "call_volume_oi_ratio": 0.34,
+        "call_volume_oi_ratio": 0.26,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -2573,21 +2713,26 @@
           "available": true,
           "einstieg_usd": 368.77,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 358.51,
-          "ziel1_usd": 389.28,
-          "ziel2_usd": 399.53,
-          "einstieg_eur": 328.94,
-          "stop_eur": 319.79,
-          "ziel1_eur": 347.24,
-          "ziel2_eur": 356.38,
-          "risiko_pct": 2.78,
-          "ziel1_pct": 5.56,
-          "crv_am_aktuellen_kurs": 0.14,
-          "stueck": 8,
-          "kapitalbedarf_eur": 2632.0,
+          "stop_usd": 355.1,
+          "einstieg_eur": 329.31,
+          "stop_eur": 317.1,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.71,
+          "crv_am_aktuellen_kurs": 0.35,
+          "stueck": 6,
+          "kapitalbedarf_eur": 1976.0,
           "risiko_eur": 73.0
         },
         "wiedereinstieg_usd": 368.77
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "MA": {
@@ -2621,10 +2766,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 272,
-        "call_open_interest": 585,
+        "call_open_interest": 705,
         "put_volume": 799,
         "call_put_volume_ratio": 0.34,
-        "call_volume_oi_ratio": 0.46,
+        "call_volume_oi_ratio": 0.39,
         "einschaetzung": "bearisch"
       },
       "earnings": {
@@ -2658,21 +2803,26 @@
           "available": true,
           "einstieg_usd": 565.72,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 549.7,
-          "ziel1_usd": 597.76,
-          "ziel2_usd": 613.78,
-          "einstieg_eur": 504.62,
-          "stop_eur": 490.33,
-          "ziel1_eur": 533.2,
-          "ziel2_eur": 547.49,
-          "risiko_pct": 2.83,
-          "ziel1_pct": 5.66,
-          "crv_am_aktuellen_kurs": 0.22,
-          "stueck": 5,
-          "kapitalbedarf_eur": 2523.0,
-          "risiko_eur": 71.0
+          "stop_usd": 544.36,
+          "einstieg_eur": 505.18,
+          "stop_eur": 486.11,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.78,
+          "crv_am_aktuellen_kurs": 0.43,
+          "stueck": 3,
+          "kapitalbedarf_eur": 1516.0,
+          "risiko_eur": 57.0
         },
         "wiedereinstieg_usd": 565.72
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "HOOD": {
@@ -2706,10 +2856,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 17144,
-        "call_open_interest": 33566,
+        "call_open_interest": 39848,
         "put_volume": 4642,
         "call_put_volume_ratio": 3.69,
-        "call_volume_oi_ratio": 0.51,
+        "call_volume_oi_ratio": 0.43,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -2741,21 +2891,26 @@
           "available": true,
           "einstieg_usd": 109.02,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 101.76,
-          "ziel1_usd": 123.54,
-          "ziel2_usd": 130.8,
-          "einstieg_eur": 97.25,
-          "stop_eur": 90.77,
-          "ziel1_eur": 110.2,
-          "ziel2_eur": 116.67,
-          "risiko_pct": 6.66,
-          "ziel1_pct": 13.32,
+          "stop_usd": 99.34,
+          "einstieg_eur": 97.35,
+          "stop_eur": 88.71,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 8.88,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 11,
-          "kapitalbedarf_eur": 1070.0,
-          "risiko_eur": 71.0
+          "stueck": 8,
+          "kapitalbedarf_eur": 779.0,
+          "risiko_eur": 69.0
         },
         "wiedereinstieg_usd": 114.5
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "COIN": {
@@ -2789,10 +2944,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 5294,
-        "call_open_interest": 10273,
+        "call_open_interest": 11239,
         "put_volume": 10833,
         "call_put_volume_ratio": 0.49,
-        "call_volume_oi_ratio": 0.52,
+        "call_volume_oi_ratio": 0.47,
         "einschaetzung": "bearisch"
       },
       "earnings": {
@@ -2826,21 +2981,26 @@
           "available": true,
           "einstieg_usd": 179.39,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 165.1,
-          "ziel1_usd": 207.96,
-          "ziel2_usd": 222.25,
-          "einstieg_eur": 160.02,
-          "stop_eur": 147.27,
-          "ziel1_eur": 185.5,
-          "ziel2_eur": 198.25,
-          "risiko_pct": 7.96,
-          "ziel1_pct": 15.93,
+          "stop_usd": 160.34,
+          "einstieg_eur": 160.2,
+          "stop_eur": 143.18,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 10.62,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 5,
-          "kapitalbedarf_eur": 800.0,
-          "risiko_eur": 64.0
+          "stueck": 4,
+          "kapitalbedarf_eur": 641.0,
+          "risiko_eur": 68.0
         },
         "wiedereinstieg_usd": 186.76
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "UNH": {
@@ -2874,10 +3034,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 933,
-        "call_open_interest": 3313,
+        "call_open_interest": 4011,
         "put_volume": 1363,
         "call_put_volume_ratio": 0.68,
-        "call_volume_oi_ratio": 0.28,
+        "call_volume_oi_ratio": 0.23,
         "einschaetzung": "bearisch"
       },
       "earnings": {
@@ -2912,21 +3072,26 @@
           "available": true,
           "einstieg_usd": 379.3,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 366.0,
-          "ziel1_usd": 405.9,
-          "ziel2_usd": 419.19,
-          "einstieg_eur": 338.34,
-          "stop_eur": 326.47,
-          "ziel1_eur": 362.06,
-          "ziel2_eur": 373.92,
-          "risiko_pct": 3.51,
-          "ziel1_pct": 7.01,
+          "stop_usd": 361.57,
+          "einstieg_eur": 338.71,
+          "stop_eur": 322.88,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.67,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 6,
-          "kapitalbedarf_eur": 2030.0,
-          "risiko_eur": 71.0
+          "stueck": 4,
+          "kapitalbedarf_eur": 1355.0,
+          "risiko_eur": 63.0
         },
         "wiedereinstieg_usd": 374.92
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "ISRG": {
@@ -2960,10 +3125,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 258,
-        "call_open_interest": 1745,
+        "call_open_interest": 1904,
         "put_volume": 554,
         "call_put_volume_ratio": 0.47,
-        "call_volume_oi_ratio": 0.15,
+        "call_volume_oi_ratio": 0.14,
         "einschaetzung": "bearisch"
       },
       "earnings": {
@@ -2997,21 +3162,26 @@
           "available": true,
           "einstieg_usd": 400.65,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 384.34,
-          "ziel1_usd": 433.27,
-          "ziel2_usd": 449.58,
-          "einstieg_eur": 357.38,
-          "stop_eur": 342.83,
-          "ziel1_eur": 386.47,
-          "ziel2_eur": 401.02,
-          "risiko_pct": 4.07,
-          "ziel1_pct": 8.14,
-          "crv_am_aktuellen_kurs": 0.23,
-          "stueck": 5,
-          "kapitalbedarf_eur": 1787.0,
-          "risiko_eur": 73.0
+          "stop_usd": 378.9,
+          "einstieg_eur": 357.78,
+          "stop_eur": 338.36,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 5.43,
+          "crv_am_aktuellen_kurs": 0.45,
+          "stueck": 3,
+          "kapitalbedarf_eur": 1073.0,
+          "risiko_eur": 58.0
         },
         "wiedereinstieg_usd": 400.65
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "TMO": {
@@ -3045,10 +3215,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 304,
-        "call_open_interest": 277,
+        "call_open_interest": 365,
         "put_volume": 385,
         "call_put_volume_ratio": 0.79,
-        "call_volume_oi_ratio": 1.1,
+        "call_volume_oi_ratio": 0.83,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -3080,21 +3250,26 @@
           "available": true,
           "einstieg_usd": 658.02,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 628.36,
-          "ziel1_usd": 717.34,
-          "ziel2_usd": 747.0,
-          "einstieg_eur": 586.95,
-          "stop_eur": 560.5,
-          "ziel1_eur": 639.87,
-          "ziel2_eur": 666.33,
-          "risiko_pct": 4.51,
-          "ziel1_pct": 9.02,
+          "stop_usd": 618.47,
+          "einstieg_eur": 587.61,
+          "stop_eur": 552.29,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.01,
           "crv_am_aktuellen_kurs": 2.0,
           "stueck": 2,
-          "kapitalbedarf_eur": 1174.0,
-          "risiko_eur": 53.0
+          "kapitalbedarf_eur": 1175.0,
+          "risiko_eur": 71.0
         },
         "wiedereinstieg_usd": 659.76
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "XOM": {
@@ -3128,10 +3303,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 961,
-        "call_open_interest": 8344,
+        "call_open_interest": 8794,
         "put_volume": 2564,
         "call_put_volume_ratio": 0.37,
-        "call_volume_oi_ratio": 0.12,
+        "call_volume_oi_ratio": 0.11,
         "einschaetzung": "bearisch"
       },
       "earnings": {
@@ -3167,21 +3342,26 @@
           "available": true,
           "einstieg_usd": 163.5,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 158.51,
-          "ziel1_usd": 173.46,
-          "ziel2_usd": 178.45,
-          "einstieg_eur": 145.84,
-          "stop_eur": 141.39,
-          "ziel1_eur": 154.73,
-          "ziel2_eur": 159.18,
-          "risiko_pct": 3.05,
-          "ziel1_pct": 6.1,
-          "crv_am_aktuellen_kurs": 0.43,
-          "stueck": 16,
-          "kapitalbedarf_eur": 2333.0,
+          "stop_usd": 156.85,
+          "einstieg_eur": 146.0,
+          "stop_eur": 140.07,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.06,
+          "crv_am_aktuellen_kurs": 0.65,
+          "stueck": 12,
+          "kapitalbedarf_eur": 1752.0,
           "risiko_eur": 71.0
         },
         "wiedereinstieg_usd": 163.5
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "CVX": {
@@ -3215,10 +3395,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 1595,
-        "call_open_interest": 6292,
+        "call_open_interest": 7381,
         "put_volume": 500,
         "call_put_volume_ratio": 3.19,
-        "call_volume_oi_ratio": 0.25,
+        "call_volume_oi_ratio": 0.22,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -3250,21 +3430,26 @@
           "available": true,
           "einstieg_usd": 211.98,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 205.9,
-          "ziel1_usd": 224.14,
-          "ziel2_usd": 230.23,
-          "einstieg_eur": 189.09,
-          "stop_eur": 183.66,
-          "ziel1_eur": 199.94,
-          "ziel2_eur": 205.36,
-          "risiko_pct": 2.87,
-          "ziel1_pct": 5.74,
+          "stop_usd": 203.87,
+          "einstieg_eur": 189.3,
+          "stop_eur": 182.06,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.83,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 13,
-          "kapitalbedarf_eur": 2458.0,
-          "risiko_eur": 71.0
+          "stueck": 10,
+          "kapitalbedarf_eur": 1893.0,
+          "risiko_eur": 72.0
         },
         "wiedereinstieg_usd": 207.79
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "NEE": {
@@ -3298,10 +3483,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 1138,
-        "call_open_interest": 7413,
+        "call_open_interest": 8234,
         "put_volume": 1191,
         "call_put_volume_ratio": 0.96,
-        "call_volume_oi_ratio": 0.15,
+        "call_volume_oi_ratio": 0.14,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -3333,21 +3518,26 @@
           "available": true,
           "einstieg_usd": 77.38,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 75.34,
-          "ziel1_usd": 81.46,
-          "ziel2_usd": 83.49,
-          "einstieg_eur": 69.02,
-          "stop_eur": 67.21,
-          "ziel1_eur": 72.66,
-          "ziel2_eur": 74.48,
-          "risiko_pct": 2.63,
-          "ziel1_pct": 5.27,
+          "stop_usd": 74.66,
+          "einstieg_eur": 69.1,
+          "stop_eur": 66.67,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.51,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 41,
-          "kapitalbedarf_eur": 2830.0,
-          "risiko_eur": 75.0
+          "stueck": 30,
+          "kapitalbedarf_eur": 2073.0,
+          "risiko_eur": 73.0
         },
         "wiedereinstieg_usd": 77.94
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "DUK": {
@@ -3381,7 +3571,7 @@
         "available": true,
         "expiration": "2026-11-20",
         "call_volume": 183,
-        "call_open_interest": 2931,
+        "call_open_interest": 3006,
         "put_volume": 217,
         "call_put_volume_ratio": 0.84,
         "call_volume_oi_ratio": 0.06,
@@ -3418,21 +3608,26 @@
           "available": true,
           "einstieg_usd": 116.65,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 114.49,
-          "ziel1_usd": 120.97,
-          "ziel2_usd": 123.14,
-          "einstieg_eur": 104.05,
-          "stop_eur": 102.12,
-          "ziel1_eur": 107.91,
-          "ziel2_eur": 109.84,
-          "risiko_pct": 1.85,
-          "ziel1_pct": 3.71,
+          "stop_usd": 113.77,
+          "einstieg_eur": 104.17,
+          "stop_eur": 101.59,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 2.47,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 28,
-          "kapitalbedarf_eur": 2913.0,
-          "risiko_eur": 54.0
+          "stueck": 23,
+          "kapitalbedarf_eur": 2396.0,
+          "risiko_eur": 59.0
         },
         "wiedereinstieg_usd": 115.62
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "CAT": {
@@ -3466,10 +3661,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 851,
-        "call_open_interest": 2969,
+        "call_open_interest": 3256,
         "put_volume": 849,
         "call_put_volume_ratio": 1.0,
-        "call_volume_oi_ratio": 0.29,
+        "call_volume_oi_ratio": 0.26,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -3501,21 +3696,26 @@
           "available": true,
           "einstieg_usd": 800.47,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 762.43,
-          "ziel1_usd": 876.55,
-          "ziel2_usd": 914.6,
-          "einstieg_eur": 714.02,
-          "stop_eur": 680.09,
-          "ziel1_eur": 781.89,
-          "ziel2_eur": 815.82,
-          "risiko_pct": 4.75,
-          "ziel1_pct": 9.5,
+          "stop_usd": 749.75,
+          "einstieg_eur": 714.82,
+          "stop_eur": 669.52,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.34,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 2,
-          "kapitalbedarf_eur": 1428.0,
-          "risiko_eur": 68.0
+          "stueck": 1,
+          "kapitalbedarf_eur": 715.0,
+          "risiko_eur": 45.0
         },
         "wiedereinstieg_usd": 813.62
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "DE": {
@@ -3549,10 +3749,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 67,
-        "call_open_interest": 460,
+        "call_open_interest": 522,
         "put_volume": 139,
         "call_put_volume_ratio": 0.48,
-        "call_volume_oi_ratio": 0.15,
+        "call_volume_oi_ratio": 0.13,
         "einschaetzung": "bearisch"
       },
       "earnings": {
@@ -3586,21 +3786,26 @@
           "available": true,
           "einstieg_usd": 620.93,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 590.16,
-          "ziel1_usd": 682.48,
-          "ziel2_usd": 713.25,
-          "einstieg_eur": 553.87,
-          "stop_eur": 526.42,
-          "ziel1_eur": 608.77,
-          "ziel2_eur": 636.22,
-          "risiko_pct": 4.96,
-          "ziel1_pct": 9.91,
+          "stop_usd": 579.9,
+          "einstieg_eur": 554.49,
+          "stop_eur": 517.85,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.61,
           "crv_am_aktuellen_kurs": 2.0,
           "stueck": 2,
-          "kapitalbedarf_eur": 1108.0,
-          "risiko_eur": 55.0
+          "kapitalbedarf_eur": 1109.0,
+          "risiko_eur": 73.0
         },
         "wiedereinstieg_usd": 678.93
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "URI": {
@@ -3634,10 +3839,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 112,
-        "call_open_interest": 208,
+        "call_open_interest": 242,
         "put_volume": 1118,
         "call_put_volume_ratio": 0.1,
-        "call_volume_oi_ratio": 0.54,
+        "call_volume_oi_ratio": 0.46,
         "einschaetzung": "bearisch"
       },
       "earnings": {
@@ -3672,21 +3877,26 @@
           "available": true,
           "einstieg_usd": 1056.37,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 1004.62,
-          "ziel1_usd": 1159.86,
-          "ziel2_usd": 1211.61,
-          "einstieg_eur": 942.28,
-          "stop_eur": 896.12,
-          "ziel1_eur": 1034.6,
-          "ziel2_eur": 1080.75,
-          "risiko_pct": 4.9,
-          "ziel1_pct": 9.8,
+          "stop_usd": 987.38,
+          "einstieg_eur": 943.34,
+          "stop_eur": 881.73,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.53,
           "crv_am_aktuellen_kurs": 2.0,
           "stueck": 1,
-          "kapitalbedarf_eur": 942.0,
-          "risiko_eur": 46.0
+          "kapitalbedarf_eur": 943.0,
+          "risiko_eur": 62.0
         },
         "wiedereinstieg_usd": 1032.63
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "LIN": {
@@ -3720,7 +3930,7 @@
         "available": true,
         "expiration": "2026-11-20",
         "call_volume": 325,
-        "call_open_interest": 5547,
+        "call_open_interest": 5672,
         "put_volume": 324,
         "call_put_volume_ratio": 1.0,
         "call_volume_oi_ratio": 0.06,
@@ -3757,21 +3967,26 @@
           "available": true,
           "einstieg_usd": 483.73,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 471.02,
-          "ziel1_usd": 509.15,
-          "ziel2_usd": 521.86,
-          "einstieg_eur": 431.49,
-          "stop_eur": 420.15,
-          "ziel1_eur": 454.16,
-          "ziel2_eur": 465.5,
-          "risiko_pct": 2.63,
-          "ziel1_pct": 5.26,
+          "stop_usd": 466.78,
+          "einstieg_eur": 431.97,
+          "stop_eur": 416.84,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.5,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 6,
-          "kapitalbedarf_eur": 2589.0,
-          "risiko_eur": 68.0
+          "stueck": 4,
+          "kapitalbedarf_eur": 1728.0,
+          "risiko_eur": 61.0
         },
         "wiedereinstieg_usd": 471.46
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "FCX": {
@@ -3805,10 +4020,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 881,
-        "call_open_interest": 4848,
+        "call_open_interest": 5072,
         "put_volume": 339,
         "call_put_volume_ratio": 2.6,
-        "call_volume_oi_ratio": 0.18,
+        "call_volume_oi_ratio": 0.17,
         "einschaetzung": "bullisch"
       },
       "earnings": {
@@ -3822,7 +4037,7 @@
         "optionsflow": "gruen"
       },
       "setup": {
-        "score": 54.1,
+        "score": 54.6,
         "teilscores": {
           "kapitalfluss": 0.0,
           "relative_staerke": 62.0,
@@ -3830,7 +4045,7 @@
           "sektorstaerke": 72.0,
           "setup": 40.0,
           "optionsflow": 100.0,
-          "crv": 0.0
+          "crv": 9.0
         },
         "stufe": "Beobachten",
         "bulltrap_flags": [
@@ -3842,21 +4057,26 @@
           "available": true,
           "einstieg_usd": 71.49,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 67.69,
-          "ziel1_usd": 79.08,
-          "ziel2_usd": 82.88,
-          "einstieg_eur": 63.77,
-          "stop_eur": 60.38,
-          "ziel1_eur": 70.54,
-          "ziel2_eur": 73.93,
-          "risiko_pct": 5.31,
-          "ziel1_pct": 10.62,
-          "crv_am_aktuellen_kurs": 0.9,
-          "stueck": 22,
-          "kapitalbedarf_eur": 1403.0,
-          "risiko_eur": 74.0
+          "stop_usd": 66.43,
+          "einstieg_eur": 63.84,
+          "stop_eur": 59.32,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 7.08,
+          "crv_am_aktuellen_kurs": 1.09,
+          "stueck": 16,
+          "kapitalbedarf_eur": 1021.0,
+          "risiko_eur": 72.0
         },
         "wiedereinstieg_usd": 71.49
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "AMZN": {
@@ -3888,13 +4108,13 @@
       "sector": "Consumer Discretionary",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-23",
-        "call_volume": 45104,
-        "call_open_interest": 67926,
-        "put_volume": 13449,
-        "call_put_volume_ratio": 3.35,
-        "call_volume_oi_ratio": 0.66,
-        "einschaetzung": "bullisch"
+        "expiration": "2026-10-19",
+        "call_volume": 0,
+        "call_open_interest": 7637,
+        "put_volume": 0,
+        "call_put_volume_ratio": null,
+        "call_volume_oi_ratio": 0.0,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -3904,20 +4124,20 @@
       "ampel": {
         "kapitalfluss": "gelb",
         "trendkontext": "gruen",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 75.7,
+        "score": 70.7,
         "teilscores": {
           "kapitalfluss": 88.0,
           "relative_staerke": 71.0,
           "trendkontext": 100.0,
           "sektorstaerke": 61.0,
           "setup": 65.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 0.0
         },
-        "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+        "stufe": "Kauf \u2013 solide",
         "bulltrap_flags": [],
         "ausschluesse": [],
         "hinweise": [],
@@ -3925,21 +4145,26 @@
           "available": true,
           "einstieg_usd": 252.02,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 243.58,
-          "ziel1_usd": 268.91,
-          "ziel2_usd": 277.35,
-          "einstieg_eur": 224.8,
-          "stop_eur": 217.27,
-          "ziel1_eur": 239.87,
-          "ziel2_eur": 247.4,
-          "risiko_pct": 3.35,
-          "ziel1_pct": 6.7,
-          "crv_am_aktuellen_kurs": 0.34,
-          "stueck": 9,
-          "kapitalbedarf_eur": 2023.0,
-          "risiko_eur": 68.0
+          "stop_usd": 240.76,
+          "einstieg_eur": 225.05,
+          "stop_eur": 215.0,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.47,
+          "crv_am_aktuellen_kurs": 0.56,
+          "stueck": 7,
+          "kapitalbedarf_eur": 1575.0,
+          "risiko_eur": 70.0
         },
         "wiedereinstieg_usd": 252.02
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "HD": {
@@ -3973,10 +4198,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 864,
-        "call_open_interest": 3548,
+        "call_open_interest": 4241,
         "put_volume": 1318,
         "call_put_volume_ratio": 0.66,
-        "call_volume_oi_ratio": 0.24,
+        "call_volume_oi_ratio": 0.2,
         "einschaetzung": "bearisch"
       },
       "earnings": {
@@ -4012,21 +4237,26 @@
           "available": true,
           "einstieg_usd": 290.74,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 280.86,
-          "ziel1_usd": 310.5,
-          "ziel2_usd": 320.38,
-          "einstieg_eur": 259.34,
-          "stop_eur": 250.53,
-          "ziel1_eur": 276.97,
-          "ziel2_eur": 285.78,
-          "risiko_pct": 3.4,
-          "ziel1_pct": 6.8,
+          "stop_usd": 277.57,
+          "einstieg_eur": 259.63,
+          "stop_eur": 247.87,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.53,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 8,
-          "kapitalbedarf_eur": 2075.0,
+          "stueck": 6,
+          "kapitalbedarf_eur": 1558.0,
           "risiko_eur": 71.0
         },
         "wiedereinstieg_usd": 293.68
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "TSLA": {
@@ -4058,13 +4288,13 @@
       "sector": "Consumer Discretionary",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-23",
-        "call_volume": 24149,
-        "call_open_interest": 54128,
-        "put_volume": 13259,
-        "call_put_volume_ratio": 1.82,
-        "call_volume_oi_ratio": 0.45,
-        "einschaetzung": "bullisch"
+        "expiration": "2026-10-19",
+        "call_volume": 0,
+        "call_open_interest": 14267,
+        "put_volume": 0,
+        "call_put_volume_ratio": null,
+        "call_volume_oi_ratio": 0.0,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -4074,17 +4304,17 @@
       "ampel": {
         "kapitalfluss": "gruen",
         "trendkontext": "rot",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 63.8,
+        "score": 58.8,
         "teilscores": {
           "kapitalfluss": 93.0,
           "relative_staerke": 81.0,
           "trendkontext": 0.0,
           "sektorstaerke": 61.0,
           "setup": 65.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 0.0
         },
         "stufe": "Beobachten",
@@ -4095,21 +4325,26 @@
           "available": true,
           "einstieg_usd": 368.66,
           "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
-          "stop_usd": 352.12,
-          "ziel1_usd": 401.75,
-          "ziel2_usd": 418.29,
-          "einstieg_eur": 328.84,
-          "stop_eur": 314.09,
-          "ziel1_eur": 358.36,
-          "ziel2_eur": 373.11,
-          "risiko_pct": 4.49,
-          "ziel1_pct": 8.97,
-          "crv_am_aktuellen_kurs": 0.62,
-          "stueck": 5,
-          "kapitalbedarf_eur": 1644.0,
-          "risiko_eur": 74.0
+          "stop_usd": 346.6,
+          "einstieg_eur": 329.21,
+          "stop_eur": 309.52,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 5.98,
+          "crv_am_aktuellen_kurs": 0.83,
+          "stueck": 3,
+          "kapitalbedarf_eur": 988.0,
+          "risiko_eur": 59.0
         },
         "wiedereinstieg_usd": 368.66
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "UNP": {
@@ -4143,10 +4378,10 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 88,
-        "call_open_interest": 1010,
+        "call_open_interest": 1074,
         "put_volume": 32,
         "call_put_volume_ratio": 2.75,
-        "call_volume_oi_ratio": 0.09,
+        "call_volume_oi_ratio": 0.08,
         "einschaetzung": "neutral"
       },
       "earnings": {
@@ -4178,21 +4413,26 @@
           "available": true,
           "einstieg_usd": 278.34,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 272.48,
-          "ziel1_usd": 290.05,
-          "ziel2_usd": 295.91,
-          "einstieg_eur": 248.28,
-          "stop_eur": 243.05,
-          "ziel1_eur": 258.73,
-          "ziel2_eur": 263.95,
-          "risiko_pct": 2.1,
-          "ziel1_pct": 4.21,
+          "stop_usd": 270.53,
+          "einstieg_eur": 248.56,
+          "stop_eur": 241.58,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 2.81,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 12,
-          "kapitalbedarf_eur": 2979.0,
-          "risiko_eur": 63.0
+          "stueck": 10,
+          "kapitalbedarf_eur": 2486.0,
+          "risiko_eur": 70.0
         },
         "wiedereinstieg_usd": 276.76
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "UPS": {
@@ -4226,7 +4466,7 @@
         "available": true,
         "expiration": "2026-10-23",
         "call_volume": 548,
-        "call_open_interest": 3537,
+        "call_open_interest": 3575,
         "put_volume": 151,
         "call_put_volume_ratio": 3.63,
         "call_volume_oi_ratio": 0.15,
@@ -4261,21 +4501,26 @@
           "available": true,
           "einstieg_usd": 94.57,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 91.95,
-          "ziel1_usd": 99.81,
-          "ziel2_usd": 102.43,
-          "einstieg_eur": 84.36,
-          "stop_eur": 82.02,
-          "ziel1_eur": 89.03,
-          "ziel2_eur": 91.37,
-          "risiko_pct": 2.77,
-          "ziel1_pct": 5.54,
+          "stop_usd": 91.08,
+          "einstieg_eur": 84.45,
+          "stop_eur": 81.33,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.69,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 32,
-          "kapitalbedarf_eur": 2699.0,
+          "stueck": 24,
+          "kapitalbedarf_eur": 2027.0,
           "risiko_eur": 75.0
         },
         "wiedereinstieg_usd": 95.55
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     },
     "AAPL": {
@@ -4307,13 +4552,13 @@
       "sector": "Technology",
       "options_flow": {
         "available": true,
-        "expiration": "2026-10-23",
-        "call_volume": 31112,
-        "call_open_interest": 47178,
-        "put_volume": 8951,
-        "call_put_volume_ratio": 3.48,
-        "call_volume_oi_ratio": 0.66,
-        "einschaetzung": "bullisch"
+        "expiration": "2026-10-19",
+        "call_volume": 0,
+        "call_open_interest": 4192,
+        "put_volume": 0,
+        "call_put_volume_ratio": null,
+        "call_volume_oi_ratio": 0.0,
+        "einschaetzung": "neutral"
       },
       "earnings": {
         "available": true,
@@ -4323,20 +4568,20 @@
       "ampel": {
         "kapitalfluss": "gruen",
         "trendkontext": "gruen",
-        "optionsflow": "gruen"
+        "optionsflow": "gelb"
       },
       "setup": {
-        "score": 79.5,
+        "score": 74.5,
         "teilscores": {
           "kapitalfluss": 90.0,
           "relative_staerke": 45.0,
           "trendkontext": 100.0,
           "sektorstaerke": 50.0,
           "setup": 100.0,
-          "optionsflow": 100.0,
+          "optionsflow": 50.0,
           "crv": 100.0
         },
-        "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+        "stufe": "Kauf \u2013 solide",
         "bulltrap_flags": [],
         "ausschluesse": [],
         "hinweise": [],
@@ -4344,21 +4589,26 @@
           "available": true,
           "einstieg_usd": 336.64,
           "einstieg_typ": "am aktuellen Kurs",
-          "stop_usd": 326.95,
-          "ziel1_usd": 356.02,
-          "ziel2_usd": 365.7,
-          "einstieg_eur": 300.28,
-          "stop_eur": 291.64,
-          "ziel1_eur": 317.57,
-          "ziel2_eur": 326.21,
-          "risiko_pct": 2.88,
-          "ziel1_pct": 5.76,
+          "stop_usd": 323.72,
+          "einstieg_eur": 300.62,
+          "stop_eur": 289.08,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.84,
           "crv_am_aktuellen_kurs": 2.0,
-          "stueck": 8,
-          "kapitalbedarf_eur": 2402.0,
+          "stueck": 6,
+          "kapitalbedarf_eur": 1804.0,
           "risiko_eur": 69.0
         },
         "wiedereinstieg_usd": 335.39
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
       }
     }
   },
@@ -4366,22 +4616,22 @@
     "vix": {
       "available": true,
       "symbol": "^VIX",
-      "datum": "2026-10-09",
-      "close": 14.84,
-      "sma20": 15.65,
-      "sma50": 15.49,
-      "pct_from_sma20": -5.2,
-      "chg_20d_abs": -1.0
+      "datum": "2026-10-12",
+      "close": 15.51,
+      "sma20": 15.57,
+      "sma50": 15.48,
+      "pct_from_sma20": -0.41,
+      "chg_20d_abs": -1.59
     },
     "us10y": {
       "available": true,
       "symbol": "^TNX",
-      "datum": "2026-10-09",
+      "datum": "2026-10-12",
       "close": 5.24,
-      "sma20": 5.15,
-      "sma50": 4.89,
-      "pct_from_sma20": 1.89,
-      "chg_20d_abs": 0.27
+      "sma20": 5.16,
+      "sma50": 4.9,
+      "pct_from_sma20": 1.54,
+      "chg_20d_abs": 0.28
     }
   },
   "breadth": {
@@ -4621,7 +4871,7 @@
       {
         "kriterium": "VIX unter 20",
         "erfuellt": true,
-        "wert": 14.84
+        "wert": 15.51
       },
       {
         "kriterium": "\u226550 % der Watchlist \u00fcber SMA50",
@@ -4636,8 +4886,9 @@
     ],
     "override": null,
     "max_neue_positionen": 2,
+    "max_offene_positionen": 5,
     "hinweise": [
-      "US-10J-Rendite 5.24 % (20 Tage: +0.27 Pkt.) \u2013 nur Info, kein Kriterium"
+      "US-10J-Rendite 5.24 % (20 Tage: +0.28 Pkt.) \u2013 nur Info, kein Kriterium"
     ],
     "kurztext": "RISK-ON: 5/5 Kriterien erf\u00fcllt"
   },
@@ -4649,28 +4900,10 @@
       "sector": "MedTech"
     },
     {
-      "ticker": "AAPL",
-      "score": 79.5,
-      "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
-      "sector": "Technology"
-    },
-    {
       "ticker": "SNOW",
       "score": 78.2,
       "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
       "sector": "Software/Cloud"
-    },
-    {
-      "ticker": "MSFT",
-      "score": 78.1,
-      "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
-      "sector": "Software/Cloud"
-    },
-    {
-      "ticker": "AMZN",
-      "score": 75.7,
-      "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
-      "sector": "Consumer Discretionary"
     },
     {
       "ticker": "V",
@@ -4685,10 +4918,16 @@
       "sector": "Software/Cloud"
     },
     {
-      "ticker": "NVDA",
-      "score": 72.0,
+      "ticker": "AAPL",
+      "score": 74.5,
       "stufe": "Kauf \u2013 solide",
-      "sector": "Semiconductors/AI"
+      "sector": "Technology"
+    },
+    {
+      "ticker": "MSFT",
+      "score": 73.1,
+      "stufe": "Kauf \u2013 solide",
+      "sector": "Software/Cloud"
     },
     {
       "ticker": "AMD",
@@ -4701,6 +4940,12 @@
       "score": 71.0,
       "stufe": "Kauf \u2013 solide",
       "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "AMZN",
+      "score": 70.7,
+      "stufe": "Kauf \u2013 solide",
+      "sector": "Consumer Discretionary"
     },
     {
       "ticker": "CVX",
@@ -4733,6 +4978,12 @@
       "sector": "Cybersecurity"
     },
     {
+      "ticker": "NVDA",
+      "score": 67.0,
+      "stufe": "Kauf \u2013 solide",
+      "sector": "Semiconductors/AI"
+    },
+    {
       "ticker": "ZS",
       "score": 66.5,
       "stufe": "\u00dcberdehnt \u2013 auf R\u00fccksetzer warten",
@@ -4757,12 +5008,6 @@
       "sector": "Semiconductors/AI"
     },
     {
-      "ticker": "TSLA",
-      "score": 63.8,
-      "stufe": "Beobachten",
-      "sector": "Consumer Discretionary"
-    },
-    {
       "ticker": "ASML",
       "score": 59.8,
       "stufe": "Ausgeschlossen",
@@ -4781,6 +5026,12 @@
       "sector": "MedTech"
     },
     {
+      "ticker": "TSLA",
+      "score": 58.8,
+      "stufe": "Beobachten",
+      "sector": "Consumer Discretionary"
+    },
+    {
       "ticker": "XOM",
       "score": 57.9,
       "stufe": "Ausgeschlossen",
@@ -4788,7 +5039,7 @@
     },
     {
       "ticker": "FCX",
-      "score": 54.1,
+      "score": 54.6,
       "stufe": "Beobachten",
       "sector": "Materials"
     },
@@ -4913,12 +5164,6 @@
       "sector": "Utilities"
     },
     {
-      "ticker": "RTX",
-      "score": 22.5,
-      "stufe": "Kein Setup",
-      "sector": "Defense/Industrials"
-    },
-    {
       "ticker": "MS",
       "score": 21.4,
       "stufe": "Ausgeschlossen",
@@ -4929,6 +5174,12 @@
       "score": 20.5,
       "stufe": "Ausgeschlossen",
       "sector": "Consumer Discretionary"
+    },
+    {
+      "ticker": "RTX",
+      "score": 17.5,
+      "stufe": "Kein Setup",
+      "sector": "Defense/Industrials"
     },
     {
       "ticker": "GS",
@@ -4958,10 +5209,13 @@
       "Kauf \u2013 solide": 65,
       "Beobachten": 50
     },
-    "stop_atr_mult": 1.5,
-    "ziel1_r": 2.0,
-    "ziel2_r": 3.0,
+    "stop_atr_mult": 2.0,
+    "haltedauer_tage": 10,
     "risiko_pro_trade_eur": 75.0,
+    "max_gesamtrisiko_eur": 375.0,
+    "max_position_eur": 2500.0,
+    "max_je_sektor": 2,
+    "depot_eur": 8000.0,
     "earnings_sperre_handelstage": 5
   }
 }
