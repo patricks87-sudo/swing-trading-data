@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-12T15:45:04.916813+00:00",
+  "generated_at_utc": "2026-10-13T15:44:38.870467+00:00",
   "waehrung": "EUR",
   "hinweis": "Hypothetisch, ohne Steuern. Depot-Simulation mit 8.000 € Start, 75 € Risiko je Trade, Schutz-Stop 2× ATR, Verkauf nach 10 Handelstagen, max. 5 Positionen / 375 € Gesamtrisiko / 2 je Sektor, 1 € Gebühr je Order. Echte Trades stehen im Trade-Journal.",
   "start": "2026-08-12",
@@ -46,7 +46,8 @@
     "2026-10-07",
     "2026-10-08",
     "2026-10-09",
-    "2026-10-12"
+    "2026-10-12",
+    "2026-10-13"
   ],
   "reihen": [
     {
@@ -95,7 +96,8 @@
         110.25,
         110.77,
         111.85,
-        112.47
+        112.21,
+        112.2
       ]
     },
     {
@@ -144,7 +146,8 @@
         113.53,
         114.44,
         116.35,
-        116.81
+        116.19,
+        116.75
       ]
     },
     {
@@ -193,7 +196,8 @@
         107.51,
         106.57,
         106.98,
-        106.85
+        106.24,
+        105.65
       ]
     },
     {
@@ -242,39 +246,40 @@
         101.75,
         101.83,
         102.34,
-        102.88
+        102.24,
+        102.31
       ]
     }
   ],
   "zusammenfassung": {
     "neu": {
       "label": "Depot-Simulation (deine Regeln)",
-      "gesamt_pct": 12.47
+      "gesamt_pct": 12.2
     },
     "alle": {
       "label": "Alle Kandidaten, 10 Tage gehalten",
-      "gesamt_pct": 16.81
+      "gesamt_pct": 16.75
     },
     "qqq": {
       "label": "Nasdaq-100 (QQQ)",
-      "gesamt_pct": 6.85
+      "gesamt_pct": 5.65
     },
     "urth": {
       "label": "MSCI World (URTH)",
-      "gesamt_pct": 2.88
+      "gesamt_pct": 2.31
     }
   },
   "statistik": {
     "neu": {
       "startkapital_eur": 8000.0,
-      "endwert_eur": 8997.6,
+      "endwert_eur": 8976.0,
       "trades_abgeschlossen": 13,
-      "trades_offen": 3,
+      "trades_offen": 4,
       "trefferquote_pct": 85.0,
-      "schnitt_trade_eur": 70.21,
+      "schnitt_trade_eur": 69.33,
       "bester_trade_eur": 197.65,
       "schlechtester_trade_eur": -62.0,
-      "gebuehren_eur": 29.0,
+      "gebuehren_eur": 30.0,
       "max_gleichzeitig": 5,
       "nicht_gekauft": {
         "plaetze": 4,
@@ -287,9 +292,9 @@
     },
     "alle": {
       "trades": 48,
-      "abgeschlossen": 35,
-      "trefferquote_pct": 86.0,
-      "schnitt_trade_pct": 5.58
+      "abgeschlossen": 38,
+      "trefferquote_pct": 87.0,
+      "schnitt_trade_pct": 5.85
     }
   },
   "trades_neu": [
@@ -301,9 +306,9 @@
       "stueck": 10,
       "ausstieg": "10 Tage",
       "einstieg_eur": 140.88,
-      "ausstieg_eur": 154.03,
-      "ergebnis_eur": 129.45,
-      "rendite_pct": 9.33
+      "ausstieg_eur": 153.53,
+      "ergebnis_eur": 124.45,
+      "rendite_pct": 8.98
     },
     {
       "ticker": "CVX",
@@ -313,9 +318,9 @@
       "stueck": 8,
       "ausstieg": "10 Tage",
       "einstieg_eur": 178.54,
-      "ausstieg_eur": 192.54,
-      "ergebnis_eur": 109.98,
-      "rendite_pct": 7.84
+      "ausstieg_eur": 191.74,
+      "ergebnis_eur": 103.6,
+      "rendite_pct": 7.39
     },
     {
       "ticker": "TSLA",
@@ -457,9 +462,9 @@
       "start": "2026-10-05",
       "stueck": 7,
       "einstieg_eur": 222.3,
-      "kurs_eur": 234.3,
-      "tage": 6,
-      "ergebnis_eur": 82.97
+      "kurs_eur": 232.88,
+      "tage": 7,
+      "ergebnis_eur": 73.03
     },
     {
       "ticker": "TMO",
@@ -467,9 +472,9 @@
       "start": "2026-10-09",
       "stueck": 2,
       "einstieg_eur": 579.68,
-      "kurs_eur": 587.53,
-      "tage": 2,
-      "ergebnis_eur": 14.69
+      "kurs_eur": 591.68,
+      "tage": 3,
+      "ergebnis_eur": 22.99
     },
     {
       "ticker": "SMCI",
@@ -477,9 +482,19 @@
       "start": "2026-10-12",
       "stueck": 19,
       "einstieg_eur": 36.06,
-      "kurs_eur": 35.44,
+      "kurs_eur": 34.56,
+      "tage": 2,
+      "ergebnis_eur": -29.55
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD (Advanced Micro Devices)",
+      "start": "2026-10-13",
+      "stueck": 1,
+      "einstieg_eur": 515.99,
+      "kurs_eur": 525.39,
       "tage": 1,
-      "ergebnis_eur": -12.67
+      "ergebnis_eur": 8.4
     }
   ]
 }
