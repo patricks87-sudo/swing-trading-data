@@ -1,114 +1,75 @@
 {
-  "generated_at_utc": "2026-10-15T14:05:00+00:00",
-  "status": "NEUTRAL",
-  "begruendung": "P5-Eröffnungs-Info (Feed 15:50 MESZ, Sitzung noch unvollständig): NEUTRAL, nur 2 von 5 Kriterien erfüllt (VIX 17,7 und 52 % der Watchlist im 5-Tage-Plus); nicht erfüllt sind S&P 500 über SMA50 (−0,26 %), Nasdaq über SMA20 (−3,09 %) und ≥ 50 % der Watchlist über SMA50 (44 %). Damit gelten weiter max. 1 neue Position pro Tag und max. 3 offene Positionen; das Depot ist leer. Gap-Richtung: S&P 500 −0,4 %, Nasdaq −1,3 %, Russell 2000 +0,1 %, Halbleiter-Proxy −3,6 % – schwache Eröffnung, vor allem Tech/Halbleiter. 10J-Rendite 5,05 % (nur Info). Kandidaten: Apple eröffnet +0,9 % und liegt am geplanten Einstieg (346 $ ≈ 309 €, Stop 298 €, 6 Stück) – kein Warnhinweis. Microsoft (+0,2 %, 3,2 % über SMA20), Mastercard (+1,8 %, 7,3 % über SMA20, Fake-Breakout-Hinweis), Exxon Mobil (−0,7 %), Chevron (−0,5 %) und Zscaler (−0,7 %) nur per Limit an der SMA20 sinnvoll – nicht hinterherlaufen. Palantir Technologies (−2,9 %) jetzt wegen bärischem Optionsfluss ausgeschlossen, ServiceNow ohne Setup (Kurs steigt, OBV fällt), Marvell Technology (−5,3 %) und AMD (Advanced Micro Devices, −4,9 %) mit Kein Setup und rund 11 % unter der SMA20 – Warnhinweis. Reine Info, kein Veto; Hold-Test in P5.5, Entscheidung in P1.",
-  "kurzbegruendung": "NEUTRAL (2/5): schwache Eröffnung, Apple am Einstieg ohne Warnung, Halbleiter deutlich im Minus.",
+  "generated_at_utc": "2026-10-15T15:20:00+00:00",
+  "status": "RISK-ON",
+  "begruendung": "P5.5-Hold-Test (Feed 17:06 MESZ): Regime RISK-ON, 4 von 5 Kriterien erfüllt (S&P 500 über SMA50 +0,2 %, VIX 17,1 unter 20, 50 % der Watchlist über SMA50, 58 % im 5-Tage-Plus); nur Nasdaq über SMA20 nicht erfüllt (−2,5 %). Damit gelten max. 2 neue Positionen pro Tag und max. 5 offene Positionen; das Depot ist leer. S&P 500 seit Eröffnung +0,6 %. Hold-Test: ServiceNow besteht 4/4 und ist zum Kurs kaufbar (Kurs ca. 132 € bereits über dem P4-Einstieg 125,14 €). Microsoft und Palantir Technologies bestehen 4/4, liegen aber über ihrem SMA20-Limit – nur Limit-Order. Mastercard und Zscaler (je 2/4) ebenfalls nur per Limit. Apple, Exxon Mobil und Chevron bestehen nicht – kein Einstieg heute. Marvell Technology und AMD (Advanced Micro Devices) bestehen den Hold-Test, bleiben aber wegen P4-Stufe Beobachten und schwachem Halbleiter-Sektor ohne Einstieg. Max. 2 Positionen je Sektor: Software/Cloud nicht mit allen drei Kandidaten. 10J-Rendite 5,05 % (nur Info). Reine Info, Entscheidung in P1.",
+  "kurzbegruendung": "RISK-ON (4/5): ServiceNow bestanden und kaufbar, Microsoft/Palantir/Mastercard/Zscaler nur per Limit.",
   "sektor_rotation": [
     {
       "sektor": "Healthcare",
       "trend": "positiv",
-      "kommentar": "Rang 1 (5-Tage +9,9 %); kein Kandidat auf der heutigen Liste.",
+      "kommentar": "Rang 1 (5-Tage-Plus deutlich); kein Kandidat auf der heutigen Liste.",
       "kandidaten": []
     },
     {
       "sektor": "Payments",
       "trend": "positiv",
-      "kommentar": "Rang 2, 5-Tage +6,5 %; Mastercard eröffnet +1,8 % und liegt 7,3 % über der SMA20 – nicht hinterherlaufen, Limit bei ca. 512 € behalten. Visa bleibt ausgeschlossen.",
+      "kommentar": "Rang 2; Mastercard Hold-Test teilweise (2/4), ca. 548 € weit über SMA20 (RSI14 > 72) – nur Limit bei 509,67 €. Visa bleibt ausgeschlossen (Optionsfluss bärisch).",
       "kandidaten": [
-        {
-          "name": "Mastercard",
-          "empfehlung": "Beobachten"
-        },
-        {
-          "name": "Visa",
-          "empfehlung": "Kein Einstieg"
-        }
-      ]
-    },
-    {
-      "sektor": "Energy",
-      "trend": "positiv",
-      "kommentar": "Rang 3, 5-Tage +4,4 %; Exxon Mobil (−0,7 %) und Chevron (−0,5 %) leicht schwächer, RSI14 über 72 – nur Limit an der SMA20 (ca. 148 € bzw. 187 €); Chevron jetzt nur noch Beobachten.",
-      "kandidaten": [
-        {
-          "name": "Exxon Mobil",
-          "empfehlung": "Beobachten"
-        },
-        {
-          "name": "Chevron",
-          "empfehlung": "Beobachten"
-        }
+        {"name": "Mastercard", "empfehlung": "Beobachten"},
+        {"name": "Visa", "empfehlung": "Kein Einstieg"}
       ]
     },
     {
       "sektor": "MedTech",
       "trend": "positiv",
-      "kommentar": "Rang 4; Thermo Fisher Scientific und Intuitive Surgical wegen Earnings in 3–4 Handelstagen weiter ausgeschlossen.",
+      "kommentar": "Rang 3; Thermo Fisher Scientific und Intuitive Surgical wegen Earnings in 3–4 Handelstagen weiter ausgeschlossen.",
       "kandidaten": [
-        {
-          "name": "Thermo Fisher Scientific",
-          "empfehlung": "Kein Einstieg"
-        },
-        {
-          "name": "Intuitive Surgical",
-          "empfehlung": "Kein Einstieg"
-        }
+        {"name": "Thermo Fisher Scientific", "empfehlung": "Kein Einstieg"},
+        {"name": "Intuitive Surgical", "empfehlung": "Kein Einstieg"}
+      ]
+    },
+    {
+      "sektor": "Energy",
+      "trend": "positiv",
+      "kommentar": "Rang 4; Exxon Mobil und Chevron bestehen den Hold-Test nicht (−2,3 % bzw. −0,9 % seit Eröffnung, schwächer als der S&P 500) – heute kein Einstieg.",
+      "kandidaten": [
+        {"name": "Exxon Mobil", "empfehlung": "Kein Einstieg"},
+        {"name": "Chevron", "empfehlung": "Kein Einstieg"}
+      ]
+    },
+    {
+      "sektor": "Software/Cloud",
+      "trend": "positiv",
+      "kommentar": "Rang 5; ServiceNow 4/4 (+5,7 % seit Eröffnung), zum Kurs kaufbar. Microsoft (4/4, Volumen 2,6×) und Palantir Technologies (4/4) nur per Limit an der SMA20. Max. 2 Positionen je Sektor beachten; Earnings 28.10. bzw. 02.11. in der Haltedauer.",
+      "kandidaten": [
+        {"name": "ServiceNow", "empfehlung": "Kauf"},
+        {"name": "Microsoft", "empfehlung": "Kauf"},
+        {"name": "Palantir Technologies", "empfehlung": "Beobachten"}
       ]
     },
     {
       "sektor": "Technology",
       "trend": "positiv",
-      "kommentar": "Rang 5; Apple +0,9 % zur Eröffnung, am geplanten Einstieg (ca. 309 €, Stop 298 €, 6 Stück), 2,7 % über SMA20 – kein Warnhinweis. Earnings 02.11. (12 Handelstage) in der Haltedauer.",
+      "kommentar": "Rang 6; Apple fällt im Hold-Test durch (0/4, −0,8 % seit Eröffnung, Volumen 0,92×) – heute kein Einstieg, bleibt auf der Liste.",
       "kandidaten": [
-        {
-          "name": "Apple",
-          "empfehlung": "Kauf"
-        }
-      ]
-    },
-    {
-      "sektor": "Software/Cloud",
-      "trend": "neutral",
-      "kommentar": "Rang 9; Microsoft (+0,2 %) jetzt Kauf – hohe Qualität, aber 3,2 % über SMA20: Limit bei ca. 463 € statt Nachlaufen. Palantir Technologies (−2,9 %) wegen bärischem Optionsfluss ausgeschlossen, ServiceNow ohne Setup.",
-      "kandidaten": [
-        {
-          "name": "Microsoft",
-          "empfehlung": "Beobachten"
-        },
-        {
-          "name": "Palantir Technologies",
-          "empfehlung": "Kein Einstieg"
-        },
-        {
-          "name": "ServiceNow",
-          "empfehlung": "Kein Einstieg"
-        }
+        {"name": "Apple", "empfehlung": "Kein Einstieg"}
       ]
     },
     {
       "sektor": "Cybersecurity",
       "trend": "neutral",
-      "kommentar": "Rang 10, 5-Tage −4,4 %; Zscaler (−0,7 %) nur per Limit an der SMA20 (ca. 188 €), Stop weit (ca. 9 %).",
+      "kommentar": "Rang 13; Zscaler Hold-Test teilweise (2/4, Volumen nur 0,6×), Stop weit – nur Limit an der SMA20 (186,85 €).",
       "kandidaten": [
-        {
-          "name": "Zscaler",
-          "empfehlung": "Beobachten"
-        }
+        {"name": "Zscaler", "empfehlung": "Beobachten"}
       ]
     },
     {
       "sektor": "Semiconductors/AI",
       "trend": "negativ",
-      "kommentar": "Rang 17, 5-Tage −10,7 %, Halbleiter-Proxy heute −3,6 %. Marvell Technology (−5,3 %) und AMD (Advanced Micro Devices, −4,9 %) mit Kein Setup, rund 11 % unter der SMA20 – Warnhinweis, kein Einstieg.",
+      "kommentar": "Rang 19 (Score 0). Marvell Technology und AMD (Advanced Micro Devices) bestehen den Intraday-Hold-Test (4/4, AMD Volumen 3,6×), bleiben aber P4-Stufe Beobachten nach dem Halbleiter-Einbruch von gestern – kein Einstieg, Erholung abwarten.",
       "kandidaten": [
-        {
-          "name": "Marvell Technology",
-          "empfehlung": "Kein Einstieg"
-        },
-        {
-          "name": "AMD (Advanced Micro Devices)",
-          "empfehlung": "Kein Einstieg"
-        }
+        {"name": "Marvell Technology", "empfehlung": "Beobachten"},
+        {"name": "AMD (Advanced Micro Devices)", "empfehlung": "Beobachten"}
       ]
     }
   ]
