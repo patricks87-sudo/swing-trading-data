@@ -1,1 +1,115 @@
-{"generated_at_utc":"2026-10-15T13:10:00+00:00","status":"NEUTRAL","begruendung":"NEUTRAL bei 3 von 5 Kriterien (Feed 14:51 MESZ): erfüllt sind S&P 500 über SMA50 (+0,13 %), VIX 17,6 und 54 % der Watchlist im 5-Tage-Plus; nicht erfüllt sind Nasdaq über SMA20 (−1,8 %) und ≥ 50 % der Watchlist über SMA50 (46 %). Damit gelten max. 1 neue Position pro Tag und max. 3 offene Positionen. Der Markt steht unter Druck: Halbleiterindex gestern −4,5 %, US-Inflation 3,7 %, 10J-Rendite 5,08 % (nur Info, kein Kriterium). Beste Kandidaten laut Feed: Apple (Score 86,8, am aktuellen Kurs), Exxon Mobil (76,9, nur Limit an der SMA20), Microsoft, Mastercard und Palantir Technologies (je knapp unter 75, nur Limit). Ausgeschlossen: Thermo Fisher Scientific und Intuitive Surgical (Earnings in 3–4 Handelstagen), Visa (Optionsfluss bärisch). Halbleiter sind mit Rang 17 der schwächste Sektor, Energy (Rang 1) und Payments (Rang 2) die stärksten. Reine Info, kein Veto; Hold-Test in P5.5, Entscheidung in P1.","kurzbegruendung":"NEUTRAL (3/5): max. 1 neue Position – Apple am Kurs stärkster Kandidat, Halbleiter schwach.","sektor_rotation":[{"sektor":"Energy","trend":"positiv","kommentar":"Rang 1, 5-Tage +8,1 %; Exxon Mobil und Chevron mit RSI14 über 72 überkauft – nur Limit an der SMA20 (ca. 147 € bzw. 186 €) sinnvoll.","kandidaten":[{"name":"Exxon Mobil","empfehlung":"Beobachten"},{"name":"Chevron","empfehlung":"Beobachten"}]},{"sektor":"Payments","trend":"positiv","kommentar":"Rang 2, 5-Tage +5,5 %; Mastercard überkauft (RSI14 über 72), nur Limit an der SMA20; Visa wegen bärischem Optionsfluss ausgeschlossen.","kandidaten":[{"name":"Mastercard","empfehlung":"Beobachten"},{"name":"Visa","empfehlung":"Kein Einstieg"}]},{"sektor":"Healthcare","trend":"positiv","kommentar":"Rang 3; UnitedHealth Group nur mit Score 53 (Beobachten), kein Kandidat der Liste.","kandidaten":[]},{"sektor":"MedTech","trend":"positiv","kommentar":"Rang 4; Thermo Fisher Scientific (Earnings 21.10.) und Intuitive Surgical (Earnings 20.10.) hart ausgeschlossen.","kandidaten":[{"name":"Thermo Fisher Scientific","empfehlung":"Kein Einstieg"},{"name":"Intuitive Surgical","empfehlung":"Kein Einstieg"}]},{"sektor":"Technology","trend":"positiv","kommentar":"Rang 5; Apple mit Score 86,8 und voller Ampel bei Kapitalfluss und Trend – stärkster Kandidat, Einstieg am aktuellen Kurs.","kandidaten":[{"name":"Apple","empfehlung":"Kauf"}]},{"sektor":"Cybersecurity","trend":"neutral","kommentar":"Rang 6, 5-Tage −3,2 %; Zscaler nur per Limit an der SMA20 (Bulltrap-Flag SMA50-Abstand), Fortinet wegen bärischem Optionsfluss ausgeschlossen.","kandidaten":[{"name":"Zscaler","empfehlung":"Beobachten"}]},{"sektor":"Software/Cloud","trend":"neutral","kommentar":"Rang 10; Microsoft und Palantir Technologies nur per Limit an der SMA20, ServiceNow am aktuellen Kurs möglich, aber Trendkontext nur gelb.","kandidaten":[{"name":"Microsoft","empfehlung":"Beobachten"},{"name":"Palantir Technologies","empfehlung":"Beobachten"},{"name":"ServiceNow","empfehlung":"Beobachten"}]},{"sektor":"Semiconductors/AI","trend":"neutral","kommentar":"Rang 17, schwächster Sektor (Halbleiterindex gestern −4,5 %, KI-Ausgaben-Sorgen); Marvell Technology und AMD (Advanced Micro Devices) mit News-Abzug −3 nur Beobachten.","kandidaten":[{"name":"Marvell Technology","empfehlung":"Beobachten"},{"name":"AMD (Advanced Micro Devices)","empfehlung":"Beobachten"}]}]}
+{
+  "generated_at_utc": "2026-10-15T14:05:00+00:00",
+  "status": "NEUTRAL",
+  "begruendung": "P5-Eröffnungs-Info (Feed 15:50 MESZ, Sitzung noch unvollständig): NEUTRAL, nur 2 von 5 Kriterien erfüllt (VIX 17,7 und 52 % der Watchlist im 5-Tage-Plus); nicht erfüllt sind S&P 500 über SMA50 (−0,26 %), Nasdaq über SMA20 (−3,09 %) und ≥ 50 % der Watchlist über SMA50 (44 %). Damit gelten weiter max. 1 neue Position pro Tag und max. 3 offene Positionen; das Depot ist leer. Gap-Richtung: S&P 500 −0,4 %, Nasdaq −1,3 %, Russell 2000 +0,1 %, Halbleiter-Proxy −3,6 % – schwache Eröffnung, vor allem Tech/Halbleiter. 10J-Rendite 5,05 % (nur Info). Kandidaten: Apple eröffnet +0,9 % und liegt am geplanten Einstieg (346 $ ≈ 309 €, Stop 298 €, 6 Stück) – kein Warnhinweis. Microsoft (+0,2 %, 3,2 % über SMA20), Mastercard (+1,8 %, 7,3 % über SMA20, Fake-Breakout-Hinweis), Exxon Mobil (−0,7 %), Chevron (−0,5 %) und Zscaler (−0,7 %) nur per Limit an der SMA20 sinnvoll – nicht hinterherlaufen. Palantir Technologies (−2,9 %) jetzt wegen bärischem Optionsfluss ausgeschlossen, ServiceNow ohne Setup (Kurs steigt, OBV fällt), Marvell Technology (−5,3 %) und AMD (Advanced Micro Devices, −4,9 %) mit Kein Setup und rund 11 % unter der SMA20 – Warnhinweis. Reine Info, kein Veto; Hold-Test in P5.5, Entscheidung in P1.",
+  "kurzbegruendung": "NEUTRAL (2/5): schwache Eröffnung, Apple am Einstieg ohne Warnung, Halbleiter deutlich im Minus.",
+  "sektor_rotation": [
+    {
+      "sektor": "Healthcare",
+      "trend": "positiv",
+      "kommentar": "Rang 1 (5-Tage +9,9 %); kein Kandidat auf der heutigen Liste.",
+      "kandidaten": []
+    },
+    {
+      "sektor": "Payments",
+      "trend": "positiv",
+      "kommentar": "Rang 2, 5-Tage +6,5 %; Mastercard eröffnet +1,8 % und liegt 7,3 % über der SMA20 – nicht hinterherlaufen, Limit bei ca. 512 € behalten. Visa bleibt ausgeschlossen.",
+      "kandidaten": [
+        {
+          "name": "Mastercard",
+          "empfehlung": "Beobachten"
+        },
+        {
+          "name": "Visa",
+          "empfehlung": "Kein Einstieg"
+        }
+      ]
+    },
+    {
+      "sektor": "Energy",
+      "trend": "positiv",
+      "kommentar": "Rang 3, 5-Tage +4,4 %; Exxon Mobil (−0,7 %) und Chevron (−0,5 %) leicht schwächer, RSI14 über 72 – nur Limit an der SMA20 (ca. 148 € bzw. 187 €); Chevron jetzt nur noch Beobachten.",
+      "kandidaten": [
+        {
+          "name": "Exxon Mobil",
+          "empfehlung": "Beobachten"
+        },
+        {
+          "name": "Chevron",
+          "empfehlung": "Beobachten"
+        }
+      ]
+    },
+    {
+      "sektor": "MedTech",
+      "trend": "positiv",
+      "kommentar": "Rang 4; Thermo Fisher Scientific und Intuitive Surgical wegen Earnings in 3–4 Handelstagen weiter ausgeschlossen.",
+      "kandidaten": [
+        {
+          "name": "Thermo Fisher Scientific",
+          "empfehlung": "Kein Einstieg"
+        },
+        {
+          "name": "Intuitive Surgical",
+          "empfehlung": "Kein Einstieg"
+        }
+      ]
+    },
+    {
+      "sektor": "Technology",
+      "trend": "positiv",
+      "kommentar": "Rang 5; Apple +0,9 % zur Eröffnung, am geplanten Einstieg (ca. 309 €, Stop 298 €, 6 Stück), 2,7 % über SMA20 – kein Warnhinweis. Earnings 02.11. (12 Handelstage) in der Haltedauer.",
+      "kandidaten": [
+        {
+          "name": "Apple",
+          "empfehlung": "Kauf"
+        }
+      ]
+    },
+    {
+      "sektor": "Software/Cloud",
+      "trend": "neutral",
+      "kommentar": "Rang 9; Microsoft (+0,2 %) jetzt Kauf – hohe Qualität, aber 3,2 % über SMA20: Limit bei ca. 463 € statt Nachlaufen. Palantir Technologies (−2,9 %) wegen bärischem Optionsfluss ausgeschlossen, ServiceNow ohne Setup.",
+      "kandidaten": [
+        {
+          "name": "Microsoft",
+          "empfehlung": "Beobachten"
+        },
+        {
+          "name": "Palantir Technologies",
+          "empfehlung": "Kein Einstieg"
+        },
+        {
+          "name": "ServiceNow",
+          "empfehlung": "Kein Einstieg"
+        }
+      ]
+    },
+    {
+      "sektor": "Cybersecurity",
+      "trend": "neutral",
+      "kommentar": "Rang 10, 5-Tage −4,4 %; Zscaler (−0,7 %) nur per Limit an der SMA20 (ca. 188 €), Stop weit (ca. 9 %).",
+      "kandidaten": [
+        {
+          "name": "Zscaler",
+          "empfehlung": "Beobachten"
+        }
+      ]
+    },
+    {
+      "sektor": "Semiconductors/AI",
+      "trend": "negativ",
+      "kommentar": "Rang 17, 5-Tage −10,7 %, Halbleiter-Proxy heute −3,6 %. Marvell Technology (−5,3 %) und AMD (Advanced Micro Devices, −4,9 %) mit Kein Setup, rund 11 % unter der SMA20 – Warnhinweis, kein Einstieg.",
+      "kandidaten": [
+        {
+          "name": "Marvell Technology",
+          "empfehlung": "Kein Einstieg"
+        },
+        {
+          "name": "AMD (Advanced Micro Devices)",
+          "empfehlung": "Kein Einstieg"
+        }
+      ]
+    }
+  ]
+}
