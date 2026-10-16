@@ -1,0 +1,5544 @@
+{
+  "run": "p4",
+  "generated_at_utc": "2026-10-16T12:51:50.853725+00:00",
+  "eurusd": 0.892,
+  "indices": {
+    "NASDAQ_COMPOSITE": {
+      "close": 728.0,
+      "rsi14": 38.24,
+      "obv": 65203800.0,
+      "obv_trend_5d": -134717900.0,
+      "atr14": 9.515,
+      "sma20": 743.1015,
+      "sma50": 726.8704,
+      "sma200": 674.4574,
+      "pct_from_sma20": -2.03,
+      "pct_from_sma50": 0.16,
+      "chg_5d_pct": -2.62,
+      "chg_1d_pct": -0.13,
+      "chg_60d_pct": 3.21,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 35050575.0,
+      "last_volume": 49610000.0,
+      "chg_20d_pct": 1.55,
+      "obv_trend_20d": 30990900.0,
+      "atr_pct": 1.31,
+      "atr_pct_avg60": 1.46,
+      "volume_ratio": 1.44,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 762.86,
+      "partial_last_bar": false
+    },
+    "SP500": {
+      "close": 771.79,
+      "rsi14": 50.48,
+      "obv": 7691900.0,
+      "obv_trend_5d": -34436400.0,
+      "atr14": 6.5307,
+      "sma20": 771.106,
+      "sma50": 768.608,
+      "sma200": 724.6334,
+      "pct_from_sma20": 0.09,
+      "pct_from_sma50": 0.41,
+      "chg_5d_pct": -0.28,
+      "chg_1d_pct": 0.28,
+      "chg_60d_pct": 3.26,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 42019890.0,
+      "last_volume": 43187500.0,
+      "chg_20d_pct": 1.21,
+      "obv_trend_20d": -184595200.0,
+      "atr_pct": 0.85,
+      "atr_pct_avg60": 0.89,
+      "volume_ratio": 1.02,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 781.62,
+      "partial_last_bar": false
+    },
+    "RUSSELL2000": {
+      "close": 275.08,
+      "rsi14": 37.71,
+      "obv": 400737700.0,
+      "obv_trend_5d": -31485900.0,
+      "atr14": 3.7586,
+      "sma20": 279.994,
+      "sma50": 289.626,
+      "sma200": 277.5384,
+      "pct_from_sma20": -1.76,
+      "pct_from_sma50": -5.02,
+      "chg_5d_pct": -0.9,
+      "chg_1d_pct": 1.37,
+      "chg_60d_pct": -6.37,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 70.0,
+      "avg_volume_20d": 26008420.0,
+      "last_volume": 32365500.0,
+      "chg_20d_pct": -3.63,
+      "obv_trend_20d": -110375000.0,
+      "atr_pct": 1.37,
+      "atr_pct_avg60": 1.22,
+      "volume_ratio": 1.27,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 288.94,
+      "partial_last_bar": false
+    },
+    "SOX_PROXY": {
+      "close": 514.71,
+      "rsi14": 24.89,
+      "obv": 111936100.0,
+      "obv_trend_5d": -48081800.0,
+      "atr14": 16.7621,
+      "sma20": 561.955,
+      "sma50": 538.1136,
+      "sma200": 466.6926,
+      "pct_from_sma20": -8.41,
+      "pct_from_sma50": -4.35,
+      "chg_5d_pct": -8.62,
+      "chg_1d_pct": -0.91,
+      "chg_60d_pct": -7.35,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 7113155.0,
+      "last_volume": 16480000.0,
+      "chg_20d_pct": -0.85,
+      "obv_trend_20d": -28078900.0,
+      "atr_pct": 3.26,
+      "atr_pct_avg60": 3.73,
+      "volume_ratio": 2.49,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 596.44,
+      "partial_last_bar": false
+    },
+    "VIX": {
+      "available": true,
+      "symbol": "^VIX",
+      "datum": "2026-10-16",
+      "close": 15.97,
+      "sma20": 15.53,
+      "sma50": 15.52,
+      "pct_from_sma20": 2.84,
+      "chg_20d_abs": 1.16,
+      "quelle": "CBOE ^VIX via yfinance"
+    }
+  },
+  "watchlist": {
+    "NVDA": {
+      "close": 217.23,
+      "rsi14": 41.07,
+      "obv": 512624300.0,
+      "obv_trend_5d": -316818200.0,
+      "atr14": 5.96,
+      "sma20": 228.584,
+      "sma50": 223.1738,
+      "sma200": 202.838,
+      "pct_from_sma20": -4.97,
+      "pct_from_sma50": -2.66,
+      "chg_5d_pct": -5.75,
+      "chg_1d_pct": -1.84,
+      "chg_60d_pct": 2.44,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 108318545.0,
+      "last_volume": 126789100.0,
+      "chg_20d_pct": -0.96,
+      "obv_trend_20d": 426696900.0,
+      "atr_pct": 2.74,
+      "atr_pct_avg60": 3.04,
+      "volume_ratio": 1.19,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 243.37,
+      "partial_last_bar": false,
+      "sector": "Semiconductors/AI",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 163084,
+        "call_open_interest": 236963,
+        "put_volume": 98470,
+        "call_put_volume_ratio": 1.66,
+        "call_volume_oi_ratio": 0.69,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-11-17",
+        "handelstage_bis": 22
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 49.8,
+        "teilscores": {
+          "kapitalfluss": 56.0,
+          "relative_staerke": 31.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 6.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [
+          "Halbleiter-Sektor schw\u00e4cher als S&P 500 (nur f\u00fcr Halbleiter relevant)"
+        ],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 217.23,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 205.31,
+          "einstieg_eur": 193.77,
+          "stop_eur": 183.14,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 5.49,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 7,
+          "kapitalbedarf_eur": 1356.0,
+          "risiko_eur": 74.0
+        },
+        "wiedereinstieg_usd": 228.58
+      },
+      "news": {
+        "positiv": 2,
+        "negativ": 5,
+        "neutral": 1,
+        "ausschluss": null,
+        "signale": [
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T07:04:00-04:00",
+            "titel": "Analyst Mortonson (Baird): Die B\u00f6rse werde der \u201eBank of Nvidia, Bank of AMD und Bank of Broadcom\u201c m\u00fcde; Chip-Ausverkauf in Asien (Kospi \u22128 %, SK Hynix \u221211 %)",
+            "quelle": "TheStreet / Yahoo Finance",
+            "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          },
+          {
+            "datum": "2026-10-14",
+            "published_at": "2026-10-15T06:00:00+02:00",
+            "titel": "Wall Street schlie\u00dft im Minus: Halbleiterindex \u22124,5 %, AMD \u22125,7 %, NVIDIA \u22123,2 %, CoreWeave \u00fcber \u221215 % wegen Sorgen um die KI-Verschuldung",
+            "quelle": "Saxo Bank",
+            "url": "https://www.home.saxo/en-sg/content/articles/macro/market-quick-take---risk-sentiment-crumbling-us-treasuries-a-safe-haven---15-october-2026-15102026",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T05:18:00-04:00",
+            "titel": "TSMC \u00fcbertrifft mit starkem Quartalsgewinn die Erwartungen dank KI-Chip-Nachfrage, Aktie vorb\u00f6rslich dennoch \u22122,1 %; SK Hynix \u22126,5 %",
+            "quelle": "Benzinga",
+            "url": "https://www.benzinga.com/markets/equities/26/10/62374362/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stock-sell-off-intensifies-skhy-tsm-rklb-in-focus",
+            "einschaetzung": "neutral",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T04:12:00-04:00",
+            "titel": "Danaher k\u00fcndigt Zusammenarbeit mit NVIDIA an: Laborinstrumente und Workflow-Software sollen mit NVIDIAs KI- und beschleunigter Datenverarbeitung verbunden werden",
+            "quelle": "Yahoo Finance",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/us-stock-market-today-p-081203137.html",
+            "einschaetzung": "positiv",
+            "gewicht": "niedrig",
+            "kategorie": "Auftrag/Produkt"
+          },
+          {
+            "datum": "2026-10-14",
+            "published_at": "2026-10-14T12:00:00-04:00",
+            "titel": "KI- und Chip-Werte unter Druck: Oracle \u22127,8 %, CoreWeave und Nebius je mehr als \u221211 %, der Halbleiterindex steuert auf den sechsten Verlusttag in Folge zu",
+            "quelle": "Rallies.ai",
+            "url": "https://rallies.ai/news/wall-st-tumbles-as-hot-cpi-boosts-rate-hike-bets-banks-ai-stocks-weigh-cc98d0329321e447",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          }
+        ],
+        "korrektur_vorschlag": -3
+      }
+    },
+    "AMD": {
+      "close": 562.23,
+      "rsi14": 30.89,
+      "obv": 1163766500.0,
+      "obv_trend_5d": -62240600.0,
+      "atr14": 26.2179,
+      "sma20": 611.954,
+      "sma50": 536.349,
+      "sma200": 392.6805,
+      "pct_from_sma20": -8.13,
+      "pct_from_sma50": 4.83,
+      "chg_5d_pct": -9.42,
+      "chg_1d_pct": -1.5,
+      "chg_60d_pct": 1.79,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 21721960.0,
+      "last_volume": 28740600.0,
+      "chg_20d_pct": 3.14,
+      "obv_trend_20d": 52606600.0,
+      "atr_pct": 4.66,
+      "atr_pct_avg60": 5.26,
+      "volume_ratio": 1.32,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 658.52,
+      "partial_last_bar": false,
+      "sector": "Semiconductors/AI",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 60548,
+        "call_open_interest": 64887,
+        "put_volume": 29075,
+        "call_put_volume_ratio": 2.08,
+        "call_volume_oi_ratio": 0.93,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-11-03",
+        "handelstage_bis": 12
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 60.6,
+        "teilscores": {
+          "kapitalfluss": 60.0,
+          "relative_staerke": 55.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 6.0,
+          "setup": 45.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Beobachten",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [
+          "Halbleiter-Sektor schw\u00e4cher als S&P 500 (nur f\u00fcr Halbleiter relevant)"
+        ],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 562.23,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 509.79,
+          "einstieg_eur": 501.51,
+          "stop_eur": 454.74,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 9.33,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 1,
+          "kapitalbedarf_eur": 502.0,
+          "risiko_eur": 47.0
+        },
+        "wiedereinstieg_usd": 611.95
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 4,
+        "neutral": 2,
+        "ausschluss": null,
+        "signale": [
+          {
+            "datum": "2026-10-16",
+            "published_at": "2026-10-16T09:29:00+05:30",
+            "titel": "Chip-Ausverkauf l\u00e4sst nach, nachdem NVIDIA-Chef Huang die Finanzen des KI-Dienstleisters CoreWeave verteidigt hat; Sorgen um zirkul\u00e4re KI-Finanzierung hatten den Sektor belastet",
+            "quelle": "Goodreturns",
+            "url": "https://www.goodreturns.in/news/us-stock-market-outlook-for-friday-oct-16-will-dow-jones-nasdaq-s-p-500-extend-rally-futures-mixed-1541913.html",
+            "einschaetzung": "neutral",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-16T08:03:00+05:30",
+            "titel": "Halbleiterindex verliert den achten Handelstag in Folge (\u22120,9 %): Broadcom \u22124,4 %, Arm \u22126,5 %, Micron \u22124,8 %, NVIDIA \u22122,9 %",
+            "quelle": "HDFC Sky",
+            "url": "https://hdfcsky.com/news/us-stock-market-close-dow-sp500-nasdaq-october-16-2026",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T07:04:00-04:00",
+            "titel": "Analyst Mortonson (Baird): Die B\u00f6rse werde der \u201eBank of Nvidia, Bank of AMD und Bank of Broadcom\u201c m\u00fcde; Chip-Ausverkauf in Asien (Kospi \u22128 %, SK Hynix \u221211 %)",
+            "quelle": "TheStreet / Yahoo Finance",
+            "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          },
+          {
+            "datum": "2026-10-14",
+            "published_at": "2026-10-15T06:00:00+02:00",
+            "titel": "Wall Street schlie\u00dft im Minus: Halbleiterindex \u22124,5 %, AMD \u22125,7 %, NVIDIA \u22123,2 %, CoreWeave \u00fcber \u221215 % wegen Sorgen um die KI-Verschuldung",
+            "quelle": "Saxo Bank",
+            "url": "https://www.home.saxo/en-sg/content/articles/macro/market-quick-take---risk-sentiment-crumbling-us-treasuries-a-safe-haven---15-october-2026-15102026",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T05:18:00-04:00",
+            "titel": "TSMC \u00fcbertrifft mit starkem Quartalsgewinn die Erwartungen dank KI-Chip-Nachfrage, Aktie vorb\u00f6rslich dennoch \u22122,1 %; SK Hynix \u22126,5 %",
+            "quelle": "Benzinga",
+            "url": "https://www.benzinga.com/markets/equities/26/10/62374362/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stock-sell-off-intensifies-skhy-tsm-rklb-in-focus",
+            "einschaetzung": "neutral",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          }
+        ],
+        "korrektur_vorschlag": -4
+      }
+    },
+    "AVGO": {
+      "close": 344.33,
+      "rsi14": 45.45,
+      "obv": 38437400.0,
+      "obv_trend_5d": -33769600.0,
+      "atr14": 11.2857,
+      "sma20": 356.837,
+      "sma50": 367.562,
+      "sma200": 368.2925,
+      "pct_from_sma20": -3.5,
+      "pct_from_sma50": -6.32,
+      "chg_5d_pct": -4.39,
+      "chg_1d_pct": -0.55,
+      "chg_60d_pct": -13.23,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 20.0,
+      "avg_volume_20d": 23043165.0,
+      "last_volume": 28415900.0,
+      "chg_20d_pct": -0.86,
+      "obv_trend_20d": 50451100.0,
+      "atr_pct": 3.28,
+      "atr_pct_avg60": 3.46,
+      "volume_ratio": 1.24,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 380.84,
+      "partial_last_bar": false,
+      "sector": "Semiconductors/AI",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 23869,
+        "call_open_interest": 42720,
+        "put_volume": 13622,
+        "call_put_volume_ratio": 1.75,
+        "call_volume_oi_ratio": 0.56,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-12-09",
+        "handelstage_bis": 38
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "rot",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 35.3,
+        "teilscores": {
+          "kapitalfluss": 58.0,
+          "relative_staerke": 31.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 6.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [
+          "Halbleiter-Sektor schw\u00e4cher als S&P 500 (nur f\u00fcr Halbleiter relevant)"
+        ],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 344.33,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 321.76,
+          "einstieg_eur": 307.14,
+          "stop_eur": 287.01,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.56,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 3,
+          "kapitalbedarf_eur": 921.0,
+          "risiko_eur": 60.0
+        },
+        "wiedereinstieg_usd": 356.84
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "TSM": {
+      "close": 422.25,
+      "rsi14": 36.07,
+      "obv": 47450629.0,
+      "obv_trend_5d": -47086600.0,
+      "atr14": 12.6236,
+      "sma20": 453.5725,
+      "sma50": 434.4756,
+      "sma200": 394.4815,
+      "pct_from_sma20": -6.91,
+      "pct_from_sma50": -2.81,
+      "chg_5d_pct": -7.8,
+      "chg_1d_pct": -1.8,
+      "chg_60d_pct": 0.25,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 10446135.0,
+      "last_volume": 22391300.0,
+      "chg_20d_pct": -1.86,
+      "obv_trend_20d": -14374100.0,
+      "atr_pct": 2.99,
+      "atr_pct_avg60": 2.87,
+      "volume_ratio": 2.25,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 487.47,
+      "partial_last_bar": false,
+      "sector": "Semiconductors/AI",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 23285,
+        "call_open_interest": 33472,
+        "put_volume": 18219,
+        "call_put_volume_ratio": 1.28,
+        "call_volume_oi_ratio": 0.7,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2027-01-14",
+        "handelstage_bis": 64
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 36.5,
+        "teilscores": {
+          "kapitalfluss": 20.0,
+          "relative_staerke": 25.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 6.0,
+          "setup": 10.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [
+          "Halbleiter-Sektor schw\u00e4cher als S&P 500 (nur f\u00fcr Halbleiter relevant)"
+        ],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 422.25,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 397.0,
+          "einstieg_eur": 376.65,
+          "stop_eur": 354.13,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 5.98,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 3,
+          "kapitalbedarf_eur": 1130.0,
+          "risiko_eur": 68.0
+        },
+        "wiedereinstieg_usd": 453.57
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "ASML": {
+      "close": 1657.4399,
+      "rsi14": 39.73,
+      "obv": 15096900.0,
+      "obv_trend_5d": -2387500.0,
+      "atr14": 54.2036,
+      "sma20": 1763.3975,
+      "sma50": 1740.8872,
+      "sma200": 1574.3692,
+      "pct_from_sma20": -6.01,
+      "pct_from_sma50": -4.79,
+      "chg_5d_pct": -6.35,
+      "chg_1d_pct": 0.45,
+      "chg_60d_pct": -8.02,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 1513970.0,
+      "last_volume": 1984700.0,
+      "chg_20d_pct": 1.7,
+      "obv_trend_20d": -3539400.0,
+      "atr_pct": 3.27,
+      "atr_pct_avg60": 3.44,
+      "volume_ratio": 1.34,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 1873.5,
+      "partial_last_bar": false,
+      "sector": "Semiconductors/AI",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 3784,
+        "call_open_interest": 6425,
+        "put_volume": 1970,
+        "call_put_volume_ratio": 1.92,
+        "call_volume_oi_ratio": 0.59,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": false,
+        "reason": "kein kuenftiger Termin bei yfinance"
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gelb",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 38.1,
+        "teilscores": {
+          "kapitalfluss": 20.0,
+          "relative_staerke": 46.0,
+          "trendkontext": 50.0,
+          "sektorstaerke": 6.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [
+          "Halbleiter-Sektor schw\u00e4cher als S&P 500 (nur f\u00fcr Halbleiter relevant)",
+          "Earnings-Termin nicht verf\u00fcgbar \u2013 manuell pr\u00fcfen"
+        ],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 1657.44,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 1549.03,
+          "einstieg_eur": 1478.44,
+          "stop_eur": 1381.74,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.54,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 0,
+          "kapitalbedarf_eur": 0.0,
+          "risiko_eur": 0.0
+        },
+        "wiedereinstieg_usd": 1763.4
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "MRVL": {
+      "close": 241.24,
+      "rsi14": 39.65,
+      "obv": 1037315600.0,
+      "obv_trend_5d": -35480500.0,
+      "atr14": 16.455,
+      "sma20": 263.976,
+      "sma50": 240.6962,
+      "sma200": 175.156,
+      "pct_from_sma20": -8.61,
+      "pct_from_sma50": 0.23,
+      "chg_5d_pct": -12.17,
+      "chg_1d_pct": -1.65,
+      "chg_60d_pct": 14.34,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 20261165.0,
+      "last_volume": 23816000.0,
+      "chg_20d_pct": 0.2,
+      "obv_trend_20d": 47332300.0,
+      "atr_pct": 6.82,
+      "atr_pct_avg60": 6.73,
+      "volume_ratio": 1.18,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 301.27,
+      "partial_last_bar": false,
+      "sector": "Semiconductors/AI",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 23930,
+        "call_open_interest": 43074,
+        "put_volume": 12694,
+        "call_put_volume_ratio": 1.89,
+        "call_volume_oi_ratio": 0.56,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-12-01",
+        "handelstage_bis": 32
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 56.3,
+        "teilscores": {
+          "kapitalfluss": 56.0,
+          "relative_staerke": 37.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 6.0,
+          "setup": 45.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Beobachten",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [
+          "Halbleiter-Sektor schw\u00e4cher als S&P 500 (nur f\u00fcr Halbleiter relevant)"
+        ],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 241.24,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 208.33,
+          "einstieg_eur": 215.19,
+          "stop_eur": 185.83,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 13.64,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 2,
+          "kapitalbedarf_eur": 430.0,
+          "risiko_eur": 59.0
+        },
+        "wiedereinstieg_usd": 263.98
+      },
+      "news": {
+        "positiv": 1,
+        "negativ": 6,
+        "neutral": 2,
+        "ausschluss": null,
+        "signale": [
+          {
+            "datum": "2026-10-16",
+            "published_at": "2026-10-16T09:29:00+05:30",
+            "titel": "Chip-Ausverkauf l\u00e4sst nach, nachdem NVIDIA-Chef Huang die Finanzen des KI-Dienstleisters CoreWeave verteidigt hat; Sorgen um zirkul\u00e4re KI-Finanzierung hatten den Sektor belastet",
+            "quelle": "Goodreturns",
+            "url": "https://www.goodreturns.in/news/us-stock-market-outlook-for-friday-oct-16-will-dow-jones-nasdaq-s-p-500-extend-rally-futures-mixed-1541913.html",
+            "einschaetzung": "neutral",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-16T08:03:00+05:30",
+            "titel": "Halbleiterindex verliert den achten Handelstag in Folge (\u22120,9 %): Broadcom \u22124,4 %, Arm \u22126,5 %, Micron \u22124,8 %, NVIDIA \u22122,9 %",
+            "quelle": "HDFC Sky",
+            "url": "https://hdfcsky.com/news/us-stock-market-close-dow-sp500-nasdaq-october-16-2026",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T07:04:00-04:00",
+            "titel": "Chip-Ausverkauf in Asien: Kospi \u22128 %, Samsung \u22129 %, SK Hynix \u221211 %; Nasdaq zum Handelsstart \u22121,3 %",
+            "quelle": "TheStreet",
+            "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          },
+          {
+            "datum": "2026-10-14",
+            "published_at": "2026-10-15T06:00:00+02:00",
+            "titel": "Wall Street schlie\u00dft im Minus: Halbleiterindex \u22124,5 %, AMD \u22125,7 %, NVIDIA \u22123,2 %, CoreWeave \u00fcber \u221215 % wegen Sorgen um die KI-Verschuldung",
+            "quelle": "Saxo Bank",
+            "url": "https://www.home.saxo/en-sg/content/articles/macro/market-quick-take---risk-sentiment-crumbling-us-treasuries-a-safe-haven---15-october-2026-15102026",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T05:18:00-04:00",
+            "titel": "TSMC \u00fcbertrifft mit starkem Quartalsgewinn die Erwartungen dank KI-Chip-Nachfrage, Aktie vorb\u00f6rslich dennoch \u22122,1 %; SK Hynix \u22126,5 %",
+            "quelle": "Benzinga",
+            "url": "https://www.benzinga.com/markets/equities/26/10/62374362/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stock-sell-off-intensifies-skhy-tsm-rklb-in-focus",
+            "einschaetzung": "neutral",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          }
+        ],
+        "korrektur_vorschlag": -5
+      }
+    },
+    "SMCI": {
+      "close": 35.09,
+      "rsi14": 25.98,
+      "obv": 315728172.0,
+      "obv_trend_5d": -148784200.0,
+      "atr14": 2.43,
+      "sma20": 41.183,
+      "sma50": 38.6222,
+      "sma200": 32.4584,
+      "pct_from_sma20": -14.79,
+      "pct_from_sma50": -9.15,
+      "chg_5d_pct": -17.96,
+      "chg_1d_pct": -1.93,
+      "chg_60d_pct": 14.82,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 34371655.0,
+      "last_volume": 37485000.0,
+      "chg_20d_pct": -13.04,
+      "obv_trend_20d": -19485300.0,
+      "atr_pct": 6.93,
+      "atr_pct_avg60": 6.44,
+      "volume_ratio": 1.05,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 45.77,
+      "partial_last_bar": false,
+      "sector": "Semiconductors/AI",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 34823,
+        "call_open_interest": 62347,
+        "put_volume": 9912,
+        "call_put_volume_ratio": 3.51,
+        "call_volume_oi_ratio": 0.56,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-11-03",
+        "handelstage_bis": 12
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 34.7,
+        "teilscores": {
+          "kapitalfluss": 12.0,
+          "relative_staerke": 0.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 6.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [
+          "Halbleiter-Sektor schw\u00e4cher als S&P 500 (nur f\u00fcr Halbleiter relevant)"
+        ],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 35.09,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 30.23,
+          "einstieg_eur": 31.3,
+          "stop_eur": 26.97,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 13.85,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 17,
+          "kapitalbedarf_eur": 532.0,
+          "risiko_eur": 74.0
+        },
+        "wiedereinstieg_usd": 41.18
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 2,
+        "neutral": 0,
+        "ausschluss": null,
+        "signale": [
+          {
+            "datum": "2026-10-14",
+            "published_at": "2026-10-14T12:49:00-04:00",
+            "titel": "Barclays stuft die KI-Server-Konkurrenten Dell und HP auf \u201eEqual-weight\u201c ab: Dell \u221211,5 %, HP \u22127,8 %; Oracle, CoreWeave und Nebius brechen ein",
+            "quelle": "Reuters via MarketScreener",
+            "url": "https://www.marketscreener.com/news/wall-st-tumbles-as-hot-cpi-boosts-rate-hike-bets-banks-ai-stocks-weigh-ce785dd2d18bf522",
+            "einschaetzung": "negativ",
+            "gewicht": "mittel",
+            "kategorie": "Analyst"
+          },
+          {
+            "datum": "2026-10-14",
+            "published_at": "2026-10-14T10:52:00+05:30",
+            "titel": "Chip- und Speicheraktien unter Druck wegen Sorgen um KI-Ausgaben und chinesischer Konkurrenz: Applied Materials \u22127,2 %, Micron \u22124,6 %, Lam Research \u22123,2 %",
+            "quelle": "Goodreturns",
+            "url": "https://goodreturns.in/news/us-stock-market-inflation-may-rise-will-dow-jones-nasdaq-s-p-500-extend-fall-on-oct-14-futures-today-1541295.html",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          },
+          {
+            "datum": "2026-10-12",
+            "published_at": "2026-10-12T10:06:00+00:00",
+            "titel": "Nvidia and Micron Technology Just Received Some Very Bad News From an Unlikely Place (Firmus IPO withdrawn, OpenAI revenue below earlier reports)",
+            "quelle": "The Motley Fool",
+            "url": "https://fool.com/investing/2026/10/12/nvidia-and-micron-received-bad-news-unlikely-place",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          }
+        ],
+        "korrektur_vorschlag": -4
+      }
+    },
+    "QCOM": {
+      "close": 178.4,
+      "rsi14": 24.4,
+      "obv": 205836800.0,
+      "obv_trend_5d": -1592200.0,
+      "atr14": 6.6486,
+      "sma20": 183.9515,
+      "sma50": 174.7706,
+      "sma200": 169.3733,
+      "pct_from_sma20": -3.02,
+      "pct_from_sma50": 2.08,
+      "chg_5d_pct": 1.36,
+      "chg_1d_pct": 3.35,
+      "chg_60d_pct": 1.58,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 13202235.0,
+      "last_volume": 11780800.0,
+      "chg_20d_pct": -5.46,
+      "obv_trend_20d": -83568500.0,
+      "atr_pct": 3.73,
+      "atr_pct_avg60": 4.25,
+      "volume_ratio": 0.89,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 205.85,
+      "partial_last_bar": false,
+      "sector": "Semiconductors/AI",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 11015,
+        "call_open_interest": 18106,
+        "put_volume": 1667,
+        "call_put_volume_ratio": 6.61,
+        "call_volume_oi_ratio": 0.61,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-11-04",
+        "handelstage_bis": 13
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 44.9,
+        "teilscores": {
+          "kapitalfluss": 6.0,
+          "relative_staerke": 30.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 6.0,
+          "setup": 45.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [
+          "Halbleiter-Sektor schw\u00e4cher als S&P 500 (nur f\u00fcr Halbleiter relevant)"
+        ],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 178.4,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 165.1,
+          "einstieg_eur": 159.13,
+          "stop_eur": 147.27,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 7.45,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 6,
+          "kapitalbedarf_eur": 955.0,
+          "risiko_eur": 71.0
+        },
+        "wiedereinstieg_usd": 183.95
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "MSFT": {
+      "close": 539.44,
+      "rsi14": 66.23,
+      "obv": 180053600.0,
+      "obv_trend_5d": 62475200.0,
+      "atr14": 11.3521,
+      "sma20": 518.457,
+      "sma50": 504.9486,
+      "sma200": 435.0441,
+      "pct_from_sma20": 4.05,
+      "pct_from_sma50": 6.83,
+      "chg_5d_pct": 3.22,
+      "chg_1d_pct": 1.08,
+      "chg_60d_pct": 38.2,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 23056625.0,
+      "last_volume": 24132000.0,
+      "chg_20d_pct": 8.38,
+      "obv_trend_20d": 98759900.0,
+      "atr_pct": 2.1,
+      "atr_pct_avg60": 2.54,
+      "volume_ratio": 1.06,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 551.15,
+      "partial_last_bar": false,
+      "sector": "Software/Cloud",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 18425,
+        "call_open_interest": 76095,
+        "put_volume": 14031,
+        "call_put_volume_ratio": 1.31,
+        "call_volume_oi_ratio": 0.24,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-28",
+        "handelstage_bis": 8
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 79.7,
+        "teilscores": {
+          "kapitalfluss": 92.0,
+          "relative_staerke": 99.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 78.0,
+          "setup": 65.0,
+          "optionsflow": 50.0,
+          "crv": 0.0
+        },
+        "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 518.46,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 495.75,
+          "einstieg_eur": 462.46,
+          "stop_eur": 442.21,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.38,
+          "crv_am_aktuellen_kurs": 0.56,
+          "stueck": 3,
+          "kapitalbedarf_eur": 1387.0,
+          "risiko_eur": 61.0
+        },
+        "wiedereinstieg_usd": 518.46
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "ausschluss": null,
+        "signale": [
+          {
+            "datum": "2026-10-12",
+            "published_at": "2026-10-12T15:37:00+02:00",
+            "titel": "Microsoft unveils Maia 300 custom AI chip, plans potentially over 1 million units next year",
+            "quelle": "TheStreet",
+            "url": "https://www.thestreet.com/stock-market-today/stock-market-today-oct-12-2026-dow-futures-climb-as-wall-street-gears-up-for-busy-week",
+            "einschaetzung": "positiv",
+            "gewicht": "niedrig",
+            "kategorie": "Auftrag/Produkt"
+          }
+        ],
+        "korrektur_vorschlag": 0
+      }
+    },
+    "CRM": {
+      "close": 246.74,
+      "rsi14": 60.87,
+      "obv": -188941800.0,
+      "obv_trend_5d": 25193700.0,
+      "atr14": 8.435,
+      "sma20": 233.093,
+      "sma50": 229.0436,
+      "sma200": 199.1776,
+      "pct_from_sma20": 5.85,
+      "pct_from_sma50": 7.73,
+      "chg_5d_pct": 8.31,
+      "chg_1d_pct": 4.57,
+      "chg_60d_pct": 51.37,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 9671210.0,
+      "last_volume": 8731200.0,
+      "chg_20d_pct": 1.6,
+      "obv_trend_20d": -29896000.0,
+      "atr_pct": 3.42,
+      "atr_pct_avg60": 4.15,
+      "volume_ratio": 0.87,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 247.0,
+      "partial_last_bar": false,
+      "sector": "Software/Cloud",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 5156,
+        "call_open_interest": 9017,
+        "put_volume": 3647,
+        "call_put_volume_ratio": 1.41,
+        "call_volume_oi_ratio": 0.57,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-12-02",
+        "handelstage_bis": 33
+      },
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gelb",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 55.8,
+        "teilscores": {
+          "kapitalfluss": 46.0,
+          "relative_staerke": 64.0,
+          "trendkontext": 50.0,
+          "sektorstaerke": 78.0,
+          "setup": 65.0,
+          "optionsflow": 50.0,
+          "crv": 0.0
+        },
+        "stufe": "Beobachten",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 233.09,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 216.22,
+          "einstieg_eur": 207.92,
+          "stop_eur": 192.87,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 7.24,
+          "crv_am_aktuellen_kurs": 0.66,
+          "stueck": 4,
+          "kapitalbedarf_eur": 832.0,
+          "risiko_eur": 60.0
+        },
+        "wiedereinstieg_usd": 233.09
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "NOW": {
+      "close": 148.57,
+      "rsi14": 68.1,
+      "obv": 82310600.0,
+      "obv_trend_5d": 14421800.0,
+      "atr14": 5.9586,
+      "sma20": 137.594,
+      "sma50": 134.3582,
+      "sma200": 115.096,
+      "pct_from_sma20": 7.98,
+      "pct_from_sma50": 10.58,
+      "chg_5d_pct": 6.31,
+      "chg_1d_pct": 6.14,
+      "chg_60d_pct": 55.64,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 10966415.0,
+      "last_volume": 17607900.0,
+      "chg_20d_pct": 7.29,
+      "obv_trend_20d": -3478300.0,
+      "atr_pct": 4.01,
+      "atr_pct_avg60": 4.9,
+      "volume_ratio": 1.66,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 148.14,
+      "partial_last_bar": false,
+      "sector": "Software/Cloud",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 15974,
+        "call_open_interest": 24883,
+        "put_volume": 7355,
+        "call_put_volume_ratio": 2.17,
+        "call_volume_oi_ratio": 0.64,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-28",
+        "handelstage_bis": 8
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gelb",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 65.0,
+        "teilscores": {
+          "kapitalfluss": 60.0,
+          "relative_staerke": 96.0,
+          "trendkontext": 50.0,
+          "sektorstaerke": 78.0,
+          "setup": 30.0,
+          "optionsflow": 100.0,
+          "crv": 0.0
+        },
+        "stufe": "Kauf \u2013 solide",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 137.59,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 125.68,
+          "einstieg_eur": 122.73,
+          "stop_eur": 112.1,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 8.66,
+          "crv_am_aktuellen_kurs": 0.56,
+          "stueck": 7,
+          "kapitalbedarf_eur": 859.0,
+          "risiko_eur": 74.0
+        },
+        "wiedereinstieg_usd": 137.59
+      },
+      "news": {
+        "positiv": 2,
+        "negativ": 1,
+        "neutral": 0,
+        "ausschluss": null,
+        "signale": [
+          {
+            "datum": "2026-10-16",
+            "published_at": "2026-10-16T15:37:00+11:00",
+            "titel": "Fed-Chef Warsh nennt den Weg der KI \u201esehr holprig\u201c und l\u00e4sst die Oktober-Entscheidung offen; Wahrscheinlichkeit einer Zinserh\u00f6hung sinkt auf 15 %",
+            "quelle": "ABC News Australia",
+            "url": "https://www.abc.net.au/news/2026-10-16/asx-markets-business-news-live-updates-oct-16/107271360",
+            "einschaetzung": "positiv",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-16T08:03:00+05:30",
+            "titel": "Rendite 10-j\u00e4hriger US-Anleihen sinkt auf 5,09 % (tiefster Stand seit 22. September) trotz hei\u00dfer Erzeugerpreise; Dow +1,1 %",
+            "quelle": "HDFC Sky",
+            "url": "https://hdfcsky.com/news/us-stock-market-close-dow-sp500-nasdaq-october-16-2026",
+            "einschaetzung": "positiv",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T08:10:00-04:00",
+            "titel": "Erzeugerpreise im September steigen um 6,3 % zum Vorjahr (Erwartung 5,5 %); Fed-Zinserh\u00f6hung in zwei Wochen wird wahrscheinlicher",
+            "quelle": "TheStreet / CNBC",
+            "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          }
+        ],
+        "korrektur_vorschlag": 1
+      }
+    },
+    "ORCL": {
+      "close": 134.47,
+      "rsi14": 47.76,
+      "obv": -850720600.0,
+      "obv_trend_5d": 9104500.0,
+      "atr14": 6.8264,
+      "sma20": 140.407,
+      "sma50": 145.4222,
+      "sma200": 160.5376,
+      "pct_from_sma20": -4.23,
+      "pct_from_sma50": -7.53,
+      "chg_5d_pct": -0.9,
+      "chg_1d_pct": 3.0,
+      "chg_60d_pct": 6.86,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 30720340.0,
+      "last_volume": 31295500.0,
+      "chg_20d_pct": -10.7,
+      "obv_trend_20d": -51369200.0,
+      "atr_pct": 5.08,
+      "atr_pct_avg60": 4.89,
+      "volume_ratio": 1.02,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 153.6,
+      "partial_last_bar": false,
+      "sector": "Software/Cloud",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 34695,
+        "call_open_interest": 106401,
+        "put_volume": 20463,
+        "call_put_volume_ratio": 1.7,
+        "call_volume_oi_ratio": 0.33,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-12-14",
+        "handelstage_bis": 41
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "rot",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 40.7,
+        "teilscores": {
+          "kapitalfluss": 51.0,
+          "relative_staerke": 12.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 78.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 134.47,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 120.82,
+          "einstieg_eur": 119.95,
+          "stop_eur": 107.77,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 10.15,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 6,
+          "kapitalbedarf_eur": 720.0,
+          "risiko_eur": 73.0
+        },
+        "wiedereinstieg_usd": 140.41
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "ADBE": {
+      "close": 251.67,
+      "rsi14": 64.38,
+      "obv": -41447700.0,
+      "obv_trend_5d": 5739500.0,
+      "atr14": 8.0543,
+      "sma20": 239.732,
+      "sma50": 256.843,
+      "sma200": 254.7504,
+      "pct_from_sma20": 4.98,
+      "pct_from_sma50": -2.01,
+      "chg_5d_pct": 4.41,
+      "chg_1d_pct": 4.57,
+      "chg_60d_pct": 15.25,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 4781395.0,
+      "last_volume": 6611900.0,
+      "chg_20d_pct": -0.4,
+      "obv_trend_20d": -4649500.0,
+      "atr_pct": 3.2,
+      "atr_pct_avg60": 4.1,
+      "volume_ratio": 1.4,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 254.67,
+      "partial_last_bar": false,
+      "sector": "Software/Cloud",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 4490,
+        "call_open_interest": 5657,
+        "put_volume": 6904,
+        "call_put_volume_ratio": 0.65,
+        "call_volume_oi_ratio": 0.79,
+        "einschaetzung": "bearisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-12-09",
+        "handelstage_bis": 38
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "rot",
+        "optionsflow": "rot"
+      },
+      "setup": {
+        "score": 35.6,
+        "teilscores": {
+          "kapitalfluss": 60.0,
+          "relative_staerke": 52.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 78.0,
+          "setup": 10.0,
+          "optionsflow": 0.0,
+          "crv": 0.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Optionsflow b\u00e4risch"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 239.73,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 223.62,
+          "einstieg_eur": 213.84,
+          "stop_eur": 199.47,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.72,
+          "crv_am_aktuellen_kurs": 0.72,
+          "stueck": 5,
+          "kapitalbedarf_eur": 1069.0,
+          "risiko_eur": 72.0
+        },
+        "wiedereinstieg_usd": 239.73
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "SNOW": {
+      "close": 335.07,
+      "rsi14": 49.57,
+      "obv": 51453200.0,
+      "obv_trend_5d": -10474500.0,
+      "atr14": 14.795,
+      "sma20": 340.127,
+      "sma50": 333.3276,
+      "sma200": 233.5213,
+      "pct_from_sma20": -1.49,
+      "pct_from_sma50": 0.52,
+      "chg_5d_pct": -2.43,
+      "chg_1d_pct": -0.0,
+      "chg_60d_pct": 25.12,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 4273670.0,
+      "last_volume": 5678200.0,
+      "chg_20d_pct": -0.98,
+      "obv_trend_20d": -17966000.0,
+      "atr_pct": 4.42,
+      "atr_pct_avg60": 4.51,
+      "volume_ratio": 1.35,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 370.55,
+      "partial_last_bar": false,
+      "sector": "Software/Cloud",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 5629,
+        "call_open_interest": 7983,
+        "put_volume": 1402,
+        "call_put_volume_ratio": 4.01,
+        "call_volume_oi_ratio": 0.71,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-12-02",
+        "handelstage_bis": 33
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 65.2,
+        "teilscores": {
+          "kapitalfluss": 20.0,
+          "relative_staerke": 23.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 78.0,
+          "setup": 100.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Kauf \u2013 solide",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 335.07,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 305.48,
+          "einstieg_eur": 298.88,
+          "stop_eur": 272.49,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 8.83,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 2,
+          "kapitalbedarf_eur": 598.0,
+          "risiko_eur": 53.0
+        },
+        "wiedereinstieg_usd": 340.13
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 1,
+        "neutral": 0,
+        "ausschluss": null,
+        "signale": [
+          {
+            "datum": "2026-10-14",
+            "published_at": "2026-10-14T08:44:00-04:00",
+            "titel": "US-Verbraucherpreise f\u00fcr September steigen auf 3,7 % (Erwartung 3,6 %), Rendite 10-j\u00e4hriger US-Anleihen springt auf rund 5,31 %",
+            "quelle": "TipRanks",
+            "url": "https://tipranks.com/news/stock-futures-fall-as-september-cpi-data-spooks-investors",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          }
+        ],
+        "korrektur_vorschlag": -1
+      }
+    },
+    "PLTR": {
+      "close": 200.5,
+      "rsi14": 65.08,
+      "obv": 606289600.0,
+      "obv_trend_5d": -54231000.0,
+      "atr14": 6.4513,
+      "sma20": 193.131,
+      "sma50": 181.9664,
+      "sma200": 152.6209,
+      "pct_from_sma20": 3.82,
+      "pct_from_sma50": 10.19,
+      "chg_5d_pct": 0.87,
+      "chg_1d_pct": -0.23,
+      "chg_60d_pct": 60.95,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 23415445.0,
+      "last_volume": 24745000.0,
+      "chg_20d_pct": 13.77,
+      "obv_trend_20d": 146687100.0,
+      "atr_pct": 3.22,
+      "atr_pct_avg60": 4.3,
+      "volume_ratio": 1.06,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 212.94,
+      "partial_last_bar": false,
+      "sector": "Software/Cloud",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 30448,
+        "call_open_interest": 50431,
+        "put_volume": 32293,
+        "call_put_volume_ratio": 0.94,
+        "call_volume_oi_ratio": 0.6,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-11-02",
+        "handelstage_bis": 11
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 70.0,
+        "teilscores": {
+          "kapitalfluss": 52.0,
+          "relative_staerke": 91.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 78.0,
+          "setup": 65.0,
+          "optionsflow": 50.0,
+          "crv": 0.0
+        },
+        "stufe": "Kauf \u2013 solide",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 193.13,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 180.23,
+          "einstieg_eur": 172.27,
+          "stop_eur": 160.76,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.68,
+          "crv_am_aktuellen_kurs": 0.91,
+          "stueck": 6,
+          "kapitalbedarf_eur": 1034.0,
+          "risiko_eur": 69.0
+        },
+        "wiedereinstieg_usd": 193.13
+      },
+      "news": {
+        "positiv": 2,
+        "negativ": 2,
+        "neutral": 0,
+        "ausschluss": null,
+        "signale": [
+          {
+            "datum": "2026-10-16",
+            "published_at": "2026-10-16T15:37:00+11:00",
+            "titel": "Fed-Chef Warsh nennt den Weg der KI \u201esehr holprig\u201c und l\u00e4sst die Oktober-Entscheidung offen; Wahrscheinlichkeit einer Zinserh\u00f6hung sinkt auf 15 %",
+            "quelle": "ABC News Australia",
+            "url": "https://www.abc.net.au/news/2026-10-16/asx-markets-business-news-live-updates-oct-16/107271360",
+            "einschaetzung": "positiv",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-16T08:03:00+05:30",
+            "titel": "Rendite 10-j\u00e4hriger US-Anleihen sinkt auf 5,09 % (tiefster Stand seit 22. September) trotz hei\u00dfer Erzeugerpreise; Dow +1,1 %",
+            "quelle": "HDFC Sky",
+            "url": "https://hdfcsky.com/news/us-stock-market-close-dow-sp500-nasdaq-october-16-2026",
+            "einschaetzung": "positiv",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T08:10:00-04:00",
+            "titel": "Erzeugerpreise im September steigen um 6,3 % zum Vorjahr (Erwartung 5,5 %); Fed-Zinserh\u00f6hung in zwei Wochen wird wahrscheinlicher",
+            "quelle": "TheStreet / CNBC",
+            "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          },
+          {
+            "datum": "2026-10-14",
+            "published_at": "2026-10-14T08:44:00-04:00",
+            "titel": "US-Verbraucherpreise f\u00fcr September steigen auf 3,7 % (Erwartung 3,6 %), Rendite 10-j\u00e4hriger US-Anleihen springt auf rund 5,31 %",
+            "quelle": "TipRanks",
+            "url": "https://tipranks.com/news/stock-futures-fall-as-september-cpi-data-spooks-investors",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          }
+        ],
+        "korrektur_vorschlag": 0
+      }
+    },
+    "PANW": {
+      "close": 370.27,
+      "rsi14": 48.46,
+      "obv": 1733700.0,
+      "obv_trend_5d": -17216100.0,
+      "atr14": 17.48,
+      "sma20": 392.043,
+      "sma50": 373.6166,
+      "sma200": 259.9014,
+      "pct_from_sma20": -5.55,
+      "pct_from_sma50": -0.9,
+      "chg_5d_pct": -7.08,
+      "chg_1d_pct": -1.27,
+      "chg_60d_pct": 10.44,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 5645935.0,
+      "last_volume": 5604100.0,
+      "chg_20d_pct": -1.28,
+      "obv_trend_20d": -11914300.0,
+      "atr_pct": 4.72,
+      "atr_pct_avg60": 4.73,
+      "volume_ratio": 0.99,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 432.33,
+      "partial_last_bar": false,
+      "sector": "Cybersecurity",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 2342,
+        "call_open_interest": 7287,
+        "put_volume": 4008,
+        "call_put_volume_ratio": 0.58,
+        "call_volume_oi_ratio": 0.32,
+        "einschaetzung": "bearisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-11-19",
+        "handelstage_bis": 24
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "rot"
+      },
+      "setup": {
+        "score": 32.8,
+        "teilscores": {
+          "kapitalfluss": 10.0,
+          "relative_staerke": 14.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 44.0,
+          "setup": 10.0,
+          "optionsflow": 0.0,
+          "crv": 100.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Optionsflow b\u00e4risch"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 370.27,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 335.31,
+          "einstieg_eur": 330.28,
+          "stop_eur": 299.1,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 9.44,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 2,
+          "kapitalbedarf_eur": 661.0,
+          "risiko_eur": 62.0
+        },
+        "wiedereinstieg_usd": 392.04
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "CRWD": {
+      "close": 244.57,
+      "rsi14": 45.56,
+      "obv": 223943700.0,
+      "obv_trend_5d": -26459300.0,
+      "atr14": 11.1209,
+      "sma20": 260.366,
+      "sma50": 232.774,
+      "sma200": 160.0155,
+      "pct_from_sma20": -6.07,
+      "pct_from_sma50": 5.07,
+      "chg_5d_pct": -7.01,
+      "chg_1d_pct": -1.89,
+      "chg_60d_pct": 29.8,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 9011585.0,
+      "last_volume": 10778100.0,
+      "chg_20d_pct": -0.46,
+      "obv_trend_20d": 5768300.0,
+      "atr_pct": 4.55,
+      "atr_pct_avg60": 5.03,
+      "volume_ratio": 1.19,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 286.99,
+      "partial_last_bar": false,
+      "sector": "Cybersecurity",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 5740,
+        "call_open_interest": 14402,
+        "put_volume": 8347,
+        "call_put_volume_ratio": 0.69,
+        "call_volume_oi_ratio": 0.4,
+        "einschaetzung": "bearisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-12-01",
+        "handelstage_bis": 32
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "rot"
+      },
+      "setup": {
+        "score": 48.4,
+        "teilscores": {
+          "kapitalfluss": 56.0,
+          "relative_staerke": 19.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 44.0,
+          "setup": 45.0,
+          "optionsflow": 0.0,
+          "crv": 100.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Optionsflow b\u00e4risch"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 244.57,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 222.33,
+          "einstieg_eur": 218.16,
+          "stop_eur": 198.32,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 9.09,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 3,
+          "kapitalbedarf_eur": 654.0,
+          "risiko_eur": 60.0
+        },
+        "wiedereinstieg_usd": 260.37
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "ZS": {
+      "close": 220.43,
+      "rsi14": 70.3,
+      "obv": 38257400.0,
+      "obv_trend_5d": -1145100.0,
+      "atr14": 9.6401,
+      "sma20": 210.1552,
+      "sma50": 191.0857,
+      "sma200": 165.9287,
+      "pct_from_sma20": 4.89,
+      "pct_from_sma50": 15.36,
+      "chg_5d_pct": 1.67,
+      "chg_1d_pct": -0.16,
+      "chg_60d_pct": 54.95,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 3039280.0,
+      "last_volume": 2410800.0,
+      "chg_20d_pct": 11.63,
+      "obv_trend_20d": 11733800.0,
+      "atr_pct": 4.37,
+      "atr_pct_avg60": 4.92,
+      "volume_ratio": 0.79,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 237.22,
+      "partial_last_bar": false,
+      "sector": "Cybersecurity",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 1955,
+        "call_open_interest": 5310,
+        "put_volume": 1958,
+        "call_put_volume_ratio": 1.0,
+        "call_volume_oi_ratio": 0.37,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-11-24",
+        "handelstage_bis": 27
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gelb",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 52.6,
+        "teilscores": {
+          "kapitalfluss": 43.0,
+          "relative_staerke": 95.0,
+          "trendkontext": 50.0,
+          "sektorstaerke": 44.0,
+          "setup": 40.0,
+          "optionsflow": 50.0,
+          "crv": 0.0
+        },
+        "stufe": "Beobachten",
+        "bulltrap_flags": [
+          "Abstand SMA50 > 15 %"
+        ],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 210.16,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 190.88,
+          "einstieg_eur": 187.46,
+          "stop_eur": 170.26,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 9.17,
+          "crv_am_aktuellen_kurs": 0.96,
+          "stueck": 4,
+          "kapitalbedarf_eur": 750.0,
+          "risiko_eur": 69.0
+        },
+        "wiedereinstieg_usd": 210.16
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "FTNT": {
+      "close": 181.91,
+      "rsi14": 60.75,
+      "obv": 163297300.0,
+      "obv_trend_5d": -10840600.0,
+      "atr14": 5.6464,
+      "sma20": 181.9555,
+      "sma50": 169.2142,
+      "sma200": 123.4267,
+      "pct_from_sma20": -0.03,
+      "pct_from_sma50": 7.5,
+      "chg_5d_pct": -3.8,
+      "chg_1d_pct": -1.16,
+      "chg_60d_pct": 17.32,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 3755540.0,
+      "last_volume": 3739700.0,
+      "chg_20d_pct": 5.41,
+      "obv_trend_20d": -24479200.0,
+      "atr_pct": 3.1,
+      "atr_pct_avg60": 4.03,
+      "volume_ratio": 0.97,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 197.13,
+      "partial_last_bar": false,
+      "sector": "Cybersecurity",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 426,
+        "call_open_interest": 3052,
+        "put_volume": 113,
+        "call_put_volume_ratio": 3.77,
+        "call_volume_oi_ratio": 0.14,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-28",
+        "handelstage_bis": 8
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 59.0,
+        "teilscores": {
+          "kapitalfluss": 9.0,
+          "relative_staerke": 53.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 44.0,
+          "setup": 100.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Beobachten",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 181.91,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 170.62,
+          "einstieg_eur": 162.26,
+          "stop_eur": 152.19,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.21,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 7,
+          "kapitalbedarf_eur": 1136.0,
+          "risiko_eur": 71.0
+        },
+        "wiedereinstieg_usd": 181.96
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "LMT": {
+      "close": 532.64,
+      "rsi14": 58.29,
+      "obv": -6768100.0,
+      "obv_trend_5d": 3716300.0,
+      "atr14": 9.8414,
+      "sma20": 515.6875,
+      "sma50": 543.7726,
+      "sma200": 564.3083,
+      "pct_from_sma20": 3.29,
+      "pct_from_sma50": -2.05,
+      "chg_5d_pct": 4.87,
+      "chg_1d_pct": 1.99,
+      "chg_60d_pct": 3.55,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 1174080.0,
+      "last_volume": 1428100.0,
+      "chg_20d_pct": -1.01,
+      "obv_trend_20d": -4181400.0,
+      "atr_pct": 1.85,
+      "atr_pct_avg60": 2.49,
+      "volume_ratio": 1.22,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 542.61,
+      "partial_last_bar": false,
+      "sector": "Defense",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 829,
+        "call_open_interest": 2952,
+        "put_volume": 382,
+        "call_put_volume_ratio": 2.17,
+        "call_volume_oi_ratio": 0.28,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-22",
+        "handelstage_bis": 4
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gelb",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 46.6,
+        "teilscores": {
+          "kapitalfluss": 57.0,
+          "relative_staerke": 64.0,
+          "trendkontext": 50.0,
+          "sektorstaerke": 22.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 0.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Earnings in 4 Handelstagen (2026-10-22)"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 515.69,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 496.0,
+          "einstieg_eur": 459.99,
+          "stop_eur": 442.44,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.82,
+          "crv_am_aktuellen_kurs": 0.61,
+          "stueck": 4,
+          "kapitalbedarf_eur": 1840.0,
+          "risiko_eur": 70.0
+        },
+        "wiedereinstieg_usd": 515.69
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "NOC": {
+      "close": 499.63,
+      "rsi14": 44.08,
+      "obv": -20390200.0,
+      "obv_trend_5d": 1687600.0,
+      "atr14": 11.1421,
+      "sma20": 495.565,
+      "sma50": 527.1358,
+      "sma200": 594.3078,
+      "pct_from_sma20": 0.82,
+      "pct_from_sma50": -5.22,
+      "chg_5d_pct": 3.13,
+      "chg_1d_pct": 0.79,
+      "chg_60d_pct": -4.88,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 1014405.0,
+      "last_volume": 1332000.0,
+      "chg_20d_pct": -4.65,
+      "obv_trend_20d": -4553500.0,
+      "atr_pct": 2.23,
+      "atr_pct_avg60": 2.46,
+      "volume_ratio": 1.33,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 534.86,
+      "partial_last_bar": false,
+      "sector": "Defense",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-11-20",
+        "call_volume": 480,
+        "call_open_interest": 2931,
+        "put_volume": 368,
+        "call_put_volume_ratio": 1.3,
+        "call_volume_oi_ratio": 0.16,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-20",
+        "handelstage_bis": 2
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "rot",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 35.4,
+        "teilscores": {
+          "kapitalfluss": 60.0,
+          "relative_staerke": 43.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 22.0,
+          "setup": 10.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Earnings in 2 Handelstagen (2026-10-20)"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 499.63,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 477.35,
+          "einstieg_eur": 445.67,
+          "stop_eur": 425.79,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.46,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 3,
+          "kapitalbedarf_eur": 1337.0,
+          "risiko_eur": 60.0
+        },
+        "wiedereinstieg_usd": 495.56
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "RTX": {
+      "close": 186.95,
+      "rsi14": 44.7,
+      "obv": 96466400.0,
+      "obv_trend_5d": 11120700.0,
+      "atr14": 3.2829,
+      "sma20": 187.037,
+      "sma50": 200.7226,
+      "sma200": 194.9947,
+      "pct_from_sma20": -0.05,
+      "pct_from_sma50": -6.86,
+      "chg_5d_pct": 1.43,
+      "chg_1d_pct": 0.26,
+      "chg_60d_pct": -4.07,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 4209720.0,
+      "last_volume": 4674600.0,
+      "chg_20d_pct": -3.4,
+      "obv_trend_20d": -2414800.0,
+      "atr_pct": 1.76,
+      "atr_pct_avg60": 2.14,
+      "volume_ratio": 1.13,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 197.5,
+      "partial_last_bar": false,
+      "sector": "Defense/Industrials",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 944,
+        "call_open_interest": 4359,
+        "put_volume": 349,
+        "call_put_volume_ratio": 2.7,
+        "call_volume_oi_ratio": 0.22,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-20",
+        "handelstage_bis": 2
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "rot",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 38.0,
+        "teilscores": {
+          "kapitalfluss": 54.0,
+          "relative_staerke": 40.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 17.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Earnings in 2 Handelstagen (2026-10-20)"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 186.95,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 180.38,
+          "einstieg_eur": 166.76,
+          "stop_eur": 160.9,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.51,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 12,
+          "kapitalbedarf_eur": 2001.0,
+          "risiko_eur": 70.0
+        },
+        "wiedereinstieg_usd": 187.04
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "GD": {
+      "close": 337.03,
+      "rsi14": 50.49,
+      "obv": -442200.0,
+      "obv_trend_5d": 4166900.0,
+      "atr14": 5.6671,
+      "sma20": 335.912,
+      "sma50": 359.9588,
+      "sma200": 354.8269,
+      "pct_from_sma20": 0.33,
+      "pct_from_sma50": -6.37,
+      "chg_5d_pct": 2.16,
+      "chg_1d_pct": 0.71,
+      "chg_60d_pct": -9.68,
+      "sma200_trend": "seitwaerts",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 1430255.0,
+      "last_volume": 1224700.0,
+      "chg_20d_pct": -5.32,
+      "obv_trend_20d": -4621300.0,
+      "atr_pct": 1.68,
+      "atr_pct_avg60": 1.92,
+      "volume_ratio": 0.86,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 362.39,
+      "partial_last_bar": false,
+      "sector": "Defense",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 178,
+        "call_open_interest": 238,
+        "put_volume": 47,
+        "call_put_volume_ratio": 3.79,
+        "call_volume_oi_ratio": 0.75,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-30",
+        "handelstage_bis": 10
+      },
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "rot",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 36.5,
+        "teilscores": {
+          "kapitalfluss": 45.0,
+          "relative_staerke": 38.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 22.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 337.03,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 325.7,
+          "einstieg_eur": 300.63,
+          "stop_eur": 290.52,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.36,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 7,
+          "kapitalbedarf_eur": 2104.0,
+          "risiko_eur": 71.0
+        },
+        "wiedereinstieg_usd": 335.91
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "JPM": {
+      "close": 335.53,
+      "rsi14": 37.4,
+      "obv": 122146800.0,
+      "obv_trend_5d": 15913800.0,
+      "atr14": 5.9621,
+      "sma20": 336.1505,
+      "sma50": 348.4512,
+      "sma200": 322.2851,
+      "pct_from_sma20": -0.18,
+      "pct_from_sma50": -3.71,
+      "chg_5d_pct": 1.24,
+      "chg_1d_pct": 0.07,
+      "chg_60d_pct": -3.64,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 8673200.0,
+      "last_volume": 8687000.0,
+      "chg_20d_pct": -3.94,
+      "obv_trend_20d": 9902300.0,
+      "atr_pct": 1.78,
+      "atr_pct_avg60": 1.83,
+      "volume_ratio": 1.01,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 354.5,
+      "partial_last_bar": false,
+      "sector": "Financials",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 2669,
+        "call_open_interest": 10587,
+        "put_volume": 3719,
+        "call_put_volume_ratio": 0.72,
+        "call_volume_oi_ratio": 0.25,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2027-01-14",
+        "handelstage_bis": 64
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gelb",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 48.3,
+        "teilscores": {
+          "kapitalfluss": 90.0,
+          "relative_staerke": 48.0,
+          "trendkontext": 50.0,
+          "sektorstaerke": 11.0,
+          "setup": 10.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 335.53,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 323.61,
+          "einstieg_eur": 299.29,
+          "stop_eur": 288.66,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.55,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 7,
+          "kapitalbedarf_eur": 2095.0,
+          "risiko_eur": 74.0
+        },
+        "wiedereinstieg_usd": 336.15
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "GS": {
+      "close": 891.28,
+      "rsi14": 30.62,
+      "obv": 14173000.0,
+      "obv_trend_5d": -6132900.0,
+      "atr14": 21.4514,
+      "sma20": 909.4855,
+      "sma50": 977.8694,
+      "sma200": 959.6076,
+      "pct_from_sma20": -2.0,
+      "pct_from_sma50": -8.85,
+      "chg_5d_pct": 0.98,
+      "chg_1d_pct": 1.43,
+      "chg_60d_pct": -18.84,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 2347045.0,
+      "last_volume": 2486200.0,
+      "chg_20d_pct": -6.33,
+      "obv_trend_20d": -23303900.0,
+      "atr_pct": 2.41,
+      "atr_pct_avg60": 2.83,
+      "volume_ratio": 1.04,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 967.76,
+      "partial_last_bar": false,
+      "sector": "Financials",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 3183,
+        "call_open_interest": 7303,
+        "put_volume": 5497,
+        "call_put_volume_ratio": 0.58,
+        "call_volume_oi_ratio": 0.44,
+        "einschaetzung": "bearisch"
+      },
+      "earnings": {
+        "available": false,
+        "reason": "kein kuenftiger Termin bei yfinance"
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "rot",
+        "optionsflow": "rot"
+      },
+      "setup": {
+        "score": 18.0,
+        "teilscores": {
+          "kapitalfluss": 11.0,
+          "relative_staerke": 38.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 11.0,
+          "setup": 10.0,
+          "optionsflow": 0.0,
+          "crv": 100.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Optionsflow b\u00e4risch"
+        ],
+        "hinweise": [
+          "Earnings-Termin nicht verf\u00fcgbar \u2013 manuell pr\u00fcfen"
+        ],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 891.28,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 848.38,
+          "einstieg_eur": 795.02,
+          "stop_eur": 756.75,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.81,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 1,
+          "kapitalbedarf_eur": 795.0,
+          "risiko_eur": 38.0
+        },
+        "wiedereinstieg_usd": 909.49
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "MS": {
+      "close": 182.1,
+      "rsi14": 23.5,
+      "obv": 73783300.0,
+      "obv_trend_5d": -4688500.0,
+      "atr14": 4.6493,
+      "sma20": 192.0675,
+      "sma50": 204.9978,
+      "sma200": 194.3011,
+      "pct_from_sma20": -5.19,
+      "pct_from_sma50": -11.17,
+      "chg_5d_pct": -2.85,
+      "chg_1d_pct": 0.33,
+      "chg_60d_pct": -16.66,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 6071710.0,
+      "last_volume": 9073300.0,
+      "chg_20d_pct": -10.52,
+      "obv_trend_20d": -59421200.0,
+      "atr_pct": 2.55,
+      "atr_pct_avg60": 2.57,
+      "volume_ratio": 1.55,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 206.75,
+      "partial_last_bar": false,
+      "sector": "Financials",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 1755,
+        "call_open_interest": 6051,
+        "put_volume": 1221,
+        "call_put_volume_ratio": 1.44,
+        "call_volume_oi_ratio": 0.29,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2027-01-14",
+        "handelstage_bis": 64
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "rot",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 18.8,
+        "teilscores": {
+          "kapitalfluss": 20.0,
+          "relative_staerke": 8.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 11.0,
+          "setup": 10.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 182.1,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 172.8,
+          "einstieg_eur": 162.43,
+          "stop_eur": 154.14,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 5.11,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 9,
+          "kapitalbedarf_eur": 1462.0,
+          "risiko_eur": 75.0
+        },
+        "wiedereinstieg_usd": 192.07
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "PGR": {
+      "close": 213.75,
+      "rsi14": 60.7,
+      "obv": -22488800.0,
+      "obv_trend_5d": 175000.0,
+      "atr14": 5.645,
+      "sma20": 211.8675,
+      "sma50": 214.7114,
+      "sma200": 208.6639,
+      "pct_from_sma20": 0.89,
+      "pct_from_sma50": -0.45,
+      "chg_5d_pct": -2.28,
+      "chg_1d_pct": 0.14,
+      "chg_60d_pct": 4.5,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 3395360.0,
+      "last_volume": 3481100.0,
+      "chg_20d_pct": -1.17,
+      "obv_trend_20d": -10719400.0,
+      "atr_pct": 2.64,
+      "atr_pct_avg60": 2.28,
+      "volume_ratio": 1.02,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 223.78,
+      "partial_last_bar": false,
+      "sector": "Insurance",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 282,
+        "call_open_interest": 1156,
+        "put_volume": 231,
+        "call_put_volume_ratio": 1.22,
+        "call_volume_oi_ratio": 0.24,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": false,
+        "reason": "kein kuenftiger Termin bei yfinance"
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gelb",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 39.9,
+        "teilscores": {
+          "kapitalfluss": 51.0,
+          "relative_staerke": 29.0,
+          "trendkontext": 50.0,
+          "sektorstaerke": 33.0,
+          "setup": 10.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [
+          "Earnings-Termin nicht verf\u00fcgbar \u2013 manuell pr\u00fcfen"
+        ],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 213.75,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 202.46,
+          "einstieg_eur": 190.66,
+          "stop_eur": 180.59,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 5.28,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 7,
+          "kapitalbedarf_eur": 1335.0,
+          "risiko_eur": 70.0
+        },
+        "wiedereinstieg_usd": 211.87
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "TRV": {
+      "close": 383.89,
+      "rsi14": 76.07,
+      "obv": 37508100.0,
+      "obv_trend_5d": 4336600.0,
+      "atr14": 6.325,
+      "sma20": 366.306,
+      "sma50": 369.2184,
+      "sma200": 323.6283,
+      "pct_from_sma20": 4.8,
+      "pct_from_sma50": 3.97,
+      "chg_5d_pct": 3.68,
+      "chg_1d_pct": 1.61,
+      "chg_60d_pct": 3.17,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 1246695.0,
+      "last_volume": 2078700.0,
+      "chg_20d_pct": 1.16,
+      "obv_trend_20d": -494900.0,
+      "atr_pct": 1.65,
+      "atr_pct_avg60": 2.01,
+      "volume_ratio": 1.72,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 382.97,
+      "partial_last_bar": false,
+      "sector": "Insurance",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-11-20",
+        "call_volume": 257,
+        "call_open_interest": 603,
+        "put_volume": 224,
+        "call_put_volume_ratio": 1.15,
+        "call_volume_oi_ratio": 0.43,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-16",
+        "handelstage_bis": 0
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 56.5,
+        "teilscores": {
+          "kapitalfluss": 60.0,
+          "relative_staerke": 68.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 33.0,
+          "setup": 40.0,
+          "optionsflow": 50.0,
+          "crv": 0.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [
+          "RSI14 > 72"
+        ],
+        "ausschluesse": [
+          "Earnings in 0 Handelstagen (2026-10-16)"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 366.31,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 353.66,
+          "einstieg_eur": 326.74,
+          "stop_eur": 315.46,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.45,
+          "crv_am_aktuellen_kurs": 0.26,
+          "stueck": 6,
+          "kapitalbedarf_eur": 1960.0,
+          "risiko_eur": 68.0
+        },
+        "wiedereinstieg_usd": 366.31
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "V": {
+      "close": 399.75,
+      "rsi14": 77.69,
+      "obv": -28683000.0,
+      "obv_trend_5d": 19250000.0,
+      "atr14": 7.1143,
+      "sma20": 373.0065,
+      "sma50": 371.8616,
+      "sma200": 338.9406,
+      "pct_from_sma20": 7.17,
+      "pct_from_sma50": 7.5,
+      "chg_5d_pct": 6.57,
+      "chg_1d_pct": 2.13,
+      "chg_60d_pct": 13.11,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 6587125.0,
+      "last_volume": 8579000.0,
+      "chg_20d_pct": 8.06,
+      "obv_trend_20d": 14403900.0,
+      "atr_pct": 1.78,
+      "atr_pct_avg60": 1.77,
+      "volume_ratio": 1.34,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 397.19,
+      "partial_last_bar": false,
+      "sector": "Payments",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 2803,
+        "call_open_interest": 6602,
+        "put_volume": 3306,
+        "call_put_volume_ratio": 0.85,
+        "call_volume_oi_ratio": 0.42,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-27",
+        "handelstage_bis": 7
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 71.6,
+        "teilscores": {
+          "kapitalfluss": 100.0,
+          "relative_staerke": 84.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 94.0,
+          "setup": 5.0,
+          "optionsflow": 50.0,
+          "crv": 0.0
+        },
+        "stufe": "Kauf \u2013 solide",
+        "bulltrap_flags": [
+          "RSI14 > 72"
+        ],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 373.01,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 358.78,
+          "einstieg_eur": 332.72,
+          "stop_eur": 320.03,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.81,
+          "crv_am_aktuellen_kurs": 0.04,
+          "stueck": 5,
+          "kapitalbedarf_eur": 1664.0,
+          "risiko_eur": 63.0
+        },
+        "wiedereinstieg_usd": 373.01
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "MA": {
+      "close": 616.32,
+      "rsi14": 77.56,
+      "obv": -1333500.0,
+      "obv_trend_5d": 10042400.0,
+      "atr14": 10.5279,
+      "sma20": 572.629,
+      "sma50": 574.7848,
+      "sma200": 532.7957,
+      "pct_from_sma20": 7.63,
+      "pct_from_sma50": 7.23,
+      "chg_5d_pct": 7.23,
+      "chg_1d_pct": 2.17,
+      "chg_60d_pct": 15.85,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 3110705.0,
+      "last_volume": 4243000.0,
+      "chg_20d_pct": 8.94,
+      "obv_trend_20d": 15562900.0,
+      "atr_pct": 1.71,
+      "atr_pct_avg60": 1.77,
+      "volume_ratio": 1.41,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 606.61,
+      "partial_last_bar": false,
+      "sector": "Payments",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 751,
+        "call_open_interest": 1184,
+        "put_volume": 511,
+        "call_put_volume_ratio": 1.47,
+        "call_volume_oi_ratio": 0.63,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-29",
+        "handelstage_bis": 9
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 72.1,
+        "teilscores": {
+          "kapitalfluss": 100.0,
+          "relative_staerke": 86.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 94.0,
+          "setup": 5.0,
+          "optionsflow": 50.0,
+          "crv": 0.0
+        },
+        "stufe": "Kauf \u2013 solide",
+        "bulltrap_flags": [
+          "RSI14 > 72"
+        ],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 572.63,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 551.57,
+          "einstieg_eur": 510.79,
+          "stop_eur": 492.0,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.68,
+          "crv_am_aktuellen_kurs": -0.02,
+          "stueck": 3,
+          "kapitalbedarf_eur": 1532.0,
+          "risiko_eur": 56.0
+        },
+        "wiedereinstieg_usd": 572.63
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "HOOD": {
+      "close": 103.99,
+      "rsi14": 27.45,
+      "obv": -235463500.0,
+      "obv_trend_5d": 38787600.0,
+      "atr14": 5.4494,
+      "sma20": 113.791,
+      "sma50": 108.4656,
+      "sma200": 93.8463,
+      "pct_from_sma20": -8.61,
+      "pct_from_sma50": -4.13,
+      "chg_5d_pct": -2.82,
+      "chg_1d_pct": 2.88,
+      "chg_60d_pct": -0.47,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 20356600.0,
+      "last_volume": 21177800.0,
+      "chg_20d_pct": -5.3,
+      "obv_trend_20d": -17126800.0,
+      "atr_pct": 5.24,
+      "atr_pct_avg60": 5.71,
+      "volume_ratio": 1.04,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 126.74,
+      "partial_last_bar": false,
+      "sector": "Fintech/Brokerage",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 55869,
+        "call_open_interest": 70597,
+        "put_volume": 20537,
+        "call_put_volume_ratio": 2.72,
+        "call_volume_oi_ratio": 0.79,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-27",
+        "handelstage_bis": 7
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "rot",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 35.0,
+        "teilscores": {
+          "kapitalfluss": 51.0,
+          "relative_staerke": 4.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 50.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 103.99,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 93.09,
+          "einstieg_eur": 92.76,
+          "stop_eur": 83.04,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 10.48,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 7,
+          "kapitalbedarf_eur": 649.0,
+          "risiko_eur": 68.0
+        },
+        "wiedereinstieg_usd": 113.79
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "COIN": {
+      "close": 183.81,
+      "rsi14": 41.8,
+      "obv": -207633800.0,
+      "obv_trend_5d": 28044700.0,
+      "atr14": 10.3521,
+      "sma20": 187.6005,
+      "sma50": 177.0754,
+      "sma200": 182.6137,
+      "pct_from_sma20": -2.02,
+      "pct_from_sma50": 3.8,
+      "chg_5d_pct": 6.87,
+      "chg_1d_pct": 6.32,
+      "chg_60d_pct": 10.65,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 30.0,
+      "avg_volume_20d": 8905720.0,
+      "last_volume": 8850300.0,
+      "chg_20d_pct": 5.66,
+      "obv_trend_20d": 21667600.0,
+      "atr_pct": 5.63,
+      "atr_pct_avg60": 6.13,
+      "volume_ratio": 0.99,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 208.33,
+      "partial_last_bar": false,
+      "sector": "Fintech/Brokerage",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 27320,
+        "call_open_interest": 30597,
+        "put_volume": 10235,
+        "call_put_volume_ratio": 2.67,
+        "call_volume_oi_ratio": 0.89,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-29",
+        "handelstage_bis": 9
+      },
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "rot",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 65.9,
+        "teilscores": {
+          "kapitalfluss": 90.0,
+          "relative_staerke": 94.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 50.0,
+          "setup": 45.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Kauf \u2013 solide",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 183.81,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 163.11,
+          "einstieg_eur": 163.96,
+          "stop_eur": 145.49,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 11.26,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 4,
+          "kapitalbedarf_eur": 656.0,
+          "risiko_eur": 74.0
+        },
+        "wiedereinstieg_usd": 187.6
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "UNH": {
+      "close": 406.67,
+      "rsi14": 70.41,
+      "obv": -99455200.0,
+      "obv_trend_5d": 6832900.0,
+      "atr14": 11.9264,
+      "sma20": 377.3475,
+      "sma50": 387.3492,
+      "sma200": 358.7523,
+      "pct_from_sma20": 7.77,
+      "pct_from_sma50": 4.99,
+      "chg_5d_pct": 9.63,
+      "chg_1d_pct": 2.79,
+      "chg_60d_pct": -5.71,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 5957060.0,
+      "last_volume": 10158200.0,
+      "chg_20d_pct": 8.38,
+      "obv_trend_20d": 5358400.0,
+      "atr_pct": 2.93,
+      "atr_pct_avg60": 2.54,
+      "volume_ratio": 1.79,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 399.88,
+      "partial_last_bar": false,
+      "sector": "Healthcare",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 11252,
+        "call_open_interest": 11492,
+        "put_volume": 5255,
+        "call_put_volume_ratio": 2.14,
+        "call_volume_oi_ratio": 0.98,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": false,
+        "reason": "kein kuenftiger Termin bei yfinance"
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gelb",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 77.0,
+        "teilscores": {
+          "kapitalfluss": 100.0,
+          "relative_staerke": 100.0,
+          "trendkontext": 50.0,
+          "sektorstaerke": 100.0,
+          "setup": 30.0,
+          "optionsflow": 100.0,
+          "crv": 0.0
+        },
+        "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [
+          "Earnings-Termin nicht verf\u00fcgbar \u2013 manuell pr\u00fcfen"
+        ],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 377.35,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 353.49,
+          "einstieg_eur": 336.59,
+          "stop_eur": 315.32,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.32,
+          "crv_am_aktuellen_kurs": 0.35,
+          "stueck": 3,
+          "kapitalbedarf_eur": 1010.0,
+          "risiko_eur": 64.0
+        },
+        "wiedereinstieg_usd": 377.35
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "ISRG": {
+      "close": 427.86,
+      "rsi14": 63.09,
+      "obv": 22029000.0,
+      "obv_trend_5d": 1793700.0,
+      "atr14": 11.2271,
+      "sma20": 409.4895,
+      "sma50": 390.609,
+      "sma200": 440.3636,
+      "pct_from_sma20": 4.49,
+      "pct_from_sma50": 9.54,
+      "chg_5d_pct": 3.0,
+      "chg_1d_pct": 1.81,
+      "chg_60d_pct": 25.59,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 2089775.0,
+      "last_volume": 2060100.0,
+      "chg_20d_pct": 11.56,
+      "obv_trend_20d": 14053500.0,
+      "atr_pct": 2.62,
+      "atr_pct_avg60": 3.23,
+      "volume_ratio": 0.98,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 430.0,
+      "partial_last_bar": false,
+      "sector": "MedTech",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 277,
+        "call_open_interest": 2680,
+        "put_volume": 260,
+        "call_put_volume_ratio": 1.07,
+        "call_volume_oi_ratio": 0.1,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-20",
+        "handelstage_bis": 2
+      },
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "rot",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 64.4,
+        "teilscores": {
+          "kapitalfluss": 89.0,
+          "relative_staerke": 92.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 89.0,
+          "setup": 65.0,
+          "optionsflow": 50.0,
+          "crv": 0.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Earnings in 2 Handelstagen (2026-10-20)"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 409.49,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 387.04,
+          "einstieg_eur": 365.26,
+          "stop_eur": 345.24,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 5.48,
+          "crv_am_aktuellen_kurs": 0.65,
+          "stueck": 3,
+          "kapitalbedarf_eur": 1096.0,
+          "risiko_eur": 60.0
+        },
+        "wiedereinstieg_usd": 409.49
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "TMO": {
+      "close": 696.49,
+      "rsi14": 57.89,
+      "obv": 40360100.0,
+      "obv_trend_5d": 11713100.0,
+      "atr14": 20.3321,
+      "sma20": 666.418,
+      "sma50": 634.4894,
+      "sma200": 546.7922,
+      "pct_from_sma20": 4.51,
+      "pct_from_sma50": 9.77,
+      "chg_5d_pct": 6.83,
+      "chg_1d_pct": 3.46,
+      "chg_60d_pct": 32.3,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 2332375.0,
+      "last_volume": 3962800.0,
+      "chg_20d_pct": 5.8,
+      "obv_trend_20d": 9018700.0,
+      "atr_pct": 2.92,
+      "atr_pct_avg60": 2.68,
+      "volume_ratio": 1.69,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 694.33,
+      "partial_last_bar": false,
+      "sector": "MedTech",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 405,
+        "call_open_interest": 447,
+        "put_volume": 400,
+        "call_put_volume_ratio": 1.01,
+        "call_volume_oi_ratio": 0.91,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-21",
+        "handelstage_bis": 3
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 77.7,
+        "teilscores": {
+          "kapitalfluss": 100.0,
+          "relative_staerke": 73.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 89.0,
+          "setup": 65.0,
+          "optionsflow": 50.0,
+          "crv": 0.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Earnings in 3 Handelstagen (2026-10-21)"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 666.42,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 625.75,
+          "einstieg_eur": 594.44,
+          "stop_eur": 558.17,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.1,
+          "crv_am_aktuellen_kurs": 0.72,
+          "stueck": 2,
+          "kapitalbedarf_eur": 1189.0,
+          "risiko_eur": 73.0
+        },
+        "wiedereinstieg_usd": 666.42
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "XOM": {
+      "close": 174.68,
+      "rsi14": 82.07,
+      "obv": 608120600.0,
+      "obv_trend_5d": 30751000.0,
+      "atr14": 3.4079,
+      "sma20": 165.3425,
+      "sma50": 163.2058,
+      "sma200": 151.4265,
+      "pct_from_sma20": 5.65,
+      "pct_from_sma50": 7.03,
+      "chg_5d_pct": 3.67,
+      "chg_1d_pct": -1.32,
+      "chg_60d_pct": 13.1,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 12973250.0,
+      "last_volume": 11227700.0,
+      "chg_20d_pct": 6.99,
+      "obv_trend_20d": 121207800.0,
+      "atr_pct": 1.95,
+      "atr_pct_avg60": 2.26,
+      "volume_ratio": 0.87,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 177.43,
+      "partial_last_bar": false,
+      "sector": "Energy",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 6262,
+        "call_open_interest": 15386,
+        "put_volume": 3560,
+        "call_put_volume_ratio": 1.76,
+        "call_volume_oi_ratio": 0.41,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-30",
+        "handelstage_bis": 10
+      },
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 78.3,
+        "teilscores": {
+          "kapitalfluss": 86.0,
+          "relative_staerke": 88.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 83.0,
+          "setup": 40.0,
+          "optionsflow": 100.0,
+          "crv": 0.0
+        },
+        "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+        "bulltrap_flags": [
+          "RSI14 > 72"
+        ],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 165.34,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 158.53,
+          "einstieg_eur": 147.49,
+          "stop_eur": 141.41,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.12,
+          "crv_am_aktuellen_kurs": 0.27,
+          "stueck": 12,
+          "kapitalbedarf_eur": 1770.0,
+          "risiko_eur": 73.0
+        },
+        "wiedereinstieg_usd": 165.34
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 1,
+        "neutral": 0,
+        "ausschluss": null,
+        "signale": [
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T07:04:00-04:00",
+            "titel": "USA erw\u00e4gen Lockerung der Sanktionen gegen Schattenflotten-Tanker, um Frachtraten zu senken; Brent \u22121,3 % auf 104,60 US-Dollar",
+            "quelle": "Reuters via TheStreet",
+            "url": "https://www.reuters.com/legal/government/us-considers-easing-sanctions-shadow-fleet-vessels-cut-freight-rates-official-2026-10-15/",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          }
+        ],
+        "korrektur_vorschlag": -1
+      }
+    },
+    "CVX": {
+      "close": 219.32,
+      "rsi14": 74.18,
+      "obv": 259252400.0,
+      "obv_trend_5d": 24438800.0,
+      "atr14": 4.3471,
+      "sma20": 208.8385,
+      "sma50": 206.4172,
+      "sma200": 189.502,
+      "pct_from_sma20": 5.02,
+      "pct_from_sma50": 6.25,
+      "chg_5d_pct": 3.67,
+      "chg_1d_pct": -1.22,
+      "chg_60d_pct": 13.65,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 9414790.0,
+      "last_volume": 7100200.0,
+      "chg_20d_pct": 3.66,
+      "obv_trend_20d": -32698400.0,
+      "atr_pct": 1.98,
+      "atr_pct_avg60": 2.1,
+      "volume_ratio": 0.75,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 222.55,
+      "partial_last_bar": false,
+      "sector": "Energy",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 9077,
+        "call_open_interest": 16470,
+        "put_volume": 1251,
+        "call_put_volume_ratio": 7.26,
+        "call_volume_oi_ratio": 0.55,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-30",
+        "handelstage_bis": 10
+      },
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 65.6,
+        "teilscores": {
+          "kapitalfluss": 42.0,
+          "relative_staerke": 69.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 83.0,
+          "setup": 40.0,
+          "optionsflow": 100.0,
+          "crv": 0.0
+        },
+        "stufe": "Kauf \u2013 solide",
+        "bulltrap_flags": [
+          "RSI14 > 72"
+        ],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 208.84,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 200.14,
+          "einstieg_eur": 186.28,
+          "stop_eur": 178.53,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.16,
+          "crv_am_aktuellen_kurs": 0.36,
+          "stueck": 9,
+          "kapitalbedarf_eur": 1677.0,
+          "risiko_eur": 70.0
+        },
+        "wiedereinstieg_usd": 208.84
+      },
+      "news": {
+        "positiv": 1,
+        "negativ": 2,
+        "neutral": 0,
+        "ausschluss": null,
+        "signale": [
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T07:04:00-04:00",
+            "titel": "USA erw\u00e4gen Lockerung der Sanktionen gegen Schattenflotten-Tanker, um Frachtraten zu senken; Brent \u22121,3 % auf 104,60 US-Dollar",
+            "quelle": "Reuters via TheStreet",
+            "url": "https://www.reuters.com/legal/government/us-considers-easing-sanctions-shadow-fleet-vessels-cut-freight-rates-official-2026-10-15/",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          },
+          {
+            "datum": "2026-10-15",
+            "published_at": "2026-10-15T05:18:00-04:00",
+            "titel": "In der Stra\u00dfe von Hormus sinkt ein Frachter nach einem Minentreffer; Energiewerte legen auf Sieben-Tage-Sicht um rund 5 bis 6 % zu",
+            "quelle": "Benzinga / Yahoo Finance",
+            "url": "https://www.benzinga.com/markets/equities/26/10/62374362/stock-market-today-sp-500-nasdaq-100-futures-fall-as-chip-stock-sell-off-intensifies-skhy-tsm-rklb-in-focus",
+            "einschaetzung": "positiv",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          },
+          {
+            "datum": "2026-10-13",
+            "published_at": "2026-10-13T07:11:00-04:00",
+            "titel": "\u00d6lpreise fallen um rund 2 % (Brent 104,40 US-Dollar) nach tempor\u00e4rer Lockerung bei russischen Diesellieferungen",
+            "quelle": "TheStreet",
+            "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-13-2026",
+            "einschaetzung": "negativ",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor"
+          },
+          {
+            "datum": "2026-10-12",
+            "published_at": "2026-10-12T11:19:00+00:00",
+            "titel": "Brent Crude Price at $104: Bull and Bear Case After Houthi Strikes on Riyadh Airport and a Tanker Off Oman",
+            "quelle": "FinanceFeeds",
+            "url": "https://financefeeds.com/brent-crude-oil-price-104-houthi-riyadh-airport-tanker-oman-bull-112-bear-96/",
+            "einschaetzung": "positiv",
+            "gewicht": "niedrig",
+            "kategorie": "Sektor/Makro"
+          }
+        ],
+        "korrektur_vorschlag": -1
+      }
+    },
+    "NEE": {
+      "close": 78.96,
+      "rsi14": 68.75,
+      "obv": 65716900.0,
+      "obv_trend_5d": 27479200.0,
+      "atr14": 1.3521,
+      "sma20": 77.4205,
+      "sma50": 81.248,
+      "sma200": 87.2945,
+      "pct_from_sma20": 1.99,
+      "pct_from_sma50": -2.82,
+      "chg_5d_pct": 2.06,
+      "chg_1d_pct": 0.75,
+      "chg_60d_pct": -11.69,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 12872255.0,
+      "last_volume": 13279300.0,
+      "chg_20d_pct": -2.85,
+      "obv_trend_20d": 676500.0,
+      "atr_pct": 1.71,
+      "atr_pct_avg60": 1.74,
+      "volume_ratio": 1.05,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 81.37,
+      "partial_last_bar": false,
+      "sector": "Utilities",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 1618,
+        "call_open_interest": 11367,
+        "put_volume": 1569,
+        "call_put_volume_ratio": 1.03,
+        "call_volume_oi_ratio": 0.14,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-21",
+        "handelstage_bis": 3
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "rot",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 42.9,
+        "teilscores": {
+          "kapitalfluss": 92.0,
+          "relative_staerke": 44.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 28.0,
+          "setup": 10.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Earnings in 3 Handelstagen (2026-10-21)"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 78.96,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 76.26,
+          "einstieg_eur": 70.43,
+          "stop_eur": 68.02,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.42,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 31,
+          "kapitalbedarf_eur": 2183.0,
+          "risiko_eur": 75.0
+        },
+        "wiedereinstieg_usd": 77.42
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "DUK": {
+      "close": 118.88,
+      "rsi14": 79.83,
+      "obv": 15629900.0,
+      "obv_trend_5d": 3355700.0,
+      "atr14": 1.6307,
+      "sma20": 115.686,
+      "sma50": 119.1006,
+      "sma200": 124.0146,
+      "pct_from_sma20": 2.76,
+      "pct_from_sma50": -0.19,
+      "chg_5d_pct": 1.75,
+      "chg_1d_pct": -0.64,
+      "chg_60d_pct": -7.09,
+      "sma200_trend": "seitwaerts",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 4277385.0,
+      "last_volume": 4793200.0,
+      "chg_20d_pct": 0.29,
+      "obv_trend_20d": -11208100.0,
+      "atr_pct": 1.37,
+      "atr_pct_avg60": 1.59,
+      "volume_ratio": 1.13,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 119.69,
+      "partial_last_bar": false,
+      "sector": "Utilities",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-11-20",
+        "call_volume": 679,
+        "call_open_interest": 4878,
+        "put_volume": 235,
+        "call_put_volume_ratio": 2.89,
+        "call_volume_oi_ratio": 0.14,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-11-05",
+        "handelstage_bis": 14
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "rot",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 37.3,
+        "teilscores": {
+          "kapitalfluss": 54.0,
+          "relative_staerke": 61.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 28.0,
+          "setup": 0.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [
+          "RSI14 > 72"
+        ],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 118.88,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 115.62,
+          "einstieg_eur": 106.04,
+          "stop_eur": 103.13,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 2.74,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 23,
+          "kapitalbedarf_eur": 2439.0,
+          "risiko_eur": 67.0
+        },
+        "wiedereinstieg_usd": 115.69
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "CAT": {
+      "close": 735.64,
+      "rsi14": 29.85,
+      "obv": 28088300.0,
+      "obv_trend_5d": -10694300.0,
+      "atr14": 30.2436,
+      "sma20": 809.0165,
+      "sma50": 815.2816,
+      "sma200": 804.9738,
+      "pct_from_sma20": -9.07,
+      "pct_from_sma50": -9.77,
+      "chg_5d_pct": -7.6,
+      "chg_1d_pct": -1.78,
+      "chg_60d_pct": -17.28,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 40.0,
+      "avg_volume_20d": 2610250.0,
+      "last_volume": 4501400.0,
+      "chg_20d_pct": -7.88,
+      "obv_trend_20d": -2671400.0,
+      "atr_pct": 4.11,
+      "atr_pct_avg60": 3.55,
+      "volume_ratio": 1.8,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 876.95,
+      "partial_last_bar": false,
+      "sector": "Industrials",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 2902,
+        "call_open_interest": 6723,
+        "put_volume": 2928,
+        "call_put_volume_ratio": 0.99,
+        "call_volume_oi_ratio": 0.43,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-29",
+        "handelstage_bis": 9
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "rot",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 17.8,
+        "teilscores": {
+          "kapitalfluss": 20.0,
+          "relative_staerke": 12.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 0.0,
+          "setup": 10.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 735.64,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 675.15,
+          "einstieg_eur": 656.19,
+          "stop_eur": 602.24,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 8.22,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 1,
+          "kapitalbedarf_eur": 656.0,
+          "risiko_eur": 54.0
+        },
+        "wiedereinstieg_usd": 809.02
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "DE": {
+      "close": 650.67,
+      "rsi14": 35.78,
+      "obv": 16611100.0,
+      "obv_trend_5d": 3179100.0,
+      "atr14": 19.5529,
+      "sma20": 672.0825,
+      "sma50": 655.9916,
+      "sma200": 596.005,
+      "pct_from_sma20": -3.19,
+      "pct_from_sma50": -0.81,
+      "chg_5d_pct": -0.29,
+      "chg_1d_pct": 0.04,
+      "chg_60d_pct": 7.14,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 1317505.0,
+      "last_volume": 1184800.0,
+      "chg_20d_pct": -5.1,
+      "obv_trend_20d": -3849900.0,
+      "atr_pct": 3.01,
+      "atr_pct_avg60": 2.81,
+      "volume_ratio": 0.9,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 721.22,
+      "partial_last_bar": false,
+      "sector": "Industrials",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 283,
+        "call_open_interest": 1385,
+        "put_volume": 220,
+        "call_put_volume_ratio": 1.29,
+        "call_volume_oi_ratio": 0.2,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-11-25",
+        "handelstage_bis": 28
+      },
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 42.5,
+        "teilscores": {
+          "kapitalfluss": 47.0,
+          "relative_staerke": 33.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 0.0,
+          "setup": 10.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 650.67,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 611.56,
+          "einstieg_eur": 580.4,
+          "stop_eur": 545.52,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.01,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 2,
+          "kapitalbedarf_eur": 1161.0,
+          "risiko_eur": 70.0
+        },
+        "wiedereinstieg_usd": 672.08
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "URI": {
+      "close": 1047.58,
+      "rsi14": 50.11,
+      "obv": 4429300.0,
+      "obv_trend_5d": 1311500.0,
+      "atr14": 36.0236,
+      "sma20": 1043.0365,
+      "sma50": 1055.0146,
+      "sma200": 958.6403,
+      "pct_from_sma20": 0.44,
+      "pct_from_sma50": -0.7,
+      "chg_5d_pct": -0.24,
+      "chg_1d_pct": 1.23,
+      "chg_60d_pct": 1.21,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 514370.0,
+      "last_volume": 701100.0,
+      "chg_20d_pct": 4.49,
+      "obv_trend_20d": 1061400.0,
+      "atr_pct": 3.44,
+      "atr_pct_avg60": 3.15,
+      "volume_ratio": 1.38,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 1101.41,
+      "partial_last_bar": false,
+      "sector": "Industrials/Infrastructure",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 423,
+        "call_open_interest": 630,
+        "put_volume": 2678,
+        "call_put_volume_ratio": 0.16,
+        "call_volume_oi_ratio": 0.67,
+        "einschaetzung": "bearisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-21",
+        "handelstage_bis": 3
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gruen",
+        "optionsflow": "rot"
+      },
+      "setup": {
+        "score": 65.5,
+        "teilscores": {
+          "kapitalfluss": 100.0,
+          "relative_staerke": 66.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 72.0,
+          "setup": 10.0,
+          "optionsflow": 0.0,
+          "crv": 100.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Earnings in 3 Handelstagen (2026-10-21)",
+          "Optionsflow b\u00e4risch",
+          "\u00d8-Volumen unter 1 Mio. Aktien"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 1047.58,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 975.53,
+          "einstieg_eur": 934.44,
+          "stop_eur": 870.18,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 6.88,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 1,
+          "kapitalbedarf_eur": 934.0,
+          "risiko_eur": 64.0
+        },
+        "wiedereinstieg_usd": 1043.04
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "LIN": {
+      "close": 493.22,
+      "rsi14": 73.22,
+      "obv": 15021900.0,
+      "obv_trend_5d": 9473900.0,
+      "atr14": 8.1921,
+      "sma20": 477.3335,
+      "sma50": 478.5986,
+      "sma200": 489.107,
+      "pct_from_sma20": 3.33,
+      "pct_from_sma50": 3.06,
+      "chg_5d_pct": 2.39,
+      "chg_1d_pct": 0.11,
+      "chg_60d_pct": -3.04,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 40.0,
+      "avg_volume_20d": 2231115.0,
+      "last_volume": 2547400.0,
+      "chg_20d_pct": 7.58,
+      "obv_trend_20d": 24052100.0,
+      "atr_pct": 1.66,
+      "atr_pct_avg60": 1.82,
+      "volume_ratio": 1.15,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 494.23,
+      "partial_last_bar": false,
+      "sector": "Materials",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-11-20",
+        "call_volume": 109,
+        "call_open_interest": 5741,
+        "put_volume": 288,
+        "call_put_volume_ratio": 0.38,
+        "call_volume_oi_ratio": 0.02,
+        "einschaetzung": "bearisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-29",
+        "handelstage_bis": 9
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "rot",
+        "optionsflow": "rot"
+      },
+      "setup": {
+        "score": 53.9,
+        "teilscores": {
+          "kapitalfluss": 95.0,
+          "relative_staerke": 94.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 67.0,
+          "setup": 40.0,
+          "optionsflow": 0.0,
+          "crv": 0.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [
+          "RSI14 > 72"
+        ],
+        "ausschluesse": [
+          "Optionsflow b\u00e4risch"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 477.33,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 460.95,
+          "einstieg_eur": 425.78,
+          "stop_eur": 411.17,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.43,
+          "crv_am_aktuellen_kurs": 0.52,
+          "stueck": 5,
+          "kapitalbedarf_eur": 2129.0,
+          "risiko_eur": 73.0
+        },
+        "wiedereinstieg_usd": 477.33
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "FCX": {
+      "close": 70.06,
+      "rsi14": 42.43,
+      "obv": 430268700.0,
+      "obv_trend_5d": -5397700.0,
+      "atr14": 2.6421,
+      "sma20": 71.8165,
+      "sma50": 72.0134,
+      "sma200": 64.5917,
+      "pct_from_sma20": -2.45,
+      "pct_from_sma50": -2.71,
+      "chg_5d_pct": -1.52,
+      "chg_1d_pct": 0.63,
+      "chg_60d_pct": 7.78,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 10964545.0,
+      "last_volume": 16140500.0,
+      "chg_20d_pct": -1.12,
+      "obv_trend_20d": -40429900.0,
+      "atr_pct": 3.77,
+      "atr_pct_avg60": 4.02,
+      "volume_ratio": 1.5,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 74.9,
+      "partial_last_bar": false,
+      "sector": "Materials",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 3172,
+        "call_open_interest": 7970,
+        "put_volume": 2205,
+        "call_put_volume_ratio": 1.44,
+        "call_volume_oi_ratio": 0.4,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-27",
+        "handelstage_bis": 7
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 45.6,
+        "teilscores": {
+          "kapitalfluss": 20.0,
+          "relative_staerke": 25.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 67.0,
+          "setup": 10.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 70.06,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 64.78,
+          "einstieg_eur": 62.49,
+          "stop_eur": 57.78,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 7.54,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 15,
+          "kapitalbedarf_eur": 937.0,
+          "risiko_eur": 71.0
+        },
+        "wiedereinstieg_usd": 71.82
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "AMZN": {
+      "close": 254.76,
+      "rsi14": 55.97,
+      "obv": 640152700.0,
+      "obv_trend_5d": -17422700.0,
+      "atr14": 5.7593,
+      "sma20": 253.4115,
+      "sma50": 257.5212,
+      "sma200": 242.6407,
+      "pct_from_sma20": 0.53,
+      "pct_from_sma50": -1.07,
+      "chg_5d_pct": 0.28,
+      "chg_1d_pct": 0.27,
+      "chg_60d_pct": 4.05,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 36395595.0,
+      "last_volume": 34505700.0,
+      "chg_20d_pct": 1.42,
+      "obv_trend_20d": 94602700.0,
+      "atr_pct": 2.26,
+      "atr_pct_avg60": 2.63,
+      "volume_ratio": 0.95,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 263.7,
+      "partial_last_bar": false,
+      "sector": "Consumer Discretionary",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 42291,
+        "call_open_interest": 111723,
+        "put_volume": 14741,
+        "call_put_volume_ratio": 2.87,
+        "call_volume_oi_ratio": 0.38,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-29",
+        "handelstage_bis": 9
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 58.0,
+        "teilscores": {
+          "kapitalfluss": 48.0,
+          "relative_staerke": 55.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 39.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 100.0
+        },
+        "stufe": "Beobachten",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 254.76,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 243.24,
+          "einstieg_eur": 227.25,
+          "stop_eur": 216.97,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.52,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 7,
+          "kapitalbedarf_eur": 1591.0,
+          "risiko_eur": 72.0
+        },
+        "wiedereinstieg_usd": 253.41
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "HD": {
+      "close": 308.24,
+      "rsi14": 64.61,
+      "obv": -72459600.0,
+      "obv_trend_5d": 5926000.0,
+      "atr14": 6.4543,
+      "sma20": 292.0235,
+      "sma50": 313.9746,
+      "sma200": 336.4687,
+      "pct_from_sma20": 5.55,
+      "pct_from_sma50": -1.83,
+      "chg_5d_pct": 4.32,
+      "chg_1d_pct": 4.31,
+      "chg_60d_pct": -7.0,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 5771925.0,
+      "last_volume": 6670900.0,
+      "chg_20d_pct": 1.89,
+      "obv_trend_20d": -24494900.0,
+      "atr_pct": 2.09,
+      "atr_pct_avg60": 2.35,
+      "volume_ratio": 1.18,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 310.4,
+      "partial_last_bar": false,
+      "sector": "Consumer Discretionary",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 4712,
+        "call_open_interest": 6815,
+        "put_volume": 1243,
+        "call_put_volume_ratio": 3.79,
+        "call_volume_oi_ratio": 0.69,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-11-17",
+        "handelstage_bis": 22
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "rot",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 42.6,
+        "teilscores": {
+          "kapitalfluss": 56.0,
+          "relative_staerke": 70.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 39.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 0.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 292.02,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 279.11,
+          "einstieg_eur": 260.48,
+          "stop_eur": 248.97,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 4.42,
+          "crv_am_aktuellen_kurs": 0.33,
+          "stueck": 6,
+          "kapitalbedarf_eur": 1563.0,
+          "risiko_eur": 69.0
+        },
+        "wiedereinstieg_usd": 292.02
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "TSLA": {
+      "close": 362.44,
+      "rsi14": 44.11,
+      "obv": 290069200.0,
+      "obv_trend_5d": -57300600.0,
+      "atr14": 10.4386,
+      "sma20": 370.811,
+      "sma50": 358.7584,
+      "sma200": 388.4899,
+      "pct_from_sma20": -2.26,
+      "pct_from_sma50": 1.03,
+      "chg_5d_pct": -3.35,
+      "chg_1d_pct": -1.29,
+      "chg_60d_pct": -3.09,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 33959725.0,
+      "last_volume": 26614300.0,
+      "chg_20d_pct": -1.03,
+      "obv_trend_20d": -75517700.0,
+      "atr_pct": 2.88,
+      "atr_pct_avg60": 3.78,
+      "volume_ratio": 0.77,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 388.56,
+      "partial_last_bar": false,
+      "sector": "Consumer Discretionary",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 56368,
+        "call_open_interest": 98205,
+        "put_volume": 38653,
+        "call_put_volume_ratio": 1.46,
+        "call_volume_oi_ratio": 0.57,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-21",
+        "handelstage_bis": 3
+      },
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "rot",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 27.7,
+        "teilscores": {
+          "kapitalfluss": 2.0,
+          "relative_staerke": 23.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 39.0,
+          "setup": 45.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [],
+        "ausschluesse": [
+          "Earnings in 3 Handelstagen (2026-10-21)"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 362.44,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 341.56,
+          "einstieg_eur": 323.3,
+          "stop_eur": 304.67,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 5.76,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 4,
+          "kapitalbedarf_eur": 1293.0,
+          "risiko_eur": 74.0
+        },
+        "wiedereinstieg_usd": 370.81
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "UNP": {
+      "close": 288.71,
+      "rsi14": 78.52,
+      "obv": 84854900.0,
+      "obv_trend_5d": 10632600.0,
+      "atr14": 4.1014,
+      "sma20": 277.092,
+      "sma50": 287.878,
+      "sma200": 266.8217,
+      "pct_from_sma20": 4.19,
+      "pct_from_sma50": 0.29,
+      "chg_5d_pct": 3.78,
+      "chg_1d_pct": 0.8,
+      "chg_60d_pct": -1.32,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 2568970.0,
+      "last_volume": 3671600.0,
+      "chg_20d_pct": 2.21,
+      "obv_trend_20d": 3287800.0,
+      "atr_pct": 1.42,
+      "atr_pct_avg60": 2.01,
+      "volume_ratio": 1.47,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 286.59,
+      "partial_last_bar": false,
+      "sector": "Transportation",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 175,
+        "call_open_interest": 1079,
+        "put_volume": 108,
+        "call_put_volume_ratio": 1.62,
+        "call_volume_oi_ratio": 0.16,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-22",
+        "handelstage_bis": 4
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gelb",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 67.5,
+        "teilscores": {
+          "kapitalfluss": 100.0,
+          "relative_staerke": 74.0,
+          "trendkontext": 50.0,
+          "sektorstaerke": 61.0,
+          "setup": 40.0,
+          "optionsflow": 100.0,
+          "crv": 0.0
+        },
+        "stufe": "Ausgeschlossen",
+        "bulltrap_flags": [
+          "RSI14 > 72"
+        ],
+        "ausschluesse": [
+          "Earnings in 4 Handelstagen (2026-10-22)"
+        ],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 277.09,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 268.89,
+          "einstieg_eur": 247.17,
+          "stop_eur": 239.85,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 2.96,
+          "crv_am_aktuellen_kurs": 0.24,
+          "stueck": 10,
+          "kapitalbedarf_eur": 2472.0,
+          "risiko_eur": 73.0
+        },
+        "wiedereinstieg_usd": 277.09
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "UPS": {
+      "close": 97.83,
+      "rsi14": 69.29,
+      "obv": 83331000.0,
+      "obv_trend_5d": 14381300.0,
+      "atr14": 1.6486,
+      "sma20": 94.551,
+      "sma50": 99.5426,
+      "sma200": 104.716,
+      "pct_from_sma20": 3.47,
+      "pct_from_sma50": -1.72,
+      "chg_5d_pct": 3.93,
+      "chg_1d_pct": 2.14,
+      "chg_60d_pct": -15.55,
+      "sma200_trend": "fallend",
+      "pct_above_sma200_10d": 0.0,
+      "avg_volume_20d": 5224585.0,
+      "last_volume": 5903500.0,
+      "chg_20d_pct": -2.34,
+      "obv_trend_20d": -9271500.0,
+      "atr_pct": 1.69,
+      "atr_pct_avg60": 2.33,
+      "volume_ratio": 1.16,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 101.05,
+      "partial_last_bar": false,
+      "sector": "Transportation",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 5042,
+        "call_open_interest": 8907,
+        "put_volume": 958,
+        "call_put_volume_ratio": 5.26,
+        "call_volume_oi_ratio": 0.57,
+        "einschaetzung": "bullisch"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-10-27",
+        "handelstage_bis": 7
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "rot",
+        "optionsflow": "gruen"
+      },
+      "setup": {
+        "score": 41.2,
+        "teilscores": {
+          "kapitalfluss": 55.0,
+          "relative_staerke": 47.0,
+          "trendkontext": 0.0,
+          "sektorstaerke": 61.0,
+          "setup": 10.0,
+          "optionsflow": 100.0,
+          "crv": 0.0
+        },
+        "stufe": "Kein Setup",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 94.55,
+          "einstieg_typ": "Limit an SMA20 (R\u00fccksetzer abwarten)",
+          "stop_usd": 91.25,
+          "einstieg_eur": 84.34,
+          "stop_eur": 81.4,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.49,
+          "crv_am_aktuellen_kurs": 0.5,
+          "stueck": 25,
+          "kapitalbedarf_eur": 2108.0,
+          "risiko_eur": 74.0
+        },
+        "wiedereinstieg_usd": 94.55
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 0,
+        "korrektur_vorschlag": 0,
+        "ausschluss": null,
+        "signale": []
+      }
+    },
+    "AAPL": {
+      "close": 342.0,
+      "rsi14": 51.14,
+      "obv": 1063583500.0,
+      "obv_trend_5d": 37386000.0,
+      "atr14": 6.5179,
+      "sma20": 337.0575,
+      "sma50": 325.0784,
+      "sma200": 292.1128,
+      "pct_from_sma20": 1.47,
+      "pct_from_sma50": 5.21,
+      "chg_5d_pct": 0.46,
+      "chg_1d_pct": -0.28,
+      "chg_60d_pct": 4.94,
+      "sma200_trend": "steigend",
+      "pct_above_sma200_10d": 100.0,
+      "avg_volume_20d": 38320055.0,
+      "last_volume": 39678300.0,
+      "chg_20d_pct": 1.48,
+      "obv_trend_20d": 41309900.0,
+      "atr_pct": 1.91,
+      "atr_pct_avg60": 2.32,
+      "volume_ratio": 1.04,
+      "volume_ratio_basis": "letzter Handelstag",
+      "high_20d": 348.15,
+      "partial_last_bar": false,
+      "sector": "Technology",
+      "options_flow": {
+        "available": true,
+        "expiration": "2026-10-23",
+        "call_volume": 39709,
+        "call_open_interest": 83701,
+        "put_volume": 31464,
+        "call_put_volume_ratio": 1.26,
+        "call_volume_oi_ratio": 0.47,
+        "einschaetzung": "neutral"
+      },
+      "earnings": {
+        "available": true,
+        "datum": "2026-11-02",
+        "handelstage_bis": 11
+      },
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "setup": {
+        "score": 78.0,
+        "teilscores": {
+          "kapitalfluss": 91.0,
+          "relative_staerke": 57.0,
+          "trendkontext": 100.0,
+          "sektorstaerke": 56.0,
+          "setup": 100.0,
+          "optionsflow": 50.0,
+          "crv": 100.0
+        },
+        "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+        "bulltrap_flags": [],
+        "ausschluesse": [],
+        "hinweise": [],
+        "levels": {
+          "available": true,
+          "einstieg_usd": 342.0,
+          "einstieg_typ": "am aktuellen Kurs",
+          "stop_usd": 328.96,
+          "einstieg_eur": 305.06,
+          "stop_eur": 293.44,
+          "ausstieg": "sp\u00e4testens nach 10 Handelstagen zum Schlusskurs",
+          "haltedauer_tage": 10,
+          "risiko_pct": 3.81,
+          "crv_am_aktuellen_kurs": 2.0,
+          "stueck": 6,
+          "kapitalbedarf_eur": 1830.0,
+          "risiko_eur": 70.0
+        },
+        "wiedereinstieg_usd": 337.06
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "neutral": 1,
+        "ausschluss": null,
+        "signale": [
+          {
+            "datum": "2026-10-16",
+            "published_at": "2026-10-16T04:01:00+00:00",
+            "titel": "Apple schlie\u00dft erstmals bei 5 Billionen US-Dollar B\u00f6rsenwert (+25 % seit Jahresbeginn), bewertet mit dem 37-Fachen der erwarteten Gewinne; Berichte \u00fcber schw\u00e4chere iPhone-Bestellungen als erwartet",
+            "quelle": "Finimize",
+            "url": "https://finimize.com/content/your-daily-brief-for-october-16th-2026",
+            "einschaetzung": "neutral",
+            "gewicht": "niedrig",
+            "kategorie": "Sonstiges"
+          }
+        ],
+        "korrektur_vorschlag": 0
+      }
+    }
+  },
+  "macro": {
+    "vix": {
+      "available": true,
+      "symbol": "^VIX",
+      "datum": "2026-10-16",
+      "close": 15.97,
+      "sma20": 15.53,
+      "sma50": 15.52,
+      "pct_from_sma20": 2.84,
+      "chg_20d_abs": 1.16
+    },
+    "us10y": {
+      "available": true,
+      "symbol": "^TNX",
+      "datum": "2026-10-16",
+      "close": 5.1,
+      "sma20": 5.19,
+      "sma50": 4.94,
+      "pct_from_sma20": -1.83,
+      "chg_20d_abs": 0.1
+    }
+  },
+  "breadth": {
+    "pct_above_sma50": 48.0,
+    "advance_decline_ratio": 1.88,
+    "pct_positive_5d": 60.0,
+    "advancers": 32,
+    "decliners": 17,
+    "sample_size": 50
+  },
+  "sectors": {
+    "Healthcare": {
+      "anzahl": 1,
+      "chg_5d_avg": 9.63,
+      "chg_20d_avg": 8.38,
+      "rs_5d_vs_spy": 9.91,
+      "rs_20d_vs_spy": 7.17,
+      "obv_steigend_anteil": 100.0,
+      "rang": 1,
+      "score": 100.0,
+      "trend": "positiv"
+    },
+    "Payments": {
+      "anzahl": 2,
+      "chg_5d_avg": 6.9,
+      "chg_20d_avg": 8.5,
+      "rs_5d_vs_spy": 7.18,
+      "rs_20d_vs_spy": 7.29,
+      "obv_steigend_anteil": 100.0,
+      "rang": 2,
+      "score": 94.0,
+      "trend": "positiv"
+    },
+    "MedTech": {
+      "anzahl": 2,
+      "chg_5d_avg": 4.92,
+      "chg_20d_avg": 8.68,
+      "rs_5d_vs_spy": 5.2,
+      "rs_20d_vs_spy": 7.47,
+      "obv_steigend_anteil": 100.0,
+      "rang": 3,
+      "score": 89.0,
+      "trend": "positiv"
+    },
+    "Energy": {
+      "anzahl": 2,
+      "chg_5d_avg": 3.67,
+      "chg_20d_avg": 5.32,
+      "rs_5d_vs_spy": 3.95,
+      "rs_20d_vs_spy": 4.11,
+      "obv_steigend_anteil": 100.0,
+      "rang": 4,
+      "score": 83.0,
+      "trend": "positiv"
+    },
+    "Software/Cloud": {
+      "anzahl": 7,
+      "chg_5d_avg": 2.83,
+      "chg_20d_avg": 2.71,
+      "rs_5d_vs_spy": 3.11,
+      "rs_20d_vs_spy": 1.5,
+      "obv_steigend_anteil": 71.0,
+      "rang": 5,
+      "score": 78.0,
+      "trend": "positiv"
+    },
+    "Industrials/Infrastructure": {
+      "anzahl": 1,
+      "chg_5d_avg": -0.24,
+      "chg_20d_avg": 4.49,
+      "rs_5d_vs_spy": 0.04,
+      "rs_20d_vs_spy": 3.28,
+      "obv_steigend_anteil": 100.0,
+      "rang": 6,
+      "score": 72.0,
+      "trend": "positiv"
+    },
+    "Materials": {
+      "anzahl": 2,
+      "chg_5d_avg": 0.44,
+      "chg_20d_avg": 3.23,
+      "rs_5d_vs_spy": 0.72,
+      "rs_20d_vs_spy": 2.02,
+      "obv_steigend_anteil": 50.0,
+      "rang": 7,
+      "score": 67.0,
+      "trend": "positiv"
+    },
+    "Transportation": {
+      "anzahl": 2,
+      "chg_5d_avg": 3.86,
+      "chg_20d_avg": -0.06,
+      "rs_5d_vs_spy": 4.14,
+      "rs_20d_vs_spy": -1.27,
+      "obv_steigend_anteil": 100.0,
+      "rang": 8,
+      "score": 61.0,
+      "trend": "neutral"
+    },
+    "Technology": {
+      "anzahl": 1,
+      "chg_5d_avg": 0.46,
+      "chg_20d_avg": 1.48,
+      "rs_5d_vs_spy": 0.74,
+      "rs_20d_vs_spy": 0.27,
+      "obv_steigend_anteil": 100.0,
+      "rang": 9,
+      "score": 56.0,
+      "trend": "positiv"
+    },
+    "Fintech/Brokerage": {
+      "anzahl": 2,
+      "chg_5d_avg": 2.03,
+      "chg_20d_avg": 0.18,
+      "rs_5d_vs_spy": 2.31,
+      "rs_20d_vs_spy": -1.03,
+      "obv_steigend_anteil": 100.0,
+      "rang": 10,
+      "score": 50.0,
+      "trend": "neutral"
+    },
+    "Cybersecurity": {
+      "anzahl": 4,
+      "chg_5d_avg": -4.06,
+      "chg_20d_avg": 3.82,
+      "rs_5d_vs_spy": -3.78,
+      "rs_20d_vs_spy": 2.61,
+      "obv_steigend_anteil": 0.0,
+      "rang": 11,
+      "score": 44.0,
+      "trend": "neutral"
+    },
+    "Consumer Discretionary": {
+      "anzahl": 3,
+      "chg_5d_avg": 0.42,
+      "chg_20d_avg": 0.76,
+      "rs_5d_vs_spy": 0.7,
+      "rs_20d_vs_spy": -0.45,
+      "obv_steigend_anteil": 33.0,
+      "rang": 12,
+      "score": 39.0,
+      "trend": "neutral"
+    },
+    "Insurance": {
+      "anzahl": 2,
+      "chg_5d_avg": 0.7,
+      "chg_20d_avg": -0.01,
+      "rs_5d_vs_spy": 0.98,
+      "rs_20d_vs_spy": -1.22,
+      "obv_steigend_anteil": 100.0,
+      "rang": 13,
+      "score": 33.0,
+      "trend": "neutral"
+    },
+    "Utilities": {
+      "anzahl": 2,
+      "chg_5d_avg": 1.9,
+      "chg_20d_avg": -1.28,
+      "rs_5d_vs_spy": 2.18,
+      "rs_20d_vs_spy": -2.49,
+      "obv_steigend_anteil": 100.0,
+      "rang": 14,
+      "score": 28.0,
+      "trend": "neutral"
+    },
+    "Defense": {
+      "anzahl": 3,
+      "chg_5d_avg": 3.39,
+      "chg_20d_avg": -3.66,
+      "rs_5d_vs_spy": 3.67,
+      "rs_20d_vs_spy": -4.87,
+      "obv_steigend_anteil": 100.0,
+      "rang": 15,
+      "score": 22.0,
+      "trend": "neutral"
+    },
+    "Defense/Industrials": {
+      "anzahl": 1,
+      "chg_5d_avg": 1.43,
+      "chg_20d_avg": -3.4,
+      "rs_5d_vs_spy": 1.71,
+      "rs_20d_vs_spy": -4.61,
+      "obv_steigend_anteil": 100.0,
+      "rang": 16,
+      "score": 17.0,
+      "trend": "neutral"
+    },
+    "Financials": {
+      "anzahl": 3,
+      "chg_5d_avg": -0.21,
+      "chg_20d_avg": -6.93,
+      "rs_5d_vs_spy": 0.07,
+      "rs_20d_vs_spy": -8.14,
+      "obv_steigend_anteil": 33.0,
+      "rang": 17,
+      "score": 11.0,
+      "trend": "neutral"
+    },
+    "Semiconductors/AI": {
+      "anzahl": 8,
+      "chg_5d_avg": -7.81,
+      "chg_20d_avg": -2.14,
+      "rs_5d_vs_spy": -7.53,
+      "rs_20d_vs_spy": -3.35,
+      "obv_steigend_anteil": 0.0,
+      "rang": 18,
+      "score": 6.0,
+      "trend": "negativ"
+    },
+    "Industrials": {
+      "anzahl": 2,
+      "chg_5d_avg": -3.94,
+      "chg_20d_avg": -6.49,
+      "rs_5d_vs_spy": -3.66,
+      "rs_20d_vs_spy": -7.7,
+      "obv_steigend_anteil": 50.0,
+      "rang": 19,
+      "score": 0.0,
+      "trend": "negativ"
+    }
+  },
+  "regime": {
+    "status": "NEUTRAL",
+    "kriterien_erfuellt": 3,
+    "kriterien_unbekannt": 0,
+    "kriterien": [
+      {
+        "kriterium": "S&P 500 \u00fcber SMA50",
+        "erfuellt": true,
+        "wert": 0.41
+      },
+      {
+        "kriterium": "Nasdaq \u00fcber SMA20",
+        "erfuellt": false,
+        "wert": -2.03
+      },
+      {
+        "kriterium": "VIX unter 20",
+        "erfuellt": true,
+        "wert": 15.97
+      },
+      {
+        "kriterium": "\u226550 % der Watchlist \u00fcber SMA50",
+        "erfuellt": false,
+        "wert": 48.0
+      },
+      {
+        "kriterium": "\u226550 % der Watchlist im 5-Tage-Plus",
+        "erfuellt": true,
+        "wert": 60.0
+      }
+    ],
+    "override": null,
+    "max_neue_positionen": 1,
+    "max_offene_positionen": 3,
+    "hinweise": [
+      "US-10J-Rendite 5.10 % (20 Tage: +0.10 Pkt.) \u2013 nur Info, kein Kriterium"
+    ],
+    "kurztext": "NEUTRAL: 3/5 Kriterien erf\u00fcllt"
+  },
+  "ranking": [
+    {
+      "ticker": "MSFT",
+      "score": 79.7,
+      "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+      "sector": "Software/Cloud"
+    },
+    {
+      "ticker": "XOM",
+      "score": 78.3,
+      "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+      "sector": "Energy"
+    },
+    {
+      "ticker": "AAPL",
+      "score": 78.0,
+      "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+      "sector": "Technology"
+    },
+    {
+      "ticker": "TMO",
+      "score": 77.7,
+      "stufe": "Ausgeschlossen",
+      "sector": "MedTech"
+    },
+    {
+      "ticker": "UNH",
+      "score": 77.0,
+      "stufe": "Kauf \u2013 hohe Qualit\u00e4t",
+      "sector": "Healthcare"
+    },
+    {
+      "ticker": "MA",
+      "score": 72.1,
+      "stufe": "Kauf \u2013 solide",
+      "sector": "Payments"
+    },
+    {
+      "ticker": "V",
+      "score": 71.6,
+      "stufe": "Kauf \u2013 solide",
+      "sector": "Payments"
+    },
+    {
+      "ticker": "PLTR",
+      "score": 70.0,
+      "stufe": "Kauf \u2013 solide",
+      "sector": "Software/Cloud"
+    },
+    {
+      "ticker": "UNP",
+      "score": 67.5,
+      "stufe": "Ausgeschlossen",
+      "sector": "Transportation"
+    },
+    {
+      "ticker": "COIN",
+      "score": 65.9,
+      "stufe": "Kauf \u2013 solide",
+      "sector": "Fintech/Brokerage"
+    },
+    {
+      "ticker": "CVX",
+      "score": 65.6,
+      "stufe": "Kauf \u2013 solide",
+      "sector": "Energy"
+    },
+    {
+      "ticker": "URI",
+      "score": 65.5,
+      "stufe": "Ausgeschlossen",
+      "sector": "Industrials/Infrastructure"
+    },
+    {
+      "ticker": "SNOW",
+      "score": 65.2,
+      "stufe": "Kauf \u2013 solide",
+      "sector": "Software/Cloud"
+    },
+    {
+      "ticker": "NOW",
+      "score": 65.0,
+      "stufe": "Kauf \u2013 solide",
+      "sector": "Software/Cloud"
+    },
+    {
+      "ticker": "ISRG",
+      "score": 64.4,
+      "stufe": "Ausgeschlossen",
+      "sector": "MedTech"
+    },
+    {
+      "ticker": "AMD",
+      "score": 60.6,
+      "stufe": "Beobachten",
+      "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "FTNT",
+      "score": 59.0,
+      "stufe": "Beobachten",
+      "sector": "Cybersecurity"
+    },
+    {
+      "ticker": "AMZN",
+      "score": 58.0,
+      "stufe": "Beobachten",
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "ticker": "TRV",
+      "score": 56.5,
+      "stufe": "Ausgeschlossen",
+      "sector": "Insurance"
+    },
+    {
+      "ticker": "MRVL",
+      "score": 56.3,
+      "stufe": "Beobachten",
+      "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "CRM",
+      "score": 55.8,
+      "stufe": "Beobachten",
+      "sector": "Software/Cloud"
+    },
+    {
+      "ticker": "LIN",
+      "score": 53.9,
+      "stufe": "Ausgeschlossen",
+      "sector": "Materials"
+    },
+    {
+      "ticker": "ZS",
+      "score": 52.6,
+      "stufe": "Beobachten",
+      "sector": "Cybersecurity"
+    },
+    {
+      "ticker": "NVDA",
+      "score": 49.8,
+      "stufe": "Kein Setup",
+      "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "CRWD",
+      "score": 48.4,
+      "stufe": "Ausgeschlossen",
+      "sector": "Cybersecurity"
+    },
+    {
+      "ticker": "JPM",
+      "score": 48.3,
+      "stufe": "Kein Setup",
+      "sector": "Financials"
+    },
+    {
+      "ticker": "LMT",
+      "score": 46.6,
+      "stufe": "Ausgeschlossen",
+      "sector": "Defense"
+    },
+    {
+      "ticker": "FCX",
+      "score": 45.6,
+      "stufe": "Kein Setup",
+      "sector": "Materials"
+    },
+    {
+      "ticker": "QCOM",
+      "score": 44.9,
+      "stufe": "Kein Setup",
+      "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "NEE",
+      "score": 42.9,
+      "stufe": "Ausgeschlossen",
+      "sector": "Utilities"
+    },
+    {
+      "ticker": "HD",
+      "score": 42.6,
+      "stufe": "Kein Setup",
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "ticker": "DE",
+      "score": 42.5,
+      "stufe": "Kein Setup",
+      "sector": "Industrials"
+    },
+    {
+      "ticker": "UPS",
+      "score": 41.2,
+      "stufe": "Kein Setup",
+      "sector": "Transportation"
+    },
+    {
+      "ticker": "ORCL",
+      "score": 40.7,
+      "stufe": "Kein Setup",
+      "sector": "Software/Cloud"
+    },
+    {
+      "ticker": "PGR",
+      "score": 39.9,
+      "stufe": "Kein Setup",
+      "sector": "Insurance"
+    },
+    {
+      "ticker": "ASML",
+      "score": 38.1,
+      "stufe": "Kein Setup",
+      "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "RTX",
+      "score": 38.0,
+      "stufe": "Ausgeschlossen",
+      "sector": "Defense/Industrials"
+    },
+    {
+      "ticker": "DUK",
+      "score": 37.3,
+      "stufe": "Kein Setup",
+      "sector": "Utilities"
+    },
+    {
+      "ticker": "TSM",
+      "score": 36.5,
+      "stufe": "Kein Setup",
+      "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "GD",
+      "score": 36.5,
+      "stufe": "Kein Setup",
+      "sector": "Defense"
+    },
+    {
+      "ticker": "ADBE",
+      "score": 35.6,
+      "stufe": "Ausgeschlossen",
+      "sector": "Software/Cloud"
+    },
+    {
+      "ticker": "NOC",
+      "score": 35.4,
+      "stufe": "Ausgeschlossen",
+      "sector": "Defense"
+    },
+    {
+      "ticker": "AVGO",
+      "score": 35.3,
+      "stufe": "Kein Setup",
+      "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "HOOD",
+      "score": 35.0,
+      "stufe": "Kein Setup",
+      "sector": "Fintech/Brokerage"
+    },
+    {
+      "ticker": "SMCI",
+      "score": 34.7,
+      "stufe": "Kein Setup",
+      "sector": "Semiconductors/AI"
+    },
+    {
+      "ticker": "PANW",
+      "score": 32.8,
+      "stufe": "Ausgeschlossen",
+      "sector": "Cybersecurity"
+    },
+    {
+      "ticker": "TSLA",
+      "score": 27.7,
+      "stufe": "Ausgeschlossen",
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "ticker": "MS",
+      "score": 18.8,
+      "stufe": "Kein Setup",
+      "sector": "Financials"
+    },
+    {
+      "ticker": "GS",
+      "score": 18.0,
+      "stufe": "Ausgeschlossen",
+      "sector": "Financials"
+    },
+    {
+      "ticker": "CAT",
+      "score": 17.8,
+      "stufe": "Kein Setup",
+      "sector": "Industrials"
+    }
+  ],
+  "parameter": {
+    "score_gewichte": {
+      "kapitalfluss": 0.2,
+      "relative_staerke": 0.2,
+      "trendkontext": 0.15,
+      "sektorstaerke": 0.15,
+      "setup": 0.15,
+      "optionsflow": 0.1,
+      "crv": 0.05
+    },
+    "score_stufen": {
+      "Kauf \u2013 hohe Qualit\u00e4t": 75,
+      "Kauf \u2013 solide": 65,
+      "Beobachten": 50
+    },
+    "stop_atr_mult": 2.0,
+    "haltedauer_tage": 10,
+    "risiko_pro_trade_eur": 75.0,
+    "max_gesamtrisiko_eur": 375.0,
+    "max_position_eur": 2500.0,
+    "max_je_sektor": 2,
+    "depot_eur": 8000.0,
+    "earnings_sperre_handelstage": 5
+  }
+}
