@@ -1,5 +1,5 @@
 SETUP-DOKU: MARKTDATEN-FEED (GITHUB ACTIONS)
-Stand: 11.10.2026 abends (Risikobudget, 10-Tage-Ausstieg, Trade-Journal, News-Signale). Ersetzt die Fassung vom 27.09.2026.
+Stand: 18.10.2026 (Bestandspositionen im Journal, News ohne Dubletten, Ampel je Lauf; davor 11.10.2026: Risikobudget, 10-Tage-Ausstieg, Trade-Journal, News-Signale).
 
 ÜBERBLICK
 Repository: github.com/patricks87-sudo/swing-trading-data (public, Branch main)
@@ -33,7 +33,7 @@ Jede geplante Claude-Aufgabe startet zuerst per workflow_dispatch den passenden 
 - P5 ~15:30 – Eröffnungs-Info ohne Veto. Schreibt market_barometer.json.
 - P5.5 ~17:05 – Hold-Test aus echten 5-Minuten-Kerzen, entscheidet nur über den Einstiegszeitpunkt. Schreibt p55_candidates.json, market_barometer.json.
 - P1 ~17:35 – Portfolio-Entscheidung. Der Feed-Lauf aktualisiert vorher candidate_tracking.json (Kursfelder) und filter_bilanz.json. Schreibt top_empfehlung.json, candidate_tracking.json, portfolio_bewertung.json, market_barometer.json.
-- N1–N6 (werktags 08:00/10:30/13:00/16:15/18:30/21:00) und N-Sa/N-So (18:00) – Prompt prompts/N.md: Schlagzeilen (headlines.json, news_summary_today.json) und seit 11.10.2026 News-Signale zu Depot und Kandidaten (news_signals.json, max. 6 Suchen). Seitdem suchen P4–P1 keine Schlagzeilen mehr selbst (spart Rechenzeit).
+- N1–N6 (werktags 08:00/10:30/13:00/16:15/18:30/21:00) und N-Sa/N-So (18:00) – Prompt prompts/N.md (v2.1): Tagesüberblick news_summary_today.json mit „lage“ und Meldungen ohne Dubletten (jede Meldung nur einmal am Tag), Top-3 in headlines.json, und News-Signale nur zu firmenspezifischen Meldungen für Depot und Kandidaten (news_signals.json, max. 6 Suchen). Seitdem suchen P4–P1 keine Schlagzeilen mehr selbst (spart Rechenzeit).
 Zusätzlich läuft der Workflow per Cron alle 5 Minuten zwischen 12:00 und 16:59 UTC; determine_run.py holt verpasste Läufe nach und verhindert Doppelläufe.
 Manueller Testlauf: Actions → "Fetch Market Data" → "Run workflow" → run = p4/p5/p55/p1. An Handelstagen nicht vor ~14:45 MESZ manuell starten (Dedupe würde den regulären P4-Lauf blockieren).
 
@@ -81,7 +81,7 @@ Score 0–100: Kapitalfluss 20 %, relative Stärke (vs. S&P 500 und Sektor) 20 %
 Stufen: ≥75 "Kauf – hohe Qualität", 65–74 "Kauf – solide", 50–64 "Beobachten", <50 "Kein Setup". Bei 2+ Bulltrap-Flags: "Überdehnt – auf Rücksetzer warten".
 Bulltrap-Flags: Abstand SMA20 > 8 %, Abstand SMA50 > 15 %, RSI14 > 72, +15 % in 5 Tagen, ATR > 2× 60-Tage-Schnitt, Kurs steigt bei fallendem OBV.
 Harte Ausschlüsse (Stufe "Ausgeschlossen"): Earnings in ≤5 Handelstagen, Optionsflow bärisch, Ø-Volumen < 1 Mio. Aktien, harte negative News aus news_signals.json (Gewinnwarnung/Verfahren/Bilanz negativ oder Übernahmeziel, 14 Tage).
-NEWS-SIGNALE (analysis.news_bewertung): Signale der letzten 3 Tage ergeben einen Korrektur-Vorschlag (hoch ±5, mittel ±3, niedrig ±1, max. ±10) im Feld watchlist.{T}.news; P4 übernimmt ihn als score_korrektur.
+NEWS-SIGNALE (analysis.news_bewertung): Signale der letzten 3 Tage ergeben einen Korrektur-Vorschlag (hoch ±5, mittel ±3, niedrig ±1, max. ±10) im Feld watchlist.{T}.news; P4 übernimmt ihn als score_korrektur. Seit 18.10.2026 zählen nur firmenspezifische Kategorien voll, „Sektor“ höchstens ±1, Markt-/Makromeldungen gar nicht (sie stecken schon im Kurs); doppelte Signale werden ignoriert.
 Abgeschafft am 11.10.2026: Mindestschwellen Flow ≥85 / Gesamtscore ≥88, institutioneller Marktfilter als Veto, SOX als Bedingung für Nicht-Halbleiter, CRV-Minimum 2,5:1, festes Kursziel 5–10 %.
 
 HANDELSMARKEN (analysis.compute_levels)
@@ -99,10 +99,10 @@ Status: aktiv, überdehnt (bleibt mit Wiedereinstieg an SMA20 auf der Liste), au
 filter_bilanz.json fasst die Überrendite je Statusgruppe zusammen. Erste Auswertung (11.10.2026, Daten seit August): wegen Überdehnung/Invalidierung aussortierte Kandidaten lagen 10 Tage nach Aufnahme im Schnitt +4,6 Prozentpunkte über dem Nasdaq (n=19), per Zeitlimit aussortierte −2,2 Prozentpunkte (n=9).
 
 TRADE-JOURNAL (seit 11.10.2026)
-Eingabe im Cockpit (Registerkarte "Journal"): Formular → öffnet ein vorausgefülltes GitHub-Issue „[Trade] …“ mit JSON-Block → Patrick klickt „Create“ → journal.yml ruft scripts/journal.py auf → data/journal.json (alle Einträge, IDs T0001 …) und data/portfolio.json (offene Positionen mit Einstand, Stop, Handelstagen, Verkaufsdatum, unrealisiertem Ergebnis) → Kommentar und Issue geschlossen. Storno per Knopf in der Eintragsliste. Testeinträge werden gespeichert, zählen aber nicht. Durchschnittskosten-Methode, Gebühr Standard 1 €. P1 liest portfolio.json und empfiehlt je Position Halten oder Verkaufen (Stop, 10 Tage, harte News).
+Eingabe im Cockpit (Registerkarte "Journal"): Formular → öffnet ein vorausgefülltes GitHub-Issue „[Trade] …“ mit JSON-Block → Patrick klickt „Create“ → journal.yml ruft scripts/journal.py auf → data/journal.json (alle Einträge, IDs T0001 …) und data/portfolio.json (offene Positionen mit Einstand, Stop, Handelstagen, Verkaufsdatum, unrealisiertem Ergebnis) → Kommentar und Issue geschlossen. Storno per Knopf in der Eintragsliste, Verkauf per Knopf „Verkauf eintragen“ an der Position (bei 0 Stück verschwindet sie). Testeinträge werden gespeichert, zählen aber nicht. Seit 18.10.2026 Feld „art“: swing (Systemtrade, 10-Tage-Regel, Risikobudget) oder bestand (unabhängig vom System gehalten: keine 10-Tage-Regel, nicht im Risikobudget, getrennte Kennzahlen, P1 gibt „Halten“ oder „Prüfen“). Kurse für Titel außerhalb der Watchlist (z. B. SAP.DE) holt der nächste Feed-Lauf über yfinance (USD-Kurse in EUR umgerechnet). Durchschnittskosten-Methode, Gebühr Standard 1 €. P1 liest portfolio.json und empfiehlt je Position Halten oder Verkaufen (Stop, 10 Tage, harte News).
 
 COCKPIT (index.html)
-Registerkarte "Heute": Schlagzeilen, News zu Kandidaten & Depot, Marktampel mit den fünf Regime-Kriterien, Sektorrotation, Indizes (inkl. echtem VIX und 10J-Rendite), P4-Kandidaten mit Score/Stufe/Handelsmarken, P5.5-Hold-Test, aktive Kandidaten, Top-Empfehlung.
+Registerkarte "Heute": Schlagzeilen, „Was den Markt heute bewegt“ (Lage + Meldungen ohne Dubletten), News zu Kandidaten & Depot, Marktampel (Status seit 18.10.2026 immer aus dem neuesten Feed-Lauf P4/P5/P5.5/P1) mit den fünf Regime-Kriterien, Sektorrotation, Indizes (inkl. echtem VIX und 10J-Rendite), P4-Kandidaten mit Score/Stufe/Handelsmarken, P5.5-Hold-Test, aktive Kandidaten, Top-Empfehlung.
 Registerkarte "Historie & Performance": Performance-Grafik (Depot-Simulation in EUR vs. alle Kandidaten/QQQ/URTH), Filter-Bilanz und alle aussortierten/getradeten Kandidaten mit Performance seit Aufnahme und Forward-Performance vs. Nasdaq.
 Registerkarte "Journal": Eingabeformular, offene Positionen mit unrealisiertem Ergebnis und Verkaufsdatum, abgeschlossene Trades, alle Einträge mit Storno.
 
