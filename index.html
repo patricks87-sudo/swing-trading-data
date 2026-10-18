@@ -214,7 +214,7 @@
       <label>Aktion<select name="aktion"><option value="kauf">Kauf</option><option value="verkauf">Verkauf</option></select></label>
       <label data-nur="kauf">Art<select name="art"><option value="swing">Swing-Trade (System)</option><option value="bestand">Bestand (unabhängig vom System)</option></select></label>
       <label>Datum<input type="date" name="datum" required></label>
-      <label>Aktie (Ticker)<input name="ticker" list="jticker" placeholder="z. B. NVDA oder SAP.DE" required></label>
+      <label>Aktie (Name, Ticker oder ISIN)<input name="ticker" list="jticker" placeholder="z. B. Rheinmetall, NVDA oder DE0007030033" required></label>
       <label>Stück<input name="stueck" inputmode="decimal" placeholder="z. B. 12" required></label>
       <label>Kurs je Stück (€)<input name="kurs_eur" inputmode="decimal" placeholder="z. B. 154,20" required></label>
       <label>Gebühr (€)<input name="gebuehr_eur" inputmode="decimal" value="1,00"></label>
@@ -229,7 +229,7 @@
     </form>
     <datalist id="jticker"></datalist>
     <div id="jmsg" class="jmsg"></div>
-    <div class="jhint">So funktioniert's: Nach „Eintrag absenden“ öffnet sich GitHub mit dem fertig ausgefüllten Eintrag – dort nur noch auf <b>„Create“</b> klicken. Etwa 30 Sekunden später ist der Eintrag gespeichert und erscheint hier nach dem Neuladen; die Bestätigung steht auch als Kommentar am Eintrag. <br><b>Bestand:</b> Aktien, die du schon vorher oder unabhängig vom System hältst, trägst du als Kauf mit Art „Bestand“ ein – mit deinem durchschnittlichen Einstandskurs aus Trade Republic und dem ungefähren Kaufdatum. Sie werden täglich bewertet und auf News geprüft, aber ohne 10-Tage-Regel und getrennt von der Swing-Bilanz. Verkaufst du, nutze den Knopf „Verkauf eintragen“ bei der Position; ist sie danach bei 0 Stück, verschwindet sie aus dem Depot. Fehleingaben machst du per „Storno“ rückgängig.<br><b>Ticker:</b> US-Aktien wie in den Empfehlungen (z. B. AAPL), deutsche Börse mit .DE (z. B. SAP.DE), ETFs mit ihrem Börsenkürzel (z. B. EUNL.DE). Titel außerhalb der Watchlist erhalten ihren Kurs beim nächsten Feed-Lauf.<br>Hinweis: Das Repository ist öffentlich, Einträge sind also für andere einsehbar (wie das Cockpit selbst).</div>
+    <div class="jhint">So funktioniert's: Nach „Eintrag absenden“ öffnet sich GitHub mit dem fertig ausgefüllten Eintrag – dort nur noch auf <b>„Create“</b> klicken. Etwa 30 Sekunden später ist der Eintrag gespeichert und erscheint hier nach dem Neuladen; die Bestätigung steht auch als Kommentar am Eintrag. <br><b>Bestand:</b> Aktien, die du schon vorher oder unabhängig vom System hältst, trägst du als Kauf mit Art „Bestand“ ein – mit deinem durchschnittlichen Einstandskurs aus Trade Republic und dem ungefähren Kaufdatum. Sie werden täglich bewertet und auf News geprüft, aber ohne 10-Tage-Regel und getrennt von der Swing-Bilanz. Verkaufst du, nutze den Knopf „Verkauf eintragen“ bei der Position; ist sie danach bei 0 Stück, verschwindet sie aus dem Depot. Fehleingaben machst du per „Storno“ rückgängig.<br><b>Aktie finden:</b> Tippe einfach den Namen (z. B. „Rheinmetall“) und wähle den Vorschlag – die Liste enthält die Watchlist, alle DAX-Werte und bekannte deutsche Nebenwerte. Steht eine Aktie nicht in der Liste, gib die <b>ISIN</b> aus Trade Republic ein (z. B. DE0007030033); das System sucht den passenden Börsenticker selbst. Alternativ direkt den Ticker (US: AAPL, Xetra: RHM.DE). Titel außerhalb der Watchlist erhalten ihren Kurs beim nächsten Feed-Lauf.<br>Hinweis: Das Repository ist öffentlich, Einträge sind also für andere einsehbar (wie das Cockpit selbst).</div>
   </div>
 
   <h2>Offene Positionen</h2>
@@ -749,6 +749,43 @@ function renderHeadlines(data) {
 
 
 // ---------------- Trade-Journal ----------------
+// Namen fuer die Suche im Journal: Watchlist + DAX 40 + bekannte deutsche/europaeische Werte (Yahoo-Ticker)
+const TITEL = {
+  NVDA: "NVIDIA", AMD: "AMD (Advanced Micro Devices)", AVGO: "Broadcom", TSM: "Taiwan Semiconductor", ASML: "ASML Holding", MRVL: "Marvell Technology", SMCI: "Super Micro Computer", QCOM: "Qualcomm",
+  MSFT: "Microsoft", CRM: "Salesforce", NOW: "ServiceNow", ORCL: "Oracle", ADBE: "Adobe", SNOW: "Snowflake", PLTR: "Palantir Technologies",
+  PANW: "Palo Alto Networks", CRWD: "CrowdStrike", ZS: "Zscaler", FTNT: "Fortinet", LMT: "Lockheed Martin", NOC: "Northrop Grumman", RTX: "RTX Corporation", GD: "General Dynamics",
+  JPM: "JPMorgan Chase", GS: "Goldman Sachs", MS: "Morgan Stanley", PGR: "Progressive", TRV: "Travelers", V: "Visa", MA: "Mastercard", HOOD: "Robinhood", COIN: "Coinbase",
+  UNH: "UnitedHealth Group", ISRG: "Intuitive Surgical", TMO: "Thermo Fisher Scientific", XOM: "ExxonMobil", CVX: "Chevron", NEE: "NextEra Energy", DUK: "Duke Energy",
+  CAT: "Caterpillar", DE: "Deere & Company", URI: "United Rentals", LIN: "Linde", FCX: "Freeport-McMoRan", AMZN: "Amazon", HD: "Home Depot", TSLA: "Tesla", UNP: "Union Pacific", UPS: "UPS", AAPL: "Apple",
+  GOOGL: "Alphabet (Google)", META: "Meta Platforms", NFLX: "Netflix", "BRK-B": "Berkshire Hathaway", LLY: "Eli Lilly", NVO: "Novo Nordisk", "MC.PA": "LVMH",
+  "ADS.DE": "Adidas", "AIR.DE": "Airbus", "ALV.DE": "Allianz", "BAS.DE": "BASF", "BAYN.DE": "Bayer", "BEI.DE": "Beiersdorf", "BMW.DE": "BMW", "BNR.DE": "Brenntag",
+  "CBK.DE": "Commerzbank", "CON.DE": "Continental", "DB1.DE": "Deutsche Börse", "DBK.DE": "Deutsche Bank", "DHL.DE": "DHL Group", "DTE.DE": "Deutsche Telekom",
+  "DTG.DE": "Daimler Truck", "ENR.DE": "Siemens Energy", "EOAN.DE": "E.ON", "FRE.DE": "Fresenius", "G1A.DE": "GEA Group", "HEI.DE": "Heidelberg Materials",
+  "HEN3.DE": "Henkel", "HNR1.DE": "Hannover Rück", "IFX.DE": "Infineon", "MBG.DE": "Mercedes-Benz", "MRK.DE": "Merck KGaA", "MTX.DE": "MTU Aero Engines",
+  "MUV2.DE": "Münchener Rück", "P911.DE": "Porsche AG", "PAH3.DE": "Porsche SE", "QIA.DE": "Qiagen", "RHM.DE": "Rheinmetall", "RWE.DE": "RWE", "SAP.DE": "SAP",
+  "SHL.DE": "Siemens Healthineers", "SIE.DE": "Siemens", "SRT3.DE": "Sartorius", "SY1.DE": "Symrise", "VNA.DE": "Vonovia", "VOW3.DE": "Volkswagen", "ZAL.DE": "Zalando",
+  "HAG.DE": "Hensoldt", "R3NK.DE": "Renk", "TKA.DE": "Thyssenkrupp", "LHA.DE": "Lufthansa", "HOT.DE": "Hochtief", "PUM.DE": "Puma", "EVK.DE": "Evonik", "LEG.DE": "LEG Immobilien",
+  "TLX.DE": "Talanx", "KGX.DE": "Kion", "NEM.DE": "Nemetschek", "SMHN.DE": "Süss MicroTec", "AIXA.DE": "Aixtron", "1U1.DE": "1&1", "UTDI.DE": "United Internet", "TUI1.DE": "TUI",
+  "EUNL.DE": "iShares Core MSCI World ETF", "SXR8.DE": "iShares Core S&P 500 ETF", "EXS1.DE": "iShares Core DAX ETF",
+};
+const ISIN_RE = /^[A-Z]{2}[A-Z0-9]{9}[0-9]$/;
+function titelAufloesen(eingabe) {
+  const roh = String(eingabe || "").trim();
+  if (!roh) return { ticker: "" };
+  const gross = roh.toUpperCase(), klein = roh.toLowerCase();
+  if (ISIN_RE.test(gross)) return { isin: gross, ticker: "" };
+  if (TITEL[gross]) return { ticker: gross, name: TITEL[gross] };
+  const keys = Object.keys(TITEL);
+  const exakt = keys.filter((t) => TITEL[t].toLowerCase() === klein);
+  if (exakt.length === 1) return { ticker: exakt[0], name: TITEL[exakt[0]] };
+  if (/^[A-Z0-9][A-Z0-9.\-]{0,14}$/.test(roh)) return { ticker: roh };  // in Großbuchstaben getippt = Ticker
+  const anfang = keys.filter((t) => TITEL[t].toLowerCase().startsWith(klein));
+  if (anfang.length === 1) return { ticker: anfang[0], name: TITEL[anfang[0]] };
+  const teil = keys.filter((t) => TITEL[t].toLowerCase().includes(klein));
+  if (teil.length === 1) return { ticker: teil[0], name: TITEL[teil[0]] };
+  return { ticker: "" };  // nicht eindeutig oder unbekannt
+}
+
 const JOURNAL_REPO = "https://github.com/patricks87-sudo/swing-trading-data/issues/new";
 let JOURNAL = null, P4C = null;
 const jNum = (v) => { if (v == null) return null; const t = String(v).trim().replace(/\s/g, ""); if (!t) return null; const n = Number(t.includes(",") ? t.replace(/\./g, "").replace(",", ".") : t); return isFinite(n) ? n : NaN; };
@@ -775,7 +812,7 @@ function initJournalForm() {
     let erste = null;
     [...f.grund.options].forEach((o) => { const ok = !o.dataset.fuer || o.dataset.fuer === f.aktion.value; o.hidden = !ok; if (ok && !erste) erste = o; });
     if (f.grund.selectedOptions[0] && f.grund.selectedOptions[0].hidden) f.grund.value = erste.value;
-    const t = f.ticker.value.trim().toUpperCase();
+    const t = titelAufloesen(f.ticker.value).ticker;
     const pos = jPosition(t), k = jKandidat(t);
     if (!kauf && pos && !f.stueck.value) { f.stueck.value = String(pos.stueck).replace(".", ","); f.stueck.dataset.auto = "1"; }
     if (kauf && f.art.value === "bestand" && f.grund.value === "P1-Empfehlung") f.grund.value = "Bestand vor dem System";
@@ -803,14 +840,17 @@ function initJournalForm() {
     e.preventDefault();
     const msg = document.getElementById("jmsg");
     const d = {
-      aktion: f.aktion.value, datum: f.datum.value, ticker: f.ticker.value.trim().toUpperCase().split(/\s/)[0],
+      aktion: f.aktion.value, datum: f.datum.value, ticker: "",
       stueck: jNum(f.stueck.value), kurs_eur: jNum(f.kurs_eur.value), gebuehr_eur: jNum(f.gebuehr_eur.value),
       grund: f.grund.value, notiz: f.notiz.value.trim(),
     };
     if (d.aktion === "kauf") { d.stop_eur = jNum(f.stop_eur.value); d.art = f.art.value; }
     if (f.test.checked) d.test = true;
+    const titel = titelAufloesen(f.ticker.value);
+    d.ticker = titel.ticker; if (titel.isin) d.isin = titel.isin; if (titel.name) d.name = titel.name;
     const fehler = [];
-    if (!/^[A-Z][A-Z0-9.\-]{0,9}$/.test(d.ticker)) fehler.push("Ticker fehlt");
+    if (!d.isin && !/^[A-Z0-9][A-Z0-9.\-]{0,14}$/.test(d.ticker)) fehler.push("Aktie nicht gefunden – bitte Vorschlag aus der Liste wählen oder die ISIN eingeben");
+    if (d.isin && d.aktion === "verkauf") { const p = ((JOURNAL && JOURNAL.positionen) || []).find((x) => x.isin === d.isin); if (p) { d.ticker = p.ticker; delete d.isin; } }
     if (!(d.stueck > 0)) fehler.push("Stück fehlt");
     if (!(d.kurs_eur > 0)) fehler.push("Kurs fehlt");
     if (Number.isNaN(d.gebuehr_eur) || Number.isNaN(d.stop_eur)) fehler.push("Gebühr/Stop ist keine Zahl");
@@ -824,7 +864,8 @@ function initJournalForm() {
     if (d.gebuehr_eur == null) d.gebuehr_eur = 1;
     if (d.stop_eur == null) delete d.stop_eur;
     const k = jKandidat(d.ticker); if (k && k.name) d.name = k.name;
-    journalIssue(d, (d.aktion === "kauf" ? (d.art === "bestand" ? "Bestand " : "Kauf ") : "Verkauf ") + d.stueck + " " + d.ticker + " zu " + d.kurs_eur.toFixed(2) + " €" + (d.test ? " (Test)" : ""));
+    if (!d.ticker) delete d.ticker;
+    journalIssue(d, (d.aktion === "kauf" ? (d.art === "bestand" ? "Bestand " : "Kauf ") : "Verkauf ") + d.stueck + " " + (d.name || d.ticker || d.isin) + " zu " + d.kurs_eur.toFixed(2) + " €" + (d.test ? " (Test)" : ""));
     msg.innerHTML = '<span style="color:var(--green)">GitHub wurde in einem neuen Tab geöffnet – dort auf „Create“ klicken.</span>';
     f.stueck.value = ""; f.kurs_eur.value = ""; f.notiz.value = ""; f.stop_eur.value = ""; f.test.checked = false;
   });
@@ -850,10 +891,13 @@ function initJournalForm() {
 function renderJournal(j, feed) {
   JOURNAL = j;
   const dl = document.getElementById("jticker");
-  if (dl && feed && feed.watchlist) {
-    const namen = {};
+  if (dl) {
+    const namen = Object.assign({}, TITEL);
     ((P4C && P4C.candidates) || []).forEach((c) => { namen[c.ticker] = c.name; });
-    dl.innerHTML = Object.keys(feed.watchlist).sort().map((t) => '<option value="' + t + '">' + (namen[t] || "") + '</option>').join("");
+    ((j && j.positionen) || []).forEach((p) => { if (p.name) namen[p.ticker] = p.name; });
+    Object.keys((feed && feed.watchlist) || {}).forEach((t) => { if (!namen[t]) namen[t] = t; });
+    // Wert = Name, damit die Suche nach dem Namen funktioniert; der Ticker steht daneben
+    dl.innerHTML = Object.keys(namen).sort((a, b) => namen[a].localeCompare(namen[b], "de")).map((t) => '<option value="' + namen[t].replace(/"/g, "&quot;") + '">' + t + '</option>').join("");
   }
   if (!j) return;
   const k = j.kennzahlen || {}, ks = j.kennzahlen_swing || {}, kb = j.kennzahlen_bestand || {};
