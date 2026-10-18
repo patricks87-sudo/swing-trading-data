@@ -147,12 +147,20 @@ def _isin_openfigi(isin):
     with urllib.request.urlopen(req, timeout=15) as r:
         res = json.loads(r.read().decode())
     daten = (res[0] or {}).get("data") or []
+    print(f"OpenFIGI-Antwort {isin}: {str(res)[:300]} | Boersen: {[d.get('exchCode') + ':' + str(d.get('ticker')) for d in daten][:25]}")
     # Xetra (GY) bevorzugt, dann USA (US), dann Frankfurt (GF)
     suffix = {"GY": ".DE", "GR": ".DE", "GF": ".F", "US": "", "UN": "", "UW": "", "LN": ".L", "FP": ".PA", "NA": ".AS", "SW": ".SW"}
     for ex in ("GY", "US", "UN", "UW", "GR", "GF", "LN", "FP", "NA", "SW"):
         for d in daten:
             if d.get("exchCode") == ex and d.get("ticker"):
                 return d["ticker"].replace("/", "-").upper() + suffix[ex], d.get("name")
+    # Fallback: deutsche Boersenplaetze (G*) -> Xetra-Kuerzel, sonst erster Treffer
+    for d in daten:
+        if (d.get("exchCode") or "").startswith("G") and d.get("ticker"):
+            return d["ticker"].upper() + ".DE", d.get("name")
+    for d in daten:
+        if d.get("ticker"):
+            return d["ticker"].upper(), d.get("name")
     return None, None
 
 
