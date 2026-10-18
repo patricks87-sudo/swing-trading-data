@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-18T10:51:08.659703+00:00",
+  "generated_at_utc": "2026-10-18T10:53:00.476164+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -31,7 +31,9 @@
       "notiz": "Funktionstest Bestand",
       "id": "T0002",
       "erfasst_utc": "2026-10-18T09:17:17.917251+00:00",
-      "issue": 2
+      "issue": 2,
+      "storniert": true,
+      "storniert_durch": "T0009"
     },
     {
       "aktion": "kauf",
@@ -123,6 +125,15 @@
       "id": "T0008",
       "erfasst_utc": "2026-10-18T10:51:07.103994+00:00",
       "issue": 11
+    },
+    {
+      "aktion": "storno",
+      "test": false,
+      "ref": "T0002",
+      "notiz": "",
+      "id": "T0009",
+      "erfasst_utc": "2026-10-18T10:52:59.096489+00:00",
+      "issue": 12
     }
   ],
   "positionen": [
