@@ -37,7 +37,7 @@ Jede geplante Claude-Aufgabe startet zuerst per workflow_dispatch den passenden 
 Zusätzlich läuft der Workflow per Cron alle 5 Minuten zwischen 12:00 und 16:59 UTC; determine_run.py holt verpasste Läufe nach und verhindert Doppelläufe.
 Manueller Testlauf: Actions → "Fetch Market Data" → "Run workflow" → run = p4/p5/p55/p1. An Handelstagen nicht vor ~14:45 MESZ manuell starten (Dedupe würde den regulären P4-Lauf blockieren).
 
-WATCHLIST (50 Werte, 19 Sektoren)
+WATCHLIST (54 Werte, 20 Sektoren)
 Semiconductors/AI: NVIDIA, AMD (Advanced Micro Devices), Broadcom, Taiwan Semiconductor, ASML Holding, Marvell Technology, Super Micro Computer, Qualcomm
 Software/Cloud: Microsoft, Salesforce, ServiceNow, Oracle, Adobe, Snowflake, Palantir Technologies
 Cybersecurity: Palo Alto Networks, CrowdStrike, Zscaler, Fortinet
@@ -51,10 +51,14 @@ Industrials: Caterpillar, Deere & Company; Industrials/Infrastructure: United Re
 Materials: Linde, Freeport-McMoRan
 Consumer Discretionary: Amazon, Home Depot, Tesla; Transportation: Union Pacific, UPS
 Technology: Apple
-Die Watchlist ist zugleich Stichprobe für die Marktbreite (breadth).
+Edelmetalle (seit 18.10.2026): Newmont, Agnico Eagle Mines, Wheaton Precious Metals, Pan American Silver
+Die Watchlist ist zugleich Stichprobe für die Marktbreite (breadth) – ohne den Sektor Edelmetalle, weil Minen oft gegen den Aktienmarkt laufen.
+
+ROHSTOFF-MONITOR (rohstoffe.py, seit 18.10.2026, Cockpit-Registerkarte „Rohstoffe“)
+Bei jedem Feed-Lauf über yfinance (belastet Twelve Data nicht): Gold (GC=F), Silber (SI=F), Kupfer (HG=F), Rohöl WTI (CL=F), Goldminen-ETF GDX, US-Dollar-Index (DX-Y.NYB), Referenz SPY, je 2 Jahre Tagesdaten. Je Wert: 5/20/60-Tage-Veränderung, Trend (Kurs/SMA50/SMA200), relative Stärke zum S&P 500 (20 Tage), Korrelation der Tagesrenditen zum S&P 500 (60 Tage), Abstand zum 52-Wochen-Hoch, Signal Rückenwind/Neutral/Gegenwind und eine Antizyklik-Statistik: in wie vielen Wochen mit S&P 500 ≤ −1 % der Rohstoff gestiegen ist (Quote und Durchschnitt). Aktienlage „schwach“, wenn S&P 500 auf 20 Tage im Minus oder die drei führenden Sektoren (nach RS 20 Tage) auf 5 Tage im Schnitt ≤ −2 %. Rotationsstatus: „Rotation in Edelmetalle“ (Gold oder Silber 20 Tage im Plus, ≥ 3 Prozentpunkte besser als S&P 500, über SMA50 – UND Aktienlage schwach), „Edelmetalle stark“ (ohne Aktienschwäche), „Aktien schwach, keine Rotation“, „Keine Rotation“. Ausgabe im Feed unter „rohstoffe“ und in data/rohstoffe.json. Rein informativ, ändert keine Scores. Meldungen zu Zentralbank-Käufen, ETF-Strömen, Angebot/Nachfrage sammeln die Nachrichten-Aufgaben (N.md Teil C) 60 Tage lang in data/rohstoff_meldungen.json.
 
 DATENQUELLEN
-Twelve Data (Free Tier, 8 Calls/Min, 800/Tag): Tageskerzen (260 Tage) für 50 Watchlist-Werte und 4 ETF-Proxies: NASDAQ_COMPOSITE → QQQ, SP500 → SPY, RUSSELL2000 → IWM, SOX_PROXY → SOXX. 54 Calls je Lauf, Pause 8 s je Abruf, Laufzeit ca. 8–9 Minuten.
+Twelve Data (Free Tier, 8 Calls/Min, 800/Tag): Tageskerzen (260 Tage) für 54 Watchlist-Werte und 4 ETF-Proxies: NASDAQ_COMPOSITE → QQQ, SP500 → SPY, RUSSELL2000 → IWM, SOX_PROXY → SOXX. 58 Calls je Lauf, Pause 8 s je Abruf, Laufzeit ca. 9–10 Minuten.
 Wichtig: Während der US-Sitzung (P5/P5.5/P1) ist die letzte Tageskerze unvollständig und enthält bei Twelve Data nur einen Bruchteil des Volumens. volume_ratio wird deshalb in diesen Läufen auf Basis des Vortags berechnet (Feld volume_ratio_basis); Intraday-Volumen kommt ausschließlich aus dem Hold-Test.
 yfinance (kostenlos, inoffiziell, ohne SLA – Ausfälle werden als "available": false gekennzeichnet, nie geschätzt):
 - indices.VIX und macro.vix – echter CBOE-VIX (^VIX). Bis 11.10.2026 stand hier VIXM; dessen Kurs ist ein Fondspreis und kein VIX-Stand, die Regel "VIX < 18" war damit wirkungslos.
@@ -117,7 +121,7 @@ BEKANNTE FEHLER UND FIXES (Historie)
 8) Zwei feste Plätze und Ziel-/Stop-Ausstiege ließen Rendite liegen (alte Regeln +10,2 %, alle Kandidaten 10 Tage gehalten +14,1 %, QQQ +3,9 % seit 12.08.2026) → 11.10.2026: Risikobudget, Schutz-Stop 2× ATR, Ausstieg nach 10 Handelstagen.
 
 BEKANNTE EINSCHRÄNKUNGEN
-- breadth ist eine Näherung auf Basis der 50-Ticker-Watchlist.
+- breadth ist eine Näherung auf Basis der Watchlist (50 Aktien ohne Edelmetalle).
 - yfinance ist inoffiziell; Ausfälle erscheinen als "unbekannt"/"Datenbasis unvollständig".
 - Keine Fundamentaldaten oder Short Interest im Feed; Analysten- und Unternehmensnachrichten nur über die News-Signale der N-Aufgaben.
 - Das Journal läuft über öffentliche GitHub-Issues (Repo ist öffentlich).
