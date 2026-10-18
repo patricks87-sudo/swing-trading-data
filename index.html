@@ -166,7 +166,7 @@
 
   <div class="tab-panel" id="panel-heute" role="tabpanel" aria-labelledby="tab-heute">
   <h2>Top-3-Schlagzeilen</h2>
-  <div id="headlines" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten Analyse-Lauf befüllt.</div></div> <h2>Nachrichtenüberblick heute</h2> <div id="newsToday" class="card"><div class="placeholder">Noch keine Daten – wird im Laufe des Tages befüllt.</div></div>
+  <div id="headlines" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten Analyse-Lauf befüllt.</div></div> <h2>Was den Markt heute bewegt</h2> <div id="newsToday" class="card"><div class="placeholder">Noch keine Daten – wird im Laufe des Tages befüllt.</div></div>
 
   <h2>News zu Kandidaten &amp; Depot</h2>
   <div id="newsSignale" class="card"><div class="placeholder">Noch keine News-Signale &ndash; die Nachrichten-Aufgaben befüllen das ab dem nächsten Lauf.</div></div>
@@ -212,14 +212,15 @@
   <div class="card">
     <form id="jform" class="jform" autocomplete="off">
       <label>Aktion<select name="aktion"><option value="kauf">Kauf</option><option value="verkauf">Verkauf</option></select></label>
+      <label data-nur="kauf">Art<select name="art"><option value="swing">Swing-Trade (System)</option><option value="bestand">Bestand (unabhängig vom System)</option></select></label>
       <label>Datum<input type="date" name="datum" required></label>
-      <label>Aktie (Ticker)<input name="ticker" list="jticker" placeholder="z. B. NVDA" required></label>
+      <label>Aktie (Ticker)<input name="ticker" list="jticker" placeholder="z. B. NVDA oder SAP.DE" required></label>
       <label>Stück<input name="stueck" inputmode="decimal" placeholder="z. B. 12" required></label>
       <label>Kurs je Stück (€)<input name="kurs_eur" inputmode="decimal" placeholder="z. B. 154,20" required></label>
       <label>Gebühr (€)<input name="gebuehr_eur" inputmode="decimal" value="1,00"></label>
-      <label data-nur="kauf">Schutz-Stop (€)<input name="stop_eur" inputmode="decimal" placeholder="aus der Empfehlung"></label>
+      <label data-nur="kauf">Schutz-Stop (€)<input name="stop_eur" inputmode="decimal" placeholder="aus der Empfehlung (bei Bestand optional)"></label>
       <label>Grund<select name="grund">
-        <option data-fuer="kauf">P1-Empfehlung</option><option data-fuer="kauf">Eigene Idee</option>
+        <option data-fuer="kauf">P1-Empfehlung</option><option data-fuer="kauf">Eigene Idee</option><option data-fuer="kauf">Bestand vor dem System</option>
         <option data-fuer="verkauf">10-Tage-Regel</option><option data-fuer="verkauf">Schutz-Stop</option><option data-fuer="verkauf">News</option><option data-fuer="verkauf">Eigene Entscheidung</option>
         <option>Sonstiges</option></select></label>
       <label class="full">Notiz (optional)<textarea name="notiz" rows="2" placeholder="Was war dein Gedanke? Später Gold wert für die Auswertung."></textarea></label>
@@ -228,7 +229,7 @@
     </form>
     <datalist id="jticker"></datalist>
     <div id="jmsg" class="jmsg"></div>
-    <div class="jhint">So funktioniert's: Nach „Eintrag absenden“ öffnet sich GitHub mit dem fertig ausgefüllten Eintrag – dort nur noch auf <b>„Create“</b> klicken. Etwa 30 Sekunden später ist der Eintrag gespeichert und erscheint hier nach dem Neuladen; die Bestätigung steht auch als Kommentar am Eintrag. Hinweis: Das Repository ist öffentlich, Einträge sind also für andere einsehbar (wie das Cockpit selbst).</div>
+    <div class="jhint">So funktioniert's: Nach „Eintrag absenden“ öffnet sich GitHub mit dem fertig ausgefüllten Eintrag – dort nur noch auf <b>„Create“</b> klicken. Etwa 30 Sekunden später ist der Eintrag gespeichert und erscheint hier nach dem Neuladen; die Bestätigung steht auch als Kommentar am Eintrag. <br><b>Bestand:</b> Aktien, die du schon vorher oder unabhängig vom System hältst, trägst du als Kauf mit Art „Bestand“ ein – mit deinem durchschnittlichen Einstandskurs aus Trade Republic und dem ungefähren Kaufdatum. Sie werden täglich bewertet und auf News geprüft, aber ohne 10-Tage-Regel und getrennt von der Swing-Bilanz. Verkaufst du, nutze den Knopf „Verkauf eintragen“ bei der Position; ist sie danach bei 0 Stück, verschwindet sie aus dem Depot. Fehleingaben machst du per „Storno“ rückgängig.<br><b>Ticker:</b> US-Aktien wie in den Empfehlungen (z. B. AAPL), deutsche Börse mit .DE (z. B. SAP.DE), ETFs mit ihrem Börsenkürzel (z. B. EUNL.DE). Titel außerhalb der Watchlist erhalten ihren Kurs beim nächsten Feed-Lauf.<br>Hinweis: Das Repository ist öffentlich, Einträge sind also für andere einsehbar (wie das Cockpit selbst).</div>
   </div>
 
   <h2>Offene Positionen</h2>
@@ -305,10 +306,20 @@ function renderRegimeKriterien(feed) {
     '<div class="krit"><span>Feed-Regime: <b style="color:var(--text)">' + r.status + "</b> · max. neue Positionen heute: " + r.max_neue_positionen + (r.max_offene_positionen != null ? " · max. offen: " + r.max_offene_positionen : "") + (r.override ? " · " + r.override : "") + "</span>" + hinweise + "</div>";
 }
 
+const LAUF_NAMEN = { p4: "P4", p5: "P5", p55: "P5.5", p1: "P1" };
 function renderAmpel(barometer, p4, feed) {
   const el = document.getElementById("ampel");
-  let status, reason, ts;
-  if (barometer && barometer.status) {
+  let status, reason, ts, quelle = "";
+  if (feed && feed.regime && feed.regime.status) {
+    // Status immer aus dem neuesten Feed-Lauf (P4/P5/P5.5/P1), damit die Ampel
+    // nach jedem Lauf aktuell ist. Der Kommentar von Claude nur, wenn er zum
+    // selben Stand passt.
+    status = feed.regime.status;
+    ts = feed.generated_at_utc;
+    quelle = " · Lauf " + (LAUF_NAMEN[feed.run] || feed.run || "");
+    const passt = barometer && barometer.status === status && barometer.generated_at_utc && new Date(barometer.generated_at_utc) >= new Date(feed.generated_at_utc);
+    reason = passt ? (barometer.kurzbegruendung || barometer.begruendung || "") : (feed.regime.kurztext || "");
+  } else if (barometer && barometer.status) {
     status = barometer.status;
     reason = barometer.kurzbegruendung || barometer.begruendung || "";
     ts = barometer.generated_at_utc;
@@ -327,7 +338,7 @@ function renderAmpel(barometer, p4, feed) {
     '<div class="dot ' + color + '"></div>' +
     '<div><div class="ampel-status">' + status + '</div>' +
     '<div class="ampel-reason">' + reason + '</div>' +
-    '<div class="timestamp">Stand: ' + fmtTime(ts) + '</div>' + renderRegimeKriterien(feed) + '</div>';
+    '<div class="timestamp">Stand: ' + fmtTime(ts) + quelle + '</div>' + renderRegimeKriterien(feed) + '</div>';
 }
 
 function renderSektorrotation(barometer) {
@@ -409,7 +420,8 @@ function renderNewsSignale(data) {
   const el = document.getElementById("newsSignale");
   if (!data || !(data.signale || []).length) return;
   const grenze = Date.now() - 3 * 864e5;
-  const list = data.signale.filter((s) => new Date(s.published_at || s.datum).getTime() >= grenze)
+  const FIRMA = ["Gewinnwarnung", "Verfahren", "Bilanz", "Übernahme", "Earnings", "Analyst", "Auftrag/Produkt", "Management", "Sektor"];
+  const list = data.signale.filter((s) => FIRMA.includes(s.kategorie) && new Date(s.published_at || s.datum).getTime() >= grenze)
     .sort((a, b) => String(b.published_at || b.datum).localeCompare(String(a.published_at || a.datum))).slice(0, 12);
   if (!list.length) { el.innerHTML = '<div class="placeholder">Keine neuen Meldungen in den letzten 3 Tagen.</div>'; return; }
   el.innerHTML = list.map((s) => {
@@ -765,14 +777,27 @@ function initJournalForm() {
     if (f.grund.selectedOptions[0] && f.grund.selectedOptions[0].hidden) f.grund.value = erste.value;
     const t = f.ticker.value.trim().toUpperCase();
     const pos = jPosition(t), k = jKandidat(t);
-    if (!kauf && pos && !f.stueck.value) f.stueck.value = String(pos.stueck).replace(".", ",");
-    if (kauf && k && k.levels) {
-      if (!f.stop_eur.value && k.levels.stop_eur) f.stop_eur.value = String(k.levels.stop_eur).replace(".", ",");
-      if (!f.stueck.value && k.levels.stueck) f.stueck.value = k.levels.stueck;
+    if (!kauf && pos && !f.stueck.value) { f.stueck.value = String(pos.stueck).replace(".", ","); f.stueck.dataset.auto = "1"; }
+    if (kauf && f.art.value === "bestand" && f.grund.value === "P1-Empfehlung") f.grund.value = "Bestand vor dem System";
+    if (kauf && f.art.value === "swing" && f.grund.value === "Bestand vor dem System") f.grund.value = "P1-Empfehlung";
+    // automatisch vorgeschlagene Werte verwerfen, wenn Aktie oder Art wechseln
+    const key = t + "|" + f.aktion.value + "|" + f.art.value;
+    if (f.dataset.auto && f.dataset.auto !== key) {
+      if (f.stop_eur.dataset.auto) { f.stop_eur.value = ""; delete f.stop_eur.dataset.auto; }
+      if (f.stueck.dataset.auto) { f.stueck.value = ""; delete f.stueck.dataset.auto; }
+    }
+    f.dataset.auto = key;
+    if (kauf && f.art.value === "swing" && k && k.levels) {
+      if (!f.stop_eur.value && k.levels.stop_eur) { f.stop_eur.value = String(k.levels.stop_eur).replace(".", ","); f.stop_eur.dataset.auto = "1"; }
+      if (!f.stueck.value && k.levels.stueck) { f.stueck.value = k.levels.stueck; f.stueck.dataset.auto = "1"; }
     }
   };
   f.aktion.addEventListener("change", sync);
+  f.art.addEventListener("change", sync);
   f.ticker.addEventListener("change", sync);
+  f.ticker.addEventListener("input", sync);
+  f.stop_eur.addEventListener("input", () => delete f.stop_eur.dataset.auto);
+  f.stueck.addEventListener("input", () => delete f.stueck.dataset.auto);
   sync();
   f.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -782,7 +807,7 @@ function initJournalForm() {
       stueck: jNum(f.stueck.value), kurs_eur: jNum(f.kurs_eur.value), gebuehr_eur: jNum(f.gebuehr_eur.value),
       grund: f.grund.value, notiz: f.notiz.value.trim(),
     };
-    if (d.aktion === "kauf") d.stop_eur = jNum(f.stop_eur.value);
+    if (d.aktion === "kauf") { d.stop_eur = jNum(f.stop_eur.value); d.art = f.art.value; }
     if (f.test.checked) d.test = true;
     const fehler = [];
     if (!/^[A-Z][A-Z0-9.\-]{0,9}$/.test(d.ticker)) fehler.push("Ticker fehlt");
@@ -799,9 +824,20 @@ function initJournalForm() {
     if (d.gebuehr_eur == null) d.gebuehr_eur = 1;
     if (d.stop_eur == null) delete d.stop_eur;
     const k = jKandidat(d.ticker); if (k && k.name) d.name = k.name;
-    journalIssue(d, (d.aktion === "kauf" ? "Kauf " : "Verkauf ") + d.stueck + " " + d.ticker + " zu " + d.kurs_eur.toFixed(2) + " €" + (d.test ? " (Test)" : ""));
+    journalIssue(d, (d.aktion === "kauf" ? (d.art === "bestand" ? "Bestand " : "Kauf ") : "Verkauf ") + d.stueck + " " + d.ticker + " zu " + d.kurs_eur.toFixed(2) + " €" + (d.test ? " (Test)" : ""));
     msg.innerHTML = '<span style="color:var(--green)">GitHub wurde in einem neuen Tab geöffnet – dort auf „Create“ klicken.</span>';
     f.stueck.value = ""; f.kurs_eur.value = ""; f.notiz.value = ""; f.stop_eur.value = ""; f.test.checked = false;
+  });
+  document.addEventListener("click", (e) => {
+    const v = e.target.closest("[data-verkauf]");
+    if (v) {
+      const p = jPosition(v.dataset.verkauf);
+      f.aktion.value = "verkauf"; f.ticker.value = v.dataset.verkauf;
+      f.stueck.value = ""; f.kurs_eur.value = ""; f.stop_eur.value = "";
+      f.datum.value = new Date().toLocaleDateString("sv-SE");
+      sync(); f.scrollIntoView({ behavior: "smooth", block: "start" }); f.kurs_eur.focus();
+      document.getElementById("jmsg").innerHTML = '<span style="color:var(--muted)">Verkauf von ' + (p ? (p.name || p.ticker) : v.dataset.verkauf) + ' vorbereitet – Verkaufskurs eintragen und absenden.</span>';
+    }
   });
   document.addEventListener("click", (e) => {
     const b = e.target.closest("[data-storno]");
@@ -820,25 +856,31 @@ function renderJournal(j, feed) {
     dl.innerHTML = Object.keys(feed.watchlist).sort().map((t) => '<option value="' + t + '">' + (namen[t] || "") + '</option>').join("");
   }
   if (!j) return;
-  const k = j.kennzahlen || {};
+  const k = j.kennzahlen || {}, ks = j.kennzahlen_swing || {}, kb = j.kennzahlen_bestand || {};
   const pos = j.positionen || [];
   const elP = document.getElementById("jPositionen");
+  const artBadge = (a) => a === "bestand" ? '<span class="emp-badge emp-neutral">Bestand</span>' : '<span class="emp-badge emp-kauf">Swing</span>';
   const kopf = '<div class="bilanz-grid" style="margin-bottom:12px;">' +
-    '<div class="bilanz-card">Offene Positionen<div class="big">' + (k.offene_positionen || 0) + '</div>investiert ' + eur(k.investiert_eur) + '</div>' +
-    '<div class="bilanz-card">Unrealisiert<div class="big">' + eurSig(k.unrealisiert_eur) + '</div>zu aktuellen Kursen</div>' +
-    '<div class="bilanz-card">Realisiert<div class="big">' + eurSig(k.realisiert_eur) + '</div>nach Gebühren (' + eur(k.gebuehren_eur) + ')</div>' +
-    '<div class="bilanz-card">Abgeschlossen<div class="big">' + (k.trades_abgeschlossen || 0) + '</div>Trefferquote ' + (k.trefferquote_pct != null ? k.trefferquote_pct + " %" : "–") + '</div></div>';
-  elP.innerHTML = kopf + (pos.length ? '<table class="responsive-mobile"><thead><tr><th>Aktie</th><th>Stück</th><th>Einstand</th><th>Aktuell</th><th>Ergebnis</th><th>Stop</th><th>Tage</th><th>Verkauf bis</th></tr></thead><tbody>' +
-    pos.map((p) => '<tr><td data-label="Aktie"><b>' + (p.name || p.ticker) + '</b>' + (p.hinweis ? '<div class="flag" style="background:rgba(231,76,60,.12);color:var(--red)">' + p.hinweis + '</div>' : "") + '</td>' +
-      '<td data-label="Stück">' + p.stueck + '</td><td data-label="Einstand">' + eur(p.einstand_eur) + '</td><td data-label="Aktuell">' + eur(p.aktueller_kurs_eur) + '</td>' +
+    '<div class="bilanz-card">Depotwert<div class="big">' + eur(k.depotwert_eur) + '</div>' + (k.offene_positionen || 0) + ' Positionen (' + (ks.offene_positionen || 0) + ' Swing, ' + (kb.offene_positionen || 0) + ' Bestand)</div>' +
+    '<div class="bilanz-card">Unrealisiert<div class="big">' + eurSig(k.unrealisiert_eur) + '</div>Swing ' + eurSig(ks.unrealisiert_eur) + ' · Bestand ' + eurSig(kb.unrealisiert_eur) + '</div>' +
+    '<div class="bilanz-card">Realisiert<div class="big">' + eurSig(k.realisiert_eur) + '</div>Swing ' + eurSig(ks.realisiert_eur) + ' · Bestand ' + eurSig(kb.realisiert_eur) + '</div>' +
+    '<div class="bilanz-card">Swing-Trades<div class="big">' + (ks.trades_abgeschlossen || 0) + '</div>Trefferquote ' + (ks.trefferquote_pct != null ? ks.trefferquote_pct + " %" : "–") + ' · Gebühren gesamt ' + eur(k.gebuehren_eur) + '</div></div>';
+  const zeile = (p) => {
+    const swing = p.art !== "bestand";
+    return '<tr><td data-label="Aktie"><b>' + (p.name || p.ticker) + '</b> ' + artBadge(p.art) + (p.hinweis ? '<div class="flag" style="background:rgba(231,76,60,.12);color:var(--red)">' + p.hinweis + '</div>' : "") + newsBadge(p.ticker) + '</td>' +
+      '<td data-label="Stück">' + p.stueck + '</td><td data-label="Einstand">' + eur(p.einstand_eur) + '</td><td data-label="Aktuell">' + (p.aktueller_kurs_eur != null ? eur(p.aktueller_kurs_eur) : '<span class="timestamp">nach nächstem Lauf</span>') + '</td>' +
       '<td data-label="Ergebnis">' + eurSig(p.unrealisiert_eur) + (p.unrealisiert_pct != null ? ' <span class="timestamp">(' + (p.unrealisiert_pct >= 0 ? "+" : "") + p.unrealisiert_pct.toFixed(1).replace(".", ",") + ' %)</span>' : "") + '</td>' +
-      '<td data-label="Stop">' + eur(p.stop_eur) + '</td><td data-label="Tage">' + p.handelstage_gehalten + ' / 10</td><td data-label="Verkauf bis">' + dDE(p.verkauf_spaetestens) + '</td></tr>').join("") +
+      '<td data-label="Stop">' + eur(p.stop_eur) + '</td><td data-label="Tage">' + (swing ? p.handelstage_gehalten + ' / 10' : '–') + '</td><td data-label="Verkauf bis">' + (swing ? dDE(p.verkauf_spaetestens) : '–') + '</td>' +
+      '<td data-label=""><button class="btn-sm" data-verkauf="' + p.ticker + '">Verkauf eintragen</button></td></tr>';
+  };
+  elP.innerHTML = kopf + (pos.length ? '<table class="responsive-mobile"><thead><tr><th>Aktie</th><th>Stück</th><th>Einstand</th><th>Aktuell</th><th>Ergebnis</th><th>Stop</th><th>Tage</th><th>Verkauf bis</th><th></th></tr></thead><tbody>' +
+    pos.slice().sort((a, b) => (a.art === "bestand") - (b.art === "bestand")).map(zeile).join("") +
     '</tbody></table>' : '<div class="placeholder">Keine offenen Positionen.</div>') +
     '<div class="timestamp">Kurse aus dem letzten Feed-Lauf: ' + fmtTime(j.kurse_stand_utc) + '</div>';
 
   const tr = j.trades || [];
   if (tr.length) document.getElementById("jTrades").innerHTML = '<table class="responsive-mobile"><thead><tr><th>Aktie</th><th>Kauf</th><th>Verkauf</th><th>Tage</th><th>Ergebnis</th><th>Grund Verkauf</th></tr></thead><tbody>' +
-    tr.map((t) => '<tr><td data-label="Aktie"><b>' + (t.name || t.ticker) + '</b></td><td data-label="Kauf">' + dDE(t.kaufdatum) + '</td><td data-label="Verkauf">' + dDE(t.verkaufsdatum) + '</td><td data-label="Tage">' + t.handelstage + '</td>' +
+    tr.map((t) => '<tr><td data-label="Aktie"><b>' + (t.name || t.ticker) + '</b> ' + (t.art === "bestand" ? '<span class="emp-badge emp-neutral">Bestand</span>' : '<span class="emp-badge emp-kauf">Swing</span>') + '</td><td data-label="Kauf">' + dDE(t.kaufdatum) + '</td><td data-label="Verkauf">' + dDE(t.verkaufsdatum) + '</td><td data-label="Tage">' + t.handelstage + '</td>' +
       '<td data-label="Ergebnis">' + eurSig(t.ergebnis_eur) + (t.rendite_pct != null ? ' <span class="timestamp">(' + (t.rendite_pct >= 0 ? "+" : "") + t.rendite_pct.toFixed(1).replace(".", ",") + ' %)</span>' : "") + '</td><td data-label="Grund">' + (t.grund_verkauf || "–") + '</td></tr>').join("") + '</tbody></table>';
 
   const ein = (j.eintraege || []).slice().reverse();
@@ -846,13 +888,37 @@ function renderJournal(j, feed) {
     ein.map((x) => {
       const st = x.aktion === "storno";
       return '<tr class="' + (x.storniert ? "storniert" : "") + '"><td data-label="Nr.">' + x.id + '</td><td data-label="Datum">' + (st ? fmtTime(x.erfasst_utc) : dDE(x.datum)) + '</td>' +
-        '<td data-label="Aktion">' + (st ? "Storno " + x.ref : x.aktion === "kauf" ? "Kauf" : "Verkauf") + (x.test ? " (Test)" : "") + '</td><td data-label="Aktie">' + (x.name || x.ticker || "") + '</td>' +
+        '<td data-label="Aktion">' + (st ? "Storno " + x.ref : x.aktion === "kauf" ? (x.art === "bestand" ? "Bestand" : "Kauf") : "Verkauf") + (x.test ? " (Test)" : "") + '</td><td data-label="Aktie">' + (x.name || x.ticker || "") + '</td>' +
         '<td data-label="Stück × Kurs">' + (st ? "" : x.stueck + " × " + eur(x.kurs_eur)) + '</td><td data-label="Grund">' + [x.grund, x.notiz].filter(Boolean).join(" – ") + '</td>' +
         '<td data-label="">' + (!st && !x.storniert ? '<button class="btn-sm" data-storno="' + x.id + '">Storno</button>' : "") + '</td></tr>';
     }).join("") + '</tbody></table>';
 }
 
-function renderNewsToday(data) { const el = document.getElementById("newsToday"); if (!data || !data.entries || !data.entries.length) return; el.innerHTML = data.entries.slice().reverse().map((e) => { const items = (e.headlines || []).map(headlineHtml).join(""); return '<div style="margin-bottom:14px;"><div class="timestamp" style="font-weight:600;">' + (e.time_local || "") + ' Uhr</div>' + items + '</div>'; }).join(""); } async function init() {
+function renderNewsToday(data) {
+  const el = document.getElementById("newsToday");
+  if (!data) return;
+  let liste = data.meldungen;
+  if (!liste && data.entries) {
+    liste = [];
+    data.entries.forEach((e) => (e.headlines || []).forEach((h) => liste.push(Object.assign({ erfasst_local: e.time_local }, h))));
+  }
+  if (!liste || !liste.length) return;
+  const gesehen = new Set();
+  const norm = (t) => String(t || "").toLowerCase().replace(/[^a-zäöüß0-9 ]/g, "").split(" ").filter((w) => w.length > 3).slice(0, 6).join(" ");
+  const eindeutig = [];
+  liste.forEach((m) => {
+    const k1 = m.url || "", k2 = norm(m.title);
+    if ((k1 && gesehen.has(k1)) || (k2 && gesehen.has(k2))) return;
+    if (k1) gesehen.add(k1); if (k2) gesehen.add(k2);
+    eindeutig.push(m);
+  });
+  eindeutig.sort((a, b) => String(b.published_at || "").localeCompare(String(a.published_at || "")));
+  el.innerHTML = (data.lage ? '<div style="font-size:14px;margin-bottom:10px;"><b>Was den Markt bewegt:</b> ' + data.lage + (data.lage_stand_local ? ' <span class="timestamp">(' + data.lage_stand_local + ' Uhr)</span>' : "") + '</div>' : "") +
+    eindeutig.map((m) => '<div class="headline">' + (m.thema ? '<span class="news-badge news-neu" style="margin:0 8px 0 0;">' + m.thema + '</span>' : "") +
+      '<a href="' + (m.url || "#") + '" target="_blank" rel="noopener">' + m.title + '</a>' +
+      '<div class="src">' + [m.source, pubInfo(m)].filter(Boolean).join(" · ") + (m.bedeutung ? " – " + m.bedeutung : "") + '</div></div>').join("") +
+    '<div class="timestamp">' + eindeutig.length + ' Meldungen heute, jede nur einmal.</div>';
+} async function init() {
   const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking, filterBilanz, p1, p55, p5, performance, journal, newsSignale] = await Promise.all([
     fetchJson("p4_latest.json"),
     fetchJson("p4_candidates.json"),

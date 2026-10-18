@@ -388,6 +388,11 @@ NEWS_GEWICHT = {"hoch": 5, "mittel": 3, "niedrig": 1}
 NEWS_KORREKTUR_TAGE = 3        # Kalendertage, die in die Score-Korrektur eingehen
 NEWS_AUSSCHLUSS_TAGE = 14      # Fenster fuer harte negative News
 NEWS_AUSSCHLUSS_KATEGORIEN = {"Gewinnwarnung", "Verfahren", "Bilanz"}
+# Seit 18.10.2026: nur firmenspezifische Meldungen zaehlen voll. Branchen-
+# meldungen hoechstens +/-1, allgemeine Markt-/Makronachrichten gar nicht
+# (die stecken schon im Kursverlauf und damit im Score).
+NEWS_FIRMA_KATEGORIEN = {"Gewinnwarnung", "Verfahren", "Bilanz", "Übernahme", "Earnings",
+                         "Analyst", "Auftrag/Produkt", "Management"}
 
 
 def news_bewertung(signale: list, heute) -> dict:
@@ -395,10 +400,15 @@ def news_bewertung(signale: list, heute) -> dict:
     from datetime import date as _date
 
     out = {}
+    gesehen = set()
     for s in signale or []:
         t = str(s.get("ticker") or "").upper()
         if not t:
             continue
+        schluessel = (t, (s.get("url") or "").strip() or str(s.get("titel") or "").strip().lower()[:80])
+        if schluessel in gesehen:
+            continue
+        gesehen.add(schluessel)
         try:
             d = _date.fromisoformat(str(s.get("datum") or "")[:10])
         except ValueError:
@@ -410,9 +420,13 @@ def news_bewertung(signale: list, heute) -> dict:
                                "ausschluss": None, "signale": []})
         richtung = str(s.get("einschaetzung") or "neutral").lower()
         kat = str(s.get("kategorie") or "Sonstiges")
+        if kat not in NEWS_FIRMA_KATEGORIEN and kat != "Sektor":
+            continue  # Markt-/Makronachricht: nur Schlagzeilen, kein Signal je Aktie
         if alter <= NEWS_KORREKTUR_TAGE:
             e[richtung if richtung in ("positiv", "negativ") else "neutral"] += 1
             g = NEWS_GEWICHT.get(str(s.get("gewicht") or "mittel").lower(), 3)
+            if kat == "Sektor":
+                g = min(g, 1)
             e["punkte"] += g if richtung == "positiv" else -g if richtung == "negativ" else 0
         if (kat in NEWS_AUSSCHLUSS_KATEGORIEN and richtung == "negativ") or kat == "Übernahme":
             e["ausschluss"] = e["ausschluss"] or f"News: {kat} ({d.isoformat()}) – {s.get('titel', '')}"[:160]
