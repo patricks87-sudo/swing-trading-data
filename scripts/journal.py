@@ -135,31 +135,50 @@ def kurse_yfinance(tickers, eurusd):
     return out
 
 
+def _isin_openfigi(isin):
+    """ISIN -> Ticker ueber OpenFIGI (kostenlos, ohne Schluessel)."""
+    import urllib.request
+
+    req = urllib.request.Request(
+        "https://api.openfigi.com/v3/mapping",
+        data=json.dumps([{"idType": "ID_ISIN", "idValue": isin}]).encode(),
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=15) as r:
+        res = json.loads(r.read().decode())
+    daten = (res[0] or {}).get("data") or []
+    # Xetra (GY) bevorzugt, dann USA (US), dann Frankfurt (GF)
+    suffix = {"GY": ".DE", "GR": ".DE", "GF": ".F", "US": "", "UN": "", "UW": "", "LN": ".L", "FP": ".PA", "NA": ".AS", "SW": ".SW"}
+    for ex in ("GY", "US", "UN", "UW", "GR", "GF", "LN", "FP", "NA", "SW"):
+        for d in daten:
+            if d.get("exchCode") == ex and d.get("ticker"):
+                return d["ticker"].replace("/", "-").upper() + suffix[ex], d.get("name")
+    return None, None
+
+
 def isin_zu_ticker(isin):
     """Sucht zu einer ISIN den Yahoo-Ticker (bevorzugt Xetra .DE, dann USA)."""
     try:
         import yfinance as yf
 
-        quotes = yf.Search(isin, max_results=10).quotes
+        quotes = [q for q in (yf.Search(isin, max_results=10).quotes or []) if q.get("symbol")]
+        print(f"Yahoo-Suche {isin}: {[q.get('symbol') for q in quotes]}")
+        if quotes:
+            def rang(q):
+                sym = q["symbol"]
+                return 0 if sym.endswith(".DE") else 1 if "." not in sym else 2 if sym.endswith(".F") else 3
+            q = sorted(quotes, key=rang)[0]
+            return q["symbol"].upper(), q.get("longname") or q.get("shortname")
     except Exception as e:
-        print(f"ISIN-Suche fehlgeschlagen ({isin}): {e}")
-        return None, None
-    quotes = [q for q in quotes if q.get("symbol") and q.get("quoteType") in ("EQUITY", "ETF", None)]
-    if not quotes:
-        return None, None
-
-    def rang(q):
-        sym = q["symbol"]
-        if sym.endswith(".DE"):
-            return 0
-        if "." not in sym:
-            return 1
-        if sym.endswith(".F"):
-            return 2
-        return 3
-
-    q = sorted(quotes, key=rang)[0]
-    return q["symbol"].upper(), q.get("longname") or q.get("shortname")
+        print(f"Yahoo-Suche fehlgeschlagen ({isin}): {e}")
+    try:
+        t, n = _isin_openfigi(isin)
+        print(f"OpenFIGI {isin}: {t} {n}")
+        if t:
+            return t, (n.title() if n and n.isupper() else n)
+    except Exception as e:
+        print(f"OpenFIGI fehlgeschlagen ({isin}): {e}")
+    return None, None
 
 
 def kurse_eur(feed):
