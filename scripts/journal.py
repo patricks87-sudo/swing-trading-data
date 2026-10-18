@@ -189,6 +189,38 @@ def isin_zu_ticker(isin):
     return None, None
 
 
+US_BOERSEN = {"NMS", "NYQ", "NGM", "NCM", "ASE", "PCX", "BTS", "NYS", "NAS"}
+
+
+def ticker_pruefen(ticker, watchlist):
+    """Ein Ticker ohne Boersenzusatz (z. B. "OHB"), der keine US-Aktie ist,
+    wird auf das Xetra-Kuerzel (OHB.DE) umgestellt."""
+    if "." in ticker or ticker in (watchlist or {}):
+        return ticker
+    try:
+        import yfinance as yf
+    except Exception:
+        return ticker
+
+    def boerse(t):
+        try:
+            fi = yf.Ticker(t).fast_info
+            px = float(fi["last_price"])
+            if px != px or px <= 0:  # NaN
+                return None
+            return str(fi["exchange"] or "")
+        except Exception:
+            return None
+
+    ex = boerse(ticker)
+    print(f"Ticker {ticker}: Boerse {ex}")
+    if ex in US_BOERSEN:
+        return ticker
+    if boerse(ticker + ".DE") is not None:
+        return ticker + ".DE"
+    return ticker
+
+
 def kurse_eur(feed):
     out = {}
     if not feed:
@@ -253,6 +285,8 @@ def pruefe(roh, journal, namen):
         e["isin"] = isin
     if not re.fullmatch(r"[A-Z0-9][A-Z0-9.\-]{0,14}", ticker):
         raise ValueError("Aktie nicht erkannt – bitte Namen aus der Vorschlagsliste wählen, den Ticker (z. B. NVDA, RHM.DE) oder die ISIN eingeben.")
+    if aktion == "kauf":
+        ticker = ticker_pruefen(ticker, (aktueller_feed() or {}).get("watchlist"))
     stueck = _num(roh.get("stueck"))
     kurs = _num(roh.get("kurs_eur"))
     if not stueck or stueck <= 0:
