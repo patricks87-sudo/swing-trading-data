@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-18T10:39:12.634361+00:00",
+  "updated_at_utc": "2026-10-18T10:47:30.540760+00:00",
   "quelle": "automatisch aus data/journal.json (Trade-Journal im Cockpit)",
   "kurse_stand_utc": "2026-10-16T15:36:23.860562+00:00",
   "positions": [
@@ -50,6 +50,30 @@
       "wert_eur": 2682.4,
       "unrealisiert_eur": 65.2,
       "unrealisiert_pct": 2.49
+    },
+    {
+      "id": "CRM-2026-10-09",
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "art": "bestand",
+      "isin": null,
+      "sektor": "Software/Cloud",
+      "stueck": 7.0,
+      "einstand_eur": 209.3857,
+      "kapital_eur": 1465.7,
+      "kaufdatum": "2026-10-09",
+      "handelstage_gehalten": 5,
+      "verkauf_spaetestens": null,
+      "stop_eur": null,
+      "grund": "Bestand vor dem System",
+      "teilrealisiert_eur": 0.0,
+      "journal_ids": [
+        "T0007"
+      ],
+      "aktueller_kurs_eur": 213.12,
+      "wert_eur": 1491.84,
+      "unrealisiert_eur": 26.14,
+      "unrealisiert_pct": 1.78
     }
   ]
 }

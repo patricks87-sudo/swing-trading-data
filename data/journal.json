@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-18T10:39:12.634357+00:00",
+  "generated_at_utc": "2026-10-18T10:47:30.540754+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -91,6 +91,22 @@
       "id": "T0006",
       "erfasst_utc": "2026-10-18T10:39:11.262695+00:00",
       "issue": 9
+    },
+    {
+      "aktion": "kauf",
+      "test": false,
+      "datum": "2026-10-09",
+      "art": "bestand",
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "stueck": 7.0,
+      "kurs_eur": 209.1,
+      "gebuehr_eur": 2.0,
+      "grund": "Bestand vor dem System",
+      "notiz": "Kurzfristiger Move, da mit anderen SW-Titeln noch nicht gleichgezogen. KGV auch nicht überzogen",
+      "id": "T0007",
+      "erfasst_utc": "2026-10-18T10:47:29.186902+00:00",
+      "issue": 10
     }
   ],
   "positionen": [
@@ -141,20 +157,44 @@
       "wert_eur": 2682.4,
       "unrealisiert_eur": 65.2,
       "unrealisiert_pct": 2.49
+    },
+    {
+      "id": "CRM-2026-10-09",
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "art": "bestand",
+      "isin": null,
+      "sektor": "Software/Cloud",
+      "stueck": 7.0,
+      "einstand_eur": 209.3857,
+      "kapital_eur": 1465.7,
+      "kaufdatum": "2026-10-09",
+      "handelstage_gehalten": 5,
+      "verkauf_spaetestens": null,
+      "stop_eur": null,
+      "grund": "Bestand vor dem System",
+      "teilrealisiert_eur": 0.0,
+      "journal_ids": [
+        "T0007"
+      ],
+      "aktueller_kurs_eur": 213.12,
+      "wert_eur": 1491.84,
+      "unrealisiert_eur": 26.14,
+      "unrealisiert_pct": 1.78
     }
   ],
   "trades": [],
   "kennzahlen": {
     "realisiert_eur": 0.0,
-    "unrealisiert_eur": 231.6,
+    "unrealisiert_eur": 257.74,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
-    "offene_positionen": 2,
-    "investiert_eur": 6811.6,
-    "depotwert_eur": 7043.2,
+    "offene_positionen": 3,
+    "investiert_eur": 8277.3,
+    "depotwert_eur": 8535.04,
     "positionen_ohne_kurs": 0,
-    "gebuehren_eur": 5.0
+    "gebuehren_eur": 7.0
   },
   "kurse_stand_utc": "2026-10-16T15:36:23.860562+00:00",
   "kennzahlen_swing": {
@@ -170,13 +210,13 @@
   },
   "kennzahlen_bestand": {
     "realisiert_eur": 0.0,
-    "unrealisiert_eur": 231.6,
+    "unrealisiert_eur": 257.74,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
-    "offene_positionen": 2,
-    "investiert_eur": 6811.6,
-    "depotwert_eur": 7043.2,
+    "offene_positionen": 3,
+    "investiert_eur": 8277.3,
+    "depotwert_eur": 8535.04,
     "positionen_ohne_kurs": 0
   }
 }
