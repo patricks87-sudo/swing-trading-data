@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-16T15:44:57.189693+00:00",
+  "generated_at_utc": "2026-10-18T09:17:17.922687+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -16,6 +16,22 @@
       "id": "T0001",
       "erfasst_utc": "2026-10-11T17:18:57.560915+00:00",
       "issue": 1
+    },
+    {
+      "aktion": "kauf",
+      "test": true,
+      "datum": "2025-03-01",
+      "art": "bestand",
+      "ticker": "SAP.DE",
+      "name": "SAP.DE",
+      "stueck": 10.0,
+      "kurs_eur": 150.0,
+      "gebuehr_eur": 1.0,
+      "grund": "Bestand vor dem System",
+      "notiz": "Funktionstest Bestand",
+      "id": "T0002",
+      "erfasst_utc": "2026-10-18T09:17:17.917251+00:00",
+      "issue": 2
     }
   ],
   "positionen": [],
@@ -23,12 +39,36 @@
   "kennzahlen": {
     "realisiert_eur": 0,
     "unrealisiert_eur": 0.0,
-    "gebuehren_eur": 0,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
     "offene_positionen": 0,
-    "investiert_eur": 0
+    "investiert_eur": 0,
+    "depotwert_eur": 0,
+    "positionen_ohne_kurs": 0,
+    "gebuehren_eur": 0
   },
-  "kurse_stand_utc": "2026-10-16T15:36:23.860562+00:00"
+  "kurse_stand_utc": "2026-10-16T15:36:23.860562+00:00",
+  "kennzahlen_swing": {
+    "realisiert_eur": 0,
+    "unrealisiert_eur": 0.0,
+    "trades_abgeschlossen": 0,
+    "trefferquote_pct": null,
+    "schnitt_trade_eur": null,
+    "offene_positionen": 0,
+    "investiert_eur": 0,
+    "depotwert_eur": 0,
+    "positionen_ohne_kurs": 0
+  },
+  "kennzahlen_bestand": {
+    "realisiert_eur": 0,
+    "unrealisiert_eur": 0.0,
+    "trades_abgeschlossen": 0,
+    "trefferquote_pct": null,
+    "schnitt_trade_eur": null,
+    "offene_positionen": 0,
+    "investiert_eur": 0,
+    "depotwert_eur": 0,
+    "positionen_ohne_kurs": 0
+  }
 }
