@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-18T09:43:39.388917+00:00",
+  "updated_at_utc": "2026-10-18T10:24:20.427531+00:00",
   "quelle": "automatisch aus data/journal.json (Trade-Journal im Cockpit)",
   "kurse_stand_utc": "2026-10-16T15:36:23.860562+00:00",
   "positions": [
@@ -26,6 +26,27 @@
       "wert_eur": 4360.8,
       "unrealisiert_eur": 166.4,
       "unrealisiert_pct": 3.97
+    },
+    {
+      "id": "OHB-2026-09-08",
+      "ticker": "OHB",
+      "name": "OHB",
+      "art": "swing",
+      "isin": null,
+      "sektor": null,
+      "stueck": 14.0,
+      "einstand_eur": 186.9429,
+      "kapital_eur": 2617.2,
+      "kaufdatum": "2026-09-08",
+      "handelstage_gehalten": 28,
+      "verkauf_spaetestens": "2026-09-22",
+      "stop_eur": null,
+      "grund": "Eigene Idee",
+      "teilrealisiert_eur": 0.0,
+      "journal_ids": [
+        "T0004"
+      ],
+      "hinweis": "10-Tage-Regel: verkaufen"
     }
   ]
 }

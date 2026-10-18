@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-18T09:43:39.388911+00:00",
+  "generated_at_utc": "2026-10-18T10:24:20.427524+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -48,6 +48,22 @@
       "id": "T0003",
       "erfasst_utc": "2026-10-18T09:43:38.139246+00:00",
       "issue": 6
+    },
+    {
+      "aktion": "kauf",
+      "test": false,
+      "datum": "2026-09-08",
+      "art": "swing",
+      "ticker": "OHB",
+      "name": "OHB",
+      "stueck": 14.0,
+      "kurs_eur": 186.8,
+      "gebuehr_eur": 2.0,
+      "grund": "Eigene Idee",
+      "notiz": "Europäisches Pendant zu starlink. Raumfahrt aufsteigender Sektor. Risiko hoch",
+      "id": "T0004",
+      "erfasst_utc": "2026-10-18T10:24:18.421188+00:00",
+      "issue": 7
     }
   ],
   "positionen": [
@@ -74,6 +90,27 @@
       "wert_eur": 4360.8,
       "unrealisiert_eur": 166.4,
       "unrealisiert_pct": 3.97
+    },
+    {
+      "id": "OHB-2026-09-08",
+      "ticker": "OHB",
+      "name": "OHB",
+      "art": "swing",
+      "isin": null,
+      "sektor": null,
+      "stueck": 14.0,
+      "einstand_eur": 186.9429,
+      "kapital_eur": 2617.2,
+      "kaufdatum": "2026-09-08",
+      "handelstage_gehalten": 28,
+      "verkauf_spaetestens": "2026-09-22",
+      "stop_eur": null,
+      "grund": "Eigene Idee",
+      "teilrealisiert_eur": 0.0,
+      "journal_ids": [
+        "T0004"
+      ],
+      "hinweis": "10-Tage-Regel: verkaufen"
     }
   ],
   "trades": [],
@@ -83,23 +120,23 @@
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
-    "offene_positionen": 1,
-    "investiert_eur": 4194.4,
-    "depotwert_eur": 4360.8,
-    "positionen_ohne_kurs": 0,
-    "gebuehren_eur": 3.0
+    "offene_positionen": 2,
+    "investiert_eur": 6811.6,
+    "depotwert_eur": 6978.0,
+    "positionen_ohne_kurs": 1,
+    "gebuehren_eur": 5.0
   },
   "kurse_stand_utc": "2026-10-16T15:36:23.860562+00:00",
   "kennzahlen_swing": {
-    "realisiert_eur": 0,
+    "realisiert_eur": 0.0,
     "unrealisiert_eur": 0.0,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
-    "offene_positionen": 0,
-    "investiert_eur": 0,
-    "depotwert_eur": 0,
-    "positionen_ohne_kurs": 0
+    "offene_positionen": 1,
+    "investiert_eur": 2617.2,
+    "depotwert_eur": 2617.2,
+    "positionen_ohne_kurs": 1
   },
   "kennzahlen_bestand": {
     "realisiert_eur": 0.0,
