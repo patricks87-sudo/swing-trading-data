@@ -29,6 +29,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Kursdaten-Bibliothek (fuer Titel ausserhalb der Watchlist)
+        run: pip install yfinance || true
+
       - name: Eintrag verarbeiten
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
