@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-18T10:38:20.905069+00:00",
+  "generated_at_utc": "2026-10-18T10:39:12.634357+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -75,6 +75,22 @@
       "id": "T0005",
       "erfasst_utc": "2026-10-18T10:38:19.250209+00:00",
       "issue": 8
+    },
+    {
+      "aktion": "kauf",
+      "test": false,
+      "datum": "2026-09-08",
+      "art": "bestand",
+      "ticker": "OHB.DE",
+      "name": "OHB",
+      "stueck": 14.0,
+      "kurs_eur": 186.8,
+      "gebuehr_eur": 2.0,
+      "grund": "Eigene Idee",
+      "notiz": "Europäisches Pendant zu starlink. Raumfahrt aufsteigender Sektor. Risiko hoch",
+      "id": "T0006",
+      "erfasst_utc": "2026-10-18T10:39:11.262695+00:00",
+      "issue": 9
     }
   ],
   "positionen": [
@@ -101,20 +117,44 @@
       "wert_eur": 4360.8,
       "unrealisiert_eur": 166.4,
       "unrealisiert_pct": 3.97
+    },
+    {
+      "id": "OHB.DE-2026-09-08",
+      "ticker": "OHB.DE",
+      "name": "OHB",
+      "art": "bestand",
+      "isin": null,
+      "sektor": null,
+      "stueck": 14.0,
+      "einstand_eur": 186.9429,
+      "kapital_eur": 2617.2,
+      "kaufdatum": "2026-09-08",
+      "handelstage_gehalten": 28,
+      "verkauf_spaetestens": null,
+      "stop_eur": null,
+      "grund": "Eigene Idee",
+      "teilrealisiert_eur": 0.0,
+      "journal_ids": [
+        "T0006"
+      ],
+      "aktueller_kurs_eur": 191.6,
+      "wert_eur": 2682.4,
+      "unrealisiert_eur": 65.2,
+      "unrealisiert_pct": 2.49
     }
   ],
   "trades": [],
   "kennzahlen": {
     "realisiert_eur": 0.0,
-    "unrealisiert_eur": 166.4,
+    "unrealisiert_eur": 231.6,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
-    "offene_positionen": 1,
-    "investiert_eur": 4194.4,
-    "depotwert_eur": 4360.8,
+    "offene_positionen": 2,
+    "investiert_eur": 6811.6,
+    "depotwert_eur": 7043.2,
     "positionen_ohne_kurs": 0,
-    "gebuehren_eur": 3.0
+    "gebuehren_eur": 5.0
   },
   "kurse_stand_utc": "2026-10-16T15:36:23.860562+00:00",
   "kennzahlen_swing": {
@@ -130,13 +170,13 @@
   },
   "kennzahlen_bestand": {
     "realisiert_eur": 0.0,
-    "unrealisiert_eur": 166.4,
+    "unrealisiert_eur": 231.6,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
-    "offene_positionen": 1,
-    "investiert_eur": 4194.4,
-    "depotwert_eur": 4360.8,
+    "offene_positionen": 2,
+    "investiert_eur": 6811.6,
+    "depotwert_eur": 7043.2,
     "positionen_ohne_kurs": 0
   }
 }
