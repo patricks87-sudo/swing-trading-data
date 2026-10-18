@@ -1,5 +1,5 @@
 SETUP-DOKU: MARKTDATEN-FEED (GITHUB ACTIONS)
-Stand: 18.10.2026 (Bestandspositionen im Journal, News ohne Dubletten, Ampel je Lauf; davor 11.10.2026: Risikobudget, 10-Tage-Ausstieg, Trade-Journal, News-Signale).
+Stand: 18.10.2026 (Rohstoff-Monitor mit eigener Rohstoff-Ampel, Gold/Silber-Empfehlung und Simulation; Bestandspositionen im Journal, News ohne Dubletten, Ampel je Lauf; davor 11.10.2026: Risikobudget, 10-Tage-Ausstieg, Trade-Journal, News-Signale).
 
 ÜBERBLICK
 Repository: github.com/patricks87-sudo/swing-trading-data (public, Branch main)
@@ -19,10 +19,11 @@ DATEIEN IM REPO
 - prompts/PROJEKT_ANWEISUNGEN.md – Kopie der Projekt-Anweisungen (inkl. RÜCKKANAL-Formate)
 - docs/SETUP.md – diese Doku
 - index.html – Cockpit (GitHub Pages)
+- rohstoffe.py – Rohstoff-Monitor: Kennzahlen Gold/Silber/Kupfer/Öl/GDX/Dollar, Rohstoff-Ampel, Gold/Silber-Empfehlung, Rückblick und Trade-Simulation (yfinance); wird von fetch_market_data.py bei jedem Lauf aufgerufen
 - requirements.txt – requests, pandas, yfinance>=0.2.40
 - .github/workflows/journal.yml – Trade-Journal: startet bei jedem neuen Issue mit Titel „[Trade] …“ des Repo-Inhabers, speichert den Eintrag, kommentiert das Ergebnis und schließt das Issue
 - .github/workflows/fetch_market_data.yml – Workflow (Cron + manueller Trigger); installiert requirements.txt; holt vor dem Push mit "git pull --rebase" den neuesten Stand (seit 11.10.2026, verhindert abgelehnte Pushes, wenn parallel geschrieben wurde)
-- data/ – Feed-Snapshots ({run}_latest.json, {run}_{timestamp}.json) und Ergebnisdateien der Claude-Läufe
+- data/ – Feed-Snapshots ({run}_latest.json, {run}_{timestamp}.json) und Ergebnisdateien der Claude-Läufe; seit 18.10.2026 zusätzlich rohstoffe.json (Rohstoff-Seite), rohstoff_ampel_verlauf.json (Ampelstatus je Lauf) und rohstoff_meldungen.json (Rohstoff-/Zentralbank-Meldungen der N-Aufgaben, 60 Tage)
 
 SECRET
 TWELVEDATA_API_KEY – unter Settings → Secrets and variables → Actions. yfinance braucht keinen Key.
@@ -33,7 +34,7 @@ Jede geplante Claude-Aufgabe startet zuerst per workflow_dispatch den passenden 
 - P5 ~15:30 – Eröffnungs-Info ohne Veto. Schreibt market_barometer.json.
 - P5.5 ~17:05 – Hold-Test aus echten 5-Minuten-Kerzen, entscheidet nur über den Einstiegszeitpunkt. Schreibt p55_candidates.json, market_barometer.json.
 - P1 ~17:35 – Portfolio-Entscheidung. Der Feed-Lauf aktualisiert vorher candidate_tracking.json (Kursfelder) und filter_bilanz.json. Schreibt top_empfehlung.json, candidate_tracking.json, portfolio_bewertung.json, market_barometer.json.
-- N1–N6 (werktags 08:00/10:30/13:00/16:15/18:30/21:00) und N-Sa/N-So (18:00) – Prompt prompts/N.md (v2.1): Tagesüberblick news_summary_today.json mit „lage“ und Meldungen ohne Dubletten (jede Meldung nur einmal am Tag), Top-3 in headlines.json, und News-Signale nur zu firmenspezifischen Meldungen für Depot und Kandidaten (news_signals.json, max. 6 Suchen). Seitdem suchen P4–P1 keine Schlagzeilen mehr selbst (spart Rechenzeit).
+- N1–N6 (werktags 08:00/10:30/13:00/16:15/18:30/21:00) und N-Sa/N-So (18:00) – Prompt prompts/N.md (v2.2; Teil C seit 18.10.2026: Rohstoff- und Zentralbank-Meldungen → rohstoff_meldungen.json, max. 1 Suche, bei N1/N-So 2): Tagesüberblick news_summary_today.json mit „lage“ und Meldungen ohne Dubletten (jede Meldung nur einmal am Tag), Top-3 in headlines.json, und News-Signale nur zu firmenspezifischen Meldungen für Depot und Kandidaten (news_signals.json, max. 6 Suchen). Seitdem suchen P4–P1 keine Schlagzeilen mehr selbst (spart Rechenzeit).
 Zusätzlich läuft der Workflow per Cron alle 5 Minuten zwischen 12:00 und 16:59 UTC; determine_run.py holt verpasste Läufe nach und verhindert Doppelläufe.
 Manueller Testlauf: Actions → "Fetch Market Data" → "Run workflow" → run = p4/p5/p55/p1. An Handelstagen nicht vor ~14:45 MESZ manuell starten (Dedupe würde den regulären P4-Lauf blockieren).
 
@@ -111,6 +112,7 @@ Eingabe im Cockpit (Registerkarte "Journal"): Formular → öffnet ein vorausgef
 COCKPIT (index.html)
 Registerkarte "Heute": Schlagzeilen, „Was den Markt heute bewegt“ (Lage + Meldungen ohne Dubletten), News zu Kandidaten & Depot, Marktampel (Status seit 18.10.2026 immer aus dem neuesten Feed-Lauf P4/P5/P5.5/P1) mit den fünf Regime-Kriterien, Sektorrotation, Indizes (inkl. echtem VIX und 10J-Rendite), P4-Kandidaten mit Score/Stufe/Handelsmarken, P5.5-Hold-Test, aktive Kandidaten, Top-Empfehlung.
 Registerkarte "Historie & Performance": Performance-Grafik (Depot-Simulation in EUR vs. alle Kandidaten/QQQ/URTH), Filter-Bilanz und alle aussortierten/getradeten Kandidaten mit Performance seit Aufnahme und Forward-Performance vs. Nasdaq.
+Registerkarte "Rohstoffe" (seit 18.10.2026): Rohstoff-Ampel mit sechs Kriterien (jeweils tatsächlicher Abstand in %), Rotationsstatus, Handlungsempfehlung Gold & Silber (ungehebelt, nur Hinweis; Ampelwechsel farbig hervorgehoben), Simulation der Regel mit Trade-Liste, Rückblick je Ampelstatus, Rohstoff-Karten, 6-Monats-Chart, Antizyklik-Tabelle, Meldungen. Auf „Heute“ steht unter der Haupt-Ampel eine Kurzzeile zur Rohstoff-Ampel. Aktualisierung: Kennzahlen/Ampel/Empfehlung/Simulation bei jedem Feed-Lauf (werktags P4 ~14:50, P5 ~15:30, P5.5 ~17:05, P1 ~17:35; reine Python-Rechnung, die Prompts lesen sie nur mit), Meldungen bei jeder N-Aufgabe. Wochenende/US-Feiertage: Stand des letzten Handelstags. Auch die Haupt-Ampel zeigt ihre fünf Kriterien jetzt als Klartext mit Abstand in %.
 Registerkarte "Journal": Eingabeformular, offene Positionen mit unrealisiertem Ergebnis und Verkaufsdatum, abgeschlossene Trades, alle Einträge mit Storno.
 
 BEKANNTE FEHLER UND FIXES (Historie)
