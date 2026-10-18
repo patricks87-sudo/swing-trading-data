@@ -118,8 +118,14 @@ def kurse_yfinance(tickers, eurusd):
     for t in tickers:
         try:
             fi = yf.Ticker(t).fast_info
-            px = float(fi["last_price"])
-            cur = str(fi.get("currency") or "USD").upper()
+            try:
+                px = float(fi["last_price"])
+            except Exception:
+                px = float(fi.last_price)
+            try:
+                cur = str(fi["currency"] or "USD").upper()
+            except Exception:
+                cur = str(getattr(fi, "currency", "USD") or "USD").upper()
             if cur == "EUR":
                 out[t] = round(px, 2)
             elif cur == "USD" and isinstance(eurusd, (int, float)):
