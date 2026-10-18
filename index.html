@@ -144,6 +144,9 @@
   .r-card .zeile { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; color: var(--muted); margin-top: 3px; }
   .r-card .zeile b { color: var(--text); font-weight: 600; }
   .dot.grau { background: #6b7280; }
+  .kliste { display: grid; gap: 5px; margin-top: 10px; font-size: 13px; }
+  .kliste .ok { color: var(--green); } .kliste .no { color: var(--red); } .kliste .na { color: #6b7280; }
+  .kliste .sym { display: inline-block; width: 18px; font-weight: 700; }
   .storniert td { text-decoration: line-through; color: #6b7280; }
   /* Mobile: die datenreiche Tabelle (Kandidaten-Tracking) wird unter 640px
      zu Karten mit Label:Wert-Paaren statt einer gequetschten Tabelle -
@@ -332,17 +335,43 @@ function latestFeed(feeds) {
   return feeds.filter((f) => f && f.generated_at_utc).sort((a, b) => new Date(b.generated_at_utc) - new Date(a.generated_at_utc))[0] || null;
 }
 
+// ---- Ampel-Kriterien verständlich: tatsächlicher Zustand + Abstand in % ----
+const p1 = (v) => Math.abs(v).toFixed(1).replace(".", ",");
+// Abstand des Kurses zu einem Durchschnitt (pct = Kurs über/unter Schnitt in %)
+function abstandText(name, pct, schnitt) {
+  if (typeof pct !== "number") return name + ": keine Daten";
+  if (pct >= 0) return name + " liegt " + p1(pct) + " % über dem " + schnitt;
+  const fehlt = (100 / (100 + pct) - 1) * 100;  // nötiger Anstieg bis zum Schnitt
+  return name + " liegt " + p1(pct) + " % unter dem " + schnitt + " – bis dahin fehlen " + p1(fehlt) + " %";
+}
+function kritZeile(erfuellt, text) {
+  const cls = erfuellt === true ? "ok" : erfuellt === false ? "no" : "na";
+  const sym = erfuellt === true ? "✓" : erfuellt === false ? "✗" : "?";
+  return '<div class="' + cls + '"><span class="sym">' + sym + '</span>' + text + '</div>';
+}
+function hauptKritText(k) {
+  const w = k.wert, n = k.kriterium || "";
+  if (typeof w !== "number") return n + " – keine Daten";
+  if (n.startsWith("S&P 500")) return abstandText("S&amp;P 500", w, "50-Tage-Schnitt");
+  if (n.startsWith("Nasdaq")) return abstandText("Nasdaq", w, "20-Tage-Schnitt");
+  if (n.startsWith("VIX")) {
+    const g = parseFloat((n.match(/[\d.,]+/) || ["20"])[0].replace(",", "."));
+    return w < g ? "Angst-Index VIX bei " + zahlDE(w, 2) + " – unter der Grenze " + g + " (ruhiger Markt)"
+                 : "Angst-Index VIX bei " + zahlDE(w, 1) + " – " + zahlDE(w - g, 1) + " Punkte über der Grenze " + g + " (nervöser Markt)";
+  }
+  if (n.includes("über SMA50")) return w >= 50 ? zahlDE(w, 0) + " % der Watchlist-Aktien über ihrem 50-Tage-Schnitt (Ziel: mind. 50 %)"
+    : "nur " + zahlDE(w, 0) + " % der Watchlist-Aktien über ihrem 50-Tage-Schnitt – bis zum Ziel von 50 % fehlen " + zahlDE(50 - w, 0) + " Prozentpunkte";
+  if (n.includes("5-Tage-Plus")) return w >= 50 ? zahlDE(w, 0) + " % der Watchlist-Aktien auf 5 Tage im Plus (Ziel: mind. 50 %)"
+    : "nur " + zahlDE(w, 0) + " % der Watchlist-Aktien auf 5 Tage im Plus – bis zum Ziel von 50 % fehlen " + zahlDE(50 - w, 0) + " Prozentpunkte";
+  return n + " (" + zahlDE(w, 2) + ")";
+}
+
 function renderRegimeKriterien(feed) {
   if (!feed || !feed.regime || !feed.regime.kriterien) return "";
   const r = feed.regime;
-  const items = r.kriterien.map((k) => {
-    const cls = k.erfuellt === true ? "ok" : k.erfuellt === false ? "no" : "na";
-    const sym = k.erfuellt === true ? "✓" : k.erfuellt === false ? "✗" : "?";
-    const wert = typeof k.wert === "number" ? " (" + k.wert.toLocaleString("de-DE") + ")" : "";
-    return '<span class="' + cls + '">' + sym + " " + k.kriterium + wert + "</span>";
-  }).join("");
+  const items = r.kriterien.map((k) => kritZeile(k.erfuellt, hauptKritText(k))).join("");
   const hinweise = (r.hinweise || []).map((h) => '<span class="na">' + h + "</span>").join("");
-  return '<div class="krit">' + items + "</div>" +
+  return '<div class="kliste">' + items + "</div>" +
     '<div class="krit"><span>Feed-Regime: <b style="color:var(--text)">' + r.status + "</b> · max. neue Positionen heute: " + r.max_neue_positionen + (r.max_offene_positionen != null ? " · max. offen: " + r.max_offene_positionen : "") + (r.override ? " · " + r.override : "") + "</span>" + hinweise + "</div>";
 }
 
@@ -1078,12 +1107,39 @@ function renderRohstoffe(r, meld, newsToday, p4c) {
     const rot = r.rotation || {}, lage = r.aktienlage || {}, am = r.ampel || {};
     const farbe = am.status === "GRÜN" ? "green" : am.status === "GELB" ? "yellow" : am.status === "ROT" ? "red" : "grau";
     const regel = { "GRÜN": "Minenaktien: bis zu 1 neue pro Tag, max. 2 offen", "GELB": "Minenaktien: nur „Kauf – hohe Qualität“, max. 1 neue und 1 offen", "ROT": "Minenaktien: keine neuen Käufe" }[am.status] || "";
-    const krit = (am.kriterien || []).map((k) => '<span class="' + (k.erfuellt === true ? "ok" : k.erfuellt === false ? "no" : "na") + '">' + (k.erfuellt === true ? "✓ " : k.erfuellt === false ? "✗ " : "? ") + k.kriterium + '</span>').join("");
+    const W = r.werte || {}, g = W.GOLD || {}, si = W.SILBER || {}, gdx = W.GOLDMINEN || {}, usd = W.DOLLAR || {};
+    const vs = (x, a, b) => (typeof x[a] === "number" && typeof x[b] === "number" && x[b] ? (x[a] / x[b] - 1) * 100 : null);
+    const rohText = (k) => {
+      const n = k.kriterium || "";
+      if (n.startsWith("Gold über")) return abstandText("Gold", vs(g, "close", "sma50"), "50-Tage-Schnitt");
+      if (n.startsWith("Gold-Trend")) {
+        const d = vs(g, "sma50", "sma200");
+        if (typeof d !== "number") return "Gold-Trend: keine Daten";
+        return d >= 0 ? "Gold im Aufwärtstrend – 50-Tage-Schnitt liegt " + p1(d) + " % über dem 200-Tage-Schnitt"
+                      : "Gold im Abwärtstrend – 50-Tage-Schnitt liegt " + p1(d) + " % unter dem 200-Tage-Schnitt";
+      }
+      if (n.startsWith("Silber")) return abstandText("Silber", vs(si, "close", "sma50"), "50-Tage-Schnitt");
+      if (n.startsWith("Goldminen")) return abstandText("Goldminen (GDX)", vs(gdx, "close", "sma50"), "50-Tage-Schnitt");
+      if (n.startsWith("Gold stärker")) {
+        const rs = g.rs_20d_vs_spy;
+        if (typeof rs !== "number") return "Gold vs. S&amp;P 500: keine Daten";
+        return rs >= 0 ? "Gold lief in 20 Tagen " + p1(rs) + " Prozentpunkte besser als der S&amp;P 500"
+                       : "Gold lief in 20 Tagen " + p1(rs) + " Prozentpunkte schlechter als der S&amp;P 500";
+      }
+      if (n.startsWith("US-Dollar")) {
+        const d = vs(usd, "close", "sma50");
+        if (typeof d !== "number") return "US-Dollar: keine Daten";
+        return d < 0 ? "US-Dollar " + p1(d) + " % unter dem 50-Tage-Schnitt – schwacher Dollar stützt Gold"
+                     : "US-Dollar " + p1(d) + " % über dem 50-Tage-Schnitt – starker Dollar bremst Gold; er müsste " + p1((100 / (100 + d) - 1) * 100) + " % fallen";
+      }
+      return n;
+    };
+    const krit = (am.kriterien || []).map((k) => kritZeile(k.erfuellt, rohText(k))).join("");
     document.getElementById("rMini").innerHTML = 'Rohstoff-Ampel (gilt nur für Minenaktien): <b style="color:var(--' + (farbe === "grau" ? "muted" : farbe) + ')">' + (am.status || "–") + '</b> · ' + (rot.status || "") + ' – <a href="#rohstoffe" data-tabjump="rohstoffe" style="color:var(--text);">Details</a>';
     st.innerHTML = '<div class="dot ' + farbe + '"></div><div><div class="ampel-status">Rohstoff-Ampel: ' + (am.status || "–") + '</div>' +
       '<div class="ampel-reason"><b style="color:var(--text)">' + regel + '</b>' + (am.hinweis ? ' · ' + am.hinweis : "") + '</div>' +
-      '<div class="krit">' + krit + '</div>' +
-      '<div class="ampel-reason" style="margin-top:10px;"><b style="color:var(--text)">' + (rot.status || "–") + ':</b> ' + (rot.text || "") + '</div>' +
+      '<div class="kliste">' + krit + '</div>' +
+      '<div class="ampel-reason" style="margin-top:12px;"><b style="color:var(--text)">' + (rot.status || "–") + ':</b> ' + (rot.text || "") + '</div>' +
       '<div class="krit"><span>Aktienlage: <b style="color:var(--text)">' + (lage.aktien_schwach ? "schwach" : "ohne Schwächesignal") + '</b></span>' +
       '<span>S&amp;P 500: 5 T ' + pctFarbe(lage.spy_chg_5d_pct) + ' · 20 T ' + pctFarbe(lage.spy_chg_20d_pct) + '</span>' +
       ((lage.fuehrende_sektoren || []).length ? '<span>Führende Sektoren (' + lage.fuehrende_sektoren.join(", ") + '): 5 T ' + pctFarbe(lage.fuehrende_chg_5d_avg) + '</span>' : "") +
