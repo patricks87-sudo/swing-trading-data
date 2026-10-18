@@ -1,14 +1,15 @@
 """Rohstoff-Monitor (seit 18.10.2026).
 
-Beobachtet Gold, Silber, Kupfer, Rohoel, Goldminen (GDX) und den US-Dollar
-und prueft, ob Kapital aus schwachen Aktiensektoren in Rohstoffe -
-vor allem Edelmetalle - rotiert. Datenquelle: yfinance (kostenlos, belastet
-das Twelve-Data-Kontingent nicht).
+Beobachtet Gold, Silber, Kupfer, Rohoel, Goldminen (GDX) und den US-Dollar,
+prueft, ob Kapital aus schwachen Aktiensektoren in Edelmetalle rotiert, und
+berechnet daraus die Rohstoff-Ampel sowie eine taegliche Handlungsempfehlung
+fuer Gold und Silber (ungehebelt, nur Hinweis - kein System-Trade).
+Datenquelle: yfinance (kostenlos, belastet das Twelve-Data-Kontingent nicht).
 
-Ergebnis landet im Feed unter snapshot["rohstoffe"] und zusaetzlich in
-data/rohstoffe.json fuer die Cockpit-Seite "Rohstoffe". Rein informativ:
-die Scores der Aktien aendern sich dadurch nicht. Die Minenaktien der
-Watchlist (Sektor "Edelmetalle") werden ganz normal gescort.
+Ergebnis landet im Feed unter snapshot["rohstoffe"] und in data/rohstoffe.json
+fuer die Cockpit-Seite "Rohstoffe". Die Aktien-Scores aendern sich dadurch
+nicht. (Minenaktien wurden am 18.10.2026 wieder aus der Watchlist genommen -
+der Rohstoff-Teil betrachtet nur die Rohstoffe selbst.)
 
 Alle Funktionen brechen den Feed-Lauf nie ab - Kennzeichnen statt Schaetzen.
 """
@@ -34,31 +35,16 @@ RS_ROTATION_MIN = 3.0        # Edelmetall mind. 3 Prozentpunkte besser als S&P 5
 FUEHRER_FALL_5D = -2.0       # fuehrende Sektoren im Schnitt mind. 2 % gefallen (5 Tage)
 SPY_WOCHE_SCHWACH = -1.0     # "schwache Aktienwoche" fuer die Antizyklik-Statistik
 CHART_TAGE = 126             # ca. 6 Monate
+AMPEL_FORWARD_TAGE = 10      # Rueckblick: Entwicklung 10 Handelstage nach dem Ampelstatus
+STOP_TAGESBEWEGUNGEN = 3     # Stop = 3 x mittlere Tagesbewegung (20 Tage) unter Einstieg
 
-# Rohstoff-Ampel (seit 18.10.2026): eigenes Regime fuer den Sektor
-# "Edelmetalle" (Minenaktien). Alle anderen Aktien folgen weiter der
-# Haupt-Ampel (analysis.compute_regime). Risikobudget (375 EUR) und
-# Sektor-Limit (max. 2) gelten gemeinsam.
-AMPEL_LIMITS = {
-    "GRÜN": {"max_neue_positionen": 1, "max_offene_positionen": 2, "nur_hohe_qualitaet": False},
-    "GELB": {"max_neue_positionen": 1, "max_offene_positionen": 1, "nur_hohe_qualitaet": True},
-    "ROT": {"max_neue_positionen": 0, "max_offene_positionen": 0, "nur_hohe_qualitaet": False},
-}
-AMPEL_FORWARD_TAGE = 10      # Bilanz: Entwicklung der Goldminen 10 Handelstage nach dem Signal
-
-# Handelbare Produkte fuer die taegliche Handlungsempfehlung (nur Hinweis,
-# kein System-Trade). ISIN vor dem Kauf in Trade Republic pruefen.
+# Handelbare Produkte (ungehebelt) fuer die Handlungsempfehlung.
+# Gehebelte Produkte bewusst NICHT (Entscheidung 18.10.2026: Rendite-Vorsprung
+# zu klein fuer das verdoppelte Verlustrisiko).
 PRODUKTE = {
-    "GOLD": {
-        "1x": {"name": "Xetra-Gold (physisch hinterlegt)", "isin": "DE000A0S9GB0"},
-        "2x": {"name": "WisdomTree Gold 2x Daily Leveraged", "isin": "JE00B2NFTL95"},
-    },
-    "SILBER": {
-        "1x": {"name": "WisdomTree Physical Silver", "isin": "JE00B1VS3333"},
-        "2x": {"name": "WisdomTree Silver 2x Daily Leveraged", "isin": "JE00B2NFTS64"},
-    },
+    "GOLD": {"name": "Xetra-Gold (physisch hinterlegt)", "isin": "DE000A0S9GB0"},
+    "SILBER": {"name": "WisdomTree Physical Silver", "isin": "JE00B1VS3333"},
 }
-MAX_HEBEL = 2
 
 
 def _r(x, n=2):
@@ -114,7 +100,7 @@ def _kennzahlen(s, spy):
         "ueber_sma200": close > sma200 if sma200 else None,
         "trend": trend,
         "abstand_52w_hoch_pct": _r(_pct(close, hoch52)),
-        # mittlere Tagesbewegung (Betrag) der letzten 20 Tage in % - Basis fuer Stop-Orientierung
+        # mittlere Tagesbewegung (Betrag) der letzten 20 Tage in % - Basis fuer die Stop-Orientierung
         "tagesbewegung_pct": _r(s.pct_change().abs().tail(20).mean() * 100) if len(s) > 21 else None,
     }
     if spy is None:
@@ -156,7 +142,7 @@ def _aktienlage(spy_k, sectors):
     """Sind die Aktien bzw. die bisher fuehrenden Sektoren schwach?"""
     fuehrer = []
     for name, s in (sectors or {}).items():
-        if name == "Edelmetalle" or not isinstance(s, dict):
+        if not isinstance(s, dict):
             continue
         if isinstance(s.get("rs_20d_vs_spy"), (int, float)):
             fuehrer.append((s["rs_20d_vs_spy"], name, s.get("chg_5d_avg")))
@@ -189,8 +175,7 @@ def _rotation(werte, lage):
     namen = " und ".join(werte[k]["name"] for k in starke)
     if starke and lage["aktien_schwach"]:
         return {"status": "Rotation in Edelmetalle", "farbe": "gruen",
-                "text": f"{namen} steigen, während Aktien schwächeln ({lage['grund']}). "
-                        "Kapital sucht Sicherheit – Minenaktien im Scanner genauer ansehen."}
+                "text": f"{namen} steigen, während Aktien schwächeln ({lage['grund']}). Kapital sucht Sicherheit."}
     if starke:
         return {"status": "Edelmetalle stark", "farbe": "gelb",
                 "text": f"{namen} laufen deutlich besser als der S&P 500, die Aktien zeigen aber noch keine Schwäche – "
@@ -201,6 +186,10 @@ def _rotation(werte, lage):
     return {"status": "Keine Rotation", "farbe": "grau",
             "text": "Aktien ohne Schwächesignal, Edelmetalle ohne deutliche Überrendite."}
 
+
+# ---------------------------------------------------------------------------
+# Rohstoff-Ampel
+# ---------------------------------------------------------------------------
 
 def _ampel_kriterien(g, si, gdx, usd):
     """Sechs Kriterien der Rohstoff-Ampel aus aktuellen Kennzahlen (Dicts)."""
@@ -237,19 +226,19 @@ def _ampel(werte, rotation):
     gold_unter_200 = bool(g.get("sma200") and g.get("close") and g["close"] < g["sma200"])
     status, erfuellt, unbekannt, hinweis = _ampel_status(
         kriterien, gold_unter_200, rotation.get("status") == "Rotation in Edelmetalle")
-    lim = AMPEL_LIMITS[status]
-    regel = {"GRÜN": "bis zu 1 neue Minenaktie pro Tag, max. 2 offen",
-             "GELB": "nur „Kauf – hohe Qualität“, max. 1 neue und 1 offen",
-             "ROT": "keine neuen Minenaktien"}[status]
-    return dict(lim, status=status, kriterien=kriterien, kriterien_erfuellt=erfuellt,
-                kriterien_unbekannt=unbekannt, hinweis=hinweis, gilt_fuer_sektor="Edelmetalle",
-                kurztext=f"Rohstoff-Ampel {status}: {erfuellt}/6 Kriterien – {regel}" + (f" ({hinweis})" if hinweis else ""))
+    return {"status": status, "kriterien": kriterien, "kriterien_erfuellt": erfuellt,
+            "kriterien_unbekannt": unbekannt, "hinweis": hinweis,
+            "kurztext": f"Rohstoff-Ampel {status}: {erfuellt}/6 Kriterien" + (f" ({hinweis})" if hinweis else "")}
 
 
-def _ampel_bilanz(daten, spy):
-    """Rueckblick: Ampel-Status fuer jeden Handelstag der Historie berechnen
-    (ohne Rotations-Aufwertung, die braucht Sektordaten) und messen, wie sich
-    die Goldminen (GDX) in den 10 Handelstagen danach entwickelt haben."""
+def _kauf_bedingung(status, ueber_sma50, rs_20d):
+    """Gemeinsame Kaufregel fuer Gold/Silber (heute und in der Simulation)."""
+    return status == "GRÜN" and bool(ueber_sma50) and rs_20d is not None and rs_20d >= 0
+
+
+def _historie(daten, spy):
+    """Tagesgenaue Rueckrechnung: Ampelstatus (ohne Rotations-Aufwertung, dafuer
+    fehlen historische Sektordaten) plus Kaufbedingung je Metall."""
     import pandas as pd
 
     sym = {k: ROHSTOFFE[k][0] for k in ("GOLD", "SILBER", "GOLDMINEN", "DOLLAR")}
@@ -260,13 +249,13 @@ def _ampel_bilanz(daten, spy):
         return None
     sma50 = df.rolling(50).mean()
     sma200 = df.rolling(200).mean()
-    rs20 = (df["GOLD"].pct_change(20) - df["SPY"].pct_change(20)) * 100
+    rs20 = {m: (df[m].pct_change(20) - df["SPY"].pct_change(20)) * 100 for m in EDELMETALLE}
     krit = pd.DataFrame({
         "g50": df["GOLD"] > sma50["GOLD"],
         "g_trend": sma50["GOLD"] > sma200["GOLD"],
         "s50": df["SILBER"] > sma50["SILBER"],
         "m50": df["GOLDMINEN"] > sma50["GOLDMINEN"],
-        "rs": rs20 >= 0,
+        "rs": rs20["GOLD"] >= 0,
         "usd": df["DOLLAR"] < sma50["DOLLAR"],
     })
     n = krit.sum(axis=1)
@@ -274,44 +263,117 @@ def _ampel_bilanz(daten, spy):
     status[n >= 3] = "GELB"
     status[n >= 5] = "GRÜN"
     status[(status == "GRÜN") & (df["GOLD"] < sma200["GOLD"])] = "GELB"
-    h = AMPEL_FORWARD_TAGE
-    fwd = (df["GOLDMINEN"].shift(-h) / df["GOLDMINEN"] - 1) * 100
-    fwd_spy = (df["SPY"].shift(-h) / df["SPY"] - 1) * 100
-    gueltig = sma200.notna().all(axis=1) & fwd.notna()
-    # Gold/Silber 1x und 2x (taeglich neu gehebelt, inkl. ca. 1 % Jahreskosten)
-    def fwd_hebel(serie, hebel):
-        r = serie.pct_change() * hebel - (0.01 / 252 if hebel > 1 else 0)
-        wachstum = (1 + r).rolling(h).apply(lambda x: x.prod(), raw=True).shift(-h)
-        return (wachstum - 1) * 100
-    hebel_fwd = {f"{m}_{x}x": fwd_hebel(df[m], x) for m in ("GOLD", "SILBER") for x in (1, 2)}
+    gueltig = sma200.notna().all(axis=1)
+    kauf = {m: (status == "GRÜN") & (df[m] > sma50[m]) & (rs20[m] >= 0) for m in EDELMETALLE}
+    bewegung = {m: df[m].pct_change().abs().rolling(20).mean() * 100 for m in EDELMETALLE}
+    return {"df": df[gueltig], "status": status[gueltig],
+            "kauf": {m: kauf[m][gueltig] for m in EDELMETALLE},
+            "bewegung": {m: bewegung[m][gueltig] for m in EDELMETALLE}}
+
+
+def _ampel_bilanz(h):
+    """Rueckblick: wie entwickelten sich Gold und Silber (ungehebelt) in den
+    10 Handelstagen nach einem Tag mit GRUEN / GELB / ROT?"""
+    if not h:
+        return None
+    df, status, t = h["df"], h["status"], AMPEL_FORWARD_TAGE
     out = {}
     for st in ("GRÜN", "GELB", "ROT"):
-        m = gueltig & (status == st)
-        if m.sum() == 0:
-            out[st] = {"tage": 0}
-            continue
-        out[st] = {
-            "tage": int(m.sum()),
-            "schnitt_minen_pct": _r(fwd[m].mean()),
-            "schnitt_ueber_sp500_pct": _r((fwd[m] - fwd_spy[m]).mean()),
-            "trefferquote_pct": _r((fwd[m] > 0).mean() * 100, 0),
-            "produkte": {k: {"schnitt_pct": _r(v[m].mean()), "im_plus_pct": _r((v[m] > 0).mean() * 100, 0),
-                             "schlechtester_pct": _r(v[m].min())}
-                         for k, v in hebel_fwd.items() if v[m].notna().any()},
-        }
-    tage = status[gueltig]
+        m = status == st
+        eintrag = {"tage": int(m.sum())}
+        for metall in EDELMETALLE:
+            fwd = (df[metall].shift(-t) / df[metall] - 1) * 100
+            mm = m & fwd.notna()
+            if mm.sum():
+                eintrag[metall] = {"schnitt_pct": _r(fwd[mm].mean()), "im_plus_pct": _r((fwd[mm] > 0).mean() * 100, 0),
+                                   "schlimmster_pct": _r(fwd[mm].min())}
+        out[st] = eintrag
     return {
-        "zeitraum_von": str(tage.index[0].date()) if len(tage) else None,
-        "zeitraum_bis": str(tage.index[-1].date()) if len(tage) else None,
-        "forward_tage": h,
-        "je_status": out,
-        "hinweis": "Ohne Aufwertung durch Rotation (braucht historische Sektordaten). Überlappende 10-Tage-Fenster – Tage sind nicht unabhängig.",
+        "zeitraum_von": str(df.index[0].date()), "zeitraum_bis": str(df.index[-1].date()),
+        "forward_tage": t, "je_status": out,
+        "hinweis": "Ohne Stop und ohne Rotations-Aufwertung; überlappende 10-Tage-Fenster – die Tage sind nicht unabhängig.",
     }
 
 
+def _simulation(h):
+    """Spielt die Gold/Silber-Regel echt durch (ungehebelt):
+    Einstieg zum Schlusskurs des Folgetags, sobald die Kaufbedingung gilt
+    (Ampel GRUEN + Metall ueber SMA50 + 20 Tage mindestens so stark wie S&P 500).
+    Ausstieg: Schlusskurs unter dem Stop (3 x mittlere Tagesbewegung unter
+    Einstieg) -> zu diesem Schlusskurs; oder Ampel ROT -> Schlusskurs Folgetag.
+    Keine Gebuehren, keine Steuern."""
+    if not h:
+        return None
+    df, status = h["df"], h["status"]
+    idx = list(df.index)
+    ergebnis = {}
+    for metall in EDELMETALLE:
+        kurs, kauf, bew = df[metall], h["kauf"][metall], h["bewegung"][metall]
+        trades, pos, investiert_tage = [], None, 0
+        i = 0
+        while i < len(idx) - 1:
+            if pos is None:
+                if bool(kauf.iloc[i]):
+                    e = float(kurs.iloc[i + 1])
+                    stop_pct = STOP_TAGESBEWEGUNGEN * float(bew.iloc[i])
+                    pos = {"einstieg_datum": str(idx[i + 1].date()), "einstieg": e, "i": i + 1,
+                           "stop": e * (1 - stop_pct / 100), "stop_pct": round(stop_pct, 1)}
+                    i += 2  # ab dem Tag nach dem Einstieg pruefen
+                    continue
+            else:
+                investiert_tage += 1
+                c = float(kurs.iloc[i])
+                grund, aus_i = None, None
+                if c <= pos["stop"]:
+                    grund, aus_i = "Stop", i
+                elif status.iloc[i] == "ROT":
+                    grund, aus_i = "Ampel ROT", i + 1
+                if grund:
+                    a = float(kurs.iloc[aus_i])
+                    trades.append({"einstieg_datum": pos["einstieg_datum"], "ausstieg_datum": str(idx[aus_i].date()),
+                                   "handelstage": aus_i - pos["i"], "ergebnis_pct": _r((a / pos["einstieg"] - 1) * 100),
+                                   "grund": grund, "stop_pct": pos["stop_pct"]})
+                    pos = None
+                    i = aus_i + 1
+                    continue
+            i += 1
+        offen = None
+        if pos:
+            a = float(kurs.iloc[-1])
+            offen = {"einstieg_datum": pos["einstieg_datum"], "handelstage": len(idx) - 1 - pos["i"],
+                     "ergebnis_pct": _r((a / pos["einstieg"] - 1) * 100), "stop_pct": pos["stop_pct"]}
+        erg = [t["ergebnis_pct"] for t in trades]
+        gesamt = 1.0
+        for x in erg + ([offen["ergebnis_pct"]] if offen else []):
+            gesamt *= 1 + x / 100
+        ergebnis[metall] = {
+            "trades": trades[-20:],
+            "offen": offen,
+            "anzahl": len(trades),
+            "gewinner": sum(1 for x in erg if x > 0),
+            "trefferquote_pct": _r(sum(1 for x in erg if x > 0) / len(erg) * 100, 0) if erg else None,
+            "schnitt_pct": _r(sum(erg) / len(erg)) if erg else None,
+            "bester_pct": _r(max(erg)) if erg else None,
+            "schlechtester_pct": _r(min(erg)) if erg else None,
+            "schnitt_tage": _r(sum(t["handelstage"] for t in trades) / len(trades), 1) if trades else None,
+            "gesamt_pct": _r((gesamt - 1) * 100),
+            "kaufen_und_halten_pct": _r((float(kurs.iloc[-1]) / float(kurs.iloc[0]) - 1) * 100),
+            "investiert_pct": _r(investiert_tage / max(1, len(idx) - 1) * 100, 0),
+        }
+    return {"zeitraum_von": str(idx[0].date()), "zeitraum_bis": str(idx[-1].date()),
+            "regel": ("Einstieg zum Schlusskurs am Tag nach dem Kaufsignal (Ampel GRÜN + Metall über SMA50 + 20 Tage mindestens "
+                      "so stark wie S&P 500). Ausstieg, wenn der Schlusskurs den Stop (3 × mittlere Tagesbewegung unter Einstieg) "
+                      "unterschreitet, oder am Tag nach einem Wechsel auf ROT. Ungehebelt, ohne Gebühren und Steuern."),
+            "metalle": ergebnis}
+
+
+# ---------------------------------------------------------------------------
+# Taegliche Handlungsempfehlung (nur Hinweis)
+# ---------------------------------------------------------------------------
+
 def empfehlung(roh, verlauf):
     """Taegliche Handlungsempfehlung je Metall aus Rohstoff-Ampel + Kurslage.
-    Rein regelbasiert, nur Hinweis (kein System-Trade, kein Journal).
+    Rein regelbasiert, ungehebelt, nur Hinweis (kein System-Trade, kein Journal).
     verlauf: Liste frueherer Ampel-Eintraege [{"zeit_utc", "datum", "run", "status"}]."""
     am = roh.get("ampel") or {}
     status = am.get("status")
@@ -324,47 +386,41 @@ def empfehlung(roh, verlauf):
         seit = e.get("datum")
     veraenderung = None
     if vorher and vorher != status:
-        art = {"GRÜN": "Einstiegssignal", "GELB": "Vorsicht", "ROT": "Ausstiegssignal"}[status]
+        art = {"GRÜN": "mögliches Einstiegssignal", "GELB": "Vorsicht", "ROT": "Ausstiegssignal"}[status]
         veraenderung = {"von": vorher, "nach": status, "art": art,
                         "text": f"Ampel von {vorher} auf {status} gewechselt – {art}."}
 
     metalle = {}
     for key, name in (("GOLD", "Gold"), ("SILBER", "Silber")):
         w = werte.get(key) or {}
-        p = PRODUKTE[key]
         ueber50 = w.get("ueber_sma50")
-        staerker = (w.get("rs_20d_vs_spy") or -1) >= 0
+        rs = w.get("rs_20d_vs_spy")
         bew = w.get("tagesbewegung_pct")
-        if status == "GRÜN" and ueber50 and staerker:
-            aktion, hebel = "Kaufen", 2
-            text = f"{name} im Aufwärtstrend und stärker als Aktien – Einstieg möglich, auch mit Faktor 2."
-        elif status == "GRÜN":
-            aktion, hebel = "Kaufen (ungehebelt)", 1
-            text = f"Ampel Grün, aber {name} selbst " + ("unter dem 50-Tage-Schnitt" if not ueber50 else "schwächer als Aktien") + " – höchstens ohne Hebel."
-        elif status == "GELB":
-            aktion, hebel = "Halten / kein Hebel", 1 if ueber50 else 0
-            text = (f"Gemischtes Bild – keine neuen gehebelten Käufe. Bestehende 2x-Positionen eng absichern; "
-                    + (f"ungehebelt ist {name} vertretbar." if ueber50 else f"auch ungehebelt erst einsteigen, wenn {name} wieder über dem 50-Tage-Schnitt liegt."))
+        if _kauf_bedingung(status, ueber50, rs):
+            aktion = "Kaufen"
+            text = f"Ampel Grün, {name} über dem 50-Tage-Schnitt und mindestens so stark wie Aktien – Einstieg möglich."
+        elif status == "ROT":
+            aktion = "Nicht investieren"
+            text = f"Edelmetalle schwach – kein Einstieg. Bestehende {name}-Position verkaufen (Ausstiegsregel)."
         else:
-            aktion, hebel = "Nicht investieren", 0
-            text = f"Edelmetalle schwach – kein Einstieg. Gehebelte {name}-Positionen verkaufen, ungehebelte kritisch prüfen."
-        hebel = min(hebel, MAX_HEBEL)
-        stop = None
-        if hebel >= 1 and isinstance(bew, (int, float)):
-            # Orientierung: 3 durchschnittliche Tagesbewegungen des Metalls, mal Hebel
-            stop = round(3 * bew * hebel, 1)
+            aktion = "Halten, kein Neukauf"
+            grund = (f"{name} unter dem 50-Tage-Schnitt" if not ueber50
+                     else f"{name} schwächer als Aktien" if (rs is None or rs < 0) else "Ampel nicht Grün")
+            text = f"Bestehende Position halten (Stop beachten), aber nicht neu kaufen – {grund}."
+        stop = round(STOP_TAGESBEWEGUNGEN * bew, 1) if isinstance(bew, (int, float)) else None
         metalle[key] = {
-            "name": name, "aktion": aktion, "hebel": hebel, "text": text,
-            "produkt": p.get(f"{hebel}x") if hebel else None,
+            "name": name, "aktion": aktion, "text": text,
+            "produkt": PRODUKTE[key],
             "stop_orientierung_pct": stop,
             "tagesbewegung_pct": bew,
         }
     return {
         "status": status, "vorher": vorher, "seit": seit, "veraenderung": veraenderung,
         "metalle": metalle,
-        "regeln": ("Nur Hinweis, kein System-Trade. Gehebelte Produkte (Faktor 2) werden täglich neu gehebelt: "
-                   "in Seitwärtsphasen verlieren sie auch ohne Kursverlust des Metalls an Wert – nur kurz halten "
-                   "(Richtwert bis 10 Handelstage) und spätestens verkaufen, wenn die Ampel auf ROT springt."),
+        "regeln": ("Nur Hinweis, kein System-Trade, ungehebelt. Kaufen: Ampel GRÜN + Metall über dem 50-Tage-Schnitt + "
+                   "auf 20 Tage mindestens so stark wie der S&P 500. Halten: Ampel GELB oder Metall selbst schwach. "
+                   "Verkaufen: Ampel ROT oder Stop unterschritten. Stop-Orientierung = 3 × mittlere Tagesbewegung des "
+                   "Metalls (20 Tage) unter dem Kaufkurs."),
         "produkte": PRODUKTE,
     }
 
@@ -393,7 +449,8 @@ def _chart(daten, spy):
 
 
 def berechnen(sectors=None, watchlist=None):
-    """Rohstoff-Monitor berechnen. Liefert nie eine Exception."""
+    """Rohstoff-Monitor berechnen. Liefert nie eine Exception.
+    watchlist wird nicht mehr gebraucht (Parameter bleibt fuer Kompatibilitaet)."""
     from datetime import datetime, timezone
 
     try:
@@ -418,16 +475,13 @@ def berechnen(sectors=None, watchlist=None):
         lage = _aktienlage(spy_k, sectors)
         g, si = werte.get("GOLD", {}), werte.get("SILBER", {})
         ratio = _r(g["close"] / si["close"], 1) if g.get("close") and si.get("close") else None
-
-        minen = []
-        for t, e in (watchlist or {}).items():
-            if isinstance(e, dict) and e.get("sector") == "Edelmetalle" and "error" not in e:
-                st = e.get("setup") or {}
-                minen.append({"ticker": t, "close": e.get("close"), "chg_5d_pct": e.get("chg_5d_pct"),
-                              "chg_20d_pct": e.get("chg_20d_pct"), "score": st.get("score"), "stufe": st.get("stufe")})
-        minen.sort(key=lambda m: m["score"] if isinstance(m["score"], (int, float)) else -1, reverse=True)
-
         rotation = _rotation(werte, lage)
+        try:
+            hist = _historie(daten, spy)
+        except Exception as e:
+            print(f"Rohstoff-Historie fehlgeschlagen: {e}")
+            hist = None
+
         return {
             "available": True,
             "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -437,13 +491,12 @@ def berechnen(sectors=None, watchlist=None):
             "aktienlage": lage,
             "rotation": rotation,
             "ampel": _ampel(werte, rotation),
-            "ampel_bilanz": _ampel_bilanz(daten, spy),
+            "ampel_bilanz": _ampel_bilanz(hist),
+            "simulation": _simulation(hist),
             "gold_silber_ratio": ratio,
-            "minen": minen,
-            "sektor_edelmetalle": (sectors or {}).get("Edelmetalle"),
             "chart": _chart(daten, spy),
             "parameter": {"rs_rotation_min": RS_ROTATION_MIN, "fuehrer_fall_5d": FUEHRER_FALL_5D,
-                          "spy_woche_schwach": SPY_WOCHE_SCHWACH},
+                          "spy_woche_schwach": SPY_WOCHE_SCHWACH, "stop_tagesbewegungen": STOP_TAGESBEWEGUNGEN},
         }
     except Exception as e:
         return {"available": False, "error": str(e)}

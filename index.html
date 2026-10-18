@@ -231,27 +231,28 @@
   </div>
 
   <div class="tab-panel" id="panel-rohstoffe" role="tabpanel" aria-labelledby="tab-rohstoffe" hidden>
-  <p class="hist-intro">Gold und Silber gelten als Gegengewicht zu Aktien – vor allem, wenn die bisher starken Sektoren fallen oder Zentralbanken in großem Stil kaufen. Gehandelt wird über die Minenaktien in der Watchlist (Sektor „Edelmetalle“). Für sie gilt die <b>Rohstoff-Ampel</b> statt der Haupt-Ampel: So kann P1 eine Mine auch dann kaufen, wenn der Aktienmarkt auf RISK-OFF steht – aber nur, wenn die Edelmetalle selbst stark sind. Alle anderen Aktien folgen weiter der Haupt-Ampel; Risikobudget (375 €) und max. 2 Positionen je Sektor gelten gemeinsam.</p>
+  <p class="hist-intro">Gold und Silber gelten als Gegengewicht zu Aktien – vor allem, wenn die bisher starken Sektoren fallen oder Zentralbanken in großem Stil kaufen. Die <b>Rohstoff-Ampel</b> bewertet nur die Edelmetalle selbst und liefert daraus eine tägliche Empfehlung für Gold und Silber (ungehebelt, reiner Hinweis). Sie gilt nicht für Aktien – die steuert weiter die Haupt-Ampel. Ob die Regel in der Vergangenheit funktioniert hätte, zeigt die Simulation weiter unten.</p>
 
   <div id="rStatus" class="ampel-box card" style="margin-top:16px;"><div class="placeholder">Noch keine Daten &ndash; wird beim nächsten Feed-Lauf (P4/P5/P5.5/P1) berechnet.</div></div>
 
   <h2>Handlungsempfehlung Gold &amp; Silber</h2>
   <div id="rEmpf" class="card"><div class="placeholder">Erscheint nach dem nächsten Feed-Lauf.</div></div>
 
-  <h2>Hat die Rohstoff-Ampel funktioniert?</h2>
+  <h2>Hätte die Gold/Silber-Regel funktioniert? (Simulation)</h2>
+  <div id="rSim" class="card"><div class="placeholder">Noch keine Daten.</div></div>
+
+  <h2>Rückblick: Gold &amp; Silber 10 Tage nach jedem Ampelstatus</h2>
   <div id="rBilanz" class="card"><div class="placeholder">Noch keine Daten.</div></div>
 
   <h2>Rohstoffe im Überblick</h2>
   <div id="rWerte" class="grid r-grid"></div>
 
-  <h2>Gold, Silber &amp; Minen vs. S&amp;P 500 (6 Monate)</h2>
+  <h2>Gold, Silber &amp; Goldminen-Index vs. S&amp;P 500 (6 Monate)</h2>
   <div id="rChart" class="card"><div class="placeholder">Noch keine Daten.</div></div>
 
   <h2>Laufen sie wirklich gegen Aktien?</h2>
   <div id="rAntizyklik" class="card"><div class="placeholder">Noch keine Daten.</div></div>
 
-  <h2>Minenaktien im Scanner</h2>
-  <div id="rMinen" class="card"><div class="placeholder">Noch keine Daten.</div></div>
 
   <h2>Meldungen: Rohstoffe &amp; Zentralbanken</h2>
   <div id="rNews" class="card"><div class="placeholder">Noch keine Meldungen &ndash; die Nachrichten-Aufgaben sammeln sie ab dem nächsten Lauf.</div></div>
@@ -1114,7 +1115,7 @@ function renderRohstoffe(r, meld, newsToday, p4c) {
   if (r && r.available) {
     const rot = r.rotation || {}, lage = r.aktienlage || {}, am = r.ampel || {};
     const farbe = am.status === "GRÜN" ? "green" : am.status === "GELB" ? "yellow" : am.status === "ROT" ? "red" : "grau";
-    const regel = { "GRÜN": "Minenaktien: bis zu 1 neue pro Tag, max. 2 offen", "GELB": "Minenaktien: nur „Kauf – hohe Qualität“, max. 1 neue und 1 offen", "ROT": "Minenaktien: keine neuen Käufe" }[am.status] || "";
+    const regel = { "GRÜN": "Gold/Silber: Kauf möglich, wenn das Metall selbst stark ist", "GELB": "Gold/Silber: halten, keine Neukäufe", "ROT": "Gold/Silber: nicht investieren" }[am.status] || "";
     const W = r.werte || {}, g = W.GOLD || {}, si = W.SILBER || {}, gdx = W.GOLDMINEN || {}, usd = W.DOLLAR || {};
     const vs = (x, a, b) => (typeof x[a] === "number" && typeof x[b] === "number" && x[b] ? (x[a] / x[b] - 1) * 100 : null);
     const rohText = (k) => {
@@ -1143,7 +1144,7 @@ function renderRohstoffe(r, meld, newsToday, p4c) {
       return n;
     };
     const krit = (am.kriterien || []).map((k) => kritZeile(k.erfuellt, rohText(k))).join("");
-    document.getElementById("rMini").innerHTML = 'Rohstoff-Ampel (gilt nur für Minenaktien): <b style="color:var(--' + (farbe === "grau" ? "muted" : farbe) + ')">' + (am.status || "–") + '</b> · ' + (rot.status || "") + ' – <a href="#rohstoffe" data-tabjump="rohstoffe" style="color:var(--text);">Details</a>';
+    document.getElementById("rMini").innerHTML = 'Rohstoff-Ampel (nur Gold &amp; Silber): <b style="color:var(--' + (farbe === "grau" ? "muted" : farbe) + ')">' + (am.status || "–") + '</b> · ' + (rot.status || "") + ' – <a href="#rohstoffe" data-tabjump="rohstoffe" style="color:var(--text);">Details</a>';
     st.innerHTML = '<div class="dot ' + farbe + '"></div><div><div class="ampel-status">Rohstoff-Ampel: ' + (am.status || "–") + '</div>' +
       '<div class="ampel-reason"><b style="color:var(--text)">' + regel + '</b>' + (am.hinweis ? ' · ' + am.hinweis : "") + '</div>' +
       '<div class="kliste">' + krit + '</div>' +
@@ -1168,22 +1169,22 @@ function renderRohstoffe(r, meld, newsToday, p4c) {
 
     const em = r.empfehlung;
     if (em && em.metalle) {
-      const aktCls = (a) => a.startsWith("Kaufen (") ? "trend-neutral" : a.startsWith("Kaufen") ? "trend-positiv" : a.startsWith("Halten") ? "trend-neutral" : "trend-negativ";
+      const aktCls = (a) => a.startsWith("Kaufen") ? "trend-positiv" : a.startsWith("Halten") ? "trend-neutral" : "trend-negativ";
       const wf = em.veraenderung ? (em.veraenderung.nach === "GRÜN" ? "rgba(46,204,113,.15);color:var(--green)" : em.veraenderung.nach === "ROT" ? "rgba(231,76,60,.15);color:var(--red)" : "rgba(241,196,15,.15);color:var(--yellow)") : "";
       document.getElementById("rEmpf").innerHTML =
         (em.veraenderung ? '<div class="wechsel" style="background:' + wf + '">Neu: ' + em.veraenderung.text + '</div>'
           : '<div class="timestamp" style="margin:0;">Keine Änderung: Ampel ' + (em.status || "–") + (em.seit ? ' seit ' + dDE(em.seit) : "") + ' – die Empfehlung gilt weiter.</div>') +
         '<div class="empf-grid">' + ["GOLD", "SILBER"].filter((k) => em.metalle[k]).map((k) => {
           const m = em.metalle[k];
-          return '<div class="empf"><div class="titel"><span>' + m.name + '</span><span class="trend-badge ' + aktCls(m.aktion) + '">' + m.aktion + (m.hebel === 2 ? " · Faktor 2" : "") + '</span></div>' +
+          return '<div class="empf"><div class="titel"><span>' + m.name + '</span><span class="trend-badge ' + aktCls(m.aktion) + '">' + m.aktion + '</span></div>' +
             '<div style="margin-top:6px;">' + m.text + '</div>' +
-            (m.produkt ? '<div class="prod">Produkt: <b>' + m.produkt.name + '</b><br><span class="timestamp">ISIN ' + m.produkt.isin + '</span></div>' : "") +
-            (m.stop_orientierung_pct ? '<div style="margin-top:6px;">Stop-Orientierung: ca. −' + zahlDE(m.stop_orientierung_pct, 1) + ' % unter Kaufkurs' + (m.hebel === 2 ? ' (gehebelt)' : '') + '</div>' : "") +
+            (m.produkt ? '<div class="prod">Produkt (ungehebelt): <b>' + m.produkt.name + '</b><br><span class="timestamp">ISIN ' + m.produkt.isin + '</span></div>' : "") +
+            (m.stop_orientierung_pct ? '<div style="margin-top:6px;">Stop-Orientierung: ca. −' + zahlDE(m.stop_orientierung_pct, 1) + ' % unter Kaufkurs</div>' : "") +
             '</div>';
         }).join("") + '</div>' +
-        '<div class="timestamp">' + (em.regeln || "") + ' Regel: GRÜN + Metall im Aufwärtstrend und stärker als Aktien → Faktor 2 möglich · GRÜN sonst → nur ungehebelt · GELB → keine neuen Hebel-Käufe · ROT → nicht investieren, Hebel-Positionen verkaufen. Stop-Orientierung = 3 durchschnittliche Tagesbewegungen × Hebel. Keine Anlageberatung – Handelbarkeit und ISIN vor dem Kauf in Trade Republic prüfen.</div>';
-      const kurz = ["GOLD", "SILBER"].filter((k) => em.metalle[k]).map((k) => em.metalle[k].name + ": " + em.metalle[k].aktion + (em.metalle[k].hebel === 2 ? " (2x)" : "")).join(" · ");
-      document.getElementById("rMini").innerHTML += '<br>Empfehlung heute: ' + kurz + (em.veraenderung ? ' – <b>' + em.veraenderung.text + '</b>' : "");
+        '<div class="timestamp">' + (em.regeln || "") + ' Keine Anlageberatung – Handelbarkeit und ISIN vor dem Kauf in Trade Republic prüfen.</div>';
+      const kurz = ["GOLD", "SILBER"].filter((k) => em.metalle[k]).map((k) => em.metalle[k].name + ": " + em.metalle[k].aktion).join(" · ");
+      document.getElementById("rMini").innerHTML += '<br>Gold/Silber heute: ' + kurz + (em.veraenderung ? ' – <b>' + em.veraenderung.text + '</b>' : "");
     }
 
     const bi = r.ampel_bilanz;
@@ -1191,12 +1192,41 @@ function renderRohstoffe(r, meld, newsToday, p4c) {
       document.getElementById("rBilanz").innerHTML = '<div class="bilanz-grid" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr));">' + ["GRÜN", "GELB", "ROT"].map((k) => {
         const b = bi.je_status[k] || {};
         const f = k === "GRÜN" ? "var(--green)" : k === "GELB" ? "var(--yellow)" : "var(--red)";
+        const zeile = (key, l) => b[key] ? '<span style="color:var(--text)">' + l + '</span><span>' + pctFarbe(b[key].schnitt_pct) + '</span><span>' + b[key].im_plus_pct + ' %</span><span>' + pctDE(b[key].schlimmster_pct) + '</span>' : "";
         return '<div class="bilanz-card"><div><span style="color:' + f + ';font-weight:700;">● ' + k + '</span> · ' + (b.tage || 0) + ' Handelstage</div>' +
-          (b.tage ? '<div class="big">' + pctFarbe(b.schnitt_minen_pct) + '</div><div>Ø Goldminen ' + bi.forward_tage + ' Tage danach · ' + pctDE(b.schnitt_ueber_sp500_pct) + ' ggü. S&amp;P 500 · im Plus in ' + b.trefferquote_pct + ' % der Fälle</div>' +
-            (b.produkte ? '<div style="margin-top:8px;border-top:1px solid var(--border);padding-top:6px;display:grid;grid-template-columns:auto auto auto;gap:2px 10px;white-space:nowrap;"><span></span><span>Ø 10 T</span><span>schlimmster</span>' + [["GOLD_1x", "Gold 1x"], ["GOLD_2x", "Gold 2x"], ["SILBER_1x", "Silber 1x"], ["SILBER_2x", "Silber 2x"]].filter(([k]) => b.produkte[k]).map(([k, l]) =>
-              '<span style="color:var(--text)">' + l + '</span><span>' + pctFarbe(b.produkte[k].schnitt_pct) + '</span><span>' + pctDE(b.produkte[k].schlechtester_pct) + '</span>').join("") + '</div>' : "")
+          (b.tage ? '<div style="margin-top:8px;display:grid;grid-template-columns:auto auto auto auto;gap:3px 10px;white-space:nowrap;"><span></span><span>Ø 10 T</span><span>im Plus</span><span>schlimmster</span>' + zeile("GOLD", "Gold") + zeile("SILBER", "Silber") + '</div>'
             : '<div class="big">–</div><div>in diesem Zeitraum nie aufgetreten</div>') + '</div>';
-      }).join("") + '</div><div class="timestamp">Rückblick ' + dDE(bi.zeitraum_von) + ' bis ' + dDE(bi.zeitraum_bis) + ': Für jeden Handelstag wurde die Ampel mit den damaligen Kursen berechnet und gemessen, wie sich der Goldminen-ETF GDX in den ' + bi.forward_tage + ' Handelstagen danach entwickelt hat. Darunter: Ø Ergebnis von Gold und Silber ungehebelt bzw. mit Faktor 2 (täglich neu gehebelt, ca. 1 % Jahreskosten) über dieselben 10 Tage und der schlechteste Fall. Funktioniert die Ampel, sollte Grün klar besser abschneiden als Rot. ' + (bi.hinweis || "") + '</div>';
+      }).join("") + '</div><div class="timestamp">Rückblick ' + dDE(bi.zeitraum_von) + ' bis ' + dDE(bi.zeitraum_bis) + ': Für jeden Handelstag wurde die Ampel mit den damaligen Kursen berechnet und gemessen, wie sich Gold und Silber (ungehebelt) in den ' + bi.forward_tage + ' Handelstagen danach entwickelt haben. Funktioniert die Ampel, sollte Grün klar besser abschneiden als Rot. ' + (bi.hinweis || "") + '</div>';
+    }
+
+    const sim = r.simulation;
+    if (sim && sim.metalle) {
+      const grundCls = (g) => g === "Stop" ? "trend-negativ" : "trend-neutral";
+      document.getElementById("rSim").innerHTML = '<div class="empf-grid">' + ["GOLD", "SILBER"].filter((k) => sim.metalle[k]).map((k) => {
+        const s = sim.metalle[k], name = k === "GOLD" ? "Gold" : "Silber";
+        const besser = typeof s.gesamt_pct === "number" && typeof s.kaufen_und_halten_pct === "number" ? s.gesamt_pct - s.kaufen_und_halten_pct : null;
+        return '<div class="empf"><div class="titel"><span>' + name + '</span><span>' + pctFarbe(s.gesamt_pct) + '</span></div>' +
+          '<div style="margin-top:6px;display:grid;grid-template-columns:1fr auto;gap:3px 10px;">' +
+          '<span>Trades (abgeschlossen)</span><b style="color:var(--text)">' + s.anzahl + (s.offen ? " + 1 offen" : "") + '</b>' +
+          '<span>Gewinner</span><b style="color:var(--text)">' + (s.anzahl ? s.gewinner + " von " + s.anzahl + " (" + s.trefferquote_pct + " %)" : "–") + '</b>' +
+          '<span>Ø je Trade</span><span>' + pctFarbe(s.schnitt_pct) + '</span>' +
+          '<span>bester / schlechtester Trade</span><span>' + pctFarbe(s.bester_pct) + ' / ' + pctFarbe(s.schlechtester_pct) + '</span>' +
+          '<span>Ø Haltedauer</span><b style="color:var(--text)">' + (s.schnitt_tage != null ? zahlDE(s.schnitt_tage, 0) + " Handelstage" : "–") + '</b>' +
+          '<span>Zeit investiert</span><b style="color:var(--text)">' + (s.investiert_pct != null ? s.investiert_pct + " %" : "–") + '</b>' +
+          '<span>Regel gesamt</span><span>' + pctFarbe(s.gesamt_pct) + '</span>' +
+          '<span>Einfach kaufen und halten</span><span>' + pctFarbe(s.kaufen_und_halten_pct) + '</span>' +
+          '</div>' +
+          (besser != null ? '<div style="margin-top:8px;font-weight:600;color:' + (besser >= 0 ? "var(--green)" : "var(--red)") + '">' + (besser >= 0 ? "Regel besser als Kaufen-und-Halten um " : "Regel schlechter als Kaufen-und-Halten um ") + p1(besser) + ' Prozentpunkte</div>' : "") +
+          '</div>';
+      }).join("") + '</div>' +
+      ["GOLD", "SILBER"].filter((k) => sim.metalle[k] && (sim.metalle[k].trades.length || sim.metalle[k].offen)).map((k) => {
+        const s = sim.metalle[k], name = k === "GOLD" ? "Gold" : "Silber";
+        return '<details style="margin-top:10px;"><summary>' + name + ': alle Trades anzeigen</summary><table class="responsive-mobile" style="margin-top:6px;"><thead><tr><th>Einstieg</th><th>Ausstieg</th><th>Tage</th><th>Ergebnis</th><th>Grund</th></tr></thead><tbody>' +
+          s.trades.slice().reverse().map((t) => '<tr><td data-label="Einstieg">' + dDE(t.einstieg_datum) + '</td><td data-label="Ausstieg">' + dDE(t.ausstieg_datum) + '</td><td data-label="Tage">' + t.handelstage + '</td><td data-label="Ergebnis">' + pctFarbe(t.ergebnis_pct) + '</td><td data-label="Grund"><span class="trend-badge ' + grundCls(t.grund) + '">' + t.grund + '</span> <span class="timestamp">Stop −' + zahlDE(t.stop_pct, 1) + ' %</span></td></tr>').join("") +
+          (s.offen ? '<tr><td data-label="Einstieg">' + dDE(s.offen.einstieg_datum) + '</td><td data-label="Ausstieg">noch offen</td><td data-label="Tage">' + s.offen.handelstage + '</td><td data-label="Ergebnis">' + pctFarbe(s.offen.ergebnis_pct) + '</td><td data-label="Grund">–</td></tr>' : "") +
+          '</tbody></table></details>';
+      }).join("") +
+      '<div class="timestamp">Zeitraum ' + dDE(sim.zeitraum_von) + ' bis ' + dDE(sim.zeitraum_bis) + '. ' + (sim.regel || "") + ' Ohne Rotations-Aufwertung (dafür fehlen historische Sektordaten).</div>';
     }
 
     document.getElementById("rChart").innerHTML = rLinienChart(r.chart);
@@ -1214,17 +1244,6 @@ function renderRohstoffe(r, meld, newsToday, p4c) {
       '<div class="timestamp">Schwache Aktienwoche = S&amp;P 500 fällt in der Woche um mehr als ' + Math.abs((r.parameter || {}).spy_woche_schwach || 1) + ' % (' + (az0.wochen_aktien_schwach || "–") + ' von ' + (az0.zeitraum_wochen || "–") + ' Wochen, Ø ' + pctDE(az0.schnitt_aktien_pct) + '). ' +
       'Über 50 % gestiegen und ein positiver Schnitt heißt: läuft in solchen Phasen tatsächlich gegen den Markt. Korrelation −1 = genau gegenläufig, 0 = unabhängig, +1 = läuft mit den Aktien.</div>';
 
-    const minen = r.minen || [];
-    const sek = r.sektor_edelmetalle || {};
-    document.getElementById("rMinen").innerHTML = (minen.length ? '<table class="responsive-mobile"><thead><tr><th>Aktie</th><th>Kurs (USD)</th><th>5 Tage</th><th>20 Tage</th><th>Score</th><th>P4 heute</th></tr></thead><tbody>' +
-      minen.map((m) => {
-        const k = ((p4c && p4c.candidates) || []).find((c) => c.ticker === m.ticker);
-        return '<tr><td data-label="Aktie"><b>' + (TITEL[m.ticker] || m.ticker) + '</b> <span class="cand-sector">' + m.ticker + '</span></td><td data-label="Kurs">' + zahlDE(m.close, 2) + '</td>' +
-          '<td data-label="5 Tage">' + pctFarbe(m.chg_5d_pct) + '</td><td data-label="20 Tage">' + pctFarbe(m.chg_20d_pct) + '</td>' +
-          '<td data-label="Score">' + (m.score != null ? '<span class="score-badge ' + stufeCls(m.stufe, m.score) + '">' + (m.stufe || "") + " · " + Math.round(m.score) + '</span>' : "–") + '</td>' +
-          '<td data-label="P4 heute">' + (k ? '<span class="emp-badge emp-kauf">Kandidat</span>' : '<span class="timestamp">–</span>') + '</td></tr>';
-      }).join("") + '</tbody></table>' : '<div class="placeholder">Die Minenaktien erscheinen nach dem nächsten Feed-Lauf.</div>') +
-      (sek.rang ? '<div class="timestamp">Sektor Edelmetalle: Rang ' + sek.rang + ' von allen Sektoren · relativ zum S&amp;P 500 auf 20 Tage ' + pctDE(sek.rs_20d_vs_spy) + '. Die Minen werden wie alle Aktien gescort (gleiche Regeln, Risikobudget, max. 2 je Sektor) und zählen nicht zur Markt-Breadth.</div>' : "");
   }
 
   // Meldungen: gesammelte Rohstoff-/Zentralbank-Meldungen + heutige Marktmeldungen zum Thema Rohstoffe
