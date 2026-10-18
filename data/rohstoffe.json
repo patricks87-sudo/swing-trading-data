@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at_utc": "2026-10-18T12:48:48.121574+00:00",
+  "generated_at_utc": "2026-10-18T14:28:08.618472+00:00",
   "quelle": "yfinance (Terminkontrakte GC=F, SI=F, HG=F, CL=F; GDX; DX-Y.NYB; SPY)",
   "werte": {
     "GOLD": {
@@ -18,12 +18,12 @@
       "rs_20d_vs_spy": -5.71,
       "korrelation_60d": 0.35,
       "antizyklik": {
-        "wochen_aktien_schwach": 27,
-        "davon_gestiegen": 13,
-        "quote_pct": 48.0,
-        "schnitt_pct": -0.27,
-        "schnitt_aktien_pct": -2.14,
-        "zeitraum_wochen": 104
+        "wochen_aktien_schwach": 34,
+        "davon_gestiegen": 17,
+        "quote_pct": 50.0,
+        "schnitt_pct": -0.07,
+        "schnitt_aktien_pct": -2.19,
+        "zeitraum_wochen": 156
       },
       "name": "Gold",
       "symbol": "GC=F",
@@ -32,26 +32,26 @@
       "signal": "Gegenwind"
     },
     "SILBER": {
-      "close": 56.99,
+      "close": 57.31,
       "datum": "2026-10-16",
-      "chg_5d_pct": -6.06,
-      "chg_20d_pct": -14.37,
-      "chg_60d_pct": -1.39,
-      "sma50": 63.9,
+      "chg_5d_pct": -5.55,
+      "chg_20d_pct": -13.9,
+      "chg_60d_pct": -0.85,
+      "sma50": 63.91,
       "sma200": 72.11,
       "ueber_sma50": false,
       "ueber_sma200": false,
       "trend": "abwärts",
-      "abstand_52w_hoch_pct": -50.47,
-      "rs_20d_vs_spy": -14.57,
-      "korrelation_60d": 0.41,
+      "abstand_52w_hoch_pct": -50.2,
+      "rs_20d_vs_spy": -14.1,
+      "korrelation_60d": 0.4,
       "antizyklik": {
-        "wochen_aktien_schwach": 27,
-        "davon_gestiegen": 12,
+        "wochen_aktien_schwach": 34,
+        "davon_gestiegen": 15,
         "quote_pct": 44.0,
-        "schnitt_pct": -2.32,
-        "schnitt_aktien_pct": -2.14,
-        "zeitraum_wochen": 104
+        "schnitt_pct": -2.06,
+        "schnitt_aktien_pct": -2.19,
+        "zeitraum_wochen": 156
       },
       "name": "Silber",
       "symbol": "SI=F",
@@ -74,12 +74,12 @@
       "rs_20d_vs_spy": -0.83,
       "korrelation_60d": 0.45,
       "antizyklik": {
-        "wochen_aktien_schwach": 27,
-        "davon_gestiegen": 8,
-        "quote_pct": 30.0,
-        "schnitt_pct": -1.87,
-        "schnitt_aktien_pct": -2.14,
-        "zeitraum_wochen": 104
+        "wochen_aktien_schwach": 34,
+        "davon_gestiegen": 11,
+        "quote_pct": 32.0,
+        "schnitt_pct": -1.64,
+        "schnitt_aktien_pct": -2.19,
+        "zeitraum_wochen": 156
       },
       "name": "Kupfer",
       "symbol": "HG=F",
@@ -88,32 +88,32 @@
       "signal": "Neutral"
     },
     "OEL": {
-      "close": 101.41,
+      "close": 99.02,
       "datum": "2026-10-16",
-      "chg_5d_pct": 10.41,
-      "chg_20d_pct": 1.11,
-      "chg_60d_pct": 10.0,
-      "sma50": 90.98,
-      "sma200": 84.19,
+      "chg_5d_pct": 7.81,
+      "chg_20d_pct": -1.28,
+      "chg_60d_pct": 7.41,
+      "sma50": 90.93,
+      "sma200": 84.18,
       "ueber_sma50": true,
       "ueber_sma200": true,
       "trend": "aufwärts",
-      "abstand_52w_hoch_pct": -10.22,
-      "rs_20d_vs_spy": 0.9,
-      "korrelation_60d": -0.53,
+      "abstand_52w_hoch_pct": -12.33,
+      "rs_20d_vs_spy": -1.48,
+      "korrelation_60d": -0.52,
       "antizyklik": {
-        "wochen_aktien_schwach": 27,
-        "davon_gestiegen": 13,
-        "quote_pct": 48.0,
-        "schnitt_pct": 1.7,
-        "schnitt_aktien_pct": -2.14,
-        "zeitraum_wochen": 104
+        "wochen_aktien_schwach": 34,
+        "davon_gestiegen": 14,
+        "quote_pct": 41.0,
+        "schnitt_pct": 0.68,
+        "schnitt_aktien_pct": -2.19,
+        "zeitraum_wochen": 156
       },
       "name": "Rohöl WTI",
       "symbol": "CL=F",
       "einheit": "USD je Barrel",
       "available": true,
-      "signal": "Rückenwind"
+      "signal": "Neutral"
     },
     "GOLDMINEN": {
       "close": 87.71,
@@ -130,12 +130,12 @@
       "rs_20d_vs_spy": -8.34,
       "korrelation_60d": 0.41,
       "antizyklik": {
-        "wochen_aktien_schwach": 27,
-        "davon_gestiegen": 11,
-        "quote_pct": 41.0,
-        "schnitt_pct": -1.64,
-        "schnitt_aktien_pct": -2.14,
-        "zeitraum_wochen": 104
+        "wochen_aktien_schwach": 34,
+        "davon_gestiegen": 12,
+        "quote_pct": 35.0,
+        "schnitt_pct": -1.66,
+        "schnitt_aktien_pct": -2.19,
+        "zeitraum_wochen": 156
       },
       "name": "Goldminen (GDX)",
       "symbol": "GDX",
@@ -158,12 +158,12 @@
       "rs_20d_vs_spy": 1.41,
       "korrelation_60d": -0.27,
       "antizyklik": {
-        "wochen_aktien_schwach": 27,
-        "davon_gestiegen": 15,
-        "quote_pct": 56.0,
-        "schnitt_pct": 0.08,
-        "schnitt_aktien_pct": -2.14,
-        "zeitraum_wochen": 104
+        "wochen_aktien_schwach": 34,
+        "davon_gestiegen": 20,
+        "quote_pct": 59.0,
+        "schnitt_pct": 0.12,
+        "schnitt_aktien_pct": -2.19,
+        "zeitraum_wochen": 156
       },
       "name": "US-Dollar-Index",
       "symbol": "DX-Y.NYB",
@@ -204,7 +204,70 @@
     "farbe": "grau",
     "text": "Aktien ohne Schwächesignal, Edelmetalle ohne deutliche Überrendite."
   },
-  "gold_silber_ratio": 73.4,
+  "ampel": {
+    "max_neue_positionen": 0,
+    "max_offene_positionen": 0,
+    "nur_hohe_qualitaet": false,
+    "status": "ROT",
+    "kriterien": [
+      {
+        "kriterium": "Gold über SMA50",
+        "erfuellt": false
+      },
+      {
+        "kriterium": "Gold-Trend intakt (SMA50 über SMA200)",
+        "erfuellt": false
+      },
+      {
+        "kriterium": "Silber über SMA50",
+        "erfuellt": false
+      },
+      {
+        "kriterium": "Goldminen (GDX) über SMA50",
+        "erfuellt": false
+      },
+      {
+        "kriterium": "Gold stärker als S&P 500 (20 Tage)",
+        "erfuellt": false
+      },
+      {
+        "kriterium": "US-Dollar unter SMA50",
+        "erfuellt": false
+      }
+    ],
+    "kriterien_erfuellt": 0,
+    "kriterien_unbekannt": 0,
+    "hinweis": null,
+    "gilt_fuer_sektor": "Edelmetalle",
+    "kurztext": "Rohstoff-Ampel ROT: 0/6 Kriterien – keine neuen Minenaktien"
+  },
+  "ampel_bilanz": {
+    "zeitraum_von": "2024-08-02",
+    "zeitraum_bis": "2026-10-02",
+    "forward_tage": 10,
+    "je_status": {
+      "GRÜN": {
+        "tage": 296,
+        "schnitt_minen_pct": 2.03,
+        "schnitt_ueber_sp500_pct": 1.53,
+        "trefferquote_pct": 63.0
+      },
+      "GELB": {
+        "tage": 119,
+        "schnitt_minen_pct": 1.89,
+        "schnitt_ueber_sp500_pct": 1.08,
+        "trefferquote_pct": 61.0
+      },
+      "ROT": {
+        "tage": 132,
+        "schnitt_minen_pct": 1.9,
+        "schnitt_ueber_sp500_pct": 0.55,
+        "trefferquote_pct": 52.0
+      }
+    },
+    "hinweis": "Ohne Aufwertung durch Rotation (braucht historische Sektordaten). Überlappende 10-Tage-Fenster – Tage sind nicht unabhängig."
+  },
+  "gold_silber_ratio": 73.0,
   "minen": [
     {
       "ticker": "NEM",
@@ -641,7 +704,7 @@
           74.0,
           69.48,
           71.09,
-          71.29
+          71.68
         ]
       },
       {
