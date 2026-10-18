@@ -37,6 +37,11 @@ STATUS = "/tmp/journal_status"
 
 HALTEDAUER_TAGE = 10
 AKTIONEN = {"kauf", "verkauf", "storno"}
+# "swing"  = Trade nach den Regeln des Systems (10-Tage-Ausstieg, Risikobudget)
+# "bestand" = Aktie, die der Nutzer schon vorher bzw. unabhaengig vom System
+#             haelt; wird bewertet und beobachtet, aber ohne 10-Tage-Regel und
+#             ohne Einfluss auf die Swing-Kennzahlen.
+ARTEN = {"swing", "bestand"}
 
 
 def _now():
@@ -99,6 +104,31 @@ def aktueller_feed():
     return best
 
 
+def kurse_yfinance(tickers, eurusd):
+    """Aktuelle Kurse in EUR fuer Titel, die nicht in der Watchlist stehen
+    (z. B. Altbestand). Nur im GitHub-Actions-Lauf verfuegbar; Fehler werden
+    ignoriert (dann bleibt der Kurs leer)."""
+    out = {}
+    if not tickers:
+        return out
+    try:
+        import yfinance as yf
+    except Exception:
+        return out
+    for t in tickers:
+        try:
+            fi = yf.Ticker(t).fast_info
+            px = float(fi["last_price"])
+            cur = str(fi.get("currency") or "USD").upper()
+            if cur == "EUR":
+                out[t] = round(px, 2)
+            elif cur == "USD" and isinstance(eurusd, (int, float)):
+                out[t] = round(px * eurusd, 2)
+        except Exception as e:
+            print(f"Kein Kurs fuer {t}: {e}")
+    return out
+
+
 def kurse_eur(feed):
     out = {}
     if not feed:
@@ -135,6 +165,9 @@ def pruefe(roh, journal, namen):
     if aktion not in AKTIONEN:
         raise ValueError("Aktion muss Kauf, Verkauf oder Storno sein.")
     e = {"aktion": aktion, "test": bool(roh.get("test"))}
+    art = str(roh.get("art") or "swing").strip().lower()
+    if art not in ARTEN:
+        raise ValueError("Art muss Swing-Trade oder Bestand sein.")
     if aktion == "storno":
         ref = str(roh.get("ref", "")).strip().upper()
         ziel = next((x for x in journal["eintraege"] if x["id"] == ref), None)
@@ -161,10 +194,16 @@ def pruefe(roh, journal, namen):
         raise ValueError("Datum ungültig (Format JJJJ-MM-TT).")
     if datum > date.today() + timedelta(days=1):
         raise ValueError("Datum liegt in der Zukunft.")
+    if aktion == "verkauf":
+        # Art folgt der offenen Position
+        offen = ableiten(journal["eintraege"])[0].get(str(roh.get("ticker", "")).strip().upper())
+        if offen:
+            art = offen.get("art", "swing")
     gebuehr = _num(roh.get("gebuehr_eur"))
     stop = _num(roh.get("stop_eur"))
     e.update({
         "datum": datum.isoformat(),
+        "art": art,
         "ticker": ticker,
         "name": (str(roh.get("name") or "").strip() or namen.get(ticker) or ticker)[:80],
         "stueck": stueck,
@@ -198,7 +237,8 @@ def ableiten(eintraege):
             if not p:
                 p = pos[t] = {"ticker": t, "name": x.get("name", t), "stueck": 0.0, "kosten_eur": 0.0,
                               "kaufdatum": x["datum"], "gebuehren_eur": 0.0, "realisiert_eur": 0.0,
-                              "kaeufe": [], "grund": x.get("grund", ""), "stueck_max": 0.0, "einsatz_eur": 0.0}
+                              "kaeufe": [], "grund": x.get("grund", ""), "stueck_max": 0.0, "einsatz_eur": 0.0,
+                              "art": x.get("art", "swing")}
             p["stueck"] += x["stueck"]
             p["kosten_eur"] += x["stueck"] * x["kurs_eur"] + x["gebuehr_eur"]
             p["gebuehren_eur"] += x["gebuehr_eur"]
@@ -222,7 +262,8 @@ def ableiten(eintraege):
             if p["stueck"] <= 1e-9:
                 einsatz = p["realisiert_eur"]
                 trades.append({
-                    "ticker": t, "name": p["name"], "kaufdatum": p["kaufdatum"], "verkaufsdatum": x["datum"],
+                    "ticker": t, "name": p["name"], "art": p.get("art", "swing"),
+                    "kaufdatum": p["kaufdatum"], "verkaufsdatum": x["datum"],
                     "handelstage": _handelstage(date.fromisoformat(p["kaufdatum"]), date.fromisoformat(x["datum"])),
                     "stueck": round(p["stueck_max"], 4),
                     "ergebnis_eur": round(einsatz, 2),
@@ -234,10 +275,13 @@ def ableiten(eintraege):
     return pos, trades
 
 
-def bewerten(journal):
+def bewerten(journal, mit_yfinance=False):
     feed = aktueller_feed()
     kurse, stand, _ = kurse_eur(feed)
     pos, trades = ableiten(journal["eintraege"])
+    fehlend = [t for t in pos if t not in kurse]
+    if mit_yfinance and fehlend:
+        kurse.update(kurse_yfinance(fehlend, (feed or {}).get("eurusd")))
     heute = date.today()
     positionen = []
     for t, p in sorted(pos.items(), key=lambda kv: kv[1]["kaufdatum"]):
@@ -246,12 +290,14 @@ def bewerten(journal):
         q = {
             "id": f"{t}-{p['kaufdatum']}",
             "ticker": t, "name": p["name"],
+            "art": p.get("art", "swing"),
+            "sektor": ((feed or {}).get("watchlist", {}).get(t) or {}).get("sector"),
             "stueck": round(p["stueck"], 4),
             "einstand_eur": round(ek, 4),
             "kapital_eur": round(p["kosten_eur"], 2),
             "kaufdatum": p["kaufdatum"],
             "handelstage_gehalten": _handelstage(kauf, heute),
-            "verkauf_spaetestens": _plus_handelstage(kauf, HALTEDAUER_TAGE).isoformat(),
+            "verkauf_spaetestens": _plus_handelstage(kauf, HALTEDAUER_TAGE).isoformat() if p.get("art", "swing") == "swing" else None,
             "stop_eur": p.get("stop_eur"),
             "grund": p.get("grund", ""),
             "teilrealisiert_eur": round(p["realisiert_eur"], 2),
@@ -265,26 +311,36 @@ def bewerten(journal):
             q["unrealisiert_pct"] = round((k / ek - 1) * 100, 2) if ek else None
             if q.get("stop_eur") and k <= q["stop_eur"]:
                 q["hinweis"] = "Stop unterschritten"
-        if q["handelstage_gehalten"] >= HALTEDAUER_TAGE:
+        if q["art"] == "swing" and q["handelstage_gehalten"] >= HALTEDAUER_TAGE:
             q["hinweis"] = (q.get("hinweis", "") + " · " if q.get("hinweis") else "") + "10-Tage-Regel: verkaufen"
         positionen.append(q)
 
-    realisiert = sum(tr["ergebnis_eur"] for tr in trades) + sum(p["realisiert_eur"] for p in pos.values())
-    unreal = [q["unrealisiert_eur"] for q in positionen if q.get("unrealisiert_eur") is not None]
-    gewinner = [tr for tr in trades if tr["ergebnis_eur"] > 0]
+    def kennzahlen(art=None):
+        tr = [t for t in trades if art is None or t.get("art", "swing") == art]
+        ps = [q for q in positionen if art is None or q["art"] == art]
+        offen_real = sum(p["realisiert_eur"] for p in pos.values() if art is None or p.get("art", "swing") == art)
+        unreal = [q["unrealisiert_eur"] for q in ps if q.get("unrealisiert_eur") is not None]
+        gew = [t for t in tr if t["ergebnis_eur"] > 0]
+        return {
+            "realisiert_eur": round(sum(t["ergebnis_eur"] for t in tr) + offen_real, 2),
+            "unrealisiert_eur": round(sum(unreal), 2) if unreal else 0.0,
+            "trades_abgeschlossen": len(tr),
+            "trefferquote_pct": round(len(gew) / len(tr) * 100) if tr else None,
+            "schnitt_trade_eur": round(sum(t["ergebnis_eur"] for t in tr) / len(tr), 2) if tr else None,
+            "offene_positionen": len(ps),
+            "investiert_eur": round(sum(q["kapital_eur"] for q in ps), 2),
+            "depotwert_eur": round(sum(q.get("wert_eur") or q["kapital_eur"] for q in ps), 2),
+            "positionen_ohne_kurs": sum(1 for q in ps if q.get("aktueller_kurs_eur") is None),
+        }
+
     journal["positionen"] = positionen
     journal["trades"] = sorted(trades, key=lambda tr: tr["verkaufsdatum"], reverse=True)
-    journal["kennzahlen"] = {
-        "realisiert_eur": round(realisiert, 2),
-        "unrealisiert_eur": round(sum(unreal), 2) if unreal else 0.0,
-        "gebuehren_eur": round(sum(x.get("gebuehr_eur", 0) for x in journal["eintraege"]
-                                   if x["aktion"] in ("kauf", "verkauf") and not x.get("storniert") and not x.get("test")), 2),
-        "trades_abgeschlossen": len(trades),
-        "trefferquote_pct": round(len(gewinner) / len(trades) * 100) if trades else None,
-        "schnitt_trade_eur": round(sum(tr["ergebnis_eur"] for tr in trades) / len(trades), 2) if trades else None,
-        "offene_positionen": len(positionen),
-        "investiert_eur": round(sum(q["kapital_eur"] for q in positionen), 2),
-    }
+    journal["kennzahlen"] = kennzahlen()
+    journal["kennzahlen"]["gebuehren_eur"] = round(sum(
+        x.get("gebuehr_eur", 0) for x in journal["eintraege"]
+        if x["aktion"] in ("kauf", "verkauf") and not x.get("storniert") and not x.get("test")), 2)
+    journal["kennzahlen_swing"] = kennzahlen("swing")
+    journal["kennzahlen_bestand"] = kennzahlen("bestand")
     journal["kurse_stand_utc"] = stand
     journal["generated_at_utc"] = _now()
 
@@ -332,14 +388,14 @@ def verarbeite_issue():
                 x["storniert"] = True
                 x["storniert_durch"] = e["id"]
     journal["eintraege"].append(e)
-    journal, portfolio = bewerten(journal)
+    journal, portfolio = bewerten(journal, mit_yfinance=True)
     _save(JOURNAL, journal)
     _save(PORTFOLIO, portfolio)
 
     if e["aktion"] == "storno":
         text = f"Eintrag **{e['ref']}** storniert (Storno-Nr. {e['id']})."
     else:
-        wort = "Kauf" if e["aktion"] == "kauf" else "Verkauf"
+        wort = ("Bestand" if e.get("art") == "bestand" else "Kauf") if e["aktion"] == "kauf" else "Verkauf"
         text = (f"{wort} gespeichert als **{e['id']}**: {e['stueck']:g} × {e['name']} ({e['ticker']}) "
                 f"zu {e['kurs_eur']:.2f} € am {e['datum']}, Gebühr {e['gebuehr_eur']:.2f} €.")
         if e.get("test"):
@@ -359,11 +415,11 @@ def _antwort(status, text):
     print(f"[{status}] {text}")
 
 
-def nur_bewerten():
+def nur_bewerten(mit_yfinance=True):
     journal = _load(JOURNAL, None)
     if not journal:
         return
-    journal, portfolio = bewerten(journal)
+    journal, portfolio = bewerten(journal, mit_yfinance=mit_yfinance)
     _save(JOURNAL, journal)
     _save(PORTFOLIO, portfolio)
 
