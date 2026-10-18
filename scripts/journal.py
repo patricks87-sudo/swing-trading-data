@@ -135,6 +135,33 @@ def kurse_yfinance(tickers, eurusd):
     return out
 
 
+def isin_zu_ticker(isin):
+    """Sucht zu einer ISIN den Yahoo-Ticker (bevorzugt Xetra .DE, dann USA)."""
+    try:
+        import yfinance as yf
+
+        quotes = yf.Search(isin, max_results=10).quotes
+    except Exception as e:
+        print(f"ISIN-Suche fehlgeschlagen ({isin}): {e}")
+        return None, None
+    quotes = [q for q in quotes if q.get("symbol") and q.get("quoteType") in ("EQUITY", "ETF", None)]
+    if not quotes:
+        return None, None
+
+    def rang(q):
+        sym = q["symbol"]
+        if sym.endswith(".DE"):
+            return 0
+        if "." not in sym:
+            return 1
+        if sym.endswith(".F"):
+            return 2
+        return 3
+
+    q = sorted(quotes, key=rang)[0]
+    return q["symbol"].upper(), q.get("longname") or q.get("shortname")
+
+
 def kurse_eur(feed):
     out = {}
     if not feed:
@@ -186,8 +213,19 @@ def pruefe(roh, journal, namen):
         return e
 
     ticker = str(roh.get("ticker", "")).strip().upper()
-    if not re.fullmatch(r"[A-Z][A-Z0-9.\-]{0,9}", ticker):
-        raise ValueError("Ticker fehlt oder ist ungültig (z. B. NVDA).")
+    isin = str(roh.get("isin", "")).strip().upper()
+    if isin:
+        if not re.fullmatch(r"[A-Z]{2}[A-Z0-9]{9}[0-9]", isin):
+            raise ValueError(f"ISIN {isin} ist ungültig.")
+        if not ticker:
+            ticker, gefunden_name = isin_zu_ticker(isin)
+            if not ticker:
+                raise ValueError(f"Zur ISIN {isin} wurde kein Börsenticker gefunden. Bitte den Ticker direkt eingeben (z. B. RHM.DE).")
+            if gefunden_name and not roh.get("name"):
+                roh["name"] = gefunden_name
+        e["isin"] = isin
+    if not re.fullmatch(r"[A-Z0-9][A-Z0-9.\-]{0,14}", ticker):
+        raise ValueError("Aktie nicht erkannt – bitte Namen aus der Vorschlagsliste wählen, den Ticker (z. B. NVDA, RHM.DE) oder die ISIN eingeben.")
     stueck = _num(roh.get("stueck"))
     kurs = _num(roh.get("kurs_eur"))
     if not stueck or stueck <= 0:
@@ -244,7 +282,7 @@ def ableiten(eintraege):
                 p = pos[t] = {"ticker": t, "name": x.get("name", t), "stueck": 0.0, "kosten_eur": 0.0,
                               "kaufdatum": x["datum"], "gebuehren_eur": 0.0, "realisiert_eur": 0.0,
                               "kaeufe": [], "grund": x.get("grund", ""), "stueck_max": 0.0, "einsatz_eur": 0.0,
-                              "art": x.get("art", "swing")}
+                              "art": x.get("art", "swing"), "isin": x.get("isin")}
             p["stueck"] += x["stueck"]
             p["kosten_eur"] += x["stueck"] * x["kurs_eur"] + x["gebuehr_eur"]
             p["gebuehren_eur"] += x["gebuehr_eur"]
@@ -297,6 +335,7 @@ def bewerten(journal, mit_yfinance=False):
             "id": f"{t}-{p['kaufdatum']}",
             "ticker": t, "name": p["name"],
             "art": p.get("art", "swing"),
+            "isin": p.get("isin"),
             "sektor": ((feed or {}).get("watchlist", {}).get(t) or {}).get("sector"),
             "stueck": round(p["stueck"], 4),
             "einstand_eur": round(ek, 4),
