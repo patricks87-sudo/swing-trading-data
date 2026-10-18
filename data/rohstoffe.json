@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at_utc": "2026-10-18T14:28:08.618472+00:00",
+  "generated_at_utc": "2026-10-18T14:55:50.239564+00:00",
   "quelle": "yfinance (Terminkontrakte GC=F, SI=F, HG=F, CL=F; GDX; DX-Y.NYB; SPY)",
   "werte": {
     "GOLD": {
@@ -15,6 +15,7 @@
       "ueber_sma200": false,
       "trend": "abwärts",
       "abstand_52w_hoch_pct": -21.38,
+      "tagesbewegung_pct": 0.84,
       "rs_20d_vs_spy": -5.71,
       "korrelation_60d": 0.35,
       "antizyklik": {
@@ -43,6 +44,7 @@
       "ueber_sma200": false,
       "trend": "abwärts",
       "abstand_52w_hoch_pct": -50.2,
+      "tagesbewegung_pct": 1.75,
       "rs_20d_vs_spy": -14.1,
       "korrelation_60d": 0.4,
       "antizyklik": {
@@ -71,6 +73,7 @@
       "ueber_sma200": true,
       "trend": "seitwärts",
       "abstand_52w_hoch_pct": -3.38,
+      "tagesbewegung_pct": 0.87,
       "rs_20d_vs_spy": -0.83,
       "korrelation_60d": 0.45,
       "antizyklik": {
@@ -99,6 +102,7 @@
       "ueber_sma200": true,
       "trend": "aufwärts",
       "abstand_52w_hoch_pct": -12.33,
+      "tagesbewegung_pct": 1.88,
       "rs_20d_vs_spy": -1.48,
       "korrelation_60d": -0.52,
       "antizyklik": {
@@ -127,6 +131,7 @@
       "ueber_sma200": false,
       "trend": "seitwärts",
       "abstand_52w_hoch_pct": -24.28,
+      "tagesbewegung_pct": 2.11,
       "rs_20d_vs_spy": -8.34,
       "korrelation_60d": 0.41,
       "antizyklik": {
@@ -155,6 +160,7 @@
       "ueber_sma200": true,
       "trend": "aufwärts",
       "abstand_52w_hoch_pct": -0.72,
+      "tagesbewegung_pct": 0.28,
       "rs_20d_vs_spy": 1.41,
       "korrelation_60d": -0.27,
       "antizyklik": {
@@ -184,6 +190,7 @@
     "ueber_sma200": true,
     "trend": "seitwärts",
     "abstand_52w_hoch_pct": -2.03,
+    "tagesbewegung_pct": 0.5,
     "name": "S&P 500",
     "symbol": "SPY"
   },
@@ -250,19 +257,85 @@
         "tage": 296,
         "schnitt_minen_pct": 2.03,
         "schnitt_ueber_sp500_pct": 1.53,
-        "trefferquote_pct": 63.0
+        "trefferquote_pct": 63.0,
+        "produkte": {
+          "GOLD_1x": {
+            "schnitt_pct": 1.55,
+            "im_plus_pct": 65.0,
+            "schlechtester_pct": -16.03
+          },
+          "GOLD_2x": {
+            "schnitt_pct": 2.97,
+            "im_plus_pct": 64.0,
+            "schlechtester_pct": -29.97
+          },
+          "SILBER_1x": {
+            "schnitt_pct": 2.71,
+            "im_plus_pct": 63.0,
+            "schlechtester_pct": -33.75
+          },
+          "SILBER_2x": {
+            "schnitt_pct": 4.92,
+            "im_plus_pct": 62.0,
+            "schlechtester_pct": -66.46
+          }
+        }
       },
       "GELB": {
         "tage": 119,
         "schnitt_minen_pct": 1.89,
         "schnitt_ueber_sp500_pct": 1.08,
-        "trefferquote_pct": 61.0
+        "trefferquote_pct": 61.0,
+        "produkte": {
+          "GOLD_1x": {
+            "schnitt_pct": 0.34,
+            "im_plus_pct": 59.0,
+            "schlechtester_pct": -14.62
+          },
+          "GOLD_2x": {
+            "schnitt_pct": 0.71,
+            "im_plus_pct": 59.0,
+            "schlechtester_pct": -27.79
+          },
+          "SILBER_1x": {
+            "schnitt_pct": 1.15,
+            "im_plus_pct": 59.0,
+            "schlechtester_pct": -20.08
+          },
+          "SILBER_2x": {
+            "schnitt_pct": 2.36,
+            "im_plus_pct": 57.0,
+            "schlechtester_pct": -37.31
+          }
+        }
       },
       "ROT": {
         "tage": 132,
         "schnitt_minen_pct": 1.9,
         "schnitt_ueber_sp500_pct": 0.55,
-        "trefferquote_pct": 52.0
+        "trefferquote_pct": 52.0,
+        "produkte": {
+          "GOLD_1x": {
+            "schnitt_pct": 0.58,
+            "im_plus_pct": 52.0,
+            "schlechtester_pct": -8.56
+          },
+          "GOLD_2x": {
+            "schnitt_pct": 1.05,
+            "im_plus_pct": 50.0,
+            "schlechtester_pct": -16.74
+          },
+          "SILBER_1x": {
+            "schnitt_pct": 0.28,
+            "im_plus_pct": 52.0,
+            "schlechtester_pct": -15.55
+          },
+          "SILBER_2x": {
+            "schnitt_pct": 0.35,
+            "im_plus_pct": 52.0,
+            "schlechtester_pct": -29.31
+          }
+        }
       }
     },
     "hinweis": "Ohne Aufwertung durch Rotation (braucht historische Sektordaten). Überlappende 10-Tage-Fenster – Tage sind nicht unabhängig."
@@ -977,6 +1050,55 @@
     "rs_rotation_min": 3.0,
     "fuehrer_fall_5d": -2.0,
     "spy_woche_schwach": -1.0
+  },
+  "empfehlung": {
+    "status": "ROT",
+    "vorher": null,
+    "seit": null,
+    "veraenderung": null,
+    "metalle": {
+      "GOLD": {
+        "name": "Gold",
+        "aktion": "Nicht investieren",
+        "hebel": 0,
+        "text": "Edelmetalle schwach – kein Einstieg. Gehebelte Gold-Positionen verkaufen, ungehebelte kritisch prüfen.",
+        "produkt": null,
+        "stop_orientierung_pct": null,
+        "tagesbewegung_pct": 0.84
+      },
+      "SILBER": {
+        "name": "Silber",
+        "aktion": "Nicht investieren",
+        "hebel": 0,
+        "text": "Edelmetalle schwach – kein Einstieg. Gehebelte Silber-Positionen verkaufen, ungehebelte kritisch prüfen.",
+        "produkt": null,
+        "stop_orientierung_pct": null,
+        "tagesbewegung_pct": 1.75
+      }
+    },
+    "regeln": "Nur Hinweis, kein System-Trade. Gehebelte Produkte (Faktor 2) werden täglich neu gehebelt: in Seitwärtsphasen verlieren sie auch ohne Kursverlust des Metalls an Wert – nur kurz halten (Richtwert bis 10 Handelstage) und spätestens verkaufen, wenn die Ampel auf ROT springt.",
+    "produkte": {
+      "GOLD": {
+        "1x": {
+          "name": "Xetra-Gold (physisch hinterlegt)",
+          "isin": "DE000A0S9GB0"
+        },
+        "2x": {
+          "name": "WisdomTree Gold 2x Daily Leveraged",
+          "isin": "JE00B2NFTL95"
+        }
+      },
+      "SILBER": {
+        "1x": {
+          "name": "WisdomTree Physical Silver",
+          "isin": "JE00B1VS3333"
+        },
+        "2x": {
+          "name": "WisdomTree Silver 2x Daily Leveraged",
+          "isin": "JE00B2NFTS64"
+        }
+      }
+    }
   },
   "run": "p4"
 }
