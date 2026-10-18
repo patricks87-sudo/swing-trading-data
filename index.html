@@ -132,6 +132,13 @@
   .btn-sm:hover { color: var(--text); border-color: var(--red); }
   .jhint { color: var(--muted); font-size: 12px; margin-top: 10px; line-height: 1.5; }
   .jmsg { margin-top: 10px; font-size: 13px; }
+  .suche { position: relative; }
+  .vorschlaege { position: absolute; left: 0; right: 0; top: 100%; z-index: 20; margin: 4px 0 0 0; padding: 4px 0; list-style: none; background: var(--card); border: 1px solid var(--border); border-radius: 8px; max-height: 280px; overflow-y: auto; box-shadow: 0 8px 24px rgba(0,0,0,.45); }
+  .vorschlaege[hidden] { display: none; }
+  .vorschlaege li { padding: 8px 10px; cursor: pointer; display: flex; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--text); }
+  .vorschlaege li .tk { color: var(--muted); font-size: 12px; flex-shrink: 0; }
+  .vorschlaege li.aktiv, .vorschlaege li:hover { background: rgba(46,204,113,.15); }
+  .vorschlaege li.hinweis { color: var(--muted); cursor: default; font-style: italic; }
   .storniert td { text-decoration: line-through; color: #6b7280; }
   /* Mobile: die datenreiche Tabelle (Kandidaten-Tracking) wird unter 640px
      zu Karten mit Label:Wert-Paaren statt einer gequetschten Tabelle -
@@ -214,7 +221,7 @@
       <label>Aktion<select name="aktion"><option value="kauf">Kauf</option><option value="verkauf">Verkauf</option></select></label>
       <label data-nur="kauf">Art<select name="art"><option value="swing">Swing-Trade (System)</option><option value="bestand">Bestand (unabhängig vom System)</option></select></label>
       <label>Datum<input type="date" name="datum" required></label>
-      <label>Aktie (Name, Ticker oder ISIN)<input name="ticker" list="jticker" placeholder="z. B. Rheinmetall, NVDA oder DE0007030033" required></label>
+      <label class="suche">Aktie (Name oder Ticker)<input name="ticker" placeholder="Name tippen, z. B. Rhein…" autocomplete="off" required><ul class="vorschlaege" id="jvorschlaege" hidden></ul></label>
       <label>Stück<input name="stueck" inputmode="decimal" placeholder="z. B. 12" required></label>
       <label>Kurs je Stück (€)<input name="kurs_eur" inputmode="decimal" placeholder="z. B. 154,20" required></label>
       <label>Gebühr (€)<input name="gebuehr_eur" inputmode="decimal" value="1,00"></label>
@@ -227,9 +234,8 @@
       <label class="chk full"><input type="checkbox" name="test"> Testeintrag (wird gespeichert, zählt aber nicht fürs Depot)</label>
       <div class="full"><button class="btn" type="submit">Eintrag absenden</button></div>
     </form>
-    <datalist id="jticker"></datalist>
     <div id="jmsg" class="jmsg"></div>
-    <div class="jhint">So funktioniert's: Nach „Eintrag absenden“ öffnet sich GitHub mit dem fertig ausgefüllten Eintrag – dort nur noch auf <b>„Create“</b> klicken. Etwa 30 Sekunden später ist der Eintrag gespeichert und erscheint hier nach dem Neuladen; die Bestätigung steht auch als Kommentar am Eintrag. <br><b>Bestand:</b> Aktien, die du schon vorher oder unabhängig vom System hältst, trägst du als Kauf mit Art „Bestand“ ein – mit deinem durchschnittlichen Einstandskurs aus Trade Republic und dem ungefähren Kaufdatum. Sie werden täglich bewertet und auf News geprüft, aber ohne 10-Tage-Regel und getrennt von der Swing-Bilanz. Verkaufst du, nutze den Knopf „Verkauf eintragen“ bei der Position; ist sie danach bei 0 Stück, verschwindet sie aus dem Depot. Fehleingaben machst du per „Storno“ rückgängig.<br><b>Aktie finden:</b> Tippe einfach den Namen (z. B. „Rheinmetall“) und wähle den Vorschlag – die Liste enthält die Watchlist, alle DAX-Werte und bekannte deutsche Nebenwerte. Steht eine Aktie nicht in der Liste, gib die <b>ISIN</b> aus Trade Republic ein (z. B. DE0007030033); das System sucht den passenden Börsenticker selbst. Alternativ direkt den Ticker (US: AAPL, Xetra: RHM.DE). Titel außerhalb der Watchlist erhalten ihren Kurs beim nächsten Feed-Lauf.<br>Hinweis: Das Repository ist öffentlich, Einträge sind also für andere einsehbar (wie das Cockpit selbst).</div>
+    <div class="jhint">So funktioniert's: Nach „Eintrag absenden“ öffnet sich GitHub mit dem fertig ausgefüllten Eintrag – dort nur noch auf <b>„Create“</b> klicken. Etwa 30 Sekunden später ist der Eintrag gespeichert und erscheint hier nach dem Neuladen; die Bestätigung steht auch als Kommentar am Eintrag. <br><b>Bestand:</b> Aktien, die du schon vorher oder unabhängig vom System hältst, trägst du als Kauf mit Art „Bestand“ ein – mit deinem durchschnittlichen Einstandskurs aus Trade Republic und dem ungefähren Kaufdatum. Sie werden täglich bewertet und auf News geprüft, aber ohne 10-Tage-Regel und getrennt von der Swing-Bilanz. Verkaufst du, nutze den Knopf „Verkauf eintragen“ bei der Position; ist sie danach bei 0 Stück, verschwindet sie aus dem Depot. Fehleingaben machst du per „Storno“ rückgängig.<br><b>Aktie finden:</b> Tippe die ersten Buchstaben des Namens – unter dem Feld erscheint eine Vorschlagsliste (Watchlist, DAX, deutsche Nebenwerte, große Europa-/US-Werte, deine Depotwerte). Mit Klick oder Pfeiltasten + Enter auswählen. Beim Verkauf zeigt die Liste nur deine Depotwerte. Steht eine Aktie nicht in der Liste, gib ihr Börsenkürzel in Großbuchstaben ein (z. B. OHB); deutsche Werte stellt das System automatisch auf Xetra um. Titel außerhalb der Watchlist erhalten ihren Kurs beim nächsten Feed-Lauf.<br>Hinweis: Das Repository ist öffentlich, Einträge sind also für andere einsehbar (wie das Cockpit selbst).</div>
   </div>
 
   <h2>Offene Positionen</h2>
@@ -766,6 +772,13 @@ const TITEL = {
   "SHL.DE": "Siemens Healthineers", "SIE.DE": "Siemens", "SRT3.DE": "Sartorius", "SY1.DE": "Symrise", "VNA.DE": "Vonovia", "VOW3.DE": "Volkswagen", "ZAL.DE": "Zalando",
   "HAG.DE": "Hensoldt", "R3NK.DE": "Renk", "TKA.DE": "Thyssenkrupp", "LHA.DE": "Lufthansa", "HOT.DE": "Hochtief", "PUM.DE": "Puma", "EVK.DE": "Evonik", "LEG.DE": "LEG Immobilien",
   "TLX.DE": "Talanx", "KGX.DE": "Kion", "NEM.DE": "Nemetschek", "SMHN.DE": "Süss MicroTec", "AIXA.DE": "Aixtron", "1U1.DE": "1&1", "UTDI.DE": "United Internet", "TUI1.DE": "TUI",
+  "OHB.DE": "OHB", "8TRA.DE": "Traton", "SZG.DE": "Salzgitter", "DRW3.DE": "Drägerwerk", "KBX.DE": "Knorr-Bremse", "JEN.DE": "Jenoptik", "S92.DE": "SMA Solar",
+  "NDX1.DE": "Nordex", "VBK.DE": "Verbio", "HFG.DE": "HelloFresh", "DHER.DE": "Delivery Hero", "RAA.DE": "Rational", "SDF.DE": "K+S", "FNTN.DE": "freenet",
+  "GXI.DE": "Gerresheimer", "AOF.DE": "ATOSS Software", "COK.DE": "Cancom", "EVT.DE": "Evotec", "BC8.DE": "Bechtle", "STM.DE": "Stabilus", "KRN.DE": "Krones",
+  "WAF.DE": "Siltronic", "PSM.DE": "ProSiebenSat.1", "FRA.DE": "Fraport", "BOSS.DE": "Hugo Boss", "FIE.DE": "Fielmann", "SAX.DE": "Ströer", "AG1.DE": "Auto1",
+  "TMV.DE": "TeamViewer", "IOS.DE": "IONOS", "SHA.DE": "Schaeffler", "AT1.DE": "Aroundtown", "TEG.DE": "TAG Immobilien", "HLAG.DE": "Hapag-Lloyd",
+  "DUE.DE": "Dürr", "JUN3.DE": "Jungheinrich", "WCH.DE": "Wacker Chemie", "LXS.DE": "Lanxess", "AFX.DE": "Carl Zeiss Meditec", "SIX2.DE": "Sixt",
+  "NOVO-B.CO": "Novo Nordisk (Kopenhagen)", "ASML.AS": "ASML (Amsterdam)", "SAF.PA": "Safran", "HO.PA": "Thales", "BA.L": "BAE Systems", "LDO.MI": "Leonardo", "SAAB-B.ST": "Saab",
   "EUNL.DE": "iShares Core MSCI World ETF", "SXR8.DE": "iShares Core S&P 500 ETF", "EXS1.DE": "iShares Core DAX ETF",
 };
 const ISIN_RE = /^[A-Z]{2}[A-Z0-9]{9}[0-9]$/;
@@ -833,6 +846,49 @@ function initJournalForm() {
   f.art.addEventListener("change", sync);
   f.ticker.addEventListener("change", sync);
   f.ticker.addEventListener("input", sync);
+  // --- Vorschlagsliste unter dem Aktienfeld ---
+  const ul = document.getElementById("jvorschlaege");
+  let treffer = [], aktivIdx = -1;
+  const zeigen = () => {
+    const q = f.ticker.value.trim().toLowerCase();
+    if (!q) { ul.hidden = true; return; }
+    const imDepot = new Set(((JOURNAL && JOURNAL.positionen) || []).map((p) => p.ticker));
+    const liste = Object.keys(TITEL).map((t) => ({ t, n: TITEL[t] }))
+      .filter((x) => f.aktion.value !== "verkauf" || imDepot.has(x.t));
+    const rang = (x) => {
+      const n = x.n.toLowerCase(), t = x.t.toLowerCase();
+      if (n.startsWith(q) || t === q) return 0;
+      if (t.startsWith(q)) return 1;
+      if (n.split(/[\s\-(]+/).some((w) => w.startsWith(q))) return 2;
+      if (n.includes(q)) return 3;
+      return 9;
+    };
+    treffer = liste.map((x) => [rang(x), x]).filter((r) => r[0] < 9).sort((a, b) => a[0] - b[0] || a[1].n.localeCompare(b[1].n, "de")).slice(0, 12).map((r) => r[1]);
+    aktivIdx = treffer.length ? 0 : -1;
+    const roh = f.ticker.value.trim();
+    let html = treffer.map((x, i) => '<li data-i="' + i + '" class="' + (i === aktivIdx ? "aktiv" : "") + '"><span>' + x.n + '</span><span class="tk">' + x.t + '</span></li>').join("");
+    if (!treffer.length) html = '<li class="hinweis">Nicht in der Liste – Börsenkürzel in Großbuchstaben eingeben (z. B. OHB oder HAG.DE)' + (/^[A-Z0-9][A-Z0-9.\-]{0,14}$/.test(roh) ? ' – „' + roh + '“ wird als Kürzel übernommen' : '') + '</li>';
+    ul.innerHTML = html; ul.hidden = false;
+  };
+  const waehlen = (i) => {
+    const x = treffer[i]; if (!x) return;
+    f.ticker.value = x.n; ul.hidden = true; sync();
+    (f.aktion.value === "verkauf" ? f.kurs_eur : f.stueck).focus();
+  };
+  f.ticker.addEventListener("input", zeigen);
+  f.ticker.addEventListener("focus", zeigen);
+  f.ticker.addEventListener("blur", () => setTimeout(() => { ul.hidden = true; }, 150));
+  f.ticker.addEventListener("keydown", (e) => {
+    if (ul.hidden || !treffer.length) return;
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      aktivIdx = (aktivIdx + (e.key === "ArrowDown" ? 1 : -1) + treffer.length) % treffer.length;
+      ul.querySelectorAll("li").forEach((li, i) => li.classList.toggle("aktiv", i === aktivIdx));
+      const li = ul.querySelectorAll("li")[aktivIdx]; if (li) li.scrollIntoView({ block: "nearest" });
+    } else if (e.key === "Enter") { e.preventDefault(); waehlen(aktivIdx); }
+    else if (e.key === "Escape") { ul.hidden = true; }
+  });
+  ul.addEventListener("mousedown", (e) => { const li = e.target.closest("li[data-i]"); if (li) { e.preventDefault(); waehlen(+li.dataset.i); } });
   f.stop_eur.addEventListener("input", () => delete f.stop_eur.dataset.auto);
   f.stueck.addEventListener("input", () => delete f.stueck.dataset.auto);
   sync();
@@ -890,15 +946,8 @@ function initJournalForm() {
 
 function renderJournal(j, feed) {
   JOURNAL = j;
-  const dl = document.getElementById("jticker");
-  if (dl) {
-    const namen = Object.assign({}, TITEL);
-    ((P4C && P4C.candidates) || []).forEach((c) => { namen[c.ticker] = c.name; });
-    ((j && j.positionen) || []).forEach((p) => { if (p.name) namen[p.ticker] = p.name; });
-    Object.keys((feed && feed.watchlist) || {}).forEach((t) => { if (!namen[t]) namen[t] = t; });
-    // Wert = Name, damit die Suche nach dem Namen funktioniert; der Ticker steht daneben
-    dl.innerHTML = Object.keys(namen).sort((a, b) => namen[a].localeCompare(namen[b], "de")).map((t) => '<option value="' + namen[t].replace(/"/g, "&quot;") + '">' + t + '</option>').join("");
-  }
+  ((P4C && P4C.candidates) || []).forEach((c) => { if (c.ticker && c.name && !TITEL[c.ticker]) TITEL[c.ticker] = c.name; });
+  ((j && j.positionen) || []).forEach((p) => { if (p.name && !TITEL[p.ticker]) TITEL[p.ticker] = p.name; });
   if (!j) return;
   const k = j.kennzahlen || {}, ks = j.kennzahlen_swing || {}, kb = j.kennzahlen_bestand || {};
   const pos = j.positionen || [];
