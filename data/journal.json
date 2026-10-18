@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-18T09:17:17.922687+00:00",
+  "generated_at_utc": "2026-10-18T09:43:39.388911+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -32,21 +32,62 @@
       "id": "T0002",
       "erfasst_utc": "2026-10-18T09:17:17.917251+00:00",
       "issue": 2
+    },
+    {
+      "aktion": "kauf",
+      "test": false,
+      "datum": "2026-08-31",
+      "art": "bestand",
+      "ticker": "RHM.DE",
+      "name": "Rheinmetall",
+      "stueck": 4.0,
+      "kurs_eur": 1047.85,
+      "gebuehr_eur": 3.0,
+      "grund": "Bestand vor dem System",
+      "notiz": "Niedrige Bewertung. Hoher Auftragsbestand. Sektortreiber in Deutschland. Erwarte einen Kurs von locker bis 1500 oder mehr.",
+      "id": "T0003",
+      "erfasst_utc": "2026-10-18T09:43:38.139246+00:00",
+      "issue": 6
     }
   ],
-  "positionen": [],
+  "positionen": [
+    {
+      "id": "RHM.DE-2026-08-31",
+      "ticker": "RHM.DE",
+      "name": "Rheinmetall",
+      "art": "bestand",
+      "isin": null,
+      "sektor": null,
+      "stueck": 4.0,
+      "einstand_eur": 1048.6,
+      "kapital_eur": 4194.4,
+      "kaufdatum": "2026-08-31",
+      "handelstage_gehalten": 34,
+      "verkauf_spaetestens": null,
+      "stop_eur": null,
+      "grund": "Bestand vor dem System",
+      "teilrealisiert_eur": 0.0,
+      "journal_ids": [
+        "T0003"
+      ],
+      "aktueller_kurs_eur": 1090.2,
+      "wert_eur": 4360.8,
+      "unrealisiert_eur": 166.4,
+      "unrealisiert_pct": 3.97
+    }
+  ],
   "trades": [],
   "kennzahlen": {
-    "realisiert_eur": 0,
-    "unrealisiert_eur": 0.0,
+    "realisiert_eur": 0.0,
+    "unrealisiert_eur": 166.4,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
-    "offene_positionen": 0,
-    "investiert_eur": 0,
-    "depotwert_eur": 0,
+    "offene_positionen": 1,
+    "investiert_eur": 4194.4,
+    "depotwert_eur": 4360.8,
     "positionen_ohne_kurs": 0,
-    "gebuehren_eur": 0
+    "gebuehren_eur": 3.0
   },
   "kurse_stand_utc": "2026-10-16T15:36:23.860562+00:00",
   "kennzahlen_swing": {
@@ -61,14 +102,14 @@
     "positionen_ohne_kurs": 0
   },
   "kennzahlen_bestand": {
-    "realisiert_eur": 0,
-    "unrealisiert_eur": 0.0,
+    "realisiert_eur": 0.0,
+    "unrealisiert_eur": 166.4,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
-    "offene_positionen": 0,
-    "investiert_eur": 0,
-    "depotwert_eur": 0,
+    "offene_positionen": 1,
+    "investiert_eur": 4194.4,
+    "depotwert_eur": 4360.8,
     "positionen_ohne_kurs": 0
   }
 }
