@@ -1,6 +1,6 @@
-# N – Nachrichten-Check v2.1
+# N – Nachrichten-Check v2.2
 
-Stand: 18.10.2026 (v2.1: keine doppelten Meldungen mehr im Tagesüberblick, News-Signale nur noch firmenspezifisch). Gilt für alle Nachrichten-Aufgaben (N1–N6 werktags, N-Sa, N-So).
+Stand: 18.10.2026 (v2.1: keine doppelten Meldungen mehr im Tagesüberblick, News-Signale nur noch firmenspezifisch; v2.2: Teil C – Rohstoffe & Zentralbanken für die Cockpit-Seite „Rohstoffe“). Gilt für alle Nachrichten-Aufgaben (N1–N6 werktags, N-Sa, N-So).
 
 Schlanker Lauf: keine Marktdaten abrufen, keinen GitHub-Actions-Workflow auslösen, keine Kandidaten-Analyse. Repo: `patricks87-sudo/swing-trading-data`, Branch `main`, Schreiben über den GitHub-Connector. Vor jedem Schreiben den aktuellen Stand inkl. `sha` abrufen; bei SHA-Konflikt bis zu 3× mit frischem Stand wiederholen.
 
@@ -86,6 +86,30 @@ Lies die Datei (falls vorhanden), behalte alle Signale, deren `datum` höchstens
 
 `datum` = Veröffentlichungsdatum (Europe/Berlin). `erfasst_von` = Name dieser Aufgabe (N1 … N6, N-Sa, N-So). Volle Firmennamen im Feld `name`.
 
+## Teil C – Rohstoffe & Zentralbanken (neu in v2.2)
+
+Zweck: Die Cockpit-Seite „Rohstoffe“ zeigt, ob Kapital in Gold, Silber & Co. umschichtet. Kursdaten berechnet der Feed selbst; du lieferst nur die **Meldungen**, die Kurse nicht zeigen – vor allem Käufe und Verkäufe von Zentralbanken.
+
+1. **Höchstens 1 Websuche** pro Lauf (z. B. „central bank gold purchases“, „World Gold Council central banks“, „PBoC gold reserves“, „silver demand central bank“). Bei N1 und N-So zusätzlich eine zweite Suche zu Angebot/Nachfrage bei Gold, Silber, Kupfer oder Öl erlaubt.
+2. Aufnehmen nur, was für Edelmetalle oder Rohstoffe in den nächsten Wochen relevant ist: gemeldete Zentralbank-Käufe/-Verkäufe (World Gold Council, PBoC, RBI, NBP, CNB, Bundesbank …), große ETF-Zu-/Abflüsse, Förder- oder Exportstopps, OPEC-Beschlüsse, Zölle auf Metalle. Keine reinen Kursberichte.
+3. Lies `data/rohstoff_meldungen.json` (falls vorhanden), behalte Einträge, deren `datum` höchstens 60 Tage zurückliegt, füge Neues hinzu (keine Dubletten: gleiche `url` oder gleiches Ereignis) und schreibe die Datei komplett neu. Nichts Neues → Datei nicht anfassen.
+
+```json
+{
+  "generated_at_utc": "2026-10-19T06:05:00Z",
+  "meldungen": [
+    {"datum": "2026-10-17", "published_at": "2026-10-17T10:00:00+02:00",
+     "titel": "Deutscher Titel", "quelle": "World Gold Council", "url": "https://...",
+     "rohstoff": "Gold|Silber|Kupfer|Öl|Rohstoffe allgemein",
+     "kategorie": "Zentralbank|ETF-Ströme|Angebot|Nachfrage|Politik/Zölle|Sonstiges",
+     "einschaetzung": "positiv|negativ|neutral",
+     "kurz": "Ein Satz, was das für den Preis heißt.", "erfasst_von": "N1"}
+  ]
+}
+```
+
+`einschaetzung` bezieht sich auf den Preis des Rohstoffs (Zentralbank kauft Gold → positiv). Rohstoff-Meldungen gehören **nicht** in `news_signals.json` (außer sie betreffen direkt eine Minenaktie der Watchlist: NEM, AEM, WPM, PAAS, FCX – dann zusätzlich dort als firmenspezifisches Signal). In Teil A weiterhin `thema` = „Rohstoffe“ für marktbewegende Rohstoff-Nachrichten verwenden.
+
 ## Abschluss
 
-Kurze Ausgabe: `lage`, die neu aufgenommenen Meldungen (oder „nichts Neues“) und je Titel der Fokusliste mit neuem Signal eine Zeile (Name, Einschätzung, Gewicht, Kategorie). Keine weiteren Analysen.
+Kurze Ausgabe: `lage`, die neu aufgenommenen Meldungen (oder „nichts Neues“), neue Rohstoff-Meldungen aus Teil C und je Titel der Fokusliste mit neuem Signal eine Zeile (Name, Einschätzung, Gewicht, Kategorie). Keine weiteren Analysen.
