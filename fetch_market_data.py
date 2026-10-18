@@ -834,6 +834,25 @@ def main():
     # sonst bleibt der letzte gute Stand stehen)
     roh = snapshot.get("rohstoffe") or {}
     if roh.get("available"):
+        # Ampel-Verlauf + taegliche Handlungsempfehlung (Gold/Silber, nur Hinweis)
+        verlauf_pfad = os.path.join(OUTPUT_DIR, "rohstoff_ampel_verlauf.json")
+        try:
+            with open(verlauf_pfad) as fh:
+                verlauf = json.load(fh).get("eintraege", [])
+        except Exception:
+            verlauf = []
+        try:
+            roh["empfehlung"] = rohstoffe.empfehlung(roh, verlauf)
+        except Exception as e:
+            print(f"Rohstoff-Empfehlung fehlgeschlagen: {e}")
+        status = (roh.get("ampel") or {}).get("status")
+        if status:
+            verlauf.append({"zeit_utc": snapshot["generated_at_utc"], "datum": datetime.now(timezone.utc).date().isoformat(),
+                            "run": args.run, "status": status,
+                            "gold": (roh["werte"].get("GOLD") or {}).get("close"),
+                            "silber": (roh["werte"].get("SILBER") or {}).get("close")})
+            with open(verlauf_pfad, "w") as fh:
+                json.dump({"eintraege": verlauf[-400:]}, fh, indent=1, ensure_ascii=False)
         with open(os.path.join(OUTPUT_DIR, "rohstoffe.json"), "w") as f:
             json.dump(dict(roh, run=args.run), f, indent=2, ensure_ascii=False)
     else:
