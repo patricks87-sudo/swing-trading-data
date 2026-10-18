@@ -1,8 +1,32 @@
 {
-  "updated_at_utc": "2026-10-18T10:47:30.540760+00:00",
+  "updated_at_utc": "2026-10-18T10:51:08.659707+00:00",
   "quelle": "automatisch aus data/journal.json (Trade-Journal im Cockpit)",
   "kurse_stand_utc": "2026-10-16T15:36:23.860562+00:00",
   "positions": [
+    {
+      "id": "ORCL-2026-06-17",
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "art": "bestand",
+      "isin": null,
+      "sektor": "Software/Cloud",
+      "stueck": 10.0,
+      "einstand_eur": 162.34,
+      "kapital_eur": 1623.4,
+      "kaufdatum": "2026-06-17",
+      "handelstage_gehalten": 87,
+      "verkauf_spaetestens": null,
+      "stop_eur": null,
+      "grund": "Bestand vor dem System",
+      "teilrealisiert_eur": 0.0,
+      "journal_ids": [
+        "T0008"
+      ],
+      "aktueller_kurs_eur": 115.95,
+      "wert_eur": 1159.5,
+      "unrealisiert_eur": -463.9,
+      "unrealisiert_pct": -28.58
+    },
     {
       "id": "RHM.DE-2026-08-31",
       "ticker": "RHM.DE",

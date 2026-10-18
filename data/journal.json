@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-18T10:47:30.540754+00:00",
+  "generated_at_utc": "2026-10-18T10:51:08.659703+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -107,9 +107,49 @@
       "id": "T0007",
       "erfasst_utc": "2026-10-18T10:47:29.186902+00:00",
       "issue": 10
+    },
+    {
+      "aktion": "kauf",
+      "test": false,
+      "datum": "2026-06-17",
+      "art": "bestand",
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "stueck": 10.0,
+      "kurs_eur": 162.24,
+      "gebuehr_eur": 1.0,
+      "grund": "Bestand vor dem System",
+      "notiz": "Umsetzung von KI Rechenzentren. Kapitalerhalt wird derzeit kritisch gesehen jedoch glaube ich, dass eine Bewertung von 200 Euro wieder möglich ist. Siehe auch kgv im Peer to peer Vergleich",
+      "id": "T0008",
+      "erfasst_utc": "2026-10-18T10:51:07.103994+00:00",
+      "issue": 11
     }
   ],
   "positionen": [
+    {
+      "id": "ORCL-2026-06-17",
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "art": "bestand",
+      "isin": null,
+      "sektor": "Software/Cloud",
+      "stueck": 10.0,
+      "einstand_eur": 162.34,
+      "kapital_eur": 1623.4,
+      "kaufdatum": "2026-06-17",
+      "handelstage_gehalten": 87,
+      "verkauf_spaetestens": null,
+      "stop_eur": null,
+      "grund": "Bestand vor dem System",
+      "teilrealisiert_eur": 0.0,
+      "journal_ids": [
+        "T0008"
+      ],
+      "aktueller_kurs_eur": 115.95,
+      "wert_eur": 1159.5,
+      "unrealisiert_eur": -463.9,
+      "unrealisiert_pct": -28.58
+    },
     {
       "id": "RHM.DE-2026-08-31",
       "ticker": "RHM.DE",
@@ -186,15 +226,15 @@
   "trades": [],
   "kennzahlen": {
     "realisiert_eur": 0.0,
-    "unrealisiert_eur": 257.74,
+    "unrealisiert_eur": -206.16,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
-    "offene_positionen": 3,
-    "investiert_eur": 8277.3,
-    "depotwert_eur": 8535.04,
+    "offene_positionen": 4,
+    "investiert_eur": 9900.7,
+    "depotwert_eur": 9694.54,
     "positionen_ohne_kurs": 0,
-    "gebuehren_eur": 7.0
+    "gebuehren_eur": 8.0
   },
   "kurse_stand_utc": "2026-10-16T15:36:23.860562+00:00",
   "kennzahlen_swing": {
@@ -210,13 +250,13 @@
   },
   "kennzahlen_bestand": {
     "realisiert_eur": 0.0,
-    "unrealisiert_eur": 257.74,
+    "unrealisiert_eur": -206.16,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
-    "offene_positionen": 3,
-    "investiert_eur": 8277.3,
-    "depotwert_eur": 8535.04,
+    "offene_positionen": 4,
+    "investiert_eur": 9900.7,
+    "depotwert_eur": 9694.54,
     "positionen_ohne_kurs": 0
   }
 }
