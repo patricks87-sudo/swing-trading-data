@@ -108,7 +108,7 @@ Zweck: Die Cockpit-Seite „Rohstoffe“ zeigt, ob Kapital in Gold, Silber & Co.
 }
 ```
 
-`einschaetzung` bezieht sich auf den Preis des Rohstoffs (Zentralbank kauft Gold → positiv). Rohstoff-Meldungen gehören **nicht** in `news_signals.json` (außer sie betreffen direkt eine Minenaktie der Watchlist: NEM, AEM, WPM, PAAS, FCX – dann zusätzlich dort als firmenspezifisches Signal). In Teil A weiterhin `thema` = „Rohstoffe“ für marktbewegende Rohstoff-Nachrichten verwenden.
+`einschaetzung` bezieht sich auf den Preis des Rohstoffs (Zentralbank kauft Gold → positiv). Rohstoff-Meldungen gehören **nicht** in `news_signals.json` (außer sie betreffen direkt ein Unternehmen der Fokusliste, z. B. Freeport-McMoRan – dann zusätzlich dort als firmenspezifisches Signal). In Teil A weiterhin `thema` = „Rohstoffe“ für marktbewegende Rohstoff-Nachrichten verwenden.
 
 ## Abschluss
 
