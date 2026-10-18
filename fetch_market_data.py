@@ -24,6 +24,7 @@ from datetime import date, datetime, timezone
 import requests
 
 import analysis
+import rohstoffe
 
 # ---------------------------------------------------------------------------
 # KONFIGURATION - hier anpassen
@@ -40,7 +41,7 @@ BASE_URL = "https://api.twelvedata.com"
 # Dient seit dem Umbau (20.09.2026) zusaetzlich als Stichprobe fuer die
 # Markt-Breadth-Berechnung (siehe compute_breadth) - je breiter, desto
 # repraesentativer. Erweitere/kuerze je nach Free-Tier-Budget
-# (8 Calls/Min, 800/Tag - 50 Watchlist + 5 Indizes = 55 Calls/Lauf, bei 4-6
+# (8 Calls/Min, 800/Tag - 54 Watchlist + 4 Indizes = 58 Calls/Lauf, bei 4-6
 # Laeufen/Tag ca. 220-330 Calls/Tag, klar unter dem Limit).
 WATCHLIST = [
     # Semiconductors/AI
@@ -73,6 +74,9 @@ WATCHLIST = [
     "UNP", "UPS",
     # Technology
     "AAPL",
+    # Edelmetalle (Minen/Royalty, seit 18.10.2026 - laufen oft gegen den
+    # Aktienmarkt; zaehlen NICHT zur Markt-Breadth, siehe build_snapshot)
+    "NEM", "AEM", "WPM", "PAAS",
 ]
 
 # Statische Sektor-Zuordnung je Ticker - Grundlage fuer das
@@ -129,7 +133,15 @@ SECTOR_MAP = {
     "UNP": "Transportation",
     "UPS": "Transportation",
     "AAPL": "Technology",
+    "NEM": "Edelmetalle",
+    "AEM": "Edelmetalle",
+    "WPM": "Edelmetalle",
+    "PAAS": "Edelmetalle",
 }
+
+# Sektoren, die nicht in die Markt-Breadth (Regime) einfliessen, weil sie
+# typischerweise gegen den Aktienmarkt laufen.
+BREADTH_AUSNAHMEN = {"Edelmetalle"}
 
 # Marktbreite / Indizes (Twelve Data Symbole - vor Produktivbetrieb einmal
 # manuell gegen die Twelve-Data-Doku pruefen, da Symbol-Verfuegbarkeit sich
@@ -700,7 +712,10 @@ def build_snapshot(run_label: str):
             result["ampel"] = compute_ampel(result)
         snapshot["watchlist"][ticker] = result
 
-    snapshot["breadth"] = compute_breadth(snapshot["watchlist"])
+    snapshot["breadth"] = compute_breadth({
+        t: e for t, e in snapshot["watchlist"].items()
+        if not (isinstance(e, dict) and e.get("sector") in BREADTH_AUSNAHMEN)
+    })
 
     # --- Deterministische Bewertung (analysis.py) ---
     spy = snapshot["indices"].get("SP500") or {}
@@ -736,6 +751,9 @@ def build_snapshot(run_label: str):
         key=lambda x: x["score"], reverse=True,
     )
     snapshot["ranking"] = ranking
+
+    # Rohstoff-Monitor (seit 18.10.2026, rein informativ, yfinance)
+    snapshot["rohstoffe"] = rohstoffe.berechnen(sectors, snapshot["watchlist"])
     snapshot["parameter"] = {
         "score_gewichte": analysis.SCORE_WEIGHTS,
         "score_stufen": {
@@ -806,6 +824,15 @@ def main():
         json.dump(snapshot, f, indent=2)
 
     print(f"Geschrieben: {filepath}")
+
+    # Eigene Datei fuer die Cockpit-Seite "Rohstoffe" (nur wenn Daten da sind,
+    # sonst bleibt der letzte gute Stand stehen)
+    roh = snapshot.get("rohstoffe") or {}
+    if roh.get("available"):
+        with open(os.path.join(OUTPUT_DIR, "rohstoffe.json"), "w") as f:
+            json.dump(dict(roh, run=args.run), f, indent=2, ensure_ascii=False)
+    else:
+        print(f"Rohstoff-Monitor ohne Daten: {roh}")
 
     # Forward-Tracking + Filter-Bilanz (seit 11.10.2026) - beim P1-Lauf,
     # damit Claude danach mit aktuellen Zahlen arbeitet. Fehler hier
