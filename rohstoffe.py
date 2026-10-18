@@ -35,6 +35,17 @@ FUEHRER_FALL_5D = -2.0       # fuehrende Sektoren im Schnitt mind. 2 % gefallen 
 SPY_WOCHE_SCHWACH = -1.0     # "schwache Aktienwoche" fuer die Antizyklik-Statistik
 CHART_TAGE = 126             # ca. 6 Monate
 
+# Rohstoff-Ampel (seit 18.10.2026): eigenes Regime fuer den Sektor
+# "Edelmetalle" (Minenaktien). Alle anderen Aktien folgen weiter der
+# Haupt-Ampel (analysis.compute_regime). Risikobudget (375 EUR) und
+# Sektor-Limit (max. 2) gelten gemeinsam.
+AMPEL_LIMITS = {
+    "GRÜN": {"max_neue_positionen": 1, "max_offene_positionen": 2, "nur_hohe_qualitaet": False},
+    "GELB": {"max_neue_positionen": 1, "max_offene_positionen": 1, "nur_hohe_qualitaet": True},
+    "ROT": {"max_neue_positionen": 0, "max_offene_positionen": 0, "nur_hohe_qualitaet": False},
+}
+AMPEL_FORWARD_TAGE = 10      # Bilanz: Entwicklung der Goldminen 10 Handelstage nach dem Signal
+
 
 def _r(x, n=2):
     return None if x is None or (isinstance(x, float) and math.isnan(x)) else round(float(x), n)
@@ -53,7 +64,7 @@ def _laden(symbole):
     daten = {}
     for sym in symbole:
         try:
-            h = yf.Ticker(sym).history(period="2y", interval="1d", auto_adjust=True)
+            h = yf.Ticker(sym).history(period="3y", interval="1d", auto_adjust=True)
             s = h["Close"].dropna() if h is not None and not h.empty else None
             if s is not None and len(s) > 60:
                 s.index = s.index.tz_localize(None).normalize() if s.index.tz is not None else s.index.normalize()
@@ -102,7 +113,7 @@ def _kennzahlen(s, spy):
     out["korrelation_60d"] = _r(r["x"].corr(r["m"])) if len(r) >= 40 else None
 
     # Antizyklik: in Wochen, in denen der S&P 500 um mehr als 1 % fiel -
-    # wie oft stieg dieser Rohstoff? (bis zu 2 Jahre Wochendaten)
+    # wie oft stieg dieser Rohstoff? (bis zu 3 Jahre Wochendaten)
     w = df.resample("W-FRI").last().pct_change().dropna() * 100
     schwach = w[w["m"] <= SPY_WOCHE_SCHWACH]
     if len(schwach) >= 5:
@@ -175,6 +186,104 @@ def _rotation(werte, lage):
             "text": "Aktien ohne Schwächesignal, Edelmetalle ohne deutliche Überrendite."}
 
 
+def _ampel_kriterien(g, si, gdx, usd):
+    """Sechs Kriterien der Rohstoff-Ampel aus aktuellen Kennzahlen (Dicts)."""
+    def ok(v):
+        return None if v is None else bool(v)
+    gt = lambda a, b: None if a is None or b is None else a > b
+    return [
+        {"kriterium": "Gold über SMA50", "erfuellt": ok(gt(g.get("close"), g.get("sma50")))},
+        {"kriterium": "Gold-Trend intakt (SMA50 über SMA200)", "erfuellt": ok(gt(g.get("sma50"), g.get("sma200")))},
+        {"kriterium": "Silber über SMA50", "erfuellt": ok(gt(si.get("close"), si.get("sma50")))},
+        {"kriterium": "Goldminen (GDX) über SMA50", "erfuellt": ok(gt(gdx.get("close"), gdx.get("sma50")))},
+        {"kriterium": "Gold stärker als S&P 500 (20 Tage)", "erfuellt": ok(None if g.get("rs_20d_vs_spy") is None else g["rs_20d_vs_spy"] >= 0)},
+        {"kriterium": "US-Dollar unter SMA50", "erfuellt": ok(gt(usd.get("sma50"), usd.get("close")))},
+    ]
+
+
+def _ampel_status(kriterien, gold_unter_sma200, rotation_aktiv):
+    erfuellt = sum(1 for k in kriterien if k["erfuellt"] is True)
+    unbekannt = sum(1 for k in kriterien if k["erfuellt"] is None)
+    bewertbar = len(kriterien) - unbekannt
+    hoch = erfuellt + unbekannt * (erfuellt / bewertbar if bewertbar else 0.5)
+    status = "GRÜN" if hoch >= 5 else "GELB" if hoch >= 3 else "ROT"
+    hinweis = None
+    if status == "GRÜN" and gold_unter_sma200:
+        status, hinweis = "GELB", "Gold unter SMA200 – höchstens Gelb"
+    if status == "GELB" and rotation_aktiv and not gold_unter_sma200:
+        status, hinweis = "GRÜN", "Rotation aus Aktien in Edelmetalle – Gelb auf Grün angehoben"
+    return status, erfuellt, unbekannt, hinweis
+
+
+def _ampel(werte, rotation):
+    g, si, gdx, usd = (werte.get(k, {}) for k in ("GOLD", "SILBER", "GOLDMINEN", "DOLLAR"))
+    kriterien = _ampel_kriterien(g, si, gdx, usd)
+    gold_unter_200 = bool(g.get("sma200") and g.get("close") and g["close"] < g["sma200"])
+    status, erfuellt, unbekannt, hinweis = _ampel_status(
+        kriterien, gold_unter_200, rotation.get("status") == "Rotation in Edelmetalle")
+    lim = AMPEL_LIMITS[status]
+    regel = {"GRÜN": "bis zu 1 neue Minenaktie pro Tag, max. 2 offen",
+             "GELB": "nur „Kauf – hohe Qualität“, max. 1 neue und 1 offen",
+             "ROT": "keine neuen Minenaktien"}[status]
+    return dict(lim, status=status, kriterien=kriterien, kriterien_erfuellt=erfuellt,
+                kriterien_unbekannt=unbekannt, hinweis=hinweis, gilt_fuer_sektor="Edelmetalle",
+                kurztext=f"Rohstoff-Ampel {status}: {erfuellt}/6 Kriterien – {regel}" + (f" ({hinweis})" if hinweis else ""))
+
+
+def _ampel_bilanz(daten, spy):
+    """Rueckblick: Ampel-Status fuer jeden Handelstag der Historie berechnen
+    (ohne Rotations-Aufwertung, die braucht Sektordaten) und messen, wie sich
+    die Goldminen (GDX) in den 10 Handelstagen danach entwickelt haben."""
+    import pandas as pd
+
+    sym = {k: ROHSTOFFE[k][0] for k in ("GOLD", "SILBER", "GOLDMINEN", "DOLLAR")}
+    if any(daten.get(v) is None for v in sym.values()):
+        return None
+    df = pd.concat({k: daten[v] for k, v in sym.items()} | {"SPY": spy}, axis=1).ffill().dropna()
+    if len(df) < 260:
+        return None
+    sma50 = df.rolling(50).mean()
+    sma200 = df.rolling(200).mean()
+    rs20 = (df["GOLD"].pct_change(20) - df["SPY"].pct_change(20)) * 100
+    krit = pd.DataFrame({
+        "g50": df["GOLD"] > sma50["GOLD"],
+        "g_trend": sma50["GOLD"] > sma200["GOLD"],
+        "s50": df["SILBER"] > sma50["SILBER"],
+        "m50": df["GOLDMINEN"] > sma50["GOLDMINEN"],
+        "rs": rs20 >= 0,
+        "usd": df["DOLLAR"] < sma50["DOLLAR"],
+    })
+    n = krit.sum(axis=1)
+    status = pd.Series("ROT", index=df.index)
+    status[n >= 3] = "GELB"
+    status[n >= 5] = "GRÜN"
+    status[(status == "GRÜN") & (df["GOLD"] < sma200["GOLD"])] = "GELB"
+    h = AMPEL_FORWARD_TAGE
+    fwd = (df["GOLDMINEN"].shift(-h) / df["GOLDMINEN"] - 1) * 100
+    fwd_spy = (df["SPY"].shift(-h) / df["SPY"] - 1) * 100
+    gueltig = sma200.notna().all(axis=1) & fwd.notna()
+    out = {}
+    for st in ("GRÜN", "GELB", "ROT"):
+        m = gueltig & (status == st)
+        if m.sum() == 0:
+            out[st] = {"tage": 0}
+            continue
+        out[st] = {
+            "tage": int(m.sum()),
+            "schnitt_minen_pct": _r(fwd[m].mean()),
+            "schnitt_ueber_sp500_pct": _r((fwd[m] - fwd_spy[m]).mean()),
+            "trefferquote_pct": _r((fwd[m] > 0).mean() * 100, 0),
+        }
+    tage = status[gueltig]
+    return {
+        "zeitraum_von": str(tage.index[0].date()) if len(tage) else None,
+        "zeitraum_bis": str(tage.index[-1].date()) if len(tage) else None,
+        "forward_tage": h,
+        "je_status": out,
+        "hinweis": "Ohne Aufwertung durch Rotation (braucht historische Sektordaten). Überlappende 10-Tage-Fenster – Tage sind nicht unabhängig.",
+    }
+
+
 def _chart(daten, spy):
     import pandas as pd
 
@@ -233,6 +342,7 @@ def berechnen(sectors=None, watchlist=None):
                               "chg_20d_pct": e.get("chg_20d_pct"), "score": st.get("score"), "stufe": st.get("stufe")})
         minen.sort(key=lambda m: m["score"] if isinstance(m["score"], (int, float)) else -1, reverse=True)
 
+        rotation = _rotation(werte, lage)
         return {
             "available": True,
             "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -240,7 +350,9 @@ def berechnen(sectors=None, watchlist=None):
             "werte": werte,
             "referenz": dict(spy_k, name=REFERENZ[1], symbol=REFERENZ[0]),
             "aktienlage": lage,
-            "rotation": _rotation(werte, lage),
+            "rotation": rotation,
+            "ampel": _ampel(werte, rotation),
+            "ampel_bilanz": _ampel_bilanz(daten, spy),
             "gold_silber_ratio": ratio,
             "minen": minen,
             "sektor_edelmetalle": (sectors or {}).get("Edelmetalle"),

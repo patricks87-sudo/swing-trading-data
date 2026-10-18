@@ -754,6 +754,11 @@ def build_snapshot(run_label: str):
 
     # Rohstoff-Monitor (seit 18.10.2026, rein informativ, yfinance)
     snapshot["rohstoffe"] = rohstoffe.berechnen(sectors, snapshot["watchlist"])
+    # Eigene Ampel fuer den Sektor Edelmetalle (Minenaktien); alle anderen
+    # Aktien folgen weiter snapshot["regime"].
+    snapshot["regime_rohstoffe"] = (snapshot["rohstoffe"] or {}).get("ampel") or {
+        "status": "ROT", "max_neue_positionen": 0, "max_offene_positionen": 0,
+        "kurztext": "Rohstoff-Ampel ohne Daten – keine neuen Minenaktien", "gilt_fuer_sektor": "Edelmetalle"}
     snapshot["parameter"] = {
         "score_gewichte": analysis.SCORE_WEIGHTS,
         "score_stufen": {
