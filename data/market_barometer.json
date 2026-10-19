@@ -1,17 +1,18 @@
 {
-  "generated_at_utc": "2026-10-19T13:02:39Z",
+  "generated_at_utc": "2026-10-19T14:10:00Z",
   "status": "NEUTRAL",
-  "begruendung": "NEUTRAL: 2 von 5 Regime-Kriterien erfüllt (VIX 18,6 unter 20; 50 % der Watchlist im 5-Tage-Plus). Nicht erfüllt: S&P 500 unter SMA50 (−0,7 %), Nasdaq unter SMA20 (−4,4 %), nur 38 % der Watchlist über SMA50. Max. 1 neuer Trade pro Tag, max. 3 offene Positionen. US-10J-Rendite 5,10 % (nur Info). Rohstoffe: Ampel ROT, keine Rotation in Edelmetalle. Stärke in Energy, Payments, Healthcare; Halbleiter und Cybersecurity klar schwach.",
-  "kurzbegruendung": "NEUTRAL (2/5): Nasdaq schwach, Rotation in Energy/Payments/Healthcare; max. 1 neuer Trade.",
+  "begruendung": "NEUTRAL: 2 von 5 Regime-Kriterien erfüllt (VIX 18,1 unter 20; 50 % der Watchlist im 5-Tage-Plus). Nicht erfüllt: S&P 500 unter SMA50 (−0,2 %), Nasdaq unter SMA20 (−3,0 %), nur 44 % der Watchlist über SMA50. Max. 1 neuer Trade pro Tag, max. 3 offene Positionen. Zur Eröffnung Gap nach oben: S&P 500 +0,5 %, Nasdaq +1,3 %, Halbleiter-Proxy +3,1 % (Erholung nach schwacher Vorwoche). US-10J-Rendite 5,10 % (nur Info). Rohstoffe: Ampel ROT (0/6), keine Rotation in Edelmetalle. Stärke in Energy, Healthcare, Payments; Halbleiter, Industrials und Cybersecurity klar schwach. P5-Eröffnungscheck: alle Kandidaten eröffnen nahe Vortagesschluss, keiner unter Stop oder mehr als 1 ATR im Minus; Energy, Payments, Versicherungen und Linde stehen deutlich über der SMA20 – nicht hinterherlaufen. Seit P4 neu: bärischer Optionsflow bei ExxonMobil und Palantir (harter Ausschluss).",
+  "kurzbegruendung": "NEUTRAL (2/5): Eröffnung mit Gap nach oben, aber Nasdaq unter SMA20; max. 1 neuer Trade.",
   "sektor_rotation": [
-    {"sektor": "Energy", "trend": "positiv", "kommentar": "Stärkster Sektor (Rang 1), aber Titel überdehnt (RSI > 72) – Einstieg nur per Limit an der SMA20.", "kandidaten": [{"name": "ExxonMobil", "empfehlung": "Kauf"}, {"name": "Chevron", "empfehlung": "Kauf"}]},
-    {"sektor": "Payments", "trend": "positiv", "kommentar": "Rang 2, klar positiver Trend; Visa überdehnt, Mastercard wegen bärischem Optionsflow ausgeschlossen.", "kandidaten": [{"name": "Visa", "empfehlung": "Kauf"}]},
-    {"sektor": "Insurance", "trend": "positiv", "kommentar": "Rang 5 positiv; Travelers solide, Earnings-Termin unbekannt.", "kandidaten": [{"name": "Travelers", "empfehlung": "Kauf"}]},
-    {"sektor": "Utilities", "trend": "positiv", "kommentar": "Rang 7 positiv; Duke Energy mit rotem Trendkontext.", "kandidaten": [{"name": "Duke Energy", "empfehlung": "Beobachten"}]},
-    {"sektor": "Technology", "trend": "positiv", "kommentar": "Rang 8 positiv; Apple mit sauberem Setup.", "kandidaten": [{"name": "Apple", "empfehlung": "Kauf"}]},
-    {"sektor": "Materials", "trend": "positiv", "kommentar": "Rang 11 positiv; Linde mit rotem Trendkontext.", "kandidaten": [{"name": "Linde", "empfehlung": "Beobachten"}]},
-    {"sektor": "Software/Cloud", "trend": "negativ", "kommentar": "Rang 14, Trend negativ – nur Microsoft und ServiceNow mit starkem Einzel-Setup.", "kandidaten": [{"name": "Microsoft", "empfehlung": "Kauf"}, {"name": "ServiceNow", "empfehlung": "Kauf"}, {"name": "Palantir", "empfehlung": "Beobachten"}, {"name": "Salesforce", "empfehlung": "Halten"}, {"name": "Oracle", "empfehlung": "Halten"}]},
-    {"sektor": "Cybersecurity", "trend": "negativ", "kommentar": "Rang 17, Trend negativ (−15 % in 5 Tagen) – keine Kandidaten.", "kandidaten": []},
-    {"sektor": "Semiconductors/AI", "trend": "negativ", "kommentar": "Rang 18, Trend negativ – keine Kandidaten.", "kandidaten": []}
+    {"sektor": "Energy", "trend": "positiv", "kommentar": "Stärkster Sektor (Rang 1), Titel stark überdehnt (RSI > 80, ca. 7 % über SMA20) – nicht hinterherlaufen, nur Limit an der SMA20. ExxonMobil seit P4 wegen bärischem Optionsflow ausgeschlossen.", "kandidaten": [{"name": "ExxonMobil", "empfehlung": "Kein Einstieg"}, {"name": "Chevron", "empfehlung": "Kauf"}]},
+    {"sektor": "Healthcare", "trend": "positiv", "kommentar": "Rang 2 positiv; keine Kandidaten (Thermo Fisher Scientific ausgeschlossen).", "kandidaten": []},
+    {"sektor": "Payments", "trend": "positiv", "kommentar": "Rang 3, klar positiver Trend; Visa ca. 7 % über SMA20 – Limit an der SMA20 behalten. Mastercard wegen bärischem Optionsflow ausgeschlossen.", "kandidaten": [{"name": "Visa", "empfehlung": "Kauf"}]},
+    {"sektor": "Insurance", "trend": "positiv", "kommentar": "Rang 6 positiv; Travelers ca. 5 % über SMA20, Limit an der SMA20 behalten; Earnings-Termin unbekannt.", "kandidaten": [{"name": "Travelers", "empfehlung": "Kauf"}]},
+    {"sektor": "Technology", "trend": "positiv", "kommentar": "Rang 7 positiv; Apple eröffnet ruhig (+0,4 %), RSI leicht überkauft, Einstieg am aktuellen Kurs laut Feed.", "kandidaten": [{"name": "Apple", "empfehlung": "Kauf"}]},
+    {"sektor": "Utilities", "trend": "positiv", "kommentar": "Rang 9 positiv; Duke Energy überdehnt, Trendkontext rot.", "kandidaten": [{"name": "Duke Energy", "empfehlung": "Beobachten"}]},
+    {"sektor": "Materials", "trend": "neutral", "kommentar": "Rang 10 neutral; Linde überdehnt, Trendkontext rot.", "kandidaten": [{"name": "Linde", "empfehlung": "Beobachten"}]},
+    {"sektor": "Software/Cloud", "trend": "negativ", "kommentar": "Rang 14, Trend negativ – nur Microsoft und ServiceNow mit starkem Einzel-Setup; Palantir mit bärischem Optionsflow ausgeschlossen. Earnings Microsoft und ServiceNow am 28.10.", "kandidaten": [{"name": "Microsoft", "empfehlung": "Kauf"}, {"name": "ServiceNow", "empfehlung": "Kauf"}, {"name": "Palantir", "empfehlung": "Kein Einstieg"}, {"name": "Salesforce", "empfehlung": "Halten"}, {"name": "Oracle", "empfehlung": "Halten"}]},
+    {"sektor": "Cybersecurity", "trend": "negativ", "kommentar": "Rang 16, Trend negativ (−11 % in 5 Tagen) – keine Kandidaten.", "kandidaten": []},
+    {"sektor": "Semiconductors/AI", "trend": "negativ", "kommentar": "Rang 18, Trend negativ – trotz Gap-up heute (+3 % im Proxy) keine Kandidaten.", "kandidaten": []}
   ]
 }
