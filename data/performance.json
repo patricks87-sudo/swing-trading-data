@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-16T15:44:57.181557+00:00",
+  "generated_at_utc": "2026-10-19T15:44:44.838299+00:00",
   "waehrung": "EUR",
   "hinweis": "Hypothetisch, ohne Steuern. Depot-Simulation mit 8.000 € Start, 75 € Risiko je Trade, Schutz-Stop 2× ATR, Verkauf nach 10 Handelstagen, max. 5 Positionen / 375 € Gesamtrisiko / 2 je Sektor, 1 € Gebühr je Order. Echte Trades stehen im Trade-Journal.",
   "start": "2026-08-12",
@@ -50,7 +50,8 @@
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-19"
   ],
   "reihen": [
     {
@@ -103,7 +104,8 @@
         112.49,
         110.62,
         110.45,
-        109.2
+        108.7,
+        108.59
       ]
     },
     {
@@ -156,7 +158,8 @@
         117.05,
         113.21,
         113.6,
-        110.14
+        109.64,
+        111.5
       ]
     },
     {
@@ -209,7 +212,8 @@
         106.39,
         103.88,
         103.84,
-        101.95
+        101.08,
+        103.08
       ]
     },
     {
@@ -262,39 +266,40 @@
         102.84,
         101.5,
         102.0,
-        101.34
+        100.97,
+        101.58
       ]
     }
   ],
   "zusammenfassung": {
     "neu": {
       "label": "Depot-Simulation (deine Regeln)",
-      "gesamt_pct": 9.2
+      "gesamt_pct": 8.59
     },
     "alle": {
       "label": "Alle Kandidaten, 10 Tage gehalten",
-      "gesamt_pct": 10.14
+      "gesamt_pct": 11.5
     },
     "qqq": {
       "label": "Nasdaq-100 (QQQ)",
-      "gesamt_pct": 1.95
+      "gesamt_pct": 3.08
     },
     "urth": {
       "label": "MSCI World (URTH)",
-      "gesamt_pct": 1.34
+      "gesamt_pct": 1.58
     }
   },
   "statistik": {
     "neu": {
       "startkapital_eur": 8000.0,
-      "endwert_eur": 8736.0,
-      "trades_abgeschlossen": 17,
+      "endwert_eur": 8687.2,
+      "trades_abgeschlossen": 18,
       "trades_offen": 3,
-      "trefferquote_pct": 71.0,
-      "schnitt_trade_eur": 42.29,
+      "trefferquote_pct": 67.0,
+      "schnitt_trade_eur": 36.38,
       "bester_trade_eur": 197.65,
       "schlechtester_trade_eur": -75.93,
-      "gebuehren_eur": 37.0,
+      "gebuehren_eur": 39.0,
       "max_gleichzeitig": 5,
       "nicht_gekauft": {
         "plaetze": 4,
@@ -302,14 +307,14 @@
         "sektor": 5,
         "kapital": 0,
         "doppelt": 4,
-        "limit_verfallen": 19
+        "limit_verfallen": 20
       }
     },
     "alle": {
-      "trades": 54,
+      "trades": 56,
       "abgeschlossen": 41,
-      "trefferquote_pct": 85.0,
-      "schnitt_trade_pct": 5.3
+      "trefferquote_pct": 83.0,
+      "schnitt_trade_pct": 5.25
     }
   },
   "trades_neu": [
@@ -338,6 +343,18 @@
       "rendite_pct": -8.41
     },
     {
+      "ticker": "AMD",
+      "name": "AMD (Advanced Micro Devices)",
+      "start": "2026-10-13",
+      "ende": "2026-10-16",
+      "stueck": 1,
+      "ausstieg": "Stop",
+      "einstieg_eur": 517.46,
+      "ausstieg_eur": 473.32,
+      "ergebnis_eur": -46.15,
+      "rendite_pct": -8.53
+    },
+    {
       "ticker": "SMCI",
       "name": "Super Micro Computer",
       "start": "2026-10-12",
@@ -357,9 +374,9 @@
       "stueck": 7,
       "ausstieg": "10 Tage",
       "einstieg_eur": 222.3,
-      "ausstieg_eur": 225.52,
-      "ergebnis_eur": 20.53,
-      "rendite_pct": 1.45
+      "ausstieg_eur": 222.95,
+      "ergebnis_eur": 2.56,
+      "rendite_pct": 0.29
     },
     {
       "ticker": "XOM",
@@ -525,19 +542,9 @@
       "start": "2026-10-09",
       "stueck": 2,
       "einstieg_eur": 579.68,
-      "kurs_eur": 610.29,
-      "tage": 6,
-      "ergebnis_eur": 60.21
-    },
-    {
-      "ticker": "AMD",
-      "name": "AMD (Advanced Micro Devices)",
-      "start": "2026-10-13",
-      "stueck": 1,
-      "einstieg_eur": 517.46,
-      "kurs_eur": 482.25,
-      "tage": 4,
-      "ergebnis_eur": -36.21
+      "kurs_eur": 604.49,
+      "tage": 7,
+      "ergebnis_eur": 48.61
     },
     {
       "ticker": "ZS",
@@ -545,9 +552,19 @@
       "start": "2026-10-16",
       "stueck": 4,
       "einstieg_eur": 184.65,
-      "kurs_eur": 183.22,
-      "tage": 1,
-      "ergebnis_eur": -6.73
+      "kurs_eur": 189.07,
+      "tage": 2,
+      "ergebnis_eur": 16.71
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase Global",
+      "start": "2026-10-16",
+      "stueck": 4,
+      "einstieg_eur": 161.45,
+      "kurs_eur": 153.41,
+      "tage": 2,
+      "ergebnis_eur": -33.19
     }
   ]
 }
