@@ -1,63 +1,63 @@
 {
-  "generated_at_utc": "2026-10-16T15:20:00+00:00",
-  "run_date": "2026-10-16",
+  "generated_at_utc": "2026-10-19T15:20:00+00:00",
+  "run_date": "2026-10-19",
   "ergebnis": "Trade möglich",
-  "kurzbegruendung": "Nur Apple (3/4) und Exxon Mobil (2/4) sind heute per Limit-Order handelbar; Visa und Mastercard (bärischer Optionsfluss), UnitedHealth Group (jetzt Beobachten) und Coinbase Global (bärischer Optionsfluss) sind im Live-Feed ausgeschlossen bzw. kein Einstieg. Microsoft, Palantir Technologies, ServiceNow und Chevron bestehen den Hold-Test nicht. S&P 500 seit Eröffnung −0,41 %; Regime laut Feed RISK-ON (max. 2 neue Positionen heute, Depot leer). Kursangaben VWAP in USD.",
+  "kurzbegruendung": "Microsoft besteht den Hold-Test mit 4/4 und ist der einzige Kauf zum aktuellen Kurs; Apple (3/4) nur per Limit-Order. Exxon Mobil, Chevron, Travelers, Duke Energy bestehen nicht, Visa und Palantir Technologies sind im Live-Feed wegen bärischem Optionsfluss ausgeschlossen. S&P 500 seit Eröffnung +0,19 %; Regime NEUTRAL (max. 1 neuer Trade heute). Kursangaben VWAP in USD.",
   "kandidaten": [
     {
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "Software/Cloud",
-      "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": true},
-      "vwap": 536.8,
-      "relatives_volumen": 2.59,
-      "einstieg_heute": "nein",
-      "begruendung": "Nicht bestanden (1/4): −1,64 % seit Eröffnung, 1,22 Pkt. schwächer als der S&P 500, unter VWAP; nur das Volumen (2,59×) hält. Heute kein Einstieg, bleibt auf der Liste. Earnings 28.10."
+      "status": "Bestanden",
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
+      "vwap": 533.4,
+      "relatives_volumen": 1.71,
+      "einstieg_heute": "ja",
+      "begruendung": "Bestanden (4/4): +1,05 % seit Eröffnung, 0,87 Pkt. stärker als der S&P 500, über VWAP, Volumen 1,71×. Live-Feed weiter Kauf – hohe Qualität (84,7), Einstieg am aktuellen Kurs (ca. 476 €). Earnings 28.10. (7 Handelstage) liegen in der Haltedauer."
     },
     {
       "ticker": "AAPL",
       "name": "Apple",
       "sector": "Technology",
       "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 345.04,
-      "relatives_volumen": 9.11,
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
+      "vwap": 344.07,
+      "relatives_volumen": 1.33,
       "einstieg_heute": "limit",
-      "begruendung": "Teilweise (3/4): über VWAP, 0,32 Pkt. stärker als der S&P 500, Volumen 9,11×; nur knapp unter der Eröffnung (−0,09 %). Limit-Order am Feed-Einstieg (ca. 308,92 € bzw. 346,32 USD), Stop ca. 297,18 €. Earnings 02.11. in der Haltedauer."
+      "begruendung": "Teilweise (3/4): knapp unter VWAP (342,98 vs. 344,07 USD), aber über der Eröffnung, stärker als der S&P 500 und Volumen 1,33×. Nur Limit-Order am Feed-Einstieg, RSI14 über 72. Earnings 02.11. in der Haltedauer."
     },
     {
       "ticker": "XOM",
-      "name": "Exxon Mobil",
+      "name": "ExxonMobil",
       "sector": "Energy",
-      "status": "Teilweise",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 176.3,
-      "relatives_volumen": 1.07,
-      "einstieg_heute": "limit",
-      "begruendung": "Teilweise (2/4): knapp unter VWAP und Eröffnung, aber stärker als der S&P 500 und Volumen 1,07×. Nur Limit an der SMA20 (ca. 148,05 € bzw. 165,97 USD), RSI14 über 72 – nicht hinterherlaufen. Earnings 30.10. in der Haltedauer."
-    },
-    {
-      "ticker": "UNH",
-      "name": "UnitedHealth Group",
-      "sector": "Healthcare",
-      "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": true},
-      "vwap": 400.07,
-      "relatives_volumen": 2.35,
-      "einstieg_heute": "nein",
-      "begruendung": "Teilweise (2/4): −1,69 % seit Eröffnung, schwächer als der S&P 500. Im Live-Feed nur noch Stufe Beobachten (Score 60,9, Kurs steigt, OBV fällt) – kein Einstieg heute. Earnings-Termin nicht verfügbar, manuell prüfen."
-    },
-    {
-      "ticker": "MA",
-      "name": "Mastercard",
-      "sector": "Payments",
       "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 619.85,
-      "relatives_volumen": 0.96,
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
+      "vwap": 178.25,
+      "relatives_volumen": 0.81,
       "einstieg_heute": "nein",
-      "begruendung": "Nicht bestanden (1/4): unter VWAP und Eröffnung, Volumen 0,96×. Zusätzlich im Live-Feed wegen bärischem Optionsfluss ausgeschlossen. Heute kein Einstieg."
+      "begruendung": "Nicht bestanden (0/4): −0,93 % seit Eröffnung, 1,11 Pkt. schwächer als der S&P 500, unter VWAP, Volumen nur 0,81×. Zusätzlich RSI14 über 82 und ca. 6 % über der SMA20 – heute kein Einstieg. Earnings 30.10."
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "sector": "Energy",
+      "status": "Nicht bestanden",
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": true},
+      "vwap": 224.52,
+      "relatives_volumen": 1.93,
+      "einstieg_heute": "nein",
+      "begruendung": "Nicht bestanden (1/4): unter VWAP und Eröffnung, schwächer als der S&P 500; nur das Volumen (1,93×) hält. Im Live-Feed zusätzlich wegen bärischem Optionsfluss ausgeschlossen (Score 64,7). Kein Einstieg."
+    },
+    {
+      "ticker": "TRV",
+      "name": "Travelers",
+      "sector": "Insurance",
+      "status": "Nicht bestanden",
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": true},
+      "vwap": 386.9,
+      "relatives_volumen": 1.34,
+      "einstieg_heute": "nein",
+      "begruendung": "Nicht bestanden (1/4): −0,24 % seit Eröffnung, 0,42 Pkt. schwächer als der S&P 500, unter VWAP; nur Volumen 1,34×. RSI14 über 72, Earnings-Termin unbekannt (manuell prüfen). Heute kein Einstieg."
     },
     {
       "ticker": "V",
@@ -65,54 +65,54 @@
       "sector": "Payments",
       "status": "Teilweise",
       "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 403.1,
-      "relatives_volumen": 0.9,
+      "vwap": 401.76,
+      "relatives_volumen": 0.56,
       "einstieg_heute": "nein",
-      "begruendung": "Teilweise (3/4): über VWAP und Eröffnung, +0,7 Pkt. stärker als der S&P 500, Volumen aber nur 0,9×. Im Live-Feed wegen bärischem Optionsfluss hart ausgeschlossen – kein Einstieg heute."
-    },
-    {
-      "ticker": "PLTR",
-      "name": "Palantir Technologies",
-      "sector": "Software/Cloud",
-      "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": true},
-      "vwap": 195.69,
-      "relatives_volumen": 1.17,
-      "einstieg_heute": "nein",
-      "begruendung": "Nicht bestanden (1/4): −6,62 % seit Eröffnung, deutlich schwächer als der S&P 500; im Live-Feed nur Stufe Beobachten (Score 60,4). Heute kein Einstieg."
+      "begruendung": "Teilweise (3/4): über VWAP und Eröffnung, stärker als der S&P 500, Volumen aber nur 0,56×. Im Live-Feed wegen bärischem Optionsfluss hart ausgeschlossen (Score 64,4), Earnings 27.10. – kein Einstieg."
     },
     {
       "ticker": "NOW",
       "name": "ServiceNow",
       "sector": "Software/Cloud",
-      "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": true},
-      "vwap": 147.42,
-      "relatives_volumen": 1.24,
-      "einstieg_heute": "nein",
-      "begruendung": "Nicht bestanden (1/4): −7,6 % seit Eröffnung, 7,19 Pkt. schwächer als der S&P 500, unter VWAP. Heute kein Einstieg, bleibt auf der Liste. Earnings 28.10."
-    },
-    {
-      "ticker": "COIN",
-      "name": "Coinbase Global",
-      "sector": "Fintech/Brokerage",
       "status": "Teilweise",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 181.66,
-      "relatives_volumen": 1.05,
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
+      "vwap": 143.16,
+      "relatives_volumen": 0.63,
       "einstieg_heute": "nein",
-      "begruendung": "Teilweise (3/4), aber im Live-Feed wegen bärischem Optionsfluss ausgeschlossen (Score 31,4, Trendkontext rot, Sektor Rang 19). Kein Einstieg heute."
+      "begruendung": "Teilweise (3/4): +2,02 % seit Eröffnung, über VWAP, Volumen aber nur 0,63×. Im Live-Feed nur noch Beobachten (Score 57,7) – kein Einstieg heute. Earnings 28.10."
     },
     {
-      "ticker": "CVX",
-      "name": "Chevron",
-      "sector": "Energy",
-      "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 221.98,
-      "relatives_volumen": 0.87,
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
+      "sector": "Software/Cloud",
+      "status": "Bestanden",
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
+      "vwap": 191.79,
+      "relatives_volumen": 1.06,
       "einstieg_heute": "nein",
-      "begruendung": "Nicht bestanden (1/4): unter VWAP und Eröffnung, Volumen nur 0,87×; P4-Stufe Beobachten. Heute kein Einstieg; Sektor-Doppelung mit Exxon Mobil."
+      "begruendung": "Bestanden (4/4): +4,34 % seit Eröffnung, deutlich stärker als der S&P 500. Aber im Live-Feed wegen bärischem Optionsfluss hart ausgeschlossen (Score 65,2) und P4-Stufe nur Beobachten – kein Einstieg. Earnings 02.11."
+    },
+    {
+      "ticker": "DUK",
+      "name": "Duke Energy",
+      "sector": "Utilities",
+      "status": "Nicht bestanden",
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
+      "vwap": 120.05,
+      "relatives_volumen": 0.49,
+      "einstieg_heute": "nein",
+      "begruendung": "Nicht bestanden (0/4): −1,09 % seit Eröffnung, Volumen nur 0,49×; P4-Stufe Beobachten. Kein Einstieg."
+    },
+    {
+      "ticker": "LIN",
+      "name": "Linde",
+      "sector": "Materials",
+      "status": "Teilweise",
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
+      "vwap": 500.77,
+      "relatives_volumen": 0.85,
+      "einstieg_heute": "nein",
+      "begruendung": "Teilweise (3/4): leicht über VWAP und Eröffnung, Volumen 0,85×. P4-Stufe nur Beobachten, RSI14 über 72, Trendkontext rot – kein Einstieg. Earnings 29.10."
     }
   ]
 }
