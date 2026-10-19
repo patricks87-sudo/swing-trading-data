@@ -1,7 +1,7 @@
 {
   "date": "2026-10-19",
-  "lage": "Nach dem schwächsten Wochenabschluss seit Juni (Freitag: Nasdaq −2,1 %, S&P 500 −1,1 %, Chip-Index SOX in der Woche −11,4 %) erholen sich die US-Futures zum Wochenstart (S&P 500 +0,8 %, Nasdaq +1,3 %), gestützt von fallenden Ölpreisen und Anleiherenditen sowie Hoffnung auf eine Entspannung im Iran-Konflikt; die Sorgen um die Finanzierung des KI-Ausbaus (zuletzt auch Druck auf Software-Werte, Schuldenlast von CoreWeave) und die Lage in der Straße von Hormus bleiben aber bestimmend. Am Mittwoch nach Börsenschluss berichten Tesla und Meta, später in der Woche u. a. SpaceX.",
-  "lage_stand_local": "13:20",
+  "lage": "Nach dem schwächsten Wochenabschluss seit Juni (Freitag: Nasdaq −2,1 %, S&P 500 −1,1 %, Chip-Index SOX in der Woche −11,4 %) erholen sich die US-Futures zum Wochenstart (S&P 500 +0,5 bis +0,8 %, Nasdaq 100 über +1 %), angeführt von Tech- und Chipwerten wie NVIDIA und AMD sowie CoreWeave; Hoffnung auf Entspannung im Iran-Konflikt und fallende Renditen stützen. Bestimmend bleiben die Sorgen um die Finanzierung des KI-Ausbaus, ein Ölpreis um 108 US-Dollar (Brent) und die Zinsfrage: BofA rechnet weiter mit einer Zinserhöhung im Oktober, der Markt preist aber überwiegend Halten ein. Netflix berichtet Dienstag, Tesla und Meta am Mittwoch nach Börsenschluss.",
+  "lage_stand_local": "16:25",
   "meldungen": [
     {
       "title": "US-Futures steigen zum Wochenstart nach dem Freitags-Ausverkauf: S&P 500 +0,8 %, Dow +0,5 %, Nasdaq +1,3 %",
@@ -41,7 +41,8 @@
       "thema": "Zinsen/Fed",
       "bedeutung": "Geringere Zinserhöhungserwartung entlastet Wachstums- und Tech-Werte etwas; die Zinsunsicherheit bleibt.",
       "erfasst_local": "08:10",
-      "erfasst_von": "N1"
+      "erfasst_von": "N1",
+      "aktualisiert_local": "16:25"
     },
     {
       "title": "Chinas Wirtschaft wächst im dritten Quartal um 4,5 % zum Vorjahr und übertrifft leicht die Erwartungen; Immobilienkrise und schwache Binnennachfrage bleiben",
@@ -82,6 +83,16 @@
       "bedeutung": "Die Zahlen von Tesla und Meta am Mittwoch sind der nächste Test für die KI-Ausgaben-Debatte; die Erholung am Montag ist bis dahin fragil.",
       "erfasst_local": "13:20",
       "erfasst_von": "N3"
+    },
+    {
+      "title": "Chipwerte legen vorbörslich zu, angeführt von NVIDIA und AMD; BofA erwartet weiter eine Zinserhöhung im Oktober, der Markt rechnet aber zu rund 85 % mit unveränderten Zinsen bei der Sitzung nächste Woche",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-futures-mixed-amid-volatile-week-112734828.html",
+      "published_at": null,
+      "thema": "Zinsen/Fed",
+      "bedeutung": "Die Chip-Erholung ist vorbörslich breit angelegt; bei der Fed-Sitzung kommende Woche bleibt ein Zinsschritt ein Restrisiko für Wachstumswerte.",
+      "erfasst_local": "16:25",
+      "erfasst_von": "N4"
     }
   ]
 }
