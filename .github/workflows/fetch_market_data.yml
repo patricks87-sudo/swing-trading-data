@@ -36,13 +36,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
+      # Erst entscheiden, ob ueberhaupt ein Lauf faellig ist (braucht nur die
+      # Standardbibliothek). Leere Cron-Ticks sind so in Sekunden fertig und
+      # installieren keine Pakete - wichtig fuer das Actions-Kontingent, sobald
+      # das Repo privat ist.
       - name: Determine run label
         id: label
         run: |
@@ -52,6 +49,15 @@ jobs:
           else
             python3 scripts/determine_run.py
           fi
+
+      - uses: actions/setup-python@v5
+        if: steps.label.outputs.skip != 'true'
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        if: steps.label.outputs.skip != 'true'
+        run: pip install -r requirements.txt
 
       - name: Fetch data
         if: steps.label.outputs.skip != 'true'

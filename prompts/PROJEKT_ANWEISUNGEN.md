@@ -1,19 +1,19 @@
-COCKPIT (Live-Dashboard): https://patricks87-sudo.github.io/swing-trading-data/
+COCKPIT (Live-Dashboard): https://patricks87-sudo.github.io/swing-trading-data/ (nach dem Umzug: eigene Domain hinter Login, siehe docs/CLOUDFLARE.md)
 
 KONTEXT (gilt für alle P4/P5/P5.5/P1-Aufgaben in diesem Projekt)
 Der Nutzer betreibt hobbymäßiges Swing-Trading in US-Aktien über Trade Republic (seit dem EU-PFOF-Verbot 1.7.2026 Bestpreis-Order-Routing über ca. 30 Handelsplätze). Alle Kursangaben in EUR, umgerechnet mit dem Feld "eurusd" der JSON-Daten. Pipeline über den Handelstag: P4 (~14:50 MESZ, Kandidatensuche) → P5 (~15:30 MESZ, Eröffnungs-Info) → P5.5 (~17:05 MESZ, Hold-Test mit Intraday-Daten) → P1 (~17:35 MESZ, Portfolio-Entscheidung).
 
 PROMPTS (seit 11.10.2026 im GitHub-Repo, nicht mehr als Projektdateien)
-Die verbindlichen Kriterien jedes Schritts stehen im Repo und werden bei jedem Lauf live abgerufen:
-https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/prompts/P4.md
-https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/prompts/P5.md
-https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/prompts/P5_5.md
-https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/prompts/P1.md
-https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/prompts/N.md (Nachrichten-Aufgaben N1–N6, N-Sa, N-So)
+Die verbindlichen Kriterien jedes Schritts stehen im Repo und werden bei jedem Lauf live über den GitHub-Connector gelesen (Datei-Inhalt abrufen, Repo patricks87-sudo/swing-trading-data, Branch main) – nicht über raw.githubusercontent.com, das Repo kann privat sein:
+prompts/P4.md
+prompts/P5.md
+prompts/P5_5.md
+prompts/P1.md
+prompts/N.md (Nachrichten-Aufgaben N1–N6, N-Sa, N-So)
 Wende IMMER genau den Prompt des angeforderten Schritts an.
 
 DATENQUELLE
-Repo patricks87-sudo/swing-trading-data (Branch main). Der GitHub-Actions-Workflow schreibt je Lauf data/{run}_latest.json ({run} = p4, p5, p55, p1). Abruf: https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/data/{run}_latest.json
+Repo patricks87-sudo/swing-trading-data (Branch main). Der GitHub-Actions-Workflow schreibt je Lauf data/{run}_latest.json ({run} = p4, p5, p55, p1). Abruf über den GitHub-Connector: data/{run}_latest.json (Branch main).
 Inhalt: "eurusd"; "indices" (QQQ, SPY, IWM, SOXX als ETF-Proxies; "VIX" = echter CBOE-VIX via yfinance); "macro" (VIX, US-10J-Rendite); "watchlist" (50 Werte aus 19 Sektoren, je Eintrag Kursindikatoren, "options_flow", "earnings", "ampel", "setup" und "news"); "breadth"; "sectors"; "regime"; "ranking"; "rohstoffe" (Rohstoff-Monitor: Gold, Silber, Kupfer, Öl, Goldminen, Dollar; Rotationsstatus; Rohstoff-Ampel mit Rückblick und Trade-Simulation; Gold/Silber-Empfehlung – nur Information, gilt nicht für Aktien); beim P5.5-Lauf zusätzlich "hold_test".
 
 DETERMINISTISCHE BEWERTUNG (seit 11.10.2026)
