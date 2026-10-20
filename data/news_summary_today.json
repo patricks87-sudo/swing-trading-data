@@ -1,109 +1,47 @@
 {
-  "date": "2026-10-19",
-  "lage": "Nach dem schwächsten Wochenabschluss seit Juni (Freitag: Nasdaq −2,1 %, S&P 500 −1,1 %, Chip-Index SOX in der Woche −11,4 %) schloss die Wall Street zum Wochenstart uneinheitlich: Nasdaq rund +1 %, S&P 500 rund +0,5 %, Dow rund −0,2 %; Chipwerte wie NVIDIA und AMD sowie CoreWeave führten die Erholung an, Hoffnung auf Entspannung im Iran-Konflikt und die gesunkene 10-Jahres-Rendite (rund 5,1 %) stützten. Bestimmend bleiben die Sorgen um die Finanzierung des KI-Ausbaus, ein Ölpreis um 108 US-Dollar (Brent) und die Zinsfrage (BofA erwartet eine Erhöhung im Oktober, der Markt preist überwiegend Halten ein). Netflix berichtet Dienstag, Tesla und Meta am Mittwoch nach Börsenschluss.",
-  "lage_stand_local": "18:45",
+  "date": "2026-10-20",
+  "lage": "Nach dem Wochenstart mit Erholung (Nasdaq rund +1 %, S&P 500 rund +0,5 %, Dow rund −0,2 %; NVIDIA +1,4 %) bleibt das Umfeld fragil: Sorgen um die Finanzierung des KI-Ausbaus, Brent um 108 US-Dollar und eine heiße September-Inflation, die Finanzminister Bessent auf den Energiepreisschock zurückführt; die 10-Jahres-Rendite liegt bei rund 5,1 %. Im Fokus stehen heute die Netflix-Zahlen nach Börsenschluss sowie am Mittwoch Tesla und Meta.",
+  "lage_stand_local": "08:30",
   "meldungen": [
     {
-      "title": "US-Futures steigen zum Wochenstart nach dem Freitags-Ausverkauf: S&P 500 +0,8 %, Dow +0,5 %, Nasdaq +1,3 %",
-      "source": "ABC News Australia",
-      "url": "https://abc.net.au/news/2026-10-19/asx-markets-business-live-news/107280976",
-      "published_at": "2026-10-19T16:44:00+11:00",
-      "thema": "Markt",
-      "bedeutung": "Die Futures deuten eine Erholung nach dem KI-getriebenen Ausverkauf an (Freitag: Nasdaq −2,1 %, S&P 500 −1,1 %, Dow −0,3 %); ob sie hält, entscheidet sich im US-Handel.",
-      "erfasst_local": "08:10",
-      "erfasst_von": "N1"
-    },
-    {
-      "title": "Chip-Index SOX fällt in der Woche um 11,4 % – längste Verlustserie seit 2008; Asiens Märkte überwiegend schwächer, Tech belastet durch hohe KI-Ausgaben",
-      "source": "HDFC Sky",
-      "url": "https://hdfcsky.com/news/global-markets-today-october-19-2026-sensex-nifty-seen-opening-cautiously-as-asian-shares-slip-oil-prices-ease",
-      "published_at": "2026-10-19T09:27:00+05:30",
-      "thema": "Sektor",
-      "bedeutung": "Der Sektordruck bei Chip- und KI-Werten hält an; Nikkei −1,2 %, Taiwan −1,4 %. Für Halbleiter-Kandidaten bleibt das Umfeld schwierig.",
-      "erfasst_local": "08:10",
-      "erfasst_von": "N1"
-    },
-    {
-      "title": "Ölpreis gibt nach: Brent −1,3 % auf rund 108,5 US-Dollar, nachdem Trump einige Russland-Sanktionen ausgesetzt hat (Prüfung der Folgen bis zu 60 Tage); zugleich meldet Iran einen weiteren Tanker mit Minentreffer in der Straße von Hormus",
-      "source": "Reuters",
-      "url": "https://lufkindailynews.com/news_reuters/business/s-p-500-nasdaq-futures-rise-as-ai-stocks-rebound-ahead-of-key-earnings/article_4464c998-ee59-5b28-b1ce-69976a65ccd6.html",
-      "published_at": "2026-10-19T13:38:00+02:00",
-      "thema": "Rohstoffe",
-      "bedeutung": "Fallende Ölpreise stützen die Futures, belasten aber tendenziell Energiewerte; das Geopolitik-Risiko und hohe Versicherungskosten halten die Preise über 100 US-Dollar.",
-      "erfasst_local": "08:10",
-      "erfasst_von": "N1",
-      "aktualisiert_local": "18:45"
-    },
-    {
-      "title": "Fed-Chef Warsh lässt Zinsentscheidung im Oktober offen; Händler reduzieren Erwartung einer Erhöhung, bis Dezember bleibt rund eine Viertelprozentpunkt-Erhöhung eingepreist",
-      "source": "Yahoo Finance",
-      "url": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-futures-mixed-amid-volatile-week-112939401.html",
-      "published_at": "2026-10-16T12:00:00-04:00",
-      "thema": "Zinsen/Fed",
-      "bedeutung": "Geringere Zinserhöhungserwartung entlastet Wachstums- und Tech-Werte etwas; die Zinsunsicherheit bleibt.",
-      "erfasst_local": "08:10",
-      "erfasst_von": "N1",
-      "aktualisiert_local": "16:25"
-    },
-    {
-      "title": "Chinas Wirtschaft wächst im dritten Quartal um 4,5 % zum Vorjahr und übertrifft leicht die Erwartungen; Immobilienkrise und schwache Binnennachfrage bleiben",
-      "source": "ABC News Australia",
-      "url": "https://abc.net.au/news/2026-10-19/asx-markets-business-live-news/107280976",
-      "published_at": "2026-10-19T16:44:00+11:00",
-      "thema": "Konjunktur",
-      "bedeutung": "Leicht positive Überraschung aus China, stützt die Stimmung in Asien (CSI 300 +0,3 %), mit begrenzter Wirkung auf US-Einzelwerte.",
-      "erfasst_local": "08:10",
-      "erfasst_von": "N1"
-    },
-    {
-      "title": "Nasdaq- und Dow-Futures erholen sich zum Wochenstart vor den Zahlen von Meta, Tesla und SpaceX; Hoffnung auf Entspannung im Iran-Konflikt hebt die Stimmung",
-      "source": "FX Leaders",
-      "url": "https://fxleaders.com/news/2026/10/18/nasdaq-and-dow-futures-recover-ealy-monday-ahead-of-meta-tesla-and-spacex-earnings-as-iran-de-escalation-hopes-lift-sentiment",
-      "published_at": "2026-10-18T12:00:00+02:00",
-      "thema": "Geopolitik",
-      "bedeutung": "Entspannungssignale im Iran-Konflikt und die anstehende Berichtssaison der Mega-Caps bestimmen diese Woche die Richtung; Enttäuschungen bei den Zahlen könnten die KI-Sorgen neu anfachen.",
-      "erfasst_local": "10:35",
-      "erfasst_von": "N2"
-    },
-    {
-      "title": "Software-Werte fallen am Freitag wegen Sorgen um die Finanzierung des KI-Ausbaus: Palantir und ServiceNow je −5 %, Salesforce −4 %, Software-ETF IGV −4 %",
-      "source": "24/7 Wall St.",
-      "url": "https://247wallst.com/investing/2026/10/16/enterprise-software-stocks-fall-as-ai-financing-worries-spread-palantir-and-servicenow-drop-5-salesforce-slides-4/",
-      "published_at": "2026-10-16T11:57:00-04:00",
-      "thema": "Sektor",
-      "bedeutung": "Der KI-Finanzierungsdruck erfasst nach den Chip- auch die Software-Werte; für Software-Kandidaten und Depotwerte wie Salesforce bleibt das Umfeld belastet.",
-      "erfasst_local": "10:35",
-      "erfasst_von": "N2"
-    },
-    {
-      "title": "Tesla und Meta legen am Mittwoch (21.10.) nach Börsenschluss Quartalszahlen vor; CoreWeave steht wegen rund 50 Mrd. US-Dollar Schulden und stark gestiegener Absicherungskosten im Fokus der KI-Finanzierungsdebatte",
-      "source": "Investing Cube",
-      "url": "https://www.investingcube.com/shares/nasdaq-futures-jump-over-1-as-ai-stocks-rebound-ahead-of-tesla-and-meta-earnings/",
-      "published_at": "2026-10-19T11:44:00+01:00",
-      "thema": "Earnings",
-      "bedeutung": "Die Zahlen von Tesla und Meta am Mittwoch sind der nächste Test für die KI-Ausgaben-Debatte; die Erholung am Montag ist bis dahin fragil.",
-      "erfasst_local": "13:20",
-      "erfasst_von": "N3"
-    },
-    {
-      "title": "Chipwerte legen vorbörslich zu, angeführt von NVIDIA und AMD; BofA erwartet weiter eine Zinserhöhung im Oktober, der Markt rechnet aber zu rund 85 % mit unveränderten Zinsen bei der Sitzung nächste Woche",
-      "source": "Yahoo Finance",
-      "url": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-futures-mixed-amid-volatile-week-112734828.html",
-      "published_at": null,
-      "thema": "Zinsen/Fed",
-      "bedeutung": "Die Chip-Erholung ist vorbörslich breit angelegt; bei der Fed-Sitzung kommende Woche bleibt ein Zinsschritt ein Restrisiko für Wachstumswerte.",
-      "erfasst_local": "16:25",
-      "erfasst_von": "N4"
-    },
-    {
-      "title": "Wall Street schließt uneinheitlich: Nasdaq rund +1 %, S&P 500 rund +0,5 %, Dow rund −0,2 %; KI-Werte erholen sich nach der schwächsten Nasdaq-Woche seit Juni, 10-Jahres-Rendite sinkt auf rund 5,1 %, Gold fällt auf etwa 4.165 US-Dollar",
+      "title": "Wall Street schließt zum Wochenstart uneinheitlich: Nasdaq rund +1 %, S&P 500 rund +0,5 %, Dow rund −0,2 %; KI-Werte erholen sich, 10-Jahres-Rendite sinkt auf rund 5,1 %, Gold fällt auf etwa 4.165 US-Dollar",
       "source": "DimSumDaily",
       "url": "https://www.dimsumdaily.hk/dow-dips-as-nasdaq-and-sp-500-advance-on-ai%E2%80%91led-rebound/",
       "published_at": "2026-10-19T23:17:00+08:00",
-      "thema": "Markt",
-      "bedeutung": "Die Erholung bei Chip- und KI-Werten (NVIDIA, AMD, CoreWeave) und die niedrigere Rendite entlasten Wachstumswerte; die Breite bleibt mit leicht schwächerem Dow gemischt, die Zahlenwoche (Netflix, Tesla, Meta) entscheidet über die Nachhaltigkeit.",
-      "erfasst_local": "18:45",
-      "erfasst_von": "N5"
+      "thema": "Sektor",
+      "bedeutung": "Die Erholung bei Chip- und KI-Werten (NVIDIA schloss bei 217,09 US-Dollar, +1,4 %) und die niedrigere Rendite entlasten Wachstumswerte; ob die Erholung hält, entscheidet sich in der Zahlenwoche (Netflix, Tesla, Meta).",
+      "erfasst_local": "08:30",
+      "erfasst_von": "N1"
+    },
+    {
+      "title": "Finanzminister Bessent führt die heiße September-Inflation auf einen „Energieschock“ zurück; Preise sollen sinken, sobald der Iran-Konflikt beendet ist – WTI −2,1 % auf rund 97 US-Dollar, Wahrscheinlichkeit einer Fed-Zinserhöhung im Oktober laut CME FedWatch bei rund 15 %",
+      "source": "Benzinga",
+      "url": "https://www.benzinga.com/markets/equities/26/10/62431980/stock-market-today-dow-jones-sp-500-futures-rise-as-scott-bessent-links-september-inflation-to-energy-shock-rcat-eslt-stld-in-focus",
+      "published_at": "2026-10-19T08:23:00-04:00",
+      "thema": "Zinsen/Fed",
+      "bedeutung": "Die Regierung deutet die Inflation als energiebedingt und vorübergehend; die niedrige Erhöhungswahrscheinlichkeit stützt Wachstumswerte, ein neuer Ölpreisanstieg würde die Zinsangst aber zurückbringen.",
+      "erfasst_local": "08:30",
+      "erfasst_von": "N1"
+    },
+    {
+      "title": "UBS senkt das Kursziel für Rheinmetall von 1.600 auf 1.360 Euro, bleibt aber bei „Buy“; Rheinmetall solle auf dem Kapitalmarkttag am 26./27. November konservative Ziele setzen",
+      "source": "wallstreet-online",
+      "url": "https://wallstreet-online.de/nachricht/21549893-ubs-stuft-rheinmetall-ag-buy",
+      "published_at": "2026-10-20T07:14:00+02:00",
+      "thema": "Unternehmen",
+      "bedeutung": "Die Kurszielsenkung bei unverändertem „Buy“ dämpft die Erwartungen an den Kapitalmarkttag; für die Rheinmetall-Position im Depot ein leichter Gegenwind, keine Änderung der These.",
+      "erfasst_local": "08:30",
+      "erfasst_von": "N1"
+    },
+    {
+      "title": "ESA beauftragt OHB mit Machbarkeits- und Vorentwurfsstudien für die geplante Mondstation OASIS; die Aktie steigt im SDax zeitweise um rund 6 % auf 204 Euro",
+      "source": "wallstreet-online",
+      "url": "https://wallstreet-online.de/nachricht/21547577-to-the-moon-ohb-aktie-esa-auftrag-mondstation-sorgt-dickes-kursplus",
+      "published_at": "2026-10-19T17:31:00+02:00",
+      "thema": "Unternehmen",
+      "bedeutung": "Der Studienauftrag stärkt die Raumfahrt-Story von OHB (Depotposition); das Auftragsvolumen ist unbekannt, daher vor allem ein Stimmungsimpuls.",
+      "erfasst_local": "08:30",
+      "erfasst_von": "N1"
     }
   ]
 }
