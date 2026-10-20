@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-19T15:44:45.331786+00:00",
+  "generated_at_utc": "2026-10-20T13:00:46.159975+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -148,7 +148,7 @@
       "einstand_eur": 162.34,
       "kapital_eur": 1623.4,
       "kaufdatum": "2026-06-17",
-      "handelstage_gehalten": 88,
+      "handelstage_gehalten": 89,
       "verkauf_spaetestens": null,
       "stop_eur": null,
       "grund": "Bestand vor dem System",
@@ -156,10 +156,10 @@
       "journal_ids": [
         "T0008"
       ],
-      "aktueller_kurs_eur": 116.56,
-      "wert_eur": 1165.6,
-      "unrealisiert_eur": -457.8,
-      "unrealisiert_pct": -28.2
+      "aktueller_kurs_eur": 115.46,
+      "wert_eur": 1154.6,
+      "unrealisiert_eur": -468.8,
+      "unrealisiert_pct": -28.88
     },
     {
       "id": "RHM.DE-2026-08-31",
@@ -172,7 +172,7 @@
       "einstand_eur": 1048.6,
       "kapital_eur": 4194.4,
       "kaufdatum": "2026-08-31",
-      "handelstage_gehalten": 35,
+      "handelstage_gehalten": 36,
       "verkauf_spaetestens": null,
       "stop_eur": null,
       "grund": "Bestand vor dem System",
@@ -180,10 +180,10 @@
       "journal_ids": [
         "T0003"
       ],
-      "aktueller_kurs_eur": 1053.6,
-      "wert_eur": 4214.4,
-      "unrealisiert_eur": 20.0,
-      "unrealisiert_pct": 0.48
+      "aktueller_kurs_eur": 1041.2,
+      "wert_eur": 4164.8,
+      "unrealisiert_eur": -29.6,
+      "unrealisiert_pct": -0.71
     },
     {
       "id": "OHB.DE-2026-09-08",
@@ -196,7 +196,7 @@
       "einstand_eur": 186.9429,
       "kapital_eur": 2617.2,
       "kaufdatum": "2026-09-08",
-      "handelstage_gehalten": 29,
+      "handelstage_gehalten": 30,
       "verkauf_spaetestens": null,
       "stop_eur": null,
       "grund": "Eigene Idee",
@@ -204,10 +204,10 @@
       "journal_ids": [
         "T0006"
       ],
-      "aktueller_kurs_eur": 198.2,
-      "wert_eur": 2774.8,
-      "unrealisiert_eur": 157.6,
-      "unrealisiert_pct": 6.02
+      "aktueller_kurs_eur": 188.8,
+      "wert_eur": 2643.2,
+      "unrealisiert_eur": 26.0,
+      "unrealisiert_pct": 0.99
     },
     {
       "id": "CRM-2026-10-09",
@@ -220,7 +220,7 @@
       "einstand_eur": 209.3857,
       "kapital_eur": 1465.7,
       "kaufdatum": "2026-10-09",
-      "handelstage_gehalten": 6,
+      "handelstage_gehalten": 7,
       "verkauf_spaetestens": null,
       "stop_eur": null,
       "grund": "Bestand vor dem System",
@@ -228,26 +228,26 @@
       "journal_ids": [
         "T0007"
       ],
-      "aktueller_kurs_eur": 214.18,
-      "wert_eur": 1499.26,
-      "unrealisiert_eur": 33.56,
-      "unrealisiert_pct": 2.29
+      "aktueller_kurs_eur": 216.02,
+      "wert_eur": 1512.14,
+      "unrealisiert_eur": 46.44,
+      "unrealisiert_pct": 3.17
     }
   ],
   "trades": [],
   "kennzahlen": {
     "realisiert_eur": 0.0,
-    "unrealisiert_eur": -246.64,
+    "unrealisiert_eur": -425.96,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
     "offene_positionen": 4,
     "investiert_eur": 9900.7,
-    "depotwert_eur": 9654.06,
+    "depotwert_eur": 9474.74,
     "positionen_ohne_kurs": 0,
     "gebuehren_eur": 8.0
   },
-  "kurse_stand_utc": "2026-10-19T15:36:14.749834+00:00",
+  "kurse_stand_utc": "2026-10-20T12:52:19.802857+00:00",
   "kennzahlen_swing": {
     "realisiert_eur": 0,
     "unrealisiert_eur": 0.0,
@@ -261,13 +261,13 @@
   },
   "kennzahlen_bestand": {
     "realisiert_eur": 0.0,
-    "unrealisiert_eur": -246.64,
+    "unrealisiert_eur": -425.96,
     "trades_abgeschlossen": 0,
     "trefferquote_pct": null,
     "schnitt_trade_eur": null,
     "offene_positionen": 4,
     "investiert_eur": 9900.7,
-    "depotwert_eur": 9654.06,
+    "depotwert_eur": 9474.74,
     "positionen_ohne_kurs": 0
   }
 }
