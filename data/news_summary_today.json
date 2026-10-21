@@ -1,7 +1,7 @@
 {
   "date": "2026-10-21",
-  "lage": "Die Wall Street schloss am Dienstag uneinheitlich (Dow +1,0 %, S&P 500 +0,3 %, Nasdaq −0,0 %, Russell 2000 +1,65 %), getragen von Gesundheitswerten auf Rekordhoch; am Mittwoch stützen die Zahlen von SpaceX (Aktie +7,5 % zur Eröffnung) und Super Micro Computer die Nasdaq-Futures, Netflix fällt nach dem schwächeren Ausblick um rund 6 bis 7 %. Belastend bleiben die 10-Jahres-Rendite bei rund 5,1 %, Ölpreise nahe 100 US-Dollar (Brent bis 110 US-Dollar) sowie verzögerte Iran-Gespräche; Meta und Tesla berichten nach Börsenschluss, die Fed tagt am 28. Oktober (Zinshalt zu rund 85 % erwartet).",
-  "lage_stand_local": "16:25",
+  "lage": "Die Wall Street schloss am Dienstag uneinheitlich (Dow +1,0 %, S&P 500 +0,3 %, Nasdaq −0,0 %, Russell 2000 +1,65 %), getragen von Gesundheitswerten auf Rekordhoch; am Mittwoch stützen die Zahlen von SpaceX (Aktie +7,5 % zur Eröffnung) und Super Micro Computer die Nasdaq-Futures, Netflix fällt nach dem schwächeren Ausblick um rund 6 bis 7 %, Thermo Fisher legt nach starken Zahlen rund 4 % zu, AT&T fällt trotz Prognoseanhebung vorbörslich um rund 4,6 %. Belastend bleiben die 10-Jahres-Rendite bei rund 5,1 %, Ölpreise nahe 100 US-Dollar (Brent bis 110 US-Dollar) sowie verzögerte Iran-Gespräche; Meta und Tesla berichten nach Börsenschluss, die Fed tagt am 28. Oktober (Zinshalt zu rund 85 % erwartet).",
+  "lage_stand_local": "18:40",
   "meldungen": [
     {
       "title": "Wall Street schließt uneinheitlich: Dow +1,02 % auf 52.495,88, S&P 500 +0,28 % auf 7.712,57, Nasdaq Composite −0,02 %; Gesundheitswerte auf Rekordhoch (Eli Lilly +3,5 %, UnitedHealth +3,0 %), 10-Jahres-Rendite 5,12 %, Fed-Zinshalt am 28. Oktober laut CME FedWatch zu rund 83 % erwartet",
@@ -107,14 +107,25 @@
       "erfasst_von": "N3"
     },
     {
-      "title": "Thermo Fisher Scientific übertrifft im dritten Quartal: Umsatz 12,14 Milliarden US-Dollar (+9 %, organisch +6 %), bereinigtes Ergebnis je Aktie 6,68 US-Dollar (+15 %); aktualisierte Jahresprognose wurde in der Telefonkonferenz genannt (Details liegen nicht vor)",
-      "source": "SEC (8-K, Thermo Fisher)",
+      "title": "Thermo Fisher Scientific übertrifft im dritten Quartal: Umsatz 12,14 Milliarden US-Dollar (+9 %, organisch +6 %), bereinigtes Ergebnis je Aktie 6,68 US-Dollar (+15 %, Erwartung 6,40 US-Dollar), bereinigte operative Marge 24,5 %; die Aktie steigt um 10:00 Uhr ET um rund 4,3 % auf 694,47 US-Dollar; aktualisierte Jahresprognose wurde in der Telefonkonferenz genannt",
+      "source": "SEC (8-K, Thermo Fisher) / 24/7 Wall St.",
       "url": "https://www.sec.gov/Archives/edgar/data/0000097745/000009774526000173/q32026earnings8kex99_1.htm",
       "published_at": "2026-10-21T07:00:00-04:00",
       "thema": "Unternehmen",
-      "bedeutung": "Solide Zahlen aus dem Life-Science-Bereich stützen den ohnehin starken Gesundheitssektor; die Reaktion der Aktie und die neue Prognose sind noch offen.",
+      "bedeutung": "Solide Zahlen und positive Kursreaktion stützen den ohnehin starken Gesundheitssektor; für das System bleibt der Titel wegen Earnings am heutigen Tag ausgeschlossen.",
       "erfasst_local": "16:25",
-      "erfasst_von": "N4"
+      "erfasst_von": "N4",
+      "aktualisiert_local": "18:40"
+    },
+    {
+      "title": "AT&T übertrifft im dritten Quartal mit 32,3 Milliarden US-Dollar Umsatz (+5,3 %) und 0,65 US-Dollar bereinigtem Ergebnis je Aktie (Erwartung 0,60 US-Dollar) und hebt die Jahresprognose auf rund 2,40 US-Dollar je Aktie an; die Aktie fällt vorbörslich um 4,6 %, weil die Postpaid-Neukunden mit 379.000 leicht unter den erwarteten 387.000 liegen",
+      "source": "GuruFocus",
+      "url": "https://www.gurufocus.com/news/9133816/att-t-shares-dip-46-premarket-after-q3-earnings-beat-but-subscriber-growth-misses",
+      "published_at": "2026-10-21T06:57:00-04:00",
+      "thema": "Unternehmen",
+      "bedeutung": "Wie schon bei Netflix reichen Gewinn-Beats allein nicht, wenn das Kundenwachstum enttäuscht; ein Zeichen für hohe Erwartungen in der Zahlensaison.",
+      "erfasst_local": "18:40",
+      "erfasst_von": "N5"
     }
   ]
 }
