@@ -1,1 +1,77 @@
-{"generated_at_utc":"2026-10-21T15:18:30Z","status":"RISK-ON","begruendung":"RISK-ON: 4/5 Kriterien erfüllt. Erfüllt: S&P 500 über SMA50 (+0,36 %), VIX unter 20 (16,79), 62 % der Watchlist über SMA50, 66 % im 5-Tage-Plus. Nicht erfüllt: Nasdaq unter SMA20 (−2,09 %). US-10J-Rendite 5,11 % (nur Info). Bis zu 2 neue Positionen pro Tag, max. 5 offene; im Depot liegen derzeit nur Bestandspositionen. Hold-Test (P5.5, 5-Minuten-Daten, S&P 500 +0,03 % seit Eröffnung): Apple und Intuitive Surgical bestehen 4/4 – Einstieg heute möglich (Intuitive Surgical: Earnings-Termin unbekannt, manuell prüfen). Amazon nur teilweise (2/4) – Limit an SMA20. Travelers Companies, Chevron, Exxon Mobil und UnitedHealth Group sind im aktuellen Feed wegen bärischem Optionsflow ausgeschlossen; Progressive, JPMorgan Chase und RTX bestehen den Hold-Test nicht. Hinweis: EUR/USD-Kurs im Feed nicht verfügbar, Levels nur in USD.","kurzbegruendung":"RISK-ON 4/5: Apple, Intuitive Surgical kaufbar; Amazon nur Limit.","sektor_rotation":[{"sektor":"Healthcare","trend":"positiv","kommentar":"Rang 1; UnitedHealth Group fällt im Hold-Test durch (0/4) und ist wegen bärischem Optionsflow ausgeschlossen.","kandidaten":[{"name":"UnitedHealth Group","empfehlung":"Kein Einstieg"}]},{"sektor":"Payments","trend":"positiv","kommentar":"Rang 2; Visa wegen Earnings in 4 Handelstagen ausgeschlossen.","kandidaten":[]},{"sektor":"Insurance","trend":"positiv","kommentar":"Rang 3; Travelers Companies im Feed ausgeschlossen (Optionsflow bärisch), Progressive fällt im Hold-Test durch (1/4).","kandidaten":[{"name":"Travelers Companies","empfehlung":"Kein Einstieg"},{"name":"Progressive","empfehlung":"Kein Einstieg"}]},{"sektor":"Energy","trend":"positiv","kommentar":"Rang 4; Chevron (3/4) und Exxon Mobil (1/4) im Feed ausgeschlossen bzw. durchgefallen, Earnings 30.10.","kandidaten":[{"name":"Chevron","empfehlung":"Kein Einstieg"},{"name":"Exxon Mobil","empfehlung":"Kein Einstieg"}]},{"sektor":"MedTech","trend":"positiv","kommentar":"Rang 5; Intuitive Surgical besteht 4/4 (+5,9 % seit Eröffnung, Volumen 3-fach), Earnings-Termin im Feed unbekannt – vor Kauf manuell prüfen.","kandidaten":[{"name":"Intuitive Surgical","empfehlung":"Kauf"}]},{"sektor":"Consumer Discretionary","trend":"positiv","kommentar":"Rang 6; Amazon besteht nur 2/4 – Limit an SMA20 statt Kauf am Kurs. Earnings 29.10.","kandidaten":[{"name":"Amazon","empfehlung":"Kauf"}]},{"sektor":"Defense","trend":"positiv","kommentar":"Rang 7; keine Kandidaten.","kandidaten":[]},{"sektor":"Transportation","trend":"positiv","kommentar":"Rang 8; keine Kandidaten.","kandidaten":[]},{"sektor":"Utilities","trend":"positiv","kommentar":"Rang 9; keine Kandidaten.","kandidaten":[]},{"sektor":"Software/Cloud","trend":"positiv","kommentar":"Rang 10; keine Kandidaten (Microsoft ausgeschlossen, Bestände Oracle und Salesforce im Depot).","kandidaten":[]},{"sektor":"Industrials/Infrastructure","trend":"positiv","kommentar":"Rang 11; keine Kandidaten.","kandidaten":[]},{"sektor":"Technology","trend":"positiv","kommentar":"Rang 12; Apple besteht 4/4 (+1,4 % seit Eröffnung, stärker als der S&P 500) – Einstieg am Kurs möglich. Earnings 02.11.","kandidaten":[{"name":"Apple","empfehlung":"Kauf"}]},{"sektor":"Defense/Industrials","trend":"neutral","kommentar":"Rang 13; RTX fällt im Hold-Test durch (0/4), laut Feed kein Setup.","kandidaten":[{"name":"RTX (Raytheon Technologies)","empfehlung":"Kein Einstieg"}]},{"sektor":"Materials","trend":"negativ","kommentar":"Rang 14; keine Kandidaten.","kandidaten":[]},{"sektor":"Financials","trend":"neutral","kommentar":"Rang 15; JPMorgan Chase fällt im Hold-Test durch (0/4), laut Feed kein Setup.","kandidaten":[{"name":"JPMorgan Chase","empfehlung":"Kein Einstieg"}]},{"sektor":"Cybersecurity","trend":"negativ","kommentar":"Rang 16; keine Kandidaten.","kandidaten":[]},{"sektor":"Semiconductors/AI","trend":"negativ","kommentar":"Rang 17; keine Kandidaten.","kandidaten":[]},{"sektor":"Fintech/Brokerage","trend":"neutral","kommentar":"Rang 18; keine Kandidaten.","kandidaten":[]},{"sektor":"Industrials","trend":"negativ","kommentar":"Rang 19; keine Kandidaten.","kandidaten":[]}]}
+{
+  "generated_at_utc": "2026-10-21T15:50:00Z",
+  "status": "RISK-ON",
+  "begruendung": "RISK-ON mit 4 von 5 Kriterien: S&P 500 über SMA50, VIX bei 16,6 (unter 20), 62 % der Watchlist über SMA50 und 66 % im 5-Tage-Plus. Nur der Nasdaq liegt unter der SMA20 (−1,9 %). Führend sind Healthcare, Payments, Insurance und Energy; Halbleiter, Cybersecurity und Industrials bleiben schwach. US-10J-Rendite bei 5,12 % (nur Info). Heute sind bis zu 2 neue Positionen erlaubt.",
+  "kurzbegruendung": "RISK-ON 4/5: S&P über SMA50, VIX 16,6; Nasdaq unter SMA20. Max. 2 neue Positionen.",
+  "sektor_rotation": [
+    {
+      "sektor": "Healthcare",
+      "trend": "positiv",
+      "kommentar": "Rang 1, Rotation in defensive Werte, XLV auf Rekordhoch. UnitedHealth ist überdehnt – Wiedereinstieg nur am Rücksetzer.",
+      "kandidaten": [
+        {"name": "UnitedHealth Group", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "Payments",
+      "trend": "positiv",
+      "kommentar": "Rang 2, aber Visa (Earnings 27.10.) und Mastercard (bärischer Optionsflow) sind ausgeschlossen.",
+      "kandidaten": [
+        {"name": "Visa", "empfehlung": "Kein Einstieg"},
+        {"name": "Mastercard", "empfehlung": "Kein Einstieg"}
+      ]
+    },
+    {
+      "sektor": "Insurance",
+      "trend": "positiv",
+      "kommentar": "Rang 3. Travelers mit bärischem Optionsflow und RSI 86 ausgeschlossen; Progressive intakt, aber Hold-Test 1/4.",
+      "kandidaten": [
+        {"name": "Travelers Companies", "empfehlung": "Kein Einstieg"},
+        {"name": "Progressive", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "Energy",
+      "trend": "positiv",
+      "kommentar": "Rang 4, Sektor stark, aber Chevron und Exxon Mobil haben bärischen Optionsflow und überkaufte RSI-Werte.",
+      "kandidaten": [
+        {"name": "Chevron", "empfehlung": "Kein Einstieg"},
+        {"name": "Exxon Mobil", "empfehlung": "Kein Einstieg"}
+      ]
+    },
+    {
+      "sektor": "MedTech",
+      "trend": "positiv",
+      "kommentar": "Rang 5. Intuitive Surgical mit starkem Volumen (3-fach), aber Trend rot und Earnings-Termin unbekannt; Thermo Fisher mit Earnings heute ausgeschlossen.",
+      "kandidaten": [
+        {"name": "Intuitive Surgical", "empfehlung": "Beobachten"},
+        {"name": "Thermo Fisher Scientific", "empfehlung": "Kein Einstieg"}
+      ]
+    },
+    {
+      "sektor": "Consumer Discretionary",
+      "trend": "positiv",
+      "kommentar": "Rang 6. Amazon ist die beste Chance des Tages – Einstieg nur per Limit an der SMA20.",
+      "kandidaten": [
+        {"name": "Amazon", "empfehlung": "Kauf"}
+      ]
+    },
+    {
+      "sektor": "Technology",
+      "trend": "positiv",
+      "kommentar": "Rang 12, schwache Sektorstärke; Apple besteht den Hold-Test 4/4 und ist zum Kurs kaufbar (Earnings 02.11. im Haltefenster).",
+      "kandidaten": [
+        {"name": "Apple", "empfehlung": "Kauf"}
+      ]
+    },
+    {
+      "sektor": "Software/Cloud",
+      "trend": "positiv",
+      "kommentar": "Rang 10. Microsoft und ServiceNow wegen Earnings in 5 Handelstagen ausgeschlossen.",
+      "kandidaten": [
+        {"name": "Microsoft", "empfehlung": "Kein Einstieg"},
+        {"name": "ServiceNow", "empfehlung": "Kein Einstieg"}
+      ]
+    }
+  ]
+}
