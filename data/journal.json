@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-21T13:40:38.300203+00:00",
+  "generated_at_utc": "2026-10-21T15:15:56.146230+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -171,11 +171,7 @@
       "teilrealisiert_eur": 0.0,
       "journal_ids": [
         "T0008"
-      ],
-      "aktueller_kurs_eur": 117.15,
-      "wert_eur": 1171.5,
-      "unrealisiert_eur": -451.9,
-      "unrealisiert_pct": -27.84
+      ]
     },
     {
       "id": "RHM.DE-2026-08-31",
@@ -196,10 +192,10 @@
       "journal_ids": [
         "T0003"
       ],
-      "aktueller_kurs_eur": 1049.2,
-      "wert_eur": 4196.8,
-      "unrealisiert_eur": 2.4,
-      "unrealisiert_pct": 0.06
+      "aktueller_kurs_eur": 1011.2,
+      "wert_eur": 4044.8,
+      "unrealisiert_eur": -149.6,
+      "unrealisiert_pct": -3.57
     },
     {
       "id": "CRM-2026-10-09",
@@ -219,11 +215,7 @@
       "teilrealisiert_eur": 0.0,
       "journal_ids": [
         "T0007"
-      ],
-      "aktueller_kurs_eur": 213.22,
-      "wert_eur": 1492.54,
-      "unrealisiert_eur": 26.84,
-      "unrealisiert_pct": 1.83
+      ]
     }
   ],
   "trades": [
@@ -244,17 +236,17 @@
   ],
   "kennzahlen": {
     "realisiert_eur": 251.8,
-    "unrealisiert_eur": -422.66,
+    "unrealisiert_eur": -149.6,
     "trades_abgeschlossen": 1,
     "trefferquote_pct": 100,
     "schnitt_trade_eur": 251.8,
     "offene_positionen": 3,
     "investiert_eur": 7283.5,
-    "depotwert_eur": 6860.84,
-    "positionen_ohne_kurs": 0,
+    "depotwert_eur": 7133.9,
+    "positionen_ohne_kurs": 2,
     "gebuehren_eur": 9.0
   },
-  "kurse_stand_utc": "2026-10-21T13:32:18.944506+00:00",
+  "kurse_stand_utc": "2026-10-21T15:07:16.105888+00:00",
   "kennzahlen_swing": {
     "realisiert_eur": 0,
     "unrealisiert_eur": 0.0,
@@ -268,13 +260,13 @@
   },
   "kennzahlen_bestand": {
     "realisiert_eur": 251.8,
-    "unrealisiert_eur": -422.66,
+    "unrealisiert_eur": -149.6,
     "trades_abgeschlossen": 1,
     "trefferquote_pct": 100,
     "schnitt_trade_eur": 251.8,
     "offene_positionen": 3,
     "investiert_eur": 7283.5,
-    "depotwert_eur": 6860.84,
-    "positionen_ohne_kurs": 0
+    "depotwert_eur": 7133.9,
+    "positionen_ohne_kurs": 2
   }
 }
