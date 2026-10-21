@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-20T15:44:38.045761+00:00",
+  "generated_at_utc": "2026-10-21T15:44:45.811350+00:00",
   "benchmark": "Nasdaq-100 (QQQ)",
   "waehrung": "USD",
   "gruppen": [
@@ -9,13 +9,13 @@
       "eintraege": 10,
       "seit_aufnahme": {
         "anzahl": 10,
-        "schnitt_ueberrendite_pct": 6.51,
-        "trefferquote_pct": 90.0
+        "schnitt_ueberrendite_pct": 6.76,
+        "trefferquote_pct": 100.0
       },
       "nach_5_tagen": {
-        "anzahl": 7,
-        "schnitt_ueberrendite_pct": 5.38,
-        "trefferquote_pct": 86.0
+        "anzahl": 8,
+        "schnitt_ueberrendite_pct": 4.8,
+        "trefferquote_pct": 88.0
       },
       "nach_10_tagen": {
         "anzahl": 2,
@@ -25,17 +25,30 @@
       "nach_20_tagen": null
     },
     {
+      "gruppe": "ueberdehnt",
+      "label": "Überdehnt – auf Rücksetzer warten",
+      "eintraege": 1,
+      "seit_aufnahme": {
+        "anzahl": 1,
+        "schnitt_ueberrendite_pct": 2.73,
+        "trefferquote_pct": 100.0
+      },
+      "nach_5_tagen": null,
+      "nach_10_tagen": null,
+      "nach_20_tagen": null
+    },
+    {
       "gruppe": "invalidiert",
       "label": "Aussortiert – These widerlegt",
       "eintraege": 27,
       "seit_aufnahme": {
         "anzahl": 27,
-        "schnitt_ueberrendite_pct": -0.2,
-        "trefferquote_pct": 41.0
+        "schnitt_ueberrendite_pct": 0.34,
+        "trefferquote_pct": 44.0
       },
       "nach_5_tagen": {
         "anzahl": 27,
-        "schnitt_ueberrendite_pct": 1.15,
+        "schnitt_ueberrendite_pct": 1.14,
         "trefferquote_pct": 44.0
       },
       "nach_10_tagen": {
@@ -44,24 +57,24 @@
         "trefferquote_pct": 74.0
       },
       "nach_20_tagen": {
-        "anzahl": 14,
-        "schnitt_ueberrendite_pct": 1.82,
-        "trefferquote_pct": 43.0
+        "anzahl": 16,
+        "schnitt_ueberrendite_pct": 0.95,
+        "trefferquote_pct": 38.0
       }
     },
     {
       "gruppe": "zeitlimit",
       "label": "Aussortiert – Zeitlimit",
-      "eintraege": 19,
+      "eintraege": 20,
       "seit_aufnahme": {
-        "anzahl": 19,
-        "schnitt_ueberrendite_pct": 1.14,
-        "trefferquote_pct": 58.0
+        "anzahl": 20,
+        "schnitt_ueberrendite_pct": 1.81,
+        "trefferquote_pct": 60.0
       },
       "nach_5_tagen": {
-        "anzahl": 18,
-        "schnitt_ueberrendite_pct": -0.96,
-        "trefferquote_pct": 33.0
+        "anzahl": 19,
+        "schnitt_ueberrendite_pct": -0.7,
+        "trefferquote_pct": 37.0
       },
       "nach_10_tagen": {
         "anzahl": 16,
@@ -69,9 +82,9 @@
         "trefferquote_pct": 50.0
       },
       "nach_20_tagen": {
-        "anzahl": 10,
-        "schnitt_ueberrendite_pct": -0.17,
-        "trefferquote_pct": 40.0
+        "anzahl": 11,
+        "schnitt_ueberrendite_pct": -0.97,
+        "trefferquote_pct": 36.0
       }
     }
   ],

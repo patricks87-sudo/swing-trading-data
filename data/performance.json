@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-20T15:44:39.856953+00:00",
+  "generated_at_utc": "2026-10-21T15:44:47.357578+00:00",
   "waehrung": "EUR",
   "hinweis": "Hypothetisch, ohne Steuern. Depot-Simulation mit 8.000 € Start, 75 € Risiko je Trade, Schutz-Stop 2× ATR, Verkauf nach 10 Handelstagen, max. 5 Positionen / 375 € Gesamtrisiko / 2 je Sektor, 1 € Gebühr je Order. Echte Trades stehen im Trade-Journal.",
   "start": "2026-08-12",
@@ -52,7 +52,8 @@
     "2026-10-15",
     "2026-10-16",
     "2026-10-19",
-    "2026-10-20"
+    "2026-10-20",
+    "2026-10-21"
   ],
   "reihen": [
     {
@@ -107,7 +108,8 @@
         110.45,
         108.7,
         108.45,
-        108.72
+        108.85,
+        109.98
       ]
     },
     {
@@ -162,7 +164,8 @@
         113.6,
         109.64,
         110.64,
-        111.24
+        111.72,
+        114.07
       ]
     },
     {
@@ -217,7 +220,8 @@
         103.84,
         101.08,
         102.18,
-        102.24
+        102.17,
+        103.3
       ]
     },
     {
@@ -272,32 +276,33 @@
         102.0,
         100.97,
         101.01,
-        101.41
+        101.47,
+        101.97
       ]
     }
   ],
   "zusammenfassung": {
     "neu": {
       "label": "Depot-Simulation (deine Regeln)",
-      "gesamt_pct": 8.72
+      "gesamt_pct": 9.98
     },
     "alle": {
       "label": "Alle Kandidaten, 10 Tage gehalten",
-      "gesamt_pct": 11.24
+      "gesamt_pct": 14.07
     },
     "qqq": {
       "label": "Nasdaq-100 (QQQ)",
-      "gesamt_pct": 2.24
+      "gesamt_pct": 3.3
     },
     "urth": {
       "label": "MSCI World (URTH)",
-      "gesamt_pct": 1.41
+      "gesamt_pct": 1.97
     }
   },
   "statistik": {
     "neu": {
       "startkapital_eur": 8000.0,
-      "endwert_eur": 8697.6,
+      "endwert_eur": 8798.4,
       "trades_abgeschlossen": 18,
       "trades_offen": 3,
       "trefferquote_pct": 67.0,
@@ -312,11 +317,11 @@
         "sektor": 5,
         "kapital": 0,
         "doppelt": 4,
-        "limit_verfallen": 20
+        "limit_verfallen": 21
       }
     },
     "alle": {
-      "trades": 56,
+      "trades": 58,
       "abgeschlossen": 41,
       "trefferquote_pct": 83.0,
       "schnitt_trade_pct": 5.25
@@ -547,9 +552,9 @@
       "start": "2026-10-09",
       "stueck": 2,
       "einstieg_eur": 579.68,
-      "kurs_eur": 609.41,
-      "tage": 8,
-      "ergebnis_eur": 58.45
+      "kurs_eur": 623.57,
+      "tage": 9,
+      "ergebnis_eur": 86.78
     },
     {
       "ticker": "ZS",
@@ -557,9 +562,9 @@
       "start": "2026-10-16",
       "stueck": 4,
       "einstieg_eur": 184.65,
-      "kurs_eur": 190.49,
-      "tage": 3,
-      "ergebnis_eur": 22.35
+      "kurs_eur": 201.59,
+      "tage": 4,
+      "ergebnis_eur": 66.76
     },
     {
       "ticker": "COIN",
@@ -567,9 +572,9 @@
       "start": "2026-10-16",
       "stueck": 4,
       "einstieg_eur": 161.45,
-      "kurs_eur": 152.2,
-      "tage": 3,
-      "ergebnis_eur": -38.02
+      "kurs_eur": 159.21,
+      "tage": 4,
+      "ergebnis_eur": -9.96
     }
   ]
 }
