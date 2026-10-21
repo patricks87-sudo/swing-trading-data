@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-20T15:44:40.460741+00:00",
+  "updated_at_utc": "2026-10-21T11:57:38.111748+00:00",
   "quelle": "automatisch aus data/journal.json (Trade-Journal im Cockpit)",
   "kurse_stand_utc": "2026-10-20T15:36:08.542799+00:00",
   "positions": [
@@ -14,7 +14,7 @@
       "einstand_eur": 162.34,
       "kapital_eur": 1623.4,
       "kaufdatum": "2026-06-17",
-      "handelstage_gehalten": 89,
+      "handelstage_gehalten": 90,
       "verkauf_spaetestens": null,
       "stop_eur": null,
       "grund": "Bestand vor dem System",
@@ -38,7 +38,7 @@
       "einstand_eur": 1048.6,
       "kapital_eur": 4194.4,
       "kaufdatum": "2026-08-31",
-      "handelstage_gehalten": 36,
+      "handelstage_gehalten": 37,
       "verkauf_spaetestens": null,
       "stop_eur": null,
       "grund": "Bestand vor dem System",
@@ -46,34 +46,10 @@
       "journal_ids": [
         "T0003"
       ],
-      "aktueller_kurs_eur": 1054.0,
-      "wert_eur": 4216.0,
-      "unrealisiert_eur": 21.6,
-      "unrealisiert_pct": 0.51
-    },
-    {
-      "id": "OHB.DE-2026-09-08",
-      "ticker": "OHB.DE",
-      "name": "OHB",
-      "art": "bestand",
-      "isin": null,
-      "sektor": null,
-      "stueck": 14.0,
-      "einstand_eur": 186.9429,
-      "kapital_eur": 2617.2,
-      "kaufdatum": "2026-09-08",
-      "handelstage_gehalten": 30,
-      "verkauf_spaetestens": null,
-      "stop_eur": null,
-      "grund": "Eigene Idee",
-      "teilrealisiert_eur": 0.0,
-      "journal_ids": [
-        "T0006"
-      ],
-      "aktueller_kurs_eur": 191.4,
-      "wert_eur": 2679.6,
-      "unrealisiert_eur": 62.4,
-      "unrealisiert_pct": 2.38
+      "aktueller_kurs_eur": 1043.2,
+      "wert_eur": 4172.8,
+      "unrealisiert_eur": -21.6,
+      "unrealisiert_pct": -0.51
     },
     {
       "id": "CRM-2026-10-09",
@@ -86,7 +62,7 @@
       "einstand_eur": 209.3857,
       "kapital_eur": 1465.7,
       "kaufdatum": "2026-10-09",
-      "handelstage_gehalten": 7,
+      "handelstage_gehalten": 8,
       "verkauf_spaetestens": null,
       "stop_eur": null,
       "grund": "Bestand vor dem System",
