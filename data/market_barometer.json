@@ -1,13 +1,13 @@
 {
-  "generated_at_utc": "2026-10-21T15:50:00Z",
+  "generated_at_utc": "2026-10-22T13:10:00Z",
   "status": "RISK-ON",
-  "begruendung": "RISK-ON mit 4 von 5 Kriterien: S&P 500 über SMA50, VIX bei 16,6 (unter 20), 62 % der Watchlist über SMA50 und 66 % im 5-Tage-Plus. Nur der Nasdaq liegt unter der SMA20 (−1,9 %). Führend sind Healthcare, Payments, Insurance und Energy; Halbleiter, Cybersecurity und Industrials bleiben schwach. US-10J-Rendite bei 5,12 % (nur Info). Heute sind bis zu 2 neue Positionen erlaubt.",
-  "kurzbegruendung": "RISK-ON 4/5: S&P über SMA50, VIX 16,6; Nasdaq unter SMA20. Max. 2 neue Positionen.",
+  "begruendung": "RISK-ON mit 4 von 5 Kriterien: S&P 500 über SMA50 (+0,6 %), VIX bei 18,0 (unter 20), 60 % der Watchlist über SMA50 und 70 % im 5-Tage-Plus. Nur der Nasdaq liegt unter der SMA20 (−1,9 %). Führend sind Healthcare, Payments, Insurance, Energy und Consumer Discretionary; Halbleiter, Cybersecurity und Industrials bleiben schwach. US-10J-Rendite bei 5,04 % (nur Info). Rohstoffe: Ampel ROT, keine Rotation in Edelmetalle. Heute sind bis zu 2 neue Positionen erlaubt.",
+  "kurzbegruendung": "RISK-ON 4/5: S&P über SMA50, VIX 18,0; Nasdaq unter SMA20. Max. 2 neue Positionen.",
   "sektor_rotation": [
     {
       "sektor": "Healthcare",
       "trend": "positiv",
-      "kommentar": "Rang 1, Rotation in defensive Werte, XLV auf Rekordhoch. UnitedHealth ist überdehnt – Wiedereinstieg nur am Rücksetzer.",
+      "kommentar": "Rang 1, Rotation in defensive Werte, XLV auf Rekordhoch. UnitedHealth ist überdehnt – Einstieg nur am Rücksetzer (SMA20).",
       "kandidaten": [
         {"name": "UnitedHealth Group", "empfehlung": "Beobachten"}
       ]
@@ -15,7 +15,7 @@
     {
       "sektor": "Payments",
       "trend": "positiv",
-      "kommentar": "Rang 2, aber Visa (Earnings 27.10.) und Mastercard (bärischer Optionsflow) sind ausgeschlossen.",
+      "kommentar": "Rang 2, aber Visa und Mastercard sind im Feed ausgeschlossen.",
       "kandidaten": [
         {"name": "Visa", "empfehlung": "Kein Einstieg"},
         {"name": "Mastercard", "empfehlung": "Kein Einstieg"}
@@ -24,42 +24,43 @@
     {
       "sektor": "Insurance",
       "trend": "positiv",
-      "kommentar": "Rang 3. Travelers mit bärischem Optionsflow und RSI 86 ausgeschlossen; Progressive intakt, aber Hold-Test 1/4.",
+      "kommentar": "Rang 3. Travelers (Q3 am 16.10. gemeldet) ist Kauf-Kandidat, aber RSI überhitzt – Limit an der SMA20. Progressive ausgeschlossen.",
       "kandidaten": [
-        {"name": "Travelers Companies", "empfehlung": "Kein Einstieg"},
-        {"name": "Progressive", "empfehlung": "Beobachten"}
+        {"name": "Travelers", "empfehlung": "Kauf"},
+        {"name": "Progressive", "empfehlung": "Kein Einstieg"}
       ]
     },
     {
       "sektor": "Energy",
       "trend": "positiv",
-      "kommentar": "Rang 4, Sektor stark, aber Chevron und Exxon Mobil haben bärischen Optionsflow und überkaufte RSI-Werte.",
+      "kommentar": "Rang 4, Sektor stark. Chevron und Exxon Mobil sind überkauft (RSI) – Einstieg nur per Limit an der SMA20; Earnings beider am 30.10.",
       "kandidaten": [
-        {"name": "Chevron", "empfehlung": "Kein Einstieg"},
-        {"name": "Exxon Mobil", "empfehlung": "Kein Einstieg"}
-      ]
-    },
-    {
-      "sektor": "MedTech",
-      "trend": "positiv",
-      "kommentar": "Rang 5. Intuitive Surgical mit starkem Volumen (3-fach), aber Trend rot und Earnings-Termin unbekannt; Thermo Fisher mit Earnings heute ausgeschlossen.",
-      "kandidaten": [
-        {"name": "Intuitive Surgical", "empfehlung": "Beobachten"},
-        {"name": "Thermo Fisher Scientific", "empfehlung": "Kein Einstieg"}
+        {"name": "Chevron", "empfehlung": "Kauf"},
+        {"name": "Exxon Mobil", "empfehlung": "Beobachten"}
       ]
     },
     {
       "sektor": "Consumer Discretionary",
       "trend": "positiv",
-      "kommentar": "Rang 6. Amazon ist die beste Chance des Tages – Einstieg nur per Limit an der SMA20.",
+      "kommentar": "Rang 5. Amazon wegen Earnings in 5 Handelstagen ausgeschlossen; Tesla nur Beobachtung (Trend rot).",
       "kandidaten": [
-        {"name": "Amazon", "empfehlung": "Kauf"}
+        {"name": "Amazon.com", "empfehlung": "Kein Einstieg"},
+        {"name": "Tesla", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "MedTech",
+      "trend": "positiv",
+      "kommentar": "Rang 6. Intuitive Surgical ist der Top-Titel des Tages (Score 77, Earnings erst im Januar), Trendkontext aber rot. Thermo Fisher ausgeschlossen.",
+      "kandidaten": [
+        {"name": "Intuitive Surgical", "empfehlung": "Kauf"},
+        {"name": "Thermo Fisher Scientific", "empfehlung": "Kein Einstieg"}
       ]
     },
     {
       "sektor": "Technology",
-      "trend": "positiv",
-      "kommentar": "Rang 12, schwache Sektorstärke; Apple besteht den Hold-Test 4/4 und ist zum Kurs kaufbar (Earnings 02.11. im Haltefenster).",
+      "trend": "neutral",
+      "kommentar": "Rang 12, schwache Sektorstärke; Apple im Feed als Kauf – solide, Earnings am 02.11. fallen in die Haltedauer.",
       "kandidaten": [
         {"name": "Apple", "empfehlung": "Kauf"}
       ]
@@ -67,10 +68,35 @@
     {
       "sektor": "Software/Cloud",
       "trend": "positiv",
-      "kommentar": "Rang 10. Microsoft und ServiceNow wegen Earnings in 5 Handelstagen ausgeschlossen.",
+      "kommentar": "Rang 11. Microsoft (Earnings 28.10.) und ServiceNow ausgeschlossen. Im Depot: Oracle und Salesforce als Bestand.",
       "kandidaten": [
         {"name": "Microsoft", "empfehlung": "Kein Einstieg"},
         {"name": "ServiceNow", "empfehlung": "Kein Einstieg"}
+      ]
+    },
+    {
+      "sektor": "Semiconductors/AI",
+      "trend": "negativ",
+      "kommentar": "Rang 17, Sektor schwächer als der S&P 500 nach dem Chip-Ausverkauf. Qualcomm und Marvell nur Beobachtung.",
+      "kandidaten": [
+        {"name": "Qualcomm", "empfehlung": "Beobachten"},
+        {"name": "Marvell Technology", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "Cybersecurity",
+      "trend": "negativ",
+      "kommentar": "Rang 16, Sektor unter Druck. Zscaler ist überdehnt – erst nach Rücksetzer wieder interessant.",
+      "kandidaten": [
+        {"name": "Zscaler", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "Utilities",
+      "trend": "neutral",
+      "kommentar": "Rang 10. NextEra Energy mit gutem Kapitalfluss, aber Trendkontext rot.",
+      "kandidaten": [
+        {"name": "NextEra Energy", "empfehlung": "Beobachten"}
       ]
     }
   ]
