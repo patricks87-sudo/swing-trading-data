@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-21T15:44:47.357578+00:00",
+  "generated_at_utc": "2026-10-22T15:44:57.032944+00:00",
   "waehrung": "EUR",
   "hinweis": "Hypothetisch, ohne Steuern. Depot-Simulation mit 8.000 € Start, 75 € Risiko je Trade, Schutz-Stop 2× ATR, Verkauf nach 10 Handelstagen, max. 5 Positionen / 375 € Gesamtrisiko / 2 je Sektor, 1 € Gebühr je Order. Echte Trades stehen im Trade-Journal.",
   "start": "2026-08-12",
@@ -53,7 +53,8 @@
     "2026-10-16",
     "2026-10-19",
     "2026-10-20",
-    "2026-10-21"
+    "2026-10-21",
+    "2026-10-22"
   ],
   "reihen": [
     {
@@ -109,7 +110,8 @@
         108.7,
         108.45,
         108.85,
-        109.98
+        109.99,
+        109.76
       ]
     },
     {
@@ -165,7 +167,8 @@
         109.64,
         110.64,
         111.72,
-        114.07
+        114.05,
+        112.5
       ]
     },
     {
@@ -221,7 +224,8 @@
         101.08,
         102.18,
         102.17,
-        103.3
+        103.14,
+        100.79
       ]
     },
     {
@@ -277,39 +281,40 @@
         100.97,
         101.01,
         101.47,
-        101.97
+        101.9,
+        100.82
       ]
     }
   ],
   "zusammenfassung": {
     "neu": {
       "label": "Depot-Simulation (deine Regeln)",
-      "gesamt_pct": 9.98
+      "gesamt_pct": 9.76
     },
     "alle": {
       "label": "Alle Kandidaten, 10 Tage gehalten",
-      "gesamt_pct": 14.07
+      "gesamt_pct": 12.5
     },
     "qqq": {
       "label": "Nasdaq-100 (QQQ)",
-      "gesamt_pct": 3.3
+      "gesamt_pct": 0.79
     },
     "urth": {
       "label": "MSCI World (URTH)",
-      "gesamt_pct": 1.97
+      "gesamt_pct": 0.82
     }
   },
   "statistik": {
     "neu": {
       "startkapital_eur": 8000.0,
-      "endwert_eur": 8798.4,
-      "trades_abgeschlossen": 18,
+      "endwert_eur": 8780.8,
+      "trades_abgeschlossen": 19,
       "trades_offen": 3,
-      "trefferquote_pct": 67.0,
-      "schnitt_trade_eur": 36.38,
+      "trefferquote_pct": 68.0,
+      "schnitt_trade_eur": 37.54,
       "bester_trade_eur": 197.65,
       "schlechtester_trade_eur": -75.93,
-      "gebuehren_eur": 39.0,
+      "gebuehren_eur": 41.0,
       "max_gleichzeitig": 5,
       "nicht_gekauft": {
         "plaetze": 4,
@@ -317,14 +322,14 @@
         "sektor": 5,
         "kapital": 0,
         "doppelt": 4,
-        "limit_verfallen": 21
+        "limit_verfallen": 22
       }
     },
     "alle": {
-      "trades": 58,
-      "abgeschlossen": 41,
-      "trefferquote_pct": 83.0,
-      "schnitt_trade_pct": 5.25
+      "trades": 59,
+      "abgeschlossen": 48,
+      "trefferquote_pct": 79.0,
+      "schnitt_trade_pct": 4.21
     }
   },
   "trades_neu": [
@@ -375,6 +380,18 @@
       "ausstieg_eur": 32.17,
       "ergebnis_eur": -75.93,
       "rendite_pct": -10.79
+    },
+    {
+      "ticker": "TMO",
+      "name": "Thermo Fisher Scientific",
+      "start": "2026-10-09",
+      "ende": "2026-10-22",
+      "stueck": 2,
+      "ausstieg": "10 Tage",
+      "einstieg_eur": 579.68,
+      "ausstieg_eur": 609.92,
+      "ergebnis_eur": 58.47,
+      "rendite_pct": 5.22
     },
     {
       "ticker": "AMZN",
@@ -547,24 +564,14 @@
   ],
   "offen_neu": [
     {
-      "ticker": "TMO",
-      "name": "Thermo Fisher Scientific",
-      "start": "2026-10-09",
-      "stueck": 2,
-      "einstieg_eur": 579.68,
-      "kurs_eur": 623.57,
-      "tage": 9,
-      "ergebnis_eur": 86.78
-    },
-    {
       "ticker": "ZS",
       "name": "Zscaler",
       "start": "2026-10-16",
       "stueck": 4,
       "einstieg_eur": 184.65,
-      "kurs_eur": 201.59,
-      "tage": 4,
-      "ergebnis_eur": 66.76
+      "kurs_eur": 213.21,
+      "tage": 5,
+      "ergebnis_eur": 113.26
     },
     {
       "ticker": "COIN",
@@ -572,9 +579,19 @@
       "start": "2026-10-16",
       "stueck": 4,
       "einstieg_eur": 161.45,
-      "kurs_eur": 159.21,
-      "tage": 4,
-      "ergebnis_eur": -9.96
+      "kurs_eur": 151.64,
+      "tage": 5,
+      "ergebnis_eur": -40.27
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "start": "2026-10-22",
+      "stueck": 6,
+      "einstieg_eur": 225.21,
+      "kurs_eur": 224.49,
+      "tage": 1,
+      "ergebnis_eur": -5.33
     }
   ]
 }
