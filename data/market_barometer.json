@@ -1,17 +1,20 @@
 {
-  "generated_at_utc": "2026-10-23T15:25:00+00:00",
-  "status": "NEUTRAL",
-  "begruendung": "NEUTRAL: 3 von 5 Kriterien erfüllt. S&P 500 liegt 0,7 % unter der SMA50 und Nasdaq 3,8 % unter der SMA20; VIX 19,07 (unter 20), 58 % der Watchlist über SMA50 und 70 % im 5-Tage-Plus. Seit der US-Eröffnung ist der S&P 500 um 0,34 % gestiegen. Erlaubt sind höchstens 1 neue und 3 offene Positionen.",
-  "kurzbegruendung": "NEUTRAL (3/5): S&P 500 +0,34 % seit Eröffnung, max. 1 neue Position; nur Union Pacific per Limit.",
-  "sektor_rotation": [
-    {"sektor": "Healthcare", "trend": "positiv", "kommentar": "Sektor-Rang 1, defensive Rotation. UnitedHealth Group überdehnt und ohne Volumen.", "kandidaten": [{"name": "UnitedHealth Group", "empfehlung": "Kein Einstieg"}]},
-    {"sektor": "Cybersecurity", "trend": "positiv", "kommentar": "Rang 3. Zscaler besteht den Hold-Test voll, ist aber überdehnt.", "kandidaten": [{"name": "Zscaler", "empfehlung": "Beobachten"}]},
-    {"sektor": "Insurance", "trend": "positiv", "kommentar": "Rang 4, aber Progressive fällt unter VWAP und Eröffnung.", "kandidaten": [{"name": "Progressive", "empfehlung": "Beobachten"}]},
-    {"sektor": "Defense", "trend": "positiv", "kommentar": "Rang 5. Lockheed Martin stark intraday, aber überdehnt und mit schwachem Volumen.", "kandidaten": [{"name": "Lockheed Martin", "empfehlung": "Beobachten"}]},
-    {"sektor": "Utilities", "trend": "positiv", "kommentar": "Rang 7. NextEra Energy und Duke Energy fallen durch den Hold-Test.", "kandidaten": [{"name": "NextEra Energy", "empfehlung": "Kein Einstieg"}, {"name": "Duke Energy", "empfehlung": "Kein Einstieg"}]},
-    {"sektor": "Transportation", "trend": "positiv", "kommentar": "Rang 8. Union Pacific teilweise bestanden: Einstieg nur per Limit an der SMA20.", "kandidaten": [{"name": "Union Pacific", "empfehlung": "Kauf"}]},
-    {"sektor": "MedTech", "trend": "positiv", "kommentar": "Rang 10. Intuitive Surgical besteht 4/4, laut P4 aber nur Beobachten.", "kandidaten": [{"name": "Intuitive Surgical", "empfehlung": "Beobachten"}]},
-    {"sektor": "Software/Cloud", "trend": "positiv", "kommentar": "Rang 11. Palantir Technologies mit schwachem Volumen und Earnings am 02.11.", "kandidaten": [{"name": "Palantir Technologies", "empfehlung": "Beobachten"}]},
-    {"sektor": "Financials", "trend": "negativ", "kommentar": "Rang 16, relative Schwäche. JPMorgan Chase besteht den Hold-Test nicht.", "kandidaten": [{"name": "JPMorgan Chase", "empfehlung": "Kein Einstieg"}]}
-  ]
+ "generated_at_utc": "2026-10-23T15:55:00+00:00",
+ "status": "NEUTRAL",
+ "begruendung": "3 von 5 Kriterien erfüllt: VIX 19,2 unter 20, 58 % der Watchlist über SMA50 und 72 % im 5-Tage-Plus; S&P 500 liegt 0,6 % unter der SMA50, Nasdaq 3,7 % unter der SMA20. Defensive Rotation: Healthcare, Energy und Cybersecurity führen. US-10J-Rendite 4,99 % (nur Info). Maximal 1 neue Position heute, 3 offene.",
+ "kurzbegruendung": "NEUTRAL 3/5: Nasdaq unter SMA20, defensive Rotation – max. 1 neue Position, heute nur Limit-Kauf Union Pacific.",
+ "sektor_rotation": [
+  {"sektor": "Transportation", "trend": "positiv", "kommentar": "Rang 8; Union Pacific als einziger kaufbarer Kandidat per Limit an der SMA20.", "kandidaten": [{"name": "Union Pacific", "empfehlung": "Kauf"}]},
+  {"sektor": "Healthcare", "trend": "positiv", "kommentar": "Rang 1, Sektor auf Rekordhochs, aber UnitedHealth überdehnt.", "kandidaten": [{"name": "UnitedHealth Group", "empfehlung": "Beobachten"}]},
+  {"sektor": "MedTech", "trend": "positiv", "kommentar": "Rang 10; Intuitive Surgical überdehnt, Thermo Fisher wegen Optionsflow ausgeschlossen.", "kandidaten": [{"name": "Intuitive Surgical", "empfehlung": "Beobachten"}, {"name": "Thermo Fisher Scientific", "empfehlung": "Kein Einstieg"}]},
+  {"sektor": "Energy", "trend": "positiv", "kommentar": "Rang 2; Exxon Mobil und Chevron mit Earnings am 30.10. ausgeschlossen und überdehnt.", "kandidaten": [{"name": "Chevron", "empfehlung": "Beobachten"}, {"name": "Exxon Mobil", "empfehlung": "Kein Einstieg"}]},
+  {"sektor": "Cybersecurity", "trend": "positiv", "kommentar": "Rang 3; Zscaler stark, aber stark überdehnt (Hold-Test 4/4).", "kandidaten": [{"name": "Zscaler", "empfehlung": "Beobachten"}]},
+  {"sektor": "Insurance", "trend": "positiv", "kommentar": "Rang 4; Travelers per Limit beobachten, Progressive wegen Optionsflow ausgeschlossen.", "kandidaten": [{"name": "Travelers", "empfehlung": "Beobachten"}, {"name": "Progressive", "empfehlung": "Kein Einstieg"}]},
+  {"sektor": "Payments", "trend": "positiv", "kommentar": "Rang 5; Visa und Mastercard mit Earnings in 2–4 Handelstagen und bärischem Optionsflow ausgeschlossen.", "kandidaten": [{"name": "Visa", "empfehlung": "Kein Einstieg"}, {"name": "Mastercard", "empfehlung": "Kein Einstieg"}]},
+  {"sektor": "Defense", "trend": "positiv", "kommentar": "Rang 6; Lockheed Martin überdehnt (12,9 % über SMA20), nur Wiedereinstieg am Limit.", "kandidaten": [{"name": "Lockheed Martin", "empfehlung": "Beobachten"}]},
+  {"sektor": "Utilities", "trend": "positiv", "kommentar": "Rang 7; defensive Rotation, aber Trendkontext rot und Hold-Test 0/4.", "kandidaten": [{"name": "NextEra Energy", "empfehlung": "Beobachten"}, {"name": "Duke Energy", "empfehlung": "Beobachten"}]},
+  {"sektor": "Software/Cloud", "trend": "positiv", "kommentar": "Rang 11; Palantir stark, aber Kapitalfluss rot und Earnings 02.11.; ServiceNow vor Earnings überdehnt. Bestand: Salesforce halten, Oracle prüfen.", "kandidaten": [{"name": "Palantir Technologies", "empfehlung": "Beobachten"}, {"name": "ServiceNow", "empfehlung": "Kein Einstieg"}, {"name": "Salesforce", "empfehlung": "Halten"}, {"name": "Oracle", "empfehlung": "Halten"}]},
+  {"sektor": "Technology", "trend": "positiv", "kommentar": "Rang 13; Apple Trend intakt, aber Optionsflow bärisch.", "kandidaten": [{"name": "Apple", "empfehlung": "Kein Einstieg"}]},
+  {"sektor": "Financials", "trend": "negativ", "kommentar": "Rang 16, Sektor negativ; JPMorgan ohne Setup (Score 34,9).", "kandidaten": [{"name": "JPMorgan Chase", "empfehlung": "Kein Einstieg"}]}
+ ]
 }
