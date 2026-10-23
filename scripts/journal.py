@@ -62,6 +62,11 @@ def _save(path, doc):
         fh.write("\n")
 
 
+def _de(v, fmt=".2f"):
+    """Zahl in deutscher Schreibweise (Komma) für Texte."""
+    return format(v, fmt).replace(".", ",")
+
+
 def _num(v):
     if v is None or v == "":
         return None
@@ -503,12 +508,12 @@ def verarbeite_issue():
     else:
         wort = ("Bestand" if e.get("art") == "bestand" else "Kauf") if e["aktion"] == "kauf" else "Verkauf"
         text = (f"{wort} gespeichert als **{e['id']}**: {e['stueck']:g} × {e['name']} ({e['ticker']}) "
-                f"zu {e['kurs_eur']:.2f} € am {e['datum']}, Gebühr {e['gebuehr_eur']:.2f} €.")
+                f"zu {_de(e['kurs_eur'])} € am {e['datum']}, Gebühr {_de(e['gebuehr_eur'])} €.")
         if e.get("test"):
             text += "\n\n_Testeintrag – zählt nicht für Depot und Kennzahlen._"
     k = journal["kennzahlen"]
     text += (f"\n\nDepot laut Journal: {k['offene_positionen']} offene Position(en), "
-             f"realisiert {k['realisiert_eur']:+.2f} €, unrealisiert {k['unrealisiert_eur']:+.2f} €.")
+             f"realisiert {_de(k['realisiert_eur'], '+.2f')} €, unrealisiert {_de(k['unrealisiert_eur'], '+.2f')} €.")
     _antwort("ok", text)
     return 0
 

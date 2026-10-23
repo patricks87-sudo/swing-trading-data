@@ -178,7 +178,8 @@ def compute_regime(indices: dict, breadth: dict, macro: dict) -> dict:
     hinweise = []
     if tnx.get("available") and _num(tnx.get("close")):
         hinweise.append(
-            f"US-10J-Rendite {tnx['close']:.2f} % (20 Tage: {tnx.get('chg_20d_abs', 0):+.2f} Pkt.) – nur Info, kein Kriterium"
+            f"US-10J-Rendite {format(tnx['close'], '.2f').replace('.', ',')} % "
+            f"(20 Tage: {format(tnx.get('chg_20d_abs') or 0, '+.2f').replace('.', ',')} Pkt.) – nur Info, kein Kriterium"
         )
     if not vix.get("available"):
         hinweise.append("Echter VIX nicht verfügbar – Kriterium als unbekannt gewertet")

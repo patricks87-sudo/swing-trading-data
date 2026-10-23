@@ -197,7 +197,7 @@ def build_bilanz(eintraege):
         richtung = "liegengelassene Gewinne" if s10["schnitt_ueberrendite_pct"] > 0 else "vermiedene Verluste"
         out["fazit"] = (
             f"Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt "
-            f"{s10['schnitt_ueberrendite_pct']:+.2f} Prozentpunkte "
+            f"{format(s10['schnitt_ueberrendite_pct'], '+.2f').replace('.', ',')} Prozentpunkte "
             f"{'über' if s10['schnitt_ueberrendite_pct'] > 0 else 'unter'} dem Nasdaq "
             f"(n={s10['anzahl']}) – überwiegend {richtung}."
         )
