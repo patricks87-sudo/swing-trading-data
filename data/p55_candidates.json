@@ -1,68 +1,18 @@
 {
-  "generated_at_utc": "2026-10-22T15:30:00Z",
-  "run_date": "2026-10-22",
+  "generated_at_utc": "2026-10-23T15:25:00+00:00",
+  "run_date": "2026-10-23",
   "ergebnis": "Trade möglich",
-  "kurzbegruendung": "Regime heute NEUTRAL (max. 1 neue Position): Apple besteht den Hold-Test 4/4 und ist der einzige Kauf am aktuellen Kurs; Intuitive Surgical und Travelers (je 3/4) nur per Limit. Alle anderen Kandidaten heute kein Einstieg.",
+  "kurzbegruendung": "Regime NEUTRAL (max. 1 neue Position). S&P 500 +0,34 % seit Eröffnung. Nur Union Pacific ist als Kauf-Kandidat mit Limit an der SMA20 handelbar; Intuitive Surgical und Zscaler bestehen den Hold-Test voll, sind laut P4 aber Beobachten bzw. überdehnt.",
   "kandidaten": [
-    {
-      "ticker": "ISRG", "name": "Intuitive Surgical", "sector": "MedTech", "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 435.8, "relatives_volumen": 0.61, "einstieg_heute": "limit",
-      "begruendung": "3 von 4 Checks erfüllt (+2,4 % seit Eröffnung, +2,6 Pkt. stärker als der S&P 500), aber Volumen nur 0,61-fach des Schnitts. P4-Stufe „Kauf – hohe Qualität“: Limit-Order beim Setup-Einstieg (ca. 381 €), nicht hinterherlaufen."
-    },
-    {
-      "ticker": "TRV", "name": "Travelers", "sector": "Insurance", "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 403.49, "relatives_volumen": 0.89, "einstieg_heute": "limit",
-      "begruendung": "3 von 4 Checks erfüllt (+1,3 % seit Eröffnung), Volumen 0,89-fach knapp unter Schnitt. RSI-Überhitzung aus P4: Limit-Order an der SMA20 (ca. 331 €), kein Kauf am Markt."
-    },
-    {
-      "ticker": "CVX", "name": "Chevron", "sector": "Energy", "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
-      "vwap": 226.38, "relatives_volumen": 0.91, "einstieg_heute": "nein",
-      "begruendung": "0 von 4 Checks: −2,3 % seit Eröffnung, unter VWAP, schwächer als der S&P 500. Kein Einstieg heute; bleibt auf der Liste. Earnings am 30.10. fallen in die Haltedauer."
-    },
-    {
-      "ticker": "AAPL", "name": "Apple", "sector": "Technology", "status": "Bestanden",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 344.77, "relatives_volumen": 1.48, "einstieg_heute": "ja",
-      "begruendung": "Alle 4 Checks erfüllt: Kurs über VWAP und Eröffnung, stärker als der S&P 500, Volumen 1,48-fach. P4-Stufe „Kauf – solide“, Einstieg am aktuellen Kurs (ca. 306 €, Stop 295,56 €). Earnings am 02.11. fallen in die Haltedauer; Kapitalfluss-Ampel rot."
-    },
-    {
-      "ticker": "XOM", "name": "Exxon Mobil", "sector": "Energy", "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
-      "vwap": 177.27, "relatives_volumen": 0.75, "einstieg_heute": "nein",
-      "begruendung": "0 von 4 Checks (−2,5 % seit Eröffnung); zusätzlich P4-Stufe „Beobachten“. Kein Einstieg heute."
-    },
-    {
-      "ticker": "QCOM", "name": "Qualcomm", "sector": "Semiconductors/AI", "status": "Teilweise",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 174.64, "relatives_volumen": 3.65, "einstieg_heute": "nein",
-      "begruendung": "3 von 4 Checks (Kurs knapp auf VWAP-Niveau, hohes Volumen 3,65-fach), aber P4-Stufe „Beobachten“ und Sektor Halbleiter negativ (Rang 18) – kein Einstieg heute."
-    },
-    {
-      "ticker": "UNH", "name": "UnitedHealth Group", "sector": "Healthcare", "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 422.2, "relatives_volumen": 0.68, "einstieg_heute": "nein",
-      "begruendung": "3 von 4 Checks, Volumen nur 0,68-fach. P4-Stufe „Überdehnt – auf Rücksetzer warten“ (über 8 % über der SMA20): kein Einstieg heute, Wiedereinstieg nur am SMA20-Niveau."
-    },
-    {
-      "ticker": "MRVL", "name": "Marvell Technology", "sector": "Semiconductors/AI", "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": true},
-      "vwap": 227.98, "relatives_volumen": 2.06, "einstieg_heute": "nein",
-      "begruendung": "Nur 1 von 4 Checks (−2,3 % seit Eröffnung, hohes Volumen eher Verkaufsdruck); Halbleiter-Sektor negativ. Kein Einstieg heute."
-    },
-    {
-      "ticker": "ZS", "name": "Zscaler", "sector": "Cybersecurity", "status": "Bestanden",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 235.41, "relatives_volumen": 1.75, "einstieg_heute": "nein",
-      "begruendung": "Hold-Test 4/4 (+2,4 % seit Eröffnung), aber P4-Stufe „Überdehnt – auf Rücksetzer warten“ (zwei Bulltrap-Flags): nicht hinterherlaufen, Einstieg nur am SMA20-Niveau (ca. 189 €)."
-    },
-    {
-      "ticker": "NEE", "name": "NextEra Energy", "sector": "Utilities", "status": "Bestanden",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 80.46, "relatives_volumen": 3.54, "einstieg_heute": "nein",
-      "begruendung": "Hold-Test 4/4 mit starkem Volumen (3,54-fach), aber P4-Stufe „Beobachten“ (Trendkontext rot, Earnings-Termin unbekannt). Kein Einstieg heute; Kandidat für die nächsten P4-Läufe im Auge behalten."
-    }
+    {"ticker": "UNP", "name": "Union Pacific", "sector": "Transportation", "status": "Teilweise", "checks": {"ueber_vwap": true, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": true}, "vwap": 291.41, "relatives_volumen": 1.49, "einstieg_heute": "limit", "begruendung": "2 von 4 Kriterien: über VWAP und Volumen 1,49-fach, aber unter Eröffnung (−0,91 %) und schwächer als der S&P 500. P4-Stufe Kauf – solide mit Limit an der SMA20 (250,58 €): Limit-Order setzen, nicht zum aktuellen Kurs kaufen."},
+    {"ticker": "LMT", "name": "Lockheed Martin", "sector": "Defense", "status": "Teilweise", "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false}, "vwap": 591.59, "relatives_volumen": 0.73, "einstieg_heute": "nein", "begruendung": "3 von 4 Kriterien, Volumen aber nur 0,73-fach. P4-Stufe überdehnt (Abstand SMA20 über 8 %, RSI über 72): kein Einstieg heute, nur Wiedereinstieg am SMA20-Limit."},
+    {"ticker": "NEE", "name": "NextEra Energy", "sector": "Utilities", "status": "Nicht bestanden", "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false}, "vwap": 124.84, "relatives_volumen": 0.76, "einstieg_heute": "nein", "begruendung": "0 von 4 Kriterien: unter VWAP und Eröffnung, schwächer als der Markt, Volumen unter Schnitt. Kein Einstieg heute."},
+    {"ticker": "UNH", "name": "UnitedHealth Group", "sector": "Healthcare", "status": "Nicht bestanden", "checks": {"ueber_vwap": true, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false}, "vwap": 422.36, "relatives_volumen": 0.47, "einstieg_heute": "nein", "begruendung": "1 von 4 Kriterien, Volumen nur 0,47-fach. Zusätzlich P4-Stufe überdehnt: kein Einstieg heute."},
+    {"ticker": "PGR", "name": "Progressive", "sector": "Insurance", "status": "Nicht bestanden", "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false}, "vwap": 227.65, "relatives_volumen": 0.48, "einstieg_heute": "nein", "begruendung": "0 von 4 Kriterien, P4-Stufe nur Beobachten. Kein Einstieg heute."},
+    {"ticker": "DUK", "name": "Duke Energy", "sector": "Utilities", "status": "Nicht bestanden", "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false}, "vwap": 124.84, "relatives_volumen": 0.87, "einstieg_heute": "nein", "begruendung": "0 von 4 Kriterien, P4-Stufe Beobachten; Earnings am 05.11.2026 fallen in die Haltedauer. Kein Einstieg heute."},
+    {"ticker": "ISRG", "name": "Intuitive Surgical", "sector": "MedTech", "status": "Bestanden", "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true}, "vwap": 451.12, "relatives_volumen": 1.02, "einstieg_heute": "nein", "begruendung": "4 von 4 Kriterien (+2,75 % seit Eröffnung, deutlich stärker als der S&P 500). P4-Stufe aber nur Beobachten (Trendkontext rot, RSI über 72): kein Einstieg heute, Kandidat für die Beobachtung am Rücksetzer."},
+    {"ticker": "PLTR", "name": "Palantir Technologies", "sector": "Software/Cloud", "status": "Teilweise", "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false}, "vwap": 194.29, "relatives_volumen": 0.72, "einstieg_heute": "nein", "begruendung": "3 von 4 Kriterien, Volumen aber 0,72-fach und Kapitalfluss rot. P4-Stufe Beobachten; Earnings am 02.11.2026 (Gap-Risiko). Kein Einstieg heute."},
+    {"ticker": "ZS", "name": "Zscaler", "sector": "Cybersecurity", "status": "Bestanden", "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true}, "vwap": 243.11, "relatives_volumen": 1.63, "einstieg_heute": "nein", "begruendung": "4 von 4 Kriterien mit 1,63-fachem Volumen (+2,92 % seit Eröffnung). P4-Stufe überdehnt (Abstand SMA20 über 8 %, SMA50 über 15 %): kein Einstieg zum aktuellen Kurs, Wiedereinstieg nur am SMA20-Limit."},
+    {"ticker": "JPM", "name": "JPMorgan Chase", "sector": "Financials", "status": "Nicht bestanden", "checks": {"ueber_vwap": true, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false}, "vwap": 331.84, "relatives_volumen": 0.89, "einstieg_heute": "nein", "begruendung": "1 von 4 Kriterien; Sektor Financials negativ, P4-Stufe Beobachten. Kein Einstieg heute."}
   ]
 }
