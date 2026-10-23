@@ -31,15 +31,17 @@ Umgesetzt und übernommen am 23.10.2026 (PR #16). Befund: Bei der Durchsicht war
 
 ## Paket 2 – Startseite und Design (erst Entwurf, dann Umsetzung)
 
+Stand 23.10.2026: Entwurf abgestimmt. Öffentliche Startseite (site/) umgesetzt – Hero mit Kernaussage, Marktlage als Tacho, Kennzahlen-Leiste, Top-Meldungen (C23, C24). Logo als Datei site/logo.svg für die Startseite; das Cockpit stellt erst nach dem nächsten Worker-Update um (der laufende Worker liefert die Datei noch nicht aus). Offen: Cockpit „Heute“ im selben Stil (C19–C22).
+
 | Nr. | Bereich | Wunsch | Hinweis | Prio | Status |
 |---|---|---|---|---|---|
-| C18 | Allgemein | Logo überarbeiten | Wird extern in Canva gestaltet; Logo als eigene Datei, leicht austauschbar | mittel | offen |
+| C18 | Allgemein | Logo überarbeiten | Wird extern in Canva gestaltet; Logo als eigene Datei, leicht austauschbar | mittel | in Arbeit |
 | C19 | Heute | Begrüßung „Guten Abend, Patrick“ entfernen | Stattdessen Kernaussage zum Markt heute | hoch | offen |
 | C20 | Heute | Kurzfazit-Zeile „NEUTRAL 2/5 …“ zu technisch | Verständliche Aussage | hoch | offen |
 | C21 | Heute · Marktlage | Lage auf einen Blick (Ampel, Tacho oder Skala) | Fünf Kriterien erst beim Aufklappen | hoch | offen |
 | C22 | Heute · News | Positiv/negativ besser lesbar | z. B. farbige Karten nach Tendenz, kurze Texte, Bewertung auf Abruf | mittel | offen |
-| C23 | Startseite | Großer Hero-Banner | | hoch | offen |
-| C24 | Startseite | Muss beim ersten Blick fesseln, kein Daten-Dashboard | Gesamtanspruch für Paket 2 | hoch | offen |
+| C23 | Startseite | Großer Hero-Banner | | hoch | zur Abnahme |
+| C24 | Startseite | Muss beim ersten Blick fesseln, kein Daten-Dashboard | Gesamtanspruch für Paket 2 | hoch | zur Abnahme |
 
 ## Runde 3
 

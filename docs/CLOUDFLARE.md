@@ -1,11 +1,14 @@
 UMZUG: EIGENE DOMAIN, LOGIN UND PRIVATES REPO
-Stand: 19.10.2026
+Stand: 23.10.2026 (öffentliche Startseite unter der Hauptdomain ergänzt)
 
 ZIEL
-Das Cockpit läuft unter einer eigenen Domain (z. B. cockpit.aktienkaenguru.de) hinter einem Login. Das GitHub-Repo wird privat, damit Depot, Journal und Kandidaten nicht mehr öffentlich sind.
+Unter der Hauptdomain (z. B. aktienkaenguru.de) steht die öffentliche Startseite, das Cockpit läuft unter cockpit.<domain> hinter einem Login. Das GitHub-Repo wird privat, damit Depot, Journal und Kandidaten nicht mehr öffentlich sind.
 
   Browser → cockpit.<domain> → Cloudflare Access (Login nur mit deiner E-Mail)
           → Cloudflare Worker (worker/worker.js) → privates GitHub-Repo (nur Lesezugriff)
+  Browser → <domain>         → derselbe Worker: Startseite aus site/ und unter /public/ nur
+                               Marktlage, Indizes, Sektoren, Marktmeldungen und Performance-Kurven
+                               (keine Watchlist, keine Kandidaten, kein Depot, kein Journal)
 
 KOSTEN
 - Domain: ca. 5–15 € im Jahr beim deutschen Anbieter (z. B. INWX, Netcup, Hetzner). Nur die Domain buchen, kein Paket.
@@ -39,6 +42,7 @@ Schritte 1–6 gehen, während das Repo noch öffentlich ist. Erst wenn alles l�
        POLICY_AUD    Typ Text    = kommt aus Schritt 4
    → Settings → Domains & Routes:
        "Add" → Custom domain → cockpit.<deine-domain>
+       "Add" → Custom domain → <deine-domain>  (öffentliche Startseite; optional zusätzlich www.<deine-domain>)
        workers.dev und Preview-URLs auf "Disabled" stellen (sonst gäbe es einen Weg am Login vorbei – der Worker würde dort ohnehin nur 403 liefern).
 
 4) LOGIN MIT CLOUDFLARE ACCESS
@@ -55,6 +59,8 @@ Schritte 1–6 gehen, während das Repo noch öffentlich ist. Erst wenn alles l�
 5) TESTEN
    - cockpit.<deine-domain> im privaten Browserfenster öffnen → Login-Seite von Cloudflare erscheint → E-Mail eingeben → Code → Cockpit erscheint mit Daten.
    - Ohne Login (anderer Browser) darf nur die Login-Seite erscheinen.
+   - <deine-domain> ohne Login: die Startseite mit Marktlage und Meldungen erscheint. <deine-domain>/data/portfolio.json muss "Nicht gefunden" liefern.
+   Wichtig: Die Access-Anwendung aus Schritt 4 gilt nur für cockpit.<deine-domain> – die Hauptdomain bleibt ohne Login.
    Das Cockpit erkennt selbst, ob es auf GitHub Pages oder hinter dem Worker läuft, und lädt die Daten entsprechend (REPO_BASE in index.html).
 
 6) CLAUDE-PROJEKT UMSTELLEN

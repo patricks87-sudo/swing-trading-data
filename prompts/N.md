@@ -1,6 +1,6 @@
-# N – Nachrichten-Check v2.3
+# N – Nachrichten-Check v2.4
 
-Stand: 18.10.2026 (v2.1: keine doppelten Meldungen mehr im Tagesüberblick, News-Signale nur noch firmenspezifisch; v2.2: Teil C – Rohstoffe & Zentralbanken für die Cockpit-Seite „Rohstoffe“; v2.3: Top-3 als Markierung in `meldungen`, aktuelle Meldungen bevorzugt, keine Ersatz-Uhrzeiten, Zahlen widerspruchsfrei). Gilt für alle Nachrichten-Aufgaben (N1–N6 werktags, N-Sa, N-So).
+Stand: 18.10.2026 (v2.1: keine doppelten Meldungen mehr im Tagesüberblick, News-Signale nur noch firmenspezifisch; v2.2: Teil C – Rohstoffe & Zentralbanken für die Cockpit-Seite „Rohstoffe“; v2.3: Top-3 als Markierung in `meldungen`, aktuelle Meldungen bevorzugt, keine Ersatz-Uhrzeiten, Zahlen widerspruchsfrei; v2.4: `kernaussage` als Überschrift der Startseite). Gilt für alle Nachrichten-Aufgaben (N1–N6 werktags, N-Sa, N-So).
 
 Schlanker Lauf: keine Marktdaten abrufen, keinen GitHub-Actions-Workflow auslösen, keine Kandidaten-Analyse. Repo: `patricks87-sudo/swing-trading-data`, Branch `main`, Schreiben über den GitHub-Connector. Vor jedem Schreiben den aktuellen Stand inkl. `sha` abrufen; bei SHA-Konflikt bis zu 3× mit frischem Stand wiederholen.
 
@@ -9,7 +9,7 @@ Schlanker Lauf: keine Marktdaten abrufen, keinen GitHub-Actions-Workflow auslös
 1. Lies zuerst `data/news_summary_today.json`. Stimmt `date` nicht mit dem heutigen Datum (Europe/Berlin, YYYY-MM-DD) überein oder fehlt die Datei, beginne mit leerer Liste `meldungen`. Ein altes Format mit `entries` wird beim ersten Schreiben in `meldungen` überführt (Dubletten dabei zusammenfassen).
 2. Recherchiere per Websuche die wichtigsten aktuellen Markt- und Wirtschaftsnachrichten für US-Aktien (Zinsen/Fed, Konjunkturdaten, Geopolitik, große Unternehmensmeldungen, Sektorbewegungen), bevorzugt aus den letzten Stunden seit dem letzten Lauf.
 3. **Keine Dubletten:** Eine Meldung wird nur neu aufgenommen, wenn sie heute noch nicht in `meldungen` steht – gleiche `url` ODER gleiches Ereignis aus einer anderen Quelle zählt als vorhanden. Gibt es zu einem vorhandenen Ereignis wesentliche neue Fakten (z. B. Schlusskurs statt Zwischenstand), aktualisiere den vorhandenen Eintrag (`title`, `url`, `published_at`, `aktualisiert_local`) statt einen neuen anzulegen. Ist nichts wirklich Neues passiert, füge nichts hinzu.
-4. Aktualisiere `lage`: ein bis zwei Sätze, was den Markt heute insgesamt bewegt (immer aktuell halten).
+4. Aktualisiere `lage`: ein bis zwei Sätze, was den Markt heute insgesamt bewegt (immer aktuell halten). Schreibe außerdem `kernaussage`: **eine** prägnante Überschrift für die öffentliche Startseite, höchstens 90 Zeichen, ohne Zahlenkolonnen, mit dem Tagesthema (z. B. „Meta-Zahlen schicken Tech auf Talfahrt – Energie und Gesundheit halten dagegen.“). Sachlich, keine Kauf- oder Verkaufsaufforderung, keine Einzeltitel aus Depot oder Watchlist.
 5. **Zahlen widerspruchsfrei:** Nennen mehrere Meldungen dieselbe Größe (z. B. Brent-Preis, Indexstand, Rendite), gilt die neueste Angabe. Ältere Einträge mit überholter Zahl anpassen oder die Zahl dort weglassen, und `lage` muss zu den Meldungen passen.
 6. **Top-3 neu bestimmen (bei jedem Lauf):** Markiere die drei Meldungen, die den Markt *jetzt* am stärksten bewegen, mit `"top": 1`, `2`, `3` (alle anderen ohne `top`). Vorrang haben Meldungen der letzten 12 Stunden; eine Meldung vom Vortag nur, wenn sie heute noch das bestimmende Thema ist und keine neuere Meldung dasselbe Ereignis abdeckt (z. B. Schlusskurs von gestern → ersetzt durch den heutigen Handelsstart).
 7. Schreibe `data/news_summary_today.json` komplett neu:
@@ -17,6 +17,7 @@ Schlanker Lauf: keine Marktdaten abrufen, keinen GitHub-Actions-Workflow auslös
 ```json
 {
   "date": "2026-10-19",
+  "kernaussage": "Höchstens 90 Zeichen, Überschrift zum Tagesthema.",
   "lage": "Ein bis zwei Sätze zur aktuellen Marktlage.",
   "lage_stand_local": "16:15",
   "meldungen": [
