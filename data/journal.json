@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-19T15:44:45.331786+00:00",
+  "generated_at_utc": "2026-10-23T13:41:14.447870+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -134,6 +134,22 @@
       "id": "T0009",
       "erfasst_utc": "2026-10-18T10:52:59.096489+00:00",
       "issue": 12
+    },
+    {
+      "aktion": "verkauf",
+      "test": false,
+      "datum": "2026-10-21",
+      "art": "bestand",
+      "ticker": "OHB.DE",
+      "name": "OHB",
+      "stueck": 14.0,
+      "kurs_eur": 205.0,
+      "gebuehr_eur": 1.0,
+      "grund": "10-Tage-Regel",
+      "notiz": "Konkurrenz zu Starlink. Raumbranche generell\nim Aufwand.",
+      "id": "T0010",
+      "erfasst_utc": "2026-10-21T11:57:37.119460+00:00",
+      "issue": 14
     }
   ],
   "positionen": [
@@ -148,7 +164,7 @@
       "einstand_eur": 162.34,
       "kapital_eur": 1623.4,
       "kaufdatum": "2026-06-17",
-      "handelstage_gehalten": 88,
+      "handelstage_gehalten": 92,
       "verkauf_spaetestens": null,
       "stop_eur": null,
       "grund": "Bestand vor dem System",
@@ -156,10 +172,10 @@
       "journal_ids": [
         "T0008"
       ],
-      "aktueller_kurs_eur": 116.56,
-      "wert_eur": 1165.6,
-      "unrealisiert_eur": -457.8,
-      "unrealisiert_pct": -28.2
+      "aktueller_kurs_eur": 111.34,
+      "wert_eur": 1113.4,
+      "unrealisiert_eur": -510.0,
+      "unrealisiert_pct": -31.42
     },
     {
       "id": "RHM.DE-2026-08-31",
@@ -172,7 +188,7 @@
       "einstand_eur": 1048.6,
       "kapital_eur": 4194.4,
       "kaufdatum": "2026-08-31",
-      "handelstage_gehalten": 35,
+      "handelstage_gehalten": 39,
       "verkauf_spaetestens": null,
       "stop_eur": null,
       "grund": "Bestand vor dem System",
@@ -180,34 +196,10 @@
       "journal_ids": [
         "T0003"
       ],
-      "aktueller_kurs_eur": 1053.6,
-      "wert_eur": 4214.4,
-      "unrealisiert_eur": 20.0,
-      "unrealisiert_pct": 0.48
-    },
-    {
-      "id": "OHB.DE-2026-09-08",
-      "ticker": "OHB.DE",
-      "name": "OHB",
-      "art": "bestand",
-      "isin": null,
-      "sektor": null,
-      "stueck": 14.0,
-      "einstand_eur": 186.9429,
-      "kapital_eur": 2617.2,
-      "kaufdatum": "2026-09-08",
-      "handelstage_gehalten": 29,
-      "verkauf_spaetestens": null,
-      "stop_eur": null,
-      "grund": "Eigene Idee",
-      "teilrealisiert_eur": 0.0,
-      "journal_ids": [
-        "T0006"
-      ],
-      "aktueller_kurs_eur": 198.2,
-      "wert_eur": 2774.8,
-      "unrealisiert_eur": 157.6,
-      "unrealisiert_pct": 6.02
+      "aktueller_kurs_eur": 1016.6,
+      "wert_eur": 4066.4,
+      "unrealisiert_eur": -128.0,
+      "unrealisiert_pct": -3.05
     },
     {
       "id": "CRM-2026-10-09",
@@ -220,7 +212,7 @@
       "einstand_eur": 209.3857,
       "kapital_eur": 1465.7,
       "kaufdatum": "2026-10-09",
-      "handelstage_gehalten": 6,
+      "handelstage_gehalten": 10,
       "verkauf_spaetestens": null,
       "stop_eur": null,
       "grund": "Bestand vor dem System",
@@ -228,26 +220,41 @@
       "journal_ids": [
         "T0007"
       ],
-      "aktueller_kurs_eur": 214.18,
-      "wert_eur": 1499.26,
-      "unrealisiert_eur": 33.56,
-      "unrealisiert_pct": 2.29
+      "aktueller_kurs_eur": 221.2,
+      "wert_eur": 1548.4,
+      "unrealisiert_eur": 82.7,
+      "unrealisiert_pct": 5.64
     }
   ],
-  "trades": [],
+  "trades": [
+    {
+      "ticker": "OHB.DE",
+      "name": "OHB",
+      "art": "bestand",
+      "kaufdatum": "2026-09-08",
+      "verkaufsdatum": "2026-10-21",
+      "handelstage": 31,
+      "stueck": 14.0,
+      "ergebnis_eur": 251.8,
+      "rendite_pct": 9.62,
+      "gebuehren_eur": 3.0,
+      "grund_kauf": "Eigene Idee",
+      "grund_verkauf": "10-Tage-Regel"
+    }
+  ],
   "kennzahlen": {
-    "realisiert_eur": 0.0,
-    "unrealisiert_eur": -246.64,
-    "trades_abgeschlossen": 0,
-    "trefferquote_pct": null,
-    "schnitt_trade_eur": null,
-    "offene_positionen": 4,
-    "investiert_eur": 9900.7,
-    "depotwert_eur": 9654.06,
+    "realisiert_eur": 251.8,
+    "unrealisiert_eur": -555.3,
+    "trades_abgeschlossen": 1,
+    "trefferquote_pct": 100,
+    "schnitt_trade_eur": 251.8,
+    "offene_positionen": 3,
+    "investiert_eur": 7283.5,
+    "depotwert_eur": 6728.2,
     "positionen_ohne_kurs": 0,
-    "gebuehren_eur": 8.0
+    "gebuehren_eur": 9.0
   },
-  "kurse_stand_utc": "2026-10-19T15:36:14.749834+00:00",
+  "kurse_stand_utc": "2026-10-23T13:32:54.841425+00:00",
   "kennzahlen_swing": {
     "realisiert_eur": 0,
     "unrealisiert_eur": 0.0,
@@ -260,14 +267,14 @@
     "positionen_ohne_kurs": 0
   },
   "kennzahlen_bestand": {
-    "realisiert_eur": 0.0,
-    "unrealisiert_eur": -246.64,
-    "trades_abgeschlossen": 0,
-    "trefferquote_pct": null,
-    "schnitt_trade_eur": null,
-    "offene_positionen": 4,
-    "investiert_eur": 9900.7,
-    "depotwert_eur": 9654.06,
+    "realisiert_eur": 251.8,
+    "unrealisiert_eur": -555.3,
+    "trades_abgeschlossen": 1,
+    "trefferquote_pct": 100,
+    "schnitt_trade_eur": 251.8,
+    "offene_positionen": 3,
+    "investiert_eur": 7283.5,
+    "depotwert_eur": 6728.2,
     "positionen_ohne_kurs": 0
   }
 }

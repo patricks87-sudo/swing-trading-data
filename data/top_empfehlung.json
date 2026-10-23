@@ -1,25 +1,25 @@
 {
-  "generated_at_utc": "2026-10-16T15:55:00Z",
+  "generated_at_utc": "2026-10-22T15:51:00Z",
   "top3": [
     {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "aktion": "Limit-Order",
-      "begruendung": "Beste Portfolio-Chance: Score 85 (Kauf – hohe Qualität), Kapitalfluss 91, Trendkontext 100, Chance-Risiko 2,0, Hold-Test 3/4 (über VWAP, stärker als S&P 500, Volumen 9,1×). Limit-Order am Feed-Einstieg ca. 307,78 € (345,05 $), Schutz-Stop 296,05 € (2 × ATR), 6 Stück = ca. 1.847 € Kapital, ca. 70 € Risiko. Spätestens-Verkauf bei Ausführung heute: 30.10.2026 zum Schlusskurs; Earnings am 02.11. liegen danach. Bei der Order gilt das Tageslimit von 1 neuen Position (Regime NEUTRAL). Nach dem Kauf im Cockpit unter „Journal“ eintragen."
+      "ticker": "CVX",
+      "name": "Chevron",
+      "aktion": "Beobachten",
+      "begruendung": "Kein Trade heute – Chevron ist am nächsten an einem Kauf: Feed-Stufe „Kauf – solide“ (Score 70,8), Sektor Energy auf Rang 8 (positiv), kein harter Ausschluss. Einstieg wäre nur per Limit an der SMA20 (ca. 190,24 €, Stop 181,60 €, 8 Stück, Risiko 69 €), der P5.5-Hold-Test steht aber bei 0/4 (−2,3 % seit Eröffnung, unter VWAP) und Earnings am 30.10. fallen in die Haltedauer. Fehlt: Hold-Test bestanden bzw. Rücksetzer an die SMA20."
     },
     {
-      "ticker": "XOM",
-      "name": "Exxon Mobil",
+      "ticker": "ISRG",
+      "name": "Intuitive Surgical",
       "aktion": "Beobachten",
-      "begruendung": "Zweitbeste Alternative: Score 78,9, Energy-Sektor Rang 3 (positiv), Optionsfluss bullisch, Hold-Test 2/4. Der Kurs ist aber überdehnt (RSI14 über 80, ca. 5,6 % über der SMA20), daher nur Limit an der SMA20 ca. 148,04 € (Stop 142,00 €, 12 Stück, ca. 72 € Risiko) und heute kein zweiter Neukauf neben Apple. Earnings am 30.10. fallen auf den 10. Handelstag – bei Ausführung beachten."
+      "begruendung": "Beim P4-Lauf noch „Kauf – hohe Qualität“ (77), im P1-Feed jetzt „Überdehnt – auf Rücksetzer warten“ (RSI > 72, Kurs steigt bei fallendem OBV, Kapitalfluss- und Trend-Ampel rot). P5.5 erlaubt nur ein Limit; Wiedereinstieg erst am SMA20-Niveau (ca. 372 €). Heute kein Kauf zum aktuellen Kurs."
     },
     {
-      "ticker": "MSFT",
-      "name": "Microsoft",
+      "ticker": "NEE",
+      "name": "NextEra Energy",
       "aktion": "Beobachten",
-      "begruendung": "Watchlist-Kandidat: Score 80, Trend intakt (über SMA20/SMA50), aber der Hold-Test fiel heute durch (1/4: −1,64 % seit Eröffnung, unter VWAP) und der Sektor Software/Cloud ist schwach (Rang 14, negativ). Kein Einstieg heute; Wiedervorlage bei Stabilisierung. Earnings 28.10. liegen innerhalb der Haltedauer."
+      "begruendung": "Hold-Test 4/4 mit starkem Volumen, Feed-Stufe „Kauf – solide“ (65,3), aber P4-Stufe nur „Beobachten“ (Trend-Ampel rot), Earnings-Termin unbekannt – manuell prüfen. Heute kein Einstieg; mögliches Limit an der SMA20 (ca. 69,08 €)."
     }
   ],
-  "gesamteinschaetzung": "Regime NEUTRAL (3/5 Kriterien): max. 1 neue Position heute, max. 3 offene, Depot leer, volles Risikobudget von 375 € frei. Genau ein Kandidat ist kaufbar – Apple per Limit-Order am Einstiegskurs. Starke Sektoren sind Payments, Healthcare und Energy; Visa, Mastercard und Coinbase Global sind wegen bärischem Optionsfluss ausgeschlossen, UnitedHealth Group ist auf Beobachten zurückgefallen. Software/Cloud, Halbleiter und Cybersecurity bleiben schwach. Hinweis: Das P5.5-Ergebnis nannte RISK-ON; der aktuelle Feed meldet NEUTRAL (1 Neukauf) – es gilt der Feed.",
-  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2.38 Prozentpunkte über dem Nasdaq (n=38) – überwiegend liegengelassene Gewinne."
+  "gesamteinschaetzung": "Kein Trade heute. Das Marktregime ist im P1-Feed NEUTRAL (3/5 Kriterien: S&P 500 unter SMA50, Nasdaq unter SMA20) – maximal 1 neue Position, bis zu 3 offen; im Depot gibt es aktuell keine Swing-Position, das Risikobudget von 375 € ist komplett frei. Der Feed von 17:36 ist neuer als P4: Apple, Travelers und Progressive sind inzwischen wegen bärischem Optionsflow ausgeschlossen, Intuitive Surgical ist überdehnt, Chevron scheitert am Hold-Test. Rohstoff-Kontext (nur Information, kein System-Trade): Rohstoff-Ampel ROT (0/6 Kriterien), Gold und Silber im Abwärtstrend (Gegenwind), keine Rotation in Metalle.",
+  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +1.97 Prozentpunkte über dem Nasdaq (n=44) – überwiegend liegengelassene Gewinne."
 }
