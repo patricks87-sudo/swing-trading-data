@@ -315,7 +315,7 @@
   .wl-wrap { overflow-x: auto; margin-top: 8px; }
   table.wl th { padding: 10px 12px; font-size: 11px; letter-spacing: .04em; color: var(--muted); }
   table.wl td { padding: 12px; vertical-align: middle; }
-  table.wl th.r, table.wl td.r { text-align: right; }
+  table.wl th.r, table.wl td.r { text-align: right; white-space: nowrap; }
   table.wl tr.row { cursor: pointer; }
   table.wl tr.row:hover td { background: var(--shell); }
   table.wl tr.det td { background: var(--shell); color: var(--ink-2); padding: 4px 12px 16px; }
@@ -350,6 +350,12 @@
   .mh-top { display: inline-block; margin-right: 8px; padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; background: var(--brand-soft); color: var(--brand); }
   .headline.ist-top a { font-weight: 600; }
   .mh-alt summary { margin-top: 10px; }
+  .ist-veraltet > :not(.veraltet-hinweis) { opacity: .55; }
+  .veraltet-hinweis { margin: 0 0 10px; padding: 8px 12px; border-radius: 10px; background: var(--warn-soft); color: var(--warn); font-size: 12px; font-weight: 600; }
+  .dcard .veraltet-hinweis { margin: 12px 20px 0; }
+  .wl-legende { padding: 0 20px 14px; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
+  .wl-legende .wl-dots { vertical-align: -1px; margin-right: 4px; }
+  .wl-art { display: inline-block; margin-top: 2px; font-size: 11px; color: var(--muted); }
   .dgrid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
 
   @media (max-width: 1100px) {
@@ -417,14 +423,15 @@
       <div class="dcard-h"><h3>Watchlist</h3><span class="meta" id="dCandMeta"></span></div>
       <div class="wl-wrap">
         <table class="wl">
-          <thead><tr><th>Titel</th><th>Score</th><th class="hide-m">Stufe</th><th class="r">Einstieg</th><th class="r hide-m">Stop</th><th class="r hide-m">Stück</th><th class="r hide-m">Risiko</th><th class="hide-m">Signale</th></tr></thead>
+          <thead><tr><th>Titel</th><th>Score</th><th class="hide-m">Stufe</th><th class="r">Einstieg (Art)</th><th class="r hide-m">Stop</th><th class="r hide-m">Stück</th><th class="r hide-m">Risiko</th><th class="hide-m" title="Kapitalfluss · Trend · Optionsflow">Signale</th></tr></thead>
           <tbody id="dCands"><tr><td colspan="8" class="placeholder">Noch keine Daten – wird nach dem nächsten P4-Lauf befüllt.</td></tr></tbody>
         </table>
       </div>
       <div class="dexcl" id="dExcl"></div>
+      <div class="wl-legende"><span><span class="wl-dots"><i class="gruen"></i><i class="gelb"></i><i class="rot"></i></span>Signale in der Reihenfolge Kapitalfluss · Trend · Optionsflow (grün positiv, gelb neutral, rot negativ)</span><span>Einstieg: zum aktuellen Kurs, wenn höchstens 3 % über SMA20, sonst Limit-Order an SMA20 · Stop = Einstieg − 2 × ATR · Verkauf spätestens nach 10 Handelstagen</span></div>
     </div>
     <aside class="dside">
-      <div class="dcard"><div class="dcard-h"><h3>Märkte</h3><span class="meta">Schluss Vortag</span></div><div class="dcard-b" id="dIdx"></div></div>
+      <div class="dcard"><div class="dcard-h"><h3>Märkte</h3><span class="meta" id="dIdxMeta"></span></div><div class="dcard-b" id="dIdx"></div></div>
       <div class="dcard"><div class="dcard-h"><h3>Sektoren</h3><span class="meta">Stärke vs. S&amp;P 500, 20 Tage</span></div><div class="dcard-b" id="dSectors"></div></div>
     </aside>
   </section>
@@ -636,26 +643,28 @@ function newsBadge(ticker) {
   return '<span class="news-badge ' + cls + '" title="' + tip + '">' + txt + '</span>';
 }
 
-function renderNewsSignale(data) {
+function renderNewsSignale(data, relevant) {
   const el = document.getElementById("newsSignale");
   if (!data || !(data.signale || []).length) return;
   const grenze = Date.now() - 3 * 864e5;
   const FIRMA = ["Gewinnwarnung", "Verfahren", "Bilanz", "Übernahme", "Earnings", "Analyst", "Auftrag/Produkt", "Management", "Sektor"];
-  const list = data.signale.filter((s) => FIRMA.includes(s.kategorie) && new Date(s.published_at || s.datum).getTime() >= grenze)
-    .sort((a, b) => String(b.published_at || b.datum).localeCompare(String(a.published_at || a.datum))).slice(0, 12);
-  if (!list.length) { el.innerHTML = '<div class="placeholder">Keine neuen Meldungen in den letzten 3 Tagen.</div>'; return; }
+  const zeitVon = (s) => { const z = pubZeit(s.published_at || s.datum); return z ? z.d.getTime() : 0; };
+  const list = data.signale.filter((s) => FIRMA.includes(s.kategorie) && zeitVon(s) >= grenze && (!relevant || !relevant.size || relevant.has(s.ticker)))
+    .sort((a, b) => zeitVon(b) - zeitVon(a)).slice(0, 12);
+  if (!list.length) { el.innerHTML = '<div class="placeholder">Keine neuen Meldungen zu Depot, Watchlist und aktiven Kandidaten in den letzten 3 Tagen.</div>'; return; }
   el.innerHTML = list.map((s) => {
     const cls = s.einschaetzung === "positiv" ? "news-pos" : s.einschaetzung === "negativ" ? "news-neg" : "news-neu";
     const titel = s.url ? '<a href="' + s.url + '" target="_blank" rel="noopener">' + (s.titel || "") + '</a>' : (s.titel || "");
     return '<div class="headline"><span class="news-badge ' + cls + '" style="margin:0 8px 0 0;">' + (s.einschaetzung || "neutral") + (s.gewicht ? " · " + s.gewicht : "") + '</span><b>' + (s.name || s.ticker) + '</b> – ' + titel +
       '<div class="src">' + [s.kategorie, s.quelle, pubInfo({ published_at: s.published_at })].filter(Boolean).join(" · ") + (s.kurz ? " – " + s.kurz : "") + '</div></div>';
-  }).join("") + '<div class="timestamp">Signale der Nachrichten-Aufgaben, letzte 3 Tage. Daraus rechnet der Feed die News-Korrektur am Score (max. ±10). Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
+  }).join("") + '<div class="timestamp">Signale der Nachrichten-Aufgaben zu Depot, Watchlist und aktiven Kandidaten, letzte 3 Tage. Daraus rechnet der Feed die News-Korrektur am Score (max. ±10). Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
 }
 
 
 function renderP55Candidates(data) {
   const el = document.getElementById("p55candidates");
   if (!data || !data.kandidaten || !data.kandidaten.length) return;
+  setTimeout(() => dStandHinweis(el, data.generated_at_utc, "P5.5"));
   const ergebnisCls = (data.ergebnis === "Trade" || data.ergebnis === "Trade möglich") ? "score-hoch" : "score-niedrig";
   const chkLabels = { ueber_vwap: "über VWAP", ueber_eroeffnung: "über Eröffnung", staerker_als_sp500: "stärker als S&P 500", volumen_ueber_schnitt: "Volumen über Schnitt" };
   const einstiegTxt = { ja: "Einstieg heute möglich", limit: "Limit-Order am Einstieg", nein: "heute kein Einstieg" };
@@ -673,7 +682,7 @@ function renderP55Candidates(data) {
         (c.checks ? '<div class="krit">' + Object.keys(chkLabels).map((k) => {
           const v = c.checks[k];
           return '<span class="' + (v === true ? "ok" : v === false ? "no" : "na") + '">' + (v === true ? "✓ " : v === false ? "✗ " : "? ") + chkLabels[k] + '</span>';
-        }).join("") + (c.relatives_volumen != null ? '<span>rel. Volumen ' + c.relatives_volumen + 'x</span>' : "") + '</div>' : "") +
+        }).join("") + (c.relatives_volumen != null ? '<span>rel. Volumen ' + (typeof c.relatives_volumen === "number" ? zahlDE(c.relatives_volumen, 2) : c.relatives_volumen) + '×</span>' : "") + '</div>' : "") +
         (c.einstieg_heute ? '<div class="timestamp" style="font-weight:600;">' + (einstiegTxt[c.einstieg_heute] || c.einstieg_heute) + '</div>' : "") +
         '</div>';
     }).join("");
@@ -688,7 +697,7 @@ function empCls(e) {
 
 function pctHtml(v) {
   if (typeof v !== "number") return "–";
-  return '<span style="color:' + (v >= 0 ? "var(--green)" : "var(--red)") + ';font-weight:700;">' + (v >= 0 ? "+" : "") + v.toFixed(2) + " %</span>";
+  return '<span style="color:' + (v >= 0 ? "var(--green)" : "var(--red)") + ';font-weight:700;">' + (v >= 0 ? "+" : "") + zahlDE(v, 2) + " %</span>";
 }
 
 function isOpenStatus(st) {
@@ -696,15 +705,23 @@ function isOpenStatus(st) {
   return s === "aktiv" || s.indexOf("überdehnt") >= 0 || s.indexOf("ueberdehnt") >= 0;
 }
 
+// Heute im Feed hart ausgeschlossen (Earnings, bärischer Optionsflow, harte News …)?
+function heuteAusgeschlossen(ticker) {
+  const st = FEED && FEED.watchlist && FEED.watchlist[ticker] && FEED.watchlist[ticker].setup;
+  if (!st || st.stufe !== "Ausgeschlossen") return "";
+  return '<div class="timestamp" style="color:var(--red);font-weight:600" title="' + (st.ausschluesse || []).join(" · ").replace(/"/g, "&quot;") + '">heute ausgeschlossen' + ((st.ausschluesse || []).length ? ": " + st.ausschluesse.join(" · ") : "") + "</div>";
+}
 function trackingRows(list) {
   return list.map((k) => {
     return '<tr>' +
       '<td data-label="Kandidat">' + (k.name || k.ticker) + '<div class="cand-sector">' + (k.sector || "") + '</div></td>' +
       '<td data-label="Aufnahme">' + (k.aufnahmedatum || "-") + '<div class="timestamp">' + (k.aufnahme_stufe || k.aufnahme_score || "") + '</div></td>' +
-      '<td data-label="Status">' + (k.status || "-") + (k.wiedereinstieg_eur ? '<div class="timestamp">Wiedereinstieg ' + eur(k.wiedereinstieg_eur) + '</div>' : "") + '</td>' +
-      '<td data-label="Aktie (USD)">' + pctHtml(k.performance_pct) + '</td>' +
-      '<td data-label="Nasdaq">' + pctHtml(k.nasdaq_performance_pct) + '</td>' +
-      '<td data-label="Überrendite">' + pctHtml(k.ueberrendite_pct) + '</td>' +
+      '<td data-label="Status">' + (k.status || "-") + heuteAusgeschlossen(k.ticker) + (k.wiedereinstieg_eur ? '<div class="timestamp">Wiedereinstieg ' + eur(k.wiedereinstieg_eur) + '</div>' : "") + '</td>' +
+      (k.handelstage_seit_aufnahme === 0
+        ? '<td data-label="Aktie (USD)" colspan="3"><span class="timestamp">neu aufgenommen – Entwicklung ab dem nächsten Handelstag</span></td>'
+        : '<td data-label="Aktie (USD)">' + pctHtml(k.performance_pct) + '</td>' +
+          '<td data-label="Nasdaq (USD)">' + pctHtml(k.nasdaq_performance_pct) + '</td>' +
+          '<td data-label="Überrendite">' + pctHtml(k.ueberrendite_pct) + '</td>') +
       '<td data-label="Tage">' + (k.handelstage_seit_aufnahme != null ? k.handelstage_seit_aufnahme : (k.handelstage_in_liste != null ? k.handelstage_in_liste : "-")) + '</td>' +
       '<td data-label="Empfehlung"><span class="emp-badge ' + empCls(k.empfehlung) + '">' + (k.empfehlung || "-") + '</span></td>' +
       '</tr>' +
@@ -713,18 +730,20 @@ function trackingRows(list) {
 }
 
 function trackingTable(list) {
-  return '<table class="responsive-mobile"><thead><tr><th>Kandidat</th><th>Aufnahme</th><th>Status</th><th>Aktie (USD)</th><th>Nasdaq</th><th>Überrendite</th><th>Tage</th><th>Empfehlung</th></tr></thead><tbody>' + trackingRows(list) + '</tbody></table>';
+  return '<table class="responsive-mobile"><thead><tr><th>Kandidat</th><th>Aufnahme</th><th>Status</th><th>Aktie (USD)</th><th>Nasdaq (USD)</th><th>Überrendite</th><th>Tage</th><th>Empfehlung</th></tr></thead><tbody>' + trackingRows(list) + '</tbody></table>';
 }
 
 function renderCandidateTracking(data) {
   const el = document.getElementById("candidateTracking");
   if (!data || !data.kandidaten || !data.kandidaten.length) return;
+  setTimeout(() => dStandHinweis(el, data.generated_at_utc, "P1"));
   const sortFn = (a, b) => (b.ueberrendite_pct != null ? b.ueberrendite_pct : (b.performance_pct || 0)) - (a.ueberrendite_pct != null ? a.ueberrendite_pct : (a.performance_pct || 0));
   const offen = data.kandidaten.filter((k) => isOpenStatus(k.status)).sort(sortFn);
   const raus = data.kandidaten.length - offen.length;
   el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Stand Status: ' + fmtTime(data.generated_at_utc) +
     (data.kurse_aktualisiert_utc ? ' &middot; Kurse: ' + fmtTime(data.kurse_aktualisiert_utc) : '') + ' &middot; Performance in USD seit Aufnahme, verglichen mit Nasdaq-100 (QQQ)</div>' +
     (offen.length ? trackingTable(offen) : '<div class="placeholder">Aktuell keine aktiven Kandidaten.</div>') +
+    '<div class="timestamp" style="margin-top:6px;">Performance in USD (ohne Währungseffekt), Wiedereinstieg in € wie alle Handelsmarken.</div>' +
     (raus ? '<div class="timestamp" style="margin-top:10px;">' + raus + ' frühere Empfehlungen stehen unter <a href="#historie" data-goto="historie" style="color:var(--text);">Historie &amp; Bilanz</a>.</div>' : "");
 }
 
@@ -750,7 +769,7 @@ function histTable(list) {
       '<td data-label="Nach 5 Tagen">' + fwdCell(k, 5) + '</td>' +
       '<td data-label="Nach 10 Tagen">' + fwdCell(k, 10) + '</td>' +
       '<td data-label="Nach 20 Tagen">' + fwdCell(k, 20) + '</td>' +
-      '<td data-label="Bis heute">' + pctHtml(k.ueberrendite_pct) + '<div class="timestamp">Aktie ' + (typeof k.performance_pct === "number" ? (k.performance_pct >= 0 ? "+" : "") + k.performance_pct.toFixed(2) + " %" : "–") + '</div></td>' +
+      '<td data-label="Bis heute">' + pctHtml(k.ueberrendite_pct) + '<div class="timestamp">Aktie ' + (typeof k.performance_pct === "number" ? (k.performance_pct >= 0 ? "+" : "") + zahlDE(k.performance_pct, 2) + " %" : "–") + '</div></td>' +
       '</tr>';
   }).join("");
   return '<table class="responsive-mobile"><thead><tr><th>Kandidat</th><th>Aufnahme</th><th>Ausgeschieden</th><th>Nach 5 Tagen</th><th>Nach 10 Tagen</th><th>Nach 20 Tagen</th><th>Bis heute</th></tr></thead><tbody>' + rows + '</tbody></table>';
@@ -930,7 +949,7 @@ function pubInfo(h) {
     const tage = Math.round((new Date(heuteBerlin() + "T12:00:00") - new Date(z.tag + "T12:00:00")) / 86400000);
     const wann = tage <= 0 ? "heute" : tage === 1 ? "gestern" : "vor " + tage + " Tagen";
     const txt = new Date(z.tag + "T12:00:00").toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" });
-    return '<span class="pub ' + (tage <= 0 ? "pub-mittel" : "pub-alt") + '">' + txt + " · " + wann + " (Uhrzeit unbekannt)</span>";
+    return '<span class="pub ' + (tage <= 0 ? "pub-mittel" : "pub-alt") + '">' + txt + " · " + wann + "</span>";
   }
   const min = Math.round((Date.now() - z.d.getTime()) / 60000);
   let alter;
@@ -1453,7 +1472,12 @@ function renderNewsToday(data, headlines) {
   renderFilterBilanz(filterBilanz);
   renderPerformance(performance);
   renderNewsToday(newsToday, headlines);
-  renderNewsSignale(newsSignale);
+  const relevant = new Set([
+    ...((portfolio && portfolio.positions) || []).map((p) => p.ticker),
+    ...((candidates && candidates.candidates) || []).map((c) => c.ticker),
+    ...((candidateTracking && candidateTracking.kandidaten) || []).filter((k) => isOpenStatus(k.status)).map((k) => k.ticker),
+  ]);
+  renderNewsSignale(newsSignale, relevant);
   renderJournal(journal, feed);
   renderRohstoffe(rohstoffe, rohMeldungen, newsToday, candidates);
 }
@@ -1472,6 +1496,19 @@ const dVor = (iso) => {
   const m = (Date.now() - new Date(iso)) / 60000;
   return m < 60 ? "vor " + Math.max(1, Math.round(m)) + " Min." : m < 1440 ? "vor " + Math.round(m / 60) + " Std." : "vor " + Math.round(m / 1440) + " Tg.";
 };
+// Ist eine Datei älter als der Tag des neuesten Feed-Laufs, stammt sie aus einem
+// früheren Durchgang (z. B. P1 von gestern, während heute erst P4 gelaufen ist).
+const dFeedTag = () => (FEED ? dTag(FEED.generated_at_utc) : "");
+const dIsoTag = (iso) => new Date(iso).toLocaleDateString("sv-SE", { timeZone: "Europe/Berlin" });  // YYYY-MM-DD
+const dVeraltet = (iso) => !!(iso && FEED && dIsoTag(iso) < dIsoTag(FEED.generated_at_utc));
+function dStandHinweis(el, iso, lauf) {
+  if (!el) return;
+  el.classList.remove("ist-veraltet");
+  el.querySelectorAll(".veraltet-hinweis").forEach((x) => x.remove());
+  if (!dVeraltet(iso)) return;
+  el.classList.add("ist-veraltet");
+  el.insertAdjacentHTML("afterbegin", '<div class="veraltet-hinweis">Stand ' + dTag(iso) + (lauf ? " (" + lauf + ")" : "") + " – älter als der aktuelle Feed vom " + dFeedTag() + ". Wird mit dem nächsten " + (lauf || "Lauf") + " aktualisiert.</div>");
+}
 // Marktregime in Klartext; die Fachbegriffe stehen klein daneben.
 const D_LAGE = { "RISK-ON": ["Rückenwind", "good"], NEUTRAL: ["Gemischt", "warn"], "RISK-OFF": ["Abwarten", "bad"] };
 // Anzeige-Namen der Stufen aus analysis.py (die Werte im Feed bleiben unverändert).
@@ -1489,7 +1526,7 @@ function dRegime(feed, barometer) {
     '<div class="dstatus"><b>' + dEsc(titel) + '</b><span class="pill neutral">' + dEsc(r.status) + '</span><span class="pill ' + ton + '"><span class="d"></span>' + r.kriterien_erfuellt + "/" + k.length + " Kriterien</span></div>" +
     '<div class="dmeter">' + k.map((c) => '<i class="' + (c.erfuellt ? "on" : "") + '"></i>').join("") + "</div>" +
     '<div class="kliste">' + k.map((c) => kritZeile(c.erfuellt, hauptKritText(c))).join("") + "</div>" +
-    '<div class="dlimits"><div class="dlimit"><b>' + (r.max_neue_positionen ?? "–") + '</b><span>neue Positionen heute</span></div>' +
+    '<div class="dlimits"><div class="dlimit"><b>' + (r.max_neue_positionen ?? "–") + '</b><span>neue Position' + (r.max_neue_positionen === 1 ? "" : "en") + ' heute</span></div>' +
     '<div class="dlimit"><b>' + (r.max_offene_positionen ?? "–") + '</b><span>max. offen</span></div></div>' +
     (r.override ? '<div class="timestamp">' + dEsc(r.override) + "</div>" : "") +
     (r.hinweise || []).map((h) => '<div class="timestamp">' + dEsc(h) + "</div>").join("");
@@ -1501,8 +1538,7 @@ function dRegime(feed, barometer) {
 function dPick(top, cands, feed) {
   const t = top && top.top3 && top.top3[0];
   if (!t) return;
-  const veraltet = feed && dTag(top.generated_at_utc) !== dTag(feed.generated_at_utc);
-  dEl("dPickMeta").innerHTML = veraltet ? '<span class="pill warn">Stand ' + dTag(top.generated_at_utc) + "</span>" : dWann(top.generated_at_utc);
+  dEl("dPickMeta").textContent = "P1 · " + dWann(top.generated_at_utc);
   const c = ((cands && cands.candidates) || []).find((x) => x.ticker === t.ticker) || {};
   const L = c.levels || {};
   dEl("dPick").innerHTML =
@@ -1515,6 +1551,7 @@ function dPick(top, cands, feed) {
       : "") +
     (top.top3.length > 1 ? '<div class="dalts">Alternativen: ' + top.top3.slice(1).map((x) => '<span class="pill neutral" title="' + dEsc(x.begruendung) + '">' + dEsc(x.name || x.ticker) + "</span>").join("") + "</div>" : "") +
     (top.gesamteinschaetzung ? '<div class="dgesamt" title="' + dEsc(top.gesamteinschaetzung) + '">' + dEsc(top.gesamteinschaetzung) + "</div>" : "");
+  dStandHinweis(dEl("dPick"), top.generated_at_utc, "P1");
 }
 
 function dDepot(pf) {
@@ -1528,6 +1565,7 @@ function dDepot(pf) {
   dEl("dDepot").innerHTML =
     '<div class="dbig num">' + dEur(wert) + "</div>" +
     '<div class="num ' + dCls(unr) + '" style="font-weight:600">' + dEurSig(unr) + " (" + dPct(kap ? (unr / kap) * 100 : null) + ') <span style="color:var(--muted);font-weight:400">unrealisiert</span></div>' +
+    '<div class="timestamp">' + (() => { const sw = ps.filter((p) => p.art !== "bestand").length, be = ps.length - sw; return sw + " Swing-Trade" + (sw === 1 ? "" : "s") + " · " + be + " Bestand (langfristig, außerhalb des Systems)"; })() + "</div>" +
     '<div style="margin-top:10px">' + ps.map((p) => {
       const v = p.unrealisiert_pct || 0, w = Math.min(50, (Math.abs(v) / max) * 50);
       const balken = v >= 0 ? "left:50%;width:" + w + "%;background:var(--good)" : "right:50%;width:" + w + "%;background:var(--bad)";
@@ -1574,7 +1612,7 @@ function dWatchlist(c, pf) {
   const list = (c && c.candidates) || [];
   if (!list.length) return;
   const imDepot = new Set(((pf && pf.positions) || []).map((p) => p.ticker));
-  dEl("dCandMeta").textContent = list.length + " Titel · P4 " + dWann(c.generated_at_utc);
+  dEl("dCandMeta").textContent = list.length + " Titel · P4 · " + dWann(c.generated_at_utc);
   dEl("dCands").innerHTML = list.map((x, i) => {
     const L = x.levels || {}, a = x.ampel || {};
     const score = typeof x.score === "number" ? x.score : null;
@@ -1582,7 +1620,7 @@ function dWatchlist(c, pf) {
       '<td class="wl-name"><b>' + dEsc(x.name || x.ticker) + "</b><small>" + dEsc(x.ticker) + " · " + dEsc(x.sector || "") + (imDepot.has(x.ticker) ? ' <span class="pill brand held">Im Depot</span>' : "") + "</small></td>" +
       '<td><div class="wl-score"><b class="num">' + (score != null ? dNum(score, 0) : dEsc(x.score)) + '</b><span class="t"><i style="width:' + Math.max(0, Math.min(100, score || 0)) + '%"></i></span></div></td>' +
       '<td class="hide-m"><span class="pill ' + dStufeTon(x.stufe) + '">' + dEsc(dStufe(x.stufe)) + "</span></td>" +
-      '<td class="r num">' + dEur(L.einstieg_eur, 2) + "<br><small>" + (/Limit/.test(L.einstieg_typ || "") ? "Limit" : "Markt") + "</small></td>" +
+      '<td class="r num">' + dEur(L.einstieg_eur, 2) + '<br><span class="wl-art">' + (/Limit/.test(L.einstieg_typ || "") ? "Limit an SMA20" : "zum Kurs") + "</span></td>" +
       '<td class="r num hide-m">' + dEur(L.stop_eur, 2) + "</td>" +
       '<td class="r num hide-m">' + (L.stueck ?? "–") + "</td>" +
       '<td class="r num hide-m">' + dEur(L.risiko_eur) + "</td>" +
@@ -1595,10 +1633,14 @@ function dWatchlist(c, pf) {
   dEl("dCands").querySelectorAll("tr.row").forEach((tr) => tr.addEventListener("click", () => { const d = dEl("dDet" + tr.dataset.i); d.hidden = !d.hidden; }));
   const ex = c.ausgeschlossen || [];
   dEl("dExcl").innerHTML = ex.length ? "Ausgeschlossen: " + ex.map((e) => "<b>" + dEsc(e.name || e.ticker) + "</b> (" + dEsc(e.grund) + ")").join(" · ") : "";
+  dStandHinweis(dEl("dCands").closest(".dcard"), c.generated_at_utc, "P4");
 }
 
 function dIndizes(feed) {
   const I = (feed && feed.indices) || {};
+  // Ab P5 enthält die letzte Tageskerze die laufende US-Sitzung: Veränderung = heute bis jetzt
+  const laufend = Object.values(I).some((v) => v && v.partial_last_bar);
+  dEl("dIdxMeta").textContent = feed ? (laufend ? "Veränderung heute, Stand " + dWann(feed.generated_at_utc) + " (Sitzung läuft)" : "Veränderung zum Vortag, Schlusskurse") : "";
   const zeilen = [["SP500", "S&amp;P 500", "SPY"], ["NASDAQ_COMPOSITE", "Nasdaq-100", "QQQ"], ["RUSSELL2000", "Russell 2000", "IWM"], ["SOX_PROXY", "Halbleiter", "SOXX"]];
   let h = zeilen.filter(([k]) => I[k]).map(([k, n, t]) =>
     '<div class="didx"><div><b style="font-weight:500">' + n + "</b><small>" + t + " · RSI " + dNum(I[k].rsi14, 0) + '</small></div><div class="num">' + dNum(I[k].close, 2) + '</div><div class="num r ' + dCls(I[k].chg_1d_pct) + '">' + dPct(I[k].chg_1d_pct, 2) + "</div></div>").join("");
@@ -1608,14 +1650,15 @@ function dIndizes(feed) {
 }
 
 function dSektoren(feed) {
-  const S = Object.entries((feed && feed.sectors) || {}).sort((a, b) => a[1].rang - b[1].rang);
+  // Sortiert nach dem angezeigten Wert (relative Stärke 20 Tage); der Gesamtrang steht im Tooltip
+  const S = Object.entries((feed && feed.sectors) || {}).sort((a, b) => (b[1].rs_20d_vs_spy || 0) - (a[1].rs_20d_vs_spy || 0));
   if (!S.length) { dEl("dSectors").innerHTML = '<div class="placeholder">Keine Daten.</div>'; return; }
   const m = Math.max(1, ...S.map(([, s]) => Math.abs(s.rs_20d_vs_spy || 0)));
   const zeige = S.length > 9 ? [...S.slice(0, 6), null, ...S.slice(-3)] : S;
   dEl("dSectors").innerHTML = zeige.map((e) => {
     if (!e) return '<div class="dsec-gap">···</div>';
     const [n, s] = e, v = s.rs_20d_vs_spy || 0, w = (Math.abs(v) / m) * 50;
-    return '<div class="dsec" title="Rang ' + s.rang + " · 5 Tage " + dPct(s.rs_5d_vs_spy) + '"><span class="nm">' + dEsc(n) + '</span><span class="ax"><i class="' + (v >= 0 ? "p" : "n") + '" style="width:' + w + '%"></i></span><span class="v num">' + dPct(v) + "</span></div>";
+    return '<div class="dsec" title="Gesamtrang ' + s.rang + " (60 % Stärke 20 Tage, 40 % Stärke 5 Tage) · 5 Tage " + dPct(s.rs_5d_vs_spy) + '"><span class="nm">' + dEsc(n) + '</span><span class="ax"><i class="' + (v >= 0 ? "p" : "n") + '" style="width:' + w + '%"></i></span><span class="v num">' + dPct(v) + "</span></div>";
   }).join("");
 }
 

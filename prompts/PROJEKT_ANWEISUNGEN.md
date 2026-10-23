@@ -26,6 +26,7 @@ SEKTORLISTE
 Technology, Semiconductors/AI, Software/Cloud, Cybersecurity, Defense, Financials, Insurance, Payments, Fintech/Brokerage, Healthcare, MedTech, Energy, Utilities, Industrials, Industrials/Infrastructure, Materials, Consumer Discretionary, Transportation (wie im Feld "sector" des Feeds).
 
 FIRMENNAMEN
+Zahlen in allen Texten in deutscher Schreibweise mit Dezimalkomma (z. B. "4,96 %", "0,61×", "2,0"), auch wenn der Feed Punkte liefert.
 In allen Texten und im Cockpit volle Firmennamen statt Ticker (z. B. "NVIDIA" statt "NVDA", "Palo Alto Networks" statt "PANW", "AMD (Advanced Micro Devices)" statt "AMD"). Das Feld "ticker" bleibt technisch bestehen.
 
 RÜCKKANAL (GitHub-Connector)
