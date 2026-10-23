@@ -1,6 +1,6 @@
-# N – Nachrichten-Check v2.2
+# N – Nachrichten-Check v2.3
 
-Stand: 18.10.2026 (v2.1: keine doppelten Meldungen mehr im Tagesüberblick, News-Signale nur noch firmenspezifisch; v2.2: Teil C – Rohstoffe & Zentralbanken für die Cockpit-Seite „Rohstoffe“). Gilt für alle Nachrichten-Aufgaben (N1–N6 werktags, N-Sa, N-So).
+Stand: 18.10.2026 (v2.1: keine doppelten Meldungen mehr im Tagesüberblick, News-Signale nur noch firmenspezifisch; v2.2: Teil C – Rohstoffe & Zentralbanken für die Cockpit-Seite „Rohstoffe“; v2.3: Top-3 als Markierung in `meldungen`, aktuelle Meldungen bevorzugt, keine Ersatz-Uhrzeiten, Zahlen widerspruchsfrei). Gilt für alle Nachrichten-Aufgaben (N1–N6 werktags, N-Sa, N-So).
 
 Schlanker Lauf: keine Marktdaten abrufen, keinen GitHub-Actions-Workflow auslösen, keine Kandidaten-Analyse. Repo: `patricks87-sudo/swing-trading-data`, Branch `main`, Schreiben über den GitHub-Connector. Vor jedem Schreiben den aktuellen Stand inkl. `sha` abrufen; bei SHA-Konflikt bis zu 3× mit frischem Stand wiederholen.
 
@@ -10,7 +10,9 @@ Schlanker Lauf: keine Marktdaten abrufen, keinen GitHub-Actions-Workflow auslös
 2. Recherchiere per Websuche die wichtigsten aktuellen Markt- und Wirtschaftsnachrichten für US-Aktien (Zinsen/Fed, Konjunkturdaten, Geopolitik, große Unternehmensmeldungen, Sektorbewegungen), bevorzugt aus den letzten Stunden seit dem letzten Lauf.
 3. **Keine Dubletten:** Eine Meldung wird nur neu aufgenommen, wenn sie heute noch nicht in `meldungen` steht – gleiche `url` ODER gleiches Ereignis aus einer anderen Quelle zählt als vorhanden. Gibt es zu einem vorhandenen Ereignis wesentliche neue Fakten (z. B. Schlusskurs statt Zwischenstand), aktualisiere den vorhandenen Eintrag (`title`, `url`, `published_at`, `aktualisiert_local`) statt einen neuen anzulegen. Ist nichts wirklich Neues passiert, füge nichts hinzu.
 4. Aktualisiere `lage`: ein bis zwei Sätze, was den Markt heute insgesamt bewegt (immer aktuell halten).
-5. Schreibe `data/news_summary_today.json` komplett neu:
+5. **Zahlen widerspruchsfrei:** Nennen mehrere Meldungen dieselbe Größe (z. B. Brent-Preis, Indexstand, Rendite), gilt die neueste Angabe. Ältere Einträge mit überholter Zahl anpassen oder die Zahl dort weglassen, und `lage` muss zu den Meldungen passen.
+6. **Top-3 neu bestimmen (bei jedem Lauf):** Markiere die drei Meldungen, die den Markt *jetzt* am stärksten bewegen, mit `"top": 1`, `2`, `3` (alle anderen ohne `top`). Vorrang haben Meldungen der letzten 12 Stunden; eine Meldung vom Vortag nur, wenn sie heute noch das bestimmende Thema ist und keine neuere Meldung dasselbe Ereignis abdeckt (z. B. Schlusskurs von gestern → ersetzt durch den heutigen Handelsstart).
+7. Schreibe `data/news_summary_today.json` komplett neu:
 
 ```json
 {
@@ -20,14 +22,14 @@ Schlanker Lauf: keine Marktdaten abrufen, keinen GitHub-Actions-Workflow auslös
   "meldungen": [
     {"title": "Deutscher Titel", "source": "Reuters", "url": "https://...", "published_at": "2026-10-19T14:05:00+02:00",
      "thema": "Zinsen/Fed|Konjunktur|Geopolitik|Unternehmen|Sektor|Rohstoffe|Sonstiges",
-     "bedeutung": "Ein Satz, was das für US-Aktien heißt.", "erfasst_local": "16:15", "erfasst_von": "N4"}
+     "bedeutung": "Ein Satz, was das für US-Aktien heißt.", "erfasst_local": "16:15", "erfasst_von": "N4", "top": 1}
   ]
 }
 ```
 
-6. Schreibe `data/headlines.json` komplett neu mit den **drei wichtigsten Meldungen des Tages** aus `meldungen` (nicht zwingend die neuesten): `{"generated_at_utc": "...", "headlines": [{"title": "...", "source": "...", "url": "...", "published_at": "..."}]}`.
+8. Schreibe `data/headlines.json` komplett neu mit genau den drei als `top` markierten Meldungen in dieser Reihenfolge (gleicher Titel, gleiche URL, gleiches `published_at`): `{"generated_at_utc": "...", "headlines": [{"title": "...", "source": "...", "url": "...", "published_at": "..."}]}`. Das Cockpit zeigt keinen eigenen Top-Block mehr, sondern markiert diese Meldungen in der Liste „Markt heute“.
 
-Titel auf Deutsch (fremdsprachige Quellen sinngemäß übersetzen). `published_at` = Veröffentlichungszeitpunkt laut Quelle, ISO-8601 mit Zeitzone; nur Datum bekannt → 12:00 Uhr; nicht feststellbar → `null`. Nie raten. Höchstens 4 Websuchen für Teil A.
+Titel auf Deutsch (fremdsprachige Quellen sinngemäß übersetzen). `published_at` = Veröffentlichungszeitpunkt laut Quelle, ISO-8601 mit Zeitzone (z. B. `2026-10-23T10:17:00-04:00`). **Ist nur das Datum bekannt, nur das Datum schreiben** (`"2026-10-23"`) – keine Ersatz-Uhrzeit wie 12:00 oder 00:00, das Cockpit zeigt dann „Uhrzeit unbekannt“. Nicht feststellbar → `null`. Nie raten. Höchstens 4 Websuchen für Teil A.
 
 ## Teil B – News-Signale zu Kandidaten und Depot (neu)
 

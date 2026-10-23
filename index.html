@@ -346,7 +346,10 @@
   .dsec .ax i.n { right: 50%; background: var(--bad); border-radius: 4px 0 0 4px; }
   .dsec .v { text-align: right; color: var(--ink-2); }
   .dsec-gap { text-align: center; color: var(--muted); font-size: 11px; }
-  .dside .headline:first-child { padding-top: 0; }
+  .mh-lage { font-size: 14px; line-height: 1.55; padding-bottom: 12px; margin-bottom: 4px; border-bottom: 1px solid var(--border); }
+  .mh-top { display: inline-block; margin-right: 8px; padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; background: var(--brand-soft); color: var(--brand); }
+  .headline.ist-top a { font-weight: 600; }
+  .mh-alt summary { margin-top: 10px; }
   .dgrid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
 
   @media (max-width: 1100px) {
@@ -423,12 +426,11 @@
     <aside class="dside">
       <div class="dcard"><div class="dcard-h"><h3>Märkte</h3><span class="meta">Schluss Vortag</span></div><div class="dcard-b" id="dIdx"></div></div>
       <div class="dcard"><div class="dcard-h"><h3>Sektoren</h3><span class="meta">Stärke vs. S&amp;P 500, 20 Tage</span></div><div class="dcard-b" id="dSectors"></div></div>
-      <div class="dcard"><div class="dcard-h"><h3>Schlagzeilen</h3></div><div class="dcard-b" id="headlines"><div class="placeholder">Noch keine Daten.</div></div></div>
     </aside>
   </section>
 
   <div class="dgrid2">
-    <div><h2>Was den Markt heute bewegt</h2><div id="newsToday" class="card"><div class="placeholder">Noch keine Daten – wird im Laufe des Tages befüllt.</div></div></div>
+    <div><h2>Markt heute</h2><div id="newsToday" class="card"><div class="placeholder">Noch keine Daten – wird im Laufe des Tages befüllt.</div></div></div>
     <div><h2>News zu Watchlist &amp; Depot</h2><div id="newsSignale" class="card"><div class="placeholder">Noch keine News-Signale.</div></div></div>
   </div>
 
@@ -909,32 +911,38 @@ function renderFilterBilanz(data) {
 }
 
 
+// Veröffentlichungszeit einer Meldung. Ist nur das Datum bekannt ("YYYY-MM-DD")
+// oder steht der frühere Ersatzwert 12:00 bzw. 00:00 Uhr Ortszeit der Quelle
+// drin, wird nur das Datum gezeigt – keine erfundene Uhrzeit.
+function pubZeit(iso) {
+  if (!iso) return null;
+  const s = String(iso);
+  const nurDatum = /^\d{4}-\d{2}-\d{2}$/.test(s) || /T(12|00):00(:00)?(\.0+)?([+-]\d{2}:?\d{2}|Z)?$/.test(s);
+  const d = new Date(nurDatum ? s.slice(0, 10) + "T12:00:00" : s);
+  if (isNaN(d)) return null;
+  return { d, nurDatum, tag: nurDatum ? s.slice(0, 10) : d.toLocaleDateString("sv-SE", { timeZone: "Europe/Berlin" }) };
+}
+const heuteBerlin = () => new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Berlin" });
 function pubInfo(h) {
-  const iso = h.published_at || h.veroeffentlicht;
-  if (!iso) return '<span class="pub pub-na">Zeitpunkt unbekannt</span>';
-  const d = new Date(iso);
-  if (isNaN(d)) return '<span class="pub pub-na">Zeitpunkt unbekannt</span>';
-  const min = Math.round((Date.now() - d.getTime()) / 60000);
+  const z = pubZeit(h.published_at || h.veroeffentlicht);
+  if (!z) return '<span class="pub pub-na">Zeitpunkt unbekannt</span>';
+  if (z.nurDatum) {
+    const tage = Math.round((new Date(heuteBerlin() + "T12:00:00") - new Date(z.tag + "T12:00:00")) / 86400000);
+    const wann = tage <= 0 ? "heute" : tage === 1 ? "gestern" : "vor " + tage + " Tagen";
+    const txt = new Date(z.tag + "T12:00:00").toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" });
+    return '<span class="pub ' + (tage <= 0 ? "pub-mittel" : "pub-alt") + '">' + txt + " · " + wann + " (Uhrzeit unbekannt)</span>";
+  }
+  const min = Math.round((Date.now() - z.d.getTime()) / 60000);
   let alter;
   if (min < 60) alter = "vor " + Math.max(1, min) + " Min.";
   else if (min < 48 * 60) alter = "vor " + Math.round(min / 60) + " Std.";
   else alter = "vor " + Math.round(min / 1440) + " Tagen";
   const cls = min <= 6 * 60 ? "pub-frisch" : min <= 24 * 60 ? "pub-mittel" : "pub-alt";
-  const txt = d.toLocaleString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+  const txt = z.d.toLocaleString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
   return '<span class="pub ' + cls + '">' + txt + ' Uhr · ' + alter + '</span>';
 }
 
-function headlineHtml(h) {
-  return '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a>' +
-    '<div class="src">' + (h.source || "") + (h.source ? " · " : "") + pubInfo(h) + '</div></div>';
-}
 
-function renderHeadlines(data) {
-  const el = document.getElementById("headlines");
-  if (!data || !data.headlines || !data.headlines.length) return;
-  el.innerHTML = data.headlines.map(headlineHtml).join("") +
-    (data.generated_at_utc ? '<div class="timestamp">Zusammengestellt: ' + fmtTime(data.generated_at_utc) + '</div>' : "");
-}
 
 
 // ---------------- Trade-Journal ----------------
@@ -1368,12 +1376,12 @@ function renderRohstoffe(r, meld, newsToday, p4c) {
       const cls = m.einschaetzung === "positiv" ? "news-pos" : m.einschaetzung === "negativ" ? "news-neg" : "news-neu";
       const titel = m.url ? '<a href="' + m.url + '" target="_blank" rel="noopener">' + (m.titel || "") + '</a>' : (m.titel || "");
       return '<div class="headline"><span class="news-badge ' + cls + '" style="margin:0 8px 0 0;">' + [m.kategorie, m.rohstoff].filter(Boolean).join(" · ") + '</span>' + titel +
-        '<div class="src">' + [m.quelle, pubInfo({ published_at: m.published_at || (m.datum ? m.datum + "T12:00:00" : null) })].filter(Boolean).join(" · ") + (m.kurz ? " – " + m.kurz : "") + '</div></div>';
+        '<div class="src">' + [m.quelle, pubInfo({ published_at: m.published_at || m.datum || null })].filter(Boolean).join(" · ") + (m.kurz ? " – " + m.kurz : "") + '</div></div>';
     }).join("") + '<div class="timestamp">Zentralbank-Käufe und wichtige Rohstoff-Meldungen der letzten 60 Tage (Nachrichten-Aufgaben) plus heutige Marktmeldungen zum Thema Rohstoffe.</div>';
   }
 }
 
-function renderNewsToday(data) {
+function renderNewsToday(data, headlines) {
   const el = document.getElementById("newsToday");
   if (!data) return;
   let liste = data.meldungen;
@@ -1382,21 +1390,39 @@ function renderNewsToday(data) {
     data.entries.forEach((e) => (e.headlines || []).forEach((h) => liste.push(Object.assign({ erfasst_local: e.time_local }, h))));
   }
   if (!liste || !liste.length) return;
-  const gesehen = new Set();
   const norm = (t) => String(t || "").toLowerCase().replace(/[^a-zäöüß0-9 ]/g, "").split(" ").filter((w) => w.length > 3).slice(0, 6).join(" ");
-  const eindeutig = [];
+  // Doppelt = gleicher Inhalt. Die URL allein reicht nicht: mehrere Meldungen
+  // stammen oft aus demselben Sammelartikel (z. B. Live-Ticker).
+  const gesehen = new Set(), eindeutig = [];
   liste.forEach((m) => {
-    const k1 = m.url || "", k2 = norm(m.title);
-    if ((k1 && gesehen.has(k1)) || (k2 && gesehen.has(k2))) return;
-    if (k1) gesehen.add(k1); if (k2) gesehen.add(k2);
+    const k = norm(m.title) || m.url || "";
+    if (k && gesehen.has(k)) return;
+    if (k) gesehen.add(k);
     eindeutig.push(m);
   });
-  eindeutig.sort((a, b) => String(b.published_at || "").localeCompare(String(a.published_at || "")));
-  el.innerHTML = (data.lage ? '<div style="font-size:14px;margin-bottom:10px;"><b>Was den Markt bewegt:</b> ' + data.lage + (data.lage_stand_local ? ' <span class="timestamp">(' + data.lage_stand_local + ' Uhr)</span>' : "") + '</div>' : "") +
-    eindeutig.map((m) => '<div class="headline">' + (m.thema ? '<span class="news-badge news-neu" style="margin:0 8px 0 0;">' + m.thema + '</span>' : "") +
-      '<a href="' + (m.url || "#") + '" target="_blank" rel="noopener">' + m.title + '</a>' +
-      '<div class="src">' + [m.source, pubInfo(m)].filter(Boolean).join(" · ") + (m.bedeutung ? " – " + m.bedeutung : "") + '</div></div>').join("") +
-    '<div class="timestamp">' + eindeutig.length + ' Meldungen heute, jede nur einmal.</div>';
+  // Top-Markierung: Feld "top" (1–3) aus der Nachrichten-Aufgabe, sonst Abgleich mit headlines.json
+  const topVon = (m) => {
+    if (m.top) return Number(m.top);
+    const i = ((headlines && headlines.headlines) || []).findIndex((h) => norm(h.title) === norm(m.title));
+    return i >= 0 ? i + 1 : 0;
+  };
+  // Sortierung nach echtem Zeitpunkt; Meldungen nur mit Datum stehen am Ende ihres Tages
+  const zeit = (m) => { const z = pubZeit(m.published_at); return z ? (z.nurDatum ? new Date(z.tag + "T00:00:00").getTime() : z.d.getTime()) : 0; };
+  eindeutig.sort((a, b) => zeit(b) - zeit(a));
+  const heute = heuteBerlin();
+  const istAlt = (m) => { const z = pubZeit(m.published_at); if (!z) return false; return z.nurDatum ? z.tag < heute : Date.now() - z.d.getTime() > 24 * 3600 * 1000; };
+  const zeile = (m) => {
+    const t = topVon(m);
+    return '<div class="headline' + (t ? " ist-top" : "") + '">' + (t ? '<span class="mh-top">Top ' + t + "</span>" : "") +
+      (m.thema ? '<span class="news-badge news-neu" style="margin:0 8px 0 0;">' + m.thema + "</span>" : "") +
+      '<a href="' + (m.url || "#") + '" target="_blank" rel="noopener">' + m.title + "</a>" +
+      '<div class="src">' + [m.source, pubInfo(m)].filter(Boolean).join(" · ") + (m.bedeutung ? " – " + m.bedeutung : "") + "</div></div>";
+  };
+  const neu = eindeutig.filter((m) => !istAlt(m)), alt = eindeutig.filter(istAlt);
+  el.innerHTML = (data.lage ? '<div class="mh-lage">' + data.lage + (data.lage_stand_local ? ' <span class="timestamp">(Stand ' + data.lage_stand_local + " Uhr)</span>" : "") + "</div>" : "") +
+    (neu.length ? neu.map(zeile).join("") : '<div class="placeholder">Seit gestern keine neuen Meldungen.</div>') +
+    (alt.length ? '<details class="mh-alt"><summary>Älter als 24 Stunden (' + alt.length + ")</summary>" + alt.map(zeile).join("") + "</details>" : "") +
+    '<div class="timestamp">' + eindeutig.length + " Meldungen heute, jede nur einmal · neueste zuerst</div>";
 } async function init() {
   const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking, filterBilanz, p1, p55, p5, performance, journal, newsSignale, rohstoffe, rohMeldungen, portfolio, notiz] = await Promise.all([
     fetchJson("p4_latest.json"),
@@ -1426,7 +1452,7 @@ function renderNewsToday(data) {
   renderHistorie(candidateTracking);
   renderFilterBilanz(filterBilanz);
   renderPerformance(performance);
-  renderHeadlines(headlines); renderNewsToday(newsToday);
+  renderNewsToday(newsToday, headlines);
   renderNewsSignale(newsSignale);
   renderJournal(journal, feed);
   renderRohstoffe(rohstoffe, rohMeldungen, newsToday, candidates);
