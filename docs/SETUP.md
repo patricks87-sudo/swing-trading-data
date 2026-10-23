@@ -21,7 +21,8 @@ DATEIEN IM REPO
 - index.html – Cockpit „Aktienkänguru“ (GitHub Pages bzw. hinter dem Cloudflare Worker; lädt Daten je nach Umgebung von raw.githubusercontent.com oder /data/)
 - worker/worker.js – Cloudflare Worker: liefert index.html und data/*.json aus dem (privaten) Repo, nur mit gültigem Cloudflare-Access-Login
 - docs/CLOUDFLARE.md – Anleitung Domain, Login, privates Repo
-- site/ – Entwurf der öffentlichen Startseite (noch nicht veröffentlicht; Impressum, Datenschutz und Risikohinweis vorher rechtlich prüfen)
+- site/ – öffentliche Startseite (index.html, brand.css, logo.svg). Hero mit Kernaussage (Feld "kernaussage" aus news_summary_today.json, sonst automatisch aus Marktlage und Sektoren), Marktlage als Tacho, Kennzahlen-Leiste, Top-Meldungen; darunter Methode, Ergebnisse, Über mich, Logbuch, Newsletter. Unter der eigenen Domain lädt sie nur die öffentlichen Auszüge /public/markt.json, /public/news.json, /public/performance.json des Workers. Vor dem öffentlichen Start Impressum, Datenschutz und Risikohinweis rechtlich prüfen.
+- site/logo.svg – Logo (Bildmarke) für Startseite und Cockpit; zum Austausch nur diese Datei ersetzen
 - rohstoffe.py – Rohstoff-Monitor: Kennzahlen Gold/Silber/Kupfer/Öl/GDX/Dollar, Rohstoff-Ampel, Gold/Silber-Empfehlung, Rückblick und Trade-Simulation (yfinance); wird von fetch_market_data.py bei jedem Lauf aufgerufen
 - requirements.txt – requests, pandas, yfinance>=0.2.40
 - .github/workflows/journal.yml – Trade-Journal: startet bei jedem neuen Issue mit Titel „[Trade] …“ des Repo-Inhabers, speichert den Eintrag, kommentiert das Ergebnis und schließt das Issue

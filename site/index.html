@@ -9,41 +9,70 @@
 <link rel="stylesheet" href="brand.css">
 <style>
   .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
-  header { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--sand) 88%, transparent); backdrop-filter: blur(12px); }
-  .nav { display: flex; align-items: center; gap: 32px; height: 72px; }
-  .nav nav { display: flex; gap: 26px; font-size: 14px; font-weight: 500; color: var(--ink-2); }
-  .nav nav a { text-decoration: none; }
-  .nav nav a:hover { color: var(--ink); }
-  .nav .right { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+  .mark img { width: 34px; height: 34px; display: block; }
+  /* ---------- Hero ---------- */
+  .hero { position: relative; overflow: hidden; color: #f6ece2; padding: 0 0 28px; }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+  .hero > *:not(.hero-bg) { position: relative; z-index: 1; }
+  .nav { display: flex; align-items: center; gap: 32px; height: 76px; }
+  .nav .mark { color: #fff; }
+  .nav .mark b span { color: #f6a86f; }
+  .nav nav { display: flex; gap: 26px; font-size: 14px; color: rgba(246,236,226,.75); }
+  .nav nav a { text-decoration: none; } .nav nav a:hover { color: #fff; }
+  .nav .btn { margin-left: auto; }
+  .btn.ghost-hell { border: 1px solid rgba(246,236,226,.35); color: #f6ece2; background: transparent; }
+  .btn.ghost-hell:hover { background: rgba(255,255,255,.08); }
+  .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 56px; align-items: center; padding-top: 48px; padding-bottom: 40px; }
+  .eyebrow-hell { display: inline-flex; gap: 8px; align-items: center; font-size: 13px; font-weight: 600; letter-spacing: .04em; color: #f6a86f; text-transform: uppercase; }
+  .eyebrow-hell::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #3ccf73; box-shadow: 0 0 0 4px rgba(60,207,115,.2); }
+  .hero h1 { font-family: var(--head); font-weight: 800; font-size: clamp(36px, 4.4vw, 58px); line-height: 1.03; letter-spacing: -.03em; margin: 18px 0 18px; color: #fff; }
+  .hero-text p { font-size: 18px; line-height: 1.55; color: rgba(246,236,226,.78); max-width: 620px; margin: 0 0 28px; }
+  .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 
-  /* Hero */
-  .hero { position: relative; overflow: hidden; padding: 72px 0 0; }
-  .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; position: relative; z-index: 1; }
-  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--brand); background: var(--brand-soft); padding: 6px 12px; border-radius: 999px; }
-  .hero h1 { font-size: clamp(40px, 5.6vw, 68px); font-weight: 800; margin: 20px 0 20px; }
-  .hero h1 em { font-style: normal; color: var(--brand); position: relative; white-space: nowrap; }
-  .hero h1 em svg { position: absolute; left: 0; bottom: -12px; width: 100%; height: 16px; overflow: visible; }
-  .hero p.lead { font-size: 18px; color: var(--ink-2); max-width: 540px; margin: 0 0 28px; }
-  .hero .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
-  .trust { display: flex; gap: 32px; margin-top: 36px; flex-wrap: wrap; }
-  .trust div b { display: block; font-family: var(--head); font-size: 26px; letter-spacing: -.02em; }
-  .trust div span { font-size: 13px; color: var(--muted); }
+  /* ---------- Marktlage-Karte mit Tacho ---------- */
+  .lage { background: var(--foam); color: var(--ink); border: 1px solid var(--line); border-radius: 26px; padding: 22px 24px; box-shadow: var(--shadow); }
+  .lage.dunkel { background: rgba(255,255,255,.07); color: #f6ece2; border-color: rgba(255,255,255,.14); backdrop-filter: blur(10px); box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+  .lage.dunkel .pill { background: rgba(255,255,255,.12); color: #fff; }
+  .lage-kopf { display: flex; justify-content: space-between; align-items: center; }
+  .lage .lbl { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: .7; }
+  .tacho { width: 100%; max-width: 300px; display: block; margin: 10px auto 0; color: currentColor; }
+  .tacho .t-l { font: 600 11px var(--body); fill: currentColor; opacity: .65; }
+  .lage-titel { text-align: center; font-family: var(--head); font-size: 34px; font-weight: 800; letter-spacing: -.02em; margin-top: 4px; }
+  .lage-text { text-align: center; font-size: 14px; opacity: .8; margin: 4px 0 12px; }
+  .lage details { border-top: 1px solid currentColor; border-color: rgba(127,127,127,.25); padding-top: 10px; }
+  .lage summary { cursor: pointer; font-size: 13px; font-weight: 600; opacity: .85; }
+  .krit { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 6px; font-size: 13px; }
+  .krit li { display: flex; gap: 8px; align-items: baseline; }
+  .krit li span { width: 14px; font-weight: 700; }
+  .krit li.ok span { color: #3ccf73; } .krit li.no span { color: #ff6b6b; }
+  .krit li b { margin-left: auto; font-weight: 600; opacity: .8; }
 
-  .conditions { background: var(--foam); border: 1px solid var(--line); border-radius: 24px; box-shadow: var(--shadow); padding: 22px 22px 18px; position: relative; }
-  .conditions .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
-  .conditions .lbl { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-  .conditions h3 { font-size: 30px; margin: 6px 0 4px; }
-  .conditions .why { color: var(--ink-2); font-size: 14px; margin: 0 0 12px; }
-  .hop { width: 100%; height: 150px; display: block; overflow: visible; }
-  .hop-legend { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 6px; }
-  .bars { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-top: 14px; }
-  .bars div { font-size: 11px; color: var(--muted); line-height: 1.3; }
-  .bars i { display: block; height: 6px; border-radius: 3px; background: var(--line-strong); margin-bottom: 6px; }
-  .bars i.on { background: var(--brand); }
+  /* ---------- Kennzahlen-Leiste ---------- */
+  .ticker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.12); border-radius: 18px; overflow: hidden; }
+  .ticker div { background: rgba(31,21,16,.72); padding: 14px 18px; display: grid; gap: 2px; }
+  .ticker span { font-size: 12px; color: rgba(246,236,226,.65); }
+  .ticker b { font-family: var(--head); font-size: 22px; letter-spacing: -.02em; color: #fff; }
+  .ticker i { font-style: normal; font-size: 13px; font-weight: 600; }
+  .ticker .up { color: #3ccf73; } .ticker .down { color: #ff7b7b; }
+  .ticker-stand { font-size: 12px; color: rgba(246,236,226,.55); margin-top: 8px; }
 
-  .land { position: absolute; left: 0; right: 0; bottom: 0; height: 200px; z-index: 0; }
-  .land svg { width: 100%; height: 100%; display: block; }
-  .hero-pad { height: 130px; }
+  /* ---------- Top-Meldungen ---------- */
+  .block { padding-top: 56px; padding-bottom: 0; }
+  .block-kopf { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; }
+  .block-kopf h2 { font-family: var(--head); font-size: 30px; letter-spacing: -.02em; margin: 0; }
+  .block-kopf a { color: var(--brand); font-weight: 600; text-decoration: none; }
+  .top-news { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 18px; }
+  .news-karte { display: flex; flex-direction: column; gap: 10px; text-decoration: none; background: var(--foam); border: 1px solid var(--line); border-radius: 22px; padding: 22px; box-shadow: var(--shadow); transition: transform .15s; }
+  .news-karte:hover { transform: translateY(-3px); }
+  .news-karte.gross { background: var(--brand); color: #fff; border-color: var(--brand); }
+  .news-karte h3 { font-family: var(--head); font-size: 20px; line-height: 1.25; margin: 0; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .news-karte.gross h3 { font-size: 24px; }
+  .news-karte p { margin: 0; font-size: 14px; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .news-karte.gross p { color: rgba(255,255,255,.85); }
+  .news-karte .chip { align-self: flex-start; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--brand-soft); color: var(--brand); }
+  .news-karte.gross .chip { background: rgba(255,255,255,.2); color: #fff; }
+  .news-karte .quelle { margin-top: auto; font-size: 12px; color: var(--muted); }
+  .news-karte.gross .quelle { color: rgba(255,255,255,.75); }
 
   section { padding: 96px 0; }
   .s-head { max-width: 640px; margin-bottom: 44px; }
@@ -102,12 +131,14 @@
 
   footer { padding: 56px 0 40px; color: var(--muted); font-size: 13px; }
   .foot { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 28px; }
-  .foot nav { display: flex; gap: 20px; }
+  .foot nav { display: flex; gap: 8px 20px; flex-wrap: wrap; }
   .foot a { text-decoration: none; } .foot a:hover { color: var(--ink); }
   .risk { margin-top: 18px; font-size: 12px; line-height: 1.6; max-width: 900px; }
 
   @media (max-width: 960px) {
-    .hero-grid, .dark-band, .about { grid-template-columns: 1fr; }
+    .hero-grid, .dark-band, .about { grid-template-columns: 1fr; gap: 28px; }
+    .ticker { grid-template-columns: repeat(3, 1fr); }
+    .top-news { grid-template-columns: 1fr; }
     .rules, .posts, .values { grid-template-columns: 1fr; }
     .nav nav { display: none; }
     .dark-band, .cta { padding: 32px 24px; }
@@ -115,55 +146,44 @@
   }
   @media (max-width: 560px) {
     .wrap { padding: 0 16px; }
-    .nav .right .ghost { display: none; }
+    .hero-text p { font-size: 16px; }
     section { padding: 64px 0; }
+    .ticker { grid-template-columns: repeat(2, 1fr); }
     .cta form { width: 100%; } .cta input { width: 100%; min-width: 0; }
   }
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <a class="mark" href="#"><svg viewBox="0 0 34 34"><rect width="34" height="34" rx="11" fill="var(--brand)"/><path d="M5 25.5q3-6 6 0q4-9.5 8 0q5-14 10-3" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="29" cy="9.5" r="2.2" fill="#fff"/></svg><b>Aktien<span>känguru</span></b></a>
-    <nav><a href="#regeln">Meine Methode</a><a href="#ergebnisse">Ergebnisse</a><a href="#logbuch">Logbuch</a><a href="#ueber">Über mich</a></nav>
-    <div class="right">
-      <a class="btn ghost" href="https://cockpit.example.de">Anmelden</a>
-      <a class="btn sun" href="#warteliste">Newsletter</a>
-    </div>
-  </div>
-</header>
-
-<div class="hero">
+<section class="hero" aria-label="Markt heute">
+  <svg class="hero-bg" viewBox="0 0 1440 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs><radialGradient id="glow" cx="78%" cy="18%" r="60%"><stop offset="0" stop-color="#e07a3c" stop-opacity=".55"/><stop offset=".55" stop-color="#c2501f" stop-opacity=".12"/><stop offset="1" stop-color="#2a1d16" stop-opacity="0"/></radialGradient></defs>
+    <rect width="1440" height="620" fill="#1f1510"/>
+    <rect width="1440" height="620" fill="url(#glow)"/>
+    <circle cx="1130" cy="120" r="70" fill="#f6a86f" opacity=".18"/>
+    <path d="M-20 560 q60 -110 120 0 q90 -170 180 0 q120 -240 240 0 q150 -300 300 0 q170 -340 340 0 q140 -260 280 -60" fill="none" stroke="#f6a86f" stroke-opacity=".28" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 12"/>
+    <path d="M0 600 C 240 560 420 590 720 570 S 1200 540 1440 575 V620 H0 Z" fill="#c2501f" opacity=".22"/>
+  </svg>
+  <header class="nav wrap">
+    <a class="mark" href="#"><img src="logo.svg" alt=""><b>Aktien<span>känguru</span></b></a>
+    <nav><a href="#markt">Markt heute</a><a href="#regeln">Meine Methode</a><a href="#ergebnisse">Ergebnisse</a><a href="#logbuch">Logbuch</a><a href="#ueber">Über mich</a></nav>
+    <a class="btn ghost-hell" href="https://cockpit.example.de">Anmelden</a>
+  </header>
   <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Swing-Trading mit System · mein öffentliches Logbuch</span>
-      <h1>Klare Regeln statt <em>Bauchgefühl<svg viewBox="0 0 300 16" preserveAspectRatio="none"><path d="M2 12q25-14 50 0q30-16 60 0q35-18 70 0q40-20 80-6" fill="none" stroke="var(--brand)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 7"/></svg></em>.</h1>
-      <p class="lead">Aktien gehen hoch und runter, und niemand weiß, was morgen kommt. Ich handle kurze Trends von höchstens zehn Tagen – nach festen Regeln, die ein System jeden Handelstag für 54 Aktien nachrechnet. Hier dokumentiere ich offen, wie ich vorgehe und was dabei herauskommt.</p>
-      <div class="ctas"><a class="btn sun" href="#warteliste">Logbuch abonnieren</a><a class="btn ghost" href="#regeln">So funktioniert's</a></div>
-      <div class="trust">
-        <div><b class="num" id="tTrades">–</b><span>Trades seit August (Simulation)</span></div>
-        <div><b class="num" id="tHit">–</b><span>mit Gewinn geschlossen</span></div>
-        <div><b class="num">10 Tage</b><span>maximale Haltedauer</span></div>
-      </div>
+    <div class="hero-text">
+      <div class="eyebrow-hell" id="datum">Markt heute</div>
+      <h1 id="kern">Klare Regeln statt Bauchgefühl.</h1>
+      <p id="lageSatz">Ich handle kurze Trends von höchstens zehn Tagen – nach festen Regeln, die ein System jeden Handelstag nachrechnet. Hier dokumentiere ich offen, wie ich vorgehe.</p>
+      <div class="ctas"><a class="btn sun" href="#warteliste">Logbuch abonnieren</a><a class="btn ghost-hell" href="#regeln">So lese ich den Markt</a></div>
     </div>
-
-    <div class="conditions">
-      <div class="top"><span class="lbl">Marktlage heute</span><span class="pill" id="cPill"></span></div>
-      <h3 id="cTitle">–</h3>
-      <p class="why" id="cWhy"></p>
-      <svg class="hop" id="hop" viewBox="0 0 400 150" preserveAspectRatio="none"></svg>
-      <div class="hop-legend"><span>Nasdaq-100 seit August</span><span id="cSpx"></span></div>
-      <div class="bars" id="cBars"></div>
-    </div>
+    <div id="lageKarte"></div>
   </div>
-  <div class="hero-pad"></div>
-  <div class="land"><svg viewBox="0 0 1440 200" preserveAspectRatio="none">
-    <circle cx="1180" cy="70" r="46" fill="var(--brand-2)" opacity=".18"/>
-    <path d="M0 120c180-30 300-10 460-30s300-40 480-10 320 20 500-10v130H0z" fill="var(--brand)" opacity=".07"/>
-    <path d="M0 150c200-20 360 0 560-14s360-26 520-6 220 10 360 0v70H0z" fill="var(--brand)" opacity=".11"/>
-    <path d="M0 178c240-14 480 6 720-4s460-14 720 0v26H0z" fill="var(--brand)" opacity=".16"/>
-  </svg></div>
-</div>
+  <div class="wrap" id="kennzahlen"></div>
+</section>
+
+<section class="wrap block" id="markt">
+  <div class="block-kopf"><h2>Was den Markt heute bewegt</h2></div>
+  <div class="top-news" id="topNews"><p style="color:var(--muted)">Lade Meldungen …</p></div>
+</section>
 
 <section id="regeln">
   <div class="wrap">
@@ -242,7 +262,7 @@
 <footer>
   <div class="wrap">
     <div class="foot">
-      <a class="mark" href="#"><svg viewBox="0 0 34 34"><rect width="34" height="34" rx="11" fill="var(--brand)"/><path d="M5 25.5q3-6 6 0q4-9.5 8 0q5-14 10-3" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="29" cy="9.5" r="2.2" fill="#fff"/></svg><b>Aktien<span>känguru</span></b></a>
+      <a class="mark" href="#"><img src="logo.svg" alt=""><b>Aktien<span>känguru</span></b></a>
       <nav><a href="#">Impressum</a><a href="#">Datenschutz</a><a href="#">Risikohinweis</a><a href="#">Interessenkonflikte</a></nav>
     </div>
     <p class="risk"><b>Wichtiger Hinweis:</b> Auf dieser Seite berichte ich über meine eigenen Entscheidungen und meine Vorgehensweise. Das ist keine Anlageberatung und keine Empfehlung, Wertpapiere zu kaufen oder zu verkaufen. Ich kenne deine persönliche Situation nicht. Ich bin selbst in Wertpapiere investiert, über die ich schreibe; bei jedem Beitrag weise ich darauf hin, ob ich eine Position halte. Aktienhandel ist mit Risiken bis zum Totalverlust verbunden. Dargestellte Ergebnisse beruhen teilweise auf einer hypothetischen Simulation und sind keine Garantie für die Zukunft. [Text vor Veröffentlichung rechtlich prüfen lassen.]</p>
@@ -250,21 +270,91 @@
 </footer>
 
 <script>
-// Entwurf: liest noch direkt aus dem Repo. Vor der Veröffentlichung auf eine eigene,
-// öffentliche Kennzahlen-Datei umstellen (das Repo wird privat).
-const REPO_BASE = "https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/data/";
-const get = (n) => fetch(REPO_BASE + n + "?_=" + Date.now()).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+// Datenquelle: auf GitHub Pages und lokal direkt aus dem Repo; unter der eigenen
+// Domain liefert der Cloudflare Worker nur öffentliche Auszüge unter /public/
+// (Marktlage, Indizes, Sektoren, Marktmeldungen, Performance – keine Kandidaten, kein Depot).
+const DIREKT = /github\.io$/.test(location.hostname) || location.protocol === "file:";
+const REPO = "https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/data/";
+const get = (n) => fetch(n + (n.includes("?") ? "&" : "?") + "_=" + Date.now()).then((r) => (r.ok ? r.json() : null)).catch(() => null);
 const $ = (id) => document.getElementById(id);
-const nf = (v, d = 1) => Number(v).toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d });
-const pct = (v, d = 1) => (v == null ? "–" : (v > 0 ? "+" : v < 0 ? "−" : "") + nf(Math.abs(v), d) + " %");
-const eur = (v) => (v == null ? "–" : (v > 0 ? "+" : v < 0 ? "−" : "") + nf(Math.abs(v), 0) + " €");
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const nf = (v, d = 1) => (typeof v === "number" ? v.toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d }) : "–");
+const pct = (v, d = 1) => (typeof v === "number" ? (v > 0 ? "+" : v < 0 ? "−" : "") + nf(Math.abs(v), d) + " %" : "–");
+const eur = (v) => (typeof v === "number" ? (v > 0 ? "+" : v < 0 ? "−" : "") + nf(Math.abs(v), 0) + " €" : "–");
+const LAGE = { "RISK-ON": ["Rückenwind", "good"], NEUTRAL: ["Gemischt", "warn"], "RISK-OFF": ["Abwarten", "bad"] };
+const SEKTOR_DE = { Energy: "Energie", Healthcare: "Gesundheit", Insurance: "Versicherer", Payments: "Zahlungsdienste", Utilities: "Versorger",
+  Defense: "Rüstung", Industrials: "Industrie", "Semiconductors/AI": "Halbleiter", "Fintech/Brokerage": "Fintech", "Software/Cloud": "Software",
+  Technology: "Technologie", Cybersecurity: "Cybersecurity", MedTech: "Medizintechnik", Financials: "Banken", Materials: "Rohstoffwerte",
+  Transportation: "Transport", "Consumer Discretionary": "Konsum", "Industrials/Infrastructure": "Infrastruktur", Edelmetalle: "Edelmetalle" };
 
-// Marktregime in Klartext
-const LAGE = {
-  "RISK-ON": { t: "Rückenwind", cls: "good", why: "Der Markt ist in guter Verfassung. Mein Regelwerk erlaubt bis zu zwei neue Positionen am Tag." },
-  NEUTRAL: { t: "Gemischt", cls: "warn", why: "Uneinheitliche Signale. Mein Regelwerk erlaubt höchstens eine neue Position." },
-  "RISK-OFF": { t: "Abwarten", cls: "bad", why: "Zu unruhig. Nach meinen Regeln heute keine neuen Käufe." },
-};
+async function laden() {
+  if (!DIREKT) {
+    const [feed, news, perf] = await Promise.all(["/public/markt.json", "/public/news.json", "/public/performance.json"].map(get));
+    return { feed, news, perf };
+  }
+  const [p4, p5, p55, p1, news, perf] = await Promise.all(["p4_latest.json", "p5_latest.json", "p55_latest.json", "p1_latest.json",
+    "news_summary_today.json", "performance.json"].map((n) => get(REPO + n)));
+  const feed = [p4, p5, p55, p1].filter(Boolean).sort((a, b) => new Date(b.generated_at_utc) - new Date(a.generated_at_utc))[0];
+  return { feed, news, perf };
+}
+
+// Kernaussage: künftig ein kurzes Feld "kernaussage" der Nachrichten-Aufgabe; bis dahin aus Regime + Sektoren
+function kernaussage(d) {
+  if (d.news && d.news.kernaussage) return d.news.kernaussage;
+  const r = d.feed.regime, S = Object.entries(d.feed.sectors || {}).sort((a, b) => b[1].rs_20d_vs_spy - a[1].rs_20d_vs_spy);
+  const de = (n) => SEKTOR_DE[n] || n;
+  const vorn = S.slice(0, 2).map(([n]) => de(n)).join(" und "), hinten = de(S[S.length - 1][0]);
+  const auftakt = { "RISK-ON": "Der Markt trägt", NEUTRAL: "Gespaltener Markt", "RISK-OFF": "Rauer Markt" }[r.status] || "Markt heute";
+  return auftakt + ": " + vorn + " vorn, " + hinten + " unter Druck.";
+}
+function ersterSatz(t) {
+  t = String(t || "");
+  const m = t.match(/^(.{40,230}?[.!?])(\s|$)/);
+  if (m) return m[1];
+  const kurz = t.slice(0, 190), schnitt = Math.max(kurz.lastIndexOf(", "), kurz.lastIndexOf(" – "), kurz.lastIndexOf("; "));
+  return (schnitt > 80 ? kurz.slice(0, schnitt) : kurz.slice(0, kurz.lastIndexOf(" "))) + " …";
+}
+
+// Halbkreis-Tacho von "Abwarten" bis "Rückenwind"; Zeiger = erfüllte Kriterien (0–5)
+function tacho(r) {
+  const n = (r.kriterien || []).length || 5, w = r.status === "RISK-OFF" && r.kriterien_erfuellt > 1 ? 0.6 : r.kriterien_erfuellt;
+  const cx = 120, cy = 120, R = 96, wink = (v) => Math.PI * (1 - v / n);
+  const pt = (v, rad) => [cx + rad * Math.cos(wink(v)), cy - rad * Math.sin(wink(v))];
+  const bogen = (a, b, col) => { const [x1, y1] = pt(a, R), [x2, y2] = pt(b, R); return '<path d="M' + x1 + " " + y1 + " A" + R + " " + R + " 0 0 1 " + x2 + " " + y2 + '" stroke="' + col + '" stroke-width="18" fill="none" stroke-linecap="butt"/>'; };
+  const [nx, ny] = pt(w, R - 26);
+  const [titel] = LAGE[r.status] || [r.status];
+  return '<svg viewBox="0 0 240 140" class="tacho" role="img" aria-label="Marktlage ' + esc(titel) + ", " + r.kriterien_erfuellt + " von " + n + ' Kriterien">' +
+    bogen(0, 1.45, "var(--bad)") + bogen(1.55, 3.45, "#f5a623") + bogen(3.55, n, "var(--good)") +
+    '<line x1="' + cx + '" y1="' + cy + '" x2="' + nx + '" y2="' + ny + '" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>' +
+    '<circle cx="' + cx + '" cy="' + cy + '" r="8" fill="currentColor"/>' +
+    '<text x="22" y="138" class="t-l">Abwarten</text><text x="120" y="12" class="t-l" text-anchor="middle">Gemischt</text><text x="218" y="138" class="t-l" text-anchor="end">Rückenwind</text></svg>';
+}
+function kriterienListe(r) {
+  return '<ul class="krit">' + r.kriterien.map((k) => '<li class="' + (k.erfuellt ? "ok" : "no") + '"><span>' + (k.erfuellt ? "✓" : "✕") + "</span>" + esc(k.kriterium) +
+    (typeof k.wert === "number" ? '<b class="num">' + (/VIX/.test(k.kriterium) ? nf(k.wert, 1) : /Watchlist/.test(k.kriterium) ? nf(k.wert, 0) + " %" : pct(k.wert)) + "</b>" : "") + "</li>").join("") + "</ul>";
+}
+function lageKarte(r, dunkel) {
+  const [titel, ton] = LAGE[r.status] || [r.status, "warn"];
+  const erl = { "RISK-ON": "Mein Regelwerk erlaubt bis zu zwei neue Positionen am Tag.", NEUTRAL: "Mein Regelwerk erlaubt höchstens eine neue Position.", "RISK-OFF": "Nach meinen Regeln heute keine neuen Käufe." }[r.status] || "";
+  return '<div class="lage ' + (dunkel ? "dunkel" : "") + '"><div class="lage-kopf"><span class="lbl">Marktlage</span><span class="pill ' + ton + '"><span class="d"></span>' + r.kriterien_erfuellt + " von " + r.kriterien.length + " Kriterien</span></div>" +
+    tacho(r) + '<div class="lage-titel">' + esc(titel) + '</div><p class="lage-text">' + erl + "</p>" +
+    '<details><summary>Die fünf Kriterien</summary>' + kriterienListe(r) + "</details></div>";
+}
+function kennzahlen(feed) {
+  const I = feed.indices || {}, v = feed.macro && feed.macro.vix, g = feed.rohstoffe && feed.rohstoffe.werte && feed.rohstoffe.werte.GOLD;
+  const laufend = Object.values(I).some((x) => x && x.partial_last_bar);
+  const z = [["S&P 500", I.SP500 && I.SP500.chg_1d_pct, I.SP500 && I.SP500.close], ["Nasdaq-100", I.NASDAQ_COMPOSITE && I.NASDAQ_COMPOSITE.chg_1d_pct, I.NASDAQ_COMPOSITE && I.NASDAQ_COMPOSITE.close],
+    ["Halbleiter", I.SOX_PROXY && I.SOX_PROXY.chg_1d_pct, I.SOX_PROXY && I.SOX_PROXY.close], ["Gold", g && g.tagesbewegung_pct, g && g.close]];
+  return '<div class="ticker">' + z.filter((x) => x[2] != null).map(([n, c, k]) => '<div><span>' + n + '</span><b class="num">' + nf(k, 2) + '</b><i class="num ' + (c > 0 ? "up" : c < 0 ? "down" : "") + '">' + pct(c, 2) + "</i></div>").join("") +
+    (v && v.close != null ? '<div><span>VIX</span><b class="num">' + nf(v.close, 2) + '</b><i class="' + (v.close < 20 ? "up" : "down") + '">' + (v.close < 20 ? "ruhig" : "nervös") + "</i></div>" : "") +
+    '</div><div class="ticker-stand">' + (laufend ? "Veränderung heute, Sitzung läuft" : "Veränderung zum Vortag") + " · Stand " + new Date(feed.generated_at_utc).toLocaleString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }) + " Uhr</div>";
+}
+function zeit(iso) {
+  if (!iso) return "";
+  const nurDatum = /^\d{4}-\d{2}-\d{2}$/.test(iso) || /T(12|00):00(:00)?([+-]\d{2}:?\d{2}|Z)?$/.test(iso);
+  const d = new Date(nurDatum ? iso.slice(0, 10) + "T12:00:00" : iso);
+  return nurDatum ? d.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" }) : d.toLocaleString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }) + " Uhr";
+}
 
 function linePath(vals, W, H, lo, hi, pad = 8) {
   const n = vals.length;
@@ -272,33 +362,23 @@ function linePath(vals, W, H, lo, hi, pad = 8) {
 }
 
 (async () => {
-  const [p4, p1, perf] = await Promise.all(["p4_latest.json", "p1_latest.json", "performance.json"].map(get));
-  const feed = [p4, p1].filter(Boolean).sort((a, b) => new Date(b.generated_at_utc) - new Date(a.generated_at_utc))[0];
-
-  if (feed?.regime) {
-    const r = feed.regime, s = LAGE[r.status] || LAGE.NEUTRAL;
-    $("cTitle").innerHTML = s.t + ' <span class="pill neutral" style="vertical-align:middle">' + r.status + "</span>";
-    $("cWhy").textContent = s.why;
-    $("cPill").className = "pill " + s.cls;
-    $("cPill").innerHTML = '<span class="d"></span>' + r.kriterien_erfuellt + " von " + r.kriterien.length + " Kriterien";
-    const short = ["S&P 500 über Ø50", "Nasdaq über Ø20", "VIX unter 20", "Breite über Ø50", "Breite 5 Tage"];
-    $("cBars").innerHTML = r.kriterien.map((k, i) => `<div><i class="${k.erfuellt ? "on" : ""}"></i>${short[i] || k.kriterium}</div>`).join("");
-    const q = feed.indices?.NASDAQ_COMPOSITE;
-    if (q) $("cSpx").innerHTML = `<b class="num" style="color:var(--ink)">${nf(q.close, 2)}</b> <span class="num ${q.chg_1d_pct >= 0 ? "up" : "down"}">${pct(q.chg_1d_pct, 2)}</span>`;
+  const d = await laden();
+  const f = d.feed, perf = d.perf;
+  if (f && f.regime) {
+    $("datum").textContent = "Markt heute · " + new Date(f.generated_at_utc).toLocaleDateString("de-DE", { timeZone: "Europe/Berlin", weekday: "long", day: "numeric", month: "long" });
+    $("kern").textContent = kernaussage(d);
+    if (d.news && d.news.lage) $("lageSatz").textContent = ersterSatz(d.news.lage);
+    $("lageKarte").innerHTML = lageKarte(f.regime, true);
+    $("kennzahlen").innerHTML = kennzahlen(f);
   }
-  const src = perf?.reihen?.find((x) => x.key === "qqq")?.werte || [];
-  if (src.length) {
-    const lo = Math.min(...src), hi = Math.max(...src), d = linePath(src, 400, 150, lo, hi, 14);
-    const lx = 400, ly = 150 - 14 - ((src[src.length - 1] - lo) / (hi - lo)) * 122;
-    $("hop").innerHTML = `<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--brand)" stop-opacity=".28"/><stop offset="1" stop-color="var(--brand)" stop-opacity="0"/></linearGradient></defs>
-      <path d="${d} L400 150 L0 150 Z" fill="url(#g)"/><path d="${d}" fill="none" stroke="var(--brand)" stroke-width="2.5" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
-      <circle cx="${lx}" cy="${ly}" r="4" fill="var(--brand)" vector-effect="non-scaling-stroke"/>`;
-  }
+  const m = ((d.news && d.news.meldungen) || []).slice();
+  const top = m.filter((x) => x.top).sort((a, b) => a.top - b.top);
+  const liste = (top.length ? top : m.slice(-3).reverse()).slice(0, 3);
+  $("topNews").innerHTML = liste.length ? liste.map((x, i) => '<a class="news-karte' + (i === 0 ? " gross" : "") + '" href="' + esc(x.url) + '" target="_blank" rel="noopener"><span class="chip">' + esc(x.thema || "Markt") + "</span><h3>" + esc(x.title) + "</h3><p>" + esc(x.bedeutung || "") + '</p><span class="quelle">' + esc(x.source || "") + (x.published_at ? " · " + zeit(x.published_at) : "") + "</span></a>").join("")
+    : '<p style="color:var(--muted)">Heute noch keine Meldungen.</p>';
 
   if (perf) {
     const st = perf.statistik?.neu || {}, z = perf.zusammenfassung || {};
-    $("tTrades").textContent = (st.trades_abgeschlossen ?? 0) + (st.trades_offen ?? 0);
-    $("tHit").textContent = st.trefferquote_pct != null ? nf(st.trefferquote_pct, 0) + " %" : "–";
     $("rStrat").textContent = pct(z.neu?.gesamt_pct); $("rStrat").style.color = "#f6a86f";
     $("rQqq").textContent = pct(z.qqq?.gesamt_pct);
     $("rBest").textContent = eur(st.bester_trade_eur);
