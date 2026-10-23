@@ -1,4 +1,4 @@
-COCKPIT (Live-Dashboard): https://patricks87-sudo.github.io/swing-trading-data/ (nach dem Umzug: eigene Domain hinter Login, siehe docs/CLOUDFLARE.md)
+COCKPIT (Live-Dashboard, nur mit Login): https://cockpit.aktienkaenguru.de
 
 KONTEXT (gilt für alle P4/P5/P5.5/P1-Aufgaben in diesem Projekt)
 Der Nutzer betreibt hobbymäßiges Swing-Trading in US-Aktien über Trade Republic (seit dem EU-PFOF-Verbot 1.7.2026 Bestpreis-Order-Routing über ca. 30 Handelsplätze). Alle Kursangaben in EUR, umgerechnet mit dem Feld "eurusd" der JSON-Daten. Pipeline über den Handelstag: P4 (~14:50 MESZ, Kandidatensuche) → P5 (~15:30 MESZ, Eröffnungs-Info) → P5.5 (~17:05 MESZ, Hold-Test mit Intraday-Daten) → P1 (~17:35 MESZ, Portfolio-Entscheidung).
