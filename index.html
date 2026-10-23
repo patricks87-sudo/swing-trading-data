@@ -3,23 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swing Trading Cockpit</title>
+<title>Aktienkänguru Cockpit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  /* Markenfarben Aktienkänguru – hell, dunkel (System) und dunkel (Umschalter) */
   :root {
-    --bg: #0f1115; --card: #171a21; --border: #2a2e38;
-    --text: #e8eaed; --muted: #9aa0ab;
-    --green: #2ecc71; --yellow: #f1c40f; --red: #e74c3c;
+    color-scheme: light;
+    --sand: #fbf7f1; --foam: #ffffff; --shell: #f4ece1;
+    --ink: #2a1d16; --ink-2: #66544a; --muted: #9a887b;
+    --line: #eadfd1; --line-strong: #dccbb7;
+    --brand: #c2501f; --brand-soft: rgba(194,80,31,.10);
+    --good: #15803d; --good-soft: rgba(21,128,61,.10);
+    --warn: #b26b00; --warn-soft: rgba(245,166,35,.16);
+    --bad: #b4232f; --bad-soft: rgba(180,35,47,.09);
+    --s1: #c2501f; --s2: #3f5c7a; --s3: #a08f83;
+    --shadow: 0 1px 2px rgba(42,29,22,.05), 0 8px 24px rgba(42,29,22,.06);
+    --head: "Bricolage Grotesque", "Plus Jakarta Sans", system-ui, sans-serif;
+    --body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    /* Namen der bisherigen Cockpit-Styles, auf die Marke abgebildet */
+    --bg: var(--sand); --card: var(--foam); --border: var(--line); --text: var(--ink);
+    --green: var(--good); --yellow: var(--warn); --red: var(--bad);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --sand: #15100d; --foam: #1e1713; --shell: #271e19;
+      --ink: #f6ece2; --ink-2: #cdb9a8; --muted: #8e7a6c;
+      --line: #33271f; --line-strong: #44352b;
+      --brand: #f08a4b; --brand-soft: rgba(240,138,75,.14);
+      --good: #3ccf73; --good-soft: rgba(60,207,115,.14);
+      --warn: #f5b13d; --warn-soft: rgba(245,177,61,.14);
+      --bad: #ff6b6b; --bad-soft: rgba(255,107,107,.14);
+      --s1: #f08a4b; --s2: #7f9cbd; --s3: #8e7a6c;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --sand: #15100d; --foam: #1e1713; --shell: #271e19;
+    --ink: #f6ece2; --ink-2: #cdb9a8; --muted: #8e7a6c;
+    --line: #33271f; --line-strong: #44352b;
+    --brand: #f08a4b; --brand-soft: rgba(240,138,75,.14);
+    --good: #3ccf73; --good-soft: rgba(60,207,115,.14);
+    --warn: #f5b13d; --warn-soft: rgba(245,177,61,.14);
+    --bad: #ff6b6b; --bad-soft: rgba(255,107,107,.14);
+    --s1: #f08a4b; --s2: #7f9cbd; --s3: #8e7a6c;
+    --shadow: none;
   }
   * { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 24px; background: var(--bg); color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  }
-  .wrap { max-width: 1000px; margin: 0 auto; }
-  h1 { font-size: 22px; margin: 0 0 4px 0; }
-  .sub { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
-  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 32px 0 12px 0; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  body { margin: 0; background: var(--sand); color: var(--ink); font: 14px/1.5 var(--body); -webkit-font-smoothing: antialiased; }
+  .num { font-variant-numeric: tabular-nums; }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 28px 24px 56px; }
+  h2 { font-family: var(--head); font-size: 20px; font-weight: 700; letter-spacing: -.015em; color: var(--ink); margin: 36px 0 12px 0; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 18px 20px; box-shadow: var(--shadow); }
   .ampel-box { display: flex; align-items: center; gap: 16px; padding: 20px; border-radius: 12px; border: 1px solid var(--border); }
   .dot { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; }
   .dot.green { background: var(--green); box-shadow: 0 0 16px var(--green); }
@@ -174,47 +211,234 @@
     table.responsive-mobile td.mobile-full { display: block; text-align: left; }
     table.responsive-mobile td.mobile-full::before { content: none; }
   }
+
+  /* ---- Aktienkänguru: Kopfzeile ---- */
+  .topbar { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--foam) 86%, transparent); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
+  .topbar-in { max-width: 1320px; margin: 0 auto; padding: 0 24px; height: 62px; display: flex; align-items: center; gap: 28px; }
+  .mark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); flex-shrink: 0; }
+  .mark svg { width: 32px; height: 32px; }
+  .mark b { font-family: var(--head); font-size: 19px; font-weight: 700; letter-spacing: -.03em; }
+  .mark b span { color: var(--brand); }
+  .tabs { display: flex; gap: 4px; border: 0; margin: 0; overflow-x: auto; min-width: 0; scrollbar-width: none; }
+  .tab { white-space: nowrap; background: none; border: 0; border-radius: 10px; color: var(--ink-2); font: 500 14px var(--body); padding: 8px 13px; cursor: pointer; }
+  .tab:hover { background: var(--shell); color: var(--ink); }
+  .tab.active { background: var(--brand-soft); color: var(--brand); font-weight: 600; border: 0; }
+  .top-right { margin-left: auto; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+  .stamp { color: var(--muted); font-size: 12px; white-space: nowrap; }
+  .icon-btn { width: 36px; height: 36px; border-radius: 999px; border: 1px solid var(--line); background: var(--foam); color: var(--ink-2); display: grid; place-items: center; cursor: pointer; }
+  .hist-intro { color: var(--ink-2); font-size: 14px; max-width: 860px; }
+
+  /* Buttons und Formulare in Markenfarbe */
+  .btn { background: var(--brand); border: 1px solid var(--brand); color: #fff; border-radius: 999px; padding: 10px 20px; }
+  .btn:hover { background: var(--brand); filter: brightness(1.06); }
+  .jform input, .jform select, .jform textarea { border-radius: 10px; }
+  .seg button.on { background: var(--brand-soft); color: var(--brand); }
+  .vorschlaege li.aktiv, .vorschlaege li:hover { background: var(--brand-soft); }
+  .footer-link { border-radius: 999px; }
+  .footer-link:hover { border-color: var(--brand); }
+  .dfoot { margin-top: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+  .dfoot .footer-link { margin-top: 0; }
+  .dfoot p { margin: 0; color: var(--muted); font-size: 12px; max-width: 560px; }
+
+  /* ---- Registerkarte "Heute" ---- */
+  .dgreet { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+  .dgreet h1 { font-family: var(--head); font-size: 32px; letter-spacing: -.02em; margin: 0; line-height: 1.15; }
+  .dgreet p { margin: 4px 0 0; color: var(--ink-2); max-width: 720px; }
+  .dnote { background: var(--foam); border: 1px solid var(--line); border-left: 4px solid var(--brand); border-radius: 14px; padding: 12px 16px; max-width: 520px; }
+  .dnote .l { font-size: 11px; font-weight: 700; color: var(--brand); text-transform: uppercase; letter-spacing: .08em; }
+  .dnote p { margin: 4px 0 2px; font-size: 14px; color: var(--ink); }
+  .dnote .s { font-size: 12px; color: var(--muted); }
+
+  .dcard { background: var(--foam); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); min-width: 0; }
+  .dcard-h { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px 0; }
+  .dcard-h h3 { margin: 0; font-family: var(--head); font-size: 17px; font-weight: 700; letter-spacing: -.01em; }
+  .dcard-h .meta { color: var(--muted); font-size: 12px; text-align: right; }
+  .dcard-b { padding: 14px 20px 18px; }
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .pill.good { background: var(--good-soft); color: var(--good); }
+  .pill.warn { background: var(--warn-soft); color: var(--warn); }
+  .pill.bad { background: var(--bad-soft); color: var(--bad); }
+  .pill.brand { background: var(--brand-soft); color: var(--brand); }
+  .pill.neutral { background: var(--shell); color: var(--ink-2); }
+  .pill .d { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .up { color: var(--good); } .down { color: var(--bad); }
+
+  .dhero { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .dstatus { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 2px 0 14px; }
+  .dstatus b { font-family: var(--head); font-size: 30px; letter-spacing: -.02em; line-height: 1; }
+  .dmeter { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-bottom: 12px; }
+  .dmeter i { height: 6px; border-radius: 3px; background: var(--line-strong); }
+  .dmeter i.on { background: var(--brand); }
+  .dhero .kliste { font-size: 13px; color: var(--ink-2); gap: 6px; }
+  .dlimits { display: flex; gap: 8px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .dlimit { flex: 1; background: var(--shell); border-radius: 12px; padding: 8px 12px; }
+  .dlimit b { display: block; font-family: var(--head); font-size: 20px; }
+  .dlimit span { font-size: 12px; color: var(--muted); }
+  .dmini { padding: 0 20px 16px; font-size: 12px; color: var(--muted); }
+  .dmini:empty { display: none; }
+
+  .dpick { display: flex; align-items: center; gap: 12px; margin: 4px 0 10px; }
+  .dtick { width: 46px; height: 46px; border-radius: 14px; background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 11px; letter-spacing: .02em; flex-shrink: 0; }
+  .dpick-name { font-family: var(--head); font-size: 21px; font-weight: 700; letter-spacing: -.01em; line-height: 1.1; }
+  .dpick-sub { color: var(--muted); font-size: 12px; }
+  .dpick-text { color: var(--ink-2); font-size: 13px; margin: 0 0 12px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .dkv { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .dkv div { background: var(--shell); border-radius: 12px; padding: 8px 9px; min-width: 0; }
+  .dkv span { display: block; font-size: 11px; color: var(--muted); }
+  .dkv b { font-size: 14px; white-space: nowrap; }
+  .dgesamt { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .dalts { margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap; font-size: 12px; color: var(--muted); align-items: center; }
+
+  .dbig { font-family: var(--head); font-size: 32px; font-weight: 700; letter-spacing: -.02em; margin: 2px 0; }
+  .dpos { display: grid; grid-template-columns: minmax(0, 1fr) 64px 70px; gap: 12px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); font-size: 13px; }
+  .dpos:first-child { border-top: 0; }
+  .dpos small { color: var(--muted); display: block; font-size: 11px; }
+  .dbar { height: 6px; border-radius: 3px; background: var(--shell); position: relative; overflow: hidden; }
+  .dbar i { position: absolute; top: 0; bottom: 0; border-radius: 3px; }
+
+  .dkpis { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .dkpi { padding: 16px 20px; }
+  .dkpi .lbl { color: var(--muted); font-size: 12px; font-weight: 500; }
+  .dkpi .val { font-family: var(--head); font-size: 26px; font-weight: 700; letter-spacing: -.02em; margin-top: 2px; }
+  .dkpi .sub { font-size: 12px; color: var(--ink-2); }
+  .dperf { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: center; margin-top: 8px; }
+  .dlegend { display: grid; gap: 4px; font-size: 12px; color: var(--ink-2); }
+  .dlegend span { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+  .dlegend i { width: 12px; height: 2px; border-radius: 1px; display: inline-block; }
+  .dlegend b { margin-left: auto; padding-left: 10px; color: var(--ink); }
+  .dspark { position: relative; }
+  .dspark svg { display: block; width: 100%; height: 86px; overflow: visible; }
+  .dtip { position: absolute; pointer-events: none; background: var(--ink); color: var(--foam); font-size: 11px; padding: 6px 8px; border-radius: 8px; white-space: nowrap; transform: translate(-50%, -110%); opacity: 0; transition: opacity .1s; }
+
+  .dmain { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 16px; align-items: start; }
+  .dside { display: grid; gap: 16px; min-width: 0; }
+  .wl-wrap { overflow-x: auto; margin-top: 8px; }
+  table.wl th { padding: 10px 12px; font-size: 11px; letter-spacing: .04em; color: var(--muted); }
+  table.wl td { padding: 12px; vertical-align: middle; }
+  table.wl th.r, table.wl td.r { text-align: right; }
+  table.wl tr.row { cursor: pointer; }
+  table.wl tr.row:hover td { background: var(--shell); }
+  table.wl tr.det td { background: var(--shell); color: var(--ink-2); padding: 4px 12px 16px; }
+  table.wl tr.det[hidden] { display: none; }
+  .wl-name b { display: block; font-weight: 600; }
+  .wl-name small, .wl small { color: var(--muted); font-size: 12px; }
+  .wl-score { display: flex; align-items: center; gap: 8px; }
+  .wl-score b { min-width: 26px; }
+  .wl-score .t { width: 54px; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
+  .wl-score .t i { display: block; height: 100%; border-radius: 3px; background: var(--brand); }
+  .wl-dots { display: inline-flex; gap: 4px; }
+  .wl-dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--line-strong); }
+  .wl-dots i.gruen { background: var(--good); } .wl-dots i.gelb { background: #f5a623; } .wl-dots i.rot { background: var(--bad); }
+  .held { margin-left: 6px; font-size: 10px; padding: 1px 7px; vertical-align: 1px; }
+  .dexcl { padding: 12px 20px 16px; font-size: 12px; color: var(--muted); }
+  .dexcl b { color: var(--ink-2); font-weight: 500; }
+
+  .didx { display: grid; grid-template-columns: minmax(0, 1fr) auto 66px; gap: 12px; align-items: center; padding: 9px 0; border-top: 1px solid var(--line); font-size: 13px; }
+  .didx:first-child { border-top: 0; }
+  .didx small { color: var(--muted); font-size: 11px; display: block; }
+  .didx .r { text-align: right; }
+  .dsec { display: grid; grid-template-columns: 120px minmax(0, 1fr) 56px; gap: 10px; align-items: center; font-size: 12px; padding: 4px 0; }
+  .dsec .nm { color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .dsec .ax { position: relative; height: 14px; }
+  .dsec .ax::before { content: ""; position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--line-strong); }
+  .dsec .ax i { position: absolute; top: 3px; height: 8px; }
+  .dsec .ax i.p { left: 50%; background: var(--good); border-radius: 0 4px 4px 0; }
+  .dsec .ax i.n { right: 50%; background: var(--bad); border-radius: 4px 0 0 4px; }
+  .dsec .v { text-align: right; color: var(--ink-2); }
+  .dsec-gap { text-align: center; color: var(--muted); font-size: 11px; }
+  .mh-lage { font-size: 14px; line-height: 1.55; padding-bottom: 12px; margin-bottom: 4px; border-bottom: 1px solid var(--border); }
+  .mh-top { display: inline-block; margin-right: 8px; padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; background: var(--brand-soft); color: var(--brand); }
+  .headline.ist-top a { font-weight: 600; }
+  .mh-alt summary { margin-top: 10px; }
+  .dgrid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+
+  @media (max-width: 1100px) {
+    .dhero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .dhero > :first-child { grid-column: 1 / -1; }
+    .dkpis { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .dkpis > :first-child { grid-column: 1 / -1; }
+    .dmain, .dgrid2 { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 720px) {
+    .topbar-in { padding: 0 12px; gap: 10px; }
+    .stamp, .mark b, .icon-btn { display: none; }
+    .tabs { gap: 0; }
+    .tab { padding: 7px 8px; font-size: 13px; }
+    .wrap { padding: 20px 14px 48px; }
+    .dgreet h1 { font-size: 26px; }
+    .dhero { grid-template-columns: minmax(0, 1fr); }
+    .dkpis { gap: 10px; }
+    .dperf { grid-template-columns: minmax(0, 1fr); }
+    .dkv { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hide-m { display: none; }
+    table.wl td, table.wl th { padding: 10px 8px; }
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>Swing Trading Cockpit</h1>
-  <div class="sub">Automatisch aktualisiert &middot; Datenquelle: GitHub Actions + Twelve Data + Claude-Analyse</div>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="mark" href="#" data-tabjump="heute" aria-label="Aktienkänguru – Startseite des Cockpits"><svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="11" fill="var(--brand)"/><path d="M5 25.5q3-6 6 0q4-9.5 8 0q5-14 10-3" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="29" cy="9.5" r="2.2" fill="#fff"/></svg><b>Aktien<span>känguru</span></b></a>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" role="tab" id="tab-heute" aria-controls="panel-heute" aria-selected="true" data-tab="heute">Heute</button>
+      <button class="tab" role="tab" id="tab-historie" aria-controls="panel-historie" aria-selected="false" data-tab="historie">Performance</button>
+      <button class="tab" role="tab" id="tab-rohstoffe" aria-controls="panel-rohstoffe" aria-selected="false" data-tab="rohstoffe">Rohstoffe</button>
+      <button class="tab" role="tab" id="tab-journal" aria-controls="panel-journal" aria-selected="false" data-tab="journal">Journal</button>
+    </nav>
+    <div class="top-right">
+      <span class="stamp" id="dStamp"></span>
+      <button class="icon-btn" id="themeBtn" type="button" title="Hell/Dunkel umschalten" aria-label="Hell/Dunkel umschalten"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9L13 13M3 13l1.1-1.1M11.9 4.1L13 3"/></svg></button>
+    </div>
+  </div>
+</header>
 
-  <div class="tabs" role="tablist">
-    <button class="tab active" role="tab" id="tab-heute" aria-controls="panel-heute" aria-selected="true" data-tab="heute">Heute</button>
-    <button class="tab" role="tab" id="tab-historie" aria-controls="panel-historie" aria-selected="false" data-tab="historie">Historie &amp; Performance</button>
-    <button class="tab" role="tab" id="tab-rohstoffe" aria-controls="panel-rohstoffe" aria-selected="false" data-tab="rohstoffe">Rohstoffe</button>
-    <button class="tab" role="tab" id="tab-journal" aria-controls="panel-journal" aria-selected="false" data-tab="journal">Journal</button>
+<div class="wrap">
+  <div class="tab-panel" id="panel-heute" role="tabpanel" aria-labelledby="tab-heute">
+  <div class="dgreet">
+    <div><h1 id="dHello">Hallo</h1><p id="dKurz"></p></div>
+    <div class="dnote" id="dNote" hidden></div>
   </div>
 
-  <div class="tab-panel" id="panel-heute" role="tabpanel" aria-labelledby="tab-heute">
-  <h2>Top-3-Schlagzeilen</h2>
-  <div id="headlines" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten Analyse-Lauf befüllt.</div></div> <h2>Was den Markt heute bewegt</h2> <div id="newsToday" class="card"><div class="placeholder">Noch keine Daten – wird im Laufe des Tages befüllt.</div></div>
+  <section class="dhero">
+    <div class="dcard"><div class="dcard-h"><h3>Marktlage</h3><span class="meta" id="dRegimeMeta"></span></div><div class="dcard-b" id="dRegime"><div class="placeholder">Lade Marktlage …</div></div><div id="rMini" class="dmini"></div></div>
+    <div class="dcard"><div class="dcard-h"><h3>Mein Trade heute</h3><span class="meta" id="dPickMeta"></span></div><div class="dcard-b" id="dPick"><div class="placeholder">Noch keine Daten – wird nach dem nächsten P1-Lauf befüllt.</div></div></div>
+    <div class="dcard"><div class="dcard-h"><h3>Mein Depot</h3><span class="meta" id="dDepotMeta"></span></div><div class="dcard-b" id="dDepot"><div class="placeholder">Noch keine offenen Positionen.</div></div></div>
+  </section>
 
-  <h2>News zu Kandidaten &amp; Depot</h2>
-  <div id="newsSignale" class="card"><div class="placeholder">Noch keine News-Signale &ndash; die Nachrichten-Aufgaben befüllen das ab dem nächsten Lauf.</div></div>
+  <section class="dkpis">
+    <div class="dcard dkpi"><div class="lbl">Strategie seit Start – Depot-Simulation vs. Nasdaq-100 &amp; MSCI World</div><div class="dperf" id="dPerf"></div></div>
+    <div class="dcard dkpi" id="dK1"></div>
+    <div class="dcard dkpi" id="dK2"></div>
+    <div class="dcard dkpi" id="dK3"></div>
+  </section>
 
-  <div id="ampel" class="ampel-box card" style="margin-top:32px;">Lade Marktstimmung...</div>
-  <div id="rMini" class="timestamp" style="margin:8px 2px 0 2px;font-size:12px;"></div>
+  <section class="dmain">
+    <div class="dcard">
+      <div class="dcard-h"><h3>Watchlist</h3><span class="meta" id="dCandMeta"></span></div>
+      <div class="wl-wrap">
+        <table class="wl">
+          <thead><tr><th>Titel</th><th>Score</th><th class="hide-m">Stufe</th><th class="r">Einstieg</th><th class="r hide-m">Stop</th><th class="r hide-m">Stück</th><th class="r hide-m">Risiko</th><th class="hide-m">Signale</th></tr></thead>
+          <tbody id="dCands"><tr><td colspan="8" class="placeholder">Noch keine Daten – wird nach dem nächsten P4-Lauf befüllt.</td></tr></tbody>
+        </table>
+      </div>
+      <div class="dexcl" id="dExcl"></div>
+    </div>
+    <aside class="dside">
+      <div class="dcard"><div class="dcard-h"><h3>Märkte</h3><span class="meta">Schluss Vortag</span></div><div class="dcard-b" id="dIdx"></div></div>
+      <div class="dcard"><div class="dcard-h"><h3>Sektoren</h3><span class="meta">Stärke vs. S&amp;P 500, 20 Tage</span></div><div class="dcard-b" id="dSectors"></div></div>
+    </aside>
+  </section>
 
-  <h2>Sektorrotation</h2>
-  <div id="sektorrotation" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten Analyse-Lauf befüllt.</div></div>
+  <div class="dgrid2">
+    <div><h2>Markt heute</h2><div id="newsToday" class="card"><div class="placeholder">Noch keine Daten – wird im Laufe des Tages befüllt.</div></div></div>
+    <div><h2>News zu Watchlist &amp; Depot</h2><div id="newsSignale" class="card"><div class="placeholder">Noch keine News-Signale.</div></div></div>
+  </div>
 
-  <h2>Indizes</h2>
-  <div id="indices" class="grid"></div>
-
-  <h2>P4-Kandidaten (Institutioneller Swing-Scanner)</h2>
-  <div id="candidates"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P4-Lauf befüllt.</div></div>
-
-  <h2>P5.5 &ndash; Second-Chance-Check</h2>
-  <div id="p55candidates"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P5.5-Lauf befüllt.</div></div>
+  <h2>Hold-Test (P5.5)</h2>
+  <div id="p55candidates"><div class="placeholder">Noch keine Daten – wird nach dem nächsten P5.5-Lauf befüllt.</div></div>
 
   <h2>Aktive Kandidaten (aktiv &amp; überdehnt)</h2>
-  <div id="candidateTracking" class="card"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
-
-  <h2>Top-Empfehlung des Tages</h2>
-  <div id="top3"><div class="placeholder">Noch keine Daten &ndash; wird nach dem nächsten P1-Lauf befüllt.</div></div>
+  <div id="candidateTracking" class="card"><div class="placeholder">Noch keine Daten – wird nach dem nächsten P1-Lauf befüllt.</div></div>
   </div>
 
   <div class="tab-panel" id="panel-historie" role="tabpanel" aria-labelledby="tab-historie" hidden>
@@ -281,7 +505,7 @@
       <div class="full"><button class="btn" type="submit">Eintrag absenden</button></div>
     </form>
     <div id="jmsg" class="jmsg"></div>
-    <div class="jhint">So funktioniert's: Nach „Eintrag absenden“ öffnet sich GitHub mit dem fertig ausgefüllten Eintrag – dort nur noch auf <b>„Create“</b> klicken. Etwa 30 Sekunden später ist der Eintrag gespeichert und erscheint hier nach dem Neuladen; die Bestätigung steht auch als Kommentar am Eintrag. <br><b>Bestand:</b> Aktien, die du schon vorher oder unabhängig vom System hältst, trägst du als Kauf mit Art „Bestand“ ein – mit deinem durchschnittlichen Einstandskurs aus Trade Republic und dem ungefähren Kaufdatum. Sie werden täglich bewertet und auf News geprüft, aber ohne 10-Tage-Regel und getrennt von der Swing-Bilanz. Verkaufst du, nutze den Knopf „Verkauf eintragen“ bei der Position; ist sie danach bei 0 Stück, verschwindet sie aus dem Depot. Fehleingaben machst du per „Storno“ rückgängig.<br><b>Aktie finden:</b> Tippe die ersten Buchstaben des Namens – unter dem Feld erscheint eine Vorschlagsliste (Watchlist, DAX, deutsche Nebenwerte, große Europa-/US-Werte, deine Depotwerte). Mit Klick oder Pfeiltasten + Enter auswählen. Beim Verkauf zeigt die Liste nur deine Depotwerte. Steht eine Aktie nicht in der Liste, gib ihr Börsenkürzel in Großbuchstaben ein (z. B. OHB); deutsche Werte stellt das System automatisch auf Xetra um. Titel außerhalb der Watchlist erhalten ihren Kurs beim nächsten Feed-Lauf.<br>Hinweis: Das Repository ist öffentlich, Einträge sind also für andere einsehbar (wie das Cockpit selbst).</div>
+    <div class="jhint">So funktioniert's: Nach „Eintrag absenden“ öffnet sich GitHub mit dem fertig ausgefüllten Eintrag – dort nur noch auf <b>„Create“</b> klicken. Etwa 30 Sekunden später ist der Eintrag gespeichert und erscheint hier nach dem Neuladen; die Bestätigung steht auch als Kommentar am Eintrag. <br><b>Bestand:</b> Aktien, die du schon vorher oder unabhängig vom System hältst, trägst du als Kauf mit Art „Bestand“ ein – mit deinem durchschnittlichen Einstandskurs aus Trade Republic und dem ungefähren Kaufdatum. Sie werden täglich bewertet und auf News geprüft, aber ohne 10-Tage-Regel und getrennt von der Swing-Bilanz. Verkaufst du, nutze den Knopf „Verkauf eintragen“ bei der Position; ist sie danach bei 0 Stück, verschwindet sie aus dem Depot. Fehleingaben machst du per „Storno“ rückgängig.<br><b>Aktie finden:</b> Tippe die ersten Buchstaben des Namens – unter dem Feld erscheint eine Vorschlagsliste (Watchlist, DAX, deutsche Nebenwerte, große Europa-/US-Werte, deine Depotwerte). Mit Klick oder Pfeiltasten + Enter auswählen. Beim Verkauf zeigt die Liste nur deine Depotwerte. Steht eine Aktie nicht in der Liste, gib ihr Börsenkürzel in Großbuchstaben ein (z. B. OHB); deutsche Werte stellt das System automatisch auf Xetra um. Titel außerhalb der Watchlist erhalten ihren Kurs beim nächsten Feed-Lauf.<br>Hinweis: Solange das Repository öffentlich ist, sind Einträge für andere einsehbar. Nach dem Umzug auf privat (docs/CLOUDFLARE.md) sieht sie nur noch du.</div>
   </div>
 
   <h2>Offene Positionen</h2>
@@ -294,11 +518,18 @@
   <div id="jEintraege" class="card"><div class="placeholder">Noch keine Einträge.</div></div>
   </div>
 
-  <a class="footer-link" href="https://claude.ai/cowork/project/019f79db-3af1-7716-a5bd-b16bf5c14770" target="_blank">Heutige Analyse in Claude öffnen &rarr;</a>
+  <footer class="dfoot">
+    <a class="footer-link" href="https://claude.ai/cowork/project/019f79db-3af1-7716-a5bd-b16bf5c14770" target="_blank" rel="noopener">Heutige Analyse in Claude öffnen &rarr;</a>
+    <p>Persönliches Arbeitswerkzeug. Scores und Stufen sind Ergebnisse meines Regelwerks – keine Anlageberatung und keine Empfehlung zum Kauf oder Verkauf.</p>
+  </footer>
 </div>
 
 <script>
-const REPO_BASE = "https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/data/";
+// Auf GitHub Pages (und lokal) direkt aus dem Repo, hinter dem Cloudflare
+// Worker über dessen /data/-Pfad (das Repo kann dann privat sein).
+const REPO_BASE = /github\.io$/.test(location.hostname) || location.protocol === "file:"
+  ? "https://raw.githubusercontent.com/patricks87-sudo/swing-trading-data/main/data/"
+  : "/data/";
 
 async function fetchJson(name) {
   try {
@@ -318,27 +549,6 @@ function fmtTime(iso) {
   } catch (e) { return iso; }
 }
 
-function computeAmpelFromIndices(idx) {
-  if (!idx) return null;
-  let riskOffPoints = 0, total = 0;
-  const vix = idx.VIX;
-  if (vix && vix.close != null) {
-    total++;
-    if (vix.close > 20) riskOffPoints++;
-  }
-  ["NASDAQ_COMPOSITE", "SP500", "RUSSELL2000", "SOX_PROXY"].forEach((k) => {
-    const v = idx[k];
-    if (v && v.pct_from_sma50 != null) {
-      total++;
-      if (v.pct_from_sma50 < 0) riskOffPoints++;
-    }
-  });
-  if (total === 0) return null;
-  const ratio = riskOffPoints / total;
-  if (ratio >= 0.6) return { status: "RISK-OFF", reason: "Mehrheit der Indizes unter SMA50 und/oder erhöhte Volatilität (automatisch aus Rohdaten berechnet)." };
-  if (ratio <= 0.25) return { status: "RISK-ON", reason: "Breite Bestätigung über SMA50 bei moderater Volatilität (automatisch aus Rohdaten berechnet)." };
-  return { status: "NEUTRAL", reason: "Gemischtes Bild zwischen Indizes (automatisch aus Rohdaten berechnet)." };
-}
 
 function latestFeed(feeds) {
   return feeds.filter((f) => f && f.generated_at_utc).sort((a, b) => new Date(b.generated_at_utc) - new Date(a.generated_at_utc))[0] || null;
@@ -375,78 +585,10 @@ function hauptKritText(k) {
   return n + " (" + zahlDE(w, 2) + ")";
 }
 
-function renderRegimeKriterien(feed) {
-  if (!feed || !feed.regime || !feed.regime.kriterien) return "";
-  const r = feed.regime;
-  const items = r.kriterien.map((k) => kritZeile(k.erfuellt, hauptKritText(k))).join("");
-  const hinweise = (r.hinweise || []).map((h) => '<span class="na">' + h + "</span>").join("");
-  return '<div class="kliste">' + items + "</div>" +
-    '<div class="krit"><span>Feed-Regime: <b style="color:var(--text)">' + r.status + "</b> · max. neue Positionen heute: " + r.max_neue_positionen + (r.max_offene_positionen != null ? " · max. offen: " + r.max_offene_positionen : "") + (r.override ? " · " + r.override : "") + "</span>" + hinweise + "</div>";
-}
 
 const LAUF_NAMEN = { p4: "P4", p5: "P5", p55: "P5.5", p1: "P1" };
-function renderAmpel(barometer, p4, feed) {
-  const el = document.getElementById("ampel");
-  let status, reason, ts, quelle = "";
-  if (feed && feed.regime && feed.regime.status) {
-    // Status immer aus dem neuesten Feed-Lauf (P4/P5/P5.5/P1), damit die Ampel
-    // nach jedem Lauf aktuell ist. Der Kommentar von Claude nur, wenn er zum
-    // selben Stand passt.
-    status = feed.regime.status;
-    ts = feed.generated_at_utc;
-    quelle = " · Lauf " + (LAUF_NAMEN[feed.run] || feed.run || "");
-    const passt = barometer && barometer.status === status && barometer.generated_at_utc && new Date(barometer.generated_at_utc) >= new Date(feed.generated_at_utc);
-    reason = passt ? (barometer.kurzbegruendung || barometer.begruendung || "") : (feed.regime.kurztext || "");
-  } else if (barometer && barometer.status) {
-    status = barometer.status;
-    reason = barometer.kurzbegruendung || barometer.begruendung || "";
-    ts = barometer.generated_at_utc;
-  } else {
-    const computed = computeAmpelFromIndices(p4 && p4.indices);
-    if (!computed) {
-      el.innerHTML = '<div class="placeholder">Keine Marktdaten verfügbar.</div>';
-      return;
-    }
-    status = computed.status;
-    reason = computed.reason;
-    ts = p4 && p4.generated_at_utc;
-  }
-  const color = status === "RISK-ON" ? "green" : status === "RISK-OFF" ? "red" : "yellow";
-  el.innerHTML =
-    '<div class="dot ' + color + '"></div>' +
-    '<div><div class="ampel-status">' + status + '</div>' +
-    '<div class="ampel-reason">' + reason + '</div>' +
-    '<div class="timestamp">Stand: ' + fmtTime(ts) + quelle + '</div>' + renderRegimeKriterien(feed) + '</div>';
-}
 
-function renderSektorrotation(barometer) {
-  const el = document.getElementById("sektorrotation");
-  if (!barometer || !barometer.sektor_rotation || !barometer.sektor_rotation.length) return;
-  el.innerHTML = '<table class="sector-table"><thead><tr><th>Sektor</th><th>Kandidaten</th></tr></thead><tbody>' +
-    barometer.sektor_rotation.map((s) => {
-      const cls = s.trend === "positiv" ? "trend-positiv" : s.trend === "negativ" ? "trend-negativ" : "trend-neutral";
-      const arrow = s.trend === "positiv" ? "↑" : s.trend === "negativ" ? "↓" : "→";
-      const kandidaten = (s.kandidaten || []).map((k) =>
-        '<span class="kandidat-item">' + k.name + ' <span class="emp-badge ' + empCls(k.empfehlung) + '">' + k.empfehlung + '</span></span>'
-      ).join("") || '<span style="color:var(--muted)">–</span>';
-      return '<tr><td><div class="sector-name">' + s.sektor + '</div><div class="trend-badge ' + cls + '">' + arrow + ' ' + s.trend + '</div></td>' +
-        '<td>' + kandidaten + '</td></tr>';
-    }).join("") + '</tbody></table>';
-}
 
-function renderIndices(p4) {
-  const el = document.getElementById("indices");
-  if (!p4 || !p4.indices) { el.innerHTML = '<div class="placeholder">Keine Daten verfügbar.</div>'; return; }
-  const tnx = p4.macro && p4.macro.us10y;
-  const names = { NASDAQ_COMPOSITE: "Nasdaq (QQQ)", SP500: "S&P 500 (SPY)", RUSSELL2000: "Russell 2000 (IWM)", VIX: "VIX", SOX_PROXY: "Semiconductors (SOXX)" };
-  el.innerHTML = Object.keys(names).map((k) => {
-    const v = p4.indices[k];
-    if (!v || v.close == null) return "";
-    return '<div class="idx-card"><div class="idx-name">' + names[k] + '</div>' +
-      '<div class="idx-price">' + v.close + '</div>' +
-      '<div class="idx-rsi" style="color:var(--muted)">' + (v.rsi14 != null ? "RSI " + v.rsi14 : (v.pct_from_sma20 != null ? "zu SMA20: " + v.pct_from_sma20 + " %" : "")) + '</div></div>';
-  }).join("") + (tnx && tnx.available ? '<div class="idx-card"><div class="idx-name">US-Rendite 10J</div><div class="idx-price">' + tnx.close + ' %</div><div class="idx-rsi" style="color:var(--muted)">20 Tage: ' + (tnx.chg_20d_abs >= 0 ? "+" : "") + tnx.chg_20d_abs + ' Pkt.</div></div>' : "");
-}
 
 function renderMiniAmpel(ampel) {
   if (!ampel) return "";
@@ -510,25 +652,6 @@ function renderNewsSignale(data) {
   }).join("") + '<div class="timestamp">Signale der Nachrichten-Aufgaben, letzte 3 Tage. Daraus rechnet der Feed die News-Korrektur am Score (max. ±10). Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
 }
 
-function renderCandidates(data) {
-  const el = document.getElementById("candidates");
-  if (!data || !data.candidates || !data.candidates.length) return;
-  el.innerHTML = '<div class="timestamp" style="margin-bottom:8px;">Stand: ' + fmtTime(data.generated_at_utc) + '</div>' +
-    data.candidates.map((c) => {
-      const isNum = typeof c.score === "number";
-      const badge = isNum ? (c.stufe || "") + " · " + c.score : (c.score || "-");
-      const korr = isNum && c.score_korrektur ? ' <span class="timestamp">(Feed ' + c.feed_score + ', News ' + (c.score_korrektur > 0 ? "+" : "") + c.score_korrektur + ')</span>' : "";
-      const flags = (c.bulltrap_flags || []).map((f) => '<span class="flag">' + f + '</span>').join("");
-      return '<div class="cand-card"><div class="cand-top">' +
-        '<div><span class="cand-ticker">' + (c.name || c.ticker) + '</span> <span class="cand-sector">' + (c.sector || "") + '</span></div>' +
-        '<span class="score-badge ' + stufeCls(c.stufe, c.score) + '">' + badge + '</span></div>' +
-        '<div class="cand-begr">' + (c.begruendung || "") + korr + '</div>' +
-        renderLevels(c.levels) + flags + newsBadge(c.ticker) +
-        (c.earnings ? '<div class="timestamp">Earnings: ' + c.earnings + '</div>' : "") +
-        renderMiniAmpel(c.ampel) + '</div>';
-    }).join("") +
-    ((data.ausgeschlossen || []).length ? '<div class="timestamp">Ausgeschlossen: ' + data.ausgeschlossen.map((a) => a.name + " (" + a.grund + ")").join(" · ") + '</div>' : "");
-}
 
 function renderP55Candidates(data) {
   const el = document.getElementById("p55candidates");
@@ -787,45 +910,39 @@ function renderFilterBilanz(data) {
     '<div class="timestamp">Überrendite = Aktie minus Nasdaq-100 im selben Zeitraum (USD). Positiv bei aussortierten Kandidaten heißt: Filter hat Gewinne liegen gelassen. Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
 }
 
-function renderTop3(data) {
-  const el = document.getElementById("top3");
-  if (!data || !data.top3 || !data.top3.length) return;
-  el.innerHTML = '<div class="top3-box">' +
-    data.top3.map((t, i) =>
-      '<div class="top3-item"><div class="top3-rank">' + (i + 1) + '.</div>' +
-      '<div><div class="top3-ticker">' + (t.name || t.ticker) + (t.aktion ? ' <span class="emp-badge ' + (t.aktion === "Beobachten" ? "emp-halten" : "emp-kauf") + '">' + t.aktion + '</span>' : "") + '</div><div class="top3-begr">' + (t.begruendung || "") + '</div></div></div>'
-    ).join("") +
-    (data.gesamteinschaetzung ? '<div class="gesamt">' + data.gesamteinschaetzung + '</div>' : "") +
-    (data.filter_bilanz ? '<div class="timestamp">' + data.filter_bilanz + '</div>' : "") +
-    '<div class="timestamp">Stand: ' + fmtTime(data.generated_at_utc) + '</div></div>';
-}
 
+// Veröffentlichungszeit einer Meldung. Ist nur das Datum bekannt ("YYYY-MM-DD")
+// oder steht der frühere Ersatzwert 12:00 bzw. 00:00 Uhr Ortszeit der Quelle
+// drin, wird nur das Datum gezeigt – keine erfundene Uhrzeit.
+function pubZeit(iso) {
+  if (!iso) return null;
+  const s = String(iso);
+  const nurDatum = /^\d{4}-\d{2}-\d{2}$/.test(s) || /T(12|00):00(:00)?(\.0+)?([+-]\d{2}:?\d{2}|Z)?$/.test(s);
+  const d = new Date(nurDatum ? s.slice(0, 10) + "T12:00:00" : s);
+  if (isNaN(d)) return null;
+  return { d, nurDatum, tag: nurDatum ? s.slice(0, 10) : d.toLocaleDateString("sv-SE", { timeZone: "Europe/Berlin" }) };
+}
+const heuteBerlin = () => new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Berlin" });
 function pubInfo(h) {
-  const iso = h.published_at || h.veroeffentlicht;
-  if (!iso) return '<span class="pub pub-na">Zeitpunkt unbekannt</span>';
-  const d = new Date(iso);
-  if (isNaN(d)) return '<span class="pub pub-na">Zeitpunkt unbekannt</span>';
-  const min = Math.round((Date.now() - d.getTime()) / 60000);
+  const z = pubZeit(h.published_at || h.veroeffentlicht);
+  if (!z) return '<span class="pub pub-na">Zeitpunkt unbekannt</span>';
+  if (z.nurDatum) {
+    const tage = Math.round((new Date(heuteBerlin() + "T12:00:00") - new Date(z.tag + "T12:00:00")) / 86400000);
+    const wann = tage <= 0 ? "heute" : tage === 1 ? "gestern" : "vor " + tage + " Tagen";
+    const txt = new Date(z.tag + "T12:00:00").toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" });
+    return '<span class="pub ' + (tage <= 0 ? "pub-mittel" : "pub-alt") + '">' + txt + " · " + wann + " (Uhrzeit unbekannt)</span>";
+  }
+  const min = Math.round((Date.now() - z.d.getTime()) / 60000);
   let alter;
   if (min < 60) alter = "vor " + Math.max(1, min) + " Min.";
   else if (min < 48 * 60) alter = "vor " + Math.round(min / 60) + " Std.";
   else alter = "vor " + Math.round(min / 1440) + " Tagen";
   const cls = min <= 6 * 60 ? "pub-frisch" : min <= 24 * 60 ? "pub-mittel" : "pub-alt";
-  const txt = d.toLocaleString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+  const txt = z.d.toLocaleString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
   return '<span class="pub ' + cls + '">' + txt + ' Uhr · ' + alter + '</span>';
 }
 
-function headlineHtml(h) {
-  return '<div class="headline"><a href="' + (h.url || "#") + '" target="_blank">' + h.title + '</a>' +
-    '<div class="src">' + (h.source || "") + (h.source ? " · " : "") + pubInfo(h) + '</div></div>';
-}
 
-function renderHeadlines(data) {
-  const el = document.getElementById("headlines");
-  if (!data || !data.headlines || !data.headlines.length) return;
-  el.innerHTML = data.headlines.map(headlineHtml).join("") +
-    (data.generated_at_utc ? '<div class="timestamp">Zusammengestellt: ' + fmtTime(data.generated_at_utc) + '</div>' : "");
-}
 
 
 // ---------------- Trade-Journal ----------------
@@ -1259,12 +1376,12 @@ function renderRohstoffe(r, meld, newsToday, p4c) {
       const cls = m.einschaetzung === "positiv" ? "news-pos" : m.einschaetzung === "negativ" ? "news-neg" : "news-neu";
       const titel = m.url ? '<a href="' + m.url + '" target="_blank" rel="noopener">' + (m.titel || "") + '</a>' : (m.titel || "");
       return '<div class="headline"><span class="news-badge ' + cls + '" style="margin:0 8px 0 0;">' + [m.kategorie, m.rohstoff].filter(Boolean).join(" · ") + '</span>' + titel +
-        '<div class="src">' + [m.quelle, pubInfo({ published_at: m.published_at || (m.datum ? m.datum + "T12:00:00" : null) })].filter(Boolean).join(" · ") + (m.kurz ? " – " + m.kurz : "") + '</div></div>';
+        '<div class="src">' + [m.quelle, pubInfo({ published_at: m.published_at || m.datum || null })].filter(Boolean).join(" · ") + (m.kurz ? " – " + m.kurz : "") + '</div></div>';
     }).join("") + '<div class="timestamp">Zentralbank-Käufe und wichtige Rohstoff-Meldungen der letzten 60 Tage (Nachrichten-Aufgaben) plus heutige Marktmeldungen zum Thema Rohstoffe.</div>';
   }
 }
 
-function renderNewsToday(data) {
+function renderNewsToday(data, headlines) {
   const el = document.getElementById("newsToday");
   if (!data) return;
   let liste = data.meldungen;
@@ -1273,23 +1390,41 @@ function renderNewsToday(data) {
     data.entries.forEach((e) => (e.headlines || []).forEach((h) => liste.push(Object.assign({ erfasst_local: e.time_local }, h))));
   }
   if (!liste || !liste.length) return;
-  const gesehen = new Set();
   const norm = (t) => String(t || "").toLowerCase().replace(/[^a-zäöüß0-9 ]/g, "").split(" ").filter((w) => w.length > 3).slice(0, 6).join(" ");
-  const eindeutig = [];
+  // Doppelt = gleicher Inhalt. Die URL allein reicht nicht: mehrere Meldungen
+  // stammen oft aus demselben Sammelartikel (z. B. Live-Ticker).
+  const gesehen = new Set(), eindeutig = [];
   liste.forEach((m) => {
-    const k1 = m.url || "", k2 = norm(m.title);
-    if ((k1 && gesehen.has(k1)) || (k2 && gesehen.has(k2))) return;
-    if (k1) gesehen.add(k1); if (k2) gesehen.add(k2);
+    const k = norm(m.title) || m.url || "";
+    if (k && gesehen.has(k)) return;
+    if (k) gesehen.add(k);
     eindeutig.push(m);
   });
-  eindeutig.sort((a, b) => String(b.published_at || "").localeCompare(String(a.published_at || "")));
-  el.innerHTML = (data.lage ? '<div style="font-size:14px;margin-bottom:10px;"><b>Was den Markt bewegt:</b> ' + data.lage + (data.lage_stand_local ? ' <span class="timestamp">(' + data.lage_stand_local + ' Uhr)</span>' : "") + '</div>' : "") +
-    eindeutig.map((m) => '<div class="headline">' + (m.thema ? '<span class="news-badge news-neu" style="margin:0 8px 0 0;">' + m.thema + '</span>' : "") +
-      '<a href="' + (m.url || "#") + '" target="_blank" rel="noopener">' + m.title + '</a>' +
-      '<div class="src">' + [m.source, pubInfo(m)].filter(Boolean).join(" · ") + (m.bedeutung ? " – " + m.bedeutung : "") + '</div></div>').join("") +
-    '<div class="timestamp">' + eindeutig.length + ' Meldungen heute, jede nur einmal.</div>';
+  // Top-Markierung: Feld "top" (1–3) aus der Nachrichten-Aufgabe, sonst Abgleich mit headlines.json
+  const topVon = (m) => {
+    if (m.top) return Number(m.top);
+    const i = ((headlines && headlines.headlines) || []).findIndex((h) => norm(h.title) === norm(m.title));
+    return i >= 0 ? i + 1 : 0;
+  };
+  // Sortierung nach echtem Zeitpunkt; Meldungen nur mit Datum stehen am Ende ihres Tages
+  const zeit = (m) => { const z = pubZeit(m.published_at); return z ? (z.nurDatum ? new Date(z.tag + "T00:00:00").getTime() : z.d.getTime()) : 0; };
+  eindeutig.sort((a, b) => zeit(b) - zeit(a));
+  const heute = heuteBerlin();
+  const istAlt = (m) => { const z = pubZeit(m.published_at); if (!z) return false; return z.nurDatum ? z.tag < heute : Date.now() - z.d.getTime() > 24 * 3600 * 1000; };
+  const zeile = (m) => {
+    const t = topVon(m);
+    return '<div class="headline' + (t ? " ist-top" : "") + '">' + (t ? '<span class="mh-top">Top ' + t + "</span>" : "") +
+      (m.thema ? '<span class="news-badge news-neu" style="margin:0 8px 0 0;">' + m.thema + "</span>" : "") +
+      '<a href="' + (m.url || "#") + '" target="_blank" rel="noopener">' + m.title + "</a>" +
+      '<div class="src">' + [m.source, pubInfo(m)].filter(Boolean).join(" · ") + (m.bedeutung ? " – " + m.bedeutung : "") + "</div></div>";
+  };
+  const neu = eindeutig.filter((m) => !istAlt(m)), alt = eindeutig.filter(istAlt);
+  el.innerHTML = (data.lage ? '<div class="mh-lage">' + data.lage + (data.lage_stand_local ? ' <span class="timestamp">(Stand ' + data.lage_stand_local + " Uhr)</span>" : "") + "</div>" : "") +
+    (neu.length ? neu.map(zeile).join("") : '<div class="placeholder">Seit gestern keine neuen Meldungen.</div>') +
+    (alt.length ? '<details class="mh-alt"><summary>Älter als 24 Stunden (' + alt.length + ")</summary>" + alt.map(zeile).join("") + "</details>" : "") +
+    '<div class="timestamp">' + eindeutig.length + " Meldungen heute, jede nur einmal · neueste zuerst</div>";
 } async function init() {
-  const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking, filterBilanz, p1, p55, p5, performance, journal, newsSignale, rohstoffe, rohMeldungen] = await Promise.all([
+  const [p4, candidates, p55Candidates, top3, barometer, headlines, newsToday, candidateTracking, filterBilanz, p1, p55, p5, performance, journal, newsSignale, rohstoffe, rohMeldungen, portfolio, notiz] = await Promise.all([
     fetchJson("p4_latest.json"),
     fetchJson("p4_candidates.json"),
     fetchJson("p55_candidates.json"),
@@ -1306,24 +1441,218 @@ function renderNewsToday(data) {
     fetchJson("news_signals.json"),
     fetchJson("rohstoffe.json"),
     fetchJson("rohstoff_meldungen.json"),
+    fetchJson("portfolio.json"),
+    fetchJson("notiz.json"),
   ]);
   const feed = latestFeed([p4, p5, p55, p1]);
   FEED = feed; P4C = candidates;
-  renderAmpel(barometer, p4, feed);
-  renderSektorrotation(barometer);
-  renderIndices(feed || p4);
-  renderCandidates(candidates);
+  renderHeute({ feed, barometer, top3, candidates, portfolio, performance, notiz });
   renderP55Candidates(p55Candidates);
   renderCandidateTracking(candidateTracking);
   renderHistorie(candidateTracking);
   renderFilterBilanz(filterBilanz);
   renderPerformance(performance);
-  renderTop3(top3);
-  renderHeadlines(headlines); renderNewsToday(newsToday);
+  renderNewsToday(newsToday, headlines);
   renderNewsSignale(newsSignale);
   renderJournal(journal, feed);
   renderRohstoffe(rohstoffe, rohMeldungen, newsToday, candidates);
 }
+// ---- Registerkarte "Heute" im Aktienkänguru-Design ----
+const dEl = (id) => document.getElementById(id);
+const dEsc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const dNum = (v, d = 2) => (typeof v === "number" ? v.toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d }) : "–");
+const dPct = (v, d = 1) => (typeof v === "number" ? (v > 0 ? "+" : v < 0 ? "−" : "") + dNum(Math.abs(v), d) + " %" : "–");
+const dEur = (v, d = 0) => (typeof v === "number" ? dNum(v, d) + " €" : "–");
+const dEurSig = (v) => (typeof v === "number" ? (v > 0 ? "+" : v < 0 ? "−" : "") + dNum(Math.abs(v), 0) + " €" : "–");
+const dCls = (v) => (v > 0 ? "up" : v < 0 ? "down" : "");
+const dWann = (iso) => (iso ? new Date(iso).toLocaleString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }) : "");
+const dTag = (iso) => (iso ? new Date(iso).toLocaleDateString("de-DE", { timeZone: "Europe/Berlin" }) : "");
+const dVor = (iso) => {
+  if (!iso) return "";
+  const m = (Date.now() - new Date(iso)) / 60000;
+  return m < 60 ? "vor " + Math.max(1, Math.round(m)) + " Min." : m < 1440 ? "vor " + Math.round(m / 60) + " Std." : "vor " + Math.round(m / 1440) + " Tg.";
+};
+// Marktregime in Klartext; die Fachbegriffe stehen klein daneben.
+const D_LAGE = { "RISK-ON": ["Rückenwind", "good"], NEUTRAL: ["Gemischt", "warn"], "RISK-OFF": ["Abwarten", "bad"] };
+// Anzeige-Namen der Stufen aus analysis.py (die Werte im Feed bleiben unverändert).
+const D_STUFE = { "Kauf – hohe Qualität": "Setup stark", "Kauf – solide": "Setup solide" };
+const dStufe = (st) => D_STUFE[st] || st || "–";
+const dStufeTon = (st) => (/^Kauf/.test(st || "") ? "good" : /^Beobachten/.test(st || "") ? "warn" : /^Überdehnt|^Ausgeschlossen/.test(st || "") ? "bad" : "neutral");
+
+function dRegime(feed, barometer) {
+  const r = feed && feed.regime;
+  if (!r) { dEl("dRegime").innerHTML = '<div class="placeholder">Keine Feed-Daten verfügbar.</div>'; return; }
+  const [titel, ton] = D_LAGE[r.status] || [r.status, "neutral"];
+  const k = r.kriterien || [];
+  dEl("dRegimeMeta").textContent = "Lauf " + (LAUF_NAMEN[feed.run] || feed.run || "") + " · " + dWann(feed.generated_at_utc);
+  dEl("dRegime").innerHTML =
+    '<div class="dstatus"><b>' + dEsc(titel) + '</b><span class="pill neutral">' + dEsc(r.status) + '</span><span class="pill ' + ton + '"><span class="d"></span>' + r.kriterien_erfuellt + "/" + k.length + " Kriterien</span></div>" +
+    '<div class="dmeter">' + k.map((c) => '<i class="' + (c.erfuellt ? "on" : "") + '"></i>').join("") + "</div>" +
+    '<div class="kliste">' + k.map((c) => kritZeile(c.erfuellt, hauptKritText(c))).join("") + "</div>" +
+    '<div class="dlimits"><div class="dlimit"><b>' + (r.max_neue_positionen ?? "–") + '</b><span>neue Positionen heute</span></div>' +
+    '<div class="dlimit"><b>' + (r.max_offene_positionen ?? "–") + '</b><span>max. offen</span></div></div>' +
+    (r.override ? '<div class="timestamp">' + dEsc(r.override) + "</div>" : "") +
+    (r.hinweise || []).map((h) => '<div class="timestamp">' + dEsc(h) + "</div>").join("");
+  // Claudes Kurzkommentar nur, wenn er zum selben Stand gehört wie der Feed
+  const passt = barometer && barometer.status === r.status && barometer.generated_at_utc && new Date(barometer.generated_at_utc) >= new Date(feed.generated_at_utc);
+  dEl("dKurz").textContent = passt ? (barometer.kurzbegruendung || barometer.begruendung || "") : (r.kurztext || "");
+}
+
+function dPick(top, cands, feed) {
+  const t = top && top.top3 && top.top3[0];
+  if (!t) return;
+  const veraltet = feed && dTag(top.generated_at_utc) !== dTag(feed.generated_at_utc);
+  dEl("dPickMeta").innerHTML = veraltet ? '<span class="pill warn">Stand ' + dTag(top.generated_at_utc) + "</span>" : dWann(top.generated_at_utc);
+  const c = ((cands && cands.candidates) || []).find((x) => x.ticker === t.ticker) || {};
+  const L = c.levels || {};
+  dEl("dPick").innerHTML =
+    '<div class="dpick"><div class="dtick">' + dEsc(t.ticker) + '</div><div><div class="dpick-name">' + dEsc(t.name || t.ticker) + '</div><div class="dpick-sub">' + dEsc(c.sector || "") + "</div></div>" +
+    (t.aktion ? '<span class="pill good" style="margin-left:auto">' + dEsc(t.aktion) + "</span>" : "") + "</div>" +
+    '<p class="dpick-text" title="' + dEsc(t.begruendung) + '">' + dEsc(t.begruendung) + "</p>" +
+    (L.einstieg_eur != null
+      ? '<div class="dkv"><div><span>Einstieg</span><b class="num">' + dEur(L.einstieg_eur, 2) + '</b></div><div><span>Stop</span><b class="num">' + dEur(L.stop_eur, 2) +
+        '</b></div><div><span>Stück</span><b class="num">' + (L.stueck ?? "–") + '</b></div><div><span>Risiko</span><b class="num">' + dEur(L.risiko_eur) + "</b></div></div>"
+      : "") +
+    (top.top3.length > 1 ? '<div class="dalts">Alternativen: ' + top.top3.slice(1).map((x) => '<span class="pill neutral" title="' + dEsc(x.begruendung) + '">' + dEsc(x.name || x.ticker) + "</span>").join("") + "</div>" : "") +
+    (top.gesamteinschaetzung ? '<div class="dgesamt" title="' + dEsc(top.gesamteinschaetzung) + '">' + dEsc(top.gesamteinschaetzung) + "</div>" : "");
+}
+
+function dDepot(pf) {
+  const ps = (pf && pf.positions) || [];
+  if (!ps.length) return;
+  const wert = ps.reduce((s, p) => s + (p.wert_eur || 0), 0);
+  const unr = ps.reduce((s, p) => s + (p.unrealisiert_eur || 0), 0);
+  const kap = ps.reduce((s, p) => s + (p.kapital_eur || 0), 0);
+  const max = Math.max(1, ...ps.map((p) => Math.abs(p.unrealisiert_pct || 0)));
+  dEl("dDepotMeta").textContent = pf.kurse_stand_utc ? "Kurse " + dVor(pf.kurse_stand_utc) : "";
+  dEl("dDepot").innerHTML =
+    '<div class="dbig num">' + dEur(wert) + "</div>" +
+    '<div class="num ' + dCls(unr) + '" style="font-weight:600">' + dEurSig(unr) + " (" + dPct(kap ? (unr / kap) * 100 : null) + ') <span style="color:var(--muted);font-weight:400">unrealisiert</span></div>' +
+    '<div style="margin-top:10px">' + ps.map((p) => {
+      const v = p.unrealisiert_pct || 0, w = Math.min(50, (Math.abs(v) / max) * 50);
+      const balken = v >= 0 ? "left:50%;width:" + w + "%;background:var(--good)" : "right:50%;width:" + w + "%;background:var(--bad)";
+      const art = p.art === "bestand" ? "Bestand" : "Swing · Verkauf bis " + (p.verkauf_spaetestens ? dTag(p.verkauf_spaetestens + "T12:00:00Z") : "–");
+      return '<div class="dpos"><div><b>' + dEsc(p.name || p.ticker) + "</b><small>" + dEsc(p.ticker) + " · " + art + '</small></div><div class="dbar"><i style="' + balken + '"></i></div><div class="num ' + dCls(v) + '" style="text-align:right">' + dPct(p.unrealisiert_pct) + "</div></div>";
+    }).join("") + "</div>";
+}
+
+function dPerf(perf) {
+  if (!perf || !perf.reihen || !perf.daten) { dEl("dPerf").innerHTML = '<div class="placeholder">Noch keine Performance-Daten.</div>'; return; }
+  const R = [["neu", "var(--s1)"], ["qqq", "var(--s2)"], ["urth", "var(--s3)"]]
+    .map(([k, col]) => Object.assign({ col }, perf.reihen.find((r) => r.key === k))).filter((r) => r.werte);
+  const alle = R.flatMap((r) => r.werte).filter((v) => v != null);
+  const lo = Math.min(...alle), hi = Math.max(...alle), n = perf.daten.length;
+  const W = 600, H = 86, x = (i) => (i / Math.max(1, n - 1)) * W, y = (v) => H - 4 - ((v - lo) / (hi - lo || 1)) * (H - 8);
+  const pfad = (w) => w.map((v, i) => (v == null ? "" : (i ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1))).join(" ");
+  const kurz = (l) => l.replace(/ \(.*\)/, "");
+  dEl("dPerf").innerHTML =
+    '<div class="dlegend">' + R.map((r) => '<span><i style="background:' + r.col + '"></i>' + dEsc(kurz(r.label)) + '<b class="num">' + dPct(r.werte[r.werte.length - 1] - 100) + "</b></span>").join("") + "</div>" +
+    '<div class="dspark"><svg viewBox="0 0 ' + W + " " + H + '" preserveAspectRatio="none" role="img" aria-label="Verlauf der Strategie gegen Nasdaq-100 und MSCI World">' +
+    '<line x1="0" x2="' + W + '" y1="' + y(100) + '" y2="' + y(100) + '" stroke="var(--line-strong)" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>' +
+    R.map((r) => '<path d="' + pfad(r.werte) + '" fill="none" stroke="' + r.col + '" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>').join("") +
+    '<line class="cx" y1="0" y2="' + H + '" stroke="var(--muted)" vector-effect="non-scaling-stroke" opacity="0"/></svg><div class="dtip"></div></div>';
+  const svg = dEl("dPerf").querySelector("svg"), tip = dEl("dPerf").querySelector(".dtip"), cx = svg.querySelector(".cx");
+  svg.addEventListener("mousemove", (e) => {
+    const b = svg.getBoundingClientRect(), i = Math.max(0, Math.min(n - 1, Math.round(((e.clientX - b.left) / b.width) * (n - 1))));
+    cx.setAttribute("x1", x(i)); cx.setAttribute("x2", x(i)); cx.setAttribute("opacity", 1);
+    tip.style.opacity = 1; tip.style.left = (x(i) / W) * b.width + "px"; tip.style.top = "0px";
+    tip.innerHTML = new Date(perf.daten[i] + "T12:00:00").toLocaleDateString("de-DE") + "<br>" + R.map((r) => dEsc(kurz(r.label)) + ": " + dPct(r.werte[i] - 100)).join("<br>");
+  });
+  svg.addEventListener("mouseleave", () => { tip.style.opacity = 0; cx.setAttribute("opacity", 0); });
+}
+
+function dKpis(perf, feed) {
+  const s = (perf && perf.statistik && perf.statistik.neu) || {};
+  dEl("dK1").innerHTML = '<div class="lbl">Trefferquote</div><div class="val num">' + (s.trefferquote_pct != null ? dNum(s.trefferquote_pct, 0) + " %" : "–") + '</div><div class="sub">' + (s.trades_abgeschlossen ?? "–") + " abgeschlossene Trades (Simulation)</div>";
+  dEl("dK2").innerHTML = '<div class="lbl">Ø Ergebnis je Trade</div><div class="val num ' + dCls(s.schnitt_trade_eur) + '">' + dEurSig(s.schnitt_trade_eur) + '</div><div class="sub">bester ' + dEurSig(s.bester_trade_eur) + " · schlechtester " + dEurSig(s.schlechtester_trade_eur) + "</div>";
+  const vix = feed && feed.macro && feed.macro.vix;
+  dEl("dK3").innerHTML = '<div class="lbl">VIX (Angstindex)</div><div class="val num">' + (vix && vix.close != null ? dNum(vix.close, 2) : "–") + '</div><div class="sub">' +
+    (vix && vix.close != null ? (vix.close < 20 ? "unter 20 – ruhiger Markt" : "über 20 – nervöser Markt") + (vix.chg_20d_abs != null ? " · 20 Tage " + (vix.chg_20d_abs > 0 ? "+" : "") + dNum(vix.chg_20d_abs, 1) : "") : "") + "</div>";
+}
+
+function dWatchlist(c, pf) {
+  const list = (c && c.candidates) || [];
+  if (!list.length) return;
+  const imDepot = new Set(((pf && pf.positions) || []).map((p) => p.ticker));
+  dEl("dCandMeta").textContent = list.length + " Titel · P4 " + dWann(c.generated_at_utc);
+  dEl("dCands").innerHTML = list.map((x, i) => {
+    const L = x.levels || {}, a = x.ampel || {};
+    const score = typeof x.score === "number" ? x.score : null;
+    return '<tr class="row" data-i="' + i + '">' +
+      '<td class="wl-name"><b>' + dEsc(x.name || x.ticker) + "</b><small>" + dEsc(x.ticker) + " · " + dEsc(x.sector || "") + (imDepot.has(x.ticker) ? ' <span class="pill brand held">Im Depot</span>' : "") + "</small></td>" +
+      '<td><div class="wl-score"><b class="num">' + (score != null ? dNum(score, 0) : dEsc(x.score)) + '</b><span class="t"><i style="width:' + Math.max(0, Math.min(100, score || 0)) + '%"></i></span></div></td>' +
+      '<td class="hide-m"><span class="pill ' + dStufeTon(x.stufe) + '">' + dEsc(dStufe(x.stufe)) + "</span></td>" +
+      '<td class="r num">' + dEur(L.einstieg_eur, 2) + "<br><small>" + (/Limit/.test(L.einstieg_typ || "") ? "Limit" : "Markt") + "</small></td>" +
+      '<td class="r num hide-m">' + dEur(L.stop_eur, 2) + "</td>" +
+      '<td class="r num hide-m">' + (L.stueck ?? "–") + "</td>" +
+      '<td class="r num hide-m">' + dEur(L.risiko_eur) + "</td>" +
+      '<td class="hide-m"><span class="wl-dots" title="Kapitalfluss · Trend · Optionsflow"><i class="' + (a.kapitalfluss || "") + '"></i><i class="' + (a.trendkontext || "") + '"></i><i class="' + (a.optionsflow || "") + '"></i></span></td></tr>' +
+      '<tr class="det" id="dDet' + i + '" hidden><td colspan="8"><span class="pill ' + dStufeTon(x.stufe) + '">' + dEsc(dStufe(x.stufe)) + "</span> " + dEsc(x.begruendung || "") +
+      renderLevels(L) +
+      ((x.bulltrap_flags || []).map((f) => '<span class="flag">' + dEsc(f) + "</span>").join("")) + newsBadge(x.ticker) +
+      (x.earnings ? '<div class="timestamp">Earnings: ' + dEsc(x.earnings) + "</div>" : "") + renderMiniAmpel(x.ampel) + "</td></tr>";
+  }).join("");
+  dEl("dCands").querySelectorAll("tr.row").forEach((tr) => tr.addEventListener("click", () => { const d = dEl("dDet" + tr.dataset.i); d.hidden = !d.hidden; }));
+  const ex = c.ausgeschlossen || [];
+  dEl("dExcl").innerHTML = ex.length ? "Ausgeschlossen: " + ex.map((e) => "<b>" + dEsc(e.name || e.ticker) + "</b> (" + dEsc(e.grund) + ")").join(" · ") : "";
+}
+
+function dIndizes(feed) {
+  const I = (feed && feed.indices) || {};
+  const zeilen = [["SP500", "S&amp;P 500", "SPY"], ["NASDAQ_COMPOSITE", "Nasdaq-100", "QQQ"], ["RUSSELL2000", "Russell 2000", "IWM"], ["SOX_PROXY", "Halbleiter", "SOXX"]];
+  let h = zeilen.filter(([k]) => I[k]).map(([k, n, t]) =>
+    '<div class="didx"><div><b style="font-weight:500">' + n + "</b><small>" + t + " · RSI " + dNum(I[k].rsi14, 0) + '</small></div><div class="num">' + dNum(I[k].close, 2) + '</div><div class="num r ' + dCls(I[k].chg_1d_pct) + '">' + dPct(I[k].chg_1d_pct, 2) + "</div></div>").join("");
+  const t = feed && feed.macro && feed.macro.us10y;
+  if (t && t.close != null) h += '<div class="didx"><div><b style="font-weight:500">US-Rendite 10 J.</b><small>20 Tage ' + (t.chg_20d_abs > 0 ? "+" : "") + dNum(t.chg_20d_abs, 2) + ' Pkt.</small></div><div class="num">' + dNum(t.close, 2) + " %</div><div></div></div>";
+  dEl("dIdx").innerHTML = h || '<div class="placeholder">Keine Daten.</div>';
+}
+
+function dSektoren(feed) {
+  const S = Object.entries((feed && feed.sectors) || {}).sort((a, b) => a[1].rang - b[1].rang);
+  if (!S.length) { dEl("dSectors").innerHTML = '<div class="placeholder">Keine Daten.</div>'; return; }
+  const m = Math.max(1, ...S.map(([, s]) => Math.abs(s.rs_20d_vs_spy || 0)));
+  const zeige = S.length > 9 ? [...S.slice(0, 6), null, ...S.slice(-3)] : S;
+  dEl("dSectors").innerHTML = zeige.map((e) => {
+    if (!e) return '<div class="dsec-gap">···</div>';
+    const [n, s] = e, v = s.rs_20d_vs_spy || 0, w = (Math.abs(v) / m) * 50;
+    return '<div class="dsec" title="Rang ' + s.rang + " · 5 Tage " + dPct(s.rs_5d_vs_spy) + '"><span class="nm">' + dEsc(n) + '</span><span class="ax"><i class="' + (v >= 0 ? "p" : "n") + '" style="width:' + w + '%"></i></span><span class="v num">' + dPct(v) + "</span></div>";
+  }).join("");
+}
+
+function dNotiz(notiz) {
+  const box = dEl("dNote");
+  if (!notiz || !notiz.text) { box.hidden = true; return; }
+  box.innerHTML = '<span class="l">Meine Notiz</span><p>' + dEsc(notiz.text) + '</p><span class="s">' + dWann(notiz.updated_at_utc || notiz.generated_at_utc) + "</span>";
+  box.hidden = false;
+}
+
+function renderHeute(d) {
+  const h = Number(new Date().toLocaleString("de-DE", { timeZone: "Europe/Berlin", hour: "2-digit", hour12: false }));
+  dEl("dHello").textContent = (h < 11 ? "Guten Morgen" : h < 18 ? "Guten Tag" : "Guten Abend") + ", Patrick";
+  dEl("dStamp").textContent = d.feed ? "Aktualisiert " + dVor(d.feed.generated_at_utc) : "";
+  dRegime(d.feed, d.barometer);
+  dPick(d.top3, d.candidates, d.feed);
+  dDepot(d.portfolio);
+  dPerf(d.performance);
+  dKpis(d.performance, d.feed);
+  dWatchlist(d.candidates, d.portfolio);
+  dIndizes(d.feed);
+  dSektoren(d.feed);
+  dNotiz(d.notiz);
+}
+
+// Hell/Dunkel: folgt dem System, der Knopf überschreibt es (im Browser gemerkt).
+function initTheme() {
+  try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  dEl("themeBtn").addEventListener("click", () => {
+    const akt = document.documentElement.dataset.theme;
+    const dunkel = akt ? akt === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.dataset.theme = dunkel ? "light" : "dark";
+    try { localStorage.setItem("theme", document.documentElement.dataset.theme); } catch (e) {}
+  });
+}
+
+initTheme();
 initTabs();
 initJournalForm();
 init();

@@ -1,0 +1,82 @@
+/* Aktienkänguru – gemeinsame Markenbasis für Startseite und Cockpit */
+:root {
+  color-scheme: light;
+  --sand: #fbf7f1;        /* Seitenhintergrund */
+  --foam: #ffffff;        /* Karten */
+  --shell: #f4ece1;       /* zweite Fläche */
+  --deep: #2a1d16;        /* Dunkles Erdbraun – Schrift & dunkle Flächen */
+  --ink: #2a1d16;
+  --ink-2: #66544a;
+  --muted: #a08f83;
+  --line: #eadfd1;
+  --line-strong: #dccbb7;
+  --brand: #c2501f;        /* Markenfarbe Outback-Terrakotta */
+  --brand-2: #e07a3c;
+  --brand-soft: rgba(194,80,31,.10);
+  --sun: #c2501f;         /* Handlungsaufforderungen */
+  --sun-ink: #ffffff;
+  --good: #15803d; --good-soft: rgba(21,128,61,.10);
+  --warn: #b26b00; --warn-soft: rgba(245,166,35,.16);
+  --bad: #b4232f; --bad-soft: rgba(180,35,47,.09);
+  --s1: #c2501f; --s2: #3f5c7a; --s3: #a08f83;
+  --shadow: 0 1px 2px rgba(42,29,22,.05), 0 8px 24px rgba(42,29,22,.06);
+  --head: "Bricolage Grotesque", "Plus Jakarta Sans", system-ui, sans-serif;
+  --body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --sand: #15100d; --foam: #1e1713; --shell: #271e19;
+    --deep: #0e0a08; --ink: #f6ece2; --ink-2: #cdb9a8; --muted: #8e7a6c;
+    --line: #33271f; --line-strong: #44352b;
+    --brand: #f08a4b; --brand-2: #f6a86f; --brand-soft: rgba(240,138,75,.14);
+    --sun: #f08a4b; --sun-ink: #1a0d07;
+    --good: #3ccf73; --good-soft: rgba(60,207,115,.14);
+    --warn: #f5b13d; --warn-soft: rgba(245,177,61,.14);
+    --bad: #ff6b6b; --bad-soft: rgba(255,107,107,.14);
+    --s1: #f08a4b; --s2: #7f9cbd; --s3: #8e7a6c;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --sand: #15100d; --foam: #1e1713; --shell: #271e19;
+    --deep: #0e0a08; --ink: #f6ece2; --ink-2: #cdb9a8; --muted: #8e7a6c;
+    --line: #33271f; --line-strong: #44352b;
+    --brand: #f08a4b; --brand-2: #f6a86f; --brand-soft: rgba(240,138,75,.14);
+    --sun: #f08a4b; --sun-ink: #1a0d07;
+    --good: #3ccf73; --good-soft: rgba(60,207,115,.14);
+    --warn: #f5b13d; --warn-soft: rgba(245,177,61,.14);
+    --bad: #ff6b6b; --bad-soft: rgba(255,107,107,.14);
+    --s1: #f08a4b; --s2: #7f9cbd; --s3: #8e7a6c;
+    --shadow: none;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--sand); color: var(--ink); font: 15px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--head); letter-spacing: -.02em; line-height: 1.1; margin: 0; }
+a { color: inherit; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Wortmarke */
+.mark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.mark svg { width: 34px; height: 34px; flex-shrink: 0; }
+.mark b { font-family: var(--head); font-size: 19px; font-weight: 700; letter-spacing: -.03em; white-space: nowrap; }
+.mark b span { color: var(--brand); }
+
+.btn { display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1 var(--body); padding: 12px 18px; border-radius: 999px; border: 1px solid transparent; cursor: pointer; text-decoration: none; white-space: nowrap; }
+.btn.sun { background: var(--sun); color: var(--sun-ink); }
+.btn.sun:hover { filter: brightness(1.05); }
+.btn.ghost { border-color: var(--line-strong); color: var(--ink); background: transparent; }
+.btn.ghost:hover { background: var(--shell); }
+.btn.deep { background: var(--ink); color: var(--sand); }
+
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.pill.good { background: var(--good-soft); color: var(--good); }
+.pill.warn { background: var(--warn-soft); color: var(--warn); }
+.pill.bad { background: var(--bad-soft); color: var(--bad); }
+.pill.brand { background: var(--brand-soft); color: var(--brand); }
+.pill.neutral { background: var(--shell); color: var(--ink-2); }
+.pill .d { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.up { color: var(--good); } .down { color: var(--bad); }
+.icon-btn { width: 36px; height: 36px; border-radius: 999px; border: 1px solid var(--line); background: var(--foam); color: var(--ink-2); display: grid; place-items: center; cursor: pointer; }
