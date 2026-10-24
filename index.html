@@ -356,39 +356,59 @@
   .wl-legende { padding: 0 20px 14px; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
   .wl-legende .wl-dots { vertical-align: -1px; margin-right: 4px; }
   .wl-art { display: inline-block; margin-top: 2px; font-size: 11px; color: var(--muted); }
-  /* ---- Hero „Markt heute“ (dunkel in beiden Farbmodi) ---- */
-  .ck-hero { position: relative; overflow: hidden; border-radius: 26px; margin-bottom: 16px; color: #f6ece2; }
+  /* ---- Hero „Markt heute“: hell und warm im hellen Modus, dunkel im dunklen Modus ---- */
+  .ck-hero {
+    --h-bg: #fcefe2; --h-glow: #e07a3c; --h-glow-o: .30; --h-dots: #c2501f; --h-dots-o: .25;
+    --h-ink: var(--ink); --h-ink2: var(--ink-2); --h-mut: var(--muted); --h-eyebrow: var(--brand);
+    --h-card: rgba(255,255,255,.78); --h-line: rgba(194,80,31,.16); --h-cell: rgba(255,255,255,.72);
+    --h-up: var(--good); --h-down: var(--bad); --h-ok: var(--good); --h-no: var(--bad); --h-shadow: 0 10px 30px rgba(42,29,22,.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .ck-hero {
+      --h-bg: #1f1510; --h-glow: #e07a3c; --h-glow-o: .5; --h-dots: #f6a86f; --h-dots-o: .22;
+      --h-ink: #fff; --h-ink2: rgba(246,236,226,.8); --h-mut: rgba(246,236,226,.6); --h-eyebrow: #f6a86f;
+      --h-card: rgba(255,255,255,.07); --h-line: rgba(255,255,255,.14); --h-cell: rgba(31,21,16,.72);
+      --h-up: #6fe39a; --h-down: #ff8f8f; --h-ok: #6fe39a; --h-no: #ff8f8f; --h-shadow: none;
+    }
+  }
+  :root[data-theme="dark"] .ck-hero {
+    --h-bg: #1f1510; --h-glow: #e07a3c; --h-glow-o: .5; --h-dots: #f6a86f; --h-dots-o: .22;
+    --h-ink: #fff; --h-ink2: rgba(246,236,226,.8); --h-mut: rgba(246,236,226,.6); --h-eyebrow: #f6a86f;
+    --h-card: rgba(255,255,255,.07); --h-line: rgba(255,255,255,.14); --h-cell: rgba(31,21,16,.72);
+    --h-up: #6fe39a; --h-down: #ff8f8f; --h-ok: #6fe39a; --h-no: #ff8f8f; --h-shadow: none;
+  }
+  .ck-hero { position: relative; overflow: hidden; border-radius: 26px; margin-bottom: 16px; color: var(--h-ink); border: 1px solid var(--h-line); }
   .ck-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
   .ck-hero > *:not(.ck-hero-bg) { position: relative; }
   .ck-hero-in { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); gap: 36px; padding: 32px 36px 22px; align-items: center; }
-  .ck-eyebrow { display: inline-flex; gap: 8px; align-items: center; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #f6a86f; }
+  .ck-eyebrow { display: inline-flex; gap: 8px; align-items: center; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--h-eyebrow); }
   .ck-eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #3ccf73; box-shadow: 0 0 0 4px rgba(60,207,115,.2); }
-  .ck-hero h1 { font-family: var(--head); font-weight: 800; font-size: clamp(28px, 3.3vw, 42px); line-height: 1.08; letter-spacing: -.025em; color: #fff; margin: 12px 0; }
-  .ck-hero p { color: rgba(246,236,226,.8); margin: 0 0 14px; font-size: 15px; max-width: 680px; }
-  .ck-notiz { border-left: 3px solid #f6a86f; padding: 4px 0 4px 14px; font-size: 14px; color: #fff; max-width: 620px; }
-  .ck-notiz small { display: block; color: rgba(246,236,226,.6); font-size: 12px; margin-top: 2px; }
-  .ck-lage { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); border-radius: 22px; padding: 18px 20px; backdrop-filter: blur(10px); }
-  .ck-lage-kopf { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(246,236,226,.7); }
-  .ck-lage-kopf .pill { background: rgba(255,255,255,.12); color: #fff; text-transform: none; letter-spacing: 0; }
-  .ck-tacho { width: 100%; max-width: 260px; display: block; margin: 8px auto 0; color: #f6ece2; }
+  .ck-hero h1 { font-family: var(--head); font-weight: 800; font-size: clamp(28px, 3.3vw, 42px); line-height: 1.08; letter-spacing: -.025em; color: var(--h-ink); margin: 12px 0; }
+  .ck-hero p { color: var(--h-ink2); margin: 0 0 14px; font-size: 15px; max-width: 680px; }
+  .ck-notiz { border-left: 3px solid var(--brand); padding: 4px 0 4px 14px; font-size: 14px; color: var(--h-ink); max-width: 620px; }
+  .ck-notiz small { display: block; color: var(--h-mut); font-size: 12px; margin-top: 2px; }
+  .ck-lage { background: var(--h-card); border: 1px solid var(--h-line); border-radius: 22px; padding: 18px 20px; backdrop-filter: blur(10px); box-shadow: var(--h-shadow); }
+  .ck-lage-kopf { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--h-mut); }
+  .ck-lage-kopf .pill { background: var(--brand-soft); color: var(--brand); text-transform: none; letter-spacing: 0; }
+  .ck-tacho { width: 100%; max-width: 260px; display: block; margin: 8px auto 0; color: var(--h-ink); }
   .ck-tacho .t-l { font: 600 11px var(--body); fill: currentColor; opacity: .65; }
   .ck-lage-titel { text-align: center; font-family: var(--head); font-size: 30px; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
   .ck-lage-titel small { display: block; font: 600 11px var(--body); letter-spacing: .06em; opacity: .55; margin-top: 2px; }
-  .ck-lage-text { text-align: center; font-size: 13px; color: rgba(246,236,226,.8); margin: 6px 0 10px; }
-  .ck-lage details { border-top: 1px solid rgba(255,255,255,.15); padding-top: 8px; }
-  .ck-lage summary { cursor: pointer; font-size: 13px; font-weight: 600; color: rgba(246,236,226,.9); }
+  .ck-lage-text { text-align: center; font-size: 13px; color: var(--h-ink2); margin: 6px 0 10px; }
+  .ck-lage details { border-top: 1px solid var(--h-line); padding-top: 8px; }
+  .ck-lage summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--h-ink); }
   .ck-lage .kliste { font-size: 12px; gap: 5px; margin-top: 8px; }
-  .ck-lage .kliste .ok { color: #6fe39a; } .ck-lage .kliste .no { color: #ff8f8f; } .ck-lage .kliste .na { color: rgba(246,236,226,.5); }
-  .ck-lage .timestamp { color: rgba(246,236,226,.55); }
-  .ck-ticker { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 1px; margin: 0 36px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; overflow: hidden; }
-  .ck-ticker div { background: rgba(31,21,16,.72); padding: 11px 14px; display: grid; gap: 1px; }
-  .ck-ticker span { font-size: 11px; color: rgba(246,236,226,.65); }
-  .ck-ticker b { font-family: var(--head); font-size: 19px; letter-spacing: -.02em; color: #fff; }
+  .ck-lage .kliste .ok { color: var(--h-ok); } .ck-lage .kliste .no { color: var(--h-no); } .ck-lage .kliste .na { color: var(--h-mut); }
+  .ck-lage .timestamp { color: var(--h-mut); }
+  .ck-ticker { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 1px; margin: 0 36px; background: var(--h-line); border: 1px solid var(--h-line); border-radius: 16px; overflow: hidden; }
+  .ck-ticker div { background: var(--h-cell); padding: 11px 14px; display: grid; gap: 1px; }
+  .ck-ticker span { font-size: 11px; color: var(--h-mut); }
+  .ck-ticker b { font-family: var(--head); font-size: 19px; letter-spacing: -.02em; color: var(--h-ink); }
   .ck-ticker i { font-style: normal; font-size: 12px; font-weight: 600; }
-  .ck-ticker .up { color: #6fe39a; } .ck-ticker .down { color: #ff8f8f; } .ck-ticker .nb { color: rgba(246,236,226,.6); }
-  .ck-fuss { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; padding: 8px 36px 18px; font-size: 12px; color: rgba(246,236,226,.6); }
-  .ck-fuss a { color: #f6a86f !important; }  /* Link aus der Rohstoff-Kurzzeile (inline eingefärbt) */
-  .ck-fuss b { color: #fff; }
+  .ck-ticker .up { color: var(--h-up); } .ck-ticker .down { color: var(--h-down); } .ck-ticker .nb { color: var(--h-mut); }
+  .ck-fuss { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; padding: 8px 36px 18px; font-size: 12px; color: var(--h-mut); }
+  .ck-fuss a { color: var(--brand) !important; }  /* Link aus der Rohstoff-Kurzzeile (inline eingefärbt) */
+  .ck-fuss b { color: var(--h-ink); }
   .dhero.dhero-2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 
   /* ---- News als Rückenwind/Gegenwind-Karten ---- */
@@ -471,9 +491,9 @@
   <div class="tab-panel" id="panel-heute" role="tabpanel" aria-labelledby="tab-heute">
   <section class="ck-hero" aria-label="Markt heute">
     <svg class="ck-hero-bg" viewBox="0 0 1240 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs><radialGradient id="ckGlow" cx="85%" cy="10%" r="70%"><stop offset="0" stop-color="#e07a3c" stop-opacity=".5"/><stop offset=".6" stop-color="#c2501f" stop-opacity=".1"/><stop offset="1" stop-color="#2a1d16" stop-opacity="0"/></radialGradient></defs>
-      <rect width="1240" height="460" fill="#1f1510"/><rect width="1240" height="460" fill="url(#ckGlow)"/>
-      <path d="M-20 440 q50 -90 100 0 q80 -150 160 0 q110 -210 220 0 q140 -260 280 0 q150 -290 300 -40" fill="none" stroke="#f6a86f" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 12"/>
+      <defs><radialGradient id="ckGlow" cx="85%" cy="10%" r="70%"><stop offset="0" style="stop-color: var(--h-glow); stop-opacity: var(--h-glow-o)"/><stop offset=".6" style="stop-color: var(--h-glow); stop-opacity: .08"/><stop offset="1" style="stop-color: var(--h-glow); stop-opacity: 0"/></radialGradient></defs>
+      <rect width="1240" height="460" style="fill: var(--h-bg)"/><rect width="1240" height="460" fill="url(#ckGlow)"/>
+      <path d="M-20 440 q50 -90 100 0 q80 -150 160 0 q110 -210 220 0 q140 -260 280 0 q150 -290 300 -40" fill="none" style="stroke: var(--h-dots); stroke-opacity: var(--h-dots-o)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 12"/>
     </svg>
     <div class="ck-hero-in">
       <div class="ck-text">
@@ -1645,7 +1665,7 @@ function dTacho(r) {
   const pt = (v, rad) => [cx + rad * Math.cos(wink(v)), cy - rad * Math.sin(wink(v))];
   const bogen = (a, b, col) => { const [x1, y1] = pt(a, R), [x2, y2] = pt(b, R); return '<path d="M' + x1 + " " + y1 + " A" + R + " " + R + " 0 0 1 " + x2 + " " + y2 + '" stroke="' + col + '" stroke-width="18" fill="none"/>'; };
   const [nx, ny] = pt(w, R - 26);
-  return '<svg viewBox="0 0 240 140" class="ck-tacho" aria-hidden="true">' + bogen(0, 1.45, "#e05a5a") + bogen(1.55, 3.45, "#f5a623") + bogen(3.55, n, "#3ccf73") +
+  return '<svg viewBox="0 0 240 140" class="ck-tacho" aria-hidden="true">' + bogen(0, 1.45, "var(--bad)") + bogen(1.55, 3.45, "#f5a623") + bogen(3.55, n, "var(--good)") +
     '<line x1="' + cx + '" y1="' + cy + '" x2="' + nx + '" y2="' + ny + '" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="' + cx + '" cy="' + cy + '" r="8" fill="currentColor"/>' +
     '<text x="22" y="138" class="t-l">Abwarten</text><text x="120" y="12" class="t-l" text-anchor="middle">Gemischt</text><text x="218" y="138" class="t-l" text-anchor="end">Rückenwind</text></svg>';
 }
