@@ -9,6 +9,7 @@ Erledigt – Schritte 1–5:
 - workers.dev und Preview-URLs deaktiviert.
 - Variablen im Worker: GITHUB_TOKEN (nur lesen), REPO, BRANCH, TEAM_DOMAIN, POLICY_AUD.
 Offen:
+- Journal direkt im Cockpit (C25): neuen worker/worker.js einspielen und JOURNAL_TOKEN anlegen, siehe Abschnitt JOURNAL-EINGABE IM COCKPIT.
 - Schritt 6: geplante Aufgaben sind seit 23.10. auf den GitHub-Connector umgestellt (N6 am 23.10. erfolgreich); offen sind die Projekt-Anweisungen im Claude-Projekt und die Beobachtung von P4–P1.
 - Schritt 7: Repo privat stellen.
 
@@ -18,6 +19,7 @@ WORKER-DOMAINS (aktuell)
 
 ABLAUFDATEN
 - GitHub-Token (GITHUB_TOKEN, nur lesen) läuft am 23.10.2027 ab → vorher erneuern (siehe FEHLERHILFE, gleicher Ablauf).
+- Journal-Token (JOURNAL_TOKEN) – Ablaufdatum hier eintragen, sobald er angelegt ist.
 - Domain aktienkaenguru.de verlängert sich am 23.10.2027 bei INWX (4,65 € per Lastschrift).
 
 ZIEL
@@ -95,11 +97,31 @@ Schritte 1–6 gehen, während das Repo noch öffentlich ist. Erst wenn alles l�
    - Actions laufen weiter, jetzt mit Minuten-Kontingent. Verbrauch unter Settings → Billing and licensing → Usage beobachten. Dort auch prüfen, dass keine Zahlungsmethode hinterlegt ist bzw. das Actions-Budget auf 0 $ steht.
    - Wichtig: Was bisher öffentlich war, kann bereits kopiert worden sein. Privat schützt nur ab jetzt.
 
+JOURNAL-EINGABE IM COCKPIT (C25)
+Mit dem neuen worker/worker.js speichert das Cockpit Journal-Einträge direkt, ohne Sprung zu GitHub. Der Worker legt dafür das Issue "[Trade] …" an; der bestehende Workflow journal.yml verarbeitet es wie bisher und schreibt seine Antwort ins Issue. Das Cockpit zeigt diese Antwort nach etwa 30–60 Sekunden an und lädt das Journal neu.
+Solange der neue Worker oder der Token fehlt, bietet das Cockpit nach dem Absenden einen Link "Stattdessen über GitHub eintragen" an – es geht also nichts verloren.
+   a) Zweiter Token, nur für das Journal:
+      GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token
+      - Name: z. B. "aktienkaenguru-journal"
+      - Repository access: Only select repositories → swing-trading-data
+      - Permissions → Repository permissions → Issues: Read and write (sonst nichts; "Metadata: Read-only" setzt GitHub automatisch)
+      - Expiration: 1 Jahr, Datum oben unter ABLAUFDATEN eintragen
+      Token kopieren. Er darf nur Issues anlegen und lesen – an Dateien, Depot und Workflows kommt er nicht heran.
+   b) Cloudflare → Worker "aktienkaenguru-cockpit" → Settings → Variables and Secrets → Add
+      JOURNAL_TOKEN  Typ Secret  = Token aus a)
+   c) Cloudflare → Worker → "Edit code": Inhalt von worker/worker.js komplett ersetzen → Deploy.
+      Achtung: Der neue Worker liefert auf aktienkaenguru.de/www auch die öffentliche Startseite aus. Solange diese beiden noch in der Access-App stehen, bleibt alles hinter dem Login – das ist unschädlich (siehe B05).
+   d) Testen: im Cockpit unter Journal einen Kauf mit Haken "Testeintrag" absenden → "Eintrag #… übermittelt" → nach etwa einer Minute "✓ … gespeichert als T…". Danach den Testeintrag per "Storno" wieder entfernen.
+   Sicherheit: Der Worker nimmt Einträge nur auf cockpit.<domain> an, nur mit gültigem Access-Login und nur, wenn die Anfrage vom Cockpit selbst kommt (Origin-Prüfung). Der Workflow verarbeitet weiterhin nur Issues, die unter deinem GitHub-Konto angelegt wurden – das ist beim Token der Fall.
+
 FEHLERHILFE
 - "GitHub antwortet nicht wie erwartet (401)": Der Token ist ungültig oder abgelaufen.
   1) GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → beim Token "Regenerate token".
   2) Neuen Token mit dem Kopier-Symbol kopieren (wird nur einmal angezeigt).
   3) Cloudflare → Worker "aktienkaenguru-cockpit" → Settings → Variables and Secrets → bei GITHUB_TOKEN auf den Stift → "Rotate" → neuen Token einfügen → Deploy.
+
+- Journal: "Direkt speichern hat nicht geklappt (GitHub antwortet nicht wie erwartet (401))": JOURNAL_TOKEN ungültig oder abgelaufen → wie oben, nur beim Journal-Token und beim Secret JOURNAL_TOKEN. Bei 403 oder 404 fehlt dem Token das Recht "Issues: Read and write" oder das Repo.
+- Journal: "im Worker noch nicht eingerichtet": neuer worker/worker.js ist noch nicht eingespielt oder das Secret JOURNAL_TOKEN fehlt.
 
 ZURÜCK, FALLS ETWAS NICHT KLAPPT
 Repo wieder auf "Public" stellen und GitHub Pages (Settings → Pages → Branch main) erneut aktivieren – das alte Cockpit läuft dann wie vorher.
