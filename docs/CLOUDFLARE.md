@@ -1,5 +1,24 @@
 UMZUG: EIGENE DOMAIN, LOGIN UND PRIVATES REPO
-Stand: 23.10.2026 (öffentliche Startseite unter der Hauptdomain ergänzt)
+Stand: 24.10.2026
+
+STATUS
+Erledigt – Schritte 1–5:
+- Domain aktienkaenguru.de bei INWX, Nameserver auf Cloudflare umgestellt.
+- Worker "aktienkaenguru-cockpit" live (Fassung aus PR #15, nur Cockpit – die öffentliche Startseite aus PR #17 ist noch nicht eingespielt).
+- Access-App "cockpit" mit Policy "Nur ich" (patricks87@gmx.de), Team-Domain aktienkaenguru.cloudflareaccess.com, Sitzungsdauer 1 Monat.
+- workers.dev und Preview-URLs deaktiviert.
+- Variablen im Worker: GITHUB_TOKEN (nur lesen), REPO, BRANCH, TEAM_DOMAIN, POLICY_AUD.
+Offen:
+- Schritt 6: geplante Aufgaben sind seit 23.10. auf den GitHub-Connector umgestellt (N6 am 23.10. erfolgreich); offen sind die Projekt-Anweisungen im Claude-Projekt und die Beobachtung von P4–P1.
+- Schritt 7: Repo privat stellen.
+
+WORKER-DOMAINS (aktuell)
+- cockpit.aktienkaenguru.de, aktienkaenguru.de und www.aktienkaenguru.de – alle drei als Custom Domains am Worker und als Hostnames in der Access-App, also alle hinter Login.
+- Hinweis für den späteren öffentlichen Auftritt: www und Root (aktienkaenguru.de) aus der Access-App nehmen und den neuen worker/worker.js einspielen, der dort die öffentliche Startseite ausliefert. Das Cockpit bleibt auf cockpit.aktienkaenguru.de hinter Login.
+
+ABLAUFDATEN
+- GitHub-Token (GITHUB_TOKEN, nur lesen) läuft am 23.10.2027 ab → vorher erneuern (siehe FEHLERHILFE, gleicher Ablauf).
+- Domain aktienkaenguru.de verlängert sich am 23.10.2027 bei INWX (4,65 € per Lastschrift).
 
 ZIEL
 Unter der Hauptdomain (z. B. aktienkaenguru.de) steht die öffentliche Startseite, das Cockpit läuft unter cockpit.<domain> hinter einem Login. Das GitHub-Repo wird privat, damit Depot, Journal und Kandidaten nicht mehr öffentlich sind.
@@ -46,13 +65,15 @@ Schritte 1–6 gehen, während das Repo noch öffentlich ist. Erst wenn alles l�
        workers.dev und Preview-URLs auf "Disabled" stellen (sonst gäbe es einen Weg am Login vorbei – der Worker würde dort ohnehin nur 403 liefern).
 
 4) LOGIN MIT CLOUDFLARE ACCESS
-   Cloudflare → Zero Trust (beim ersten Mal Team-Namen wählen, z. B. "aktienkaenguru", Free-Tarif)
+   Cloudflare → Zero Trust (Free-Tarif)
+   → Team-Name: Ist mit einem Zufallsnamen vorbelegt und muss unter Zero Trust → Settings geändert werden (hier: "aktienkaenguru").
    → Access → Applications → Add an application → Self-hosted
        Application name: Cockpit
        Domain: cockpit.<deine-domain>
        Session duration: z. B. 1 Monat
    → Policy: Name "Nur ich", Action "Allow", Include → Emails → deine E-Mail-Adresse
-   → Login-Methode: "One-time PIN" (Code per E-Mail) genügt
+   → Login-Methode: "One-time PIN" (Code per E-Mail) genügt. Sie muss unter Zero Trust → Integrations → Identity providers aktiv hinzugefügt werden – sonst bietet die Login-Seite nur den Cloudflare-Login an.
+   → Login-Seite benennen: unter Reusable components → Custom pages (hier: "AktienKänguru").
    → Speichern. In der Übersicht der Anwendung steht der "Application Audience (AUD) Tag" → als POLICY_AUD im Worker eintragen.
    TEAM_DOMAIN = <team-name>.cloudflareaccess.com (steht in Zero Trust unter Settings als "Team domain").
 
@@ -73,6 +94,12 @@ Schritte 1–6 gehen, während das Repo noch öffentlich ist. Erst wenn alles l�
    - Die Journal-Issues werden ebenfalls privat. Der Journal-Knopf im Cockpit funktioniert weiter, solange du bei GitHub angemeldet bist.
    - Actions laufen weiter, jetzt mit Minuten-Kontingent. Verbrauch unter Settings → Billing and licensing → Usage beobachten. Dort auch prüfen, dass keine Zahlungsmethode hinterlegt ist bzw. das Actions-Budget auf 0 $ steht.
    - Wichtig: Was bisher öffentlich war, kann bereits kopiert worden sein. Privat schützt nur ab jetzt.
+
+FEHLERHILFE
+- "GitHub antwortet nicht wie erwartet (401)": Der Token ist ungültig oder abgelaufen.
+  1) GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → beim Token "Regenerate token".
+  2) Neuen Token mit dem Kopier-Symbol kopieren (wird nur einmal angezeigt).
+  3) Cloudflare → Worker "aktienkaenguru-cockpit" → Settings → Variables and Secrets → bei GITHUB_TOKEN auf den Stift → "Rotate" → neuen Token einfügen → Deploy.
 
 ZURÜCK, FALLS ETWAS NICHT KLAPPT
 Repo wieder auf "Public" stellen und GitHub Pages (Settings → Pages → Branch main) erneut aktivieren – das alte Cockpit läuft dann wie vorher.

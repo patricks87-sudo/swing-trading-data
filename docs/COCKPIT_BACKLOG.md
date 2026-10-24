@@ -31,17 +31,31 @@ Umgesetzt und übernommen am 23.10.2026 (PR #16). Befund: Bei der Durchsicht war
 
 ## Paket 2 – Startseite und Design (erst Entwurf, dann Umsetzung)
 
-Stand 23.10.2026: Entwurf abgestimmt. Öffentliche Startseite (site/) umgesetzt – Hero mit Kernaussage, Marktlage als Tacho, Kennzahlen-Leiste, Top-Meldungen (C23, C24). Logo als Datei site/logo.svg für die Startseite; das Cockpit stellt erst nach dem nächsten Worker-Update um (der laufende Worker liefert die Datei noch nicht aus). Offen: Cockpit „Heute“ im selben Stil (C19–C22).
+Stand 23.10.2026: Entwurf abgestimmt. Öffentliche Startseite (site/) umgesetzt – Hero mit Kernaussage, Marktlage als Tacho, Kennzahlen-Leiste, Top-Meldungen (C23, C24). Logo als Datei site/logo.svg für die Startseite; das Cockpit stellt erst nach dem nächsten Worker-Update um (der laufende Worker liefert die Datei noch nicht aus). Cockpit „Heute“ im selben Stil umgesetzt am 24.10. (C19–C22): Hero mit Kernaussage, Tacho, Kennzahlen-Leiste und Notiz statt Begrüßung; News als Rückenwind/Gegenwind-Karten.
 
 | Nr. | Bereich | Wunsch | Hinweis | Prio | Status |
 |---|---|---|---|---|---|
 | C18 | Allgemein | Logo überarbeiten | Wird extern in Canva gestaltet; Logo als eigene Datei, leicht austauschbar | mittel | in Arbeit |
-| C19 | Heute | Begrüßung „Guten Abend, Patrick“ entfernen | Stattdessen Kernaussage zum Markt heute | hoch | offen |
-| C20 | Heute | Kurzfazit-Zeile „NEUTRAL 2/5 …“ zu technisch | Verständliche Aussage | hoch | offen |
-| C21 | Heute · Marktlage | Lage auf einen Blick (Ampel, Tacho oder Skala) | Fünf Kriterien erst beim Aufklappen | hoch | offen |
-| C22 | Heute · News | Positiv/negativ besser lesbar | z. B. farbige Karten nach Tendenz, kurze Texte, Bewertung auf Abruf | mittel | offen |
+| C19 | Heute | Begrüßung „Guten Abend, Patrick“ entfernen | Stattdessen Kernaussage zum Markt heute | hoch | zur Abnahme |
+| C20 | Heute | Kurzfazit-Zeile „NEUTRAL 2/5 …“ zu technisch | Verständliche Aussage | hoch | zur Abnahme |
+| C21 | Heute · Marktlage | Lage auf einen Blick (Ampel, Tacho oder Skala) | Fünf Kriterien erst beim Aufklappen | hoch | zur Abnahme |
+| C22 | Heute · News | Positiv/negativ besser lesbar | z. B. farbige Karten nach Tendenz, kurze Texte, Bewertung auf Abruf | mittel | zur Abnahme |
 | C23 | Startseite | Großer Hero-Banner | | hoch | zur Abnahme |
 | C24 | Startseite | Muss beim ersten Blick fesseln, kein Daten-Dashboard | Gesamtanspruch für Paket 2 | hoch | zur Abnahme |
+
+## Betrieb und Umzug
+
+Stand 23.10.2026 abends: aktienkaenguru.de (INWX) läuft über Cloudflare. Worker „aktienkaenguru-cockpit“ ist live mit der Fassung von worker/worker.js aus PR #15 (nur Cockpit, ohne öffentliche Startseite). Access-Login nur für die eigene E-Mail. Erreichbar unter cockpit.aktienkaenguru.de, aktienkaenguru.de und www.aktienkaenguru.de – alle hinter Login. workers.dev deaktiviert. Variablen: GITHUB_TOKEN (nur lesen), REPO, BRANCH, TEAM_DOMAIN, POLICY_AUD.
+
+| Nr. | Thema | Was zu tun ist | Wer | Status |
+|---|---|---|---|---|
+| B01 | Schritt 6 – geplante Aufgaben | Alle 12 Aufgaben lesen Prompt und Feed über den GitHub-Connector (Rückfall auf raw-Link, solange öffentlich). Umgestellt am 23.10. | Claude | erledigt |
+| B02 | Schritt 6 – Projekt-Anweisungen | Text im Claude-Projekt komplett durch prompts/PROJEKT_ANWEISUNGEN.md ersetzen | Patrick | offen |
+| B03 | Schritt 6 – Kontrolle | Erste Läufe nach der Umstellung prüfen: N6 am 23.10., P4–P1 am 26.10. | gemeinsam | offen |
+| B04 | Schritt 7 – Repo privat | Erst nach B02 und B03. Danach GitHub Pages aus, alte github.io-Adresse entfällt | Patrick | offen |
+| B05 | Öffentlicher Auftritt | Neuen worker/worker.js (PR #17) einspielen; Access-Anwendung nur noch für cockpit.aktienkaenguru.de, nicht für aktienkaenguru.de/www. Vorher Impressum, Datenschutz, Risikohinweis prüfen lassen | Patrick, Claude begleitet | offen |
+| B06 | Logo-Datei im Cockpit | Nach B05 Cockpit auf site/logo.svg umstellen (der neue Worker liefert die Datei aus) | Claude | offen |
+| C25 | Journal direkt im Cockpit | Eingabe ohne Sprung zu GitHub. Vorschlag: POST-Route im Worker (nur cockpit., mit Access-Prüfung und Herkunfts-Check), die das Journal-Issue „[Trade] …“ über die GitHub-API anlegt – der bestehende Journal-Workflow verarbeitet es wie bisher. Eigener Token mit nur „Issues: Read and write“ für dieses Repo (kein Schreibrecht auf Dateien nötig). Antwort im Cockpit nach ca. 30 s neu laden | Claude, Token: Patrick | offen |
 
 ## Runde 3
 

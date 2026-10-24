@@ -356,6 +356,87 @@
   .wl-legende { padding: 0 20px 14px; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
   .wl-legende .wl-dots { vertical-align: -1px; margin-right: 4px; }
   .wl-art { display: inline-block; margin-top: 2px; font-size: 11px; color: var(--muted); }
+  /* ---- Hero „Markt heute“: hell und warm im hellen Modus, dunkel im dunklen Modus ---- */
+  .ck-hero {
+    --h-bg: #fcefe2; --h-glow: #e07a3c; --h-glow-o: .30; --h-dots: #c2501f; --h-dots-o: .25;
+    --h-ink: var(--ink); --h-ink2: var(--ink-2); --h-mut: var(--muted); --h-eyebrow: var(--brand);
+    --h-card: rgba(255,255,255,.78); --h-line: rgba(194,80,31,.16); --h-cell: rgba(255,255,255,.72);
+    --h-up: var(--good); --h-down: var(--bad); --h-ok: var(--good); --h-no: var(--bad); --h-shadow: 0 10px 30px rgba(42,29,22,.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .ck-hero {
+      --h-bg: #1f1510; --h-glow: #e07a3c; --h-glow-o: .5; --h-dots: #f6a86f; --h-dots-o: .22;
+      --h-ink: #fff; --h-ink2: rgba(246,236,226,.8); --h-mut: rgba(246,236,226,.6); --h-eyebrow: #f6a86f;
+      --h-card: rgba(255,255,255,.07); --h-line: rgba(255,255,255,.14); --h-cell: rgba(31,21,16,.72);
+      --h-up: #6fe39a; --h-down: #ff8f8f; --h-ok: #6fe39a; --h-no: #ff8f8f; --h-shadow: none;
+    }
+  }
+  :root[data-theme="dark"] .ck-hero {
+    --h-bg: #1f1510; --h-glow: #e07a3c; --h-glow-o: .5; --h-dots: #f6a86f; --h-dots-o: .22;
+    --h-ink: #fff; --h-ink2: rgba(246,236,226,.8); --h-mut: rgba(246,236,226,.6); --h-eyebrow: #f6a86f;
+    --h-card: rgba(255,255,255,.07); --h-line: rgba(255,255,255,.14); --h-cell: rgba(31,21,16,.72);
+    --h-up: #6fe39a; --h-down: #ff8f8f; --h-ok: #6fe39a; --h-no: #ff8f8f; --h-shadow: none;
+  }
+  .ck-hero { position: relative; overflow: hidden; border-radius: 26px; margin-bottom: 16px; color: var(--h-ink); border: 1px solid var(--h-line); }
+  .ck-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .ck-hero > *:not(.ck-hero-bg) { position: relative; }
+  .ck-hero-in { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); gap: 36px; padding: 32px 36px 22px; align-items: center; }
+  .ck-eyebrow { display: inline-flex; gap: 8px; align-items: center; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--h-eyebrow); }
+  .ck-eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #3ccf73; box-shadow: 0 0 0 4px rgba(60,207,115,.2); }
+  .ck-hero h1 { font-family: var(--head); font-weight: 800; font-size: clamp(28px, 3.3vw, 42px); line-height: 1.08; letter-spacing: -.025em; color: var(--h-ink); margin: 12px 0; }
+  .ck-hero p { color: var(--h-ink2); margin: 0 0 14px; font-size: 15px; max-width: 680px; }
+  .ck-notiz { border-left: 3px solid var(--brand); padding: 4px 0 4px 14px; font-size: 14px; color: var(--h-ink); max-width: 620px; }
+  .ck-notiz small { display: block; color: var(--h-mut); font-size: 12px; margin-top: 2px; }
+  .ck-lage { background: var(--h-card); border: 1px solid var(--h-line); border-radius: 22px; padding: 18px 20px; backdrop-filter: blur(10px); box-shadow: var(--h-shadow); }
+  .ck-lage-kopf { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--h-mut); }
+  .ck-lage-kopf .pill { background: var(--brand-soft); color: var(--brand); text-transform: none; letter-spacing: 0; }
+  .ck-tacho { width: 100%; max-width: 260px; display: block; margin: 8px auto 0; color: var(--h-ink); }
+  .ck-tacho .t-l { font: 600 11px var(--body); fill: currentColor; opacity: .65; }
+  .ck-lage-titel { text-align: center; font-family: var(--head); font-size: 30px; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
+  .ck-lage-titel small { display: block; font: 600 11px var(--body); letter-spacing: .06em; opacity: .55; margin-top: 2px; }
+  .ck-lage-text { text-align: center; font-size: 13px; color: var(--h-ink2); margin: 6px 0 10px; }
+  .ck-lage details { border-top: 1px solid var(--h-line); padding-top: 8px; }
+  .ck-lage summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--h-ink); }
+  .ck-lage .kliste { font-size: 12px; gap: 5px; margin-top: 8px; }
+  .ck-lage .kliste .ok { color: var(--h-ok); } .ck-lage .kliste .no { color: var(--h-no); } .ck-lage .kliste .na { color: var(--h-mut); }
+  .ck-lage .timestamp { color: var(--h-mut); }
+  .ck-ticker { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 1px; margin: 0 36px; background: var(--h-line); border: 1px solid var(--h-line); border-radius: 16px; overflow: hidden; }
+  .ck-ticker div { background: var(--h-cell); padding: 11px 14px; display: grid; gap: 1px; }
+  .ck-ticker span { font-size: 11px; color: var(--h-mut); }
+  .ck-ticker b { font-family: var(--head); font-size: 19px; letter-spacing: -.02em; color: var(--h-ink); }
+  .ck-ticker i { font-style: normal; font-size: 12px; font-weight: 600; }
+  .ck-ticker .up { color: var(--h-up); } .ck-ticker .down { color: var(--h-down); } .ck-ticker .nb { color: var(--h-mut); }
+  .ck-fuss { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; padding: 8px 36px 18px; font-size: 12px; color: var(--h-mut); }
+  .ck-fuss a { color: var(--brand) !important; }  /* Link aus der Rohstoff-Kurzzeile (inline eingefärbt) */
+  .ck-fuss b { color: var(--h-ink); }
+  .dhero.dhero-2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+
+  /* ---- News als Rückenwind/Gegenwind-Karten ---- */
+  .ck-news { margin: 8px 0 16px; }
+  .ck-news-kopf { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .ck-news-kopf h2 { margin: 20px 0 12px; }
+  .ck-news-kopf span { font-size: 12px; color: var(--muted); }
+  .ck-sig-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+  .ck-sig-spalte h3 { display: flex; align-items: center; gap: 8px; font-family: var(--head); font-size: 17px; margin: 0 0 10px; }
+  .ck-sig-spalte h3 i { width: 10px; height: 10px; border-radius: 50%; }
+  .ck-sig-spalte h3 small { font: 500 12px var(--body); color: var(--muted); }
+  .ck-sig { background: var(--foam); border: 1px solid var(--line); border-left: 4px solid var(--good); border-radius: 14px; padding: 12px 14px; margin-bottom: 10px; cursor: pointer; box-shadow: var(--shadow); }
+  .ck-sig.neg { border-left-color: var(--bad); }
+  .ck-sig.neu { border-left-color: var(--line-strong); }
+  .ck-sig:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+  .ck-sig .kopf { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+  .ck-sig .firma { font-weight: 700; font-size: 14px; }
+  .ck-sig .wann { font-size: 11px; color: var(--muted); white-space: nowrap; }
+  .ck-sig .titel { font-size: 13px; color: var(--ink-2); margin: 3px 0 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .ck-sig.offen .titel { -webkit-line-clamp: unset; display: block; }
+  .ck-sig .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .ck-sig .chips span { font-size: 11px; padding: 1px 8px; border-radius: 999px; background: var(--shell); color: var(--ink-2); font-weight: 600; }
+  .ck-sig .chips span.stark { background: var(--brand-soft); color: var(--brand); }
+  .ck-sig .bewertung { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink); }
+  .ck-sig.offen .bewertung { display: block; }
+  .ck-sig .bewertung a { color: var(--brand); }
+  .ck-sig-neutral { margin-top: 4px; }
+  .ck-sig-neutral summary { cursor: pointer; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
   .dgrid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
 
   @media (max-width: 1100px) {
@@ -365,7 +446,15 @@
     .dkpis > :first-child { grid-column: 1 / -1; }
     .dmain, .dgrid2 { grid-template-columns: minmax(0, 1fr); }
   }
+  @media (max-width: 960px) {
+    .ck-hero-in { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+    .ck-sig-grid { grid-template-columns: minmax(0, 1fr); }
+  }
   @media (max-width: 720px) {
+    .ck-hero-in { padding: 22px 18px 16px; }
+    .ck-ticker { margin: 0 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ck-fuss { padding: 8px 18px 16px; }
+    .dhero.dhero-2 { grid-template-columns: minmax(0, 1fr); }
     .topbar-in { padding: 0 12px; gap: 10px; }
     .stamp, .mark b, .icon-btn { display: none; }
     .tabs { gap: 0; }
@@ -400,15 +489,33 @@
 
 <div class="wrap">
   <div class="tab-panel" id="panel-heute" role="tabpanel" aria-labelledby="tab-heute">
-  <div class="dgreet">
-    <div><h1 id="dHello">Hallo</h1><p id="dKurz"></p></div>
-    <div class="dnote" id="dNote" hidden></div>
-  </div>
+  <section class="ck-hero" aria-label="Markt heute">
+    <svg class="ck-hero-bg" viewBox="0 0 1240 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs><radialGradient id="ckGlow" cx="85%" cy="10%" r="70%"><stop offset="0" style="stop-color: var(--h-glow); stop-opacity: var(--h-glow-o)"/><stop offset=".6" style="stop-color: var(--h-glow); stop-opacity: .08"/><stop offset="1" style="stop-color: var(--h-glow); stop-opacity: 0"/></radialGradient></defs>
+      <rect width="1240" height="460" style="fill: var(--h-bg)"/><rect width="1240" height="460" fill="url(#ckGlow)"/>
+      <path d="M-20 440 q50 -90 100 0 q80 -150 160 0 q110 -210 220 0 q140 -260 280 0 q150 -290 300 -40" fill="none" style="stroke: var(--h-dots); stroke-opacity: var(--h-dots-o)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 12"/>
+    </svg>
+    <div class="ck-hero-in">
+      <div class="ck-text">
+        <div class="ck-eyebrow" id="dDatum">Markt heute</div>
+        <h1 id="dKern">Lade Marktlage …</h1>
+        <p id="dLageSatz"></p>
+        <div class="ck-notiz" id="dNote" hidden></div>
+      </div>
+      <div class="ck-lage" id="dRegime"></div>
+    </div>
+    <div class="ck-ticker" id="dTicker"></div>
+    <div class="ck-fuss"><span id="dTickerStand"></span><span id="rMini"></span></div>
+  </section>
 
-  <section class="dhero">
-    <div class="dcard"><div class="dcard-h"><h3>Marktlage</h3><span class="meta" id="dRegimeMeta"></span></div><div class="dcard-b" id="dRegime"><div class="placeholder">Lade Marktlage …</div></div><div id="rMini" class="dmini"></div></div>
+  <section class="dhero dhero-2">
     <div class="dcard"><div class="dcard-h"><h3>Mein Trade heute</h3><span class="meta" id="dPickMeta"></span></div><div class="dcard-b" id="dPick"><div class="placeholder">Noch keine Daten – wird nach dem nächsten P1-Lauf befüllt.</div></div></div>
     <div class="dcard"><div class="dcard-h"><h3>Mein Depot</h3><span class="meta" id="dDepotMeta"></span></div><div class="dcard-b" id="dDepot"><div class="placeholder">Noch keine offenen Positionen.</div></div></div>
+  </section>
+
+  <section class="ck-news">
+    <div class="ck-news-kopf"><h2>News zu Watchlist &amp; Depot</h2><span>Karte antippen für die Einordnung</span></div>
+    <div id="newsSignale"><div class="placeholder">Noch keine News-Signale.</div></div>
   </section>
 
   <section class="dkpis">
@@ -431,15 +538,12 @@
       <div class="wl-legende"><span><span class="wl-dots"><i class="gruen"></i><i class="gelb"></i><i class="rot"></i></span>Signale in der Reihenfolge Kapitalfluss · Trend · Optionsflow (grün positiv, gelb neutral, rot negativ)</span><span>Einstieg: zum aktuellen Kurs, wenn höchstens 3 % über SMA20, sonst Limit-Order an SMA20 · Stop = Einstieg − 2 × ATR · Verkauf spätestens nach 10 Handelstagen</span></div>
     </div>
     <aside class="dside">
-      <div class="dcard"><div class="dcard-h"><h3>Märkte</h3><span class="meta" id="dIdxMeta"></span></div><div class="dcard-b" id="dIdx"></div></div>
       <div class="dcard"><div class="dcard-h"><h3>Sektoren</h3><span class="meta">Stärke vs. S&amp;P 500, 20 Tage</span></div><div class="dcard-b" id="dSectors"></div></div>
     </aside>
   </section>
 
-  <div class="dgrid2">
-    <div><h2>Markt heute</h2><div id="newsToday" class="card"><div class="placeholder">Noch keine Daten – wird im Laufe des Tages befüllt.</div></div></div>
-    <div><h2>News zu Watchlist &amp; Depot</h2><div id="newsSignale" class="card"><div class="placeholder">Noch keine News-Signale.</div></div></div>
-  </div>
+  <h2>Markt heute</h2>
+  <div id="newsToday" class="card"><div class="placeholder">Noch keine Daten – wird im Laufe des Tages befüllt.</div></div>
 
   <h2>Hold-Test (P5.5)</h2>
   <div id="p55candidates"><div class="placeholder">Noch keine Daten – wird nach dem nächsten P5.5-Lauf befüllt.</div></div>
@@ -643,21 +747,35 @@ function newsBadge(ticker) {
   return '<span class="news-badge ' + cls + '" title="' + tip + '">' + txt + '</span>';
 }
 
-function renderNewsSignale(data, relevant) {
+// News zu Watchlist & Depot als Karten: Rückenwind (positiv) und Gegenwind (negativ), neutrale eingeklappt.
+// Ein Klick auf die Karte zeigt die Einordnung und die Quelle.
+function renderNewsSignale(data, relevant, portfolio) {
   const el = document.getElementById("newsSignale");
   if (!data || !(data.signale || []).length) return;
   const grenze = Date.now() - 3 * 864e5;
   const FIRMA = ["Gewinnwarnung", "Verfahren", "Bilanz", "Übernahme", "Earnings", "Analyst", "Auftrag/Produkt", "Management", "Sektor"];
   const zeitVon = (s) => { const z = pubZeit(s.published_at || s.datum); return z ? z.d.getTime() : 0; };
   const list = data.signale.filter((s) => FIRMA.includes(s.kategorie) && zeitVon(s) >= grenze && (!relevant || !relevant.size || relevant.has(s.ticker)))
-    .sort((a, b) => zeitVon(b) - zeitVon(a)).slice(0, 12);
+    .sort((a, b) => zeitVon(b) - zeitVon(a));
   if (!list.length) { el.innerHTML = '<div class="placeholder">Keine neuen Meldungen zu Depot, Watchlist und aktiven Kandidaten in den letzten 3 Tagen.</div>'; return; }
-  el.innerHTML = list.map((s) => {
-    const cls = s.einschaetzung === "positiv" ? "news-pos" : s.einschaetzung === "negativ" ? "news-neg" : "news-neu";
-    const titel = s.url ? '<a href="' + s.url + '" target="_blank" rel="noopener">' + (s.titel || "") + '</a>' : (s.titel || "");
-    return '<div class="headline"><span class="news-badge ' + cls + '" style="margin:0 8px 0 0;">' + (s.einschaetzung || "neutral") + (s.gewicht ? " · " + s.gewicht : "") + '</span><b>' + (s.name || s.ticker) + '</b> – ' + titel +
-      '<div class="src">' + [s.kategorie, s.quelle, pubInfo({ published_at: s.published_at })].filter(Boolean).join(" · ") + (s.kurz ? " – " + s.kurz : "") + '</div></div>';
-  }).join("") + '<div class="timestamp">Signale der Nachrichten-Aufgaben zu Depot, Watchlist und aktiven Kandidaten, letzte 3 Tage. Daraus rechnet der Feed die News-Korrektur am Score (max. ±10). Stand: ' + fmtTime(data.generated_at_utc) + '</div>';
+  const imDepot = new Set(((portfolio && portfolio.positions) || []).map((p) => p.ticker));
+  const karte = (s) => '<div class="ck-sig ' + (s.einschaetzung === "negativ" ? "neg" : s.einschaetzung === "positiv" ? "" : "neu") + '" tabindex="0" role="button" aria-expanded="false">' +
+    '<div class="kopf"><span class="firma">' + dEsc(s.name || s.ticker) + '</span><span class="wann">' + pubInfo({ published_at: s.published_at || s.datum }) + "</span></div>" +
+    '<div class="titel">' + dEsc(s.titel) + "</div>" +
+    '<div class="chips"><span' + (imDepot.has(s.ticker) ? ' class="stark">Im Depot' : ">Watchlist") + "</span><span>" + dEsc(s.kategorie) + "</span>" +
+    (s.gewicht === "hoch" || s.gewicht === "mittel" ? '<span class="stark">Gewicht ' + dEsc(s.gewicht) + "</span>" : "") + "</div>" +
+    '<div class="bewertung">' + dEsc(s.kurz || "") + (s.url ? ' <a href="' + dEsc(s.url) + '" target="_blank" rel="noopener">' + dEsc(s.quelle || "Quelle") + " →</a>" : "") + "</div></div>";
+  const pos = list.filter((s) => s.einschaetzung === "positiv"), neg = list.filter((s) => s.einschaetzung === "negativ"), neu = list.filter((s) => s.einschaetzung !== "positiv" && s.einschaetzung !== "negativ");
+  const spalte = (titel, farbe, l) => '<div class="ck-sig-spalte"><h3><i style="background:' + farbe + '"></i>' + titel + " <small>" + l.length + "</small></h3>" +
+    (l.length ? l.slice(0, 5).map(karte).join("") + (l.length > 5 ? '<details class="ck-sig-neutral"><summary>' + (l.length - 5) + " weitere</summary>" + l.slice(5).map(karte).join("") + "</details>" : "") : '<div class="placeholder">Keine.</div>') + "</div>";
+  el.innerHTML = '<div class="ck-sig-grid">' + spalte("Rückenwind", "var(--good)", pos) + spalte("Gegenwind", "var(--bad)", neg) + "</div>" +
+    (neu.length ? '<details class="ck-sig-neutral"><summary>Neutrale Meldungen (' + neu.length + ")</summary>" + neu.map(karte).join("") + "</details>" : "") +
+    '<div class="timestamp">Meldungen der letzten 3 Tage zu Depot, Watchlist und aktiven Kandidaten. Daraus rechnet der Feed die News-Korrektur am Score (max. ±10). Stand: ' + fmtTime(data.generated_at_utc) + "</div>";
+  el.querySelectorAll(".ck-sig").forEach((k) => {
+    const umschalten = (e) => { if (e.target.closest("a")) return; k.classList.toggle("offen"); k.setAttribute("aria-expanded", k.classList.contains("offen")); };
+    k.addEventListener("click", umschalten);
+    k.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); umschalten(e); } });
+  });
 }
 
 
@@ -1465,7 +1583,7 @@ function renderNewsToday(data, headlines) {
   ]);
   const feed = latestFeed([p4, p5, p55, p1]);
   FEED = feed; P4C = candidates;
-  renderHeute({ feed, barometer, top3, candidates, portfolio, performance, notiz });
+  renderHeute({ feed, barometer, top3, candidates, portfolio, performance, notiz, news: newsToday });
   renderP55Candidates(p55Candidates);
   renderCandidateTracking(candidateTracking);
   renderHistorie(candidateTracking);
@@ -1477,7 +1595,7 @@ function renderNewsToday(data, headlines) {
     ...((candidates && candidates.candidates) || []).map((c) => c.ticker),
     ...((candidateTracking && candidateTracking.kandidaten) || []).filter((k) => isOpenStatus(k.status)).map((k) => k.ticker),
   ]);
-  renderNewsSignale(newsSignale, relevant);
+  renderNewsSignale(newsSignale, relevant, portfolio);
   renderJournal(journal, feed);
   renderRohstoffe(rohstoffe, rohMeldungen, newsToday, candidates);
 }
@@ -1516,23 +1634,71 @@ const D_STUFE = { "Kauf – hohe Qualität": "Setup stark", "Kauf – solide": "
 const dStufe = (st) => D_STUFE[st] || st || "–";
 const dStufeTon = (st) => (/^Kauf/.test(st || "") ? "good" : /^Beobachten/.test(st || "") ? "warn" : /^Überdehnt|^Ausgeschlossen/.test(st || "") ? "bad" : "neutral");
 
-function dRegime(feed, barometer) {
+// Deutsche Kurznamen der Sektoren für die automatische Kernaussage
+const D_SEKTOR = { Energy: "Energie", Healthcare: "Gesundheit", Insurance: "Versicherer", Payments: "Zahlungsdienste", Utilities: "Versorger",
+  Defense: "Rüstung", Industrials: "Industrie", "Semiconductors/AI": "Halbleiter", "Fintech/Brokerage": "Fintech", "Software/Cloud": "Software",
+  Technology: "Technologie", Cybersecurity: "Cybersecurity", MedTech: "Medizintechnik", Financials: "Banken", Materials: "Rohstoffwerte",
+  Transportation: "Transport", "Consumer Discretionary": "Konsum", "Industrials/Infrastructure": "Infrastruktur", Edelmetalle: "Edelmetalle" };
+
+// Kernaussage: Feld "kernaussage" der Nachrichten-Aufgabe, sonst aus Marktlage und Sektoren
+function dKernaussage(feed, news) {
+  if (news && news.kernaussage && news.date === dIsoTag(feed.generated_at_utc)) return news.kernaussage;
+  const S = Object.entries(feed.sectors || {}).sort((a, b) => (b[1].rs_20d_vs_spy || 0) - (a[1].rs_20d_vs_spy || 0));
+  if (!S.length) return "Markt heute";
+  const de = (n) => D_SEKTOR[n] || n;
+  const auftakt = { "RISK-ON": "Der Markt trägt", NEUTRAL: "Gespaltener Markt", "RISK-OFF": "Rauer Markt" }[feed.regime.status] || "Markt heute";
+  return auftakt + ": " + S.slice(0, 2).map(([n]) => de(n)).join(" und ") + " vorn, " + de(S[S.length - 1][0]) + " unter Druck.";
+}
+function dErsterSatz(t) {
+  t = String(t || "");
+  const m = t.match(/^(.{40,230}?[.!?])(\s|$)/);
+  if (m) return m[1];
+  const kurz = t.slice(0, 190), schnitt = Math.max(kurz.lastIndexOf(", "), kurz.lastIndexOf(" – "), kurz.lastIndexOf("; "));
+  return (schnitt > 80 ? kurz.slice(0, schnitt) : kurz.slice(0, kurz.lastIndexOf(" "))) + " …";
+}
+
+// Halbkreis-Tacho von „Abwarten“ bis „Rückenwind“; Zeiger = erfüllte Kriterien
+function dTacho(r) {
+  const n = (r.kriterien || []).length || 5;
+  const w = r.status === "RISK-OFF" && r.kriterien_erfuellt > 1 ? 0.6 : r.kriterien_erfuellt;  // Override (z. B. VIX > 30) zeigt „Abwarten“
+  const cx = 120, cy = 120, R = 96, wink = (v) => Math.PI * (1 - v / n);
+  const pt = (v, rad) => [cx + rad * Math.cos(wink(v)), cy - rad * Math.sin(wink(v))];
+  const bogen = (a, b, col) => { const [x1, y1] = pt(a, R), [x2, y2] = pt(b, R); return '<path d="M' + x1 + " " + y1 + " A" + R + " " + R + " 0 0 1 " + x2 + " " + y2 + '" stroke="' + col + '" stroke-width="18" fill="none"/>'; };
+  const [nx, ny] = pt(w, R - 26);
+  return '<svg viewBox="0 0 240 140" class="ck-tacho" aria-hidden="true">' + bogen(0, 1.45, "var(--bad)") + bogen(1.55, 3.45, "#f5a623") + bogen(3.55, n, "var(--good)") +
+    '<line x1="' + cx + '" y1="' + cy + '" x2="' + nx + '" y2="' + ny + '" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="' + cx + '" cy="' + cy + '" r="8" fill="currentColor"/>' +
+    '<text x="22" y="138" class="t-l">Abwarten</text><text x="120" y="12" class="t-l" text-anchor="middle">Gemischt</text><text x="218" y="138" class="t-l" text-anchor="end">Rückenwind</text></svg>';
+}
+
+function dHero(feed, news) {
   const r = feed && feed.regime;
-  if (!r) { dEl("dRegime").innerHTML = '<div class="placeholder">Keine Feed-Daten verfügbar.</div>'; return; }
-  const [titel, ton] = D_LAGE[r.status] || [r.status, "neutral"];
+  if (!r) { dEl("dKern").textContent = "Keine Feed-Daten verfügbar."; return; }
+  const [titel] = D_LAGE[r.status] || [r.status];
   const k = r.kriterien || [];
-  dEl("dRegimeMeta").textContent = "Lauf " + (LAUF_NAMEN[feed.run] || feed.run || "") + " · " + dWann(feed.generated_at_utc);
-  dEl("dRegime").innerHTML =
-    '<div class="dstatus"><b>' + dEsc(titel) + '</b><span class="pill neutral">' + dEsc(r.status) + '</span><span class="pill ' + ton + '"><span class="d"></span>' + r.kriterien_erfuellt + "/" + k.length + " Kriterien</span></div>" +
-    '<div class="dmeter">' + k.map((c) => '<i class="' + (c.erfuellt ? "on" : "") + '"></i>').join("") + "</div>" +
-    '<div class="kliste">' + k.map((c) => kritZeile(c.erfuellt, hauptKritText(c))).join("") + "</div>" +
-    '<div class="dlimits"><div class="dlimit"><b>' + (r.max_neue_positionen ?? "–") + '</b><span>neue Position' + (r.max_neue_positionen === 1 ? "" : "en") + ' heute</span></div>' +
-    '<div class="dlimit"><b>' + (r.max_offene_positionen ?? "–") + '</b><span>max. offen</span></div></div>' +
+  dEl("dDatum").textContent = "Markt heute · " + new Date(feed.generated_at_utc).toLocaleDateString("de-DE", { timeZone: "Europe/Berlin", weekday: "long", day: "numeric", month: "long" }) +
+    " · Lauf " + (LAUF_NAMEN[feed.run] || feed.run || "") + ", " + new Date(feed.generated_at_utc).toLocaleTimeString("de-DE", { timeZone: "Europe/Berlin", hour: "2-digit", minute: "2-digit" }) + " Uhr";
+  dEl("dKern").textContent = dKernaussage(feed, news);
+  dEl("dLageSatz").textContent = news && news.lage && news.date === dIsoTag(feed.generated_at_utc) ? dErsterSatz(news.lage) : (r.kurztext || "");
+  const neu = r.max_neue_positionen, offen = r.max_offene_positionen;
+  const regel = neu === 0 ? "Nach meinen Regeln heute keine neuen Käufe." : "Mein Regelwerk erlaubt heute " + (neu === 1 ? "höchstens eine neue Position" : "bis zu " + neu + " neue Positionen") + (offen != null ? ", maximal " + offen + " offen." : ".");
+  dEl("dRegime").setAttribute("aria-label", "Marktlage " + titel + ", " + r.kriterien_erfuellt + " von " + k.length + " Kriterien erfüllt");
+  dEl("dRegime").innerHTML = '<div class="ck-lage-kopf"><span>Marktlage</span><span class="pill"><span class="d"></span>' + r.kriterien_erfuellt + " von " + k.length + " Kriterien</span></div>" +
+    dTacho(r) + '<div class="ck-lage-titel">' + dEsc(titel) + "<small>" + dEsc(r.status) + "</small></div>" +
+    '<p class="ck-lage-text">' + regel + "</p>" +
+    '<details><summary>Die fünf Kriterien</summary><div class="kliste">' + k.map((c) => kritZeile(c.erfuellt, hauptKritText(c))).join("") + "</div>" +
     (r.override ? '<div class="timestamp">' + dEsc(r.override) + "</div>" : "") +
-    (r.hinweise || []).map((h) => '<div class="timestamp">' + dEsc(h) + "</div>").join("");
-  // Claudes Kurzkommentar nur, wenn er zum selben Stand gehört wie der Feed
-  const passt = barometer && barometer.status === r.status && barometer.generated_at_utc && new Date(barometer.generated_at_utc) >= new Date(feed.generated_at_utc);
-  dEl("dKurz").textContent = passt ? (barometer.kurzbegruendung || barometer.begruendung || "") : (r.kurztext || "");
+    (r.hinweise || []).map((h) => '<div class="timestamp">' + dEsc(h) + "</div>").join("") + "</details>";
+  // Kennzahlen-Leiste
+  const I = feed.indices || {}, vix = feed.macro && feed.macro.vix, tnx = feed.macro && feed.macro.us10y;
+  const gold = feed.rohstoffe && feed.rohstoffe.werte && feed.rohstoffe.werte.GOLD;
+  const laufend = Object.values(I).some((v) => v && v.partial_last_bar);
+  const zelle = (name, wert, sub, cls) => "<div><span>" + name + '</span><b class="num">' + wert + '</b><i class="num ' + cls + '">' + sub + "</i></div>";
+  const idx = (key, name) => (I[key] && I[key].close != null ? zelle(name, dNum(I[key].close, 2), dPct(I[key].chg_1d_pct, 2), dCls(I[key].chg_1d_pct)) : "");
+  dEl("dTicker").innerHTML = idx("SP500", "S&amp;P 500") + idx("NASDAQ_COMPOSITE", "Nasdaq-100") + idx("RUSSELL2000", "Russell 2000") + idx("SOX_PROXY", "Halbleiter") +
+    (gold && gold.close != null ? zelle("Gold", dNum(gold.close, 2), dPct(gold.tagesbewegung_pct, 2), dCls(gold.tagesbewegung_pct)) : "") +
+    (vix && vix.close != null ? zelle("VIX", dNum(vix.close, 2), vix.close < 20 ? "ruhig" : "nervös", vix.close < 20 ? "up" : "down") : "") +
+    (tnx && tnx.close != null ? zelle("US-Rendite 10 J.", dNum(tnx.close, 2) + " %", "20 T " + (tnx.chg_20d_abs > 0 ? "+" : "") + dNum(tnx.chg_20d_abs, 2), "nb") : "");
+  dEl("dTickerStand").textContent = (laufend ? "Veränderung heute, Sitzung läuft" : "Veränderung zum Vortag") + " · Stand " + dWann(feed.generated_at_utc) + " Uhr";
 }
 
 function dPick(top, cands, feed) {
@@ -1636,18 +1802,6 @@ function dWatchlist(c, pf) {
   dStandHinweis(dEl("dCands").closest(".dcard"), c.generated_at_utc, "P4");
 }
 
-function dIndizes(feed) {
-  const I = (feed && feed.indices) || {};
-  // Ab P5 enthält die letzte Tageskerze die laufende US-Sitzung: Veränderung = heute bis jetzt
-  const laufend = Object.values(I).some((v) => v && v.partial_last_bar);
-  dEl("dIdxMeta").textContent = feed ? (laufend ? "Veränderung heute, Stand " + dWann(feed.generated_at_utc) + " (Sitzung läuft)" : "Veränderung zum Vortag, Schlusskurse") : "";
-  const zeilen = [["SP500", "S&amp;P 500", "SPY"], ["NASDAQ_COMPOSITE", "Nasdaq-100", "QQQ"], ["RUSSELL2000", "Russell 2000", "IWM"], ["SOX_PROXY", "Halbleiter", "SOXX"]];
-  let h = zeilen.filter(([k]) => I[k]).map(([k, n, t]) =>
-    '<div class="didx"><div><b style="font-weight:500">' + n + "</b><small>" + t + " · RSI " + dNum(I[k].rsi14, 0) + '</small></div><div class="num">' + dNum(I[k].close, 2) + '</div><div class="num r ' + dCls(I[k].chg_1d_pct) + '">' + dPct(I[k].chg_1d_pct, 2) + "</div></div>").join("");
-  const t = feed && feed.macro && feed.macro.us10y;
-  if (t && t.close != null) h += '<div class="didx"><div><b style="font-weight:500">US-Rendite 10 J.</b><small>20 Tage ' + (t.chg_20d_abs > 0 ? "+" : "") + dNum(t.chg_20d_abs, 2) + ' Pkt.</small></div><div class="num">' + dNum(t.close, 2) + " %</div><div></div></div>";
-  dEl("dIdx").innerHTML = h || '<div class="placeholder">Keine Daten.</div>';
-}
 
 function dSektoren(feed) {
   // Sortiert nach dem angezeigten Wert (relative Stärke 20 Tage); der Gesamtrang steht im Tooltip
@@ -1665,21 +1819,18 @@ function dSektoren(feed) {
 function dNotiz(notiz) {
   const box = dEl("dNote");
   if (!notiz || !notiz.text) { box.hidden = true; return; }
-  box.innerHTML = '<span class="l">Meine Notiz</span><p>' + dEsc(notiz.text) + '</p><span class="s">' + dWann(notiz.updated_at_utc || notiz.generated_at_utc) + "</span>";
+  box.innerHTML = dEsc(notiz.text) + "<small>Meine Notiz · " + dWann(notiz.updated_at_utc || notiz.generated_at_utc) + "</small>";
   box.hidden = false;
 }
 
 function renderHeute(d) {
-  const h = Number(new Date().toLocaleString("de-DE", { timeZone: "Europe/Berlin", hour: "2-digit", hour12: false }));
-  dEl("dHello").textContent = (h < 11 ? "Guten Morgen" : h < 18 ? "Guten Tag" : "Guten Abend") + ", Patrick";
   dEl("dStamp").textContent = d.feed ? "Aktualisiert " + dVor(d.feed.generated_at_utc) : "";
-  dRegime(d.feed, d.barometer);
+  dHero(d.feed, d.news);
   dPick(d.top3, d.candidates, d.feed);
   dDepot(d.portfolio);
   dPerf(d.performance);
   dKpis(d.performance, d.feed);
   dWatchlist(d.candidates, d.portfolio);
-  dIndizes(d.feed);
   dSektoren(d.feed);
   dNotiz(d.notiz);
 }
