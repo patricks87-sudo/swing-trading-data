@@ -616,7 +616,7 @@
       <div class="full"><button class="btn" type="submit">Eintrag absenden</button></div>
     </form>
     <div id="jmsg" class="jmsg"></div>
-    <div class="jhint">So funktioniert's: Nach „Eintrag absenden“ öffnet sich GitHub mit dem fertig ausgefüllten Eintrag – dort nur noch auf <b>„Create“</b> klicken. Etwa 30 Sekunden später ist der Eintrag gespeichert und erscheint hier nach dem Neuladen; die Bestätigung steht auch als Kommentar am Eintrag. <br><b>Bestand:</b> Aktien, die du schon vorher oder unabhängig vom System hältst, trägst du als Kauf mit Art „Bestand“ ein – mit deinem durchschnittlichen Einstandskurs aus Trade Republic und dem ungefähren Kaufdatum. Sie werden täglich bewertet und auf News geprüft, aber ohne 10-Tage-Regel und getrennt von der Swing-Bilanz. Verkaufst du, nutze den Knopf „Verkauf eintragen“ bei der Position; ist sie danach bei 0 Stück, verschwindet sie aus dem Depot. Fehleingaben machst du per „Storno“ rückgängig.<br><b>Aktie finden:</b> Tippe die ersten Buchstaben des Namens – unter dem Feld erscheint eine Vorschlagsliste (Watchlist, DAX, deutsche Nebenwerte, große Europa-/US-Werte, deine Depotwerte). Mit Klick oder Pfeiltasten + Enter auswählen. Beim Verkauf zeigt die Liste nur deine Depotwerte. Steht eine Aktie nicht in der Liste, gib ihr Börsenkürzel in Großbuchstaben ein (z. B. OHB); deutsche Werte stellt das System automatisch auf Xetra um. Titel außerhalb der Watchlist erhalten ihren Kurs beim nächsten Feed-Lauf.<br>Hinweis: Solange das Repository öffentlich ist, sind Einträge für andere einsehbar. Nach dem Umzug auf privat (docs/CLOUDFLARE.md) sieht sie nur noch du.</div>
+    <div class="jhint">So funktioniert's: Nach „Eintrag absenden“ wird der Eintrag direkt gespeichert – nach etwa 30–60 Sekunden erscheint hier die Bestätigung und das Journal aktualisiert sich. Klappt das nicht (oder läuft das Cockpit noch über GitHub Pages), öffnet sich GitHub mit dem fertig ausgefüllten Eintrag; dort nur noch auf <b>„Create“</b> klicken. <br><b>Bestand:</b> Aktien, die du schon vorher oder unabhängig vom System hältst, trägst du als Kauf mit Art „Bestand“ ein – mit deinem durchschnittlichen Einstandskurs aus Trade Republic und dem ungefähren Kaufdatum. Sie werden täglich bewertet und auf News geprüft, aber ohne 10-Tage-Regel und getrennt von der Swing-Bilanz. Verkaufst du, nutze den Knopf „Verkauf eintragen“ bei der Position; ist sie danach bei 0 Stück, verschwindet sie aus dem Depot. Fehleingaben machst du per „Storno“ rückgängig.<br><b>Aktie finden:</b> Tippe die ersten Buchstaben des Namens – unter dem Feld erscheint eine Vorschlagsliste (Watchlist, DAX, deutsche Nebenwerte, große Europa-/US-Werte, deine Depotwerte). Mit Klick oder Pfeiltasten + Enter auswählen. Beim Verkauf zeigt die Liste nur deine Depotwerte. Steht eine Aktie nicht in der Liste, gib ihr Börsenkürzel in Großbuchstaben ein (z. B. OHB); deutsche Werte stellt das System automatisch auf Xetra um. Titel außerhalb der Watchlist erhalten ihren Kurs beim nächsten Feed-Lauf.<br>Hinweis: Solange das Repository öffentlich ist, sind Einträge für andere einsehbar. Nach dem Umstellen auf privat (docs/CLOUDFLARE.md) sieht sie nur noch du.</div>
   </div>
 
   <h2>Offene Positionen</h2>
@@ -1134,11 +1134,56 @@ const jNum = (v) => { if (v == null) return null; const t = String(v).trim().rep
 const eurSig = (v) => (v == null ? "–" : '<span style="color:' + (v >= 0 ? "var(--green)" : "var(--red)") + '">' + (v >= 0 ? "+" : "") + v.toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €</span>");
 const dDE = (d) => (d ? new Date(d + "T12:00:00").toLocaleDateString("de-DE") : "–");
 
-function journalIssue(daten, titel) {
+// Hinter dem Worker speichert das Cockpit direkt (Worker legt das Issue an, journal.yml
+// verarbeitet es). Auf GitHub Pages, lokal oder wenn das scheitert: Weg über GitHub.
+const JOURNAL_DIREKT = REPO_BASE === "/data/";
+function journalUrl(daten, titel) {
   const body = "Journal-Eintrag aus dem Cockpit – bitte unverändert mit „Create“ absenden.\n\n```json\n" + JSON.stringify(daten, null, 2) + "\n```\n";
-  const url = JOURNAL_REPO + "?title=" + encodeURIComponent("[Trade] " + titel) + "&body=" + encodeURIComponent(body);
+  return JOURNAL_REPO + "?title=" + encodeURIComponent("[Trade] " + titel) + "&body=" + encodeURIComponent(body);
+}
+function journalIssue(daten, titel) {
+  const url = journalUrl(daten, titel);
   const w = window.open(url, "_blank");
   if (w) w.opener = null; else location.href = url;
+}
+const jMeldung = (farbe, html) => { document.getElementById("jmsg").innerHTML = '<span style="color:var(--' + farbe + ')">' + html + "</span>"; };
+// Antwort des Workflows (kurzes Markdown) lesbar machen
+const jAntwort = (t) => dEsc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/(^|\s)_(.+?)_(?=\s|$)/g, "$1<i>$2</i>").replace(/\n+/g, "<br>");
+
+// Liefert true, sobald der Eintrag abgeschickt ist (Formular darf geleert werden).
+async function journalSenden(daten, titel) {
+  if (!JOURNAL_DIREKT) {
+    journalIssue(daten, titel);
+    jMeldung("green", "GitHub wurde in einem neuen Tab geöffnet – dort auf „Create“ klicken.");
+    return true;
+  }
+  jMeldung("muted", "Wird gespeichert …");
+  let nr;
+  try {
+    const r = await fetch("/api/journal", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ titel, daten }) });
+    const a = await r.json().catch(() => ({}));
+    if (!r.ok || !a.ok) throw new Error([404, 405, 501].includes(r.status) ? "im Worker noch nicht eingerichtet" : a.fehler || "Fehler " + r.status);
+    nr = a.nummer;
+  } catch (e) {
+    // kein window.open nach await (Popup-Sperre) – stattdessen Link zum Anklicken
+    jMeldung("red", "Direkt speichern hat nicht geklappt (" + dEsc(e.message) + '). <a href="' + dEsc(journalUrl(daten, titel)) + '" target="_blank" rel="noopener" style="color:var(--brand);font-weight:600">Stattdessen über GitHub eintragen</a>');
+    return false;
+  }
+  jMeldung("muted", "Eintrag #" + nr + " übermittelt – wird verarbeitet, das dauert etwa 30–60 Sekunden …");
+  journalVerfolgen(nr, 0);
+  return true;
+}
+
+async function journalVerfolgen(nr, versuch) {
+  if (versuch >= 18) { jMeldung("muted", "Eintrag #" + nr + " ist noch in Bearbeitung. Bitte später neu laden – die Antwort steht dann im Journal."); return; }
+  await new Promise((ok) => setTimeout(ok, versuch ? 10000 : 20000));
+  let s = null;
+  try { const r = await fetch("/api/journal/" + nr, { cache: "no-store" }); s = await r.json(); } catch (e) {}
+  if (!s || !s.ok || s.offen) return journalVerfolgen(nr, versuch + 1);
+  if (!s.erfolgreich) { jMeldung("red", s.antwort ? jAntwort(s.antwort) : "Eintrag #" + nr + " wurde nicht gespeichert."); return; }
+  jMeldung("green", "✓ " + (s.antwort ? jAntwort(s.antwort) : "Eintrag #" + nr + " gespeichert."));
+  const j = await fetchJson("journal.json");
+  if (j) renderJournal(j, FEED);
 }
 
 function jPosition(ticker) { return ((JOURNAL && JOURNAL.positionen) || []).find((p) => p.ticker === ticker); }
@@ -1250,9 +1295,12 @@ function initJournalForm() {
     if (d.stop_eur == null) delete d.stop_eur;
     const k = jKandidat(d.ticker); if (k && k.name) d.name = k.name;
     if (!d.ticker) delete d.ticker;
-    journalIssue(d, (d.aktion === "kauf" ? (d.art === "bestand" ? "Bestand " : "Kauf ") : "Verkauf ") + d.stueck + " " + (d.name || d.ticker || d.isin) + " zu " + d.kurs_eur.toFixed(2) + " €" + (d.test ? " (Test)" : ""));
-    msg.innerHTML = '<span style="color:var(--green)">GitHub wurde in einem neuen Tab geöffnet – dort auf „Create“ klicken.</span>';
-    f.stueck.value = ""; f.kurs_eur.value = ""; f.notiz.value = ""; f.stop_eur.value = ""; f.test.checked = false;
+    const knopf = f.querySelector("[type=submit]");
+    if (knopf) knopf.disabled = true;
+    journalSenden(d, (d.aktion === "kauf" ? (d.art === "bestand" ? "Bestand " : "Kauf ") : "Verkauf ") + d.stueck + " " + (d.name || d.ticker || d.isin) + " zu " + d.kurs_eur.toFixed(2).replace(".", ",") + " €" + (d.test ? " (Test)" : "")).then((ok) => {
+      if (knopf) knopf.disabled = false;
+      if (ok) { f.stueck.value = ""; f.kurs_eur.value = ""; f.notiz.value = ""; f.stop_eur.value = ""; f.test.checked = false; }
+    });
   });
   document.addEventListener("click", (e) => {
     const v = e.target.closest("[data-verkauf]");
@@ -1268,8 +1316,9 @@ function initJournalForm() {
   document.addEventListener("click", (e) => {
     const b = e.target.closest("[data-storno]");
     if (!b) return;
-    if (!confirm("Eintrag " + b.dataset.storno + " stornieren? GitHub öffnet sich zum Bestätigen.")) return;
-    journalIssue({ aktion: "storno", ref: b.dataset.storno }, "Storno " + b.dataset.storno);
+    if (!confirm("Eintrag " + b.dataset.storno + " stornieren?" + (JOURNAL_DIREKT ? "" : " GitHub öffnet sich zum Bestätigen."))) return;
+    journalSenden({ aktion: "storno", ref: b.dataset.storno }, "Storno " + b.dataset.storno);
+    document.getElementById("jmsg").scrollIntoView({ behavior: "smooth", block: "center" });
   });
 }
 
