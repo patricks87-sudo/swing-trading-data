@@ -1,10 +1,10 @@
 {
- "generated_at_utc": "2026-10-23T15:55:00+00:00",
- "top3": [
-  {"ticker": "UNP", "name": "Union Pacific", "aktion": "Limit-Order", "begruendung": "Einziger heute kaufbarer Kandidat (P4 Kauf – solide, Score 71,5; Feed 75,8). Limit-Order an der SMA20 bei 251,46 €, gültig bis Handelsschluss, 7 Stück (ca. 1.760 € Kapital, 69 € Risiko), Schutz-Stop 241,55 €, Verkauf spätestens nach 10 Handelstagen (06.11.2026) zum Schlusskurs. P5.5 Hold-Test nur 2/4 – deshalb kein Kauf zum Kurs. Earnings-Termin nicht im Feed (Q3 kam am 22.10.), Trade-Republic-Spread nicht prüfbar – bitte vor Order prüfen."},
-  {"ticker": "PLTR", "name": "Palantir Technologies", "aktion": "Beobachten", "begruendung": "Feed inzwischen „Kauf – hohe Qualität“ (77,6, Einstieg am aktuellen Kurs), aber P4 nur Beobachten (Kapitalfluss rot), P5.5 Hold-Test 3/4 mit Volumen 0,72-fach und Earnings am 02.11.2026 (Gap-Risiko). Heute kein Einstieg – morgen neu prüfen."},
-  {"ticker": "ISRG", "name": "Intuitive Surgical", "aktion": "Beobachten", "begruendung": "Hold-Test 4/4 (+2,75 % seit Eröffnung), aber überdehnt (drei Bulltrap-Flags, Trendkontext rot). Kein Einstieg zum Kurs; Wiedereinstieg nur am SMA20-Limit bei ca. 375 €."}
- ],
- "gesamteinschaetzung": "Regime NEUTRAL (3/5 Kriterien, max. 1 neue und 3 offene Swing-Positionen), Nasdaq 3,7 % unter SMA20, VIX 19,2 – defensive Rotation mit Healthcare, Energy und Cybersecurity vorn. Das Depot enthält nur Bestandspositionen, das Risikobudget von 375 € ist komplett frei; der einzige Kauf des Tages ist die Limit-Order auf Union Pacific. Rohstoff-Ampel ROT (0/6), Gold -4,1 % in 5 Tagen unter SMA50 und SMA200, keine Rotation in Metalle – nur Information, eine Gold/Silber-Empfehlung liegt im Feed nicht vor, gilt nicht für Aktien. Käufe bitte im Cockpit unter „Journal“ eintragen.",
- "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +1.99 Prozentpunkte über dem Nasdaq (n=44) – überwiegend liegengelassene Gewinne."
+  "generated_at_utc": "2026-10-24T07:55:00+00:00",
+  "top3": [
+    {"ticker": "CRWD", "name": "CrowdStrike", "aktion": "Kauf zum Kurs", "begruendung": "Score 92,4 (Kauf – hohe Qualität), Ampel dreimal grün, Hold-Test 4/4 (Volumen 1,54×). Einstieg 230,01 €, Schutz-Stop 205,73 €, 3 Stück (Kapitalbedarf 690 €, Risiko 73 €), spätestens nach 10 Handelstagen zum Schlusskurs verkaufen. Earnings erst 01.12.2026. Testlauf mit Freitagsdaten."},
+    {"ticker": "PANW", "name": "Palo Alto Networks", "aktion": "Beobachten", "begruendung": "Score 91,7 und Hold-Test 4/4, fachlich ebenfalls kaufbar (339,83 €, Stop 304,13 €, 2 Stück). Im Regime NEUTRAL ist nur 1 neue Position pro Tag erlaubt, CrowdStrike hat den höheren Score – Palo Alto Networks ist die Alternative, falls CrowdStrike nicht zustande kommt."},
+    {"ticker": "ZS", "name": "Zscaler", "aktion": "Beobachten", "begruendung": "Score 72,5, aber überdehnt (vier Bulltrap-Flags). Kein Einstieg zum aktuellen Kurs; Wiedereinstieg nur per Limit an der SMA20 (193,11 €, Stop 170,74 €, 3 Stück). Earnings 24.11.2026."}
+  ],
+  "gesamteinschaetzung": "Regime NEUTRAL (3 von 5 Kriterien), maximal 1 neue Position; es sind keine Swing-Positionen offen, das volle Risikobudget von 375 € ist frei. Cybersecurity ist der stärkste Sektor (Rang 1); Kaufempfehlung für CrowdStrike zum Kurs. Rohstoff-Ampel ROT (0/6), Gold und Silber nur zur Information: Gegenwind, keine Kaufempfehlung. Depot: Oracle, Rheinmetall und Salesforce laufen als Bestand außerhalb des Systems. Testlauf mit Daten vom Freitag, 23.10.2026.",
+  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +1,99 Prozentpunkte über dem Nasdaq (n=44) – überwiegend liegengelassene Gewinne."
 }
