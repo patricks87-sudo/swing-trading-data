@@ -1,17 +1,15 @@
-{
-  "generated_at_utc": "2026-10-24T07:55:00+00:00",
-  "status": "NEUTRAL",
-  "begruendung": "NEUTRAL: 3 von 5 Kriterien erfüllt. Nicht erfüllt: S&P 500 unter der SMA50 (−1,02 %) und Nasdaq unter der SMA20 (−4,19 %). Erfüllt: VIX 19,45 (unter 20), 58 % der Watchlist über der SMA50, 68 % im 5-Tage-Plus. US-10J-Rendite 4,99 % (nur Info). Testlauf mit Freitagsdaten (23.10.2026): Hold-Test bestanden bei CrowdStrike, Palo Alto Networks, Zscaler und Lockheed Martin (4 von 4); Einstieg heute nur bei CrowdStrike und Palo Alto Networks möglich, im Regime NEUTRAL aber max. 1 neue Position – CrowdStrike hat Vorrang (Score 92,4). Keine Swing-Positionen offen, volles Risikobudget von 375 € frei. Rohstoff-Ampel ROT (0/6): Gold und Silber nur zur Information.",
-  "kurzbegruendung": "NEUTRAL 3/5: Testlauf mit Freitagsdaten; Top-Chance CrowdStrike (Kauf zum Kurs), max. 1 neue Position.",
-  "sektor_rotation": [
-    {"sektor": "Cybersecurity", "trend": "positiv", "kommentar": "Stärkster Sektor (Rang 1), 5-Tage-Plus 13,5 %. CrowdStrike kaufbar am aktuellen Kurs; Palo Alto Networks gleichwertig, aber Tageslimit (1 neue Position); Zscaler überdehnt – nur Limit an SMA20.", "kandidaten": [{"name": "CrowdStrike", "empfehlung": "Kauf"}, {"name": "Palo Alto Networks", "empfehlung": "Beobachten"}, {"name": "Zscaler", "empfehlung": "Beobachten"}]},
-    {"sektor": "Energy", "trend": "positiv", "kommentar": "Rang 2, aber Chevron wegen Earnings in 4 Handelstagen ausgeschlossen.", "kandidaten": [{"name": "Chevron", "empfehlung": "Kein Einstieg"}]},
-    {"sektor": "Healthcare", "trend": "positiv", "kommentar": "Rang 3, UnitedHealth Group fällt im Hold-Test durch (0 von 4) – nur Beobachten.", "kandidaten": [{"name": "UnitedHealth Group", "empfehlung": "Beobachten"}]},
-    {"sektor": "Defense", "trend": "positiv", "kommentar": "Rang 4, Lockheed Martin besteht den Hold-Test, ist aber überdehnt (Abstand SMA20 über 8 %) – nicht hinterherlaufen, Limit an SMA20.", "kandidaten": [{"name": "Lockheed Martin", "empfehlung": "Beobachten"}]},
-    {"sektor": "Insurance", "trend": "positiv", "kommentar": "Rang 5, Travelers und Progressive wegen bärischem Optionsflow ausgeschlossen.", "kandidaten": [{"name": "Travelers", "empfehlung": "Kein Einstieg"}, {"name": "Progressive", "empfehlung": "Kein Einstieg"}]},
-    {"sektor": "Utilities", "trend": "positiv", "kommentar": "Rang 7, NextEra Energy Teilweise bestanden (Volumen nur 0,76-fach) – Beobachten.", "kandidaten": [{"name": "NextEra Energy", "empfehlung": "Beobachten"}]},
-    {"sektor": "Software/Cloud", "trend": "positiv", "kommentar": "Rang 10, Adobe fällt im Hold-Test durch (0 von 4); Palantir ausgeschlossen (Earnings).", "kandidaten": [{"name": "Adobe", "empfehlung": "Beobachten"}]},
-    {"sektor": "MedTech", "trend": "positiv", "kommentar": "Rang 11, Intuitive Surgical Teilweise bestanden (knapp unter VWAP), Trendkontext rot – Beobachten.", "kandidaten": [{"name": "Intuitive Surgical", "empfehlung": "Beobachten"}]},
-    {"sektor": "Consumer Discretionary", "trend": "positiv", "kommentar": "Rang 12, Tesla und Home Depot fallen im Hold-Test durch, Trendkontext rot – nur Beobachten.", "kandidaten": [{"name": "Tesla", "empfehlung": "Beobachten"}, {"name": "Home Depot", "empfehlung": "Beobachten"}]}
-  ]
-}
+{"generated_at_utc":"2026-10-26T13:10:00+00:00","status":"NEUTRAL","begruendung":"NEUTRAL: 3 von 5 Kriterien erfüllt. Erfüllt: VIX unter 20 (19,21), 58 % der Watchlist über SMA50, 68 % im 5-Tage-Plus. Nicht erfüllt: S&P 500 1,02 % unter SMA50, Nasdaq 4,19 % unter SMA20. Maximal 1 neue Position pro Tag, maximal 3 offene Positionen. US-10J-Rendite 4,99 % (nur Information). Rohstoffe: Ampel ROT, Aktien schwach, aber keine Rotation in Edelmetalle.","kurzbegruendung":"NEUTRAL (3/5): Indizes unter Trendlinien, Breite und VIX okay – 1 neue Position/Tag, Cybersecurity führt.","sektor_rotation":[
+{"sektor":"Cybersecurity","trend":"positiv","kommentar":"Rang 1, Sektorstärke 100; Kapitalfluss und Optionsflow stark, Kurse springen nach Cyber-Warnung und positiver Budgetumfrage.","kandidaten":[{"name":"CrowdStrike","empfehlung":"Kauf"},{"name":"Palo Alto Networks","empfehlung":"Kauf"},{"name":"Zscaler","empfehlung":"Beobachten"}]},
+{"sektor":"Energy","trend":"positiv","kommentar":"Rang 2; Chevron und ExxonMobil sind wegen Earnings in dieser Woche ausgeschlossen.","kandidaten":[]},
+{"sektor":"Healthcare","trend":"positiv","kommentar":"Rang 3; defensive Rotation, Sektor-ETF auf Rekordhoch.","kandidaten":[{"name":"UnitedHealth Group","empfehlung":"Beobachten"}]},
+{"sektor":"Defense","trend":"positiv","kommentar":"Rang 4; Lockheed Martin stark überdehnt (14,5 % über SMA20), Northrop Grumman ebenfalls.","kandidaten":[{"name":"Lockheed Martin","empfehlung":"Beobachten"}]},
+{"sektor":"Insurance","trend":"positiv","kommentar":"Rang 5; Progressive und Travelers wegen bärischem Optionsflow ausgeschlossen.","kandidaten":[]},
+{"sektor":"Payments","trend":"positiv","kommentar":"Rang 6; Visa und Mastercard wegen Earnings ausgeschlossen.","kandidaten":[]},
+{"sektor":"Utilities","trend":"positiv","kommentar":"Rang 7; NextEra Energy mit rotem Trendkontext und RSI 73.","kandidaten":[{"name":"NextEra Energy","empfehlung":"Beobachten"}]},
+{"sektor":"Software/Cloud","trend":"positiv","kommentar":"Rang 10; mehrere Werte vor Earnings oder mit bärischem Optionsflow ausgeschlossen. Bestand im Depot: Salesforce, Oracle.","kandidaten":[{"name":"Adobe","empfehlung":"Beobachten"},{"name":"Salesforce","empfehlung":"Halten"},{"name":"Oracle","empfehlung":"Halten"}]},
+{"sektor":"MedTech","trend":"positiv","kommentar":"Rang 11; Intuitive Surgical bei Trendkontext rot.","kandidaten":[{"name":"Intuitive Surgical","empfehlung":"Beobachten"}]},
+{"sektor":"Consumer Discretionary","trend":"positiv","kommentar":"Rang 12; Tesla ohne Trendbestätigung, Home Depot überkauft.","kandidaten":[{"name":"Tesla","empfehlung":"Beobachten"},{"name":"Home Depot","empfehlung":"Beobachten"}]},
+{"sektor":"Financials","trend":"negativ","kommentar":"Rang 16; schwach, kein Setup.","kandidaten":[]},
+{"sektor":"Semiconductors/AI","trend":"neutral","kommentar":"Rang 17; alle Werte unter 50 Punkten, kein Setup.","kandidaten":[]},
+{"sektor":"Fintech/Brokerage","trend":"negativ","kommentar":"Rang 19, letzter Platz; Robinhood und Coinbase vor Earnings ausgeschlossen.","kandidaten":[]}
+]}
