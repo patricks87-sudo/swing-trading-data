@@ -1,22 +1,22 @@
 {
   "available": true,
-  "generated_at_utc": "2026-10-27T15:37:30.628124+00:00",
+  "generated_at_utc": "2026-10-27T15:57:37.242855+00:00",
   "quelle": "yfinance (Terminkontrakte GC=F, SI=F, HG=F, CL=F; GDX; DX-Y.NYB; SPY)",
   "werte": {
     "GOLD": {
-      "close": 4071.6,
+      "close": 4075.8,
       "datum": "2026-10-27",
-      "chg_5d_pct": -1.71,
-      "chg_20d_pct": -2.59,
-      "chg_60d_pct": -0.46,
-      "sma50": 4325.85,
-      "sma200": 4528.64,
+      "chg_5d_pct": -1.61,
+      "chg_20d_pct": -2.49,
+      "chg_60d_pct": -0.36,
+      "sma50": 4325.93,
+      "sma200": 4528.66,
       "ueber_sma50": false,
       "ueber_sma200": false,
       "trend": "abwärts",
-      "abstand_52w_hoch_pct": -23.44,
+      "abstand_52w_hoch_pct": -23.36,
       "tagesbewegung_pct": 0.79,
-      "rs_20d_vs_spy": -3.29,
+      "rs_20d_vs_spy": -3.3,
       "korrelation_60d": 0.42,
       "antizyklik": {
         "wochen_aktien_schwach": 33,
@@ -35,9 +35,9 @@
     "SILBER": {
       "close": 54.56,
       "datum": "2026-10-27",
-      "chg_5d_pct": -5.45,
-      "chg_20d_pct": -10.07,
-      "chg_60d_pct": -5.39,
+      "chg_5d_pct": -5.44,
+      "chg_20d_pct": -10.06,
+      "chg_60d_pct": -5.38,
       "sma50": 62.59,
       "sma200": 71.42,
       "ueber_sma50": false,
@@ -45,7 +45,7 @@
       "trend": "abwärts",
       "abstand_52w_hoch_pct": -52.59,
       "tagesbewegung_pct": 1.63,
-      "rs_20d_vs_spy": -10.78,
+      "rs_20d_vs_spy": -10.88,
       "korrelation_60d": 0.53,
       "antizyklik": {
         "wochen_aktien_schwach": 33,
@@ -64,18 +64,18 @@
     "KUPFER": {
       "close": 6.65,
       "datum": "2026-10-27",
-      "chg_5d_pct": 1.26,
-      "chg_20d_pct": 1.61,
-      "chg_60d_pct": 2.07,
+      "chg_5d_pct": 1.25,
+      "chg_20d_pct": 1.6,
+      "chg_60d_pct": 2.06,
       "sma50": 6.57,
       "sma200": 6.2,
       "ueber_sma50": true,
       "ueber_sma200": true,
       "trend": "aufwärts",
-      "abstand_52w_hoch_pct": -2.27,
-      "tagesbewegung_pct": 0.92,
-      "rs_20d_vs_spy": 0.9,
-      "korrelation_60d": 0.42,
+      "abstand_52w_hoch_pct": -2.28,
+      "tagesbewegung_pct": 0.91,
+      "rs_20d_vs_spy": 0.79,
+      "korrelation_60d": 0.43,
       "antizyklik": {
         "wochen_aktien_schwach": 33,
         "davon_gestiegen": 10,
@@ -91,19 +91,19 @@
       "signal": "Rückenwind"
     },
     "OEL": {
-      "close": 100.1,
+      "close": 100.07,
       "datum": "2026-10-27",
-      "chg_5d_pct": -1.66,
-      "chg_20d_pct": 11.99,
-      "chg_60d_pct": 24.6,
+      "chg_5d_pct": -1.69,
+      "chg_20d_pct": 11.96,
+      "chg_60d_pct": 24.56,
       "sma50": 93.63,
       "sma200": 85.71,
       "ueber_sma50": true,
       "ueber_sma200": true,
       "trend": "aufwärts",
-      "abstand_52w_hoch_pct": -11.38,
+      "abstand_52w_hoch_pct": -11.4,
       "tagesbewegung_pct": 2.04,
-      "rs_20d_vs_spy": 11.29,
+      "rs_20d_vs_spy": 11.14,
       "korrelation_60d": -0.55,
       "antizyklik": {
         "wochen_aktien_schwach": 33,
@@ -120,19 +120,19 @@
       "signal": "Rückenwind"
     },
     "GOLDMINEN": {
-      "close": 82.57,
+      "close": 82.94,
       "datum": "2026-10-27",
-      "chg_5d_pct": -4.11,
-      "chg_20d_pct": -7.3,
-      "chg_60d_pct": 8.57,
-      "sma50": 92.5,
+      "chg_5d_pct": -3.66,
+      "chg_20d_pct": -6.88,
+      "chg_60d_pct": 9.07,
+      "sma50": 92.51,
       "sma200": 90.84,
       "ueber_sma50": false,
       "ueber_sma200": false,
       "trend": "seitwärts",
-      "abstand_52w_hoch_pct": -28.72,
-      "tagesbewegung_pct": 1.88,
-      "rs_20d_vs_spy": -8.01,
+      "abstand_52w_hoch_pct": -28.4,
+      "tagesbewegung_pct": 1.91,
+      "rs_20d_vs_spy": -7.69,
       "korrelation_60d": 0.45,
       "antizyklik": {
         "wochen_aktien_schwach": 33,
@@ -149,11 +149,11 @@
       "signal": "Neutral"
     },
     "DOLLAR": {
-      "close": 102.24,
+      "close": 102.25,
       "datum": "2026-10-27",
-      "chg_5d_pct": 0.5,
+      "chg_5d_pct": 0.51,
       "chg_20d_pct": 0.86,
-      "chg_60d_pct": 2.28,
+      "chg_60d_pct": 2.29,
       "sma50": 100.64,
       "sma200": 99.59,
       "ueber_sma50": true,
@@ -161,7 +161,7 @@
       "trend": "aufwärts",
       "abstand_52w_hoch_pct": -0.33,
       "tagesbewegung_pct": 0.25,
-      "rs_20d_vs_spy": 0.15,
+      "rs_20d_vs_spy": 0.05,
       "korrelation_60d": -0.25,
       "antizyklik": {
         "wochen_aktien_schwach": 33,
@@ -179,30 +179,30 @@
     }
   },
   "referenz": {
-    "close": 769.61,
+    "close": 770.45,
     "datum": "2026-10-27",
-    "chg_5d_pct": 0.07,
-    "chg_20d_pct": 0.71,
-    "chg_60d_pct": 1.83,
-    "sma50": 766.69,
-    "sma200": 724.81,
+    "chg_5d_pct": 0.18,
+    "chg_20d_pct": 0.82,
+    "chg_60d_pct": 1.94,
+    "sma50": 766.71,
+    "sma200": 724.82,
     "ueber_sma50": true,
     "ueber_sma200": true,
     "trend": "aufwärts",
-    "abstand_52w_hoch_pct": -1.22,
-    "tagesbewegung_pct": 0.52,
+    "abstand_52w_hoch_pct": -1.11,
+    "tagesbewegung_pct": 0.53,
     "name": "S&P 500",
     "symbol": "SPY"
   },
   "aktienlage": {
-    "spy_chg_5d_pct": 0.07,
-    "spy_chg_20d_pct": 0.71,
+    "spy_chg_5d_pct": 0.18,
+    "spy_chg_20d_pct": 0.82,
     "fuehrende_sektoren": [
       "Industrials/Infrastructure",
       "Defense",
       "Energy"
     ],
-    "fuehrende_chg_5d_avg": 7.22,
+    "fuehrende_chg_5d_avg": 7.23,
     "aktien_schwach": false,
     "grund": "Aktien und führende Sektoren ohne Schwächesignal"
   },
@@ -356,7 +356,7 @@
         "schlechtester_pct": -3.99,
         "schnitt_tage": 62.0,
         "gesamt_pct": 60.7,
-        "kaufen_und_halten_pct": 62.36,
+        "kaufen_und_halten_pct": 62.52,
         "investiert_pct": 66.0
       },
       "SILBER": {
@@ -435,12 +435,12 @@
         "schlechtester_pct": -6.79,
         "schnitt_tage": 42.8,
         "gesamt_pct": 71.73,
-        "kaufen_und_halten_pct": 97.0,
+        "kaufen_und_halten_pct": 97.02,
         "investiert_pct": 61.0
       }
     }
   },
-  "gold_silber_ratio": 74.6,
+  "gold_silber_ratio": 74.7,
   "chart": {
     "daten": [
       "2026-04-29",
@@ -700,7 +700,7 @@
           89.01,
           87.86,
           88.53,
-          89.26
+          89.35
         ]
       },
       {
@@ -832,7 +832,7 @@
           76.52,
           75.05,
           75.6,
-          76.23
+          76.24
         ]
       },
       {
@@ -964,7 +964,7 @@
           94.75,
           93.02,
           93.97,
-          95.76
+          96.2
         ]
       },
       {
@@ -1096,7 +1096,7 @@
           107.9,
           107.34,
           108.1,
-          108.7
+          108.82
         ]
       }
     ]
@@ -1148,5 +1148,5 @@
       }
     }
   },
-  "run": "p55"
+  "run": "p1"
 }
