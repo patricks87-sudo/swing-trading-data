@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-01T14:03:56.459711+00:00",
+  "generated_at_utc": "2026-11-01T14:05:39.496194+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -165,7 +165,18 @@
       "notiz": "",
       "id": "T0011",
       "erfasst_utc": "2026-11-01T14:03:55.200866+00:00",
-      "issue": 20
+      "issue": 20,
+      "storniert": true,
+      "storniert_durch": "T0012"
+    },
+    {
+      "aktion": "storno",
+      "test": false,
+      "ref": "T0011",
+      "notiz": "",
+      "id": "T0012",
+      "erfasst_utc": "2026-11-01T14:05:38.604607+00:00",
+      "issue": 21
     }
   ],
   "positionen": [
