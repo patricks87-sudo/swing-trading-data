@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-01T14:05:39.496194+00:00",
+  "generated_at_utc": "2026-11-01T14:07:51.554831+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -177,6 +177,22 @@
       "id": "T0012",
       "erfasst_utc": "2026-11-01T14:05:38.604607+00:00",
       "issue": 21
+    },
+    {
+      "aktion": "verkauf",
+      "test": false,
+      "datum": "2026-10-21",
+      "art": "bestand",
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "stueck": 7.0,
+      "kurs_eur": 215.0,
+      "gebuehr_eur": 3.0,
+      "grund": "Eigene Entscheidung",
+      "notiz": "Fehlerhafter Swingtrade. Zu lange gehalten und dann nicht im richtigen Moment verkauft. Trotzdem einen kleinen Gewinn erhalten",
+      "id": "T0013",
+      "erfasst_utc": "2026-11-01T14:07:50.546307+00:00",
+      "issue": 22
     }
   ],
   "positionen": [
@@ -227,30 +243,6 @@
       "wert_eur": 4150.4,
       "unrealisiert_eur": -44.0,
       "unrealisiert_pct": -1.05
-    },
-    {
-      "id": "CRM-2026-10-09",
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "art": "bestand",
-      "isin": null,
-      "sektor": "Software/Cloud",
-      "stueck": 7.0,
-      "einstand_eur": 209.3857,
-      "kapital_eur": 1465.7,
-      "kaufdatum": "2026-10-09",
-      "handelstage_gehalten": 15,
-      "verkauf_spaetestens": null,
-      "stop_eur": null,
-      "grund": "Bestand vor dem System",
-      "teilrealisiert_eur": 0.0,
-      "journal_ids": [
-        "T0007"
-      ],
-      "aktueller_kurs_eur": 205.34,
-      "wert_eur": 1437.38,
-      "unrealisiert_eur": -28.32,
-      "unrealisiert_pct": -1.93
     }
   ],
   "trades": [
@@ -267,19 +259,33 @@
       "gebuehren_eur": 3.0,
       "grund_kauf": "Eigene Idee",
       "grund_verkauf": "10-Tage-Regel"
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "art": "bestand",
+      "kaufdatum": "2026-10-09",
+      "verkaufsdatum": "2026-10-21",
+      "handelstage": 8,
+      "stueck": 7.0,
+      "ergebnis_eur": 36.3,
+      "rendite_pct": 2.48,
+      "gebuehren_eur": 5.0,
+      "grund_kauf": "Bestand vor dem System",
+      "grund_verkauf": "Eigene Entscheidung"
     }
   ],
   "kennzahlen": {
-    "realisiert_eur": 251.8,
-    "unrealisiert_eur": -524.92,
-    "trades_abgeschlossen": 1,
+    "realisiert_eur": 288.1,
+    "unrealisiert_eur": -496.6,
+    "trades_abgeschlossen": 2,
     "trefferquote_pct": 100,
-    "schnitt_trade_eur": 251.8,
-    "offene_positionen": 3,
-    "investiert_eur": 7283.5,
-    "depotwert_eur": 6758.58,
+    "schnitt_trade_eur": 144.05,
+    "offene_positionen": 2,
+    "investiert_eur": 5817.8,
+    "depotwert_eur": 5321.2,
     "positionen_ohne_kurs": 0,
-    "gebuehren_eur": 9.0
+    "gebuehren_eur": 12.0
   },
   "kurse_stand_utc": "2026-11-01T13:51:01.852296+00:00",
   "kennzahlen_swing": {
@@ -294,14 +300,14 @@
     "positionen_ohne_kurs": 0
   },
   "kennzahlen_bestand": {
-    "realisiert_eur": 251.8,
-    "unrealisiert_eur": -524.92,
-    "trades_abgeschlossen": 1,
+    "realisiert_eur": 288.1,
+    "unrealisiert_eur": -496.6,
+    "trades_abgeschlossen": 2,
     "trefferquote_pct": 100,
-    "schnitt_trade_eur": 251.8,
-    "offene_positionen": 3,
-    "investiert_eur": 7283.5,
-    "depotwert_eur": 6758.58,
+    "schnitt_trade_eur": 144.05,
+    "offene_positionen": 2,
+    "investiert_eur": 5817.8,
+    "depotwert_eur": 5321.2,
     "positionen_ohne_kurs": 0
   }
 }
