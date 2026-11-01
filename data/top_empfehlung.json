@@ -1,10 +1,25 @@
 {
-  "generated_at_utc": "2026-10-24T07:55:00+00:00",
-  "top3": [
-    {"ticker": "CRWD", "name": "CrowdStrike", "aktion": "Kauf zum Kurs", "begruendung": "Score 92,4 (Kauf – hohe Qualität), Ampel dreimal grün, Hold-Test 4/4 (Volumen 1,54×). Einstieg 230,01 €, Schutz-Stop 205,73 €, 3 Stück (Kapitalbedarf 690 €, Risiko 73 €), spätestens nach 10 Handelstagen zum Schlusskurs verkaufen. Earnings erst 01.12.2026. Testlauf mit Freitagsdaten."},
-    {"ticker": "PANW", "name": "Palo Alto Networks", "aktion": "Beobachten", "begruendung": "Score 91,7 und Hold-Test 4/4, fachlich ebenfalls kaufbar (339,83 €, Stop 304,13 €, 2 Stück). Im Regime NEUTRAL ist nur 1 neue Position pro Tag erlaubt, CrowdStrike hat den höheren Score – Palo Alto Networks ist die Alternative, falls CrowdStrike nicht zustande kommt."},
-    {"ticker": "ZS", "name": "Zscaler", "aktion": "Beobachten", "begruendung": "Score 72,5, aber überdehnt (vier Bulltrap-Flags). Kein Einstieg zum aktuellen Kurs; Wiedereinstieg nur per Limit an der SMA20 (193,11 €, Stop 170,74 €, 3 Stück). Earnings 24.11.2026."}
-  ],
-  "gesamteinschaetzung": "Regime NEUTRAL (3 von 5 Kriterien), maximal 1 neue Position; es sind keine Swing-Positionen offen, das volle Risikobudget von 375 € ist frei. Cybersecurity ist der stärkste Sektor (Rang 1); Kaufempfehlung für CrowdStrike zum Kurs. Rohstoff-Ampel ROT (0/6), Gold und Silber nur zur Information: Gegenwind, keine Kaufempfehlung. Depot: Oracle, Rheinmetall und Salesforce laufen als Bestand außerhalb des Systems. Testlauf mit Daten vom Freitag, 23.10.2026.",
-  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +1,99 Prozentpunkte über dem Nasdaq (n=44) – überwiegend liegengelassene Gewinne."
+ "generated_at_utc": "2026-11-01T15:25:00+00:00",
+ "top3": [
+  {
+   "ticker": "MA",
+   "name": "Mastercard",
+   "aktion": "Limit-Order",
+   "begruendung": "Beste Portfolio-Chance (Score 76,4, Kauf – hohe Qualität; Kapitalfluss und Trend grün, Sektor Payments Rang 3). Hold-Test 3/4, aber RSI über 72 und Kurs über der 20-Tage-Linie: nur Limit-Order bei 543,23 € (Schutz-Stop 522,16 €, 3 Stück, Kapitalbedarf rund 1.630 €, Risiko 63 €), gültig bis Handelsschluss am Montag, 02.11. Bei Ausführung: spätestens verkaufen am 16.11.2026 zum Schlusskurs. Spread/Kurs-Check bei Trade Republic nicht prüfbar – bitte vor Order prüfen."
+  },
+  {
+   "ticker": "CVX",
+   "name": "Chevron",
+   "aktion": "Limit-Order",
+   "begruendung": "Zweitbeste Alternative (Score 73,7, Kauf – solide; alle Ampeln grün, Hold-Test 4/4, Energiesektor Rang 4, Brent bei rund 113 US-Dollar). RSI über 72, daher nur Limit-Order bei 198,69 € (Stop 190,20 €, 8 Stück, Risiko 68 €). Im Regime NEUTRAL ist nur 1 neue Position pro Tag erlaubt – Chevron nur, wenn Mastercard nicht gekauft wird."
+  },
+  {
+   "ticker": "TMO",
+   "name": "Thermo Fisher Scientific",
+   "aktion": "Beobachten",
+   "begruendung": "Höchster Score (80,8, Kauf – hohe Qualität, keine Bulltrap-Flags), fällt aber im Hold-Test durch (1/4: unter VWAP, schwächer als der S&P 500). Heute kein Einstieg zum Kurs 624,51 €; bei einer Erholung über VWAP in einem Folgelauf neu prüfen (Stop 587,18 €, 2 Stück)."
+  }
+ ],
+ "gesamteinschaetzung": "Regime NEUTRAL (3/5 Kriterien): Nasdaq 5,2 % unter SMA20, VIX 19,4, Marktbreite 52 %; max. 1 neue Position, Depot hat keine offenen Swing-Positionen (4 Bestandspositionen zählen nicht zum Risikobudget), freies Risiko 375 €. Kaufbar sind heute nur Limit-Orders (Mastercard vor Chevron); Datenstand: Schlusskurse Freitag, 30.10.2026. Rohstoff-Ampel ROT (0/6 Kriterien, Gold und Silber im Abwärtstrend, nur Information – kein System-Trade, gilt nicht für Aktien); eine Gold/Silber-Empfehlung liefert der Feed derzeit nicht.",
+ "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +1,83 Prozentpunkte über dem Nasdaq (n=49) – überwiegend liegengelassene Gewinne."
 }
