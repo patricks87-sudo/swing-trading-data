@@ -1,6 +1,6 @@
 {
   "available": true,
-  "generated_at_utc": "2026-11-01T13:42:30.687522+00:00",
+  "generated_at_utc": "2026-11-01T13:59:29.991660+00:00",
   "quelle": "yfinance (Terminkontrakte GC=F, SI=F, HG=F, CL=F; GDX; DX-Y.NYB; SPY)",
   "werte": {
     "GOLD": {
@@ -33,19 +33,19 @@
       "signal": "Gegenwind"
     },
     "SILBER": {
-      "close": 49.1,
+      "close": 49.28,
       "datum": "2026-10-30",
-      "chg_5d_pct": -8.59,
-      "chg_20d_pct": -18.14,
-      "chg_60d_pct": -20.09,
+      "chg_5d_pct": -8.26,
+      "chg_20d_pct": -17.84,
+      "chg_60d_pct": -19.8,
       "sma50": 61.73,
       "sma200": 70.88,
       "ueber_sma50": false,
       "ueber_sma200": false,
       "trend": "abwärts",
-      "abstand_52w_hoch_pct": -57.34,
-      "tagesbewegung_pct": 1.93,
-      "rs_20d_vs_spy": -16.33,
+      "abstand_52w_hoch_pct": -57.18,
+      "tagesbewegung_pct": 1.92,
+      "rs_20d_vs_spy": -16.03,
       "korrelation_60d": 0.56,
       "antizyklik": {
         "wochen_aktien_schwach": 33,
@@ -62,20 +62,20 @@
       "signal": "Gegenwind"
     },
     "KUPFER": {
-      "close": 6.46,
+      "close": 6.48,
       "datum": "2026-10-30",
-      "chg_5d_pct": -0.27,
-      "chg_20d_pct": -0.52,
-      "chg_60d_pct": -3.42,
+      "chg_5d_pct": 0.09,
+      "chg_20d_pct": -0.15,
+      "chg_60d_pct": -3.07,
       "sma50": 6.57,
       "sma200": 6.21,
       "ueber_sma50": false,
       "ueber_sma200": true,
       "trend": "seitwärts",
-      "abstand_52w_hoch_pct": -5.07,
-      "tagesbewegung_pct": 0.97,
-      "rs_20d_vs_spy": 1.29,
-      "korrelation_60d": 0.44,
+      "abstand_52w_hoch_pct": -4.73,
+      "tagesbewegung_pct": 0.95,
+      "rs_20d_vs_spy": 1.65,
+      "korrelation_60d": 0.43,
       "antizyklik": {
         "wochen_aktien_schwach": 33,
         "davon_gestiegen": 10,
@@ -435,12 +435,12 @@
         "schlechtester_pct": -6.79,
         "schnitt_tage": 42.8,
         "gesamt_pct": 71.73,
-        "kaufen_und_halten_pct": 70.61,
+        "kaufen_und_halten_pct": 71.23,
         "investiert_pct": 61.0
       }
     }
   },
-  "gold_silber_ratio": 79.4,
+  "gold_silber_ratio": 79.1,
   "chart": {
     "daten": [
       "2026-05-04",
@@ -832,7 +832,7 @@
           74.3,
           73.16,
           71.42,
-          67.19
+          67.43
         ]
       },
       {
@@ -1133,7 +1133,7 @@
           "isin": "JE00B1VS3333"
         },
         "stop_orientierung_pct": 5.8,
-        "tagesbewegung_pct": 1.93
+        "tagesbewegung_pct": 1.92
       }
     },
     "regeln": "Nur Hinweis, kein System-Trade, ungehebelt. Kaufen: Ampel GRÜN + Metall über dem 50-Tage-Schnitt + auf 20 Tage mindestens so stark wie der S&P 500. Halten: Ampel GELB oder Metall selbst schwach. Verkaufen: Ampel ROT oder Stop unterschritten. Stop-Orientierung = 3 × mittlere Tagesbewegung des Metalls (20 Tage) unter dem Kaufkurs.",
@@ -1148,5 +1148,5 @@
       }
     }
   },
-  "run": "p4"
+  "run": "p5"
 }
