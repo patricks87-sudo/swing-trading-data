@@ -216,7 +216,7 @@
   .topbar { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--foam) 86%, transparent); backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
   .topbar-in { max-width: 1320px; margin: 0 auto; padding: 0 24px; height: 62px; display: flex; align-items: center; gap: 28px; }
   .mark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); flex-shrink: 0; }
-  .mark svg { width: 32px; height: 32px; }
+  .mark img { width: 32px; height: 32px; display: block; }
   .mark b { font-family: var(--head); font-size: 19px; font-weight: 700; letter-spacing: -.03em; }
   .mark b span { color: var(--brand); }
   .tabs { display: flex; gap: 4px; border: 0; margin: 0; overflow-x: auto; min-width: 0; scrollbar-width: none; }
@@ -473,7 +473,7 @@
 <body>
 <header class="topbar">
   <div class="topbar-in">
-    <a class="mark" href="#" data-tabjump="heute" aria-label="Aktienkänguru – Startseite des Cockpits"><svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="11" fill="var(--brand)"/><path d="M5 25.5q3-6 6 0q4-9.5 8 0q5-14 10-3" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="29" cy="9.5" r="2.2" fill="#fff"/></svg><b>Aktien<span>känguru</span></b></a>
+    <a class="mark" href="#" data-tabjump="heute" aria-label="Aktienkänguru – Startseite des Cockpits"><img src="site/logo.svg" alt=""><b>Aktien<span>känguru</span></b></a>
     <nav class="tabs" role="tablist">
       <button class="tab active" role="tab" id="tab-heute" aria-controls="panel-heute" aria-selected="true" data-tab="heute">Heute</button>
       <button class="tab" role="tab" id="tab-historie" aria-controls="panel-historie" aria-selected="false" data-tab="historie">Performance</button>

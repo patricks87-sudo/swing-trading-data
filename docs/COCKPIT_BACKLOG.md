@@ -45,7 +45,7 @@ Stand 23.10.2026: Entwurf abgestimmt. Öffentliche Startseite (site/) umgesetzt 
 
 ## Betrieb und Umzug
 
-Stand 23.10.2026 abends: aktienkaenguru.de (INWX) läuft über Cloudflare. Worker „aktienkaenguru-cockpit“ ist live mit der Fassung von worker/worker.js aus PR #15 (nur Cockpit, ohne öffentliche Startseite). Access-Login nur für die eigene E-Mail. Erreichbar unter cockpit.aktienkaenguru.de, aktienkaenguru.de und www.aktienkaenguru.de – alle hinter Login. workers.dev deaktiviert. Variablen: GITHUB_TOKEN (nur lesen), REPO, BRANCH, TEAM_DOMAIN, POLICY_AUD.
+Stand 01.11.2026: aktienkaenguru.de (INWX) läuft über Cloudflare. Worker „aktienkaenguru-cockpit“ ist live mit der aktuellen Fassung von worker/worker.js (Cockpit, Journal-Eingabe, öffentliche Startseite – Letztere noch hinter Login, siehe B05). Access-Login nur für die eigene E-Mail. Erreichbar unter cockpit.aktienkaenguru.de, aktienkaenguru.de und www.aktienkaenguru.de – alle hinter Login. workers.dev deaktiviert. Variablen: GITHUB_TOKEN (nur lesen), JOURNAL_TOKEN (nur Issues), REPO, BRANCH, TEAM_DOMAIN, POLICY_AUD.
 
 | Nr. | Thema | Was zu tun ist | Wer | Status |
 |---|---|---|---|---|
@@ -53,9 +53,9 @@ Stand 23.10.2026 abends: aktienkaenguru.de (INWX) läuft über Cloudflare. Worke
 | B02 | Schritt 6 – Projekt-Anweisungen | Text im Claude-Projekt komplett durch prompts/PROJEKT_ANWEISUNGEN.md ersetzen | Patrick | offen |
 | B03 | Schritt 6 – Kontrolle | Erste Läufe nach der Umstellung prüfen: N6 am 23.10., P4–P1 am 26.10. | gemeinsam | offen |
 | B04 | Schritt 7 – Repo privat | Erst nach B02 und B03. Danach GitHub Pages aus, alte github.io-Adresse entfällt | Patrick | offen |
-| B05 | Öffentlicher Auftritt | Neuen worker/worker.js (PR #17) einspielen; Access-Anwendung nur noch für cockpit.aktienkaenguru.de, nicht für aktienkaenguru.de/www. Vorher Impressum, Datenschutz, Risikohinweis prüfen lassen | Patrick, Claude begleitet | offen |
-| B06 | Logo-Datei im Cockpit | Nach B05 Cockpit auf site/logo.svg umstellen (der neue Worker liefert die Datei aus) | Claude | offen |
-| C25 | Journal direkt im Cockpit | Eingabe ohne Sprung zu GitHub. Vorschlag: POST-Route im Worker (nur cockpit., mit Access-Prüfung und Herkunfts-Check), die das Journal-Issue „[Trade] …“ über die GitHub-API anlegt – der bestehende Journal-Workflow verarbeitet es wie bisher. Eigener Token mit nur „Issues: Read and write“ für dieses Repo (kein Schreibrecht auf Dateien nötig). Antwort im Cockpit nach ca. 30 s neu laden. Umgesetzt am 24.10.: Worker-Routen POST /api/journal und GET /api/journal/<nr>, Cockpit zeigt die Antwort des Workflows und lädt das Journal neu; ohne Token/neuen Worker Link zum Weg über GitHub. Einrichtung siehe docs/CLOUDFLARE.md (JOURNAL-EINGABE IM COCKPIT) | Claude, Token und Worker-Update: Patrick | zur Abnahme |
+| B05 | Öffentlicher Auftritt | Neuer worker/worker.js ist eingespielt. Offen: Access-Anwendung nur noch für cockpit.aktienkaenguru.de, nicht für aktienkaenguru.de/www. Vorher Impressum, Datenschutz, Risikohinweis prüfen lassen | Patrick, Claude begleitet | offen |
+| B06 | Logo-Datei im Cockpit | Cockpit nutzt site/logo.svg (der neue Worker liefert die Datei aus). Umgestellt am 01.11.; ein neues Logo aus Canva (C18) heißt nur noch: Datei ersetzen | Claude | erledigt |
+| C25 | Journal direkt im Cockpit | Eingabe ohne Sprung zu GitHub. Vorschlag: POST-Route im Worker (nur cockpit., mit Access-Prüfung und Herkunfts-Check), die das Journal-Issue „[Trade] …“ über die GitHub-API anlegt – der bestehende Journal-Workflow verarbeitet es wie bisher. Eigener Token mit nur „Issues: Read and write“ für dieses Repo (kein Schreibrecht auf Dateien nötig). Antwort im Cockpit nach ca. 30 s neu laden. Umgesetzt am 24.10.: Worker-Routen POST /api/journal und GET /api/journal/<nr>, Cockpit zeigt die Antwort des Workflows und lädt das Journal neu; ohne Token/neuen Worker Link zum Weg über GitHub. Einrichtung siehe docs/CLOUDFLARE.md (JOURNAL-EINGABE IM COCKPIT) | Claude, Token und Worker-Update: Patrick | erledigt |
 
 ## Runde 3
 
