@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-01T14:07:51.554831+00:00",
+  "generated_at_utc": "2026-11-01T14:10:14.199910+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -193,6 +193,22 @@
       "id": "T0013",
       "erfasst_utc": "2026-11-01T14:07:50.546307+00:00",
       "issue": 22
+    },
+    {
+      "aktion": "kauf",
+      "test": false,
+      "datum": "2026-10-29",
+      "art": "bestand",
+      "ticker": "GOOGL",
+      "name": "Alphabet (Google)",
+      "stueck": 6.0,
+      "kurs_eur": 256.07,
+      "gebuehr_eur": 1.0,
+      "grund": "Eigene Idee",
+      "notiz": "Starker drop, trotz mittelfristig sehr guten Aussichten. Ich sehe schnell stärkeres Erholungspotential. Das hängt aber auch ein wenig vom Gesamtmarkt ab",
+      "id": "T0014",
+      "erfasst_utc": "2026-11-01T14:10:13.964542+00:00",
+      "issue": 23
     }
   ],
   "positionen": [
@@ -243,6 +259,30 @@
       "wert_eur": 4150.4,
       "unrealisiert_eur": -44.0,
       "unrealisiert_pct": -1.05
+    },
+    {
+      "id": "GOOGL-2026-10-29",
+      "ticker": "GOOGL",
+      "name": "Alphabet (Google)",
+      "art": "bestand",
+      "isin": null,
+      "sektor": null,
+      "stueck": 6.0,
+      "einstand_eur": 256.2367,
+      "kapital_eur": 1537.42,
+      "kaufdatum": "2026-10-29",
+      "handelstage_gehalten": 1,
+      "verkauf_spaetestens": null,
+      "stop_eur": null,
+      "grund": "Eigene Idee",
+      "teilrealisiert_eur": 0.0,
+      "journal_ids": [
+        "T0014"
+      ],
+      "aktueller_kurs_eur": 250.74,
+      "wert_eur": 1504.44,
+      "unrealisiert_eur": -32.98,
+      "unrealisiert_pct": -2.15
     }
   ],
   "trades": [
@@ -277,15 +317,15 @@
   ],
   "kennzahlen": {
     "realisiert_eur": 288.1,
-    "unrealisiert_eur": -496.6,
+    "unrealisiert_eur": -529.58,
     "trades_abgeschlossen": 2,
     "trefferquote_pct": 100,
     "schnitt_trade_eur": 144.05,
-    "offene_positionen": 2,
-    "investiert_eur": 5817.8,
-    "depotwert_eur": 5321.2,
+    "offene_positionen": 3,
+    "investiert_eur": 7355.22,
+    "depotwert_eur": 6825.64,
     "positionen_ohne_kurs": 0,
-    "gebuehren_eur": 12.0
+    "gebuehren_eur": 13.0
   },
   "kurse_stand_utc": "2026-11-01T13:51:01.852296+00:00",
   "kennzahlen_swing": {
@@ -301,13 +341,13 @@
   },
   "kennzahlen_bestand": {
     "realisiert_eur": 288.1,
-    "unrealisiert_eur": -496.6,
+    "unrealisiert_eur": -529.58,
     "trades_abgeschlossen": 2,
     "trefferquote_pct": 100,
     "schnitt_trade_eur": 144.05,
-    "offene_positionen": 2,
-    "investiert_eur": 5817.8,
-    "depotwert_eur": 5321.2,
+    "offene_positionen": 3,
+    "investiert_eur": 7355.22,
+    "depotwert_eur": 6825.64,
     "positionen_ohne_kurs": 0
   }
 }
