@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-01T14:10:14.199910+00:00",
+  "generated_at_utc": "2026-11-01T14:24:08.228517+00:00",
   "waehrung": "EUR",
   "eintraege": [
     {
@@ -209,6 +209,22 @@
       "id": "T0014",
       "erfasst_utc": "2026-11-01T14:10:13.964542+00:00",
       "issue": 23
+    },
+    {
+      "aktion": "kauf",
+      "test": false,
+      "datum": "2026-10-30",
+      "art": "bestand",
+      "ticker": "BE",
+      "name": "Bloom Energy",
+      "stueck": 24.0,
+      "kurs_eur": 192.88,
+      "gebuehr_eur": 4.0,
+      "grund": "Eigene Idee",
+      "notiz": "Drop im KI-Bereich. Jedoch glaube ich das in der laufenden Berichtssaison nochmals starke Bewegungen nach oben folgen können. Trade mit sehr hohem Risiko",
+      "id": "T0015",
+      "erfasst_utc": "2026-11-01T14:24:07.905700+00:00",
+      "issue": 25
     }
   ],
   "positionen": [
@@ -283,6 +299,30 @@
       "wert_eur": 1504.44,
       "unrealisiert_eur": -32.98,
       "unrealisiert_pct": -2.15
+    },
+    {
+      "id": "BE-2026-10-30",
+      "ticker": "BE",
+      "name": "Bloom Energy",
+      "art": "bestand",
+      "isin": null,
+      "sektor": null,
+      "stueck": 24.0,
+      "einstand_eur": 193.0467,
+      "kapital_eur": 4633.12,
+      "kaufdatum": "2026-10-30",
+      "handelstage_gehalten": 0,
+      "verkauf_spaetestens": null,
+      "stop_eur": null,
+      "grund": "Eigene Idee",
+      "teilrealisiert_eur": 0.0,
+      "journal_ids": [
+        "T0015"
+      ],
+      "aktueller_kurs_eur": 182.04,
+      "wert_eur": 4368.96,
+      "unrealisiert_eur": -264.16,
+      "unrealisiert_pct": -5.7
     }
   ],
   "trades": [
@@ -317,15 +357,15 @@
   ],
   "kennzahlen": {
     "realisiert_eur": 288.1,
-    "unrealisiert_eur": -529.58,
+    "unrealisiert_eur": -793.74,
     "trades_abgeschlossen": 2,
     "trefferquote_pct": 100,
     "schnitt_trade_eur": 144.05,
-    "offene_positionen": 3,
-    "investiert_eur": 7355.22,
-    "depotwert_eur": 6825.64,
+    "offene_positionen": 4,
+    "investiert_eur": 11988.34,
+    "depotwert_eur": 11194.6,
     "positionen_ohne_kurs": 0,
-    "gebuehren_eur": 13.0
+    "gebuehren_eur": 17.0
   },
   "kurse_stand_utc": "2026-11-01T13:51:01.852296+00:00",
   "kennzahlen_swing": {
@@ -341,13 +381,13 @@
   },
   "kennzahlen_bestand": {
     "realisiert_eur": 288.1,
-    "unrealisiert_eur": -529.58,
+    "unrealisiert_eur": -793.74,
     "trades_abgeschlossen": 2,
     "trefferquote_pct": 100,
     "schnitt_trade_eur": 144.05,
-    "offene_positionen": 3,
-    "investiert_eur": 7355.22,
-    "depotwert_eur": 6825.64,
+    "offene_positionen": 4,
+    "investiert_eur": 11988.34,
+    "depotwert_eur": 11194.6,
     "positionen_ohne_kurs": 0
   }
 }

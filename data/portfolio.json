@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-01T14:10:14.199914+00:00",
+  "updated_at_utc": "2026-11-01T14:24:08.228523+00:00",
   "quelle": "automatisch aus data/journal.json (Trade-Journal im Cockpit)",
   "kurse_stand_utc": "2026-11-01T13:51:01.852296+00:00",
   "positions": [
@@ -74,6 +74,30 @@
       "wert_eur": 1504.44,
       "unrealisiert_eur": -32.98,
       "unrealisiert_pct": -2.15
+    },
+    {
+      "id": "BE-2026-10-30",
+      "ticker": "BE",
+      "name": "Bloom Energy",
+      "art": "bestand",
+      "isin": null,
+      "sektor": null,
+      "stueck": 24.0,
+      "einstand_eur": 193.0467,
+      "kapital_eur": 4633.12,
+      "kaufdatum": "2026-10-30",
+      "handelstage_gehalten": 0,
+      "verkauf_spaetestens": null,
+      "stop_eur": null,
+      "grund": "Eigene Idee",
+      "teilrealisiert_eur": 0.0,
+      "journal_ids": [
+        "T0015"
+      ],
+      "aktueller_kurs_eur": 182.04,
+      "wert_eur": 4368.96,
+      "unrealisiert_eur": -264.16,
+      "unrealisiert_pct": -5.7
     }
   ]
 }
