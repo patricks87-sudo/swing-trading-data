@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-01T14:55:57.645150+00:00",
+  "generated_at_utc": "2026-11-02T17:37:38.098044+00:00",
   "waehrung": "EUR",
   "hinweis": "Hypothetisch, ohne Steuern. Depot-Simulation mit 8.000 € Start, 75 € Risiko je Trade, Schutz-Stop 2× ATR, Verkauf nach 10 Handelstagen, max. 5 Positionen / 375 € Gesamtrisiko / 2 je Sektor, 1 € Gebühr je Order. Echte Trades stehen im Trade-Journal.",
   "start": "2026-08-12",
@@ -60,7 +60,8 @@
     "2026-10-27",
     "2026-10-28",
     "2026-10-29",
-    "2026-10-30"
+    "2026-10-30",
+    "2026-11-02"
   ],
   "reihen": [
     {
@@ -123,6 +124,7 @@
         110.22,
         110.24,
         109.08,
+        108.27,
         108.27
       ]
     },
@@ -186,7 +188,8 @@
         116.27,
         116.27,
         115.73,
-        113.99
+        113.99,
+        114.01
       ]
     },
     {
@@ -249,7 +252,8 @@
         103.07,
         104.1,
         102.39,
-        98.59
+        98.59,
+        98.56
       ]
     },
     {
@@ -312,7 +316,8 @@
         101.94,
         102.58,
         102.29,
-        100.41
+        100.41,
+        100.68
       ]
     }
   ],
@@ -323,15 +328,15 @@
     },
     "alle": {
       "label": "Alle Kandidaten, 10 Tage gehalten",
-      "gesamt_pct": 13.99
+      "gesamt_pct": 14.01
     },
     "qqq": {
       "label": "Nasdaq-100 (QQQ)",
-      "gesamt_pct": -1.41
+      "gesamt_pct": -1.44
     },
     "urth": {
       "label": "MSCI World (URTH)",
-      "gesamt_pct": 0.41
+      "gesamt_pct": 0.68
     }
   },
   "statistik": {
@@ -356,10 +361,10 @@
       }
     },
     "alle": {
-      "trades": 67,
-      "abgeschlossen": 56,
-      "trefferquote_pct": 77.0,
-      "schnitt_trade_pct": 3.55
+      "trades": 69,
+      "abgeschlossen": 58,
+      "trefferquote_pct": 78.0,
+      "schnitt_trade_pct": 3.6
     }
   },
   "trades_neu": [
