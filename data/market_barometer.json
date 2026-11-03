@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-11-03T14:50:00Z",
+  "generated_at_utc": "2026-11-03T16:25:00Z",
   "status": "RISK-OFF",
-  "begruendung": "RISK-OFF: 0 von 5 Kriterien erfüllt (S&P 500 1,79 % unter SMA50, Nasdaq 5,0 % unter SMA20, VIX 20,97 über 20, nur 46 % der Watchlist über SMA50, nur 32 % der Watchlist im 5-Tage-Plus). Keine neuen Positionen. Eröffnung: S&P 500 +0,15 %, Nasdaq +0,52 %, Russell 2000 +0,26 % – leichte Erholung, aber ohne Trendwende (Nasdaq weiter klar unter der 20-Tage-Linie, VIX steigt auf 20,97). US-10J-Rendite 4,92 % (nur Info). Stärkste Sektoren: Defense, Payments, Transportation, Defense/Industrials, Insurance; schwächste: Fintech/Brokerage, Semiconductors/AI, Cybersecurity, Industrials.",
-  "kurzbegruendung": "RISK-OFF (0/5 Kriterien): keine neuen Positionen, Kandidaten nur zur Beobachtung.",
+  "begruendung": "RISK-OFF: 1 von 5 Kriterien erfüllt (S&P 500 1,44 % unter SMA50, Nasdaq 4,55 % unter SMA20, VIX 20,39 über 20, 50 % der Watchlist über SMA50 – erfüllt, nur 36 % der Watchlist im 5-Tage-Plus). Keine neuen Positionen. Seit US-Eröffnung liegt der S&P 500 bei +0,48 %: leichte Erholung ohne Trendwende. US-10J-Rendite 4,94 % (nur Info). Hold-Test: Apple besteht voll (4 von 4), Thermo Fisher Scientific, Zscaler, Visa, Chevron und Deere & Company teilweise, Progressive, Union Pacific, Linde und JPMorgan Chase nicht bestanden. Stärkste Sektoren: Defense, Payments, Transportation, Defense/Industrials, Utilities; schwächste: Fintech/Brokerage, Semiconductors/AI, Cybersecurity, Industrials.",
+  "kurzbegruendung": "RISK-OFF (1/5 Kriterien): keine neuen Positionen; Apple besteht den Hold-Test, Einstieg aber vom Regime blockiert.",
   "sektor_rotation": [
     {
       "sektor": "Defense",
@@ -13,7 +13,7 @@
     {
       "sektor": "Payments",
       "trend": "positiv",
-      "kommentar": "Rang 2; Visa eröffnet 1,1 % im Minus und 4,9 % über der 20-Tage-Linie – nicht hinterherlaufen, Limit an der 20-Tage-Linie behalten.",
+      "kommentar": "Rang 2; Visa teilweise bestanden (2 von 4), schwächer als der S&P 500 – Limit an der 20-Tage-Linie behalten. Mastercard im Feed wieder ohne Ausschluss – Hinweis für den nächsten P4-Lauf.",
       "kandidaten": [
         { "name": "Visa", "empfehlung": "Kein Einstieg" }
       ]
@@ -21,7 +21,7 @@
     {
       "sektor": "Transportation",
       "trend": "positiv",
-      "kommentar": "Rang 3; Union Pacific 1,2 % im Minus, 4,2 % über der 20-Tage-Linie – nicht hinterherlaufen, Limit behalten.",
+      "kommentar": "Rang 3; Union Pacific fällt im Hold-Test durch (1 von 4, Volumen 0,67-fach).",
       "kandidaten": [
         { "name": "Union Pacific", "empfehlung": "Kein Einstieg" }
       ]
@@ -29,7 +29,7 @@
     {
       "sektor": "Insurance",
       "trend": "positiv",
-      "kommentar": "Rang 5; Progressive 1,2 % im Minus, 3,5 % über der 20-Tage-Linie – Limit an der 20-Tage-Linie behalten.",
+      "kommentar": "Rang 7; Progressive fällt im Hold-Test durch (0 von 4, −1,0 % seit Eröffnung).",
       "kandidaten": [
         { "name": "Progressive", "empfehlung": "Kein Einstieg" }
       ]
@@ -37,7 +37,7 @@
     {
       "sektor": "Energy",
       "trend": "positiv",
-      "kommentar": "Rang 8; Chevron nahezu unverändert (−0,4 %), Eröffnung leicht über dem geplanten Einstieg-Niveau, Stop weit entfernt.",
+      "kommentar": "Rang 8; Chevron teilweise bestanden (2 von 4), knapp unter VWAP, Volumen 0,83-fach.",
       "kandidaten": [
         { "name": "Chevron", "empfehlung": "Kein Einstieg" }
       ]
@@ -45,7 +45,7 @@
     {
       "sektor": "MedTech",
       "trend": "positiv",
-      "kommentar": "Rang 10; Thermo Fisher Scientific eröffnet 1,7 % im Plus, stabil über der 20-Tage-Linie.",
+      "kommentar": "Rang 9; Thermo Fisher Scientific stark seit Eröffnung (+2,7 %), 3 von 4 Kriterien, nur Volumen schwach (0,81-fach).",
       "kandidaten": [
         { "name": "Thermo Fisher Scientific", "empfehlung": "Kein Einstieg" }
       ]
@@ -53,7 +53,7 @@
     {
       "sektor": "Financials",
       "trend": "positiv",
-      "kommentar": "Rang 12; JPMorgan Chase nahezu unverändert, nur Beobachtung.",
+      "kommentar": "Rang 12; JPMorgan Chase fällt im Hold-Test durch (1 von 4), nur Beobachtung.",
       "kandidaten": [
         { "name": "JPMorgan Chase", "empfehlung": "Beobachten" }
       ]
@@ -61,15 +61,15 @@
     {
       "sektor": "Technology",
       "trend": "neutral",
-      "kommentar": "Rang 13; Apple eröffnet 2,5 % im Minus (mehr als 1 × ATR unter dem Vortagesschluss) und 3,6 % unter der 20-Tage-Linie – Warnhinweis.",
+      "kommentar": "Rang 13; Apple erholt sich seit Eröffnung (+1,5 %) bei 5,4-fachem Volumen und besteht den Hold-Test voll – Einstieg im RISK-OFF-Regime dennoch nicht erlaubt.",
       "kandidaten": [
         { "name": "Apple", "empfehlung": "Kein Einstieg" }
       ]
     },
     {
       "sektor": "Materials",
-      "trend": "neutral",
-      "kommentar": "Rang 14; Linde 3,3 % über der 20-Tage-Linie – Limit behalten.",
+      "trend": "negativ",
+      "kommentar": "Rang 14, Trend negativ; Linde fällt im Hold-Test durch (1 von 4, Volumen 0,61-fach).",
       "kandidaten": [
         { "name": "Linde", "empfehlung": "Kein Einstieg" }
       ]
@@ -77,7 +77,7 @@
     {
       "sektor": "Industrials",
       "trend": "negativ",
-      "kommentar": "Rang 16, Trend negativ; Deere & Company nahezu unverändert, Earnings am 25.11.2026.",
+      "kommentar": "Rang 16, Trend negativ; Deere & Company teilweise bestanden (2 von 4), Earnings am 25.11.2026.",
       "kandidaten": [
         { "name": "Deere & Company", "empfehlung": "Kein Einstieg" }
       ]
@@ -85,7 +85,7 @@
     {
       "sektor": "Cybersecurity",
       "trend": "negativ",
-      "kommentar": "Rang 17, Trend negativ; Zscaler +0,3 %, aber 3,1 % unter der 20-Tage-Linie.",
+      "kommentar": "Rang 17, Trend negativ; Zscaler +3,8 % seit Eröffnung, aber Volumen nur 0,54-fach, Kapitalfluss rot.",
       "kandidaten": [
         { "name": "Zscaler", "empfehlung": "Beobachten" }
       ]
@@ -93,7 +93,7 @@
     {
       "sektor": "Semiconductors/AI",
       "trend": "negativ",
-      "kommentar": "Rang 18, Trend negativ (Halbleiter-Proxy 8,8 % unter der 20-Tage-Linie).",
+      "kommentar": "Rang 18, Trend negativ; kein Kandidat.",
       "kandidaten": []
     },
     {
