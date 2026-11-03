@@ -1,1 +1,106 @@
-{"generated_at_utc":"2026-11-03T13:51:07Z","status":"RISK-OFF","begruendung":"RISK-OFF: nur 1 von 5 Kriterien erfüllt (erfüllt: 50 % der Watchlist über SMA50; nicht erfüllt: S&P 500 1,97 % unter SMA50, Nasdaq 5,98 % unter SMA20, VIX 20,84 über 20, nur 36 % der Watchlist im 5-Tage-Plus). Keine neuen Positionen. US-10J-Rendite 4,92 % (nur Info). Rohstoffe: Ampel ROT, Aktien schwach, keine Rotation in Edelmetalle. Stärkste Sektoren: Payments, Defense, Transportation, Utilities, Industrials/Infrastructure; schwächste: Fintech/Brokerage, Semiconductors/AI, Cybersecurity, Industrials.","kurzbegruendung":"RISK-OFF (1/5 Kriterien): keine neuen Positionen, Kandidaten nur zur Beobachtung.","sektor_rotation":[{"sektor":"Payments","trend":"positiv","kommentar":"Stärkster Sektor (Rang 1); Visa nur per Limit, Mastercard wegen bärischem Optionsflow ausgeschlossen.","kandidaten":[{"name":"Visa","empfehlung":"Kein Einstieg"}]},{"sektor":"Defense","trend":"positiv","kommentar":"Rang 2, klar positiv; kein Titel mit Kauf-Stufe heute.","kandidaten":[]},{"sektor":"Transportation","trend":"positiv","kommentar":"Rang 3; Union Pacific Kauf – solide, Einstieg nur per Limit.","kandidaten":[{"name":"Union Pacific","empfehlung":"Kein Einstieg"}]},{"sektor":"Utilities","trend":"positiv","kommentar":"Rang 4, positiv; Duke Energy ausgeschlossen.","kandidaten":[]},{"sektor":"Industrials/Infrastructure","trend":"positiv","kommentar":"Rang 5, positiv; United Rentals ausgeschlossen (Optionsflow, Volumen).","kandidaten":[]},{"sektor":"Insurance","trend":"positiv","kommentar":"Rang 7, positiv; Progressive Kauf – hohe Qualität, Einstieg nur per Limit.","kandidaten":[{"name":"Progressive","empfehlung":"Kein Einstieg"}]},{"sektor":"Energy","trend":"neutral","kommentar":"Rang 9, neutral; Chevron bester Titel des Tages, Exxon Mobil wegen Optionsflow ausgeschlossen.","kandidaten":[{"name":"Chevron","empfehlung":"Kein Einstieg"}]},{"sektor":"MedTech","trend":"neutral","kommentar":"Rang 11, neutral; Thermo Fisher Scientific Kauf – hohe Qualität.","kandidaten":[{"name":"Thermo Fisher Scientific","empfehlung":"Kein Einstieg"}]},{"sektor":"Financials","trend":"positiv","kommentar":"Rang 12, JPMorgan Chase nur Beobachtung.","kandidaten":[{"name":"JPMorgan Chase","empfehlung":"Beobachten"}]},{"sektor":"Technology","trend":"positiv","kommentar":"Rang 13; Apple Kauf – solide, aber mit News-Abzug und roter Kapitalfluss-Ampel.","kandidaten":[{"name":"Apple","empfehlung":"Kein Einstieg"}]},{"sektor":"Materials","trend":"positiv","kommentar":"Rang 14; Linde nur per Limit.","kandidaten":[{"name":"Linde","empfehlung":"Kein Einstieg"}]},{"sektor":"Industrials","trend":"negativ","kommentar":"Rang 16, Trend negativ; Deere & Company Earnings am 25.11.2026.","kandidaten":[{"name":"Deere & Company","empfehlung":"Kein Einstieg"}]},{"sektor":"Cybersecurity","trend":"negativ","kommentar":"Rang 17, negativ; Zscaler nur Beobachtung.","kandidaten":[{"name":"Zscaler","empfehlung":"Beobachten"}]},{"sektor":"Semiconductors/AI","trend":"negativ","kommentar":"Rang 18, Trend negativ.","kandidaten":[]},{"sektor":"Fintech/Brokerage","trend":"negativ","kommentar":"Schwächster Sektor (Rang 19), Trend negativ.","kandidaten":[]}]}
+{
+  "generated_at_utc": "2026-11-03T14:50:00Z",
+  "status": "RISK-OFF",
+  "begruendung": "RISK-OFF: 0 von 5 Kriterien erfüllt (S&P 500 1,79 % unter SMA50, Nasdaq 5,0 % unter SMA20, VIX 20,97 über 20, nur 46 % der Watchlist über SMA50, nur 32 % der Watchlist im 5-Tage-Plus). Keine neuen Positionen. Eröffnung: S&P 500 +0,15 %, Nasdaq +0,52 %, Russell 2000 +0,26 % – leichte Erholung, aber ohne Trendwende (Nasdaq weiter klar unter der 20-Tage-Linie, VIX steigt auf 20,97). US-10J-Rendite 4,92 % (nur Info). Stärkste Sektoren: Defense, Payments, Transportation, Defense/Industrials, Insurance; schwächste: Fintech/Brokerage, Semiconductors/AI, Cybersecurity, Industrials.",
+  "kurzbegruendung": "RISK-OFF (0/5 Kriterien): keine neuen Positionen, Kandidaten nur zur Beobachtung.",
+  "sektor_rotation": [
+    {
+      "sektor": "Defense",
+      "trend": "positiv",
+      "kommentar": "Stärkster Sektor (Rang 1); kein Kandidat aus P4.",
+      "kandidaten": []
+    },
+    {
+      "sektor": "Payments",
+      "trend": "positiv",
+      "kommentar": "Rang 2; Visa eröffnet 1,1 % im Minus und 4,9 % über der 20-Tage-Linie – nicht hinterherlaufen, Limit an der 20-Tage-Linie behalten.",
+      "kandidaten": [
+        { "name": "Visa", "empfehlung": "Kein Einstieg" }
+      ]
+    },
+    {
+      "sektor": "Transportation",
+      "trend": "positiv",
+      "kommentar": "Rang 3; Union Pacific 1,2 % im Minus, 4,2 % über der 20-Tage-Linie – nicht hinterherlaufen, Limit behalten.",
+      "kandidaten": [
+        { "name": "Union Pacific", "empfehlung": "Kein Einstieg" }
+      ]
+    },
+    {
+      "sektor": "Insurance",
+      "trend": "positiv",
+      "kommentar": "Rang 5; Progressive 1,2 % im Minus, 3,5 % über der 20-Tage-Linie – Limit an der 20-Tage-Linie behalten.",
+      "kandidaten": [
+        { "name": "Progressive", "empfehlung": "Kein Einstieg" }
+      ]
+    },
+    {
+      "sektor": "Energy",
+      "trend": "positiv",
+      "kommentar": "Rang 8; Chevron nahezu unverändert (−0,4 %), Eröffnung leicht über dem geplanten Einstieg-Niveau, Stop weit entfernt.",
+      "kandidaten": [
+        { "name": "Chevron", "empfehlung": "Kein Einstieg" }
+      ]
+    },
+    {
+      "sektor": "MedTech",
+      "trend": "positiv",
+      "kommentar": "Rang 10; Thermo Fisher Scientific eröffnet 1,7 % im Plus, stabil über der 20-Tage-Linie.",
+      "kandidaten": [
+        { "name": "Thermo Fisher Scientific", "empfehlung": "Kein Einstieg" }
+      ]
+    },
+    {
+      "sektor": "Financials",
+      "trend": "positiv",
+      "kommentar": "Rang 12; JPMorgan Chase nahezu unverändert, nur Beobachtung.",
+      "kandidaten": [
+        { "name": "JPMorgan Chase", "empfehlung": "Beobachten" }
+      ]
+    },
+    {
+      "sektor": "Technology",
+      "trend": "neutral",
+      "kommentar": "Rang 13; Apple eröffnet 2,5 % im Minus (mehr als 1 × ATR unter dem Vortagesschluss) und 3,6 % unter der 20-Tage-Linie – Warnhinweis.",
+      "kandidaten": [
+        { "name": "Apple", "empfehlung": "Kein Einstieg" }
+      ]
+    },
+    {
+      "sektor": "Materials",
+      "trend": "neutral",
+      "kommentar": "Rang 14; Linde 3,3 % über der 20-Tage-Linie – Limit behalten.",
+      "kandidaten": [
+        { "name": "Linde", "empfehlung": "Kein Einstieg" }
+      ]
+    },
+    {
+      "sektor": "Industrials",
+      "trend": "negativ",
+      "kommentar": "Rang 16, Trend negativ; Deere & Company nahezu unverändert, Earnings am 25.11.2026.",
+      "kandidaten": [
+        { "name": "Deere & Company", "empfehlung": "Kein Einstieg" }
+      ]
+    },
+    {
+      "sektor": "Cybersecurity",
+      "trend": "negativ",
+      "kommentar": "Rang 17, Trend negativ; Zscaler +0,3 %, aber 3,1 % unter der 20-Tage-Linie.",
+      "kandidaten": [
+        { "name": "Zscaler", "empfehlung": "Beobachten" }
+      ]
+    },
+    {
+      "sektor": "Semiconductors/AI",
+      "trend": "negativ",
+      "kommentar": "Rang 18, Trend negativ (Halbleiter-Proxy 8,8 % unter der 20-Tage-Linie).",
+      "kandidaten": []
+    },
+    {
+      "sektor": "Fintech/Brokerage",
+      "trend": "negativ",
+      "kommentar": "Schwächster Sektor (Rang 19), Trend negativ.",
+      "kandidaten": []
+    }
+  ]
+}
