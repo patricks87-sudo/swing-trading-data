@@ -1,106 +1,21 @@
 {
-  "generated_at_utc": "2026-11-03T16:25:00Z",
+  "generated_at_utc": "2026-11-03T17:05:00Z",
   "status": "RISK-OFF",
-  "begruendung": "RISK-OFF: 1 von 5 Kriterien erfüllt (S&P 500 1,44 % unter SMA50, Nasdaq 4,55 % unter SMA20, VIX 20,39 über 20, 50 % der Watchlist über SMA50 – erfüllt, nur 36 % der Watchlist im 5-Tage-Plus). Keine neuen Positionen. Seit US-Eröffnung liegt der S&P 500 bei +0,48 %: leichte Erholung ohne Trendwende. US-10J-Rendite 4,94 % (nur Info). Hold-Test: Apple besteht voll (4 von 4), Thermo Fisher Scientific, Zscaler, Visa, Chevron und Deere & Company teilweise, Progressive, Union Pacific, Linde und JPMorgan Chase nicht bestanden. Stärkste Sektoren: Defense, Payments, Transportation, Defense/Industrials, Utilities; schwächste: Fintech/Brokerage, Semiconductors/AI, Cybersecurity, Industrials.",
-  "kurzbegruendung": "RISK-OFF (1/5 Kriterien): keine neuen Positionen; Apple besteht den Hold-Test, Einstieg aber vom Regime blockiert.",
+  "begruendung": "Nur 1 von 5 Regime-Kriterien erfüllt: S&P 500 liegt 1,6 % unter der SMA50, der Nasdaq 4,9 % unter der SMA20, der VIX steht bei 20,6; nur 34 % der Watchlist im 5-Tage-Plus. Defensive und zyklische Nischen (Defense, Payments, Transportation) führen, Technologie, Software und Halbleiter sind schwach. US-10J-Rendite 4,93 %. Keine neuen Positionen.",
+  "kurzbegruendung": "RISK-OFF (1/5): S&P unter SMA50, VIX 20,6 – keine neuen Positionen, Defense/Payments führen.",
   "sektor_rotation": [
-    {
-      "sektor": "Defense",
-      "trend": "positiv",
-      "kommentar": "Stärkster Sektor (Rang 1); kein Kandidat aus P4.",
-      "kandidaten": []
-    },
-    {
-      "sektor": "Payments",
-      "trend": "positiv",
-      "kommentar": "Rang 2; Visa teilweise bestanden (2 von 4), schwächer als der S&P 500 – Limit an der 20-Tage-Linie behalten. Mastercard im Feed wieder ohne Ausschluss – Hinweis für den nächsten P4-Lauf.",
-      "kandidaten": [
-        { "name": "Visa", "empfehlung": "Kein Einstieg" }
-      ]
-    },
-    {
-      "sektor": "Transportation",
-      "trend": "positiv",
-      "kommentar": "Rang 3; Union Pacific fällt im Hold-Test durch (1 von 4, Volumen 0,67-fach).",
-      "kandidaten": [
-        { "name": "Union Pacific", "empfehlung": "Kein Einstieg" }
-      ]
-    },
-    {
-      "sektor": "Insurance",
-      "trend": "positiv",
-      "kommentar": "Rang 7; Progressive fällt im Hold-Test durch (0 von 4, −1,0 % seit Eröffnung).",
-      "kandidaten": [
-        { "name": "Progressive", "empfehlung": "Kein Einstieg" }
-      ]
-    },
-    {
-      "sektor": "Energy",
-      "trend": "positiv",
-      "kommentar": "Rang 8; Chevron teilweise bestanden (2 von 4), knapp unter VWAP, Volumen 0,83-fach.",
-      "kandidaten": [
-        { "name": "Chevron", "empfehlung": "Kein Einstieg" }
-      ]
-    },
-    {
-      "sektor": "MedTech",
-      "trend": "positiv",
-      "kommentar": "Rang 9; Thermo Fisher Scientific stark seit Eröffnung (+2,7 %), 3 von 4 Kriterien, nur Volumen schwach (0,81-fach).",
-      "kandidaten": [
-        { "name": "Thermo Fisher Scientific", "empfehlung": "Kein Einstieg" }
-      ]
-    },
-    {
-      "sektor": "Financials",
-      "trend": "positiv",
-      "kommentar": "Rang 12; JPMorgan Chase fällt im Hold-Test durch (1 von 4), nur Beobachtung.",
-      "kandidaten": [
-        { "name": "JPMorgan Chase", "empfehlung": "Beobachten" }
-      ]
-    },
-    {
-      "sektor": "Technology",
-      "trend": "neutral",
-      "kommentar": "Rang 13; Apple erholt sich seit Eröffnung (+1,5 %) bei 5,4-fachem Volumen und besteht den Hold-Test voll – Einstieg im RISK-OFF-Regime dennoch nicht erlaubt.",
-      "kandidaten": [
-        { "name": "Apple", "empfehlung": "Kein Einstieg" }
-      ]
-    },
-    {
-      "sektor": "Materials",
-      "trend": "negativ",
-      "kommentar": "Rang 14, Trend negativ; Linde fällt im Hold-Test durch (1 von 4, Volumen 0,61-fach).",
-      "kandidaten": [
-        { "name": "Linde", "empfehlung": "Kein Einstieg" }
-      ]
-    },
-    {
-      "sektor": "Industrials",
-      "trend": "negativ",
-      "kommentar": "Rang 16, Trend negativ; Deere & Company teilweise bestanden (2 von 4), Earnings am 25.11.2026.",
-      "kandidaten": [
-        { "name": "Deere & Company", "empfehlung": "Kein Einstieg" }
-      ]
-    },
-    {
-      "sektor": "Cybersecurity",
-      "trend": "negativ",
-      "kommentar": "Rang 17, Trend negativ; Zscaler +3,8 % seit Eröffnung, aber Volumen nur 0,54-fach, Kapitalfluss rot.",
-      "kandidaten": [
-        { "name": "Zscaler", "empfehlung": "Beobachten" }
-      ]
-    },
-    {
-      "sektor": "Semiconductors/AI",
-      "trend": "negativ",
-      "kommentar": "Rang 18, Trend negativ; kein Kandidat.",
-      "kandidaten": []
-    },
-    {
-      "sektor": "Fintech/Brokerage",
-      "trend": "negativ",
-      "kommentar": "Schwächster Sektor (Rang 19), Trend negativ.",
-      "kandidaten": []
-    }
+    {"sektor": "Defense", "trend": "positiv", "kommentar": "Rang 1, stärkster Sektor; Lockheed Martin überdehnt (RSI 86,5), auf Rücksetzer warten.", "kandidaten": [{"name": "Lockheed Martin", "empfehlung": "Kein Einstieg"}]},
+    {"sektor": "Payments", "trend": "positiv", "kommentar": "Rang 2, starker Kapitalzufluss; Kurse weit über der SMA20, nur Limit-Einstiege.", "kandidaten": [{"name": "Visa", "empfehlung": "Beobachten"}, {"name": "Mastercard", "empfehlung": "Beobachten"}]},
+    {"sektor": "Transportation", "trend": "positiv", "kommentar": "Rang 4; Union Pacific mit Quartalszahlen über Erwartung, aber RSI über 72.", "kandidaten": [{"name": "Union Pacific", "empfehlung": "Beobachten"}, {"name": "United Parcel Service", "empfehlung": "Kein Einstieg"}]},
+    {"sektor": "Insurance", "trend": "positiv", "kommentar": "Rang 7; Progressive fiel im Hold-Test mit 0/4 durch, Travelers mit bärischem Optionsflow.", "kandidaten": [{"name": "Progressive", "empfehlung": "Beobachten"}, {"name": "Travelers", "empfehlung": "Kein Einstieg"}]},
+    {"sektor": "Energy", "trend": "positiv", "kommentar": "Rang 8; Ölpreis auf Fünfmonatshoch (Brent ca. 113 US-Dollar), Chevron mit höchstem Score.", "kandidaten": [{"name": "Chevron", "empfehlung": "Beobachten"}, {"name": "Exxon Mobil", "empfehlung": "Kein Einstieg"}]},
+    {"sektor": "MedTech", "trend": "positiv", "kommentar": "Rang 9; Thermo Fisher mit Hold-Test 3/4.", "kandidaten": [{"name": "Thermo Fisher Scientific", "empfehlung": "Beobachten"}]},
+    {"sektor": "Healthcare", "trend": "neutral", "kommentar": "Rang 11; UnitedHealth mit rotem Kapitalfluss, aus der aktiven Liste ausgeschieden.", "kandidaten": [{"name": "UnitedHealth Group", "empfehlung": "Kein Einstieg"}]},
+    {"sektor": "Financials", "trend": "positiv", "kommentar": "Rang 12; JPMorgan Chase nur Beobachten, Hold-Test 1/4.", "kandidaten": [{"name": "JPMorgan Chase", "empfehlung": "Beobachten"}]},
+    {"sektor": "Technology", "trend": "neutral", "kommentar": "Rang 13; Apple besteht Hold-Test, aber Kapitalfluss rot und Margen-Ausblick schwächer.", "kandidaten": [{"name": "Apple", "empfehlung": "Beobachten"}]},
+    {"sektor": "Materials", "trend": "negativ", "kommentar": "Rang 14; Linde mit RSI über 72, Earnings-Termin unbekannt.", "kandidaten": [{"name": "Linde", "empfehlung": "Beobachten"}]},
+    {"sektor": "Industrials", "trend": "negativ", "kommentar": "Rang 16; Deere nur per Limit, Earnings am 25.11.2026.", "kandidaten": [{"name": "Deere & Company", "empfehlung": "Beobachten"}]},
+    {"sektor": "Cybersecurity", "trend": "negativ", "kommentar": "Rang 17; Kapitalfluss rot, Zscaler-Earnings am 24.11.2026.", "kandidaten": [{"name": "Zscaler", "empfehlung": "Kein Einstieg"}]},
+    {"sektor": "Software/Cloud", "trend": "negativ", "kommentar": "Rang 15; Oracle unter Druck durch geplante Kapitalaufnahme (Bestand im Depot, siehe Portfoliobewertung).", "kandidaten": [{"name": "Oracle", "empfehlung": "Halten"}]}
   ]
 }

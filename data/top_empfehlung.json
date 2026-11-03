@@ -1,25 +1,10 @@
 {
- "generated_at_utc": "2026-11-02T17:50:00+00:00",
- "top3": [
-  {
-   "ticker": "CVX",
-   "name": "Chevron",
-   "aktion": "Limit-Order",
-   "begruendung": "Beste kaufbare Chance heute: Score 73,3 (Kauf – solide), Energie-Sektor positiv (Rang 8), Ampeln grün/gelb, keine Bulltrap-Flags, Earnings erst am 29.01.2027. Hold-Test 2/4 (über VWAP, Volumen 3,44×) – daher nur Limit-Order bei 199,77 € (SMA20), gültig bis Handelsschluss; Stop 191,01 €, 8 Stück, Kapitalbedarf rund 1.598 €, Risiko rund 70 €. Ausstieg spätestens am 16.11.2026 zum Schlusskurs. Trade-Republic-Spread vor Order prüfen (nicht prüfbar)."
-  },
-  {
-   "ticker": "MA",
-   "name": "Mastercard",
-   "aktion": "Beobachten",
-   "begruendung": "Score 77,4, Hold-Test 4/4 (+2,9 % seit Eröffnung), aber der Feed stuft Mastercard heute als überdehnt ein (8,1 % über SMA20, RSI über 72) und die Kauf-Stufe fehlt. Kein Kauf; Limit an der SMA20 (547,52 €, Stop 524,92 €) nur beobachten. Hinweis: P5.5 meldet 'limit' auf Basis der P4-Stufe vom 01.11."
-  },
-  {
-   "ticker": "PGR",
-   "name": "Progressive",
-   "aktion": "Beobachten",
-   "begruendung": "Feed-Score 75,5 (Kauf – hohe Qualität), Hold-Test 4/4, aber P4-Stufe vom 01.11. noch Beobachten und Kurs 4,7 % über SMA20 – heute kein Einstieg. Limit an der SMA20 (199,18 €, Stop 188,61 €) für den nächsten P4-Lauf vormerken."
-  }
- ],
- "gesamteinschaetzung": "Regime NEUTRAL (2/5 Kriterien): maximal eine neue Position, aktuell keine offene Swing-Position, 375 € Risikobudget und alle Plätze frei. Vorsichtiger Tag mit schwachem Nasdaq (−4,5 % unter SMA20) und Tech-Ausverkauf; Stärke liegt bei Payments, Defense und Transportation. Einziger kaufbarer Kandidat ist Chevron per Limit-Order. Thermo Fisher Scientific (Score 80,7) fällt im Hold-Test durch und bleibt erster Kandidat für morgen. Rohstoffe (nur Information, gilt nicht für Aktien): Rohstoff-Ampel ROT (0/6), keine Rotation in Gold/Silber und keine Gold/Silber-Empfehlung. Bestand: Alphabet (Google) mit hohem negativem News-Signal zur Prüfung.",
- "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,67 Prozentpunkte über dem Nasdaq (n=53) – überwiegend liegengelassene Gewinne."
+  "generated_at_utc": "2026-11-03T17:05:00Z",
+  "top3": [
+    {"ticker": "CVX", "name": "Chevron", "aktion": "Beobachten", "begruendung": "Kein Trade heute: Regime RISK-OFF (1/5 Kriterien), keine neuen Positionen. Chevron ist der Kauf-Kandidat mit dem höchsten Score (82,0, Kauf – hohe Qualität), Hold-Test 2/4. Sobald das Regime dreht: Limit-Order bei 201,89 €, Schutz-Stop 193,08 €, 8 Stück (Risiko ca. 70 €), Ausstieg spätestens nach 10 Handelstagen zum Schlusskurs."},
+    {"ticker": "TMO", "name": "Thermo Fisher Scientific", "aktion": "Beobachten", "begruendung": "Score 80,4 (Kauf – hohe Qualität), Hold-Test 3/4 und +2,7 % seit Eröffnung, Quartalszahlen übertroffen. Im RISK-OFF-Regime heute kein Einstieg; Setup bei Regimewechsel: Limit 621,24 €, Stop 582,91 €, 1 Stück (Risiko ca. 38 €)."},
+    {"ticker": "AAPL", "name": "Apple", "aktion": "Beobachten", "begruendung": "Besteht den Hold-Test als einziger voll (4/4, Volumen 5,4-fach), Score 68,4 nach News-Korrektur −3. Kapitalfluss-Ampel rot, im aktuellen Feed Stufe Ausgeschlossen; im RISK-OFF-Regime heute kein Einstieg. Progressive (Score 78,1) fiel im Hold-Test mit 0/4 durch."}
+  ],
+  "gesamteinschaetzung": "Kein Trade heute. Regime RISK-OFF (1/5 Kriterien): S&P 500 unter SMA50, Nasdaq 4,9 % unter SMA20, VIX 20,6. Nächster Kandidat am Kauf wäre Chevron (Limit 201,89 €); es fehlt allein die Regime-Freigabe. Rohstoff-Ampel ROT (0/6, nur Information, kein System-Trade); eine Gold/Silber-Empfehlung liegt im Feed nicht vor, Gold-Silber-Verhältnis 79,2. Keine offenen Swing-Positionen, Risikobudget voll frei (375 €). Bitte neue Käufe/Verkäufe im Cockpit unter „Journal“ eintragen.",
+  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,69 Prozentpunkte über dem Nasdaq (n=55) – überwiegend liegengelassene Gewinne."
 }
