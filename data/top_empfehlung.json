@@ -1,10 +1,25 @@
 {
-  "generated_at_utc": "2026-11-03T17:05:00Z",
+  "generated_at_utc": "2026-11-04T16:55:00Z",
   "top3": [
-    {"ticker": "CVX", "name": "Chevron", "aktion": "Beobachten", "begruendung": "Kein Trade heute: Regime RISK-OFF (1/5 Kriterien), keine neuen Positionen. Chevron ist der Kauf-Kandidat mit dem höchsten Score (82,0, Kauf – hohe Qualität), Hold-Test 2/4. Sobald das Regime dreht: Limit-Order bei 201,89 €, Schutz-Stop 193,08 €, 8 Stück (Risiko ca. 70 €), Ausstieg spätestens nach 10 Handelstagen zum Schlusskurs."},
-    {"ticker": "TMO", "name": "Thermo Fisher Scientific", "aktion": "Beobachten", "begruendung": "Score 80,4 (Kauf – hohe Qualität), Hold-Test 3/4 und +2,7 % seit Eröffnung, Quartalszahlen übertroffen. Im RISK-OFF-Regime heute kein Einstieg; Setup bei Regimewechsel: Limit 621,24 €, Stop 582,91 €, 1 Stück (Risiko ca. 38 €)."},
-    {"ticker": "AAPL", "name": "Apple", "aktion": "Beobachten", "begruendung": "Besteht den Hold-Test als einziger voll (4/4, Volumen 5,4-fach), Score 68,4 nach News-Korrektur −3. Kapitalfluss-Ampel rot, im aktuellen Feed Stufe Ausgeschlossen; im RISK-OFF-Regime heute kein Einstieg. Progressive (Score 78,1) fiel im Hold-Test mit 0/4 durch."}
+    {
+      "ticker": "TMO",
+      "name": "Thermo Fisher Scientific",
+      "aktion": "Limit-Order",
+      "begruendung": "Einzig kaufbarer Kandidat heute: Score 77,0 (Kauf – hohe Qualität), Trend- und Optionsflow-Ampel grün (Optionsflow bullisch), kein Bulltrap-Flag, Earnings erst am 28.01.2027; Kapitalfluss-Ampel inzwischen rot, aber kein harter Ausschluss. Hold-Test 2/4 (über VWAP, Volumen 1,51-fach, aber unter Eröffnung und schwächer als der S&P 500) – daher Limit-Order statt Kauf zum Kurs: Limit 625,13 €, gültig bis Handelsschluss, nicht hinterherlaufen. Setup: Schutz-Stop 587,79 €, 2 Stück, Kapitalbedarf 1.250 €, Risiko 75 €. Verkauf spätestens nach 10 Handelstagen zum Schlusskurs (bei Kauf heute: 18.11.2026). Danach 300 € freies Risiko, offene Swing-Positionen 1 von 3. Kauf bitte im Cockpit unter „Journal“ eintragen."
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "aktion": "Beobachten",
+      "begruendung": "Score 70,9 (Kauf – solide), Optionsflow nun neutral, aber Kurs 8,3 % über der SMA20 und RSI 72,0 (Bulltrap-Flag) – nur Limit-Einstieg an der SMA20 bei 553,72 € möglich (2 Stück bei 75 € Risiko wären 3 Stück, Kapitalbedarf 1.661 €). Heute kein Einstieg, außerdem nicht im P5.5-Hold-Test; höchstens 1 neue Position pro Tag und die ist an Thermo Fisher Scientific vergeben."
+    },
+    {
+      "ticker": "DE",
+      "name": "Deere & Company",
+      "aktion": "Beobachten",
+      "begruendung": "Score 67,2 (Kauf – solide), Trend intakt, kein Bulltrap-Flag; Hold-Test heute 0/4 (−2,2 % seit Eröffnung, Volumen 0,6-fach), Sektor Industrials schwach (Rang 16). Nur Limit an der SMA20 bei 577,90 € sinnvoll; Earnings am 25.11.2026 liegen 15 Handelstage entfernt, also außerhalb der Sperre."
+    }
   ],
-  "gesamteinschaetzung": "Kein Trade heute. Regime RISK-OFF (1/5 Kriterien): S&P 500 unter SMA50, Nasdaq 4,9 % unter SMA20, VIX 20,6. Nächster Kandidat am Kauf wäre Chevron (Limit 201,89 €); es fehlt allein die Regime-Freigabe. Rohstoff-Ampel ROT (0/6, nur Information, kein System-Trade); eine Gold/Silber-Empfehlung liegt im Feed nicht vor, Gold-Silber-Verhältnis 79,2. Keine offenen Swing-Positionen, Risikobudget voll frei (375 €). Bitte neue Käufe/Verkäufe im Cockpit unter „Journal“ eintragen.",
-  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,69 Prozentpunkte über dem Nasdaq (n=55) – überwiegend liegengelassene Gewinne."
+  "gesamteinschaetzung": "Regime NEUTRAL (2 von 5 Kriterien): höchstens 1 neue Position, maximal 3 offene Swing-Positionen; aktuell keine Swing-Position offen, alle vier Depotwerte sind Bestand. Heute ist ein Limit-Kauf von Thermo Fisher Scientific möglich, sonst kein Trade. Visa besteht den Hold-Test voll, ist aber im aktuellen Feed wegen bärischem Optionsflow ausgeschlossen (ebenso Chevron, Exxon Mobil, JPMorgan Chase, Union Pacific, Progressive, Lockheed Martin) – deshalb keine Order. Rohstoff-Kontext (nur Information, kein System-Trade, gilt nicht für Aktien): Rohstoff-Ampel ROT (0 von 6 Kriterien), Gold und Silber im Gegenwind, keine Rotation in Rohstoffe.",
+  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,93 Prozentpunkte über dem Nasdaq (n=58) – überwiegend liegengelassene Gewinne."
 }
