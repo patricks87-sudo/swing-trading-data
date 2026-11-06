@@ -1,25 +1,25 @@
 {
-  "generated_at_utc": "2026-11-05T16:50:47Z",
-  "top3": [
-    {
-      "ticker": "PGR",
-      "name": "Progressive Corporation",
-      "aktion": "Beobachten",
-      "begruendung": "Beste Portfolio-Chance, aber heute kein Kauf: Feed-Score 79,5 (Kauf – hohe Qualität), Trend intakt, Hold-Test 3/4 (stärkster des Tages), Versicherungen auf Rang 4 der Sektoren. Bulltrap-Flag RSI über 72, deshalb nur Limit an der 20-Tage-Linie (rund 200,40 €, Stop 191,88 €, 8 Stück). Bei RISK-OFF keine neue Position."
-    },
-    {
-      "ticker": "TMO",
-      "name": "Thermo Fisher Scientific",
-      "aktion": "Beobachten",
-      "begruendung": "Höchster Feed-Score (88,7, Kauf – hohe Qualität) mit grünem Trendkontext und bullischem Optionsflow, MedTech auf Rang 5. Hold-Test nur 1/4 (Volumen 0,69-fach) und RISK-OFF – heute kein Einstieg, Kandidat bleibt auf der Liste."
-    },
-    {
-      "ticker": "UNH",
-      "name": "UnitedHealth Group",
-      "aktion": "Beobachten",
-      "begruendung": "Watchlist-Kandidat: Feed-Score 85,9 (Kauf – hohe Qualität), Kurs direkt an der 20-Tage-Linie, Hold-Test 2/4. Kein Einstieg, solange das Regime RISK-OFF bleibt; neu im Kandidaten-Tracking."
-    }
-  ],
-  "gesamteinschaetzung": "Kein Trade heute. Das Regime ist RISK-OFF (1/5 Kriterien: S&P 500 unter der SMA50, Nasdaq unter der SMA20, VIX 22,95) – laut Handelsregeln keine neuen Positionen, im Depot liegen keine Swing-Positionen. Am nächsten an einem Kauf ist Progressive Corporation (Limit an der 20-Tage-Linie), es fehlt das Regime. Rohstoff-Kontext (nur Information, gilt nicht für Aktien): Rohstoff-Ampel ROT (1/6), Gold und Silber ohne Kaufsignal. Hinweis zur Filter-Bilanz: Aussortierte Kandidaten lagen nach 10 Handelstagen im Schnitt über dem Nasdaq (+3,13 Prozentpunkte, n=60) – die Aussortier-Regeln könnten zu streng sein; keine Regeländerung vorgenommen.",
-  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +3,13 Prozentpunkte über dem Nasdaq (n=60) – überwiegend liegengelassene Gewinne."
+ "generated_at_utc": "2026-11-06T16:50:00+00:00",
+ "top3": [
+  {
+   "ticker": "TMO",
+   "name": "Thermo Fisher Scientific",
+   "aktion": "Beobachten",
+   "begruendung": "Beste Portfolio-Chance (Score 83,1, Kauf – hohe Qualität), aber RISK-OFF (0/5 Kriterien) sperrt neue Positionen. Wäre Limit 610,64 € (Stop 562,80 €, 1 Stück) – heute kein Kauf."
+  },
+  {
+   "ticker": "PGR",
+   "name": "Progressive",
+   "aktion": "Beobachten",
+   "begruendung": "Score 83,0, Kauf – hohe Qualität; Hold-Test 2/4, Kapitalfluss rot. Limit 204,15 € wäre möglich, wegen Regime-Sperre heute kein Kauf."
+  },
+  {
+   "ticker": "DUK",
+   "name": "Duke Energy",
+   "aktion": "Beobachten",
+   "begruendung": "Watchlist-Kandidat aus dem stärksten Sektor Utilities (Score 73,0, Kauf – solide), Limit an SMA20 110,21 €; heute kein Kauf wegen RISK-OFF."
+  }
+ ],
+ "gesamteinschaetzung": "Kein Trade heute: RISK-OFF (0/5 Kriterien, S&P 500 3,3 % unter SMA50, VIX 24,8), keine neuen Positionen erlaubt. Am nächsten an einem Kauf sind Thermo Fisher Scientific und Progressive – es fehlt nur die Regime-Freigabe. Mastercard bleibt überdehnt (Rücksetzer auf SMA20 abwarten), Visa heute mit bärischem Optionsflow ausgeschlossen. Rohstoff-Ampel ROT (1/6), Feed liefert keine Gold/Silber-Empfehlung – nur Information, gilt nicht für Aktien. Hinweis: Microsoft zeigt Hold-Test 4/4, steht im Feed aber nur auf Beobachten mit Bulltrap-Flag und Sektor Software/Cloud negativ. Alle Bestandspositionen im Minus; Oracle zur Prüfung markiert.",
+ "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,74 Prozentpunkte über dem Nasdaq (n=63) – überwiegend liegengelassene Gewinne."
 }
