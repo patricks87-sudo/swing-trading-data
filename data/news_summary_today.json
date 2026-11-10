@@ -1,73 +1,105 @@
 {
  "date": "2026-11-10",
- "kernaussage": "Wall Street mit bestem Tag seit April – Anleger warten auf US-Inflationsdaten.",
- "lage": "Die Wall Street schloss am Montag deutlich höher (S&P 500 +2,35 %, Nasdaq Composite +2,74 %, Chipwerte-Index knapp +7 %); Asien folgt heute mit kräftigen Kursgewinnen. Brent fiel auf unter 93 US-Dollar, die 10-jährige US-Rendite liegt bei 4,88 %; heute erscheinen die US-Verbraucherpreise für Oktober, vor denen Fed-Vertreter Waller eine größere Zinserhöhung bei hartnäckiger Kerninflation nicht ausschließt.",
- "lage_stand_local": "10:30",
+ "kernaussage": "Heiße Inflationsdaten schüren Zinserhöhungssorgen – Anleger rotieren aus KI-Werten.",
+ "lage": "Die US-Verbraucherpreise für Oktober fielen höher aus als erwartet (+0,4 %, Kernrate +0,3 %) und festigen die Erwartung einer Fed-Zinserhöhung im Dezember; die 10-jährige Rendite steigt auf rund 4,99 %, die Indizes geben einen Teil der Montagsrally ab. Nvidia bleibt wegen der Huang-Affäre unter Druck, Anleger schichten aus KI-Werten in defensive Sektoren wie Gesundheit um, während der Ölpreis weiter fällt (Brent rund 90 US-Dollar).",
+ "lage_stand_local": "18:45",
  "meldungen": [
+  {
+   "title": "US-Verbraucherpreise im Oktober über den Erwartungen: +0,4 % zum Vormonat (erwartet 0,3 %), Kernrate +0,3 % (erwartet 0,2 %) – dritter Monat in Folge mit 0,3 % Kernanstieg; Jahresraten wegen des Shutdowns 2025 nicht verfügbar",
+   "source": "TipRanks / TheStreet / Stock Titan (BLS)",
+   "url": "https://www.tipranks.com/news/u-s-stocks-fall-as-october-cpi-report-sparks-rate-hike-fears",
+   "published_at": "2026-11-10",
+   "thema": "Konjunktur",
+   "bedeutung": "Die hartnäckige Kerninflation festigt die Erwartung einer Fed-Zinserhöhung im Dezember (Sitzung 8./9.12.) und belastet zinsempfindliche Wachstumswerte.",
+   "erfasst_local": "18:45",
+   "erfasst_von": "N5",
+   "top": 1
+  },
+  {
+   "title": "Wall Street gibt nach den Inflationsdaten nach: S&P 500 −0,28 %, Dow −0,43 %, Nasdaq −0,16 %, Russell 2000 −0,92 % im Tagesverlauf; 10-jährige US-Rendite steigt um rund 12 Basispunkte auf etwa 4,99 %, VIX bei 20,7 – Umschichtung aus KI-Werten in defensive Sektoren wie Gesundheit",
+   "source": "TheStreet (Yahoo Finance)",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-10-144434892.html",
+   "published_at": "2026-11-10T06:44:00-08:00",
+   "thema": "Zinsen/Fed",
+   "bedeutung": "Ein Teil der Montagsrally wird wieder abgegeben; steigende Renditen und die Rotation in defensive Werte sprechen für ein vorsichtiges Umfeld bei Technologietiteln.",
+   "erfasst_local": "18:45",
+   "erfasst_von": "N5",
+   "top": 2
+  },
+  {
+   "title": "Nvidia weiter unter Druck: Aktie am Vormittag rund −5 %, Citi senkt das Kursziel auf 285 (zuvor 315) US-Dollar, Wells Fargo auf 300 (zuvor 315); FBI prüft laut Trump die Affäre um Konzernchef Huang, Aktionäre reichen Sammelklage ein",
+   "source": "24/7 Wall St. / TheStreet",
+   "url": "https://247wallst.com/investing/2026/11/10/jensen-huang-just-lost-more-than-6-billion-on-his-own-nvidia-shares-in-one-day-wall-street-cut-its-targets-the-next-morning/",
+   "published_at": "2026-11-10T07:02:00-05:00",
+   "thema": "Unternehmen",
+   "bedeutung": "Als gewichtigster Chipwert belastet Nvidia Nasdaq und Halbleitersektor; Huang bleibt während der Untersuchung Konzernchef, Quartalszahlen folgen am 17.11.",
+   "erfasst_local": "08:45",
+   "erfasst_von": "N1",
+   "aktualisiert_local": "18:45",
+   "top": 3
+  },
+  {
+   "title": "Fed-Gouverneur Waller: Unterstützt im Dezember eine Zinserhöhung um 25 Basispunkte auch bei besseren Inflationsdaten; steigt die Kerninflation um 0,3 % oder mehr, „sollte“ eine Erhöhung um 50 Basispunkte erwogen werden",
+   "source": "TheStreet (Reuters) / Stock Titan",
+   "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026",
+   "published_at": "2026-11-10",
+   "thema": "Zinsen/Fed",
+   "bedeutung": "Mit der Kernrate von 0,3 % ist Wallers Schwelle für einen größeren Zinsschritt erreicht – das erhöht das Risiko für hoch bewertete Technologiewerte.",
+   "erfasst_local": "10:30",
+   "erfasst_von": "N3",
+   "aktualisiert_local": "18:45"
+  },
+  {
+   "title": "KI-Stromversorger unter Verkaufsdruck: GE Vernova fällt um rund 6 %, nachdem SoftBank eine Belastung von 3,7 Milliarden US-Dollar und geänderte Verträge für Energieausrüstung von US-KI-Rechenzentren meldet; auch Vertiv gibt rund 4 % nach",
+   "source": "TheStreet / Motley Fool",
+   "url": "https://www.fool.com/investing/2026/11/10/ge-vernova-vertiv-and-bloom-energy-just-lost-10-to/",
+   "published_at": "2026-11-10T11:00:00-05:00",
+   "thema": "Sektor",
+   "bedeutung": "Zweifel an der Finanzierung von KI-Rechenzentren belasten die Energie-Infrastrukturwerte für KI weiter.",
+   "erfasst_local": "18:45",
+   "erfasst_von": "N5"
+  },
   {
    "title": "Wall Street schließt deutlich höher – bester Tag seit April: S&P 500 +2,35 %, Dow +2,15 % (+1.104 Punkte), Nasdaq Composite +2,74 %, Chipwerte-Index knapp +7 %",
    "source": "StockTitan / CNBC / Bloomberg",
    "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-9-2026",
    "published_at": "2026-11-09",
    "thema": "Sektor",
-   "bedeutung": "Die breite Erholung macht den Großteil der Vorwochenverluste wett und entspannt das Marktumfeld, wird aber erst durch die heutigen Inflationsdaten bestätigt.",
+   "bedeutung": "Die breite Erholung vom Montag wird nach den heißen Inflationsdaten teilweise wieder abgegeben.",
    "erfasst_local": "08:45",
-   "erfasst_von": "N1",
-   "top": 1
+   "erfasst_von": "N1"
   },
   {
-   "title": "Asiens Börsen steigen nach dem Tech-Schub an der Wall Street: Kospi zeitweise über +5 %, Nikkei 225 knapp +3 %; US-Verbraucherpreise für Oktober werden heute erwartet",
+   "title": "Asiens Börsen steigen nach dem Tech-Schub an der Wall Street: Kospi zeitweise über +5 %, Nikkei 225 knapp +3 %",
    "source": "Bloomberg (swissinfo)",
    "url": "https://www.swissinfo.ch/eng/asian-stocks-rally-after-us-tech-surge,-oil-slump:-markets-wrap/92354501",
    "published_at": "2026-11-10",
    "thema": "Konjunktur",
-   "bedeutung": "Die US-Inflationsdaten am Dienstag entscheiden, ob die Wetten auf eine Fed-Zinserhöhung im Dezember und damit der Druck auf Technologiewerte nachlassen; die US-Futures liegen leicht im Plus.",
+   "bedeutung": "Die Erholung in Asien wurde vor den US-Inflationsdaten getragen; diese fielen anschließend höher aus als erwartet.",
    "erfasst_local": "08:45",
-   "erfasst_von": "N1",
-   "top": 2
+   "erfasst_von": "N1"
   },
   {
-   "title": "Nvidia fällt um 4,3 % auf 178,67 US-Dollar, während andere Chipwerte steigen (AMD +13,3 %, Broadcom +8,8 %): Verwaltungsrat prüft Berichte über einen ausländischen Geheimdienstversuch gegen Konzernchef Huang",
-   "source": "StockTitan",
-   "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-9-2026",
-   "published_at": "2026-11-09",
-   "thema": "Unternehmen",
-   "bedeutung": "Nvidia ist der gewichtigste Chipwert; die Untersuchung belastet die Aktie, der Verwaltungsrat sieht aber keine Hinweise auf betroffene Betriebsgeheimnisse – Quartalszahlen folgen am 17.11.",
-   "erfasst_local": "08:45",
-   "erfasst_von": "N1",
-   "top": 3
-  },
-  {
-   "title": "Fed-Vertreter Waller: Eine Zinserhöhung um 50 Basispunkte „sollte erwogen werden“, falls die Kerninflation erhöht bleibt – Zinserhöhungswetten für Dezember liegen laut Marktbeobachtern über 65 %",
-   "source": "Stocktwits / TipRanks",
-   "url": "https://stocktwits.com/news-articles/markets/equity/cpi-report-today-fed-s-waller-says-50-basis-point-rate-hike-should-be-considered-if-core-inflation-remains-elevated/cNGuW4pR97v",
-   "published_at": "2026-11-10",
-   "thema": "Zinsen/Fed",
-   "bedeutung": "Die Aussage erhöht vor den heutigen Verbraucherpreisen das Risiko für hoch bewertete Technologiewerte, falls die Kerninflation hoch ausfällt (Angaben nur aus Überschriften der Suchergebnisse, Details nicht geprüft).",
-   "erfasst_local": "10:30",
-   "erfasst_von": "N3"
-  },
-  {
-   "title": "Ölpreis fällt kräftig: Brent verliert am Montag knapp 6 % auf unter 93 US-Dollar, WTI liegt bei rund 86,50 US-Dollar – Trump: weitere Angriffe auf den Iran nicht nötig; OPEC+ lässt die Dezember-Förderziele unverändert",
-   "source": "Bloomberg (swissinfo) / Saxo Bank",
-   "url": "https://www.swissinfo.ch/eng/asian-stocks-rally-after-us-tech-surge,-oil-slump:-markets-wrap/92354501",
+   "title": "Ölpreis fällt weiter: Brent rund 90 bis 91 US-Dollar, WTI rund 85 US-Dollar (je etwa −2 %) – Trump will vorerst auf neue Angriffe gegen den Iran verzichten; OPEC+ lässt die Dezember-Förderziele unverändert",
+   "source": "TheStreet / TipRanks / Bloomberg (swissinfo)",
+   "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026",
    "published_at": "2026-11-10",
    "thema": "Rohstoffe",
-   "bedeutung": "Der fallende Ölpreis entlastet das Inflationsrisiko vor den heutigen Verbraucherpreisen; die Iran-Krise bleibt ein Unsicherheitsfaktor.",
+   "bedeutung": "Der fallende Ölpreis dämpft das Inflationsrisiko etwas; die Iran-Krise bleibt ein Unsicherheitsfaktor.",
    "erfasst_local": "08:45",
    "erfasst_von": "N1",
-   "aktualisiert_local": "08:45"
+   "aktualisiert_local": "18:45"
   },
   {
-   "title": "US-Arbeitsmarkt im Oktober deutlich über den Erwartungen (+165.000 Stellen, Arbeitslosenquote 4,1 %) – Wetten auf eine Fed-Zinserhöhung im Dezember nehmen zu, 10-jährige US-Rendite unverändert bei 4,88 %",
+   "title": "US-Arbeitsmarkt im Oktober deutlich über den Erwartungen (+165.000 Stellen, Arbeitslosenquote 4,1 %) – Wetten auf eine Fed-Zinserhöhung im Dezember nehmen zu",
    "source": "CNBC / Bloomberg",
    "url": "https://www.cnbc.com/2026/11/06/jobs-report-october-2026.html",
    "published_at": "2026-11-06",
    "thema": "Zinsen/Fed",
-   "bedeutung": "Bleibt der zentrale Belastungsfaktor für hoch bewertete Technologiewerte, da er die Zinserhöhungserwartungen für Dezember stützt.",
+   "bedeutung": "Bleibt zusammen mit den Inflationsdaten ein zentraler Belastungsfaktor für hoch bewertete Technologiewerte.",
    "erfasst_local": "18:15",
    "erfasst_von": "N-So",
-   "aktualisiert_local": "08:45"
+   "aktualisiert_local": "18:45"
   },
   {
    "title": "Bank of England erhöht den Leitzins auf 4 %, EZB-Vertreter schließen eine Zinserhöhung nicht aus – weltweit straffere Geldpolitik belastet hoch bewertete Wachstumswerte",
