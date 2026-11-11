@@ -1,23 +1,23 @@
 {
   "available": true,
-  "generated_at_utc": "2026-11-11T14:40:32.045193+00:00",
+  "generated_at_utc": "2026-11-11T16:15:53.696396+00:00",
   "quelle": "yfinance (Terminkontrakte GC=F, SI=F, HG=F, CL=F; GDX; DX-Y.NYB; SPY)",
   "werte": {
     "GOLD": {
-      "close": 4036.0,
+      "close": 4012.7,
       "datum": "2026-11-11",
-      "chg_5d_pct": -0.91,
-      "chg_20d_pct": -1.75,
-      "chg_60d_pct": -8.7,
-      "sma50": 4205.88,
-      "sma200": 4486.67,
+      "chg_5d_pct": -1.48,
+      "chg_20d_pct": -2.32,
+      "chg_60d_pct": -9.23,
+      "sma50": 4205.41,
+      "sma200": 4486.56,
       "ueber_sma50": false,
       "ueber_sma200": false,
       "trend": "abwärts",
-      "abstand_52w_hoch_pct": -24.11,
-      "tagesbewegung_pct": 1.17,
-      "rs_20d_vs_spy": -0.07,
-      "korrelation_60d": 0.35,
+      "abstand_52w_hoch_pct": -24.55,
+      "tagesbewegung_pct": 1.18,
+      "rs_20d_vs_spy": -0.84,
+      "korrelation_60d": 0.34,
       "antizyklik": {
         "wochen_aktien_schwach": 34,
         "davon_gestiegen": 17,
@@ -33,20 +33,20 @@
       "signal": "Gegenwind"
     },
     "SILBER": {
-      "close": 52.51,
+      "close": 52.33,
       "datum": "2026-11-11",
-      "chg_5d_pct": 0.74,
-      "chg_20d_pct": -5.48,
-      "chg_60d_pct": -17.89,
+      "chg_5d_pct": 0.4,
+      "chg_20d_pct": -5.8,
+      "chg_60d_pct": -18.16,
       "sma50": 59.14,
-      "sma200": 69.03,
+      "sma200": 69.02,
       "ueber_sma50": false,
       "ueber_sma200": false,
       "trend": "abwärts",
-      "abstand_52w_hoch_pct": -54.38,
-      "tagesbewegung_pct": 2.03,
-      "rs_20d_vs_spy": -3.81,
-      "korrelation_60d": 0.43,
+      "abstand_52w_hoch_pct": -54.53,
+      "tagesbewegung_pct": 2.01,
+      "rs_20d_vs_spy": -4.32,
+      "korrelation_60d": 0.44,
       "antizyklik": {
         "wochen_aktien_schwach": 34,
         "davon_gestiegen": 16,
@@ -62,20 +62,20 @@
       "signal": "Gegenwind"
     },
     "KUPFER": {
-      "close": 6.28,
+      "close": 6.3,
       "datum": "2026-11-11",
-      "chg_5d_pct": -1.97,
-      "chg_20d_pct": -5.06,
-      "chg_60d_pct": -3.17,
+      "chg_5d_pct": -1.64,
+      "chg_20d_pct": -4.74,
+      "chg_60d_pct": -2.85,
       "sma50": 6.53,
       "sma200": 6.23,
       "ueber_sma50": false,
       "ueber_sma200": true,
       "trend": "seitwärts",
-      "abstand_52w_hoch_pct": -7.74,
-      "tagesbewegung_pct": 1.21,
-      "rs_20d_vs_spy": -3.38,
-      "korrelation_60d": 0.48,
+      "abstand_52w_hoch_pct": -7.43,
+      "tagesbewegung_pct": 1.22,
+      "rs_20d_vs_spy": -3.27,
+      "korrelation_60d": 0.49,
       "antizyklik": {
         "wochen_aktien_schwach": 34,
         "davon_gestiegen": 10,
@@ -91,20 +91,20 @@
       "signal": "Neutral"
     },
     "OEL": {
-      "close": 87.39,
+      "close": 87.99,
       "datum": "2026-11-11",
-      "chg_5d_pct": -0.83,
-      "chg_20d_pct": -8.1,
-      "chg_60d_pct": 2.88,
-      "sma50": 95.48,
+      "chg_5d_pct": -0.15,
+      "chg_20d_pct": -7.47,
+      "chg_60d_pct": 3.59,
+      "sma50": 95.5,
       "sma200": 87.54,
       "ueber_sma50": false,
-      "ueber_sma200": false,
+      "ueber_sma200": true,
       "trend": "seitwärts",
-      "abstand_52w_hoch_pct": -22.63,
-      "tagesbewegung_pct": 2.82,
-      "rs_20d_vs_spy": -6.42,
-      "korrelation_60d": -0.45,
+      "abstand_52w_hoch_pct": -22.1,
+      "tagesbewegung_pct": 2.85,
+      "rs_20d_vs_spy": -5.99,
+      "korrelation_60d": -0.44,
       "antizyklik": {
         "wochen_aktien_schwach": 34,
         "davon_gestiegen": 14,
@@ -120,20 +120,20 @@
       "signal": "Neutral"
     },
     "GOLDMINEN": {
-      "close": 86.19,
+      "close": 86.32,
       "datum": "2026-11-11",
-      "chg_5d_pct": 1.89,
-      "chg_20d_pct": 3.35,
-      "chg_60d_pct": -3.1,
+      "chg_5d_pct": 2.05,
+      "chg_20d_pct": 3.51,
+      "chg_60d_pct": -2.95,
       "sma50": 89.0,
       "sma200": 89.87,
       "ueber_sma50": false,
       "ueber_sma200": false,
       "trend": "abwärts",
-      "abstand_52w_hoch_pct": -25.6,
-      "tagesbewegung_pct": 2.78,
-      "rs_20d_vs_spy": 5.02,
-      "korrelation_60d": 0.44,
+      "abstand_52w_hoch_pct": -25.48,
+      "tagesbewegung_pct": 2.77,
+      "rs_20d_vs_spy": 4.98,
+      "korrelation_60d": 0.43,
       "antizyklik": {
         "wochen_aktien_schwach": 34,
         "davon_gestiegen": 13,
@@ -149,11 +149,11 @@
       "signal": "Gegenwind"
     },
     "DOLLAR": {
-      "close": 102.91,
+      "close": 102.85,
       "datum": "2026-11-11",
-      "chg_5d_pct": 1.38,
-      "chg_20d_pct": 0.35,
-      "chg_60d_pct": 3.27,
+      "chg_5d_pct": 1.32,
+      "chg_20d_pct": 0.29,
+      "chg_60d_pct": 3.21,
       "sma50": 101.25,
       "sma200": 99.78,
       "ueber_sma50": true,
@@ -161,7 +161,7 @@
       "trend": "aufwärts",
       "abstand_52w_hoch_pct": 0.0,
       "tagesbewegung_pct": 0.28,
-      "rs_20d_vs_spy": 2.03,
+      "rs_20d_vs_spy": 1.76,
       "korrelation_60d": -0.19,
       "antizyklik": {
         "wochen_aktien_schwach": 34,
@@ -179,37 +179,37 @@
     }
   },
   "referenz": {
-    "close": 756.7,
+    "close": 758.25,
     "datum": "2026-11-11",
-    "chg_5d_pct": -1.32,
-    "chg_20d_pct": -1.68,
-    "chg_60d_pct": -1.16,
-    "sma50": 764.49,
+    "chg_5d_pct": -1.12,
+    "chg_20d_pct": -1.47,
+    "chg_60d_pct": -0.95,
+    "sma50": 764.52,
     "sma200": 728.64,
     "ueber_sma50": false,
     "ueber_sma200": true,
     "trend": "seitwärts",
-    "abstand_52w_hoch_pct": -2.87,
-    "tagesbewegung_pct": 0.95,
+    "abstand_52w_hoch_pct": -2.67,
+    "tagesbewegung_pct": 0.96,
     "name": "S&P 500",
     "symbol": "SPY"
   },
   "aktienlage": {
-    "spy_chg_5d_pct": -1.32,
-    "spy_chg_20d_pct": -1.68,
+    "spy_chg_5d_pct": -1.12,
+    "spy_chg_20d_pct": -1.47,
     "fuehrende_sektoren": [
       "Defense",
       "Transportation",
       "Consumer Discretionary"
     ],
-    "fuehrende_chg_5d_avg": -0.18,
+    "fuehrende_chg_5d_avg": -0.17,
     "aktien_schwach": true,
-    "grund": "S&P 500 auf 20 Tage -1,7 %"
+    "grund": "S&P 500 auf 20 Tage -1,5 %"
   },
   "rotation": {
     "status": "Aktien schwach, keine Rotation",
     "farbe": "gelb",
-    "text": "S&P 500 auf 20 Tage -1,7 %, aber Gold und Silber ziehen (noch) nicht an. Keine Bestätigung für eine Umschichtung."
+    "text": "S&P 500 auf 20 Tage -1,5 %, aber Gold und Silber ziehen (noch) nicht an. Keine Bestätigung für eine Umschichtung."
   },
   "ampel": {
     "status": "ROT",
@@ -278,7 +278,7 @@
       "ROT": {
         "tage": 160,
         "GOLD": {
-          "schnitt_pct": 0.29,
+          "schnitt_pct": 0.28,
           "im_plus_pct": 49.0,
           "schlimmster_pct": -8.56
         },
@@ -356,7 +356,7 @@
         "schlechtester_pct": -3.99,
         "schnitt_tage": 60.2,
         "gesamt_pct": 55.63,
-        "kaufen_und_halten_pct": 59.04,
+        "kaufen_und_halten_pct": 58.12,
         "investiert_pct": 64.0
       },
       "SILBER": {
@@ -435,12 +435,12 @@
         "schlechtester_pct": -6.79,
         "schnitt_tage": 42.0,
         "gesamt_pct": 71.26,
-        "kaufen_und_halten_pct": 79.96,
+        "kaufen_und_halten_pct": 79.36,
         "investiert_pct": 60.0
       }
     }
   },
-  "gold_silber_ratio": 76.9,
+  "gold_silber_ratio": 76.7,
   "chart": {
     "daten": [
       "2026-05-14",
@@ -700,7 +700,7 @@
           86.97,
           87.82,
           86.02,
-          86.14
+          85.64
         ]
       },
       {
@@ -832,7 +832,7 @@
           61.01,
           61.9,
           60.18,
-          61.83
+          61.63
         ]
       },
       {
@@ -964,7 +964,7 @@
           93.24,
           97.35,
           92.06,
-          91.74
+          91.88
         ]
       },
       {
@@ -1096,7 +1096,7 @@
           98.78,
           101.11,
           100.74,
-          101.65
+          101.86
         ]
       }
     ]
@@ -1122,7 +1122,7 @@
           "isin": "DE000A0S9GB0"
         },
         "stop_orientierung_pct": 3.5,
-        "tagesbewegung_pct": 1.17
+        "tagesbewegung_pct": 1.18
       },
       "SILBER": {
         "name": "Silber",
@@ -1132,8 +1132,8 @@
           "name": "WisdomTree Physical Silver",
           "isin": "JE00B1VS3333"
         },
-        "stop_orientierung_pct": 6.1,
-        "tagesbewegung_pct": 2.03
+        "stop_orientierung_pct": 6.0,
+        "tagesbewegung_pct": 2.01
       }
     },
     "regeln": "Nur Hinweis, kein System-Trade, ungehebelt. Kaufen: Ampel GRÜN + Metall über dem 50-Tage-Schnitt + auf 20 Tage mindestens so stark wie der S&P 500. Halten: Ampel GELB oder Metall selbst schwach. Verkaufen: Ampel ROT oder Stop unterschritten. Stop-Orientierung = 3 × mittlere Tagesbewegung des Metalls (20 Tage) unter dem Kaufkurs.",
@@ -1148,5 +1148,5 @@
       }
     }
   },
-  "run": "p5"
+  "run": "p55"
 }
