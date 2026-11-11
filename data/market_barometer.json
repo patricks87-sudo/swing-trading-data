@@ -1,20 +1,21 @@
 {
- "generated_at_utc": "2026-11-11T16:20:00Z",
- "status": "NEUTRAL",
- "begruendung": "Der Feed bestätigt NEUTRAL mit 2 von 5 Kriterien: VIX 17,68 unter 20 und 54 % der Watchlist über der SMA50; S&P 500 weiter 0,85 % unter der SMA50, Nasdaq 1,16 % unter der SMA20 und nur 42 % der Watchlist im 5-Tage-Plus. Damit heute maximal 1 neue Position und insgesamt 3 offene Swing-Positionen. Seit Eröffnung legt der S&P 500 nur +0,19 % zu, die Marktbreite ist mit 35 Gewinnern zu 15 Verlierern solide. Hold-Test (5-Minuten-Daten): Apple, Thermo Fisher Scientific und Progressive bestehen 4/4; Visa, Lockheed Martin und UPS 3/4, UnitedHealth Group, Linde und JPMorgan Chase 2/4, Travelers 0/4. Einstieg heute zum Kurs nur bei Apple; Visa, UnitedHealth Group, Linde, Lockheed Martin, Thermo Fisher Scientific und UPS per Limit. Progressive ist trotz bestandenem Hold-Test im aktuellen Feed wegen bärischem Optionsflow ausgeschlossen. Second-Chance-Hinweise für den nächsten P4-Lauf: Duke Energy (84,7) und Mastercard (70,6) sind intraday nicht mehr ausgeschlossen (Optionsflow jetzt neutral). US-10J-Rendite 5,00 % (nur Info).",
- "kurzbegruendung": "NEUTRAL (2/5), S&P 500 +0,19 % seit Eröffnung; max. 1 neue Position. Apple besteht Hold-Test 4/4 – Einstieg zum Kurs möglich.",
- "sektor_rotation": [
-  {"sektor": "Defense", "trend": "positiv", "kommentar": "Rang 1; Lockheed Martin +1,4 % seit Eröffnung und stärker als der S&P 500, Hold-Test 3/4 (Volumen nur 0,42×) – Limit an 541,32 €.", "kandidaten": [{"name": "Lockheed Martin", "empfehlung": "Beobachten"}]},
-  {"sektor": "Consumer Discretionary", "trend": "positiv", "kommentar": "Rang 3; kein P4-Kandidat, Amazon im Feed nur Beobachten (57,0).", "kandidaten": [{"name": "Amazon", "empfehlung": "Beobachten"}]},
-  {"sektor": "Transportation", "trend": "neutral", "kommentar": "Rang 4; UPS Hold-Test 3/4, aber 6,15 % über der SMA20 – Limit an der SMA20 (94,20 €); Union Pacific weiter wegen bärischem Optionsflow ausgeschlossen.", "kandidaten": [{"name": "United Parcel Service (UPS)", "empfehlung": "Beobachten"}, {"name": "Union Pacific", "empfehlung": "Kein Einstieg"}]},
-  {"sektor": "Utilities", "trend": "neutral", "kommentar": "Rang 5; Duke Energy mit höchstem Feed-Score (84,7) intraday nicht mehr ausgeschlossen (Optionsflow neutral) – Second-Chance-Hinweis für den nächsten P4-Lauf, heute kein Kauf.", "kandidaten": [{"name": "Duke Energy", "empfehlung": "Beobachten"}]},
-  {"sektor": "Payments", "trend": "neutral", "kommentar": "Rang 7; Visa Hold-Test 3/4 (+1,2 % seit Eröffnung, Volumen 0,9×) – Limit an 377,36 €; Mastercard (70,6) intraday nicht mehr ausgeschlossen – Hinweis für den nächsten P4-Lauf.", "kandidaten": [{"name": "Visa", "empfehlung": "Beobachten"}, {"name": "Mastercard", "empfehlung": "Beobachten"}]},
-  {"sektor": "MedTech", "trend": "neutral", "kommentar": "Rang 8; Thermo Fisher Scientific besteht 4/4, liegt aber 4,22 % über der SMA20 – Limit an 621,75 €; Feed-Score intraday 60,8 mit Bulltrap-Flag.", "kandidaten": [{"name": "Thermo Fisher Scientific", "empfehlung": "Beobachten"}]},
-  {"sektor": "Insurance", "trend": "neutral", "kommentar": "Rang 9; Travelers fällt im Hold-Test durch (0/4); Progressive besteht 4/4, ist im aktuellen Feed aber wegen bärischem Optionsflow ausgeschlossen.", "kandidaten": [{"name": "Travelers", "empfehlung": "Kein Einstieg"}, {"name": "Progressive", "empfehlung": "Kein Einstieg"}]},
-  {"sektor": "Technology", "trend": "positiv", "kommentar": "Rang 10; Apple besteht den Hold-Test 4/4 (+1,16 % seit Eröffnung, über VWAP) – Einstieg zum Kurs möglich (ca. 316,16 €, Stop 299,22 €).", "kandidaten": [{"name": "Apple", "empfehlung": "Kauf"}]},
-  {"sektor": "Financials", "trend": "neutral", "kommentar": "Rang 11; JPMorgan Chase Hold-Test 2/4 bei sehr dünnem Volumen, Stufe Beobachten.", "kandidaten": [{"name": "JPMorgan Chase", "empfehlung": "Beobachten"}]},
-  {"sektor": "Healthcare", "trend": "neutral", "kommentar": "Rang 12; UnitedHealth Group Hold-Test 2/4 (−1,39 % seit Eröffnung, Volumen 1,33×) – Limit an 356,05 €; Feed-Score intraday 55,5.", "kandidaten": [{"name": "UnitedHealth Group", "empfehlung": "Beobachten"}]},
-  {"sektor": "Materials", "trend": "neutral", "kommentar": "Rang 13; Linde Hold-Test 2/4 (Volumen 0,55×) – Limit an 467,59 €; Earnings-Termin unbekannt (Datenbasis unvollständig).", "kandidaten": [{"name": "Linde", "empfehlung": "Beobachten"}]},
-  {"sektor": "Semiconductors/AI", "trend": "neutral", "kommentar": "Rang 16; NVIDIA wegen Earnings am 17.11. ausgeschlossen.", "kandidaten": [{"name": "NVIDIA", "empfehlung": "Kein Einstieg"}]}
- ]
+  "generated_at_utc": "2026-11-11T16:50:36Z",
+  "status": "NEUTRAL",
+  "begruendung": "NEUTRAL mit 2 von 5 Kriterien: VIX 17,7 (unter 20) und 54 % der Watchlist über SMA50 erfüllt; S&P 500 0,81 % unter SMA50, Nasdaq 1,08 % unter SMA20 und nur 44 % der Watchlist im 5-Tage-Plus nicht erfüllt. Damit max. 3 offene Positionen und 1 neue Position heute. Keine offenen Swing-Positionen – Visa als einziger neuer Trade per Limit-Order, Apple als Alternative. US-10J-Rendite 5,00 % (nur Info).",
+  "kurzbegruendung": "NEUTRAL (2/5): S&P 500 unter SMA50, Nasdaq unter SMA20, VIX 17,7. Heute 1 neue Position – Visa per Limit, Apple als Alternative.",
+  "sektor_rotation": [
+    {"sektor": "Defense", "trend": "positiv", "kommentar": "Rang 1, 20 Tage +11,7 %, aber Kapitalfluss schwach.", "kandidaten": [{"name": "Lockheed Martin", "empfehlung": "Kein Einstieg"}]},
+    {"sektor": "Transportation", "trend": "neutral", "kommentar": "Rang 4, 5 Tage −2,3 % nach starkem Lauf.", "kandidaten": [{"name": "United Parcel Service (UPS)", "empfehlung": "Beobachten"}, {"name": "Union Pacific", "empfehlung": "Kein Einstieg"}]},
+    {"sektor": "Utilities", "trend": "neutral", "kommentar": "Rang 6; Duke Energy mit höchstem Feed-Score.", "kandidaten": [{"name": "Duke Energy", "empfehlung": "Beobachten"}]},
+    {"sektor": "Payments", "trend": "neutral", "kommentar": "Rang 7, kurzfristige Konsolidierung im Aufwärtstrend.", "kandidaten": [{"name": "Visa", "empfehlung": "Kauf"}, {"name": "Mastercard", "empfehlung": "Beobachten"}]},
+    {"sektor": "Insurance", "trend": "neutral", "kommentar": "Rang 8, Trend intakt, Kapitalfluss rot.", "kandidaten": [{"name": "Travelers", "empfehlung": "Beobachten"}, {"name": "Progressive", "empfehlung": "Kein Einstieg"}]},
+    {"sektor": "MedTech", "trend": "neutral", "kommentar": "Rang 9, Thermo Fisher Scientific überdehnt über SMA20.", "kandidaten": [{"name": "Thermo Fisher Scientific", "empfehlung": "Beobachten"}]},
+    {"sektor": "Technology", "trend": "positiv", "kommentar": "Rang 10, 5 Tage +1,3 %; Apple mit Hold-Test 4/4.", "kandidaten": [{"name": "Apple", "empfehlung": "Beobachten"}]},
+    {"sektor": "Financials", "trend": "neutral", "kommentar": "Rang 11, Kapitalfluss schwach.", "kandidaten": [{"name": "JPMorgan Chase", "empfehlung": "Beobachten"}]},
+    {"sektor": "Healthcare", "trend": "neutral", "kommentar": "Rang 12, schwache 5 Tage (−2,4 %).", "kandidaten": [{"name": "UnitedHealth Group", "empfehlung": "Beobachten"}]},
+    {"sektor": "Materials", "trend": "neutral", "kommentar": "Rang 13, Linde mit hoher relativer Stärke.", "kandidaten": [{"name": "Linde", "empfehlung": "Beobachten"}]},
+    {"sektor": "Industrials", "trend": "neutral", "kommentar": "Rang 14, 20 Tage −6,6 %.", "kandidaten": [{"name": "Deere & Company", "empfehlung": "Kein Einstieg"}]},
+    {"sektor": "Semiconductors/AI", "trend": "neutral", "kommentar": "Rang 15, 20 Tage −9,0 %; NVIDIA-Earnings am 17.11.", "kandidaten": [{"name": "NVIDIA", "empfehlung": "Kein Einstieg"}]},
+    {"sektor": "Software/Cloud", "trend": "negativ", "kommentar": "Rang 17, 20 Tage −8,9 %.", "kandidaten": [{"name": "Microsoft", "empfehlung": "Kein Einstieg"}]}
+  ]
 }
