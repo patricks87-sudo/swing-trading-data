@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-10T16:44:22.172468+00:00",
+  "generated_at_utc": "2026-11-11T16:45:02.072294+00:00",
   "waehrung": "EUR",
   "hinweis": "Hypothetisch, ohne Steuern. Depot-Simulation mit 8.000 € Start, 75 € Risiko je Trade, Schutz-Stop 2× ATR, Verkauf nach 10 Handelstagen, max. 5 Positionen / 375 € Gesamtrisiko / 2 je Sektor, 1 € Gebühr je Order. Echte Trades stehen im Trade-Journal.",
   "start": "2026-08-12",
@@ -67,7 +67,8 @@
     "2026-11-05",
     "2026-11-06",
     "2026-11-09",
-    "2026-11-10"
+    "2026-11-10",
+    "2026-11-11"
   ],
   "reihen": [
     {
@@ -126,7 +127,7 @@
         109.99,
         109.31,
         109.76,
-        109.86,
+        109.85,
         110.22,
         110.24,
         109.08,
@@ -137,7 +138,8 @@
         108.41,
         107.71,
         109.47,
-        109.81
+        109.58,
+        110.88
       ]
     },
     {
@@ -207,7 +209,8 @@
         110.56,
         110.17,
         112.76,
-        112.79
+        112.35,
+        113.52
       ]
     },
     {
@@ -277,7 +280,8 @@
         91.96,
         93.3,
         97.31,
-        96.24
+        96.01,
+        99.63
       ]
     },
     {
@@ -347,32 +351,33 @@
         97.5,
         97.58,
         100.82,
-        99.89
+        99.67,
+        101.76
       ]
     }
   ],
   "zusammenfassung": {
     "neu": {
       "label": "Depot-Simulation (deine Regeln)",
-      "gesamt_pct": 9.81
+      "gesamt_pct": 10.88
     },
     "alle": {
       "label": "Alle Kandidaten, 10 Tage gehalten",
-      "gesamt_pct": 12.79
+      "gesamt_pct": 13.52
     },
     "qqq": {
       "label": "Nasdaq-100 (QQQ)",
-      "gesamt_pct": -3.76
+      "gesamt_pct": -0.37
     },
     "urth": {
       "label": "MSCI World (URTH)",
-      "gesamt_pct": -0.11
+      "gesamt_pct": 1.76
     }
   },
   "statistik": {
     "neu": {
       "startkapital_eur": 8000.0,
-      "endwert_eur": 8784.8,
+      "endwert_eur": 8870.4,
       "trades_abgeschlossen": 23,
       "trades_offen": 5,
       "trefferquote_pct": 61.0,
@@ -386,12 +391,12 @@
         "risiko": 0,
         "sektor": 5,
         "kapital": 0,
-        "doppelt": 4,
+        "doppelt": 5,
         "limit_verfallen": 34
       }
     },
     "alle": {
-      "trades": 81,
+      "trades": 82,
       "abgeschlossen": 67,
       "trefferquote_pct": 70.0,
       "schnitt_trade_pct": 2.75
@@ -621,9 +626,9 @@
       "ende": "2026-09-04",
       "stueck": 6,
       "ausstieg": "10 Tage",
-      "einstieg_eur": 319.53,
-      "ausstieg_eur": 322.55,
-      "ergebnis_eur": 16.12,
+      "einstieg_eur": 318.94,
+      "ausstieg_eur": 321.95,
+      "ergebnis_eur": 16.08,
       "rendite_pct": 0.95
     },
     {
@@ -682,9 +687,9 @@
       "start": "2026-11-03",
       "stueck": 6,
       "einstieg_eur": 290.9,
-      "kurs_eur": 311.84,
-      "tage": 6,
-      "ergebnis_eur": 124.64
+      "kurs_eur": 318.95,
+      "tage": 7,
+      "ergebnis_eur": 167.3
     },
     {
       "ticker": "RTX",
@@ -692,9 +697,9 @@
       "start": "2026-11-05",
       "stueck": 7,
       "einstieg_eur": 175.09,
-      "kurs_eur": 178.43,
-      "tage": 4,
-      "ergebnis_eur": 22.39
+      "kurs_eur": 179.67,
+      "tage": 5,
+      "ergebnis_eur": 31.09
     },
     {
       "ticker": "JPM",
@@ -702,9 +707,9 @@
       "start": "2026-11-05",
       "stueck": 6,
       "einstieg_eur": 300.68,
-      "kurs_eur": 306.91,
-      "tage": 4,
-      "ergebnis_eur": 36.35
+      "kurs_eur": 309.85,
+      "tage": 5,
+      "ergebnis_eur": 54.0
     },
     {
       "ticker": "TRV",
@@ -712,9 +717,9 @@
       "start": "2026-11-09",
       "stueck": 4,
       "einstieg_eur": 356.82,
-      "kurs_eur": 358.6,
-      "tage": 2,
-      "ergebnis_eur": 6.1
+      "kurs_eur": 357.26,
+      "tage": 3,
+      "ergebnis_eur": 0.75
     },
     {
       "ticker": "PGR",
@@ -722,9 +727,9 @@
       "start": "2026-11-09",
       "stueck": 8,
       "einstieg_eur": 205.47,
-      "kurs_eur": 205.5,
-      "tage": 2,
-      "ergebnis_eur": -0.76
+      "kurs_eur": 208.22,
+      "tage": 3,
+      "ergebnis_eur": 21.04
     }
   ]
 }
