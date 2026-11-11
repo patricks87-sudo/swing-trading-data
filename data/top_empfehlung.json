@@ -1,25 +1,25 @@
 {
- "generated_at_utc": "2026-11-10T16:55:00+00:00",
- "top3": [
-  {
-   "ticker": "V",
-   "name": "Visa",
-   "aktion": "Beobachten",
-   "begruendung": "Beste Portfolio-Chance: Score 78,9 (Kauf – hohe Qualität), Trend grün, Optionsflow grün, Hold-Test 3/4 (nur Volumen mit 0,59× zu schwach). Setup wäre Limit 375,96 €, Schutz-Stop 358,94 €, 4 Stück (Risiko 71 €) – heute aber kein Kauf, weil RISK-OFF keine neuen Positionen erlaubt."
-  },
-  {
-   "ticker": "TRV",
-   "name": "Travelers",
-   "aktion": "Beobachten",
-   "begruendung": "Zweitbeste Alternative: Score 71,5 (Kauf – solide), Trend grün, Hold-Test 3/4. Setup wäre Limit 356,35 €, Schutz-Stop 336,19 €, 4 Stück (Risiko 65 €); RISK-OFF sperrt den Einstieg, Kapitalfluss ist rot."
-  },
-  {
-   "ticker": "TMO",
-   "name": "Thermo Fisher Scientific",
-   "aktion": "Beobachten",
-   "begruendung": "Watchlist-Kandidat: höchster Score des Tages (79,7, Kauf – hohe Qualität), Sektor MedTech auf Rang 6, aber Hold-Test 0/4 (unter VWAP, schwächer als S&P 500). Einstieg frühestens per Limit an der SMA20 bei 615,60 €, sobald das Regime es zulässt."
-  }
- ],
- "gesamteinschaetzung": "Kein Trade heute. Das Regime steht auf RISK-OFF (0 von 5 Kriterien: S&P 500 unter SMA50, Nasdaq unter SMA20, VIX 20,73, Marktbreite 48 %), daher sind keine neuen Positionen erlaubt. Am nächsten an einem Kauf sind Visa und Travelers (Hold-Test 3/4, Limit-Setup vorbereitet) – es fehlt allein die Regime-Freigabe. Das Depot besteht nur aus Bestandspositionen ohne Swing-Risiko; Rohstoff-Ampel ROT (1/6 Kriterien), im Feed liegt keine Gold/Silber-Empfehlung vor, nur Information und kein System-Trade. Hinweis: UnitedHealth Group (71,0) und Lockheed Martin (68,9) liegen im Feed über 65, kommen aber erst im nächsten P4-Lauf infrage. Bitte ausgeführte Käufe und Verkäufe im Cockpit unter „Journal“ eintragen.",
- "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,98 Prozentpunkte über dem Nasdaq (n=66) – überwiegend liegengelassene Gewinne."
+  "generated_at_utc": "2026-11-11T16:50:36Z",
+  "top3": [
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "aktion": "Limit-Order",
+      "begruendung": "Höchster kaufbarer Score (P4 86,8, Kauf – hohe Qualität; P1-Feed 74,9), Trend und Optionsflow grün, Hold-Test 3/4 (nur Volumen 0,9× unter Schnitt) → Limit-Order an 377,31 €, gültig bis Handelsschluss. Schutz-Stop 359,84 €, 4 Stück, Kapitalbedarf 1.509 €, Risiko 70 €; Verkauf spätestens am 25.11.2026 zum Schlusskurs. Danach freies Risiko 305 €, heute kein weiterer Platz. Spread bei Trade Republic nicht prüfbar – vor der Order kurz kontrollieren."
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "aktion": "Beobachten",
+      "begruendung": "Einziger Kandidat mit Hold-Test 4/4 und Einstieg zum Kurs (Kauf – solide, Score 70,3, Bulltrap-Flag entfallen). Wegen NEUTRAL nur 1 neue Position – Alternative nur, falls das Visa-Limit heute nicht ausgeführt wird: Kauf zum Kurs ca. 316,54 €, Stop 299,60 €, 4 Stück, 1.266 €, Risiko 68 €."
+    },
+    {
+      "ticker": "DUK",
+      "name": "Duke Energy",
+      "aktion": "Beobachten",
+      "begruendung": "Höchster Score im P1-Feed (83,8, Kauf – hohe Qualität), Optionsflow nicht mehr bärisch, Kurs 2,1 % über SMA20. P4 hatte heute noch wegen bärischem Optionsflow ausgeschlossen – Kauf erst nach Bestätigung im nächsten P4; Earnings-Termin unbekannt (Datenbasis unvollständig)."
+    }
+  ],
+  "gesamteinschaetzung": "NEUTRAL (2/5 Kriterien: S&P 500 0,81 % unter SMA50, Nasdaq 1,08 % unter SMA20, VIX 17,7). Keine offenen Swing-Positionen, freies Risiko 375 €, heute 1 neue Position erlaubt → Visa per Limit-Order (Apple als Alternative). Bestand: Oracle, Rheinmetall und Alphabet „Prüfen“ (Ampeln rot bzw. negative News mit hohem Gewicht), Bloom Energy „Halten“. Rohstoff-Ampel ROT (0/6 Kriterien), eine Gold/Silber-Empfehlung liefert der Feed heute nicht (Datenbasis unvollständig) – nur Information. Hinweis Filter-Bilanz: Aussortierte lagen nach 10 Tagen +2,98 Punkte über dem Nasdaq (n=66) – die Ausstiegsregeln der Kandidatenliste könnten zu streng sein; Regeln bleiben unverändert. Ausgeführte Käufe bitte im Cockpit unter „Journal“ eintragen.",
+  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,98 Prozentpunkte über dem Nasdaq (n=66) – überwiegend liegengelassene Gewinne."
 }
