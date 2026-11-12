@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-11T16:45:02.072294+00:00",
+  "generated_at_utc": "2026-11-12T16:45:12.763695+00:00",
   "waehrung": "EUR",
   "hinweis": "Hypothetisch, ohne Steuern. Depot-Simulation mit 8.000 € Start, 75 € Risiko je Trade, Schutz-Stop 2× ATR, Verkauf nach 10 Handelstagen, max. 5 Positionen / 375 € Gesamtrisiko / 2 je Sektor, 1 € Gebühr je Order. Echte Trades stehen im Trade-Journal.",
   "start": "2026-08-12",
@@ -68,7 +68,8 @@
     "2026-11-06",
     "2026-11-09",
     "2026-11-10",
-    "2026-11-11"
+    "2026-11-11",
+    "2026-11-12"
   ],
   "reihen": [
     {
@@ -139,7 +140,8 @@
         107.71,
         109.47,
         109.58,
-        110.88
+        110.81,
+        112.23
       ]
     },
     {
@@ -210,7 +212,8 @@
         110.17,
         112.76,
         112.35,
-        113.52
+        113.33,
+        114.56
       ]
     },
     {
@@ -281,6 +284,7 @@
         93.3,
         97.31,
         96.01,
+        98.7,
         99.63
       ]
     },
@@ -352,18 +356,19 @@
         97.58,
         100.82,
         99.67,
-        101.76
+        101.19,
+        102.18
       ]
     }
   ],
   "zusammenfassung": {
     "neu": {
       "label": "Depot-Simulation (deine Regeln)",
-      "gesamt_pct": 10.88
+      "gesamt_pct": 12.23
     },
     "alle": {
       "label": "Alle Kandidaten, 10 Tage gehalten",
-      "gesamt_pct": 13.52
+      "gesamt_pct": 14.56
     },
     "qqq": {
       "label": "Nasdaq-100 (QQQ)",
@@ -371,13 +376,13 @@
     },
     "urth": {
       "label": "MSCI World (URTH)",
-      "gesamt_pct": 1.76
+      "gesamt_pct": 2.18
     }
   },
   "statistik": {
     "neu": {
       "startkapital_eur": 8000.0,
-      "endwert_eur": 8870.4,
+      "endwert_eur": 8978.4,
       "trades_abgeschlossen": 23,
       "trades_offen": 5,
       "trefferquote_pct": 61.0,
@@ -387,16 +392,16 @@
       "gebuehren_eur": 51.0,
       "max_gleichzeitig": 5,
       "nicht_gekauft": {
-        "plaetze": 5,
+        "plaetze": 7,
         "risiko": 0,
         "sektor": 5,
         "kapital": 0,
         "doppelt": 5,
-        "limit_verfallen": 34
+        "limit_verfallen": 35
       }
     },
     "alle": {
-      "trades": 82,
+      "trades": 84,
       "abgeschlossen": 67,
       "trefferquote_pct": 70.0,
       "schnitt_trade_pct": 2.75
@@ -687,9 +692,9 @@
       "start": "2026-11-03",
       "stueck": 6,
       "einstieg_eur": 290.9,
-      "kurs_eur": 318.95,
-      "tage": 7,
-      "ergebnis_eur": 167.3
+      "kurs_eur": 322.93,
+      "tage": 8,
+      "ergebnis_eur": 191.14
     },
     {
       "ticker": "RTX",
@@ -697,9 +702,9 @@
       "start": "2026-11-05",
       "stueck": 7,
       "einstieg_eur": 175.09,
-      "kurs_eur": 179.67,
-      "tage": 5,
-      "ergebnis_eur": 31.09
+      "kurs_eur": 179.8,
+      "tage": 6,
+      "ergebnis_eur": 31.96
     },
     {
       "ticker": "JPM",
@@ -707,9 +712,9 @@
       "start": "2026-11-05",
       "stueck": 6,
       "einstieg_eur": 300.68,
-      "kurs_eur": 309.85,
-      "tage": 5,
-      "ergebnis_eur": 54.0
+      "kurs_eur": 311.42,
+      "tage": 6,
+      "ergebnis_eur": 63.39
     },
     {
       "ticker": "TRV",
@@ -717,9 +722,9 @@
       "start": "2026-11-09",
       "stueck": 4,
       "einstieg_eur": 356.82,
-      "kurs_eur": 357.26,
-      "tage": 3,
-      "ergebnis_eur": 0.75
+      "kurs_eur": 365.87,
+      "tage": 4,
+      "ergebnis_eur": 35.18
     },
     {
       "ticker": "PGR",
@@ -727,9 +732,9 @@
       "start": "2026-11-09",
       "stueck": 8,
       "einstieg_eur": 205.47,
-      "kurs_eur": 208.22,
-      "tage": 3,
-      "ergebnis_eur": 21.04
+      "kurs_eur": 213.13,
+      "tage": 4,
+      "ergebnis_eur": 60.33
     }
   ]
 }

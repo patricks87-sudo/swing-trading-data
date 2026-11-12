@@ -1,90 +1,3213 @@
 {
- "generated_at_utc": "2026-11-11T16:50:36Z",
- "kurse_aktualisiert_utc": "2026-11-11T16:45:00.429729+00:00",
- "kandidaten": [
-  {"ticker": "LMT", "name": "Lockheed Martin", "sector": "Defense", "aufnahmedatum": "2026-08-13", "aufnahmequelle": "P4", "aufnahme_score": "hoch", "aufnahme_kurs_usd": 606.72, "aufnahme_kurs_eur": 526.03, "handelstage_in_liste": 12, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert (Rotation bereits am 08.09. erfolgt).", "referenz_kurs_usd": 606.72, "aktueller_kurs_usd": 607.26, "aktueller_kurs_eur": 542.89, "performance_pct": 0.09, "handelstage_seit_aufnahme": 64, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.34, "ueberrendite_pct": 4.43, "forward": {"5T": {"aktie_pct": -2.9, "nasdaq_pct": -1.05, "ueberrendite_pct": -1.85}, "10T": {"aktie_pct": -6.77, "nasdaq_pct": -1.7, "ueberrendite_pct": -5.07}, "20T": {"aktie_pct": -12.63, "nasdaq_pct": -2.07, "ueberrendite_pct": -10.56}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "MA", "name": "Mastercard", "sector": "Payments", "aufnahmedatum": "2026-08-19", "aufnahmequelle": "P4", "aufnahme_score": "hoch", "aufnahme_kurs_usd": 574.31, "aufnahme_kurs_eur": 496.2, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert.", "referenz_kurs_usd": 574.31, "aktueller_kurs_usd": 654.04, "aktueller_kurs_eur": 584.71, "performance_pct": 13.88, "handelstage_seit_aufnahme": 60, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -3.52, "ueberrendite_pct": 17.4, "forward": {"5T": {"aktie_pct": 4.36, "nasdaq_pct": -0.95, "ueberrendite_pct": 5.31}, "10T": {"aktie_pct": 1.18, "nasdaq_pct": -1.38, "ueberrendite_pct": 2.56}, "20T": {"aktie_pct": -1.14, "nasdaq_pct": -1.78, "ueberrendite_pct": 0.64}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "AAPL", "name": "Apple", "sector": "Technology", "aufnahmedatum": "2026-08-21", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 311.32, "aufnahme_kurs_eur": 266.49, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Verkauf", "letzte_einschaetzung": "15 Handelstage in der Liste erreicht, ohne dass daraus ein tatsaechlicher Trade wurde (Zeitlimit) - rotiert planmaessig aus der aktiven Liste.", "referenz_kurs_usd": 311.3, "aktueller_kurs_usd": 353.92, "aktueller_kurs_eur": 316.4, "performance_pct": 13.69, "handelstage_seit_aufnahme": 58, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.63, "ueberrendite_pct": 16.32, "forward": {"5T": {"aktie_pct": 1.05, "nasdaq_pct": 1.43, "ueberrendite_pct": -0.38}, "10T": {"aktie_pct": 5.43, "nasdaq_pct": 0.95, "ueberrendite_pct": 4.48}, "20T": {"aktie_pct": 7.98, "nasdaq_pct": 1.48, "ueberrendite_pct": 6.5}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "V", "name": "Visa", "sector": "Payments", "aufnahmedatum": "2026-08-24", "aufnahmequelle": "P4", "aufnahme_score": "hoch", "aufnahme_kurs_usd": 371.04, "aufnahme_kurs_eur": 317.57, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Verkauf", "letzte_einschaetzung": "15 Handelstage in der Liste erreicht, ohne dass daraus ein tatsaechlicher Trade wurde (Zeitlimit) - rotiert planmaessig aus der aktiven Liste.", "referenz_kurs_usd": 371.04, "aktueller_kurs_usd": 421.89, "aktueller_kurs_eur": 377.17, "performance_pct": 13.7, "handelstage_seit_aufnahme": 57, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.97, "ueberrendite_pct": 16.67, "forward": {"5T": {"aktie_pct": 2.85, "nasdaq_pct": 0.42, "ueberrendite_pct": 2.43}, "10T": {"aktie_pct": 1.09, "nasdaq_pct": 0.77, "ueberrendite_pct": 0.32}, "20T": {"aktie_pct": -0.29, "nasdaq_pct": 3.93, "ueberrendite_pct": -4.22}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "NOW", "name": "ServiceNow", "sector": "Software/Cloud", "aufnahmedatum": "2026-08-24", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 128.48, "aufnahme_kurs_eur": 109.98, "handelstage_in_liste": 6, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert.", "referenz_kurs_usd": 128.48, "aktueller_kurs_usd": 102.42, "aktueller_kurs_eur": 91.56, "performance_pct": -20.28, "handelstage_seit_aufnahme": 57, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.97, "ueberrendite_pct": -17.31, "forward": {"5T": {"aktie_pct": 12.63, "nasdaq_pct": 0.42, "ueberrendite_pct": 12.21}, "10T": {"aktie_pct": 9.95, "nasdaq_pct": 0.77, "ueberrendite_pct": 9.18}, "20T": {"aktie_pct": 7.16, "nasdaq_pct": 3.93, "ueberrendite_pct": 3.23}}, "status_gruppe": "invalidiert"},
-  {"ticker": "MSFT", "name": "Microsoft", "sector": "Software/Cloud", "aufnahmedatum": "2026-08-24", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 483.24, "aufnahme_kurs_eur": 413.65, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Verkauf", "letzte_einschaetzung": "15 Handelstage in der Liste erreicht, ohne dass daraus ein tatsaechlicher Trade wurde (Zeitlimit) - rotiert planmaessig aus der aktiven Liste.", "referenz_kurs_usd": 483.24, "aktueller_kurs_usd": 519.22, "aktueller_kurs_eur": 464.18, "performance_pct": 7.45, "handelstage_seit_aufnahme": 57, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.97, "ueberrendite_pct": 10.42, "forward": {"5T": {"aktie_pct": 6.27, "nasdaq_pct": 0.42, "ueberrendite_pct": 5.85}, "10T": {"aktie_pct": 3.41, "nasdaq_pct": 0.77, "ueberrendite_pct": 2.64}, "20T": {"aktie_pct": 3.8, "nasdaq_pct": 3.93, "ueberrendite_pct": -0.13}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "HOOD", "name": "Robinhood", "sector": "Fintech/Brokerage", "aufnahmedatum": "2026-08-24", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 108.13, "aufnahme_kurs_eur": 92.56, "handelstage_in_liste": 10, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert. Die zugehoerige Depotposition wurde vom Nutzer inzwischen verkauft (Stand 27.09.2026).", "referenz_kurs_usd": 108.13, "aktueller_kurs_usd": 84.7, "aktueller_kurs_eur": 75.72, "performance_pct": -21.67, "handelstage_seit_aufnahme": 57, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.97, "ueberrendite_pct": -18.7, "forward": {"5T": {"aktie_pct": -3.58, "nasdaq_pct": 0.42, "ueberrendite_pct": -4.0}, "10T": {"aktie_pct": 12.93, "nasdaq_pct": 0.77, "ueberrendite_pct": 12.16}, "20T": {"aktie_pct": 14.03, "nasdaq_pct": 3.93, "ueberrendite_pct": 10.1}}, "status_gruppe": "invalidiert"},
-  {"ticker": "CRM", "name": "Salesforce", "sector": "Software/Cloud", "aufnahmedatum": "2026-08-25", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 209.06, "aufnahme_kurs_eur": 179.16, "handelstage_in_liste": 3, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert.", "referenz_kurs_usd": 209.06, "aktueller_kurs_usd": 217.61, "aktueller_kurs_eur": 194.54, "performance_pct": 4.09, "handelstage_seit_aufnahme": 56, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -1.99, "ueberrendite_pct": 6.08, "forward": {"5T": {"aktie_pct": 23.19, "nasdaq_pct": 1.48, "ueberrendite_pct": 21.71}, "10T": {"aktie_pct": 19.16, "nasdaq_pct": 1.7, "ueberrendite_pct": 17.46}, "20T": {"aktie_pct": 11.59, "nasdaq_pct": 5.82, "ueberrendite_pct": 5.77}}, "status_gruppe": "invalidiert"},
-  {"ticker": "CAT", "name": "Caterpillar", "sector": "Industrials", "aufnahmedatum": "2026-08-17", "aufnahmequelle": "P4", "aufnahme_score": "hoch", "aufnahme_kurs_usd": 856.57, "aufnahme_kurs_eur": 740.08, "handelstage_in_liste": 6, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert.", "referenz_kurs_usd": 856.57, "aktueller_kurs_usd": 603.05, "aktueller_kurs_eur": 539.13, "performance_pct": -29.6, "handelstage_seit_aufnahme": 62, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -5.31, "ueberrendite_pct": -24.29, "forward": {"5T": {"aktie_pct": -3.35, "nasdaq_pct": -2.41, "ueberrendite_pct": -0.94}, "10T": {"aktie_pct": -6.58, "nasdaq_pct": -2.0, "ueberrendite_pct": -4.58}, "20T": {"aktie_pct": -8.47, "nasdaq_pct": -2.99, "ueberrendite_pct": -5.48}}, "status_gruppe": "invalidiert"},
-  {"ticker": "ORCL", "name": "Oracle", "sector": "Software/Cloud", "aufnahmedatum": "2026-08-27", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 148.025, "aufnahme_kurs_eur": 127.01, "handelstage_in_liste": 8, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert. Die zugehoerige Depotposition (10 Stueck) wurde vom Nutzer inzwischen verkauft (Stand 27.09.2026).", "referenz_kurs_usd": 148.87, "aktueller_kurs_usd": 128.22, "aktueller_kurs_eur": 114.63, "performance_pct": -13.87, "handelstage_seit_aufnahme": 54, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.69, "ueberrendite_pct": -11.18, "forward": {"5T": {"aktie_pct": -2.1, "nasdaq_pct": -0.3, "ueberrendite_pct": -1.8}, "10T": {"aktie_pct": 2.73, "nasdaq_pct": -0.38, "ueberrendite_pct": 3.11}, "20T": {"aktie_pct": -6.27, "nasdaq_pct": 4.18, "ueberrendite_pct": -10.45}}, "status_gruppe": "invalidiert"},
-  {"ticker": "AMD", "name": "AMD (Advanced Micro Devices)", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-08-27", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 474.87, "aufnahme_kurs_eur": 407.44, "handelstage_in_liste": 3, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert.", "referenz_kurs_usd": 480.93, "aktueller_kurs_usd": 552.96, "aktueller_kurs_eur": 494.35, "performance_pct": 14.98, "handelstage_seit_aufnahme": 54, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.69, "ueberrendite_pct": 17.67, "forward": {"5T": {"aktie_pct": -4.96, "nasdaq_pct": -0.3, "ueberrendite_pct": -4.66}, "10T": {"aktie_pct": 4.71, "nasdaq_pct": -0.38, "ueberrendite_pct": 5.09}, "20T": {"aktie_pct": 30.84, "nasdaq_pct": 4.18, "ueberrendite_pct": 26.66}}, "status_gruppe": "invalidiert"},
-  {"ticker": "UNH", "name": "UnitedHealth Group", "sector": "Healthcare", "aufnahmedatum": "2026-08-27", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 398.36, "aufnahme_kurs_eur": 341.79, "handelstage_in_liste": 3, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert.", "referenz_kurs_usd": 401.01, "aktueller_kurs_usd": 399.82, "aktueller_kurs_eur": 357.44, "performance_pct": -0.3, "handelstage_seit_aufnahme": 54, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.69, "ueberrendite_pct": 2.39, "forward": {"5T": {"aktie_pct": -0.34, "nasdaq_pct": -0.3, "ueberrendite_pct": -0.04}, "10T": {"aktie_pct": -3.17, "nasdaq_pct": -0.38, "ueberrendite_pct": -2.79}, "20T": {"aktie_pct": -6.48, "nasdaq_pct": 4.18, "ueberrendite_pct": -10.66}}, "status_gruppe": "invalidiert"},
-  {"ticker": "CAT", "name": "Caterpillar", "sector": "Industrials", "aufnahmedatum": "2026-09-14", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 786.54, "aufnahme_kurs_eur": 677.96, "handelstage_in_liste": 2, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert.", "referenz_kurs_usd": 818.57, "aktueller_kurs_usd": 603.05, "aktueller_kurs_eur": 539.13, "performance_pct": -26.33, "handelstage_seit_aufnahme": 43, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -3.16, "ueberrendite_pct": -23.17, "forward": {"5T": {"aktie_pct": -1.17, "nasdaq_pct": 0.92, "ueberrendite_pct": -2.09}, "10T": {"aktie_pct": 0.37, "nasdaq_pct": 4.14, "ueberrendite_pct": -3.77}, "20T": {"aktie_pct": -2.21, "nasdaq_pct": 5.09, "ueberrendite_pct": -7.3}}, "status_gruppe": "invalidiert"},
-  {"ticker": "PANW", "name": "Palo Alto Networks", "sector": "Cybersecurity", "aufnahmedatum": "2026-09-11", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 338.49, "aufnahme_kurs_eur": 291.44, "handelstage_in_liste": 9, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Invalidiert trotz starker Performance: Setup strukturell ueberdehnt, rotiert gemaess Regel aus der aktiven Liste.", "referenz_kurs_usd": 338.49, "aktueller_kurs_usd": 339.35, "aktueller_kurs_eur": 303.38, "performance_pct": 0.25, "handelstage_seit_aufnahme": 44, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.32, "ueberrendite_pct": 2.57, "forward": {"5T": {"aktie_pct": 10.8, "nasdaq_pct": 1.16, "ueberrendite_pct": 9.64}, "10T": {"aktie_pct": 15.19, "nasdaq_pct": 4.57, "ueberrendite_pct": 10.62}, "20T": {"aktie_pct": 17.73, "nasdaq_pct": 5.49, "ueberrendite_pct": 12.24}}, "status_gruppe": "invalidiert"},
-  {"ticker": "AMD", "name": "AMD (Advanced Micro Devices)", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-09-15", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 493.41, "aufnahme_kurs_eur": 427.29, "handelstage_in_liste": 5, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Invalidiert trotz starker Performance: Setup strukturell stark ueberdehnt, gemaess Rotationsregel aus der aktiven Liste genommen.", "referenz_kurs_usd": 493.41, "aktueller_kurs_usd": 552.96, "aktueller_kurs_eur": 494.35, "performance_pct": 12.07, "handelstage_seit_aufnahme": 42, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.39, "ueberrendite_pct": 14.46, "forward": {"5T": {"aktie_pct": 24.75, "nasdaq_pct": 4.55, "ueberrendite_pct": 20.2}, "10T": {"aktie_pct": 23.2, "nasdaq_pct": 3.86, "ueberrendite_pct": 19.34}, "20T": {"aktie_pct": 20.44, "nasdaq_pct": 5.2, "ueberrendite_pct": 15.24}}, "status_gruppe": "invalidiert"},
-  {"ticker": "AAPL", "name": "Apple", "sector": "Technology", "aufnahmedatum": "2026-09-15", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 333.08, "aufnahme_kurs_eur": 293.03, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Halten", "letzte_einschaetzung": "15 Handelstage erreicht, ohne Trade (Zeitlimit) - rotiert planmaessig aus der aktiven Liste. Technisch neutral (0,3% ueber SMA20, RSI14 53, OBV-5-Tage nur +8 Mio., Optionsflow bullisch), kein Einstiegssignal.", "referenz_kurs_usd": 333.08, "aktueller_kurs_usd": 353.92, "aktueller_kurs_eur": 316.4, "performance_pct": 6.26, "handelstage_seit_aufnahme": 42, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.39, "ueberrendite_pct": 8.65, "forward": {"5T": {"aktie_pct": 1.77, "nasdaq_pct": 4.55, "ueberrendite_pct": -2.78}, "10T": {"aktie_pct": 1.6, "nasdaq_pct": 3.86, "ueberrendite_pct": -2.26}, "20T": {"aktie_pct": 2.37, "nasdaq_pct": 5.2, "ueberrendite_pct": -2.83}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "NOW", "name": "ServiceNow", "sector": "Software/Cloud", "aufnahmedatum": "2026-09-15", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 135.77, "aufnahme_kurs_eur": 119.36, "handelstage_in_liste": 12, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Rotiert aus der aktiven Liste (Ueberlauf: max. 10 aktive Eintraege, drei Neuaufnahmen am 30.09.). Technisch trotz +3,8% Tageserholung schwach: OBV-5-Tage-Trend negativ (-39,6 Mio.), rote Kapitalfluss-Ampel, fallende SMA200.", "referenz_kurs_usd": 142.35, "aktueller_kurs_usd": 102.42, "aktueller_kurs_eur": 91.56, "performance_pct": -28.05, "handelstage_seit_aufnahme": 42, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -2.39, "ueberrendite_pct": -25.66, "forward": {"5T": {"aktie_pct": -3.28, "nasdaq_pct": 4.55, "ueberrendite_pct": -7.83}, "10T": {"aktie_pct": -7.66, "nasdaq_pct": 3.86, "ueberrendite_pct": -11.52}, "20T": {"aktie_pct": -1.43, "nasdaq_pct": 5.2, "ueberrendite_pct": -6.63}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "NVDA", "name": "NVIDIA", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-09-21", "aufnahmequelle": "P4", "aufnahme_score": "hoch", "aufnahme_kurs_usd": 222.27, "aufnahme_kurs_eur": 195.38, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "15 Handelstage in der Liste ohne Trade – Zeitlimit erreicht; Kurs 229.28 USD, Ampel Kapitalfluss/Trend rot/gruen.", "referenz_kurs_usd": 222.27, "status_seit": "2026-10-09", "aktueller_kurs_usd": 175.24, "aktueller_kurs_eur": 156.66, "performance_pct": -21.16, "handelstage_seit_aufnahme": 38, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.05, "ueberrendite_pct": -17.11, "forward": {"5T": {"aktie_pct": 1.26, "nasdaq_pct": 3.19, "ueberrendite_pct": -1.93}, "10T": {"aktie_pct": 5.25, "nasdaq_pct": 3.9, "ueberrendite_pct": 1.35}, "20T": {"aktie_pct": -3.66, "nasdaq_pct": -1.61, "ueberrendite_pct": -2.05}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "TMO", "name": "Thermo Fisher Scientific", "sector": "MedTech", "aufnahmedatum": "2026-09-21", "aufnahmequelle": "P4", "aufnahme_score": "hoch", "aufnahme_kurs_usd": 651.45, "aufnahme_kurs_eur": 572.62, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "15 Handelstage in der Liste ohne Trade – Zeitlimit erreicht; Kurs 658.02 USD, Ampel Kapitalfluss/Trend gelb/gruen.", "referenz_kurs_usd": 651.45, "status_seit": "2026-10-09", "aktueller_kurs_usd": 724.55, "aktueller_kurs_eur": 647.75, "performance_pct": 11.22, "handelstage_seit_aufnahme": 38, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.05, "ueberrendite_pct": 15.27, "forward": {"5T": {"aktie_pct": 3.62, "nasdaq_pct": 3.19, "ueberrendite_pct": 0.43}, "10T": {"aktie_pct": 0.51, "nasdaq_pct": 3.9, "ueberrendite_pct": -3.39}, "20T": {"aktie_pct": 5.92, "nasdaq_pct": -1.61, "ueberrendite_pct": 7.53}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "MRVL", "name": "Marvell Technology", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-09-21", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 244.25, "aufnahme_kurs_eur": 214.77, "handelstage_in_liste": 3, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 24.09.2026 nicht mehr aktualisiert (bereits invalidiert: 4 Anti-Bulltrap-Kriterien gleichzeitig verletzt).", "referenz_kurs_usd": 244.25, "aktueller_kurs_usd": 173.28, "aktueller_kurs_eur": 154.91, "performance_pct": -29.06, "handelstage_seit_aufnahme": 38, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.05, "ueberrendite_pct": -25.01, "forward": {"5T": {"aktie_pct": 7.24, "nasdaq_pct": 3.19, "ueberrendite_pct": 4.05}, "10T": {"aktie_pct": 11.48, "nasdaq_pct": 3.9, "ueberrendite_pct": 7.58}, "20T": {"aktie_pct": -6.72, "nasdaq_pct": -1.61, "ueberrendite_pct": -5.11}}, "status_gruppe": "invalidiert"},
-  {"ticker": "TSM", "name": "Taiwan Semiconductor", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-09-21", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 434.67, "aufnahme_kurs_eur": 382.08, "handelstage_in_liste": 11, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "P1-Update: Invalidiert trotz +11,5% Performance: 2 Anti-Bulltrap-Kriterien neu aufgetreten (RSI14 92,0 >72 und 9,2% ueber SMA20 >8%), Optionsflow bearisch, Earnings am 15.10.2026 naehern sich - strukturell stark ueberdehnt.", "referenz_kurs_usd": 434.67, "aktueller_kurs_usd": 414.8, "aktueller_kurs_eur": 370.83, "performance_pct": -4.57, "handelstage_seit_aufnahme": 38, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.05, "ueberrendite_pct": -0.52, "forward": {"5T": {"aktie_pct": 3.67, "nasdaq_pct": 3.19, "ueberrendite_pct": 0.48}, "10T": {"aktie_pct": 8.77, "nasdaq_pct": 3.9, "ueberrendite_pct": 4.87}, "20T": {"aktie_pct": -5.08, "nasdaq_pct": -1.61, "ueberrendite_pct": -3.47}}, "status_gruppe": "invalidiert"},
-  {"ticker": "ASML", "name": "ASML Holding", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-09-21", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 1679.92, "aufnahme_kurs_eur": 1476.65, "handelstage_in_liste": 4, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 24.09.2026 nicht mehr aktualisiert (bereits invalidiert: Kurs unter SMA50 gefallen, zusaetzlich P4-Downgrade auf Score niedrig wegen belastender Nachrichtenlage).", "referenz_kurs_usd": 1679.92, "aktueller_kurs_usd": 1561.22, "aktueller_kurs_eur": 1395.73, "performance_pct": -7.07, "handelstage_seit_aufnahme": 38, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.05, "ueberrendite_pct": -3.02, "forward": {"5T": {"aktie_pct": 3.81, "nasdaq_pct": 3.19, "ueberrendite_pct": 0.62}, "10T": {"aktie_pct": 11.15, "nasdaq_pct": 3.9, "ueberrendite_pct": 7.25}, "20T": {"aktie_pct": -2.29, "nasdaq_pct": -1.61, "ueberrendite_pct": -0.68}}, "status_gruppe": "invalidiert"},
-  {"ticker": "ISRG", "name": "Intuitive Surgical", "sector": "MedTech", "aufnahmedatum": "2026-09-21", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 393.33, "aufnahme_kurs_eur": 345.86, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "15 Handelstage in der Liste ohne Trade – Zeitlimit erreicht; Kurs 423.96 USD, Ampel Kapitalfluss/Trend gelb/rot.", "referenz_kurs_usd": 393.33, "status_seit": "2026-10-09", "aktueller_kurs_usd": 445.4, "aktueller_kurs_eur": 398.19, "performance_pct": 13.24, "handelstage_seit_aufnahme": 38, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.05, "ueberrendite_pct": 17.29, "forward": {"5T": {"aktie_pct": 3.01, "nasdaq_pct": 3.19, "ueberrendite_pct": -0.18}, "10T": {"aktie_pct": -0.35, "nasdaq_pct": 3.9, "ueberrendite_pct": -4.25}, "20T": {"aktie_pct": 8.48, "nasdaq_pct": -1.61, "ueberrendite_pct": 10.09}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "AVGO", "name": "Broadcom", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-09-22", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 362.995, "aufnahme_kurs_eur": 319.07, "handelstage_in_liste": 3, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 24.09.2026 nicht mehr aktualisiert (bereits invalidiert: Kurs unter SMA20/SMA50 gefallen).", "referenz_kurs_usd": 362.66, "aktueller_kurs_usd": 354.02, "aktueller_kurs_eur": 316.49, "performance_pct": -2.38, "handelstage_seit_aufnahme": 37, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.64, "ueberrendite_pct": 4.26, "forward": {"5T": {"aktie_pct": -3.61, "nasdaq_pct": -0.67, "ueberrendite_pct": -2.94}, "10T": {"aktie_pct": -0.04, "nasdaq_pct": 1.99, "ueberrendite_pct": -2.03}, "20T": {"aktie_pct": -7.74, "nasdaq_pct": -3.12, "ueberrendite_pct": -4.62}}, "status_gruppe": "invalidiert"},
-  {"ticker": "DE", "name": "Deere & Company", "sector": "Industrials", "aufnahmedatum": "2026-09-24", "aufnahmequelle": "P4", "aufnahme_score": "hoch", "aufnahme_kurs_usd": 709.48, "aufnahme_kurs_eur": 623.63, "handelstage_in_liste": 5, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Halten", "letzte_einschaetzung": "Rotiert aus der aktiven Liste (Ueberlauf: max. 10 aktive Eintraege, drei Neuaufnahmen am 30.09.; zweitschwaechste Performance seit Aufnahme). Kein Kaufsignal: OBV-5-Tage-Trend negativ (-4,2 Mio.), rote Kapitalfluss-Ampel, Kurs noch ueber SMA50.", "referenz_kurs_usd": 709.48, "aktueller_kurs_usd": 690.71, "aktueller_kurs_eur": 617.49, "performance_pct": -2.65, "handelstage_seit_aufnahme": 35, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.6, "ueberrendite_pct": 3.95, "forward": {"5T": {"aktie_pct": -5.35, "nasdaq_pct": -0.19, "ueberrendite_pct": -5.16}, "10T": {"aktie_pct": -7.42, "nasdaq_pct": 2.23, "ueberrendite_pct": -9.65}, "20T": {"aktie_pct": -10.28, "nasdaq_pct": -2.16, "ueberrendite_pct": -8.12}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "CAT", "name": "Caterpillar", "sector": "Industrials", "aufnahmedatum": "2026-09-24", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 812.02, "aufnahme_kurs_eur": 713.77, "handelstage_in_liste": 1, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 24.09.2026 nicht mehr aktualisiert (noch am Aufnahmetag invalidiert: Kurs unter SMA50 gefallen).", "referenz_kurs_usd": 812.02, "aktueller_kurs_usd": 603.05, "aktueller_kurs_eur": 539.13, "performance_pct": -25.73, "handelstage_seit_aufnahme": 35, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.6, "ueberrendite_pct": -19.13, "forward": {"5T": {"aktie_pct": -0.15, "nasdaq_pct": -0.19, "ueberrendite_pct": 0.04}, "10T": {"aktie_pct": 0.22, "nasdaq_pct": 2.23, "ueberrendite_pct": -2.01}, "20T": {"aktie_pct": -8.84, "nasdaq_pct": -2.16, "ueberrendite_pct": -6.68}}, "status_gruppe": "invalidiert"},
-  {"ticker": "AVGO", "name": "Broadcom", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-09-24", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 354.99, "aufnahme_kurs_eur": 312.04, "handelstage_in_liste": 1, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Historischer Eintrag, seit 24.09.2026 nicht mehr aktualisiert (noch am Aufnahmetag invalidiert: Kurs unter SMA20/SMA50 gefallen).", "referenz_kurs_usd": 354.99, "aktueller_kurs_usd": 354.02, "aktueller_kurs_eur": 316.49, "performance_pct": -0.27, "handelstage_seit_aufnahme": 35, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.6, "ueberrendite_pct": 6.33, "forward": {"5T": {"aktie_pct": -1.07, "nasdaq_pct": -0.19, "ueberrendite_pct": -0.88}, "10T": {"aktie_pct": 6.06, "nasdaq_pct": 2.23, "ueberrendite_pct": 3.83}, "20T": {"aktie_pct": -4.84, "nasdaq_pct": -2.16, "ueberrendite_pct": -2.68}}, "status_gruppe": "invalidiert"},
-  {"ticker": "CAT", "name": "Caterpillar", "sector": "Industrials", "aufnahmedatum": "2026-09-25", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 811.36, "aufnahme_kurs_eur": 713.19, "handelstage_in_liste": 1, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: Institutional Hold Test (P5.5) explizit 'Nicht bestanden' (OBV-5-Tage-Trend auf nur +0,43 Mio. eingebrochen), Kurs bleibt unter SMA50 (-2,13%) - kein Trade.", "referenz_kurs_usd": 805.25, "aktueller_kurs_usd": 603.05, "aktueller_kurs_eur": 539.13, "performance_pct": -25.11, "handelstage_seit_aufnahme": 34, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.59, "ueberrendite_pct": -18.52, "forward": {"5T": {"aktie_pct": 2.62, "nasdaq_pct": 0.13, "ueberrendite_pct": 2.49}, "10T": {"aktie_pct": -1.13, "nasdaq_pct": 0.87, "ueberrendite_pct": -2.0}, "20T": {"aktie_pct": -12.57, "nasdaq_pct": -4.94, "ueberrendite_pct": -7.63}}, "status_gruppe": "invalidiert"},
-  {"ticker": "AVGO", "name": "Broadcom", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-09-25", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 351.49, "aufnahme_kurs_eur": 309.0, "handelstage_in_liste": 1, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: Institutional Hold Test (P5.5) explizit 'Nicht bestanden' (frueher OBV-Turnaround auf +3,1 Mio. verpufft), Kurs bleibt unter SMA20 (-1,81%) und SMA50 (-6,67%) - kein Trade.", "referenz_kurs_usd": 350.36, "aktueller_kurs_usd": 354.02, "aktueller_kurs_eur": 316.49, "performance_pct": 1.04, "handelstage_seit_aufnahme": 34, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.59, "ueberrendite_pct": 7.63, "forward": {"5T": {"aktie_pct": -1.92, "nasdaq_pct": 0.13, "ueberrendite_pct": -2.05}, "10T": {"aktie_pct": 2.79, "nasdaq_pct": 0.87, "ueberrendite_pct": 1.92}, "20T": {"aktie_pct": -7.74, "nasdaq_pct": -4.94, "ueberrendite_pct": -2.8}}, "status_gruppe": "invalidiert"},
-  {"ticker": "PLTR", "name": "Palantir Technologies", "sector": "Software/Cloud", "aufnahmedatum": "2026-09-25", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 191.6, "aufnahme_kurs_eur": 168.44, "handelstage_in_liste": 1, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: 2 Anti-Bulltrap-Kriterien bereits bei Aufnahme verletzt (RSI14 72,91 >72, Abstand SMA50 +16,85% >15%) - trotz mit Abstand staerkstem OBV-5-Tage-Zufluss der gesamten Watchlist (+101,4 Mio.) strukturell zu weit gelaufen fuer einen Neueinstieg.", "referenz_kurs_usd": 192.59, "aktueller_kurs_usd": 172.79, "aktueller_kurs_eur": 154.47, "performance_pct": -10.28, "handelstage_seit_aufnahme": 34, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.59, "ueberrendite_pct": -3.69, "forward": {"5T": {"aktie_pct": -1.32, "nasdaq_pct": 0.13, "ueberrendite_pct": -1.45}, "10T": {"aktie_pct": 3.21, "nasdaq_pct": 0.87, "ueberrendite_pct": 2.34}, "20T": {"aktie_pct": 1.87, "nasdaq_pct": -4.94, "ueberrendite_pct": 6.81}}, "status_gruppe": "invalidiert"},
-  {"ticker": "TSLA", "name": "Tesla", "sector": "Consumer Discretionary", "aufnahmedatum": "2026-09-25", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 370.76, "aufnahme_kurs_eur": 325.89, "handelstage_in_liste": 4, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Rotiert aus der aktiven Liste (Ueberlauf: max. 10 aktive Eintraege, drei Neuaufnahmen am 30.09.; schwaechste Performance seit Aufnahme). These widerlegt: OBV-5-Tage-Trend klar negativ (-144,5 Mio.), 5T -8,0%, unter SMA20 und fallender SMA200, rote Ampeln.", "referenz_kurs_usd": 377.94, "aktueller_kurs_usd": 392.75, "aktueller_kurs_eur": 351.12, "performance_pct": 3.92, "handelstage_seit_aufnahme": 34, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.59, "ueberrendite_pct": 10.51, "forward": {"5T": {"aktie_pct": -6.31, "nasdaq_pct": 0.13, "ueberrendite_pct": -6.44}, "10T": {"aktie_pct": -0.78, "nasdaq_pct": 0.87, "ueberrendite_pct": -1.65}, "20T": {"aktie_pct": -0.89, "nasdaq_pct": -4.94, "ueberrendite_pct": 4.05}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "PANW", "name": "Palo Alto Networks", "sector": "Cybersecurity", "aufnahmedatum": "2026-09-28", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 386.35, "aufnahme_kurs_eur": 339.26, "handelstage_in_liste": 10, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Überlauf (max. 10 aktive Einträge): niedrigster aktueller Score (64.8); Optionsflow bärisch, Kurs über SMA50, These technisch nicht widerlegt.", "referenz_kurs_usd": 374.74, "status_seit": "2026-10-09", "aktueller_kurs_usd": 339.35, "aktueller_kurs_eur": 303.38, "performance_pct": -9.44, "handelstage_seit_aufnahme": 33, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.02, "ueberrendite_pct": -2.42, "forward": {"5T": {"aktie_pct": 7.61, "nasdaq_pct": 0.68, "ueberrendite_pct": 6.93}, "10T": {"aktie_pct": 11.75, "nasdaq_pct": 0.91, "ueberrendite_pct": 10.84}, "20T": {"aktie_pct": 1.55, "nasdaq_pct": -5.39, "ueberrendite_pct": 6.94}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "PLTR", "name": "Palantir Technologies", "sector": "Software/Cloud", "aufnahmedatum": "2026-09-28", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 188.735, "aufnahme_kurs_eur": 165.71, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "15 Handelstage ohne Trade erreicht; Feed-Stufe nur noch Beobachten (Score 59,3), Kapitalfluss rot, Hold-Test heute nicht bestanden (−6,6 % seit Eröffnung).", "referenz_kurs_usd": 189.67, "status_seit": "2026-10-16", "wiedereinstieg_eur": 171.52, "aktueller_kurs_usd": 172.79, "aktueller_kurs_eur": 154.47, "performance_pct": -8.9, "handelstage_seit_aufnahme": 33, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.02, "ueberrendite_pct": -1.88, "forward": {"5T": {"aktie_pct": -0.49, "nasdaq_pct": 0.68, "ueberrendite_pct": -1.17}, "10T": {"aktie_pct": 10.22, "nasdaq_pct": 0.91, "ueberrendite_pct": 9.31}, "20T": {"aktie_pct": 3.73, "nasdaq_pct": -5.39, "ueberrendite_pct": 9.12}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "XOM", "name": "ExxonMobil", "sector": "Energy", "aufnahmedatum": "2026-09-29", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 161.625, "aufnahme_kurs_eur": 142.07, "handelstage_in_liste": 1, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: Institutional Hold Test (P5.5) 'Nicht bestanden' (-0,66% am Tag, Kurs unter SMA20, fallender Oelpreis bei US-Iran-Gespraechen) - kein Trade. Aufnahmekurs = P1-Kurs (P4-Kurs nicht im Feed).", "referenz_kurs_usd": 162.52, "aktueller_kurs_usd": 166.25, "aktueller_kurs_eur": 148.63, "performance_pct": 2.3, "handelstage_seit_aufnahme": 32, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.01, "ueberrendite_pct": 8.31, "forward": {"5T": {"aktie_pct": 0.91, "nasdaq_pct": 2.67, "ueberrendite_pct": -1.76}, "10T": {"aktie_pct": 5.93, "nasdaq_pct": 1.29, "ueberrendite_pct": 4.64}, "20T": {"aktie_pct": 13.55, "nasdaq_pct": -3.3, "ueberrendite_pct": 16.85}}, "status_gruppe": "invalidiert"},
-  {"ticker": "CVX", "name": "Chevron", "sector": "Energy", "aufnahmedatum": "2026-09-29", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 204.89, "aufnahme_kurs_eur": 180.1, "handelstage_in_liste": 1, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: Institutional Hold Test (P5.5) 'Nicht bestanden' (-0,68% am Tag, 2,2% unter SMA20, RSI14 36,5, Oel-/Geopolitik-Risiko) - kein Trade. Aufnahmekurs = P1-Kurs (P4-Kurs nicht im Feed).", "referenz_kurs_usd": 206.37, "aktueller_kurs_usd": 212.74, "aktueller_kurs_eur": 190.19, "performance_pct": 3.09, "handelstage_seit_aufnahme": 32, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.01, "ueberrendite_pct": 9.1, "forward": {"5T": {"aktie_pct": 0.05, "nasdaq_pct": 2.67, "ueberrendite_pct": -2.62}, "10T": {"aktie_pct": 4.18, "nasdaq_pct": 1.29, "ueberrendite_pct": 2.89}, "20T": {"aktie_pct": 12.42, "nasdaq_pct": -3.3, "ueberrendite_pct": 15.72}}, "status_gruppe": "invalidiert"},
-  {"ticker": "MSFT", "name": "Microsoft", "sector": "Software/Cloud", "aufnahmedatum": "2026-09-30", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 518.87, "aufnahme_kurs_eur": 457.66, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "15 Handelstage ohne Trade erreicht; zusätzlich Earnings in 5 Handelstagen (28.10.) – harter Ausschluss, keine Neuaufnahme.", "referenz_kurs_usd": 508.96, "status_seit": "2026-10-21", "aktueller_kurs_usd": 519.22, "aktueller_kurs_eur": 464.18, "performance_pct": 2.02, "handelstage_seit_aufnahme": 31, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.19, "ueberrendite_pct": 8.21, "forward": {"5T": {"aktie_pct": 4.0, "nasdaq_pct": 2.94, "ueberrendite_pct": 1.06}, "10T": {"aktie_pct": 6.78, "nasdaq_pct": 0.76, "ueberrendite_pct": 6.02}, "20T": {"aktie_pct": 4.4, "nasdaq_pct": -2.26, "ueberrendite_pct": 6.66}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "XOM", "name": "ExxonMobil", "sector": "Energy", "aufnahmedatum": "2026-09-30", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 163.35, "aufnahme_kurs_eur": 144.08, "handelstage_in_liste": 8, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Überlauf (max. 10 aktive Einträge): niedrigster aktueller Score (59.7); Optionsflow bärisch, Kurs über SMA50, These technisch nicht widerlegt.", "referenz_kurs_usd": 161.35, "status_seit": "2026-10-09", "aktueller_kurs_usd": 166.25, "aktueller_kurs_eur": 148.63, "performance_pct": 3.04, "handelstage_seit_aufnahme": 31, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.19, "ueberrendite_pct": 9.23, "forward": {"5T": {"aktie_pct": 1.94, "nasdaq_pct": 2.94, "ueberrendite_pct": -1.0}, "10T": {"aktie_pct": 7.89, "nasdaq_pct": 0.76, "ueberrendite_pct": 7.13}, "20T": {"aktie_pct": 11.5, "nasdaq_pct": -2.26, "ueberrendite_pct": 13.76}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "CVX", "name": "Chevron", "sector": "Energy", "aufnahmedatum": "2026-09-30", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 205.53, "aufnahme_kurs_eur": 181.28, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "15 Handelstage ohne Trade erreicht; Optionsflow im aktuellen Feed bärisch (RSI14 > 72) – keine Neuaufnahme.", "referenz_kurs_usd": 204.38, "status_seit": "2026-10-21", "aktueller_kurs_usd": 212.74, "aktueller_kurs_eur": 190.19, "performance_pct": 4.09, "handelstage_seit_aufnahme": 31, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.19, "ueberrendite_pct": 10.28, "forward": {"5T": {"aktie_pct": 1.57, "nasdaq_pct": 2.94, "ueberrendite_pct": -1.37}, "10T": {"aktie_pct": 6.53, "nasdaq_pct": 0.76, "ueberrendite_pct": 5.77}, "20T": {"aktie_pct": 11.67, "nasdaq_pct": -2.26, "ueberrendite_pct": 13.93}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "AMZN", "name": "Amazon", "sector": "Consumer Discretionary", "aufnahmedatum": "2026-10-01", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 246.71, "aufnahme_kurs_eur": 217.6, "handelstage_in_liste": 1, "status": "ausgeschieden (invalidiert)", "empfehlung": "Verkauf", "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: Institutional Hold Test (P5.5) 'Nicht bestanden' (-1,0% am Tag, schwaecher als S&P500/NASDAQ), Kurs 2,1% unter SMA20 und 3,7% unter SMA50 trotz OBV-5-Tage +77 Mio. - kein Trade. Aufnahmekurs = P1-Kurs (P4-Kurs nicht im Feed).", "referenz_kurs_usd": 249.15, "aktueller_kurs_usd": 266.65, "aktueller_kurs_eur": 238.39, "performance_pct": 7.03, "handelstage_seit_aufnahme": 30, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.42, "ueberrendite_pct": 13.45, "forward": {"5T": {"aktie_pct": 4.32, "nasdaq_pct": 2.43, "ueberrendite_pct": 1.89}, "10T": {"aktie_pct": 1.98, "nasdaq_pct": -1.46, "ueberrendite_pct": 3.44}, "20T": {"aktie_pct": 2.19, "nasdaq_pct": -1.91, "ueberrendite_pct": 4.1}}, "status_gruppe": "invalidiert"},
-  {"ticker": "AMZN", "name": "Amazon", "sector": "Consumer Discretionary", "aufnahmedatum": "2026-10-05", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 251.53, "aufnahme_kurs_eur": 223.6, "handelstage_in_liste": 1, "status": "ausgeschieden (invalidiert)", "empfehlung": "Halten", "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag formal invalidiert (Kurs 1,8% unter SMA50), inhaltlich aber sauberster Pullback der Watchlist: 0,4% ueber SMA20, RSI14 55, OBV-5-Tage +76 Mio., Optionsflow bullisch; P5.5 nur 'Teilweise' - Wiedervorlage bei Rueckeroberung der SMA50 (ca. 228 EUR) mit Volumen. Aufnahmekurs USD aus P4-EUR-Kurs mit aktuellem EUR/USD zurueckgerechnet.", "referenz_kurs_usd": 251.52, "aktueller_kurs_usd": 266.65, "aktueller_kurs_eur": 238.39, "performance_pct": 6.02, "handelstage_seit_aufnahme": 28, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.65, "ueberrendite_pct": 13.67, "forward": {"5T": {"aktie_pct": 4.34, "nasdaq_pct": 0.23, "ueberrendite_pct": 4.11}, "10T": {"aktie_pct": -0.6, "nasdaq_pct": -5.31, "ueberrendite_pct": 4.71}, "20T": {"aktie_pct": -4.44, "nasdaq_pct": -7.88, "ueberrendite_pct": 3.44}}, "status_gruppe": "invalidiert"},
-  {"ticker": "SNOW", "name": "Snowflake", "sector": "Software/Cloud", "aufnahmedatum": "2026-10-05", "aufnahmequelle": "P4", "aufnahme_score": "mittel", "aufnahme_kurs_usd": 340.83, "aufnahme_kurs_eur": 303.0, "handelstage_in_liste": 9, "status": "ausgeschieden (zeitlimit)", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Score 46,2 (Kein Setup), Kapitalfluss rot, −3,9 % unter SMA20 – als schwächster Eintrag wegen Überlauf (max. 10 aktive) aussortiert.", "referenz_kurs_usd": 341.04, "status_seit": "2026-10-15", "aktueller_kurs_usd": 307.22, "aktueller_kurs_eur": 274.66, "performance_pct": -9.92, "handelstage_seit_aufnahme": 28, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.65, "ueberrendite_pct": -2.27, "forward": {"5T": {"aktie_pct": 8.17, "nasdaq_pct": 0.23, "ueberrendite_pct": 7.94}, "10T": {"aktie_pct": -10.03, "nasdaq_pct": -5.31, "ueberrendite_pct": -4.72}, "20T": {"aktie_pct": -10.25, "nasdaq_pct": -7.88, "ueberrendite_pct": -2.37}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "TMO", "name": "Thermo Fisher Scientific", "sector": "MedTech", "aufnahmedatum": "2026-10-09", "aufnahmequelle": "P4", "aufnahme_score": 81.7, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 658.02, "aufnahme_kurs_eur": 586.95, "handelstage_in_liste": 16, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-01", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "16 Handelstage in der Liste ohne Trade; erfüllt weiter die Kauf-Stufe und wird heute neu aufgenommen.", "referenz_kurs_usd": 651.98, "aktueller_kurs_usd": 724.55, "aktueller_kurs_eur": 647.75, "performance_pct": 11.13, "handelstage_seit_aufnahme": 24, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.4, "ueberrendite_pct": 18.53, "forward": {"5T": {"aktie_pct": 6.83, "nasdaq_pct": -2.62, "ueberrendite_pct": 9.45}, "10T": {"aktie_pct": 3.77, "nasdaq_pct": -5.77, "ueberrendite_pct": 9.54}, "20T": {"aktie_pct": 3.83, "nasdaq_pct": -13.45, "ueberrendite_pct": 17.28}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "AAPL", "name": "Apple", "sector": "Technology", "aufnahmedatum": "2026-10-09", "aufnahmequelle": "P4", "aufnahme_score": 76.5, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 336.64, "aufnahme_kurs_eur": 300.28, "handelstage_in_liste": 16, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-01", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "16 Handelstage in der Liste ohne Trade; Earnings am 02.11. und bärischer Optionsflow, Stufe Ausgeschlossen – keine Wiederaufnahme.", "referenz_kurs_usd": 340.42, "aktueller_kurs_usd": 353.92, "aktueller_kurs_eur": 316.4, "performance_pct": 3.97, "handelstage_seit_aufnahme": 24, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.4, "ueberrendite_pct": 11.37, "forward": {"5T": {"aktie_pct": 0.46, "nasdaq_pct": -2.62, "ueberrendite_pct": 3.08}, "10T": {"aktie_pct": 2.29, "nasdaq_pct": -5.77, "ueberrendite_pct": 8.06}, "20T": {"aktie_pct": 1.1, "nasdaq_pct": -13.45, "ueberrendite_pct": 14.55}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "AMZN", "name": "Amazon", "sector": "Consumer Discretionary", "aufnahmedatum": "2026-10-09", "aufnahmequelle": "P4", "aufnahme_score": 75.7, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 262.43, "aufnahme_kurs_eur": 234.09, "handelstage_in_liste": 4, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-10-14", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kurs (255,61 $) fällt unter die SMA50 (257,91 $), Score 53,6 (Beobachten), Kapitalfluss rot, Hold-Test 1/4 – These widerlegt.", "referenz_kurs_usd": 254.06, "aktueller_kurs_usd": 266.65, "aktueller_kurs_eur": 238.39, "performance_pct": 4.96, "handelstage_seit_aufnahme": 24, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.4, "ueberrendite_pct": 12.36, "forward": {"5T": {"aktie_pct": 0.28, "nasdaq_pct": -2.62, "ueberrendite_pct": 2.9}, "10T": {"aktie_pct": -1.45, "nasdaq_pct": -5.77, "ueberrendite_pct": 4.32}, "20T": {"aktie_pct": 2.42, "nasdaq_pct": -13.45, "ueberrendite_pct": 15.87}}, "status_gruppe": "invalidiert"},
-  {"ticker": "V", "name": "Visa", "sector": "Payments", "aufnahmedatum": "2026-10-09", "aufnahmequelle": "P4", "aufnahme_score": 75.4, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 385.45, "aufnahme_kurs_eur": 343.82, "handelstage_in_liste": 16, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-01", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "16 Handelstage in der Liste ohne Trade; Optionsflow bärisch (Stufe Ausgeschlossen, Score 65,7) – keine Wiederaufnahme.", "referenz_kurs_usd": 375.1, "aktueller_kurs_usd": 421.89, "aktueller_kurs_eur": 377.17, "performance_pct": 12.47, "handelstage_seit_aufnahme": 24, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.4, "ueberrendite_pct": 19.87, "forward": {"5T": {"aktie_pct": 6.57, "nasdaq_pct": -2.62, "ueberrendite_pct": 9.19}, "10T": {"aktie_pct": 10.46, "nasdaq_pct": -5.77, "ueberrendite_pct": 16.23}, "20T": {"aktie_pct": 12.66, "nasdaq_pct": -13.45, "ueberrendite_pct": 26.11}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "NOW", "name": "ServiceNow", "sector": "Software/Cloud", "aufnahmedatum": "2026-10-09", "aufnahmequelle": "P4", "aufnahme_score": 74.6, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 140.86, "aufnahme_kurs_eur": 125.65, "handelstage_in_liste": 16, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-11-01", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kurs 105,12 US-Dollar deutlich unter SMA50 (138,68), Performance seit Aufnahme −24,8 %, Kapitalfluss und Trend rot – These widerlegt.", "referenz_kurs_usd": 139.75, "wiedereinstieg_eur": 126.28, "aktueller_kurs_usd": 102.42, "aktueller_kurs_eur": 91.56, "performance_pct": -26.71, "handelstage_seit_aufnahme": 24, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.4, "ueberrendite_pct": -19.31, "forward": {"5T": {"aktie_pct": 6.31, "nasdaq_pct": -2.62, "ueberrendite_pct": 8.93}, "10T": {"aktie_pct": 12.34, "nasdaq_pct": -5.77, "ueberrendite_pct": 18.11}, "20T": {"aktie_pct": -26.75, "nasdaq_pct": -13.45, "ueberrendite_pct": -13.3}}, "status_gruppe": "invalidiert"},
-  {"ticker": "AMD", "name": "AMD (Advanced Micro Devices)", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-10-09", "aufnahmequelle": "P4", "aufnahme_score": 72.0, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 608.1, "aufnahme_kurs_eur": 542.43, "handelstage_in_liste": 3, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-10-13", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Optionsflow bärisch (harter Ausschluss), Score 55,4, Kurs 3,5 % unter SMA20; als niedrigster Score aus der aktiven Liste rotiert (Überlauf, max. 10 aktive).", "referenz_kurs_usd": 620.68, "aktueller_kurs_usd": 552.96, "aktueller_kurs_eur": 494.35, "performance_pct": -10.91, "handelstage_seit_aufnahme": 24, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.4, "ueberrendite_pct": -3.51, "forward": {"5T": {"aktie_pct": -9.42, "nasdaq_pct": -2.62, "ueberrendite_pct": -6.8}, "10T": {"aktie_pct": -18.17, "nasdaq_pct": -5.77, "ueberrendite_pct": -12.4}, "20T": {"aktie_pct": -34.85, "nasdaq_pct": -13.45, "ueberrendite_pct": -21.4}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "SMCI", "name": "Super Micro Computer", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-10-09", "aufnahmequelle": "P4", "aufnahme_score": 71.0, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 41.86, "aufnahme_kurs_eur": 37.34, "handelstage_in_liste": 3, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-10-13", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Performance seit Aufnahme unter −8 % (−9,6 %), Kurs nur noch knapp über SMA50, Score 57,7 (Beobachten).", "referenz_kurs_usd": 42.77, "aktueller_kurs_usd": 30.95, "aktueller_kurs_eur": 27.67, "performance_pct": -27.64, "handelstage_seit_aufnahme": 24, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.4, "ueberrendite_pct": -20.24, "forward": {"5T": {"aktie_pct": -17.96, "nasdaq_pct": -2.62, "ueberrendite_pct": -15.34}, "10T": {"aktie_pct": -21.16, "nasdaq_pct": -5.77, "ueberrendite_pct": -15.39}, "20T": {"aktie_pct": -36.68, "nasdaq_pct": -13.45, "ueberrendite_pct": -23.23}}, "status_gruppe": "invalidiert"},
-  {"ticker": "MRVL", "name": "Marvell Technology", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-10-13", "aufnahmequelle": "P4", "aufnahme_score": 75.4, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 259.39, "aufnahme_kurs_eur": 232.15, "handelstage_in_liste": 3, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-10-15", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Performance seit Aufnahme −11,2 % (unter −8 %-Grenze), Kapitalfluss rot, Halbleiter-Sektor Rang 19 – These widerlegt.", "referenz_kurs_usd": 265.86, "aktueller_kurs_usd": 173.28, "aktueller_kurs_eur": 154.91, "performance_pct": -34.82, "handelstage_seit_aufnahme": 22, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.21, "ueberrendite_pct": -27.61, "forward": {"5T": {"aktie_pct": -10.82, "nasdaq_pct": -3.71, "ueberrendite_pct": -7.11}, "10T": {"aktie_pct": -12.07, "nasdaq_pct": -4.54, "ueberrendite_pct": -7.53}, "20T": {"aktie_pct": -41.85, "nasdaq_pct": -8.94, "ueberrendite_pct": -32.91}}, "status_gruppe": "invalidiert"},
-  {"ticker": "MA", "name": "Mastercard", "sector": "Payments", "aufnahmedatum": "2026-10-13", "aufnahmequelle": "P4", "aufnahme_score": 72.2, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 601.44, "aufnahme_kurs_eur": 538.29, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-02", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "15 Handelstage ohne Trade erreicht (+10,97 % seit Aufnahme) – Zeitlimit; Titel bleibt als neuer Eintrag in der Liste (überdehnt).", "referenz_kurs_usd": 595.09, "aktueller_kurs_usd": 654.04, "aktueller_kurs_eur": 584.71, "performance_pct": 9.91, "handelstage_seit_aufnahme": 22, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -7.21, "ueberrendite_pct": 17.12, "forward": {"5T": {"aktie_pct": 3.58, "nasdaq_pct": -3.71, "ueberrendite_pct": 7.29}, "10T": {"aktie_pct": 3.09, "nasdaq_pct": -4.54, "ueberrendite_pct": 7.63}, "20T": {"aktie_pct": 10.2, "nasdaq_pct": -8.94, "ueberrendite_pct": 19.14}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "CRWD", "name": "CrowdStrike", "sector": "Cybersecurity", "aufnahmedatum": "2026-10-14", "aufnahmequelle": "P4", "aufnahme_score": 76.0, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 252.28, "aufnahme_kurs_eur": 225.29, "handelstage_in_liste": 2, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-10-15", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Score 49,8 (Kein Setup), Kapitalfluss rot, −7,2 % unter SMA20 (Performance −7,5 %) – wegen Überlauf (max. 10 aktive) aussortiert.", "referenz_kurs_usd": 261.21, "aktueller_kurs_usd": 234.07, "aktueller_kurs_eur": 209.26, "performance_pct": -10.39, "handelstage_seit_aufnahme": 21, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.9, "ueberrendite_pct": -3.49, "forward": {"5T": {"aktie_pct": -12.96, "nasdaq_pct": -3.49, "ueberrendite_pct": -9.47}, "10T": {"aktie_pct": 2.61, "nasdaq_pct": -3.0, "ueberrendite_pct": 5.61}, "20T": {"aktie_pct": -13.57, "nasdaq_pct": -9.25, "ueberrendite_pct": -4.32}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "NVDA", "name": "NVIDIA", "sector": "Semiconductors/AI", "aufnahmedatum": "2026-10-14", "aufnahmequelle": "P4", "aufnahme_score": 66.2, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 223.08, "aufnahme_kurs_eur": 199.21, "handelstage_in_liste": 1, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-10-14", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Neuaufnahme aus P4 (Score 66,2) und am selben Tag widerlegt: Kurs (223,08 $) unter der SMA50 (223,25 $), Score im aktuellen Feed 47,6 (Kein Setup), Kapitalfluss rot, Hold-Test 1/4, Halbleiter unter Druck.", "referenz_kurs_usd": 228.52, "aktueller_kurs_usd": 175.24, "aktueller_kurs_eur": 156.66, "performance_pct": -23.32, "handelstage_seit_aufnahme": 21, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -6.9, "ueberrendite_pct": -16.42, "forward": {"5T": {"aktie_pct": -5.27, "nasdaq_pct": -3.49, "ueberrendite_pct": -1.78}, "10T": {"aktie_pct": -4.63, "nasdaq_pct": -3.0, "ueberrendite_pct": -1.63}, "20T": {"aktie_pct": -26.09, "nasdaq_pct": -9.25, "ueberrendite_pct": -16.84}}, "status_gruppe": "invalidiert"},
-  {"ticker": "XOM", "name": "Exxon Mobil", "sector": "Energy", "aufnahmedatum": "2026-10-15", "aufnahmequelle": "P4", "aufnahme_score": 76.9, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 174.83, "aufnahme_kurs_eur": 156.3, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-04", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "15 Handelstage in der Liste ohne Trade; Kurs knapp über SMA50, Optionsflow bärisch (Ausschluss) – Zeitlimit erreicht, keine Wiederaufnahme.", "referenz_kurs_usd": 177.01, "wiedereinstieg_eur": 158.5, "aktueller_kurs_usd": 166.25, "aktueller_kurs_eur": 148.63, "performance_pct": -6.08, "handelstage_seit_aufnahme": 20, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -5.03, "ueberrendite_pct": -1.05, "forward": {"5T": {"aktie_pct": 0.61, "nasdaq_pct": -0.51, "ueberrendite_pct": 1.12}, "10T": {"aktie_pct": 2.83, "nasdaq_pct": -0.46, "ueberrendite_pct": 3.29}, "20T": {"aktie_pct": -6.08, "nasdaq_pct": -5.03, "ueberrendite_pct": -1.05}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "ZS", "name": "Zscaler", "sector": "Cybersecurity", "aufnahmedatum": "2026-10-15", "aufnahmequelle": "P4", "aufnahme_score": 66.9, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 216.885, "aufnahme_kurs_eur": 193.9, "handelstage_in_liste": 3, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-10-20", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Score 54,5 (Beobachten), Kapitalfluss rot, Sektor Cybersecurity negativ (Rang 16); bei Überlauf (11 aktive Einträge) niedrigster Score – ausgeschieden.", "referenz_kurs_usd": 220.79, "aktueller_kurs_usd": 197.2, "aktueller_kurs_eur": 176.29, "performance_pct": -10.69, "handelstage_seit_aufnahme": 20, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -5.03, "ueberrendite_pct": -5.66, "forward": {"5T": {"aktie_pct": 4.77, "nasdaq_pct": -0.51, "ueberrendite_pct": 5.28}, "10T": {"aktie_pct": 15.86, "nasdaq_pct": -0.46, "ueberrendite_pct": 16.32}, "20T": {"aktie_pct": -10.69, "nasdaq_pct": -5.03, "ueberrendite_pct": -5.66}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "UNH", "name": "UnitedHealth Group", "sector": "Healthcare", "aufnahmedatum": "2026-10-16", "aufnahmequelle": "P4", "aufnahme_score": 77.0, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 402.075, "aufnahme_kurs_eur": 358.65, "handelstage_in_liste": 13, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-03", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Score 56,5 (Beobachten), Kapitalfluss rot – Überlauf (max. 10 aktive), niedrigster Score.", "referenz_kurs_usd": 406.67, "aktueller_kurs_usd": 399.82, "aktueller_kurs_eur": 357.44, "performance_pct": -1.68, "handelstage_seit_aufnahme": 19, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.91, "ueberrendite_pct": 3.23, "forward": {"5T": {"aktie_pct": 4.5, "nasdaq_pct": -3.23, "ueberrendite_pct": 7.73}, "10T": {"aktie_pct": 1.04, "nasdaq_pct": -1.74, "ueberrendite_pct": 2.78}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "COIN", "name": "Coinbase Global", "sector": "Fintech/Brokerage", "aufnahmedatum": "2026-10-16", "aufnahmequelle": "P4", "aufnahme_score": 65.9, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 180.71, "aufnahme_kurs_eur": 161.19, "handelstage_in_liste": 1, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-10-16", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Neuaufnahme aus P4 (Score 65,9), im Live-Feed aber ausgeschlossen (bärischer Optionsfluss, Score 31,7, Trendkontext rot); wegen Überlauf-Regel (max. 10 aktive, niedrigster Score) sofort ausgeschieden.", "referenz_kurs_usd": 183.81, "aktueller_kurs_usd": 137.0, "aktueller_kurs_eur": 122.48, "performance_pct": -25.47, "handelstage_seit_aufnahme": 19, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.91, "ueberrendite_pct": -20.56, "forward": {"5T": {"aktie_pct": -8.01, "nasdaq_pct": -3.23, "ueberrendite_pct": -4.78}, "10T": {"aktie_pct": -12.63, "nasdaq_pct": -1.74, "ueberrendite_pct": -10.89}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "TRV", "name": "Travelers", "sector": "Insurance", "aufnahmedatum": "2026-10-20", "aufnahmequelle": "P4", "aufnahme_score": 75.7, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 393.28, "aufnahme_kurs_eur": 350.41, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-09", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "15 Handelstage ohne Trade – Zeitlimit; Titel erfüllt weiter die Kauf-Stufe und wird neu aufgenommen.", "referenz_kurs_usd": 385.45, "aktueller_kurs_usd": 396.43, "aktueller_kurs_eur": 354.41, "performance_pct": 2.85, "handelstage_seit_aufnahme": 17, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -3.63, "ueberrendite_pct": 6.48, "forward": {"5T": {"aktie_pct": 3.82, "nasdaq_pct": -0.86, "ueberrendite_pct": 4.68}, "10T": {"aktie_pct": 3.46, "nasdaq_pct": -5.19, "ueberrendite_pct": 8.65}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "PGR", "name": "Progressive", "sector": "Insurance", "aufnahmedatum": "2026-10-20", "aufnahmequelle": "P4", "aufnahme_score": 65.2, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 220.61, "aufnahme_kurs_eur": 196.56, "handelstage_in_liste": 15, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-09", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "15 Handelstage ohne Trade – Zeitlimit; Titel erfüllt weiter die Kauf-Stufe und wird neu aufgenommen.", "referenz_kurs_usd": 219.11, "aktueller_kurs_usd": 231.05, "aktueller_kurs_eur": 206.56, "performance_pct": 5.45, "handelstage_seit_aufnahme": 17, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -3.63, "ueberrendite_pct": 9.08, "forward": {"5T": {"aktie_pct": 4.63, "nasdaq_pct": -0.86, "ueberrendite_pct": 5.49}, "10T": {"aktie_pct": 6.76, "nasdaq_pct": -5.19, "ueberrendite_pct": 11.95}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "AMZN", "name": "Amazon", "sector": "Consumer Discretionary", "aufnahmedatum": "2026-10-21", "aufnahmequelle": "P4", "aufnahme_score": 73.6, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 262.86, "aufnahme_kurs_eur": 234.21, "handelstage_in_liste": 1, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-10-22", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kurs fällt unter die SMA50 (SMA50 rund 255 USD) – These widerlegt; zusätzlich Earnings in 5 Handelstagen.", "referenz_kurs_usd": 262.63, "aktueller_kurs_usd": 266.65, "aktueller_kurs_eur": 238.39, "performance_pct": 1.53, "handelstage_seit_aufnahme": 16, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -3.54, "ueberrendite_pct": 5.07, "forward": {"5T": {"aktie_pct": -3.63, "nasdaq_pct": 0.5, "ueberrendite_pct": -4.13}, "10T": {"aktie_pct": -4.55, "nasdaq_pct": -4.51, "ueberrendite_pct": -0.04}}, "status_gruppe": "invalidiert"},
-  {"ticker": "ISRG", "name": "Intuitive Surgical", "sector": "MedTech", "aufnahmedatum": "2026-10-22", "aufnahmequelle": "P4", "aufnahme_score": 77.0, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 439.52, "aufnahme_kurs_eur": 391.17, "handelstage_in_liste": 7, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-11-01", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kapitalfluss- und Trend-Ampel beide rot, Optionsflow bärisch (Stufe Ausgeschlossen, Score 48,2) – These widerlegt.", "referenz_kurs_usd": 428.12, "wiedereinstieg_eur": 375.33, "aktueller_kurs_usd": 445.4, "aktueller_kurs_eur": 398.19, "performance_pct": 4.04, "handelstage_seit_aufnahme": 15, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.54, "ueberrendite_pct": 8.58, "forward": {"5T": {"aktie_pct": 3.75, "nasdaq_pct": 0.06, "ueberrendite_pct": 3.69}, "10T": {"aktie_pct": 12.61, "nasdaq_pct": -4.58, "ueberrendite_pct": 17.19}}, "status_gruppe": "invalidiert"},
-  {"ticker": "CVX", "name": "Chevron", "sector": "Energy", "aufnahmedatum": "2026-10-22", "aufnahmequelle": "P4", "aufnahme_score": 67.5, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 223.22, "aufnahme_kurs_eur": 198.67, "handelstage_in_liste": 11, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-05", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Score 62,6 (Beobachten) unter der Kaufschwelle, Kapitalfluss-Ampel rot, Kurs unter der SMA20, Stufe fällt zurück – nach Überlauf-Regel ausgeschieden.", "referenz_kurs_usd": 226.78, "wiedereinstieg_eur": 199.77, "aktueller_kurs_usd": 212.74, "aktueller_kurs_eur": 190.19, "performance_pct": -6.19, "handelstage_seit_aufnahme": 15, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.54, "ueberrendite_pct": -1.65, "forward": {"5T": {"aktie_pct": 1.07, "nasdaq_pct": 0.06, "ueberrendite_pct": 1.01}, "10T": {"aktie_pct": -4.33, "nasdaq_pct": -4.58, "ueberrendite_pct": 0.25}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "ZS", "name": "Zscaler", "sector": "Cybersecurity", "aufnahmedatum": "2026-10-22", "aufnahmequelle": "P4", "aufnahme_score": 52.9, "aufnahme_stufe": "Überdehnt – auf Rücksetzer warten", "aufnahme_kurs_usd": 238.7, "aufnahme_kurs_eur": 212.44, "handelstage_in_liste": 9, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-03", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Score 55,4 (Beobachten), Kapitalfluss rot, Earnings 24.11. – Überlauf (max. 10 aktive), niedrigster Score.", "referenz_kurs_usd": 231.33, "wiedereinstieg_eur": 205.83, "aktueller_kurs_usd": 197.2, "aktueller_kurs_eur": 176.29, "performance_pct": -14.76, "handelstage_seit_aufnahme": 15, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -4.54, "ueberrendite_pct": -10.22, "forward": {"5T": {"aktie_pct": 10.58, "nasdaq_pct": 0.06, "ueberrendite_pct": 10.52}, "10T": {"aktie_pct": -2.98, "nasdaq_pct": -4.58, "ueberrendite_pct": 1.6}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "UNP", "name": "Union Pacific", "sector": "Transportation", "aufnahmedatum": "2026-10-23", "aufnahmequelle": "P4", "aufnahme_score": 71.5, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 293.37, "aufnahme_kurs_eur": 261.69, "handelstage_in_liste": 14, "status": "aktiv", "status_seit": "2026-10-23", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kurs 1,5 % über SMA20 und 5,1 % über SMA50, Trend grün, aber Optionsflow wieder bärisch (harter Ausschluss); Zeitlimit in 1 Handelstag.", "referenz_kurs_usd": 298.09, "aktueller_kurs_usd": 301.33, "aktueller_kurs_eur": 269.39, "performance_pct": 1.09, "handelstage_seit_aufnahme": 14, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -1.73, "ueberrendite_pct": 2.82, "forward": {"5T": {"aktie_pct": 1.29, "nasdaq_pct": 1.54, "ueberrendite_pct": -0.25}, "10T": {"aktie_pct": -0.05, "nasdaq_pct": -8.15, "ueberrendite_pct": 8.1}}, "status_gruppe": "aktiv"},
-  {"ticker": "LMT", "name": "Lockheed Martin", "sector": "Defense", "aufnahmedatum": "2026-10-23", "aufnahmequelle": "P4", "aufnahme_score": 69.0, "aufnahme_stufe": "Überdehnt – auf Rücksetzer warten", "aufnahme_kurs_usd": 594.97, "aufnahme_kurs_eur": 530.71, "handelstage_in_liste": 11, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-11-06", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kapitalfluss- und Trend-Ampel beide rot (Score 49,2, Kein Setup); Hold-Test 0/4 – These widerlegt.", "referenz_kurs_usd": 589.91, "wiedereinstieg_eur": 506.26, "aktueller_kurs_usd": 607.26, "aktueller_kurs_eur": 542.89, "performance_pct": 2.94, "handelstage_seit_aufnahme": 14, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -1.73, "ueberrendite_pct": 4.67, "forward": {"5T": {"aktie_pct": 9.1, "nasdaq_pct": 1.54, "ueberrendite_pct": 7.56}, "10T": {"aktie_pct": -2.33, "nasdaq_pct": -8.15, "ueberrendite_pct": 5.82}}, "status_gruppe": "invalidiert"},
-  {"ticker": "NEE", "name": "NextEra Energy", "sector": "Utilities", "aufnahmedatum": "2026-10-23", "aufnahmequelle": "P4", "aufnahme_score": 67.9, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 81.63, "aufnahme_kurs_eur": 72.81, "handelstage_in_liste": 8, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-03", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Score 59,0 (Beobachten), Trend-Ampel rot, RSI über 72 – Überlauf (max. 10 aktive), niedrigster Score.", "referenz_kurs_usd": 81.9, "aktueller_kurs_usd": 85.71, "aktueller_kurs_eur": 76.63, "performance_pct": 4.66, "handelstage_seit_aufnahme": 14, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -1.73, "ueberrendite_pct": 6.39, "forward": {"5T": {"aktie_pct": 0.29, "nasdaq_pct": 1.54, "ueberrendite_pct": -1.25}, "10T": {"aktie_pct": 7.75, "nasdaq_pct": -8.15, "ueberrendite_pct": 15.9}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "CRWD", "name": "CrowdStrike", "sector": "Cybersecurity", "aufnahmedatum": "2026-10-24", "aufnahmequelle": "P4", "aufnahme_score": 92.4, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 257.57, "aufnahme_kurs_eur": 230.01, "handelstage_in_liste": 7, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-03", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Score 44,3 (Kein Setup), Kapitalfluss rot – Überlauf (max. 10 aktive), niedrigster Score.", "referenz_kurs_usd": 257.57, "aktueller_kurs_usd": 234.07, "aktueller_kurs_eur": 209.26, "performance_pct": -9.12, "handelstage_seit_aufnahme": 13, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -1.72, "ueberrendite_pct": -7.4, "forward": {"5T": {"aktie_pct": -2.77, "nasdaq_pct": -1.97, "ueberrendite_pct": -0.8}, "10T": {"aktie_pct": -15.79, "nasdaq_pct": -6.86, "ueberrendite_pct": -8.93}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "PANW", "name": "Palo Alto Networks", "sector": "Cybersecurity", "aufnahmedatum": "2026-10-24", "aufnahmequelle": "P4", "aufnahme_score": 91.7, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 380.55, "aufnahme_kurs_eur": 339.83, "handelstage_in_liste": 5, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-11-01", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kurs 365,87 US-Dollar unter SMA50 (372,14), Score von 91,7 auf 29,0 gefallen, Optionsflow bärisch, Sektor Cybersecurity negativ – These widerlegt.", "referenz_kurs_usd": 380.55, "aktueller_kurs_usd": 339.35, "aktueller_kurs_eur": 303.38, "performance_pct": -10.83, "handelstage_seit_aufnahme": 13, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": -1.72, "ueberrendite_pct": -9.11, "forward": {"5T": {"aktie_pct": -3.86, "nasdaq_pct": -1.97, "ueberrendite_pct": -1.89}, "10T": {"aktie_pct": -17.53, "nasdaq_pct": -6.86, "ueberrendite_pct": -10.67}}, "status_gruppe": "invalidiert"},
-  {"ticker": "TMO", "name": "Thermo Fisher Scientific", "sector": "MedTech", "aufnahmedatum": "2026-11-01", "aufnahmequelle": "P4", "aufnahme_score": 80.8, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 697.0, "aufnahme_kurs_eur": 624.51, "handelstage_in_liste": 8, "status": "aktiv", "status_seit": "2026-11-01", "empfehlung": "Beobachten", "letzte_einschaetzung": "Kurs 4,1 % über SMA20, Score im P1-Feed auf 60,1 (Beobachten) gefallen mit Bulltrap-Flag „Kurs steigt, OBV fällt“; Hold-Test 4/4, Einstieg nur per Limit an der SMA20 (621,72 €) – heute kein freier Platz.", "referenz_kurs_usd": 697.0, "aktueller_kurs_usd": 724.55, "aktueller_kurs_eur": 647.75, "performance_pct": 3.95, "handelstage_seit_aufnahme": 8, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 0.26, "ueberrendite_pct": 3.69, "forward": {"5T": {"aktie_pct": -0.32, "nasdaq_pct": -4.98, "ueberrendite_pct": 4.66}}, "status_gruppe": "aktiv"},
-  {"ticker": "UPS", "name": "United Parcel Service", "sector": "Transportation", "aufnahmedatum": "2026-11-01", "aufnahmequelle": "P4", "aufnahme_score": 56.6, "aufnahme_stufe": "Überdehnt – auf Rücksetzer warten", "aufnahme_kurs_usd": 108.25, "aufnahme_kurs_eur": 96.99, "handelstage_in_liste": 8, "status": "überdehnt", "status_seit": "2026-11-01", "empfehlung": "Beobachten", "letzte_einschaetzung": "Kurs weiter 6,1 % über SMA20 bei Score 54,3 (Beobachten); Pullback-Zone noch nicht erreicht, Wiedereinstieg an der SMA20 (94,20 €).", "referenz_kurs_usd": 108.25, "wiedereinstieg_eur": 94.2, "aktueller_kurs_usd": 111.89, "aktueller_kurs_eur": 100.03, "performance_pct": 3.36, "handelstage_seit_aufnahme": 8, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 0.26, "ueberrendite_pct": 3.1, "forward": {"5T": {"aktie_pct": 0.05, "nasdaq_pct": -4.98, "ueberrendite_pct": 5.03}}, "status_gruppe": "ueberdehnt"},
-  {"ticker": "MA", "name": "Mastercard", "sector": "Payments", "aufnahmedatum": "2026-11-02", "aufnahmequelle": "P4", "aufnahme_score": 77.4, "aufnahme_stufe": "Überdehnt – auf Rücksetzer warten", "aufnahme_kurs_usd": 660.36, "aufnahme_kurs_eur": 591.68, "handelstage_in_liste": 7, "status": "überdehnt", "status_seit": "2026-11-02", "empfehlung": "Beobachten", "letzte_einschaetzung": "Kurs nur noch 2,9 % über SMA20 (Pullback-Zone), Optionsflow im P1-Feed wieder neutral (Score 70,5); P4 hatte heute noch bärisch gemeldet – Rückkehr auf aktiv nach Bestätigung im nächsten P4.", "referenz_kurs_usd": 638.01, "wiedereinstieg_eur": 568.26, "aktueller_kurs_usd": 654.04, "aktueller_kurs_eur": 584.71, "performance_pct": 2.51, "handelstage_seit_aufnahme": 8, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 0.26, "ueberrendite_pct": 2.25, "forward": {"5T": {"aktie_pct": 2.3, "nasdaq_pct": -4.98, "ueberrendite_pct": 7.28}}, "status_gruppe": "ueberdehnt"},
-  {"ticker": "V", "name": "Visa", "sector": "Payments", "aufnahmedatum": "2026-11-03", "aufnahmequelle": "P4", "aufnahme_score": 71.6, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 423.075, "aufnahme_kurs_eur": 377.81, "handelstage_in_liste": 6, "status": "aktiv", "status_seit": "2026-11-03", "empfehlung": "Kauf", "letzte_einschaetzung": "Score 74,9 (Kauf – solide), Kurs 2,1 % über SMA20, Trend und Optionsflow grün, Kapitalfluss auf rot gedreht; Hold-Test 3/4 → heute Limit-Order an 377,31 €.", "referenz_kurs_usd": 425.51, "aktueller_kurs_usd": 421.89, "aktueller_kurs_eur": 377.17, "performance_pct": -0.85, "handelstage_seit_aufnahme": 7, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 1.64, "ueberrendite_pct": -2.49, "forward": {"5T": {"aktie_pct": -0.79, "nasdaq_pct": -0.26, "ueberrendite_pct": -0.53}}, "status_gruppe": "aktiv"},
-  {"ticker": "AAPL", "name": "Apple", "sector": "Technology", "aufnahmedatum": "2026-11-03", "aufnahmequelle": "P4", "aufnahme_score": 68.4, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 330.83, "aufnahme_kurs_eur": 295.43, "handelstage_in_liste": 2, "status": "ausgeschieden (zeitlimit)", "status_seit": "2026-11-05", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Feed: Optionsflow bärisch (harter Ausschluss, Score 65,3), Kapitalfluss rot, News-Korrektur −2 – nach Überlauf-Regel ausgeschieden.", "referenz_kurs_usd": 338.32, "aktueller_kurs_usd": 353.92, "aktueller_kurs_eur": 316.4, "performance_pct": 4.61, "handelstage_seit_aufnahme": 7, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 1.64, "ueberrendite_pct": 2.97, "forward": {"5T": {"aktie_pct": 3.66, "nasdaq_pct": -0.26, "ueberrendite_pct": 3.92}}, "status_gruppe": "zeitlimit"},
-  {"ticker": "LIN", "name": "Linde", "sector": "Materials", "aufnahmedatum": "2026-11-03", "aufnahmequelle": "P4", "aufnahme_score": 70.0, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 516.16, "aufnahme_kurs_eur": 460.93, "handelstage_in_liste": 6, "status": "aktiv", "status_seit": "2026-11-03", "empfehlung": "Beobachten", "letzte_einschaetzung": "Score 71,2 (Kauf – solide), Kurs 2,6 % über SMA20, Hold-Test 2/4 (schwaches Volumen); kaufbar per Limit, aber der einzige freie Platz geht an Visa.", "referenz_kurs_usd": 519.72, "aktueller_kurs_usd": 524.02, "aktueller_kurs_eur": 468.47, "performance_pct": 0.83, "handelstage_seit_aufnahme": 7, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 1.64, "ueberrendite_pct": -0.81, "forward": {"5T": {"aktie_pct": 0.12, "nasdaq_pct": -0.26, "ueberrendite_pct": 0.38}}, "status_gruppe": "aktiv"},
-  {"ticker": "DE", "name": "Deere & Company", "sector": "Industrials", "aufnahmedatum": "2026-11-03", "aufnahmequelle": "P4", "aufnahme_score": 68.5, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 670.25, "aufnahme_kurs_eur": 598.53, "handelstage_in_liste": 6, "status": "überdehnt", "status_seit": "2026-11-09", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kurs 5,1 % über SMA20, Optionsflow bärisch (harter Ausschluss); Earnings am 25.11.", "referenz_kurs_usd": 667.6, "aktueller_kurs_usd": 690.71, "aktueller_kurs_eur": 617.49, "performance_pct": 3.46, "handelstage_seit_aufnahme": 7, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 1.64, "ueberrendite_pct": 1.82, "forward": {"5T": {"aktie_pct": 3.55, "nasdaq_pct": -0.26, "ueberrendite_pct": 3.81}}, "status_gruppe": "ueberdehnt", "wiedereinstieg_eur": 587.79},
-  {"ticker": "UNH", "name": "UnitedHealth Group", "sector": "Healthcare", "aufnahmedatum": "2026-11-05", "aufnahmequelle": "P4", "aufnahme_score": 77.9, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 404.95, "aufnahme_kurs_eur": 360.41, "handelstage_in_liste": 2, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-11-06", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kurs knapp unter SMA50 (−0,02 %), Seit-Aufnahme −4,5 % (Score 55,9, Beobachten) – These widerlegt.", "referenz_kurs_usd": 409.38, "aktueller_kurs_usd": 399.82, "aktueller_kurs_eur": 357.44, "performance_pct": -2.33, "handelstage_seit_aufnahme": 5, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 0.04, "ueberrendite_pct": -2.37, "forward": {"5T": {"aktie_pct": -2.33, "nasdaq_pct": 0.04, "ueberrendite_pct": -2.37}}, "status_gruppe": "invalidiert"},
-  {"ticker": "RTX", "name": "RTX", "sector": "Defense/Industrials", "aufnahmedatum": "2026-11-05", "aufnahmequelle": "P4", "aufnahme_score": 77.5, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 195.81, "aufnahme_kurs_eur": 174.27, "handelstage_in_liste": 2, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-11-06", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kapitalfluss- und Trend-Ampel beide rot, Kurs 1,4 % unter SMA50 (Score 42,7, Kein Setup) – These widerlegt.", "referenz_kurs_usd": 198.43, "aktueller_kurs_usd": 199.37, "aktueller_kurs_eur": 178.24, "performance_pct": 0.47, "handelstage_seit_aufnahme": 5, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 0.04, "ueberrendite_pct": 0.43, "forward": {"5T": {"aktie_pct": 0.47, "nasdaq_pct": 0.04, "ueberrendite_pct": 0.43}}, "status_gruppe": "invalidiert"},
-  {"ticker": "JPM", "name": "JPMorgan Chase", "sector": "Financials", "aufnahmedatum": "2026-11-05", "aufnahmequelle": "P4", "aufnahme_score": 67.9, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 342.1, "aufnahme_kurs_eur": 304.47, "handelstage_in_liste": 2, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-11-06", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kurs 1,2 % unter SMA50, Hold-Test nicht bestanden, Seit-Aufnahme −4,0 % – These widerlegt.", "referenz_kurs_usd": 352.11, "aktueller_kurs_usd": 343.86, "aktueller_kurs_eur": 307.41, "performance_pct": -2.34, "handelstage_seit_aufnahme": 5, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 0.04, "ueberrendite_pct": -2.38, "forward": {"5T": {"aktie_pct": -2.34, "nasdaq_pct": 0.04, "ueberrendite_pct": -2.38}}, "status_gruppe": "invalidiert"},
-  {"ticker": "DUK", "name": "Duke Energy", "sector": "Utilities", "aufnahmedatum": "2026-11-06", "aufnahmequelle": "P4", "aufnahme_score": 73.6, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 128.075, "aufnahme_kurs_eur": 113.99, "handelstage_in_liste": 4, "status": "aktiv", "status_seit": "2026-11-06", "empfehlung": "Beobachten", "letzte_einschaetzung": "Score im P1-Feed auf 83,8 (Kauf – hohe Qualität) gestiegen, Optionsflow nicht mehr bärisch; P4 hatte heute noch ausgeschlossen – Bestätigung im nächsten P4 abwarten, Earnings-Termin unbekannt.", "referenz_kurs_usd": 130.08, "aktueller_kurs_usd": 127.99, "aktueller_kurs_eur": 114.42, "performance_pct": -1.61, "handelstage_seit_aufnahme": 4, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 6.99, "ueberrendite_pct": -8.6, "forward": {}, "status_gruppe": "aktiv"},
-  {"ticker": "TRV", "name": "Travelers", "sector": "Insurance", "aufnahmedatum": "2026-11-09", "aufnahmequelle": "P1", "aufnahme_score": 70.5, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 393.09, "aufnahme_kurs_eur": 352.6, "handelstage_in_liste": 3, "status": "aktiv", "status_seit": "2026-11-09", "empfehlung": "Beobachten", "letzte_einschaetzung": "Kurs genau an der SMA20 (−0,05 %), über SMA50; Hold-Test 0/4, Score 69,0 – heute kein Einstieg.", "referenz_kurs_usd": 395.2, "aktueller_kurs_usd": 396.43, "aktueller_kurs_eur": 354.41, "performance_pct": 0.31, "handelstage_seit_aufnahme": 3, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 5.51, "ueberrendite_pct": -5.2, "forward": {}, "status_gruppe": "aktiv"},
-  {"ticker": "PGR", "name": "Progressive", "sector": "Insurance", "aufnahmedatum": "2026-11-09", "aufnahmequelle": "P1", "aufnahme_score": 68.1, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 226.55, "aufnahme_kurs_eur": 203.22, "handelstage_in_liste": 3, "status": "aktiv", "status_seit": "2026-11-09", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Hold-Test 4/4, aber Optionsflow bärisch (harter Ausschluss); Kurs 1,7 % über SMA20, Trend intakt.", "referenz_kurs_usd": 227.77, "aktueller_kurs_usd": 231.05, "aktueller_kurs_eur": 206.56, "performance_pct": 1.44, "handelstage_seit_aufnahme": 3, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 5.51, "ueberrendite_pct": -4.07, "forward": {}, "status_gruppe": "aktiv"},
-  {"ticker": "MSFT", "name": "Microsoft", "sector": "Software/Cloud", "aufnahmedatum": "2026-11-09", "aufnahmequelle": "P1", "aufnahme_score": 71.5, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 541.34, "aufnahme_kurs_eur": 485.58, "handelstage_in_liste": 3, "status": "aktiv", "status_seit": "2026-11-09", "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Kurs 1,9 % unter SMA20 und nur knapp über SMA50, Score 49,9 (Kein Setup), Kapitalfluss rot.", "referenz_kurs_usd": 530.61, "aktueller_kurs_usd": 519.22, "aktueller_kurs_eur": 464.18, "performance_pct": -2.15, "handelstage_seit_aufnahme": 3, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 5.51, "ueberrendite_pct": -7.66, "forward": {}, "status_gruppe": "aktiv"},
-  {"ticker": "AAPL", "name": "Apple", "sector": "Technology", "aufnahmedatum": "2026-11-10", "aufnahmequelle": "P1", "aufnahme_score": 73.3, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 347.28, "aufnahme_kurs_eur": 309.77, "handelstage_in_liste": 2, "status": "aktiv", "status_seit": "2026-11-10", "wiedereinstieg_eur": null, "empfehlung": "Beobachten", "letzte_einschaetzung": "Hold-Test 4/4, Score 70,3 (Kauf – solide), Bulltrap-Flag entfallen; Alternative zu Visa – nur kaufen, falls das Visa-Limit heute nicht ausgeführt wird.", "referenz_kurs_usd": 350.69, "aktueller_kurs_usd": 353.92, "aktueller_kurs_eur": 316.4, "performance_pct": 0.92, "handelstage_seit_aufnahme": 2, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 1.9, "ueberrendite_pct": -0.98, "forward": {}, "status_gruppe": "aktiv"},
-  {"ticker": "UNH", "name": "UnitedHealth Group", "sector": "Healthcare", "aufnahmedatum": "2026-11-11", "aufnahmequelle": "P4", "aufnahme_score": 82.2, "aufnahme_stufe": "Kauf – hohe Qualität", "aufnahme_kurs_usd": 399.38, "aufnahme_kurs_eur": 357.05, "handelstage_in_liste": 0, "status": "aktiv", "status_seit": "2026-11-11", "wiedereinstieg_eur": null, "empfehlung": "Beobachten", "letzte_einschaetzung": "Neu aufgenommen (P4 82,2, Kauf – hohe Qualität); im P1-Feed Score 56,1 (Beobachten), Kurs 2,0 % unter SMA20, aber über SMA50; Hold-Test 2/4.", "referenz_kurs_usd": 399.38, "aktueller_kurs_usd": 399.38, "aktueller_kurs_eur": 357.05, "performance_pct": 0.0, "handelstage_seit_aufnahme": 0, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 0.0, "ueberrendite_pct": 0.0, "forward": {}, "status_gruppe": "aktiv"},
-  {"ticker": "LMT", "name": "Lockheed Martin", "sector": "Defense", "aufnahmedatum": "2026-11-11", "aufnahmequelle": "P4", "aufnahme_score": 69.0, "aufnahme_stufe": "Kauf – solide", "aufnahme_kurs_usd": 605.92, "aufnahme_kurs_eur": 541.69, "handelstage_in_liste": 0, "status": "ausgeschieden (these widerlegt)", "status_seit": "2026-11-11", "wiedereinstieg_eur": null, "empfehlung": "Kein Einstieg", "letzte_einschaetzung": "Neu aufgenommen (P4 69,0, Kauf – solide), im P1-Feed jedoch Kapitalfluss- und Trend-Ampel beide rot – These widerlegt.", "referenz_kurs_usd": 605.92, "aktueller_kurs_usd": 605.92, "aktueller_kurs_eur": 541.69, "performance_pct": 0.0, "handelstage_seit_aufnahme": 0, "kursdaten_stand": "2026-11-11", "nasdaq_performance_pct": 0.0, "ueberrendite_pct": 0.0, "forward": {}, "status_gruppe": "invalidiert"}
- ]
+  "generated_at_utc": "2026-11-11T16:50:36Z",
+  "kurse_aktualisiert_utc": "2026-11-12T16:45:10.735967+00:00",
+  "kandidaten": [
+    {
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "sector": "Defense",
+      "aufnahmedatum": "2026-08-13",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "hoch",
+      "aufnahme_kurs_usd": 606.72,
+      "aufnahme_kurs_eur": 526.03,
+      "handelstage_in_liste": 12,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert (Rotation bereits am 08.09. erfolgt).",
+      "referenz_kurs_usd": 606.72,
+      "aktueller_kurs_usd": 601.28,
+      "aktueller_kurs_eur": 541.15,
+      "performance_pct": -0.9,
+      "handelstage_seit_aufnahme": 65,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -4.65,
+      "ueberrendite_pct": 3.75,
+      "forward": {
+        "5T": {
+          "aktie_pct": -2.9,
+          "nasdaq_pct": -1.05,
+          "ueberrendite_pct": -1.85
+        },
+        "10T": {
+          "aktie_pct": -6.77,
+          "nasdaq_pct": -1.7,
+          "ueberrendite_pct": -5.07
+        },
+        "20T": {
+          "aktie_pct": -12.63,
+          "nasdaq_pct": -2.07,
+          "ueberrendite_pct": -10.56
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "sector": "Payments",
+      "aufnahmedatum": "2026-08-19",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "hoch",
+      "aufnahme_kurs_usd": 574.31,
+      "aufnahme_kurs_eur": 496.2,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert.",
+      "referenz_kurs_usd": 574.31,
+      "aktueller_kurs_usd": 660.38,
+      "aktueller_kurs_eur": 594.34,
+      "performance_pct": 14.99,
+      "handelstage_seit_aufnahme": 61,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -3.82,
+      "ueberrendite_pct": 18.81,
+      "forward": {
+        "5T": {
+          "aktie_pct": 4.36,
+          "nasdaq_pct": -0.95,
+          "ueberrendite_pct": 5.31
+        },
+        "10T": {
+          "aktie_pct": 1.18,
+          "nasdaq_pct": -1.38,
+          "ueberrendite_pct": 2.56
+        },
+        "20T": {
+          "aktie_pct": -1.14,
+          "nasdaq_pct": -1.78,
+          "ueberrendite_pct": 0.64
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "aufnahmedatum": "2026-08-21",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 311.32,
+      "aufnahme_kurs_eur": 266.49,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "15 Handelstage in der Liste erreicht, ohne dass daraus ein tatsaechlicher Trade wurde (Zeitlimit) - rotiert planmaessig aus der aktiven Liste.",
+      "referenz_kurs_usd": 311.3,
+      "aktueller_kurs_usd": 357.08,
+      "aktueller_kurs_eur": 321.37,
+      "performance_pct": 14.71,
+      "handelstage_seit_aufnahme": 59,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.93,
+      "ueberrendite_pct": 17.64,
+      "forward": {
+        "5T": {
+          "aktie_pct": 1.05,
+          "nasdaq_pct": 1.43,
+          "ueberrendite_pct": -0.38
+        },
+        "10T": {
+          "aktie_pct": 5.43,
+          "nasdaq_pct": 0.95,
+          "ueberrendite_pct": 4.48
+        },
+        "20T": {
+          "aktie_pct": 7.98,
+          "nasdaq_pct": 1.48,
+          "ueberrendite_pct": 6.5
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "sector": "Payments",
+      "aufnahmedatum": "2026-08-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "hoch",
+      "aufnahme_kurs_usd": 371.04,
+      "aufnahme_kurs_eur": 317.57,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "15 Handelstage in der Liste erreicht, ohne dass daraus ein tatsaechlicher Trade wurde (Zeitlimit) - rotiert planmaessig aus der aktiven Liste.",
+      "referenz_kurs_usd": 371.04,
+      "aktueller_kurs_usd": 426.22,
+      "aktueller_kurs_eur": 383.6,
+      "performance_pct": 14.87,
+      "handelstage_seit_aufnahme": 58,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -3.28,
+      "ueberrendite_pct": 18.15,
+      "forward": {
+        "5T": {
+          "aktie_pct": 2.85,
+          "nasdaq_pct": 0.42,
+          "ueberrendite_pct": 2.43
+        },
+        "10T": {
+          "aktie_pct": 1.09,
+          "nasdaq_pct": 0.77,
+          "ueberrendite_pct": 0.32
+        },
+        "20T": {
+          "aktie_pct": -0.29,
+          "nasdaq_pct": 3.93,
+          "ueberrendite_pct": -4.22
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-08-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 128.48,
+      "aufnahme_kurs_eur": 109.98,
+      "handelstage_in_liste": 6,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert.",
+      "referenz_kurs_usd": 128.48,
+      "aktueller_kurs_usd": 101.46,
+      "aktueller_kurs_eur": 91.31,
+      "performance_pct": -21.03,
+      "handelstage_seit_aufnahme": 58,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -3.28,
+      "ueberrendite_pct": -17.75,
+      "forward": {
+        "5T": {
+          "aktie_pct": 12.63,
+          "nasdaq_pct": 0.42,
+          "ueberrendite_pct": 12.21
+        },
+        "10T": {
+          "aktie_pct": 9.95,
+          "nasdaq_pct": 0.77,
+          "ueberrendite_pct": 9.18
+        },
+        "20T": {
+          "aktie_pct": 7.16,
+          "nasdaq_pct": 3.93,
+          "ueberrendite_pct": 3.23
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-08-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 483.24,
+      "aufnahme_kurs_eur": 413.65,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "15 Handelstage in der Liste erreicht, ohne dass daraus ein tatsaechlicher Trade wurde (Zeitlimit) - rotiert planmaessig aus der aktiven Liste.",
+      "referenz_kurs_usd": 483.24,
+      "aktueller_kurs_usd": 527.81,
+      "aktueller_kurs_eur": 475.03,
+      "performance_pct": 9.22,
+      "handelstage_seit_aufnahme": 58,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -3.28,
+      "ueberrendite_pct": 12.5,
+      "forward": {
+        "5T": {
+          "aktie_pct": 6.27,
+          "nasdaq_pct": 0.42,
+          "ueberrendite_pct": 5.85
+        },
+        "10T": {
+          "aktie_pct": 3.41,
+          "nasdaq_pct": 0.77,
+          "ueberrendite_pct": 2.64
+        },
+        "20T": {
+          "aktie_pct": 3.8,
+          "nasdaq_pct": 3.93,
+          "ueberrendite_pct": -0.13
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sector": "Fintech/Brokerage",
+      "aufnahmedatum": "2026-08-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 108.13,
+      "aufnahme_kurs_eur": 92.56,
+      "handelstage_in_liste": 10,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert. Die zugehoerige Depotposition wurde vom Nutzer inzwischen verkauft (Stand 27.09.2026).",
+      "referenz_kurs_usd": 108.13,
+      "aktueller_kurs_usd": 83.65,
+      "aktueller_kurs_eur": 75.29,
+      "performance_pct": -22.64,
+      "handelstage_seit_aufnahme": 58,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -3.28,
+      "ueberrendite_pct": -19.36,
+      "forward": {
+        "5T": {
+          "aktie_pct": -3.58,
+          "nasdaq_pct": 0.42,
+          "ueberrendite_pct": -4.0
+        },
+        "10T": {
+          "aktie_pct": 12.93,
+          "nasdaq_pct": 0.77,
+          "ueberrendite_pct": 12.16
+        },
+        "20T": {
+          "aktie_pct": 14.03,
+          "nasdaq_pct": 3.93,
+          "ueberrendite_pct": 10.1
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-08-25",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 209.06,
+      "aufnahme_kurs_eur": 179.16,
+      "handelstage_in_liste": 3,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert.",
+      "referenz_kurs_usd": 209.06,
+      "aktueller_kurs_usd": 217.36,
+      "aktueller_kurs_eur": 195.62,
+      "performance_pct": 3.97,
+      "handelstage_seit_aufnahme": 57,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.3,
+      "ueberrendite_pct": 6.27,
+      "forward": {
+        "5T": {
+          "aktie_pct": 23.19,
+          "nasdaq_pct": 1.48,
+          "ueberrendite_pct": 21.71
+        },
+        "10T": {
+          "aktie_pct": 19.16,
+          "nasdaq_pct": 1.7,
+          "ueberrendite_pct": 17.46
+        },
+        "20T": {
+          "aktie_pct": 11.59,
+          "nasdaq_pct": 5.82,
+          "ueberrendite_pct": 5.77
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar",
+      "sector": "Industrials",
+      "aufnahmedatum": "2026-08-17",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "hoch",
+      "aufnahme_kurs_usd": 856.57,
+      "aufnahme_kurs_eur": 740.08,
+      "handelstage_in_liste": 6,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert.",
+      "referenz_kurs_usd": 856.57,
+      "aktueller_kurs_usd": 605.2,
+      "aktueller_kurs_eur": 544.68,
+      "performance_pct": -29.35,
+      "handelstage_seit_aufnahme": 63,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -5.61,
+      "ueberrendite_pct": -23.74,
+      "forward": {
+        "5T": {
+          "aktie_pct": -3.35,
+          "nasdaq_pct": -2.41,
+          "ueberrendite_pct": -0.94
+        },
+        "10T": {
+          "aktie_pct": -6.58,
+          "nasdaq_pct": -2.0,
+          "ueberrendite_pct": -4.58
+        },
+        "20T": {
+          "aktie_pct": -8.47,
+          "nasdaq_pct": -2.99,
+          "ueberrendite_pct": -5.48
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-08-27",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 148.025,
+      "aufnahme_kurs_eur": 127.01,
+      "handelstage_in_liste": 8,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert. Die zugehoerige Depotposition (10 Stueck) wurde vom Nutzer inzwischen verkauft (Stand 27.09.2026).",
+      "referenz_kurs_usd": 148.87,
+      "aktueller_kurs_usd": 126.96,
+      "aktueller_kurs_eur": 114.26,
+      "performance_pct": -14.72,
+      "handelstage_seit_aufnahme": 55,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.99,
+      "ueberrendite_pct": -11.73,
+      "forward": {
+        "5T": {
+          "aktie_pct": -2.1,
+          "nasdaq_pct": -0.3,
+          "ueberrendite_pct": -1.8
+        },
+        "10T": {
+          "aktie_pct": 2.73,
+          "nasdaq_pct": -0.38,
+          "ueberrendite_pct": 3.11
+        },
+        "20T": {
+          "aktie_pct": -6.27,
+          "nasdaq_pct": 4.18,
+          "ueberrendite_pct": -10.45
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD (Advanced Micro Devices)",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-08-27",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 474.87,
+      "aufnahme_kurs_eur": 407.44,
+      "handelstage_in_liste": 3,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert.",
+      "referenz_kurs_usd": 480.93,
+      "aktueller_kurs_usd": 582.91,
+      "aktueller_kurs_eur": 524.62,
+      "performance_pct": 21.2,
+      "handelstage_seit_aufnahme": 55,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.99,
+      "ueberrendite_pct": 24.19,
+      "forward": {
+        "5T": {
+          "aktie_pct": -4.96,
+          "nasdaq_pct": -0.3,
+          "ueberrendite_pct": -4.66
+        },
+        "10T": {
+          "aktie_pct": 4.71,
+          "nasdaq_pct": -0.38,
+          "ueberrendite_pct": 5.09
+        },
+        "20T": {
+          "aktie_pct": 30.84,
+          "nasdaq_pct": 4.18,
+          "ueberrendite_pct": 26.66
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group",
+      "sector": "Healthcare",
+      "aufnahmedatum": "2026-08-27",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 398.36,
+      "aufnahme_kurs_eur": 341.79,
+      "handelstage_in_liste": 3,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag (erste Aufnahmewelle vom 27.08.), seit 09.09.2026 nicht mehr aktualisiert.",
+      "referenz_kurs_usd": 401.01,
+      "aktueller_kurs_usd": 404.44,
+      "aktueller_kurs_eur": 363.99,
+      "performance_pct": 0.85,
+      "handelstage_seit_aufnahme": 55,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.99,
+      "ueberrendite_pct": 3.84,
+      "forward": {
+        "5T": {
+          "aktie_pct": -0.34,
+          "nasdaq_pct": -0.3,
+          "ueberrendite_pct": -0.04
+        },
+        "10T": {
+          "aktie_pct": -3.17,
+          "nasdaq_pct": -0.38,
+          "ueberrendite_pct": -2.79
+        },
+        "20T": {
+          "aktie_pct": -6.48,
+          "nasdaq_pct": 4.18,
+          "ueberrendite_pct": -10.66
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar",
+      "sector": "Industrials",
+      "aufnahmedatum": "2026-09-14",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 786.54,
+      "aufnahme_kurs_eur": 677.96,
+      "handelstage_in_liste": 2,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 09.09.2026 nicht mehr aktualisiert.",
+      "referenz_kurs_usd": 818.57,
+      "aktueller_kurs_usd": 605.2,
+      "aktueller_kurs_eur": 544.68,
+      "performance_pct": -26.07,
+      "handelstage_seit_aufnahme": 44,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -3.47,
+      "ueberrendite_pct": -22.6,
+      "forward": {
+        "5T": {
+          "aktie_pct": -1.17,
+          "nasdaq_pct": 0.92,
+          "ueberrendite_pct": -2.09
+        },
+        "10T": {
+          "aktie_pct": 0.37,
+          "nasdaq_pct": 4.14,
+          "ueberrendite_pct": -3.77
+        },
+        "20T": {
+          "aktie_pct": -2.21,
+          "nasdaq_pct": 5.09,
+          "ueberrendite_pct": -7.3
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Cybersecurity",
+      "aufnahmedatum": "2026-09-11",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 338.49,
+      "aufnahme_kurs_eur": 291.44,
+      "handelstage_in_liste": 9,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Invalidiert trotz starker Performance: Setup strukturell ueberdehnt, rotiert gemaess Regel aus der aktiven Liste.",
+      "referenz_kurs_usd": 338.49,
+      "aktueller_kurs_usd": 322.0,
+      "aktueller_kurs_eur": 289.8,
+      "performance_pct": -4.87,
+      "handelstage_seit_aufnahme": 45,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.63,
+      "ueberrendite_pct": -2.24,
+      "forward": {
+        "5T": {
+          "aktie_pct": 10.8,
+          "nasdaq_pct": 1.16,
+          "ueberrendite_pct": 9.64
+        },
+        "10T": {
+          "aktie_pct": 15.19,
+          "nasdaq_pct": 4.57,
+          "ueberrendite_pct": 10.62
+        },
+        "20T": {
+          "aktie_pct": 17.73,
+          "nasdaq_pct": 5.49,
+          "ueberrendite_pct": 12.24
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD (Advanced Micro Devices)",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-09-15",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 493.41,
+      "aufnahme_kurs_eur": 427.29,
+      "handelstage_in_liste": 5,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Invalidiert trotz starker Performance: Setup strukturell stark ueberdehnt, gemaess Rotationsregel aus der aktiven Liste genommen.",
+      "referenz_kurs_usd": 493.41,
+      "aktueller_kurs_usd": 582.91,
+      "aktueller_kurs_eur": 524.62,
+      "performance_pct": 18.14,
+      "handelstage_seit_aufnahme": 43,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.69,
+      "ueberrendite_pct": 20.83,
+      "forward": {
+        "5T": {
+          "aktie_pct": 24.75,
+          "nasdaq_pct": 4.55,
+          "ueberrendite_pct": 20.2
+        },
+        "10T": {
+          "aktie_pct": 23.2,
+          "nasdaq_pct": 3.86,
+          "ueberrendite_pct": 19.34
+        },
+        "20T": {
+          "aktie_pct": 20.44,
+          "nasdaq_pct": 5.2,
+          "ueberrendite_pct": 15.24
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "aufnahmedatum": "2026-09-15",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 333.08,
+      "aufnahme_kurs_eur": 293.03,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Halten",
+      "letzte_einschaetzung": "15 Handelstage erreicht, ohne Trade (Zeitlimit) - rotiert planmaessig aus der aktiven Liste. Technisch neutral (0,3% ueber SMA20, RSI14 53, OBV-5-Tage nur +8 Mio., Optionsflow bullisch), kein Einstiegssignal.",
+      "referenz_kurs_usd": 333.08,
+      "aktueller_kurs_usd": 357.08,
+      "aktueller_kurs_eur": 321.37,
+      "performance_pct": 7.21,
+      "handelstage_seit_aufnahme": 43,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.69,
+      "ueberrendite_pct": 9.9,
+      "forward": {
+        "5T": {
+          "aktie_pct": 1.77,
+          "nasdaq_pct": 4.55,
+          "ueberrendite_pct": -2.78
+        },
+        "10T": {
+          "aktie_pct": 1.6,
+          "nasdaq_pct": 3.86,
+          "ueberrendite_pct": -2.26
+        },
+        "20T": {
+          "aktie_pct": 2.37,
+          "nasdaq_pct": 5.2,
+          "ueberrendite_pct": -2.83
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-09-15",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 135.77,
+      "aufnahme_kurs_eur": 119.36,
+      "handelstage_in_liste": 12,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Rotiert aus der aktiven Liste (Ueberlauf: max. 10 aktive Eintraege, drei Neuaufnahmen am 30.09.). Technisch trotz +3,8% Tageserholung schwach: OBV-5-Tage-Trend negativ (-39,6 Mio.), rote Kapitalfluss-Ampel, fallende SMA200.",
+      "referenz_kurs_usd": 142.35,
+      "aktueller_kurs_usd": 101.46,
+      "aktueller_kurs_eur": 91.31,
+      "performance_pct": -28.73,
+      "handelstage_seit_aufnahme": 43,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.69,
+      "ueberrendite_pct": -26.04,
+      "forward": {
+        "5T": {
+          "aktie_pct": -3.28,
+          "nasdaq_pct": 4.55,
+          "ueberrendite_pct": -7.83
+        },
+        "10T": {
+          "aktie_pct": -7.66,
+          "nasdaq_pct": 3.86,
+          "ueberrendite_pct": -11.52
+        },
+        "20T": {
+          "aktie_pct": -1.43,
+          "nasdaq_pct": 5.2,
+          "ueberrendite_pct": -6.63
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-09-21",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "hoch",
+      "aufnahme_kurs_usd": 222.27,
+      "aufnahme_kurs_eur": 195.38,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "15 Handelstage in der Liste ohne Trade – Zeitlimit erreicht; Kurs 229.28 USD, Ampel Kapitalfluss/Trend rot/gruen.",
+      "referenz_kurs_usd": 222.27,
+      "status_seit": "2026-10-09",
+      "aktueller_kurs_usd": 164.15,
+      "aktueller_kurs_eur": 147.73,
+      "performance_pct": -26.15,
+      "handelstage_seit_aufnahme": 39,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -4.35,
+      "ueberrendite_pct": -21.8,
+      "forward": {
+        "5T": {
+          "aktie_pct": 1.26,
+          "nasdaq_pct": 3.19,
+          "ueberrendite_pct": -1.93
+        },
+        "10T": {
+          "aktie_pct": 5.25,
+          "nasdaq_pct": 3.9,
+          "ueberrendite_pct": 1.35
+        },
+        "20T": {
+          "aktie_pct": -3.66,
+          "nasdaq_pct": -1.61,
+          "ueberrendite_pct": -2.05
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "TMO",
+      "name": "Thermo Fisher Scientific",
+      "sector": "MedTech",
+      "aufnahmedatum": "2026-09-21",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "hoch",
+      "aufnahme_kurs_usd": 651.45,
+      "aufnahme_kurs_eur": 572.62,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "15 Handelstage in der Liste ohne Trade – Zeitlimit erreicht; Kurs 658.02 USD, Ampel Kapitalfluss/Trend gelb/gruen.",
+      "referenz_kurs_usd": 651.45,
+      "status_seit": "2026-10-09",
+      "aktueller_kurs_usd": 704.35,
+      "aktueller_kurs_eur": 633.91,
+      "performance_pct": 8.12,
+      "handelstage_seit_aufnahme": 39,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -4.35,
+      "ueberrendite_pct": 12.47,
+      "forward": {
+        "5T": {
+          "aktie_pct": 3.62,
+          "nasdaq_pct": 3.19,
+          "ueberrendite_pct": 0.43
+        },
+        "10T": {
+          "aktie_pct": 0.51,
+          "nasdaq_pct": 3.9,
+          "ueberrendite_pct": -3.39
+        },
+        "20T": {
+          "aktie_pct": 5.92,
+          "nasdaq_pct": -1.61,
+          "ueberrendite_pct": 7.53
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-09-21",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 244.25,
+      "aufnahme_kurs_eur": 214.77,
+      "handelstage_in_liste": 3,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 24.09.2026 nicht mehr aktualisiert (bereits invalidiert: 4 Anti-Bulltrap-Kriterien gleichzeitig verletzt).",
+      "referenz_kurs_usd": 244.25,
+      "aktueller_kurs_usd": 165.06,
+      "aktueller_kurs_eur": 148.55,
+      "performance_pct": -32.42,
+      "handelstage_seit_aufnahme": 39,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -4.35,
+      "ueberrendite_pct": -28.07,
+      "forward": {
+        "5T": {
+          "aktie_pct": 7.24,
+          "nasdaq_pct": 3.19,
+          "ueberrendite_pct": 4.05
+        },
+        "10T": {
+          "aktie_pct": 11.48,
+          "nasdaq_pct": 3.9,
+          "ueberrendite_pct": 7.58
+        },
+        "20T": {
+          "aktie_pct": -6.72,
+          "nasdaq_pct": -1.61,
+          "ueberrendite_pct": -5.11
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "TSM",
+      "name": "Taiwan Semiconductor",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-09-21",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 434.67,
+      "aufnahme_kurs_eur": 382.08,
+      "handelstage_in_liste": 11,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "P1-Update: Invalidiert trotz +11,5% Performance: 2 Anti-Bulltrap-Kriterien neu aufgetreten (RSI14 92,0 >72 und 9,2% ueber SMA20 >8%), Optionsflow bearisch, Earnings am 15.10.2026 naehern sich - strukturell stark ueberdehnt.",
+      "referenz_kurs_usd": 434.67,
+      "aktueller_kurs_usd": 407.05,
+      "aktueller_kurs_eur": 366.34,
+      "performance_pct": -6.35,
+      "handelstage_seit_aufnahme": 39,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -4.35,
+      "ueberrendite_pct": -2.0,
+      "forward": {
+        "5T": {
+          "aktie_pct": 3.67,
+          "nasdaq_pct": 3.19,
+          "ueberrendite_pct": 0.48
+        },
+        "10T": {
+          "aktie_pct": 8.77,
+          "nasdaq_pct": 3.9,
+          "ueberrendite_pct": 4.87
+        },
+        "20T": {
+          "aktie_pct": -5.08,
+          "nasdaq_pct": -1.61,
+          "ueberrendite_pct": -3.47
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "ASML",
+      "name": "ASML Holding",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-09-21",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 1679.92,
+      "aufnahme_kurs_eur": 1476.65,
+      "handelstage_in_liste": 4,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 24.09.2026 nicht mehr aktualisiert (bereits invalidiert: Kurs unter SMA50 gefallen, zusaetzlich P4-Downgrade auf Score niedrig wegen belastender Nachrichtenlage).",
+      "referenz_kurs_usd": 1679.92,
+      "aktueller_kurs_usd": 1513.03,
+      "aktueller_kurs_eur": 1361.73,
+      "performance_pct": -9.93,
+      "handelstage_seit_aufnahme": 39,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -4.35,
+      "ueberrendite_pct": -5.58,
+      "forward": {
+        "5T": {
+          "aktie_pct": 3.81,
+          "nasdaq_pct": 3.19,
+          "ueberrendite_pct": 0.62
+        },
+        "10T": {
+          "aktie_pct": 11.15,
+          "nasdaq_pct": 3.9,
+          "ueberrendite_pct": 7.25
+        },
+        "20T": {
+          "aktie_pct": -2.29,
+          "nasdaq_pct": -1.61,
+          "ueberrendite_pct": -0.68
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "ISRG",
+      "name": "Intuitive Surgical",
+      "sector": "MedTech",
+      "aufnahmedatum": "2026-09-21",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 393.33,
+      "aufnahme_kurs_eur": 345.86,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "15 Handelstage in der Liste ohne Trade – Zeitlimit erreicht; Kurs 423.96 USD, Ampel Kapitalfluss/Trend gelb/rot.",
+      "referenz_kurs_usd": 393.33,
+      "status_seit": "2026-10-09",
+      "aktueller_kurs_usd": 441.58,
+      "aktueller_kurs_eur": 397.42,
+      "performance_pct": 12.27,
+      "handelstage_seit_aufnahme": 39,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -4.35,
+      "ueberrendite_pct": 16.62,
+      "forward": {
+        "5T": {
+          "aktie_pct": 3.01,
+          "nasdaq_pct": 3.19,
+          "ueberrendite_pct": -0.18
+        },
+        "10T": {
+          "aktie_pct": -0.35,
+          "nasdaq_pct": 3.9,
+          "ueberrendite_pct": -4.25
+        },
+        "20T": {
+          "aktie_pct": 8.48,
+          "nasdaq_pct": -1.61,
+          "ueberrendite_pct": 10.09
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-09-22",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 362.995,
+      "aufnahme_kurs_eur": 319.07,
+      "handelstage_in_liste": 3,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 24.09.2026 nicht mehr aktualisiert (bereits invalidiert: Kurs unter SMA20/SMA50 gefallen).",
+      "referenz_kurs_usd": 362.66,
+      "aktueller_kurs_usd": 364.61,
+      "aktueller_kurs_eur": 328.15,
+      "performance_pct": 0.54,
+      "handelstage_seit_aufnahme": 38,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.93,
+      "ueberrendite_pct": 7.47,
+      "forward": {
+        "5T": {
+          "aktie_pct": -3.61,
+          "nasdaq_pct": -0.67,
+          "ueberrendite_pct": -2.94
+        },
+        "10T": {
+          "aktie_pct": -0.04,
+          "nasdaq_pct": 1.99,
+          "ueberrendite_pct": -2.03
+        },
+        "20T": {
+          "aktie_pct": -7.74,
+          "nasdaq_pct": -3.12,
+          "ueberrendite_pct": -4.62
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "DE",
+      "name": "Deere & Company",
+      "sector": "Industrials",
+      "aufnahmedatum": "2026-09-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "hoch",
+      "aufnahme_kurs_usd": 709.48,
+      "aufnahme_kurs_eur": 623.63,
+      "handelstage_in_liste": 5,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Halten",
+      "letzte_einschaetzung": "Rotiert aus der aktiven Liste (Ueberlauf: max. 10 aktive Eintraege, drei Neuaufnahmen am 30.09.; zweitschwaechste Performance seit Aufnahme). Kein Kaufsignal: OBV-5-Tage-Trend negativ (-4,2 Mio.), rote Kapitalfluss-Ampel, Kurs noch ueber SMA50.",
+      "referenz_kurs_usd": 709.48,
+      "aktueller_kurs_usd": 690.92,
+      "aktueller_kurs_eur": 621.83,
+      "performance_pct": -2.62,
+      "handelstage_seit_aufnahme": 36,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.9,
+      "ueberrendite_pct": 4.28,
+      "forward": {
+        "5T": {
+          "aktie_pct": -5.35,
+          "nasdaq_pct": -0.19,
+          "ueberrendite_pct": -5.16
+        },
+        "10T": {
+          "aktie_pct": -7.42,
+          "nasdaq_pct": 2.23,
+          "ueberrendite_pct": -9.65
+        },
+        "20T": {
+          "aktie_pct": -10.28,
+          "nasdaq_pct": -2.16,
+          "ueberrendite_pct": -8.12
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar",
+      "sector": "Industrials",
+      "aufnahmedatum": "2026-09-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 812.02,
+      "aufnahme_kurs_eur": 713.77,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 24.09.2026 nicht mehr aktualisiert (noch am Aufnahmetag invalidiert: Kurs unter SMA50 gefallen).",
+      "referenz_kurs_usd": 812.02,
+      "aktueller_kurs_usd": 605.2,
+      "aktueller_kurs_eur": 544.68,
+      "performance_pct": -25.47,
+      "handelstage_seit_aufnahme": 36,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.9,
+      "ueberrendite_pct": -18.57,
+      "forward": {
+        "5T": {
+          "aktie_pct": -0.15,
+          "nasdaq_pct": -0.19,
+          "ueberrendite_pct": 0.04
+        },
+        "10T": {
+          "aktie_pct": 0.22,
+          "nasdaq_pct": 2.23,
+          "ueberrendite_pct": -2.01
+        },
+        "20T": {
+          "aktie_pct": -8.84,
+          "nasdaq_pct": -2.16,
+          "ueberrendite_pct": -6.68
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-09-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 354.99,
+      "aufnahme_kurs_eur": 312.04,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Historischer Eintrag, seit 24.09.2026 nicht mehr aktualisiert (noch am Aufnahmetag invalidiert: Kurs unter SMA20/SMA50 gefallen).",
+      "referenz_kurs_usd": 354.99,
+      "aktueller_kurs_usd": 364.61,
+      "aktueller_kurs_eur": 328.15,
+      "performance_pct": 2.71,
+      "handelstage_seit_aufnahme": 36,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.9,
+      "ueberrendite_pct": 9.61,
+      "forward": {
+        "5T": {
+          "aktie_pct": -1.07,
+          "nasdaq_pct": -0.19,
+          "ueberrendite_pct": -0.88
+        },
+        "10T": {
+          "aktie_pct": 6.06,
+          "nasdaq_pct": 2.23,
+          "ueberrendite_pct": 3.83
+        },
+        "20T": {
+          "aktie_pct": -4.84,
+          "nasdaq_pct": -2.16,
+          "ueberrendite_pct": -2.68
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar",
+      "sector": "Industrials",
+      "aufnahmedatum": "2026-09-25",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 811.36,
+      "aufnahme_kurs_eur": 713.19,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: Institutional Hold Test (P5.5) explizit 'Nicht bestanden' (OBV-5-Tage-Trend auf nur +0,43 Mio. eingebrochen), Kurs bleibt unter SMA50 (-2,13%) - kein Trade.",
+      "referenz_kurs_usd": 805.25,
+      "aktueller_kurs_usd": 605.2,
+      "aktueller_kurs_eur": 544.68,
+      "performance_pct": -24.84,
+      "handelstage_seit_aufnahme": 35,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.89,
+      "ueberrendite_pct": -17.95,
+      "forward": {
+        "5T": {
+          "aktie_pct": 2.62,
+          "nasdaq_pct": 0.13,
+          "ueberrendite_pct": 2.49
+        },
+        "10T": {
+          "aktie_pct": -1.13,
+          "nasdaq_pct": 0.87,
+          "ueberrendite_pct": -2.0
+        },
+        "20T": {
+          "aktie_pct": -12.57,
+          "nasdaq_pct": -4.94,
+          "ueberrendite_pct": -7.63
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-09-25",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 351.49,
+      "aufnahme_kurs_eur": 309.0,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: Institutional Hold Test (P5.5) explizit 'Nicht bestanden' (frueher OBV-Turnaround auf +3,1 Mio. verpufft), Kurs bleibt unter SMA20 (-1,81%) und SMA50 (-6,67%) - kein Trade.",
+      "referenz_kurs_usd": 350.36,
+      "aktueller_kurs_usd": 364.61,
+      "aktueller_kurs_eur": 328.15,
+      "performance_pct": 4.07,
+      "handelstage_seit_aufnahme": 35,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.89,
+      "ueberrendite_pct": 10.96,
+      "forward": {
+        "5T": {
+          "aktie_pct": -1.92,
+          "nasdaq_pct": 0.13,
+          "ueberrendite_pct": -2.05
+        },
+        "10T": {
+          "aktie_pct": 2.79,
+          "nasdaq_pct": 0.87,
+          "ueberrendite_pct": 1.92
+        },
+        "20T": {
+          "aktie_pct": -7.74,
+          "nasdaq_pct": -4.94,
+          "ueberrendite_pct": -2.8
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-09-25",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 191.6,
+      "aufnahme_kurs_eur": 168.44,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: 2 Anti-Bulltrap-Kriterien bereits bei Aufnahme verletzt (RSI14 72,91 >72, Abstand SMA50 +16,85% >15%) - trotz mit Abstand staerkstem OBV-5-Tage-Zufluss der gesamten Watchlist (+101,4 Mio.) strukturell zu weit gelaufen fuer einen Neueinstieg.",
+      "referenz_kurs_usd": 192.59,
+      "aktueller_kurs_usd": 172.09,
+      "aktueller_kurs_eur": 154.88,
+      "performance_pct": -10.65,
+      "handelstage_seit_aufnahme": 35,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.89,
+      "ueberrendite_pct": -3.76,
+      "forward": {
+        "5T": {
+          "aktie_pct": -1.32,
+          "nasdaq_pct": 0.13,
+          "ueberrendite_pct": -1.45
+        },
+        "10T": {
+          "aktie_pct": 3.21,
+          "nasdaq_pct": 0.87,
+          "ueberrendite_pct": 2.34
+        },
+        "20T": {
+          "aktie_pct": 1.87,
+          "nasdaq_pct": -4.94,
+          "ueberrendite_pct": 6.81
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "sector": "Consumer Discretionary",
+      "aufnahmedatum": "2026-09-25",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 370.76,
+      "aufnahme_kurs_eur": 325.89,
+      "handelstage_in_liste": 4,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Rotiert aus der aktiven Liste (Ueberlauf: max. 10 aktive Eintraege, drei Neuaufnahmen am 30.09.; schwaechste Performance seit Aufnahme). These widerlegt: OBV-5-Tage-Trend klar negativ (-144,5 Mio.), 5T -8,0%, unter SMA20 und fallender SMA200, rote Ampeln.",
+      "referenz_kurs_usd": 377.94,
+      "aktueller_kurs_usd": 391.7,
+      "aktueller_kurs_eur": 352.53,
+      "performance_pct": 3.64,
+      "handelstage_seit_aufnahme": 35,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.89,
+      "ueberrendite_pct": 10.53,
+      "forward": {
+        "5T": {
+          "aktie_pct": -6.31,
+          "nasdaq_pct": 0.13,
+          "ueberrendite_pct": -6.44
+        },
+        "10T": {
+          "aktie_pct": -0.78,
+          "nasdaq_pct": 0.87,
+          "ueberrendite_pct": -1.65
+        },
+        "20T": {
+          "aktie_pct": -0.89,
+          "nasdaq_pct": -4.94,
+          "ueberrendite_pct": 4.05
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Cybersecurity",
+      "aufnahmedatum": "2026-09-28",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 386.35,
+      "aufnahme_kurs_eur": 339.26,
+      "handelstage_in_liste": 10,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Überlauf (max. 10 aktive Einträge): niedrigster aktueller Score (64.8); Optionsflow bärisch, Kurs über SMA50, These technisch nicht widerlegt.",
+      "referenz_kurs_usd": 374.74,
+      "status_seit": "2026-10-09",
+      "aktueller_kurs_usd": 322.0,
+      "aktueller_kurs_eur": 289.8,
+      "performance_pct": -14.07,
+      "handelstage_seit_aufnahme": 34,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.31,
+      "ueberrendite_pct": -6.76,
+      "forward": {
+        "5T": {
+          "aktie_pct": 7.61,
+          "nasdaq_pct": 0.68,
+          "ueberrendite_pct": 6.93
+        },
+        "10T": {
+          "aktie_pct": 11.75,
+          "nasdaq_pct": 0.91,
+          "ueberrendite_pct": 10.84
+        },
+        "20T": {
+          "aktie_pct": 1.55,
+          "nasdaq_pct": -5.39,
+          "ueberrendite_pct": 6.94
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-09-28",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 188.735,
+      "aufnahme_kurs_eur": 165.71,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "15 Handelstage ohne Trade erreicht; Feed-Stufe nur noch Beobachten (Score 59,3), Kapitalfluss rot, Hold-Test heute nicht bestanden (−6,6 % seit Eröffnung).",
+      "referenz_kurs_usd": 189.67,
+      "status_seit": "2026-10-16",
+      "wiedereinstieg_eur": 171.52,
+      "aktueller_kurs_usd": 172.09,
+      "aktueller_kurs_eur": 154.88,
+      "performance_pct": -9.27,
+      "handelstage_seit_aufnahme": 34,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.31,
+      "ueberrendite_pct": -1.96,
+      "forward": {
+        "5T": {
+          "aktie_pct": -0.49,
+          "nasdaq_pct": 0.68,
+          "ueberrendite_pct": -1.17
+        },
+        "10T": {
+          "aktie_pct": 10.22,
+          "nasdaq_pct": 0.91,
+          "ueberrendite_pct": 9.31
+        },
+        "20T": {
+          "aktie_pct": 3.73,
+          "nasdaq_pct": -5.39,
+          "ueberrendite_pct": 9.12
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "sector": "Energy",
+      "aufnahmedatum": "2026-09-29",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 161.625,
+      "aufnahme_kurs_eur": 142.07,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: Institutional Hold Test (P5.5) 'Nicht bestanden' (-0,66% am Tag, Kurs unter SMA20, fallender Oelpreis bei US-Iran-Gespraechen) - kein Trade. Aufnahmekurs = P1-Kurs (P4-Kurs nicht im Feed).",
+      "referenz_kurs_usd": 162.52,
+      "aktueller_kurs_usd": 169.07,
+      "aktueller_kurs_eur": 152.16,
+      "performance_pct": 4.03,
+      "handelstage_seit_aufnahme": 33,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.31,
+      "ueberrendite_pct": 10.34,
+      "forward": {
+        "5T": {
+          "aktie_pct": 0.91,
+          "nasdaq_pct": 2.67,
+          "ueberrendite_pct": -1.76
+        },
+        "10T": {
+          "aktie_pct": 5.93,
+          "nasdaq_pct": 1.29,
+          "ueberrendite_pct": 4.64
+        },
+        "20T": {
+          "aktie_pct": 13.55,
+          "nasdaq_pct": -3.3,
+          "ueberrendite_pct": 16.85
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "sector": "Energy",
+      "aufnahmedatum": "2026-09-29",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 204.89,
+      "aufnahme_kurs_eur": 180.1,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: Institutional Hold Test (P5.5) 'Nicht bestanden' (-0,68% am Tag, 2,2% unter SMA20, RSI14 36,5, Oel-/Geopolitik-Risiko) - kein Trade. Aufnahmekurs = P1-Kurs (P4-Kurs nicht im Feed).",
+      "referenz_kurs_usd": 206.37,
+      "aktueller_kurs_usd": 216.54,
+      "aktueller_kurs_eur": 194.89,
+      "performance_pct": 4.93,
+      "handelstage_seit_aufnahme": 33,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.31,
+      "ueberrendite_pct": 11.24,
+      "forward": {
+        "5T": {
+          "aktie_pct": 0.05,
+          "nasdaq_pct": 2.67,
+          "ueberrendite_pct": -2.62
+        },
+        "10T": {
+          "aktie_pct": 4.18,
+          "nasdaq_pct": 1.29,
+          "ueberrendite_pct": 2.89
+        },
+        "20T": {
+          "aktie_pct": 12.42,
+          "nasdaq_pct": -3.3,
+          "ueberrendite_pct": 15.72
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-09-30",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 518.87,
+      "aufnahme_kurs_eur": 457.66,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "15 Handelstage ohne Trade erreicht; zusätzlich Earnings in 5 Handelstagen (28.10.) – harter Ausschluss, keine Neuaufnahme.",
+      "referenz_kurs_usd": 508.96,
+      "status_seit": "2026-10-21",
+      "aktueller_kurs_usd": 527.81,
+      "aktueller_kurs_eur": 475.03,
+      "performance_pct": 3.7,
+      "handelstage_seit_aufnahme": 32,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.49,
+      "ueberrendite_pct": 10.19,
+      "forward": {
+        "5T": {
+          "aktie_pct": 4.0,
+          "nasdaq_pct": 2.94,
+          "ueberrendite_pct": 1.06
+        },
+        "10T": {
+          "aktie_pct": 6.78,
+          "nasdaq_pct": 0.76,
+          "ueberrendite_pct": 6.02
+        },
+        "20T": {
+          "aktie_pct": 4.4,
+          "nasdaq_pct": -2.26,
+          "ueberrendite_pct": 6.66
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "sector": "Energy",
+      "aufnahmedatum": "2026-09-30",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 163.35,
+      "aufnahme_kurs_eur": 144.08,
+      "handelstage_in_liste": 8,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Überlauf (max. 10 aktive Einträge): niedrigster aktueller Score (59.7); Optionsflow bärisch, Kurs über SMA50, These technisch nicht widerlegt.",
+      "referenz_kurs_usd": 161.35,
+      "status_seit": "2026-10-09",
+      "aktueller_kurs_usd": 169.07,
+      "aktueller_kurs_eur": 152.16,
+      "performance_pct": 4.78,
+      "handelstage_seit_aufnahme": 32,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.49,
+      "ueberrendite_pct": 11.27,
+      "forward": {
+        "5T": {
+          "aktie_pct": 1.94,
+          "nasdaq_pct": 2.94,
+          "ueberrendite_pct": -1.0
+        },
+        "10T": {
+          "aktie_pct": 7.89,
+          "nasdaq_pct": 0.76,
+          "ueberrendite_pct": 7.13
+        },
+        "20T": {
+          "aktie_pct": 11.5,
+          "nasdaq_pct": -2.26,
+          "ueberrendite_pct": 13.76
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "sector": "Energy",
+      "aufnahmedatum": "2026-09-30",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 205.53,
+      "aufnahme_kurs_eur": 181.28,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "15 Handelstage ohne Trade erreicht; Optionsflow im aktuellen Feed bärisch (RSI14 > 72) – keine Neuaufnahme.",
+      "referenz_kurs_usd": 204.38,
+      "status_seit": "2026-10-21",
+      "aktueller_kurs_usd": 216.54,
+      "aktueller_kurs_eur": 194.89,
+      "performance_pct": 5.95,
+      "handelstage_seit_aufnahme": 32,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.49,
+      "ueberrendite_pct": 12.44,
+      "forward": {
+        "5T": {
+          "aktie_pct": 1.57,
+          "nasdaq_pct": 2.94,
+          "ueberrendite_pct": -1.37
+        },
+        "10T": {
+          "aktie_pct": 6.53,
+          "nasdaq_pct": 0.76,
+          "ueberrendite_pct": 5.77
+        },
+        "20T": {
+          "aktie_pct": 11.67,
+          "nasdaq_pct": -2.26,
+          "ueberrendite_pct": 13.93
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "aufnahmedatum": "2026-10-01",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 246.71,
+      "aufnahme_kurs_eur": 217.6,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Verkauf",
+      "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag invalidiert: Institutional Hold Test (P5.5) 'Nicht bestanden' (-1,0% am Tag, schwaecher als S&P500/NASDAQ), Kurs 2,1% unter SMA20 und 3,7% unter SMA50 trotz OBV-5-Tage +77 Mio. - kein Trade. Aufnahmekurs = P1-Kurs (P4-Kurs nicht im Feed).",
+      "referenz_kurs_usd": 249.15,
+      "aktueller_kurs_usd": 269.22,
+      "aktueller_kurs_eur": 242.3,
+      "performance_pct": 8.06,
+      "handelstage_seit_aufnahme": 31,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -6.72,
+      "ueberrendite_pct": 14.78,
+      "forward": {
+        "5T": {
+          "aktie_pct": 4.32,
+          "nasdaq_pct": 2.43,
+          "ueberrendite_pct": 1.89
+        },
+        "10T": {
+          "aktie_pct": 1.98,
+          "nasdaq_pct": -1.46,
+          "ueberrendite_pct": 3.44
+        },
+        "20T": {
+          "aktie_pct": 2.19,
+          "nasdaq_pct": -1.91,
+          "ueberrendite_pct": 4.1
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "aufnahmedatum": "2026-10-05",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 251.53,
+      "aufnahme_kurs_eur": 223.6,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (invalidiert)",
+      "empfehlung": "Halten",
+      "letzte_einschaetzung": "Neuaufnahme und noch am selben Tag formal invalidiert (Kurs 1,8% unter SMA50), inhaltlich aber sauberster Pullback der Watchlist: 0,4% ueber SMA20, RSI14 55, OBV-5-Tage +76 Mio., Optionsflow bullisch; P5.5 nur 'Teilweise' - Wiedervorlage bei Rueckeroberung der SMA50 (ca. 228 EUR) mit Volumen. Aufnahmekurs USD aus P4-EUR-Kurs mit aktuellem EUR/USD zurueckgerechnet.",
+      "referenz_kurs_usd": 251.52,
+      "aktueller_kurs_usd": 269.22,
+      "aktueller_kurs_eur": 242.3,
+      "performance_pct": 7.04,
+      "handelstage_seit_aufnahme": 29,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.94,
+      "ueberrendite_pct": 14.98,
+      "forward": {
+        "5T": {
+          "aktie_pct": 4.34,
+          "nasdaq_pct": 0.23,
+          "ueberrendite_pct": 4.11
+        },
+        "10T": {
+          "aktie_pct": -0.6,
+          "nasdaq_pct": -5.31,
+          "ueberrendite_pct": 4.71
+        },
+        "20T": {
+          "aktie_pct": -4.44,
+          "nasdaq_pct": -7.88,
+          "ueberrendite_pct": 3.44
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-10-05",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": "mittel",
+      "aufnahme_kurs_usd": 340.83,
+      "aufnahme_kurs_eur": 303.0,
+      "handelstage_in_liste": 9,
+      "status": "ausgeschieden (zeitlimit)",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Score 46,2 (Kein Setup), Kapitalfluss rot, −3,9 % unter SMA20 – als schwächster Eintrag wegen Überlauf (max. 10 aktive) aussortiert.",
+      "referenz_kurs_usd": 341.04,
+      "status_seit": "2026-10-15",
+      "aktueller_kurs_usd": 298.07,
+      "aktueller_kurs_eur": 268.26,
+      "performance_pct": -12.6,
+      "handelstage_seit_aufnahme": 29,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.94,
+      "ueberrendite_pct": -4.66,
+      "forward": {
+        "5T": {
+          "aktie_pct": 8.17,
+          "nasdaq_pct": 0.23,
+          "ueberrendite_pct": 7.94
+        },
+        "10T": {
+          "aktie_pct": -10.03,
+          "nasdaq_pct": -5.31,
+          "ueberrendite_pct": -4.72
+        },
+        "20T": {
+          "aktie_pct": -10.25,
+          "nasdaq_pct": -7.88,
+          "ueberrendite_pct": -2.37
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "TMO",
+      "name": "Thermo Fisher Scientific",
+      "sector": "MedTech",
+      "aufnahmedatum": "2026-10-09",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 81.7,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 658.02,
+      "aufnahme_kurs_eur": 586.95,
+      "handelstage_in_liste": 16,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-01",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "16 Handelstage in der Liste ohne Trade; erfüllt weiter die Kauf-Stufe und wird heute neu aufgenommen.",
+      "referenz_kurs_usd": 651.98,
+      "aktueller_kurs_usd": 704.35,
+      "aktueller_kurs_eur": 633.91,
+      "performance_pct": 8.03,
+      "handelstage_seit_aufnahme": 25,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.69,
+      "ueberrendite_pct": 15.72,
+      "forward": {
+        "5T": {
+          "aktie_pct": 6.83,
+          "nasdaq_pct": -2.62,
+          "ueberrendite_pct": 9.45
+        },
+        "10T": {
+          "aktie_pct": 3.77,
+          "nasdaq_pct": -5.77,
+          "ueberrendite_pct": 9.54
+        },
+        "20T": {
+          "aktie_pct": 3.83,
+          "nasdaq_pct": -13.45,
+          "ueberrendite_pct": 17.28
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "aufnahmedatum": "2026-10-09",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 76.5,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 336.64,
+      "aufnahme_kurs_eur": 300.28,
+      "handelstage_in_liste": 16,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-01",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "16 Handelstage in der Liste ohne Trade; Earnings am 02.11. und bärischer Optionsflow, Stufe Ausgeschlossen – keine Wiederaufnahme.",
+      "referenz_kurs_usd": 340.42,
+      "aktueller_kurs_usd": 357.08,
+      "aktueller_kurs_eur": 321.37,
+      "performance_pct": 4.89,
+      "handelstage_seit_aufnahme": 25,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.69,
+      "ueberrendite_pct": 12.58,
+      "forward": {
+        "5T": {
+          "aktie_pct": 0.46,
+          "nasdaq_pct": -2.62,
+          "ueberrendite_pct": 3.08
+        },
+        "10T": {
+          "aktie_pct": 2.29,
+          "nasdaq_pct": -5.77,
+          "ueberrendite_pct": 8.06
+        },
+        "20T": {
+          "aktie_pct": 1.1,
+          "nasdaq_pct": -13.45,
+          "ueberrendite_pct": 14.55
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "aufnahmedatum": "2026-10-09",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 75.7,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 262.43,
+      "aufnahme_kurs_eur": 234.09,
+      "handelstage_in_liste": 4,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-10-14",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kurs (255,61 $) fällt unter die SMA50 (257,91 $), Score 53,6 (Beobachten), Kapitalfluss rot, Hold-Test 1/4 – These widerlegt.",
+      "referenz_kurs_usd": 254.06,
+      "aktueller_kurs_usd": 269.22,
+      "aktueller_kurs_eur": 242.3,
+      "performance_pct": 5.97,
+      "handelstage_seit_aufnahme": 25,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.69,
+      "ueberrendite_pct": 13.66,
+      "forward": {
+        "5T": {
+          "aktie_pct": 0.28,
+          "nasdaq_pct": -2.62,
+          "ueberrendite_pct": 2.9
+        },
+        "10T": {
+          "aktie_pct": -1.45,
+          "nasdaq_pct": -5.77,
+          "ueberrendite_pct": 4.32
+        },
+        "20T": {
+          "aktie_pct": 2.42,
+          "nasdaq_pct": -13.45,
+          "ueberrendite_pct": 15.87
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "sector": "Payments",
+      "aufnahmedatum": "2026-10-09",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 75.4,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 385.45,
+      "aufnahme_kurs_eur": 343.82,
+      "handelstage_in_liste": 16,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-01",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "16 Handelstage in der Liste ohne Trade; Optionsflow bärisch (Stufe Ausgeschlossen, Score 65,7) – keine Wiederaufnahme.",
+      "referenz_kurs_usd": 375.1,
+      "aktueller_kurs_usd": 426.22,
+      "aktueller_kurs_eur": 383.6,
+      "performance_pct": 13.63,
+      "handelstage_seit_aufnahme": 25,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.69,
+      "ueberrendite_pct": 21.32,
+      "forward": {
+        "5T": {
+          "aktie_pct": 6.57,
+          "nasdaq_pct": -2.62,
+          "ueberrendite_pct": 9.19
+        },
+        "10T": {
+          "aktie_pct": 10.46,
+          "nasdaq_pct": -5.77,
+          "ueberrendite_pct": 16.23
+        },
+        "20T": {
+          "aktie_pct": 12.66,
+          "nasdaq_pct": -13.45,
+          "ueberrendite_pct": 26.11
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-10-09",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 74.6,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 140.86,
+      "aufnahme_kurs_eur": 125.65,
+      "handelstage_in_liste": 16,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-11-01",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kurs 105,12 US-Dollar deutlich unter SMA50 (138,68), Performance seit Aufnahme −24,8 %, Kapitalfluss und Trend rot – These widerlegt.",
+      "referenz_kurs_usd": 139.75,
+      "wiedereinstieg_eur": 126.28,
+      "aktueller_kurs_usd": 101.46,
+      "aktueller_kurs_eur": 91.31,
+      "performance_pct": -27.4,
+      "handelstage_seit_aufnahme": 25,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.69,
+      "ueberrendite_pct": -19.71,
+      "forward": {
+        "5T": {
+          "aktie_pct": 6.31,
+          "nasdaq_pct": -2.62,
+          "ueberrendite_pct": 8.93
+        },
+        "10T": {
+          "aktie_pct": 12.34,
+          "nasdaq_pct": -5.77,
+          "ueberrendite_pct": 18.11
+        },
+        "20T": {
+          "aktie_pct": -26.75,
+          "nasdaq_pct": -13.45,
+          "ueberrendite_pct": -13.3
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD (Advanced Micro Devices)",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-10-09",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 72.0,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 608.1,
+      "aufnahme_kurs_eur": 542.43,
+      "handelstage_in_liste": 3,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-10-13",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Optionsflow bärisch (harter Ausschluss), Score 55,4, Kurs 3,5 % unter SMA20; als niedrigster Score aus der aktiven Liste rotiert (Überlauf, max. 10 aktive).",
+      "referenz_kurs_usd": 620.68,
+      "aktueller_kurs_usd": 582.91,
+      "aktueller_kurs_eur": 524.62,
+      "performance_pct": -6.09,
+      "handelstage_seit_aufnahme": 25,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.69,
+      "ueberrendite_pct": 1.6,
+      "forward": {
+        "5T": {
+          "aktie_pct": -9.42,
+          "nasdaq_pct": -2.62,
+          "ueberrendite_pct": -6.8
+        },
+        "10T": {
+          "aktie_pct": -18.17,
+          "nasdaq_pct": -5.77,
+          "ueberrendite_pct": -12.4
+        },
+        "20T": {
+          "aktie_pct": -34.85,
+          "nasdaq_pct": -13.45,
+          "ueberrendite_pct": -21.4
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-10-09",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 71.0,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 41.86,
+      "aufnahme_kurs_eur": 37.34,
+      "handelstage_in_liste": 3,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-10-13",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Performance seit Aufnahme unter −8 % (−9,6 %), Kurs nur noch knapp über SMA50, Score 57,7 (Beobachten).",
+      "referenz_kurs_usd": 42.77,
+      "aktueller_kurs_usd": 26.69,
+      "aktueller_kurs_eur": 24.02,
+      "performance_pct": -37.59,
+      "handelstage_seit_aufnahme": 25,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.69,
+      "ueberrendite_pct": -29.9,
+      "forward": {
+        "5T": {
+          "aktie_pct": -17.96,
+          "nasdaq_pct": -2.62,
+          "ueberrendite_pct": -15.34
+        },
+        "10T": {
+          "aktie_pct": -21.16,
+          "nasdaq_pct": -5.77,
+          "ueberrendite_pct": -15.39
+        },
+        "20T": {
+          "aktie_pct": -36.68,
+          "nasdaq_pct": -13.45,
+          "ueberrendite_pct": -23.23
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-10-13",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 75.4,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 259.39,
+      "aufnahme_kurs_eur": 232.15,
+      "handelstage_in_liste": 3,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-10-15",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Performance seit Aufnahme −11,2 % (unter −8 %-Grenze), Kapitalfluss rot, Halbleiter-Sektor Rang 19 – These widerlegt.",
+      "referenz_kurs_usd": 265.86,
+      "aktueller_kurs_usd": 165.06,
+      "aktueller_kurs_eur": 148.55,
+      "performance_pct": -37.91,
+      "handelstage_seit_aufnahme": 23,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.5,
+      "ueberrendite_pct": -30.41,
+      "forward": {
+        "5T": {
+          "aktie_pct": -10.82,
+          "nasdaq_pct": -3.71,
+          "ueberrendite_pct": -7.11
+        },
+        "10T": {
+          "aktie_pct": -12.07,
+          "nasdaq_pct": -4.54,
+          "ueberrendite_pct": -7.53
+        },
+        "20T": {
+          "aktie_pct": -41.85,
+          "nasdaq_pct": -8.94,
+          "ueberrendite_pct": -32.91
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "sector": "Payments",
+      "aufnahmedatum": "2026-10-13",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 72.2,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 601.44,
+      "aufnahme_kurs_eur": 538.29,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-02",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "15 Handelstage ohne Trade erreicht (+10,97 % seit Aufnahme) – Zeitlimit; Titel bleibt als neuer Eintrag in der Liste (überdehnt).",
+      "referenz_kurs_usd": 595.09,
+      "aktueller_kurs_usd": 660.38,
+      "aktueller_kurs_eur": 594.34,
+      "performance_pct": 10.97,
+      "handelstage_seit_aufnahme": 23,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.5,
+      "ueberrendite_pct": 18.47,
+      "forward": {
+        "5T": {
+          "aktie_pct": 3.58,
+          "nasdaq_pct": -3.71,
+          "ueberrendite_pct": 7.29
+        },
+        "10T": {
+          "aktie_pct": 3.09,
+          "nasdaq_pct": -4.54,
+          "ueberrendite_pct": 7.63
+        },
+        "20T": {
+          "aktie_pct": 10.2,
+          "nasdaq_pct": -8.94,
+          "ueberrendite_pct": 19.14
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "sector": "Cybersecurity",
+      "aufnahmedatum": "2026-10-14",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 76.0,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 252.28,
+      "aufnahme_kurs_eur": 225.29,
+      "handelstage_in_liste": 2,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-10-15",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Score 49,8 (Kein Setup), Kapitalfluss rot, −7,2 % unter SMA20 (Performance −7,5 %) – wegen Überlauf (max. 10 aktive) aussortiert.",
+      "referenz_kurs_usd": 261.21,
+      "aktueller_kurs_usd": 227.35,
+      "aktueller_kurs_eur": 204.62,
+      "performance_pct": -12.96,
+      "handelstage_seit_aufnahme": 22,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.2,
+      "ueberrendite_pct": -5.76,
+      "forward": {
+        "5T": {
+          "aktie_pct": -12.96,
+          "nasdaq_pct": -3.49,
+          "ueberrendite_pct": -9.47
+        },
+        "10T": {
+          "aktie_pct": 2.61,
+          "nasdaq_pct": -3.0,
+          "ueberrendite_pct": 5.61
+        },
+        "20T": {
+          "aktie_pct": -13.57,
+          "nasdaq_pct": -9.25,
+          "ueberrendite_pct": -4.32
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Semiconductors/AI",
+      "aufnahmedatum": "2026-10-14",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 66.2,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 223.08,
+      "aufnahme_kurs_eur": 199.21,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-10-14",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Neuaufnahme aus P4 (Score 66,2) und am selben Tag widerlegt: Kurs (223,08 $) unter der SMA50 (223,25 $), Score im aktuellen Feed 47,6 (Kein Setup), Kapitalfluss rot, Hold-Test 1/4, Halbleiter unter Druck.",
+      "referenz_kurs_usd": 228.52,
+      "aktueller_kurs_usd": 164.15,
+      "aktueller_kurs_eur": 147.73,
+      "performance_pct": -28.17,
+      "handelstage_seit_aufnahme": 22,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -7.2,
+      "ueberrendite_pct": -20.97,
+      "forward": {
+        "5T": {
+          "aktie_pct": -5.27,
+          "nasdaq_pct": -3.49,
+          "ueberrendite_pct": -1.78
+        },
+        "10T": {
+          "aktie_pct": -4.63,
+          "nasdaq_pct": -3.0,
+          "ueberrendite_pct": -1.63
+        },
+        "20T": {
+          "aktie_pct": -26.09,
+          "nasdaq_pct": -9.25,
+          "ueberrendite_pct": -16.84
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "sector": "Energy",
+      "aufnahmedatum": "2026-10-15",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 76.9,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 174.83,
+      "aufnahme_kurs_eur": 156.3,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-04",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "15 Handelstage in der Liste ohne Trade; Kurs knapp über SMA50, Optionsflow bärisch (Ausschluss) – Zeitlimit erreicht, keine Wiederaufnahme.",
+      "referenz_kurs_usd": 177.01,
+      "wiedereinstieg_eur": 158.5,
+      "aktueller_kurs_usd": 169.07,
+      "aktueller_kurs_eur": 152.16,
+      "performance_pct": -4.49,
+      "handelstage_seit_aufnahme": 21,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -5.33,
+      "ueberrendite_pct": 0.84,
+      "forward": {
+        "5T": {
+          "aktie_pct": 0.61,
+          "nasdaq_pct": -0.51,
+          "ueberrendite_pct": 1.12
+        },
+        "10T": {
+          "aktie_pct": 2.83,
+          "nasdaq_pct": -0.46,
+          "ueberrendite_pct": 3.29
+        },
+        "20T": {
+          "aktie_pct": -5.82,
+          "nasdaq_pct": -5.29,
+          "ueberrendite_pct": -0.53
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "ZS",
+      "name": "Zscaler",
+      "sector": "Cybersecurity",
+      "aufnahmedatum": "2026-10-15",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 66.9,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 216.885,
+      "aufnahme_kurs_eur": 193.9,
+      "handelstage_in_liste": 3,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-10-20",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Score 54,5 (Beobachten), Kapitalfluss rot, Sektor Cybersecurity negativ (Rang 16); bei Überlauf (11 aktive Einträge) niedrigster Score – ausgeschieden.",
+      "referenz_kurs_usd": 220.79,
+      "aktueller_kurs_usd": 191.72,
+      "aktueller_kurs_eur": 172.55,
+      "performance_pct": -13.17,
+      "handelstage_seit_aufnahme": 21,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -5.33,
+      "ueberrendite_pct": -7.84,
+      "forward": {
+        "5T": {
+          "aktie_pct": 4.77,
+          "nasdaq_pct": -0.51,
+          "ueberrendite_pct": 5.28
+        },
+        "10T": {
+          "aktie_pct": 15.86,
+          "nasdaq_pct": -0.46,
+          "ueberrendite_pct": 16.32
+        },
+        "20T": {
+          "aktie_pct": -12.23,
+          "nasdaq_pct": -5.29,
+          "ueberrendite_pct": -6.94
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group",
+      "sector": "Healthcare",
+      "aufnahmedatum": "2026-10-16",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 77.0,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 402.075,
+      "aufnahme_kurs_eur": 358.65,
+      "handelstage_in_liste": 13,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-03",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Score 56,5 (Beobachten), Kapitalfluss rot – Überlauf (max. 10 aktive), niedrigster Score.",
+      "referenz_kurs_usd": 406.67,
+      "aktueller_kurs_usd": 404.44,
+      "aktueller_kurs_eur": 363.99,
+      "performance_pct": -0.55,
+      "handelstage_seit_aufnahme": 20,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -5.21,
+      "ueberrendite_pct": 4.66,
+      "forward": {
+        "5T": {
+          "aktie_pct": 4.5,
+          "nasdaq_pct": -3.23,
+          "ueberrendite_pct": 7.73
+        },
+        "10T": {
+          "aktie_pct": 1.04,
+          "nasdaq_pct": -1.74,
+          "ueberrendite_pct": 2.78
+        },
+        "20T": {
+          "aktie_pct": -0.55,
+          "nasdaq_pct": -5.21,
+          "ueberrendite_pct": 4.66
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase Global",
+      "sector": "Fintech/Brokerage",
+      "aufnahmedatum": "2026-10-16",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 65.9,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 180.71,
+      "aufnahme_kurs_eur": 161.19,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-10-16",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Neuaufnahme aus P4 (Score 65,9), im Live-Feed aber ausgeschlossen (bärischer Optionsfluss, Score 31,7, Trendkontext rot); wegen Überlauf-Regel (max. 10 aktive, niedrigster Score) sofort ausgeschieden.",
+      "referenz_kurs_usd": 183.81,
+      "aktueller_kurs_usd": 133.23,
+      "aktueller_kurs_eur": 119.9,
+      "performance_pct": -27.52,
+      "handelstage_seit_aufnahme": 20,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -5.21,
+      "ueberrendite_pct": -22.31,
+      "forward": {
+        "5T": {
+          "aktie_pct": -8.01,
+          "nasdaq_pct": -3.23,
+          "ueberrendite_pct": -4.78
+        },
+        "10T": {
+          "aktie_pct": -12.63,
+          "nasdaq_pct": -1.74,
+          "ueberrendite_pct": -10.89
+        },
+        "20T": {
+          "aktie_pct": -27.52,
+          "nasdaq_pct": -5.21,
+          "ueberrendite_pct": -22.31
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "TRV",
+      "name": "Travelers",
+      "sector": "Insurance",
+      "aufnahmedatum": "2026-10-20",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 75.7,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 393.28,
+      "aufnahme_kurs_eur": 350.41,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-09",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "15 Handelstage ohne Trade – Zeitlimit; Titel erfüllt weiter die Kauf-Stufe und wird neu aufgenommen.",
+      "referenz_kurs_usd": 385.45,
+      "aktueller_kurs_usd": 404.63,
+      "aktueller_kurs_eur": 364.17,
+      "performance_pct": 4.98,
+      "handelstage_seit_aufnahme": 18,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -3.94,
+      "ueberrendite_pct": 8.92,
+      "forward": {
+        "5T": {
+          "aktie_pct": 3.82,
+          "nasdaq_pct": -0.86,
+          "ueberrendite_pct": 4.68
+        },
+        "10T": {
+          "aktie_pct": 3.46,
+          "nasdaq_pct": -5.19,
+          "ueberrendite_pct": 8.65
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "PGR",
+      "name": "Progressive",
+      "sector": "Insurance",
+      "aufnahmedatum": "2026-10-20",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 65.2,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 220.61,
+      "aufnahme_kurs_eur": 196.56,
+      "handelstage_in_liste": 15,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-09",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "15 Handelstage ohne Trade – Zeitlimit; Titel erfüllt weiter die Kauf-Stufe und wird neu aufgenommen.",
+      "referenz_kurs_usd": 219.11,
+      "aktueller_kurs_usd": 235.71,
+      "aktueller_kurs_eur": 212.14,
+      "performance_pct": 7.58,
+      "handelstage_seit_aufnahme": 18,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -3.94,
+      "ueberrendite_pct": 11.52,
+      "forward": {
+        "5T": {
+          "aktie_pct": 4.63,
+          "nasdaq_pct": -0.86,
+          "ueberrendite_pct": 5.49
+        },
+        "10T": {
+          "aktie_pct": 6.76,
+          "nasdaq_pct": -5.19,
+          "ueberrendite_pct": 11.95
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "aufnahmedatum": "2026-10-21",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 73.6,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 262.86,
+      "aufnahme_kurs_eur": 234.21,
+      "handelstage_in_liste": 1,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-10-22",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kurs fällt unter die SMA50 (SMA50 rund 255 USD) – These widerlegt; zusätzlich Earnings in 5 Handelstagen.",
+      "referenz_kurs_usd": 262.63,
+      "aktueller_kurs_usd": 269.22,
+      "aktueller_kurs_eur": 242.3,
+      "performance_pct": 2.51,
+      "handelstage_seit_aufnahme": 17,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -3.84,
+      "ueberrendite_pct": 6.35,
+      "forward": {
+        "5T": {
+          "aktie_pct": -3.63,
+          "nasdaq_pct": 0.5,
+          "ueberrendite_pct": -4.13
+        },
+        "10T": {
+          "aktie_pct": -4.55,
+          "nasdaq_pct": -4.51,
+          "ueberrendite_pct": -0.04
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "ISRG",
+      "name": "Intuitive Surgical",
+      "sector": "MedTech",
+      "aufnahmedatum": "2026-10-22",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 77.0,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 439.52,
+      "aufnahme_kurs_eur": 391.17,
+      "handelstage_in_liste": 7,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-11-01",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kapitalfluss- und Trend-Ampel beide rot, Optionsflow bärisch (Stufe Ausgeschlossen, Score 48,2) – These widerlegt.",
+      "referenz_kurs_usd": 428.12,
+      "wiedereinstieg_eur": 375.33,
+      "aktueller_kurs_usd": 441.58,
+      "aktueller_kurs_eur": 397.42,
+      "performance_pct": 3.14,
+      "handelstage_seit_aufnahme": 16,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -4.84,
+      "ueberrendite_pct": 7.98,
+      "forward": {
+        "5T": {
+          "aktie_pct": 3.75,
+          "nasdaq_pct": 0.06,
+          "ueberrendite_pct": 3.69
+        },
+        "10T": {
+          "aktie_pct": 12.61,
+          "nasdaq_pct": -4.58,
+          "ueberrendite_pct": 17.19
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "sector": "Energy",
+      "aufnahmedatum": "2026-10-22",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 67.5,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 223.22,
+      "aufnahme_kurs_eur": 198.67,
+      "handelstage_in_liste": 11,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-05",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Score 62,6 (Beobachten) unter der Kaufschwelle, Kapitalfluss-Ampel rot, Kurs unter der SMA20, Stufe fällt zurück – nach Überlauf-Regel ausgeschieden.",
+      "referenz_kurs_usd": 226.78,
+      "wiedereinstieg_eur": 199.77,
+      "aktueller_kurs_usd": 216.54,
+      "aktueller_kurs_eur": 194.89,
+      "performance_pct": -4.52,
+      "handelstage_seit_aufnahme": 16,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -4.84,
+      "ueberrendite_pct": 0.32,
+      "forward": {
+        "5T": {
+          "aktie_pct": 1.07,
+          "nasdaq_pct": 0.06,
+          "ueberrendite_pct": 1.01
+        },
+        "10T": {
+          "aktie_pct": -4.33,
+          "nasdaq_pct": -4.58,
+          "ueberrendite_pct": 0.25
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "ZS",
+      "name": "Zscaler",
+      "sector": "Cybersecurity",
+      "aufnahmedatum": "2026-10-22",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 52.9,
+      "aufnahme_stufe": "Überdehnt – auf Rücksetzer warten",
+      "aufnahme_kurs_usd": 238.7,
+      "aufnahme_kurs_eur": 212.44,
+      "handelstage_in_liste": 9,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-03",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Score 55,4 (Beobachten), Kapitalfluss rot, Earnings 24.11. – Überlauf (max. 10 aktive), niedrigster Score.",
+      "referenz_kurs_usd": 231.33,
+      "wiedereinstieg_eur": 205.83,
+      "aktueller_kurs_usd": 191.72,
+      "aktueller_kurs_eur": 172.55,
+      "performance_pct": -17.12,
+      "handelstage_seit_aufnahme": 16,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -4.84,
+      "ueberrendite_pct": -12.28,
+      "forward": {
+        "5T": {
+          "aktie_pct": 10.58,
+          "nasdaq_pct": 0.06,
+          "ueberrendite_pct": 10.52
+        },
+        "10T": {
+          "aktie_pct": -2.98,
+          "nasdaq_pct": -4.58,
+          "ueberrendite_pct": 1.6
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "UNP",
+      "name": "Union Pacific",
+      "sector": "Transportation",
+      "aufnahmedatum": "2026-10-23",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 71.5,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 293.37,
+      "aufnahme_kurs_eur": 261.69,
+      "handelstage_in_liste": 14,
+      "status": "aktiv",
+      "status_seit": "2026-10-23",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kurs 1,5 % über SMA20 und 5,1 % über SMA50, Trend grün, aber Optionsflow wieder bärisch (harter Ausschluss); Zeitlimit in 1 Handelstag.",
+      "referenz_kurs_usd": 298.09,
+      "aktueller_kurs_usd": 305.05,
+      "aktueller_kurs_eur": 274.54,
+      "performance_pct": 2.33,
+      "handelstage_seit_aufnahme": 15,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.04,
+      "ueberrendite_pct": 4.37,
+      "forward": {
+        "5T": {
+          "aktie_pct": 1.29,
+          "nasdaq_pct": 1.54,
+          "ueberrendite_pct": -0.25
+        },
+        "10T": {
+          "aktie_pct": -0.05,
+          "nasdaq_pct": -8.15,
+          "ueberrendite_pct": 8.1
+        }
+      },
+      "status_gruppe": "aktiv"
+    },
+    {
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "sector": "Defense",
+      "aufnahmedatum": "2026-10-23",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 69.0,
+      "aufnahme_stufe": "Überdehnt – auf Rücksetzer warten",
+      "aufnahme_kurs_usd": 594.97,
+      "aufnahme_kurs_eur": 530.71,
+      "handelstage_in_liste": 11,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-11-06",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kapitalfluss- und Trend-Ampel beide rot (Score 49,2, Kein Setup); Hold-Test 0/4 – These widerlegt.",
+      "referenz_kurs_usd": 589.91,
+      "wiedereinstieg_eur": 506.26,
+      "aktueller_kurs_usd": 601.28,
+      "aktueller_kurs_eur": 541.15,
+      "performance_pct": 1.93,
+      "handelstage_seit_aufnahme": 15,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.04,
+      "ueberrendite_pct": 3.97,
+      "forward": {
+        "5T": {
+          "aktie_pct": 9.1,
+          "nasdaq_pct": 1.54,
+          "ueberrendite_pct": 7.56
+        },
+        "10T": {
+          "aktie_pct": -2.33,
+          "nasdaq_pct": -8.15,
+          "ueberrendite_pct": 5.82
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "NEE",
+      "name": "NextEra Energy",
+      "sector": "Utilities",
+      "aufnahmedatum": "2026-10-23",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 67.9,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 81.63,
+      "aufnahme_kurs_eur": 72.81,
+      "handelstage_in_liste": 8,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-03",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Score 59,0 (Beobachten), Trend-Ampel rot, RSI über 72 – Überlauf (max. 10 aktive), niedrigster Score.",
+      "referenz_kurs_usd": 81.9,
+      "aktueller_kurs_usd": 86.54,
+      "aktueller_kurs_eur": 77.88,
+      "performance_pct": 5.66,
+      "handelstage_seit_aufnahme": 15,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.04,
+      "ueberrendite_pct": 7.7,
+      "forward": {
+        "5T": {
+          "aktie_pct": 0.29,
+          "nasdaq_pct": 1.54,
+          "ueberrendite_pct": -1.25
+        },
+        "10T": {
+          "aktie_pct": 7.75,
+          "nasdaq_pct": -8.15,
+          "ueberrendite_pct": 15.9
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "sector": "Cybersecurity",
+      "aufnahmedatum": "2026-10-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 92.4,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 257.57,
+      "aufnahme_kurs_eur": 230.01,
+      "handelstage_in_liste": 7,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-03",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Score 44,3 (Kein Setup), Kapitalfluss rot – Überlauf (max. 10 aktive), niedrigster Score.",
+      "referenz_kurs_usd": 257.57,
+      "aktueller_kurs_usd": 227.35,
+      "aktueller_kurs_eur": 204.62,
+      "performance_pct": -11.73,
+      "handelstage_seit_aufnahme": 14,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.03,
+      "ueberrendite_pct": -9.7,
+      "forward": {
+        "5T": {
+          "aktie_pct": -2.77,
+          "nasdaq_pct": -1.97,
+          "ueberrendite_pct": -0.8
+        },
+        "10T": {
+          "aktie_pct": -15.79,
+          "nasdaq_pct": -6.86,
+          "ueberrendite_pct": -8.93
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Cybersecurity",
+      "aufnahmedatum": "2026-10-24",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 91.7,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 380.55,
+      "aufnahme_kurs_eur": 339.83,
+      "handelstage_in_liste": 5,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-11-01",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kurs 365,87 US-Dollar unter SMA50 (372,14), Score von 91,7 auf 29,0 gefallen, Optionsflow bärisch, Sektor Cybersecurity negativ – These widerlegt.",
+      "referenz_kurs_usd": 380.55,
+      "aktueller_kurs_usd": 322.0,
+      "aktueller_kurs_eur": 289.8,
+      "performance_pct": -15.39,
+      "handelstage_seit_aufnahme": 14,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -2.03,
+      "ueberrendite_pct": -13.36,
+      "forward": {
+        "5T": {
+          "aktie_pct": -3.86,
+          "nasdaq_pct": -1.97,
+          "ueberrendite_pct": -1.89
+        },
+        "10T": {
+          "aktie_pct": -17.53,
+          "nasdaq_pct": -6.86,
+          "ueberrendite_pct": -10.67
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "TMO",
+      "name": "Thermo Fisher Scientific",
+      "sector": "MedTech",
+      "aufnahmedatum": "2026-11-01",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 80.8,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 697.0,
+      "aufnahme_kurs_eur": 624.51,
+      "handelstage_in_liste": 8,
+      "status": "aktiv",
+      "status_seit": "2026-11-01",
+      "empfehlung": "Beobachten",
+      "letzte_einschaetzung": "Kurs 4,1 % über SMA20, Score im P1-Feed auf 60,1 (Beobachten) gefallen mit Bulltrap-Flag „Kurs steigt, OBV fällt“; Hold-Test 4/4, Einstieg nur per Limit an der SMA20 (621,72 €) – heute kein freier Platz.",
+      "referenz_kurs_usd": 697.0,
+      "aktueller_kurs_usd": 704.35,
+      "aktueller_kurs_eur": 633.91,
+      "performance_pct": 1.05,
+      "handelstage_seit_aufnahme": 9,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -0.06,
+      "ueberrendite_pct": 1.11,
+      "forward": {
+        "5T": {
+          "aktie_pct": -0.32,
+          "nasdaq_pct": -4.98,
+          "ueberrendite_pct": 4.66
+        }
+      },
+      "status_gruppe": "aktiv"
+    },
+    {
+      "ticker": "UPS",
+      "name": "United Parcel Service",
+      "sector": "Transportation",
+      "aufnahmedatum": "2026-11-01",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 56.6,
+      "aufnahme_stufe": "Überdehnt – auf Rücksetzer warten",
+      "aufnahme_kurs_usd": 108.25,
+      "aufnahme_kurs_eur": 96.99,
+      "handelstage_in_liste": 8,
+      "status": "überdehnt",
+      "status_seit": "2026-11-01",
+      "empfehlung": "Beobachten",
+      "letzte_einschaetzung": "Kurs weiter 6,1 % über SMA20 bei Score 54,3 (Beobachten); Pullback-Zone noch nicht erreicht, Wiedereinstieg an der SMA20 (94,20 €).",
+      "referenz_kurs_usd": 108.25,
+      "wiedereinstieg_eur": 94.2,
+      "aktueller_kurs_usd": 112.42,
+      "aktueller_kurs_eur": 101.17,
+      "performance_pct": 3.85,
+      "handelstage_seit_aufnahme": 9,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -0.06,
+      "ueberrendite_pct": 3.91,
+      "forward": {
+        "5T": {
+          "aktie_pct": 0.05,
+          "nasdaq_pct": -4.98,
+          "ueberrendite_pct": 5.03
+        }
+      },
+      "status_gruppe": "ueberdehnt"
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "sector": "Payments",
+      "aufnahmedatum": "2026-11-02",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 77.4,
+      "aufnahme_stufe": "Überdehnt – auf Rücksetzer warten",
+      "aufnahme_kurs_usd": 660.36,
+      "aufnahme_kurs_eur": 591.68,
+      "handelstage_in_liste": 7,
+      "status": "überdehnt",
+      "status_seit": "2026-11-02",
+      "empfehlung": "Beobachten",
+      "letzte_einschaetzung": "Kurs nur noch 2,9 % über SMA20 (Pullback-Zone), Optionsflow im P1-Feed wieder neutral (Score 70,5); P4 hatte heute noch bärisch gemeldet – Rückkehr auf aktiv nach Bestätigung im nächsten P4.",
+      "referenz_kurs_usd": 638.01,
+      "wiedereinstieg_eur": 568.26,
+      "aktueller_kurs_usd": 660.38,
+      "aktueller_kurs_eur": 594.34,
+      "performance_pct": 3.51,
+      "handelstage_seit_aufnahme": 9,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -0.06,
+      "ueberrendite_pct": 3.57,
+      "forward": {
+        "5T": {
+          "aktie_pct": 2.3,
+          "nasdaq_pct": -4.98,
+          "ueberrendite_pct": 7.28
+        }
+      },
+      "status_gruppe": "ueberdehnt"
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "sector": "Payments",
+      "aufnahmedatum": "2026-11-03",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 71.6,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 423.075,
+      "aufnahme_kurs_eur": 377.81,
+      "handelstage_in_liste": 6,
+      "status": "aktiv",
+      "status_seit": "2026-11-03",
+      "empfehlung": "Kauf",
+      "letzte_einschaetzung": "Score 74,9 (Kauf – solide), Kurs 2,1 % über SMA20, Trend und Optionsflow grün, Kapitalfluss auf rot gedreht; Hold-Test 3/4 → heute Limit-Order an 377,31 €.",
+      "referenz_kurs_usd": 425.51,
+      "aktueller_kurs_usd": 426.22,
+      "aktueller_kurs_eur": 383.6,
+      "performance_pct": 0.17,
+      "handelstage_seit_aufnahme": 8,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": 1.32,
+      "ueberrendite_pct": -1.15,
+      "forward": {
+        "5T": {
+          "aktie_pct": -0.79,
+          "nasdaq_pct": -0.26,
+          "ueberrendite_pct": -0.53
+        }
+      },
+      "status_gruppe": "aktiv"
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "aufnahmedatum": "2026-11-03",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 68.4,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 330.83,
+      "aufnahme_kurs_eur": 295.43,
+      "handelstage_in_liste": 2,
+      "status": "ausgeschieden (zeitlimit)",
+      "status_seit": "2026-11-05",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Feed: Optionsflow bärisch (harter Ausschluss, Score 65,3), Kapitalfluss rot, News-Korrektur −2 – nach Überlauf-Regel ausgeschieden.",
+      "referenz_kurs_usd": 338.32,
+      "aktueller_kurs_usd": 357.08,
+      "aktueller_kurs_eur": 321.37,
+      "performance_pct": 5.55,
+      "handelstage_seit_aufnahme": 8,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": 1.32,
+      "ueberrendite_pct": 4.23,
+      "forward": {
+        "5T": {
+          "aktie_pct": 3.66,
+          "nasdaq_pct": -0.26,
+          "ueberrendite_pct": 3.92
+        }
+      },
+      "status_gruppe": "zeitlimit"
+    },
+    {
+      "ticker": "LIN",
+      "name": "Linde",
+      "sector": "Materials",
+      "aufnahmedatum": "2026-11-03",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 70.0,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 516.16,
+      "aufnahme_kurs_eur": 460.93,
+      "handelstage_in_liste": 6,
+      "status": "aktiv",
+      "status_seit": "2026-11-03",
+      "empfehlung": "Beobachten",
+      "letzte_einschaetzung": "Score 71,2 (Kauf – solide), Kurs 2,6 % über SMA20, Hold-Test 2/4 (schwaches Volumen); kaufbar per Limit, aber der einzige freie Platz geht an Visa.",
+      "referenz_kurs_usd": 519.72,
+      "aktueller_kurs_usd": 527.73,
+      "aktueller_kurs_eur": 474.96,
+      "performance_pct": 1.54,
+      "handelstage_seit_aufnahme": 8,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": 1.32,
+      "ueberrendite_pct": 0.22,
+      "forward": {
+        "5T": {
+          "aktie_pct": 0.12,
+          "nasdaq_pct": -0.26,
+          "ueberrendite_pct": 0.38
+        }
+      },
+      "status_gruppe": "aktiv"
+    },
+    {
+      "ticker": "DE",
+      "name": "Deere & Company",
+      "sector": "Industrials",
+      "aufnahmedatum": "2026-11-03",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 68.5,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 670.25,
+      "aufnahme_kurs_eur": 598.53,
+      "handelstage_in_liste": 6,
+      "status": "überdehnt",
+      "status_seit": "2026-11-09",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kurs 5,1 % über SMA20, Optionsflow bärisch (harter Ausschluss); Earnings am 25.11.",
+      "referenz_kurs_usd": 667.6,
+      "aktueller_kurs_usd": 690.92,
+      "aktueller_kurs_eur": 621.83,
+      "performance_pct": 3.49,
+      "handelstage_seit_aufnahme": 8,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": 1.32,
+      "ueberrendite_pct": 2.17,
+      "forward": {
+        "5T": {
+          "aktie_pct": 3.55,
+          "nasdaq_pct": -0.26,
+          "ueberrendite_pct": 3.81
+        }
+      },
+      "status_gruppe": "ueberdehnt",
+      "wiedereinstieg_eur": 587.79
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group",
+      "sector": "Healthcare",
+      "aufnahmedatum": "2026-11-05",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 77.9,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 404.95,
+      "aufnahme_kurs_eur": 360.41,
+      "handelstage_in_liste": 2,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-11-06",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kurs knapp unter SMA50 (−0,02 %), Seit-Aufnahme −4,5 % (Score 55,9, Beobachten) – These widerlegt.",
+      "referenz_kurs_usd": 409.38,
+      "aktueller_kurs_usd": 404.44,
+      "aktueller_kurs_eur": 363.99,
+      "performance_pct": -1.21,
+      "handelstage_seit_aufnahme": 6,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -0.27,
+      "ueberrendite_pct": -0.94,
+      "forward": {
+        "5T": {
+          "aktie_pct": -1.57,
+          "nasdaq_pct": -0.23,
+          "ueberrendite_pct": -1.34
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "RTX",
+      "name": "RTX",
+      "sector": "Defense/Industrials",
+      "aufnahmedatum": "2026-11-05",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 77.5,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 195.81,
+      "aufnahme_kurs_eur": 174.27,
+      "handelstage_in_liste": 2,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-11-06",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kapitalfluss- und Trend-Ampel beide rot, Kurs 1,4 % unter SMA50 (Score 42,7, Kein Setup) – These widerlegt.",
+      "referenz_kurs_usd": 198.43,
+      "aktueller_kurs_usd": 198.85,
+      "aktueller_kurs_eur": 178.96,
+      "performance_pct": 0.21,
+      "handelstage_seit_aufnahme": 6,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -0.27,
+      "ueberrendite_pct": 0.48,
+      "forward": {
+        "5T": {
+          "aktie_pct": 1.44,
+          "nasdaq_pct": -0.23,
+          "ueberrendite_pct": 1.67
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "sector": "Financials",
+      "aufnahmedatum": "2026-11-05",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 67.9,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 342.1,
+      "aufnahme_kurs_eur": 304.47,
+      "handelstage_in_liste": 2,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-11-06",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kurs 1,2 % unter SMA50, Hold-Test nicht bestanden, Seit-Aufnahme −4,0 % – These widerlegt.",
+      "referenz_kurs_usd": 352.11,
+      "aktueller_kurs_usd": 344.41,
+      "aktueller_kurs_eur": 309.97,
+      "performance_pct": -2.19,
+      "handelstage_seit_aufnahme": 6,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": -0.27,
+      "ueberrendite_pct": -1.92,
+      "forward": {
+        "5T": {
+          "aktie_pct": -2.48,
+          "nasdaq_pct": -0.23,
+          "ueberrendite_pct": -2.25
+        }
+      },
+      "status_gruppe": "invalidiert"
+    },
+    {
+      "ticker": "DUK",
+      "name": "Duke Energy",
+      "sector": "Utilities",
+      "aufnahmedatum": "2026-11-06",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 73.6,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 128.075,
+      "aufnahme_kurs_eur": 113.99,
+      "handelstage_in_liste": 4,
+      "status": "aktiv",
+      "status_seit": "2026-11-06",
+      "empfehlung": "Beobachten",
+      "letzte_einschaetzung": "Score im P1-Feed auf 83,8 (Kauf – hohe Qualität) gestiegen, Optionsflow nicht mehr bärisch; P4 hatte heute noch ausgeschlossen – Bestätigung im nächsten P4 abwarten, Earnings-Termin unbekannt.",
+      "referenz_kurs_usd": 130.08,
+      "aktueller_kurs_usd": 129.39,
+      "aktueller_kurs_eur": 116.45,
+      "performance_pct": -0.53,
+      "handelstage_seit_aufnahme": 5,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": 6.65,
+      "ueberrendite_pct": -7.18,
+      "forward": {
+        "5T": {
+          "aktie_pct": -0.53,
+          "nasdaq_pct": 6.65,
+          "ueberrendite_pct": -7.18
+        }
+      },
+      "status_gruppe": "aktiv"
+    },
+    {
+      "ticker": "TRV",
+      "name": "Travelers",
+      "sector": "Insurance",
+      "aufnahmedatum": "2026-11-09",
+      "aufnahmequelle": "P1",
+      "aufnahme_score": 70.5,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 393.09,
+      "aufnahme_kurs_eur": 352.6,
+      "handelstage_in_liste": 3,
+      "status": "aktiv",
+      "status_seit": "2026-11-09",
+      "empfehlung": "Beobachten",
+      "letzte_einschaetzung": "Kurs genau an der SMA20 (−0,05 %), über SMA50; Hold-Test 0/4, Score 69,0 – heute kein Einstieg.",
+      "referenz_kurs_usd": 395.2,
+      "aktueller_kurs_usd": 404.63,
+      "aktueller_kurs_eur": 364.17,
+      "performance_pct": 2.39,
+      "handelstage_seit_aufnahme": 4,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": 5.18,
+      "ueberrendite_pct": -2.79,
+      "forward": {},
+      "status_gruppe": "aktiv"
+    },
+    {
+      "ticker": "PGR",
+      "name": "Progressive",
+      "sector": "Insurance",
+      "aufnahmedatum": "2026-11-09",
+      "aufnahmequelle": "P1",
+      "aufnahme_score": 68.1,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 226.55,
+      "aufnahme_kurs_eur": 203.22,
+      "handelstage_in_liste": 3,
+      "status": "aktiv",
+      "status_seit": "2026-11-09",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Hold-Test 4/4, aber Optionsflow bärisch (harter Ausschluss); Kurs 1,7 % über SMA20, Trend intakt.",
+      "referenz_kurs_usd": 227.77,
+      "aktueller_kurs_usd": 235.71,
+      "aktueller_kurs_eur": 212.14,
+      "performance_pct": 3.49,
+      "handelstage_seit_aufnahme": 4,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": 5.18,
+      "ueberrendite_pct": -1.69,
+      "forward": {},
+      "status_gruppe": "aktiv"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Software/Cloud",
+      "aufnahmedatum": "2026-11-09",
+      "aufnahmequelle": "P1",
+      "aufnahme_score": 71.5,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 541.34,
+      "aufnahme_kurs_eur": 485.58,
+      "handelstage_in_liste": 3,
+      "status": "aktiv",
+      "status_seit": "2026-11-09",
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Kurs 1,9 % unter SMA20 und nur knapp über SMA50, Score 49,9 (Kein Setup), Kapitalfluss rot.",
+      "referenz_kurs_usd": 530.61,
+      "aktueller_kurs_usd": 527.81,
+      "aktueller_kurs_eur": 475.03,
+      "performance_pct": -0.53,
+      "handelstage_seit_aufnahme": 4,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": 5.18,
+      "ueberrendite_pct": -5.71,
+      "forward": {},
+      "status_gruppe": "aktiv"
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "aufnahmedatum": "2026-11-10",
+      "aufnahmequelle": "P1",
+      "aufnahme_score": 73.3,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 347.28,
+      "aufnahme_kurs_eur": 309.77,
+      "handelstage_in_liste": 2,
+      "status": "aktiv",
+      "status_seit": "2026-11-10",
+      "wiedereinstieg_eur": null,
+      "empfehlung": "Beobachten",
+      "letzte_einschaetzung": "Hold-Test 4/4, Score 70,3 (Kauf – solide), Bulltrap-Flag entfallen; Alternative zu Visa – nur kaufen, falls das Visa-Limit heute nicht ausgeführt wird.",
+      "referenz_kurs_usd": 350.69,
+      "aktueller_kurs_usd": 357.08,
+      "aktueller_kurs_eur": 321.37,
+      "performance_pct": 1.82,
+      "handelstage_seit_aufnahme": 3,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": 1.58,
+      "ueberrendite_pct": 0.24,
+      "forward": {},
+      "status_gruppe": "aktiv"
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group",
+      "sector": "Healthcare",
+      "aufnahmedatum": "2026-11-11",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 82.2,
+      "aufnahme_stufe": "Kauf – hohe Qualität",
+      "aufnahme_kurs_usd": 399.38,
+      "aufnahme_kurs_eur": 357.05,
+      "handelstage_in_liste": 0,
+      "status": "aktiv",
+      "status_seit": "2026-11-11",
+      "wiedereinstieg_eur": null,
+      "empfehlung": "Beobachten",
+      "letzte_einschaetzung": "Neu aufgenommen (P4 82,2, Kauf – hohe Qualität); im P1-Feed Score 56,1 (Beobachten), Kurs 2,0 % unter SMA20, aber über SMA50; Hold-Test 2/4.",
+      "referenz_kurs_usd": 405.12,
+      "aktueller_kurs_usd": 404.44,
+      "aktueller_kurs_eur": 363.99,
+      "performance_pct": -0.17,
+      "handelstage_seit_aufnahme": 2,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": 2.27,
+      "ueberrendite_pct": -2.44,
+      "forward": {},
+      "status_gruppe": "aktiv"
+    },
+    {
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "sector": "Defense",
+      "aufnahmedatum": "2026-11-11",
+      "aufnahmequelle": "P4",
+      "aufnahme_score": 69.0,
+      "aufnahme_stufe": "Kauf – solide",
+      "aufnahme_kurs_usd": 605.92,
+      "aufnahme_kurs_eur": 541.69,
+      "handelstage_in_liste": 0,
+      "status": "ausgeschieden (these widerlegt)",
+      "status_seit": "2026-11-11",
+      "wiedereinstieg_eur": null,
+      "empfehlung": "Kein Einstieg",
+      "letzte_einschaetzung": "Neu aufgenommen (P4 69,0, Kauf – solide), im P1-Feed jedoch Kapitalfluss- und Trend-Ampel beide rot – These widerlegt.",
+      "referenz_kurs_usd": 603.12,
+      "aktueller_kurs_usd": 601.28,
+      "aktueller_kurs_eur": 541.15,
+      "performance_pct": -0.31,
+      "handelstage_seit_aufnahme": 2,
+      "kursdaten_stand": "2026-11-12",
+      "nasdaq_performance_pct": 2.27,
+      "ueberrendite_pct": -2.58,
+      "forward": {},
+      "status_gruppe": "invalidiert"
+    }
+  ]
 }

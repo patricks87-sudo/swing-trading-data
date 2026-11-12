@@ -1,21 +1,21 @@
 {
-  "generated_at_utc": "2026-11-11T16:45:00.433583+00:00",
+  "generated_at_utc": "2026-11-12T16:45:10.739826+00:00",
   "benchmark": "Nasdaq-100 (QQQ)",
   "waehrung": "USD",
   "gruppen": [
     {
       "gruppe": "aktiv",
       "label": "Aktiv beobachtet",
-      "eintraege": 9,
+      "eintraege": 10,
       "seit_aufnahme": {
-        "anzahl": 9,
-        "schnitt_ueberrendite_pct": -2.59,
-        "trefferquote_pct": 22.0
+        "anzahl": 10,
+        "schnitt_ueberrendite_pct": -1.5,
+        "trefferquote_pct": 40.0
       },
       "nach_5_tagen": {
-        "anzahl": 4,
-        "schnitt_ueberrendite_pct": 1.06,
-        "trefferquote_pct": 50.0
+        "anzahl": 5,
+        "schnitt_ueberrendite_pct": -0.58,
+        "trefferquote_pct": 40.0
       },
       "nach_10_tagen": {
         "anzahl": 1,
@@ -30,7 +30,7 @@
       "eintraege": 3,
       "seit_aufnahme": {
         "anzahl": 3,
-        "schnitt_ueberrendite_pct": 2.39,
+        "schnitt_ueberrendite_pct": 3.22,
         "trefferquote_pct": 100.0
       },
       "nach_5_tagen": {
@@ -44,15 +44,15 @@
     {
       "gruppe": "invalidiert",
       "label": "Aussortiert – These widerlegt",
-      "eintraege": 35,
+      "eintraege": 36,
       "seit_aufnahme": {
-        "anzahl": 35,
-        "schnitt_ueberrendite_pct": -3.57,
-        "trefferquote_pct": 49.0
+        "anzahl": 36,
+        "schnitt_ueberrendite_pct": -3.51,
+        "trefferquote_pct": 44.0
       },
       "nach_5_tagen": {
         "anzahl": 35,
-        "schnitt_ueberrendite_pct": 1.16,
+        "schnitt_ueberrendite_pct": 1.23,
         "trefferquote_pct": 46.0
       },
       "nach_10_tagen": {
@@ -72,8 +72,8 @@
       "eintraege": 35,
       "seit_aufnahme": {
         "anzahl": 35,
-        "schnitt_ueberrendite_pct": 4.02,
-        "trefferquote_pct": 63.0
+        "schnitt_ueberrendite_pct": 4.21,
+        "trefferquote_pct": 71.0
       },
       "nach_5_tagen": {
         "anzahl": 35,
@@ -86,8 +86,8 @@
         "trefferquote_pct": 68.0
       },
       "nach_20_tagen": {
-        "anzahl": 26,
-        "schnitt_ueberrendite_pct": 3.34,
+        "anzahl": 28,
+        "schnitt_ueberrendite_pct": 2.45,
         "trefferquote_pct": 54.0
       }
     }
