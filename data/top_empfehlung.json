@@ -1,25 +1,10 @@
 {
-  "generated_at_utc": "2026-11-11T16:50:36Z",
+  "generated_at_utc": "2026-11-12T16:50:00Z",
   "top3": [
-    {
-      "ticker": "V",
-      "name": "Visa",
-      "aktion": "Limit-Order",
-      "begruendung": "Höchster kaufbarer Score (P4 86,8, Kauf – hohe Qualität; P1-Feed 74,9), Trend und Optionsflow grün, Hold-Test 3/4 (nur Volumen 0,9× unter Schnitt) → Limit-Order an 377,31 €, gültig bis Handelsschluss. Schutz-Stop 359,84 €, 4 Stück, Kapitalbedarf 1.509 €, Risiko 70 €; Verkauf spätestens am 25.11.2026 zum Schlusskurs. Danach freies Risiko 305 €, heute kein weiterer Platz. Spread bei Trade Republic nicht prüfbar – vor der Order kurz kontrollieren."
-    },
-    {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "aktion": "Beobachten",
-      "begruendung": "Einziger Kandidat mit Hold-Test 4/4 und Einstieg zum Kurs (Kauf – solide, Score 70,3, Bulltrap-Flag entfallen). Wegen NEUTRAL nur 1 neue Position – Alternative nur, falls das Visa-Limit heute nicht ausgeführt wird: Kauf zum Kurs ca. 316,54 €, Stop 299,60 €, 4 Stück, 1.266 €, Risiko 68 €."
-    },
-    {
-      "ticker": "DUK",
-      "name": "Duke Energy",
-      "aktion": "Beobachten",
-      "begruendung": "Höchster Score im P1-Feed (83,8, Kauf – hohe Qualität), Optionsflow nicht mehr bärisch, Kurs 2,1 % über SMA20. P4 hatte heute noch wegen bärischem Optionsflow ausgeschlossen – Kauf erst nach Bestätigung im nächsten P4; Earnings-Termin unbekannt (Datenbasis unvollständig)."
-    }
+    {"ticker": "UNP", "name": "Union Pacific", "aktion": "Limit-Order", "begruendung": "Beste Portfolio-Chance: P4 72,3 (Kauf – solide), Feed-Score jetzt 79,8, Sektor Transportation Rang 4, Kurs 2,5 % über SMA20, Hold-Test Teilweise (2/4: über VWAP und Eröffnung). Limit 274,64 € (gültig bis Handelsschluss), Schutz-Stop 263,11 €, 6 Stück, Kapital 1.648 €, Risiko 69 €. Verkauf spätestens 27.11.2026 zum Schlusskurs (10 Handelstage, 26.11. Thanksgiving). Danach freies Risiko 306 €, heute kein weiterer Platz (NEUTRAL: 1 neue Position/Tag). TR-Spread nicht prüfbar – vor Ordereingabe Spread < 0,6 % kontrollieren."},
+    {"ticker": "TRV", "name": "Travelers", "aktion": "Beobachten", "begruendung": "Zweitbeste Alternative: P4 71,6 (Kauf – solide), Feed 70,7, Kurs 1,6 % über SMA20, Hold-Test Teilweise (2/4) mit überdurchschnittlichem Volumen – grundsätzlich per Limit (363,97 €) kaufbar, aber der einzige freie Platz des Tages geht an Union Pacific (höherer Score). Morgen erneut prüfen."},
+    {"ticker": "V", "name": "Visa", "aktion": "Beobachten", "begruendung": "Watchlist-Kandidat: höchster Feed-Score (81,1, Kauf – hohe Qualität), Trend und Optionsflow grün, Kurs 2,7 % über SMA20 – aber Hold-Test nicht bestanden (1/4, seit Eröffnung −0,71 %, schwächer als der S&P 500). Bei bestandenem Hold-Test am nächsten Tag erste Wahl."}
   ],
-  "gesamteinschaetzung": "NEUTRAL (2/5 Kriterien: S&P 500 0,81 % unter SMA50, Nasdaq 1,08 % unter SMA20, VIX 17,7). Keine offenen Swing-Positionen, freies Risiko 375 €, heute 1 neue Position erlaubt → Visa per Limit-Order (Apple als Alternative). Bestand: Oracle, Rheinmetall und Alphabet „Prüfen“ (Ampeln rot bzw. negative News mit hohem Gewicht), Bloom Energy „Halten“. Rohstoff-Ampel ROT (0/6 Kriterien), eine Gold/Silber-Empfehlung liefert der Feed heute nicht (Datenbasis unvollständig) – nur Information. Hinweis Filter-Bilanz: Aussortierte lagen nach 10 Tagen +2,98 Punkte über dem Nasdaq (n=66) – die Ausstiegsregeln der Kandidatenliste könnten zu streng sein; Regeln bleiben unverändert. Ausgeführte Käufe bitte im Cockpit unter „Journal“ eintragen.",
+  "gesamteinschaetzung": "Regime NEUTRAL (3/5 Kriterien: VIX 17,44 und Marktbreite ok, aber S&P 500 knapp unter SMA50 und Nasdaq unter SMA20) – max. 3 offene Swing-Positionen, 1 neue pro Tag. Depot: keine Swing-Positionen, volles Risikobudget (375 €). Heute eine Limit-Order auf Union Pacific; Travelers und Visa bleiben im Blick, Duke Energy (Feed 77,6, Optionsflow jetzt neutral) ist Kandidat für den nächsten P4. Bestand: Rheinmetall und Alphabet „Prüfen“ (negative News-Signale mit Gewicht hoch), Oracle und Bloom Energy „Halten“. Rohstoff-Ampel ROT (0/6 Kriterien); eine Gold/Silber-Empfehlung liefert der Feed derzeit nicht (Datenbasis unvollständig) – nur Information, kein System-Trade. Käufe und Verkäufe bitte im Cockpit unter „Journal“ eintragen.",
   "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,98 Prozentpunkte über dem Nasdaq (n=66) – überwiegend liegengelassene Gewinne."
 }
