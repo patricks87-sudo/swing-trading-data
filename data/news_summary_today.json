@@ -1,8 +1,8 @@
 {
  "date": "2026-11-13",
- "kernaussage": "Erzeugerpreise etwas kühler, doch Renditen über 5 % halten Technologiewerte in Schach.",
- "lage": "Die US-Erzeugerpreise stiegen im Oktober um 0,3 % (erwartet 0,4 %), auf Jahressicht aber um 6,5 % – so stark wie seit November 2022 nicht mehr; eine Fed-Zinserhöhung im Dezember bleibt vollständig eingepreist. Nach freundlichem Start drehen S&P 500 und Nasdaq ins Minus, der Dow hält sich knapp im Plus, und die Zehnjahresrendite steigt auf rund 5,16 %.",
- "lage_stand_local": "17:06",
+ "kernaussage": "Chipwerte unter Druck, Renditen über 5 % – die Nasdaq rutscht deutlich ins Minus.",
+ "lage": "Ein Ausverkauf bei Chipwerten zieht die Technologiebörsen nach unten: Zur Mittagszeit in New York liegen Nasdaq rund 1,4 % und S&P 500 rund 0,8 % im Minus, der Dow nur leicht, der VIX steigt zeitweise über 20. Die Zehnjahresrendite erreicht mit bis zu 5,17 % den höchsten Stand seit Oktober, nachdem die Erzeugerpreise auf Jahressicht um 6,5 % zulegten und eine Fed-Zinserhöhung im Dezember vollständig eingepreist ist.",
+ "lage_stand_local": "18:43",
  "meldungen": [
   {
    "title": "US-Erzeugerpreise steigen im Oktober um 0,3 % zum Vormonat (erwartet 0,4 %, zuvor 1,3 %) – auf Jahressicht +6,5 %, der stärkste Anstieg seit November 2022; Kernrate auf Jahressicht +5,0 %",
@@ -12,23 +12,33 @@
    "thema": "Konjunktur",
    "bedeutung": "Die Monatsrate fiel etwas kühler aus als befürchtet, doch die hohe Jahresrate hält die erwartete Fed-Zinserhöhung im Dezember fest und lässt kaum Raum für Entspannung bei den Renditen.",
    "erfasst_local": "17:06",
-   "erfasst_von": "N4",
-   "top": 1
+   "erfasst_von": "N4"
   },
   {
-   "title": "Wall Street nach den Erzeugerpreisen uneinheitlich: Dow zum Handelsstart +0,2 % auf rund 52.400 Punkte, S&P 500 und Nasdaq drehen danach ins Minus; Nvidia gibt die vorbörslichen Gewinne wieder ab",
+   "title": "Wall Street dreht nach freundlichem Start ins Minus: Zur Mittagszeit in New York S&P 500 −0,84 % auf 7.528,81, Nasdaq Composite −1,38 % auf 25.015,95, Dow −0,22 % auf 52.181,47, Russell 2000 −0,62 %; VIX zeitweise über 20",
    "source": "Yahoo Finance (Live-Ticker) / TheStreet",
    "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html",
    "published_at": "2026-11-13",
    "thema": "Sonstiges",
-   "bedeutung": "Die Erholung bleibt brüchig: Defensive Standardwerte halten sich, während Technologie- und Nebenwerte unter den hohen Renditen und der Nvidia-Unsicherheit leiden.",
+   "bedeutung": "Die Erholung der Vortage bröckelt: Technologie- und Chipwerte geben deutlich nach, während defensive Standardwerte den Dow stützen – die Woche droht für die Nasdaq schwach zu enden.",
    "erfasst_local": "08:18",
    "erfasst_von": "N1",
-   "aktualisiert_local": "17:06",
+   "aktualisiert_local": "18:43",
+   "top": 1
+  },
+  {
+   "title": "Ausverkauf bei Chipwerten: AMD verliert rund 10 %, Broadcom rund 6 %, Intel und Micron je rund 5 %, Nvidia rund 3 % – Goldman Sachs sieht den Höhepunkt des KI-Investitionsschubs Anfang 2027",
+   "source": "Yahoo Finance (Live-Ticker)",
+   "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html#chips",
+   "published_at": "2026-11-13",
+   "thema": "Sektor",
+   "bedeutung": "Die Gewinner vom Donnerstag geben ihre Aufschläge wieder ab; vor den Nvidia-Zahlen am Dienstag bleibt der Halbleitersektor hoch schwankungsanfällig und belastet die Indizes.",
+   "erfasst_local": "18:43",
+   "erfasst_von": "N5",
    "top": 2
   },
   {
-   "title": "Zehnjahresrendite steigt am Freitag auf rund 5,16 % – Terminmarkt preist eine Fed-Zinserhöhung im Dezember (Sitzung 8./9.12.) vollständig ein, Wahrscheinlichkeit für 50 Basispunkte über 10 % (CME FedWatch); Chicago-Fed-Präsident Goolsbee: Die Notenbank hat „definitiv noch Arbeit zu tun“",
+   "title": "Zehnjahresrendite steigt am Freitag zeitweise auf 5,17 % – höchster Stand seit Oktober; Terminmarkt preist eine Fed-Zinserhöhung im Dezember (Sitzung 8./9.12.) vollständig ein, Wahrscheinlichkeit für 50 Basispunkte über 10 % (CME FedWatch); Chicago-Fed-Präsident Goolsbee: Die Notenbank hat „definitiv noch Arbeit zu tun“",
    "source": "Yahoo Finance / TheStreet / Trading Economics",
    "url": "https://tradingeconomics.com/united-states/government-bond-yield",
    "published_at": "2026-11-13",
@@ -36,7 +46,7 @@
    "bedeutung": "Renditen über 5 % erhöhen den Bewertungsdruck auf Technologie- und Nebenwerte und bleiben der wichtigste Gegenwind für US-Aktien.",
    "erfasst_local": "08:18",
    "erfasst_von": "N1",
-   "aktualisiert_local": "17:06",
+   "aktualisiert_local": "18:43",
    "top": 3
   },
   {
@@ -45,9 +55,10 @@
    "url": "https://www.newsbeep.com/us/915645/",
    "published_at": "2026-11-13T06:16:11+00:00",
    "thema": "Unternehmen",
-   "bedeutung": "Der Führungswechsel beim KI-Schwergewicht bleibt bis zu den Zahlen am Dienstag eine Belastung für Index und Chipwerte, während Konkurrenten wie AMD und Broadcom profitieren.",
+   "bedeutung": "Der Führungswechsel beim KI-Schwergewicht bleibt bis zu den Zahlen am Dienstag eine Belastung für Index und Chipwerte.",
    "erfasst_local": "08:18",
-   "erfasst_von": "N1"
+   "erfasst_von": "N1",
+   "aktualisiert_local": "18:43"
   },
   {
    "title": "Microsoft vorbörslich −2,6 % nach Störung bei Teams und Outlook; Cerebras +16 % nach angehobener Umsatzprognose für 2026 und Vertrag mit Microsoft",
@@ -65,9 +76,10 @@
    "url": "https://cappnotes.substack.com/p/closing-look-thursday-november-12",
    "published_at": "2026-11-12",
    "thema": "Sonstiges",
-   "bedeutung": "Die großen Indizes haben den frühen Nvidia-Schock weitgehend aufgefangen, doch die schwache Marktbreite (377 von 500 S&P-Werten im Minus) zeigt eine enge Erholung; auf Wochensicht steuern die Indizes dennoch auf rund +2 bis +3 % zu.",
+   "bedeutung": "Die großen Indizes haben den frühen Nvidia-Schock am Donnerstag weitgehend aufgefangen, doch die schwache Marktbreite (377 von 500 S&P-Werten im Minus) zeigte bereits eine enge Erholung.",
    "erfasst_local": "08:18",
-   "erfasst_von": "N1"
+   "erfasst_von": "N1",
+   "aktualisiert_local": "18:43"
   },
   {
    "title": "Cisco meldet Rekordumsatz von 18,5 Milliarden US-Dollar und hebt die Prognose an, doch die Aktie fällt vorbörslich um 3,46 % wegen sinkender Bruttomargen und Kurszielsenkungen; Applied Materials schwankt nach einem Ausblick über den Erwartungen (Donnerstag regulär −3,58 %)",
