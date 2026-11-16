@@ -1,22 +1,331 @@
 {
-  "generated_at_utc": "2026-11-12T14:04:37Z",
-  "run_date": "2026-11-12",
+  "generated_at_utc": "2026-11-16T14:02:29Z",
+  "run_date": "2026-11-16",
   "regime": "NEUTRAL",
   "candidates": [
-    {"ticker": "V", "name": "Visa", "sector": "Payments", "score": 76.0, "feed_score": 76.0, "score_korrektur": 0, "stufe": "Kauf – hohe Qualität", "ampel": {"kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "gruen"}, "levels": {"einstieg_eur": 383.0, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 364.9, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 4, "kapitalbedarf_eur": 1532.0, "risiko_eur": 72.0}, "news": {"positiv": 0, "negativ": 0, "wichtigste": ""}, "bulltrap_flags": [], "earnings": "2027-01-26", "begruendung": "Einziger Titel mit Stufe „Kauf – hohe Qualität“: Trend, Setup-Qualität, Optionsflow und CRV jeweils 100, Kurs 2,9 % über SMA20 und damit noch Einstieg am aktuellen Kurs. Schwach sind Kapitalfluss (40, Ampel rot) und relative Stärke (61); 5 Tage −2,5 % nach den Quartalszahlen. Keine News-Signale, Websuche ohne Ausschlussgrund. Earnings erst am 26.01.2027."},
-    {"ticker": "PGR", "name": "Progressive", "sector": "Insurance", "score": 72.8, "feed_score": 72.8, "score_korrektur": 0, "stufe": "Kauf – solide", "ampel": {"kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "gelb"}, "levels": {"einstieg_eur": 210.18, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 201.08, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 8, "kapitalbedarf_eur": 1681.0, "risiko_eur": 73.0}, "news": {"positiv": 0, "negativ": 0, "wichtigste": ""}, "bulltrap_flags": [], "earnings": "2027-01-27", "begruendung": "Stärkster Versicherer: Trend und Setup 100, relative Stärke 76, Kurs 2,7 % über SMA20. Kapitalfluss schwach (42, Ampel rot), Optionsflow neutral. Oktober-Zahlen mit steigendem Gewinn, kein Ausschlussgrund in der Websuche. Earnings 27.01.2027."},
-    {"ticker": "UNP", "name": "Union Pacific", "sector": "Transportation", "score": 72.3, "feed_score": 72.3, "score_korrektur": 0, "stufe": "Kauf – solide", "ampel": {"kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "gelb"}, "levels": {"einstieg_eur": 271.9, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 259.69, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 6, "kapitalbedarf_eur": 1631.0, "risiko_eur": 73.0}, "news": {"positiv": 0, "negativ": 0, "wichtigste": ""}, "bulltrap_flags": [], "earnings": "2027-01-26", "begruendung": "Transportation auf Sektor-Rang 3 (Sektorstärke 89), Trend und Setup 100, Kurs 1,7 % über SMA20. Kapitalfluss (45) und relative Stärke (49) schwach, 5 Tage −2,1 %. Keine News-Signale, kein Ausschlussgrund gefunden. Earnings 26.01.2027."},
-    {"ticker": "RTX", "name": "RTX (Raytheon Technologies)", "sector": "Defense/Industrials", "score": 72.0, "feed_score": 72.0, "score_korrektur": 0, "stufe": "Kauf – solide", "ampel": {"kapitalfluss": "gelb", "trendkontext": "rot", "optionsflow": "gelb"}, "levels": {"einstieg_eur": 181.16, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 170.8, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 7, "kapitalbedarf_eur": 1268.0, "risiko_eur": 73.0}, "news": {"positiv": 0, "negativ": 0, "wichtigste": ""}, "bulltrap_flags": [], "earnings": "2027-01-26", "begruendung": "Starker Kapitalfluss (81) und relative Stärke (95) im zweitstärksten Rüstungsumfeld, Setup 100 bei 2,8 % über SMA20. Schwachpunkt ist der Trendkontext (0, Ampel rot) – der langfristige Trend ist noch nicht bestätigt. Websuche: Hinweis auf mögliche Haushaltshürden für Rüstungsausgaben nach den Midterms, kein Ausschluss. Earnings 26.01.2027."},
-    {"ticker": "TRV", "name": "Travelers", "sector": "Insurance", "score": 71.6, "feed_score": 71.6, "score_korrektur": 0, "stufe": "Kauf – solide", "ampel": {"kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "gelb"}, "levels": {"einstieg_eur": 359.51, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 343.22, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 4, "kapitalbedarf_eur": 1438.0, "risiko_eur": 65.0}, "news": {"positiv": 0, "negativ": 0, "wichtigste": ""}, "bulltrap_flags": [], "earnings": "2027-01-20", "begruendung": "Trend und Setup 100, Kurs nur 0,6 % über SMA20 (Einstieg nahe am Durchschnitt). Kapitalfluss mittel (54), relative Stärke 58, 5 Tage −2,4 %, RSI 45. Zweiter Versicherer neben Progressive – max. 2 Positionen je Sektor beachten. Earnings 20.01.2027."},
-    {"ticker": "LMT", "name": "Lockheed Martin", "sector": "Defense", "score": 70.9, "feed_score": 70.9, "score_korrektur": 0, "stufe": "Kauf – solide", "ampel": {"kapitalfluss": "rot", "trendkontext": "gelb", "optionsflow": "gelb"}, "levels": {"einstieg_eur": 549.04, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 509.43, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 1, "kapitalbedarf_eur": 549.0, "risiko_eur": 40.0}, "news": {"positiv": 0, "negativ": 0, "wichtigste": ""}, "bulltrap_flags": ["Kurs steigt, OBV fällt"], "earnings": "2027-01-26", "begruendung": "Defense ist Sektor-Rang 1 (Sektorstärke 100), relative Stärke 96, 20 Tage +16,8 %. Ein Bulltrap-Flag (Kurs steigt, OBV fällt) und Kapitalfluss 40 (Ampel rot) mahnen zur Vorsicht. Wegen des hohen Kurses nur 1 Stück (Risiko 40 €). Earnings 26.01.2027."},
-    {"ticker": "TMO", "name": "Thermo Fisher Scientific", "sector": "MedTech", "score": 63.0, "feed_score": 63.0, "score_korrektur": 0, "stufe": "Beobachten", "ampel": {"kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "gelb"}, "levels": {"einstieg_eur": 625.6, "einstieg_typ": "Limit an SMA20 (Rücksetzer abwarten)", "stop_eur": 587.83, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 1, "kapitalbedarf_eur": 626.0, "risiko_eur": 38.0}, "news": {"positiv": 0, "negativ": 0, "wichtigste": ""}, "bulltrap_flags": [], "earnings": "2027-01-28", "begruendung": "Trend 100 und relative Stärke 82, aber Kurs 3,3 % über SMA20 – Einstieg nur per Limit an der SMA20. CRV am aktuellen Kurs 0, Kapitalfluss 42. Keine News-Signale. Earnings 28.01.2027."},
-    {"ticker": "MA", "name": "Mastercard", "sector": "Payments", "score": 61.9, "feed_score": 61.9, "score_korrektur": 0, "stufe": "Beobachten", "ampel": {"kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "gelb"}, "levels": {"einstieg_eur": 572.37, "einstieg_typ": "Limit an SMA20 (Rücksetzer abwarten)", "stop_eur": 541.96, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 2, "kapitalbedarf_eur": 1145.0, "risiko_eur": 61.0}, "news": {"positiv": 0, "negativ": 0, "wichtigste": ""}, "bulltrap_flags": [], "earnings": "2027-01-28", "begruendung": "Trend 100, Sektor Payments auf Rang 6, aber Kurs 3,9 % über SMA20 – Limit an der SMA20 abwarten. Kapitalfluss schwach (40), CRV am aktuellen Kurs 0. Keine News-Signale. Earnings 28.01.2027."},
-    {"ticker": "UNH", "name": "UnitedHealth Group", "sector": "Healthcare", "score": 58.1, "feed_score": 58.1, "score_korrektur": 0, "stufe": "Beobachten", "ampel": {"kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "gelb"}, "levels": {"einstieg_eur": 362.65, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 342.27, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 3, "kapitalbedarf_eur": 1088.0, "risiko_eur": 61.0}, "news": {"positiv": 0, "negativ": 0, "wichtigste": ""}, "bulltrap_flags": [], "earnings": "2027-01-12", "begruendung": "Trend und Setup 100, Kurs knapp unter SMA20, RSI 34. Kapitalfluss praktisch null (1) und Sektorstärke nur 39 – kein Kaufsignal. Keine News-Signale. Earnings 12.01.2027."},
-    {"ticker": "QCOM", "name": "Qualcomm", "sector": "Semiconductors/AI", "score": 58.0, "feed_score": 58.0, "score_korrektur": 0, "stufe": "Beobachten", "ampel": {"kapitalfluss": "gruen", "trendkontext": "gelb", "optionsflow": "gelb"}, "levels": {"einstieg_eur": 158.91, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 141.02, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 4, "kapitalbedarf_eur": 636.0, "risiko_eur": 72.0}, "news": {"positiv": 0, "negativ": 0, "wichtigste": "Qualcomm meldet für das Quartal einen Umsatzrückgang von 8 % auf 10,32 Milliarden US-Dollar, Smartphone-Umsatz −26 % und sinkende Marge im Chipgeschäft (29 auf 24 %); die Aktie fällt nachbörslich um mehr als 6 % (Schlusskurs 173,19 US-Dollar, +5,33 %)"}, "bulltrap_flags": [], "earnings": "2027-02-03", "begruendung": "Kapitalfluss (91) und relative Stärke (91) stark, aber Sektor Semiconductors/AI nur Rang 16 und Setup-Qualität 10. Negatives News-Signal (Umsatzrückgang −8 %, Quartal vom 04.11.) liegt außerhalb des 3-Tage-Fensters, daher keine Korrektur. Earnings 03.02.2027."}
+    {
+      "ticker": "PGR",
+      "name": "Progressive",
+      "sector": "Insurance",
+      "score": 83.7,
+      "feed_score": 83.7,
+      "score_korrektur": 0,
+      "stufe": "Kauf – hohe Qualität",
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "levels": {
+        "einstieg_eur": 213.85,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 204.58,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 8,
+        "kapitalbedarf_eur": 1711.0,
+        "risiko_eur": 74.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
+      "bulltrap_flags": [],
+      "earnings": "2027-01-27",
+      "begruendung": "Spitzenreiter des Rankings: Trendkontext, Setup-Qualität und CRV jeweils voll erfüllt, Kurs 2,85 % über der SMA20 – Einstieg zum aktuellen Kurs. Versicherungen sind Rang 5 der Sektoren mit positivem Trend. Schwächer sind nur der neutrale Optionsflow und das unterdurchschnittliche Volumen am Vortag (0,64×). Keine News-Signale, eigene Suche ohne konkreten Anlass."
+    },
+    {
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "sector": "Defense",
+      "score": 82.2,
+      "feed_score": 83.2,
+      "score_korrektur": -1,
+      "stufe": "Kauf – hohe Qualität",
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gelb",
+        "optionsflow": "gruen"
+      },
+      "levels": {
+        "einstieg_eur": 540.61,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 504.0,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 2,
+        "kapitalbedarf_eur": 1081.0,
+        "risiko_eur": 73.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 1,
+        "wichtigste": "Vulcan-Rakete des Boeing-Lockheed-Gemeinschaftsunternehmens ULA versagt rund 10 Minuten nach dem Start – 40 Amazon-Leo-Satelliten zerstört, erste vollständige Fehlmission von ULA, längere Startpause droht"
+      },
+      "bulltrap_flags": [],
+      "earnings": "2027-01-26",
+      "begruendung": "Bullischer Optionsflow, starke relative Stärke und Defense auf Sektor-Rang 4; Kurs knapp unter der SMA20 (−0,93 %), Einstieg zum aktuellen Kurs. Trendkontext nur gelb (Teilscore 50). News-Korrektur −1 wegen des ULA-Vulcan-Fehlstarts (Gemeinschaftsunternehmen mit Boeing), Gewicht niedrig. Earnings erst am 26.01.2027."
+    },
+    {
+      "ticker": "UNP",
+      "name": "Union Pacific",
+      "sector": "Transportation",
+      "score": 81.2,
+      "feed_score": 81.2,
+      "score_korrektur": 0,
+      "stufe": "Kauf – hohe Qualität",
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gelb",
+        "optionsflow": "gruen"
+      },
+      "levels": {
+        "einstieg_eur": 274.31,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 262.5,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 6,
+        "kapitalbedarf_eur": 1646.0,
+        "risiko_eur": 71.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": "US-Bahnaufsicht STB öffnet im Fusionsverfahren Union Pacific/Norfolk Southern erneut das Beteiligungsfenster und äußert ernste Bedenken zu Aussagen von CEO Jim Vena über Einwände von Verladern; Stellungnahmen bis 18. November fällig"
+      },
+      "bulltrap_flags": [],
+      "earnings": "2027-01-26",
+      "begruendung": "Kapitalfluss stark (88) und bullischer Optionsflow, Transport auf Sektor-Rang 3. Kurs 1,36 % über der SMA20 – Einstieg zum aktuellen Kurs. Relative Stärke und Trendkontext nur mittel. Laufendes Fusionsverfahren mit Norfolk Southern (STB-Stellungnahmen bis 18.11.) als neutrales Signal beobachten."
+    },
+    {
+      "ticker": "DUK",
+      "name": "Duke Energy",
+      "sector": "Utilities",
+      "score": 80.8,
+      "feed_score": 80.8,
+      "score_korrektur": 0,
+      "stufe": "Kauf – hohe Qualität",
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "levels": {
+        "einstieg_eur": 117.15,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 113.04,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 18,
+        "kapitalbedarf_eur": 2109.0,
+        "risiko_eur": 74.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": "Duke Energy ändert Kreditvereinbarung: Alle Kreditgeber stimmen der geplanten Verschmelzung von Duke Energy Progress auf Duke Energy Carolinas zum 1. Januar 2027 zu (Änderung vom 9. November, laut SEC-Meldung)"
+      },
+      "bulltrap_flags": [],
+      "earnings": "unbekannt",
+      "begruendung": "Kapitalfluss und Trendkontext voll grün, Kurs 2,36 % über der SMA20, Einstieg zum aktuellen Kurs. Versorger nur Sektor-Rang 9 mit neutralem Trend und schwächeren 5 Tagen (−0,51 %). Earnings-Termin im Feed nicht verfügbar und per Suche nicht bestätigt – Earnings-Termin unbekannt (üblich Anfang Februar, kein Ausschluss)."
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "score": 79.8,
+      "feed_score": 79.8,
+      "score_korrektur": 0,
+      "stufe": "Kauf – hohe Qualität",
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "levels": {
+        "einstieg_eur": 323.14,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 305.98,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 4,
+        "kapitalbedarf_eur": 1293.0,
+        "risiko_eur": 69.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": "Apple übertrifft im Septemberquartal die Erwartungen (Umsatz 114,5 Milliarden US-Dollar, +12 %; Ergebnis je Aktie 2,10 US-Dollar), die Aktie fällt nachbörslich um rund 3 bis 4 % wegen Bruttomargen-Prognose von 45 bis 46 % (Erwartung 46,9 %), steigender Speicherkosten und verlangsamtem Servicegeschäft"
+      },
+      "bulltrap_flags": [],
+      "earnings": "2027-01-28",
+      "begruendung": "Bullischer Optionsflow, hohe relative Stärke (84) und intakter Trend; Kurs 2,92 % über der SMA20, Einstieg gerade noch zum aktuellen Kurs. Schwachpunkt ist der Kapitalfluss (44). Die Quartalszahlen-Signale sind älter als 3 Tage und fließen nicht mehr in die Korrektur ein."
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "sector": "Payments",
+      "score": 78.6,
+      "feed_score": 78.6,
+      "score_korrektur": 0,
+      "stufe": "Kauf – hohe Qualität",
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "levels": {
+        "einstieg_eur": 386.16,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 367.35,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 3,
+        "kapitalbedarf_eur": 1158.0,
+        "risiko_eur": 56.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
+      "bulltrap_flags": [],
+      "earnings": "2027-01-26",
+      "begruendung": "Trendkontext und Setup voll erfüllt, Kurs 2,41 % über der SMA20 – Einstieg zum aktuellen Kurs. Relative Stärke (59) und Optionsflow (neutral) sind die schwächeren Teile, Payments mit neutralem Sektortrend. Keine News-Signale."
+    },
+    {
+      "ticker": "UPS",
+      "name": "UPS (United Parcel Service)",
+      "sector": "Transportation",
+      "score": 78.5,
+      "feed_score": 78.5,
+      "score_korrektur": 0,
+      "stufe": "Kauf – hohe Qualität",
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gelb",
+        "optionsflow": "gruen"
+      },
+      "levels": {
+        "einstieg_eur": 96.85,
+        "einstieg_typ": "Limit an SMA20 (Rücksetzer abwarten)",
+        "stop_eur": 91.43,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 13,
+        "kapitalbedarf_eur": 1259.0,
+        "risiko_eur": 70.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
+      "bulltrap_flags": [],
+      "earnings": "2027-01-26",
+      "begruendung": "Kapitalfluss, relative Stärke und Optionsflow sehr stark, Transport auf Sektor-Rang 3; der Kurs ist in 20 Tagen um 15,31 % gestiegen (RSI 69,96) und liegt 5,27 % über der SMA20. Daher nur Limit an der SMA20 – kein Kauf zum aktuellen Kurs (CRV-Teilscore 0). Keine News-Signale."
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "sector": "Consumer Discretionary",
+      "score": 77.8,
+      "feed_score": 77.8,
+      "score_korrektur": 0,
+      "stufe": "Kauf – hohe Qualität",
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "rot",
+        "optionsflow": "gruen"
+      },
+      "levels": {
+        "einstieg_eur": 353.93,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 320.98,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 2,
+        "kapitalbedarf_eur": 708.0,
+        "risiko_eur": 66.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
+      "bulltrap_flags": [],
+      "earnings": "2027-01-27",
+      "begruendung": "Bullischer Optionsflow, starker Kapitalfluss und Consumer Discretionary auf Sektor-Rang 2; Kurs 1,26 % über der SMA20, Einstieg zum aktuellen Kurs. Deutliche Schwäche ist der Trendkontext (0, Ampel rot). Hohe Schwankung (Stop-Abstand ca. 9 %), daher nur 2 Stück."
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group",
+      "sector": "Healthcare",
+      "score": 76.3,
+      "feed_score": 76.3,
+      "score_korrektur": 0,
+      "stufe": "Kauf – hohe Qualität",
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "levels": {
+        "einstieg_eur": 369.57,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 349.95,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 3,
+        "kapitalbedarf_eur": 1109.0,
+        "risiko_eur": 59.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
+      "bulltrap_flags": [],
+      "earnings": "2027-01-12",
+      "begruendung": "Trendkontext, Setup und CRV voll erfüllt, Kurs direkt an der SMA20 (−0,07 %), Einstieg zum aktuellen Kurs. Healthcare nur Sektor-Rang 11, Optionsflow neutral. Keine News-Signale im Feed; branchenspezifische Themen (Medicare Advantage) bleiben ein Risiko."
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "score": 73.0,
+      "feed_score": 73.0,
+      "score_korrektur": 0,
+      "stufe": "Kauf – solide",
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "levels": {
+        "einstieg_eur": 233.4,
+        "einstieg_typ": "Limit an SMA20 (Rücksetzer abwarten)",
+        "stop_eur": 213.91,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 3,
+        "kapitalbedarf_eur": 700.0,
+        "risiko_eur": 58.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
+      "bulltrap_flags": [],
+      "earnings": "unbekannt",
+      "begruendung": "Consumer Discretionary auf Sektor-Rang 2, Trendkontext grün, Kapitalfluss 80. Kurs 3,62 % über der SMA20, daher Limit an der SMA20 (CRV-Teilscore schwach). Earnings-Termin im Feed nicht verfügbar und per Suche nicht bestätigt – Earnings-Termin unbekannt (kein Ausschluss)."
+    }
   ],
   "ausgeschlossen": [
-    {"name": "United Rentals", "grund": "Feed-Score 80,8, aber Ø-Tagesvolumen unter 1 Mio. Aktien"},
-    {"name": "Duke Energy", "grund": "Feed-Score 74,8, aber Optionsflow bärisch"},
-    {"name": "Deere & Company", "grund": "Feed-Score 65,5, aber Optionsflow bärisch"}
+    {
+      "name": "United Rentals",
+      "grund": "Optionsflow bärisch und Ø-Volumen unter 1 Mio. Aktien (Feed-Score 74,2)"
+    },
+    {
+      "name": "Travelers",
+      "grund": "Optionsflow bärisch (Feed-Score 67,0)"
+    },
+    {
+      "name": "Northrop Grumman",
+      "grund": "Ø-Volumen unter 1 Mio. Aktien (Feed-Score 66,4)"
+    }
   ]
 }
