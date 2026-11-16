@@ -1,111 +1,93 @@
 {
-  "generated_at_utc": "2026-11-16T14:02:29Z",
-  "status": "NEUTRAL",
-  "begruendung": "NEUTRAL: 2 von 5 Kriterien erfüllt. Nicht erfüllt: S&P 500 unter SMA50 (−1,32 %), Nasdaq unter SMA20 (−2,24 %), VIX 20,67 über 20. Erfüllt: 54 % der Watchlist über SMA50 und 82 % im 5-Tage-Plus. US-10J-Rendite 5,14 % (nur Info). Breite Erholung in der Watchlist, aber die Indizes bleiben unter ihren Durchschnitten – Rotation in defensive und zyklische Werte (Versicherungen, Transport, Defense), Tech/Software/Halbleiter auf 20 Tage schwach. Limit heute: max. 1 neue Position, max. 3 offene. Rohstoffe: Ampel ROT, keine Rotation in Edelmetalle.",
-  "kurzbegruendung": "NEUTRAL (2/5): Indizes unter SMA, VIX 20,7 – Breite gut. Max. 1 neue Position; Fokus Versicherung, Transport, Defense.",
+  "generated_at_utc": "2026-11-16T14:48:00Z",
+  "status": "RISK-OFF",
+  "begruendung": "RISK-OFF: nur noch 1 von 5 Kriterien erfüllt (P4 um 15:00: NEUTRAL, 2/5). Nicht erfüllt: S&P 500 unter SMA50 (−2,09 %), Nasdaq unter SMA20 (−3,49 %), VIX 20,41 über 20, nur 46 % der Watchlist im 5-Tage-Plus (P4: 82 %). Erfüllt: 52 % der Watchlist über SMA50. Eröffnung klar schwächer: S&P 500 −0,85 %, Nasdaq −1,64 %, Halbleiter −5,0 %; Marktbreite 16 Gewinner zu 34 Verlierern. US-10J-Rendite 5,13 % (nur Info). Die defensiven und zyklischen Sektoren (Transport, Versicherung, Versorger, Defense, Payments) halten sich, Halbleiter, Cybersecurity und Fintech schwach. Regel RISK-OFF: keine neuen Positionen – alle P4-Kandidaten nur beobachten; P5.5 prüft das Regime mit Intraday-Daten erneut. Rohstoffe: Ampel ROT (0/6), keine Rotation in Edelmetalle.",
+  "kurzbegruendung": "RISK-OFF (1/5): Nasdaq −1,6 %, Halbleiter −5 %, VIX 20,4. Keine neuen Positionen – Kandidaten nur beobachten.",
   "sektor_rotation": [
-    {
-      "sektor": "Industrials/Infrastructure",
-      "trend": "positiv",
-      "kommentar": "Stärkster Sektor (relative Stärke 20 Tage +10,38 Pkt.), einziger Titel United Rentals aber wegen bärischem Optionsflow und Volumen ausgeschlossen.",
-      "kandidaten": []
-    },
-    {
-      "sektor": "Consumer Discretionary",
-      "trend": "positiv",
-      "kommentar": "Rang 2, alle Titel mit steigendem OBV; Tesla zum Kurs, Amazon nur per Limit, Home Depot vor Earnings (17.11.) ausgeschlossen.",
-      "kandidaten": [
-        {"name": "Tesla", "empfehlung": "Kauf"},
-        {"name": "Amazon", "empfehlung": "Beobachten"}
-      ]
-    },
     {
       "sektor": "Transportation",
       "trend": "positiv",
-      "kommentar": "Rang 3 mit der besten 20-Tage-Stärke (+11,14 Pkt.); Union Pacific zum Kurs, UPS 5,27 % über der SMA20 – nur Limit an der SMA20.",
+      "kommentar": "Jetzt Rang 1 (relative Stärke 20 Tage +12,51 Pkt.). Union Pacific eröffnet +1,01 % am Einstieg (Score 85,2, Ranking-Spitze); UPS −1,37 % schwächer, aber weiter 3,18 % über der SMA20 – nur Limit an der SMA20.",
       "kandidaten": [
-        {"name": "Union Pacific", "empfehlung": "Kauf"},
+        {"name": "Union Pacific", "empfehlung": "Beobachten"},
         {"name": "UPS (United Parcel Service)", "empfehlung": "Beobachten"}
-      ]
-    },
-    {
-      "sektor": "Defense",
-      "trend": "positiv",
-      "kommentar": "Rang 4, 5 Tage +4,2 %; Lockheed Martin Kandidat, Northrop Grumman (Volumen) und General Dynamics (Optionsflow) ausgeschlossen.",
-      "kandidaten": [
-        {"name": "Lockheed Martin", "empfehlung": "Kauf"}
       ]
     },
     {
       "sektor": "Insurance",
       "trend": "positiv",
-      "kommentar": "Rang 5; Progressive ist Tages-Spitzenreiter, Travelers wegen bärischem Optionsflow ausgeschlossen.",
+      "kommentar": "Rang 2, 5 Tage +4,06 %. Progressive eröffnet +1,28 % und liegt 3,72 % über der SMA20 – nicht hinterherlaufen, Einstieg jetzt nur noch per Limit an der SMA20 (Score 77,7).",
       "kandidaten": [
-        {"name": "Progressive", "empfehlung": "Kauf"}
+        {"name": "Progressive", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "Utilities",
+      "trend": "positiv",
+      "kommentar": "Rang 3, Trend auf positiv gedreht. Duke Energy eröffnet +1,30 %, 3,21 % über der SMA20 – Limit an der SMA20 statt Kauf zum Kurs; Earnings-Termin unbekannt.",
+      "kandidaten": [
+        {"name": "Duke Energy", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "Defense",
+      "trend": "positiv",
+      "kommentar": "Rang 4. Lockheed Martin eröffnet unverändert (+0,01 %), knapp unter der SMA20; Score nach Kursupdate 74,2 (Kauf – solide), ULA-Fehlstart als leicht negatives Signal.",
+      "kandidaten": [
+        {"name": "Lockheed Martin", "empfehlung": "Beobachten"}
       ]
     },
     {
       "sektor": "Payments",
-      "trend": "neutral",
-      "kommentar": "Rang 6, Trend neutral nach schwächerer Woche (5 Tage −1,57 Pkt. vs. S&P 500); Visa Kandidat, Mastercard ausgeschlossen (Optionsflow).",
+      "trend": "positiv",
+      "kommentar": "Rang 5, Trend wieder positiv. Visa eröffnet +1,04 %, 3,14 % über der SMA20 – nicht hinterherlaufen, Limit an der SMA20.",
       "kandidaten": [
-        {"name": "Visa", "empfehlung": "Kauf"}
+        {"name": "Visa", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "Consumer Discretionary",
+      "trend": "positiv",
+      "kommentar": "Auf Rang 7 zurückgefallen (5 Tage −0,13 %). Tesla eröffnet −0,21 % nahe der SMA20, Amazon −1,63 % (Score 65,5) – beide ohne Warnhinweis, aber schwächer als der Sektor zuvor.",
+      "kandidaten": [
+        {"name": "Tesla", "empfehlung": "Beobachten"},
+        {"name": "Amazon", "empfehlung": "Beobachten"}
       ]
     },
     {
       "sektor": "Technology",
       "trend": "positiv",
-      "kommentar": "Rang 8, positiver Trend; Apple mit bullischem Optionsflow.",
+      "kommentar": "Rang 9. Apple eröffnet −0,29 %, hält sich gegen die schwache Nasdaq; Score 80,7, bullischer Optionsflow.",
       "kandidaten": [
-        {"name": "Apple", "empfehlung": "Kauf"}
-      ]
-    },
-    {
-      "sektor": "Utilities",
-      "trend": "neutral",
-      "kommentar": "Rang 9, Trend neutral; Duke Energy mit grünem Kapitalfluss, Earnings-Termin unbekannt.",
-      "kandidaten": [
-        {"name": "Duke Energy", "empfehlung": "Kauf"}
+        {"name": "Apple", "empfehlung": "Beobachten"}
       ]
     },
     {
       "sektor": "Healthcare",
       "trend": "positiv",
-      "kommentar": "Rang 11, positiver Trend; UnitedHealth Group direkt an der SMA20.",
+      "kommentar": "Rang 11, 5 Tage +3,41 %. UnitedHealth Group eröffnet +0,91 %, 0,79 % über der SMA20.",
       "kandidaten": [
-        {"name": "UnitedHealth Group", "empfehlung": "Kauf"}
-      ]
-    },
-    {
-      "sektor": "Materials",
-      "trend": "negativ",
-      "kommentar": "Rang 15, negativer Trend; Linde (Kauf – solide, Score 72,8) knapp außerhalb der Top 10, der schwache Sektor bremst.",
-      "kandidaten": [
-        {"name": "Linde", "empfehlung": "Beobachten"}
-      ]
-    },
-    {
-      "sektor": "Semiconductors/AI",
-      "trend": "neutral",
-      "kommentar": "Rang 16, starke 5 Tage (+5,52 %), aber 20 Tage −8,3 Pkt.; Broadcom, Qualcomm, AMD nur Beobachten.",
-      "kandidaten": [
-        {"name": "Broadcom", "empfehlung": "Beobachten"},
-        {"name": "Qualcomm", "empfehlung": "Beobachten"},
-        {"name": "AMD (Advanced Micro Devices)", "empfehlung": "Beobachten"}
+        {"name": "UnitedHealth Group", "empfehlung": "Beobachten"}
       ]
     },
     {
       "sektor": "Software/Cloud",
       "trend": "neutral",
-      "kommentar": "Rang 17, 20 Tage −6,9 Pkt. vs. S&P 500 – keine Kandidaten. Oracle liegt als Bestand außerhalb des Systems im Depot (Bewertung in P1).",
+      "kommentar": "Rang 16, 20 Tage −7,82 Pkt. vs. S&P 500. Oracle fällt zur Eröffnung −2,89 %; liegt als Bestand außerhalb des Systems im Depot (Bewertung in P1).",
       "kandidaten": [
         {"name": "Oracle", "empfehlung": "Halten"}
       ]
     },
     {
+      "sektor": "Semiconductors/AI",
+      "trend": "negativ",
+      "kommentar": "Rang 18, Trend auf negativ gedreht: Halbleiter-ETF zur Eröffnung −5,0 %, 8,82 % unter der SMA20 – Haupttreiber des RISK-OFF.",
+      "kandidaten": []
+    },
+    {
       "sektor": "Fintech/Brokerage",
       "trend": "negativ",
-      "kommentar": "Schwächster Sektor (20 Tage −22,6 Pkt. vs. S&P 500), negativer Trend.",
+      "kommentar": "Schwächster Sektor (5 Tage −10,9 %, 20 Tage −23,11 Pkt. vs. S&P 500).",
       "kandidaten": []
     }
   ]
