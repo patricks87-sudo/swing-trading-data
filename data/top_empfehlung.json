@@ -1,10 +1,25 @@
 {
-  "generated_at_utc": "2026-11-13T17:05:00Z",
+  "generated_at_utc": "2026-11-16T16:58:00Z",
   "top3": [
-    {"ticker": "V", "name": "Visa", "aktion": "Limit-Order", "begruendung": "#1 Beste Portfolio-Chance: Feed-Score 76,8 (Kauf – hohe Qualität, P4 76,0), Trend, Setup, Optionsflow (bullisch) und CRV stark, Kurs 2,5 % über SMA20; Hold-Test 3/4 (über VWAP und Eröffnung, stärker als S&P 500, nur Volumen 0,91 knapp darunter) → Limit-Order an 384,62 €, gültig bis Handelsschluss. Schutz-Stop 365,94 €, 4 Stück, Kapitalbedarf 1.538 €, Risiko 75 €. Verkauf spätestens nach 10 Handelstagen zum Schlusskurs am 30.11.2026 (bei Ausführung heute; 26.11. Thanksgiving). Danach freies Risiko 300 €, 2 freie Plätze (heute keine weitere neue Position). Trade-Republic-Spread nicht prüfbar – vor Ordereingabe Spread < 0,6 % kontrollieren."},
-    {"ticker": "TRV", "name": "Travelers", "aktion": "Beobachten", "begruendung": "#2 Zweitbeste Alternative: Feed 72,1 (Kauf – solide), Kurs nur 1,1 % über SMA20, Hold-Test 2/4 bei überdurchschnittlichem Volumen (1,35) → wäre per Limit an 363,85 € kaufbar (Stop 347,70 €, 4 Stück, Risiko 65 €). Bei NEUTRAL ist heute nur 1 neue Position erlaubt; Travelers kommt nur zum Zug, falls die Visa-Order heute nicht ausgeführt wird."},
-    {"ticker": "PGR", "name": "Progressive", "aktion": "Beobachten", "begruendung": "#3 Watchlist-Kandidat: höchster kaufbarer Feed-Score (85,5, Kauf – hohe Qualität), Optionsflow nicht mehr bärisch, Kurs 3,0 % über SMA20. Hold-Test aber nur 1/4 (unter VWAP und Eröffnung, Volumen 0,28) → heute kein Einstieg, Kandidat für den nächsten P4."}
+    {
+      "ticker": "UNP",
+      "name": "Union Pacific",
+      "aktion": "Beobachten",
+      "begruendung": "Kein Trade heute (RISK-OFF, 0 neue Positionen). Union Pacific ist dem Kauf am nächsten: Score 85,0 (Kauf – hohe Qualität), einziger Kandidat mit Hold-Test 4/4 (über VWAP und Eröffnung, stärker als S&P 500, Volumen 1,54×), Transport auf Sektor-Rang 1, Kurs 1,64 % über der SMA20. Setup laut Feed: Einstieg zum Kurs ca. 275,85 €, Schutz-Stop 264,29 €, 6 Stück, Risiko ca. 69 €. Es fehlt nur ein Regime, das Einstiege erlaubt (mind. NEUTRAL). STB-Frist im Fusionsverfahren am 18.11. beachten."
+    },
+    {
+      "ticker": "DUK",
+      "name": "Duke Energy",
+      "aktion": "Beobachten",
+      "begruendung": "Höchster Score der Watchlist (90,6, Kauf – hohe Qualität), Versorger auf Sektor-Rang 2, Kurs 2,76 % über der SMA20; Hold-Test 3/4 (nur knapp unter VWAP). Setup laut Feed: Einstieg ca. 118,12 €, Schutz-Stop 113,87 €, 17 Stück, Risiko ca. 72 €. Earnings-Termin unbekannt (Datenbasis unvollständig). Wegen RISK-OFF heute kein Einstieg."
+    },
+    {
+      "ticker": "UPS",
+      "name": "UPS (United Parcel Service)",
+      "aktion": "Beobachten",
+      "begruendung": "Watchlist-Kandidat: Score 79,3, Hold-Test 3/4 bei Volumen 1,71×, aber 3,49 % über der SMA20 (überdehnt im Tracking). Bei erlaubtem Regime nur Limit an der SMA20 (ca. 97,47 €, Stop 92,69 €, 15 Stück). Heute wegen RISK-OFF kein Einstieg."
+    }
   ],
-  "gesamteinschaetzung": "Regime NEUTRAL (2/5 Kriterien): S&P 500 1,9 % unter SMA50, Nasdaq 3,1 % unter SMA20 (heute −2,1 %), VIX 20,2; Halbleiter mit −5,7 % im Ausverkauf, defensive und zyklische Sektoren (Industrials/Infrastructure, Transportation, Consumer Discretionary, Defense, Insurance) führen. Keine offenen Swing-Positionen → freies Risiko 375 €, 3 freie Plätze, heute max. 1 neue Position: Visa per Limit-Order. Grundlage sind die P4-Kandidaten vom 12.11.2026 (für heute lag kein P4-Lauf vor). Bestand (außerhalb des Systems): Oracle und Bloom Energy Halten, Rheinmetall und Alphabet Prüfen wegen negativer News-Signale mit Gewicht hoch. Rohstoff-Ampel ROT (0/6), Gold/Silber-Empfehlung im Feed nicht verfügbar (Rotation: Aktien schwach, keine Rotation) – nur Information. Ausgeführte Käufe und Verkäufe bitte im Cockpit unter „Journal“ eintragen.",
-  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +3,06 Prozentpunkte über dem Nasdaq (n=67) – überwiegend liegengelassene Gewinne."
+  "gesamteinschaetzung": "Kein Trade heute. Regime RISK-OFF (1 von 5 Kriterien): S&P 500 2,27 % unter der SMA50 (Tag −1,03 %), Nasdaq 3,42 % unter der SMA20 (Tag −1,56 %), Halbleiter −3,61 %, VIX 20,99, Marktbreite 12 zu 38. Regel: keine neuen Positionen. Depot: keine Swing-Positionen offen, gebundenes Risiko 0 €, freies Risiko 375 €, freie Plätze heute 0. Bestand außerhalb des Systems: Oracle, Rheinmetall und Alphabet (Google) auf „Prüfen“, Bloom Energy „Halten“ – die Entscheidung liegt beim Nutzer. Führend bleiben defensive Sektoren (Transport, Versorger, Versicherung, Payments); Halbleiter, Cybersecurity und Fintech schwach. Rohstoff-Ampel ROT (0/6 Kriterien), Rotation „Aktien schwach, keine Rotation“; eine Gold/Silber-Empfehlung liefert der Feed derzeit nicht (Datenbasis unvollständig) – nur Information, kein System-Trade. Ausgeführte Käufe und Verkäufe bitte im Cockpit unter „Journal“ eintragen.",
+  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +3,11 Prozentpunkte über dem Nasdaq (n=68) – überwiegend liegengelassene Gewinne."
 }
