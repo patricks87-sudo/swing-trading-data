@@ -1,9 +1,41 @@
 {
-  "generated_at_utc": "2026-11-13T17:05:00Z",
+  "generated_at_utc": "2026-11-16T16:58:00Z",
   "positionen": [
-    {"id": "ORCL-2026-06-17", "ticker": "ORCL", "art": "bestand", "empfehlung": "Halten", "handelstage_gehalten": 107, "verkauf_spaetestens": null, "begruendung": "Bestand außerhalb des Systems: 10 Stück, Kurs 111,54 € (−31,3 %, −508 €). Watchlist: Kein Setup (36,4), Kurs unter SMA20 und SMA50, Trend-Ampel rot, Kapitalfluss gelb, Optionsflow neutral – kein Prüf-Kriterium erfüllt. News: bestätigte Jahresprognose (12.11., positiv, niedrig), Kapitalaufnahme-Pläne (02.11., negativ, mittel). Earnings 14.12.2026 (21 Handelstage)."},
-    {"id": "RHM.DE-2026-08-31", "ticker": "RHM.DE", "art": "bestand", "empfehlung": "Prüfen", "handelstage_gehalten": 54, "verkauf_spaetestens": null, "begruendung": "Bestand außerhalb des Systems, Datenbasis: nur Kurs (nicht in der Watchlist). 4 Stück, Kurs 765,50 € (−27,0 %, −1.132,40 €). Prüfen wegen negativem News-Signal mit Gewicht hoch: gesenkte Umsatz- und Margenprognose (05.11.); zudem Berenberg-Kursziel auf 900 € gesenkt (10.11., mittel). Entscheidung liegt beim Nutzer."},
-    {"id": "GOOGL-2026-10-29", "ticker": "GOOGL", "art": "bestand", "empfehlung": "Prüfen", "handelstage_gehalten": 11, "verkauf_spaetestens": null, "begruendung": "Bestand außerhalb des Systems, Datenbasis: nur Kurs (nicht in der Watchlist). 6 Stück, Kurs 265,68 € (+3,7 %, +56,66 €). Prüfen formal wegen des negativen News-Signals mit Gewicht hoch (Umsatz- und Gewinnverfehlung, 02.11.); die Position liegt inzwischen aber im Plus. Entscheidung liegt beim Nutzer."},
-    {"id": "BE-2026-10-30", "ticker": "BE", "art": "bestand", "empfehlung": "Halten", "handelstage_gehalten": 10, "verkauf_spaetestens": null, "begruendung": "Bestand außerhalb des Systems, Datenbasis: nur Kurs (nicht in der Watchlist). 24 Stück, Kurs 170,10 € (−11,9 %, −550,72 €). Nur positive News-Signale (Barclays-Hochstufung 03.11., NTT-DATA-Auftrag über 900 Megawatt 05.11.), kein Prüf-Kriterium erfüllt. Hinweis: mit 4.082 € größte Einzelposition, stark vom Ausverkauf der KI-Infrastrukturwerte betroffen."}
+    {
+      "id": "ORCL-2026-06-17",
+      "ticker": "ORCL",
+      "art": "bestand",
+      "empfehlung": "Prüfen",
+      "handelstage_gehalten": 108,
+      "verkauf_spaetestens": null,
+      "begruendung": "Oracle: Kurs 109,82 € (Einstand 162,34 €, −32,35 %). In der Watchlist sind Kapitalfluss- und Trend-Ampel beide rot (Score 25,2, Kein Setup), Kurs 4,03 % unter der SMA20 und 10,91 % unter der SMA50; Software/Cloud nur Sektor-Rang 16. Letzte Meldungen gemischt (Kapitalaufnahme negativ/mittel, bestätigte Prognose positiv/niedrig). Earnings am 14.12.2026. Bestand außerhalb des Systems – Entscheidung beim Nutzer."
+    },
+    {
+      "id": "RHM.DE-2026-08-31",
+      "ticker": "RHM.DE",
+      "art": "bestand",
+      "empfehlung": "Prüfen",
+      "handelstage_gehalten": 55,
+      "verkauf_spaetestens": null,
+      "begruendung": "Rheinmetall: Kurs 773,50 € (Einstand 1.048,60 €, −26,23 %). Datenbasis: nur Kurs (nicht in der Watchlist). Negatives News-Signal mit Gewicht hoch (05.11.: gesenkte Umsatz- und Margenprognose), dazu Kursziel-Senkung durch Berenberg auf 900 € (10.11.). Bestand außerhalb des Systems – Entscheidung beim Nutzer."
+    },
+    {
+      "id": "GOOGL-2026-10-29",
+      "ticker": "GOOGL",
+      "art": "bestand",
+      "empfehlung": "Prüfen",
+      "handelstage_gehalten": 12,
+      "verkauf_spaetestens": null,
+      "begruendung": "Alphabet (Google): Kurs 261,55 € (Einstand 256,24 €, +2,07 %). Datenbasis: nur Kurs (nicht in der Watchlist). Formal „Prüfen“ wegen des negativen News-Signals mit Gewicht hoch vom 02.11. (Umsatz- und Gewinnverfehlung); die Position hat den Rückgang inzwischen aufgeholt und das Signal läuft in Kürze aus dem 14-Tage-Fenster. Bestand außerhalb des Systems – Entscheidung beim Nutzer."
+    },
+    {
+      "id": "BE-2026-10-30",
+      "ticker": "BE",
+      "art": "bestand",
+      "empfehlung": "Halten",
+      "handelstage_gehalten": 11,
+      "verkauf_spaetestens": null,
+      "begruendung": "Bloom Energy: Kurs 162,13 € (Einstand 193,05 €, −16,02 %). Datenbasis: nur Kurs (nicht in der Watchlist). Nur positive Firmen-Signale (Barclays-Hochstufung 03.11., NTT-DATA-Vereinbarung über 900 MW 05.11.), kein harter Ausschluss und kein Stop gesetzt. Hohe Schwankung im KI-Infrastruktur-Umfeld beachten. Bestand außerhalb des Systems – Entscheidung beim Nutzer."
+    }
   ]
 }
