@@ -1,22 +1,112 @@
 {
-  "generated_at_utc": "2026-11-13T17:05:00Z",
+  "generated_at_utc": "2026-11-16T14:02:29Z",
   "status": "NEUTRAL",
-  "begruendung": "2 von 5 Regime-Kriterien erfüllt: 52 % der Watchlist über SMA50 und 80 % im 5-Tage-Plus. Nicht erfüllt: S&P 500 unter SMA50 (−1,94 %), Nasdaq unter SMA20 (−3,08 %), VIX 20,2 knapp über 20. Heute breiter Abgabedruck (Advance/Decline 0,36, Nasdaq −2,1 %, Halbleiter −5,7 %), US-10J-Rendite 5,13 %. Führend sind Industrials/Infrastructure, Transportation, Consumer Discretionary, Defense und Insurance; schwach Semiconductors/AI, Cybersecurity und Fintech/Brokerage. NEUTRAL erlaubt max. 3 offene Positionen und 1 neue pro Tag – heute Visa per Limit-Order.",
-  "kurzbegruendung": "NEUTRAL 2/5: S&P unter SMA50, Nasdaq −2,1 %, VIX 20,2. Visa per Limit-Order, sonst Beobachten.",
+  "begruendung": "NEUTRAL: 2 von 5 Kriterien erfüllt. Nicht erfüllt: S&P 500 unter SMA50 (−1,32 %), Nasdaq unter SMA20 (−2,24 %), VIX 20,67 über 20. Erfüllt: 54 % der Watchlist über SMA50 und 82 % im 5-Tage-Plus. US-10J-Rendite 5,14 % (nur Info). Breite Erholung in der Watchlist, aber die Indizes bleiben unter ihren Durchschnitten – Rotation in defensive und zyklische Werte (Versicherungen, Transport, Defense), Tech/Software/Halbleiter auf 20 Tage schwach. Limit heute: max. 1 neue Position, max. 3 offene. Rohstoffe: Ampel ROT, keine Rotation in Edelmetalle.",
+  "kurzbegruendung": "NEUTRAL (2/5): Indizes unter SMA, VIX 20,7 – Breite gut. Max. 1 neue Position; Fokus Versicherung, Transport, Defense.",
   "sektor_rotation": [
-    {"sektor": "Industrials/Infrastructure", "trend": "positiv", "kommentar": "Sektor-Rang 1, 20 Tage +8,9 %; einziger Titel United Rentals wegen Volumen unter 1 Mio. ausgeschlossen.", "kandidaten": [{"name": "United Rentals", "empfehlung": "Kein Einstieg"}]},
-    {"sektor": "Transportation", "trend": "positiv", "kommentar": "Rang 2, 20 Tage +9,7 %. Union Pacific (77,0) mit Hold-Test 1/4, UPS weiter überdehnt (4,4 % über SMA20).", "kandidaten": [{"name": "Union Pacific", "empfehlung": "Beobachten"}, {"name": "UPS (United Parcel Service)", "empfehlung": "Beobachten"}]},
-    {"sektor": "Consumer Discretionary", "trend": "positiv", "kommentar": "Rang 3; Amazon mit Feed-Score 81,4 (Kauf – hohe Qualität), aber nicht im P4 vom 12.11. – Kandidat für den nächsten P4.", "kandidaten": [{"name": "Amazon", "empfehlung": "Beobachten"}]},
-    {"sektor": "Defense", "trend": "positiv", "kommentar": "Rang 4; Lockheed Martin unter die SMA20 zurückgefallen, Hold-Test 0/4.", "kandidaten": [{"name": "Lockheed Martin", "empfehlung": "Beobachten"}]},
-    {"sektor": "Insurance", "trend": "positiv", "kommentar": "Rang 5; Progressive mit Score 85,5, aber Hold-Test 1/4; Travelers per Limit kaufbar, Platz geht an Visa.", "kandidaten": [{"name": "Progressive", "empfehlung": "Beobachten"}, {"name": "Travelers", "empfehlung": "Beobachten"}]},
-    {"sektor": "Payments", "trend": "neutral", "kommentar": "Rang 6; Visa hält sich gegen den schwachen Markt (+0,6 % seit Eröffnung, Hold-Test 3/4) → Limit-Order an 384,62 €. Mastercard wegen bärischem Optionsflow ausgeschlossen.", "kandidaten": [{"name": "Visa", "empfehlung": "Kauf"}, {"name": "Mastercard", "empfehlung": "Kein Einstieg"}]},
-    {"sektor": "Utilities", "trend": "neutral", "kommentar": "Rang 8; Duke Energy mit Score 84,3 und jetzt bullischem Optionsflow – im P4 vom 12.11. noch ausgeschlossen, Kandidat für den nächsten P4.", "kandidaten": [{"name": "Duke Energy", "empfehlung": "Beobachten"}]},
-    {"sektor": "Defense/Industrials", "trend": "positiv", "kommentar": "Rang 10; RTX auf 64,9 (Beobachten) gesunken, Trend-Ampel rot.", "kandidaten": [{"name": "RTX (Raytheon Technologies)", "empfehlung": "Beobachten"}]},
-    {"sektor": "MedTech", "trend": "neutral", "kommentar": "Rang 11; Thermo Fisher Scientific genau an der SMA20, Score 63,7 (Beobachten).", "kandidaten": [{"name": "Thermo Fisher Scientific", "empfehlung": "Beobachten"}]},
-    {"sektor": "Healthcare", "trend": "positiv", "kommentar": "Rang 12; UnitedHealth Group im Feed 74,1 (Kauf – solide), Hold-Test 1/4.", "kandidaten": [{"name": "UnitedHealth Group", "empfehlung": "Beobachten"}]},
-    {"sektor": "Materials", "trend": "negativ", "kommentar": "Rang 14; Linde wegen bärischem Optionsflow ausgeschlossen.", "kandidaten": [{"name": "Linde", "empfehlung": "Kein Einstieg"}]},
-    {"sektor": "Industrials", "trend": "neutral", "kommentar": "Rang 15; Deere & Company in der Pullback-Zone, aber Optionsflow bärisch.", "kandidaten": [{"name": "Deere & Company", "empfehlung": "Kein Einstieg"}]},
-    {"sektor": "Software/Cloud", "trend": "neutral", "kommentar": "Rang 16; Oracle (Bestand) unter SMA20 und SMA50, Kein Setup.", "kandidaten": [{"name": "Oracle", "empfehlung": "Halten"}]},
-    {"sektor": "Semiconductors/AI", "trend": "neutral", "kommentar": "Rang 17; Halbleiter heute −5,7 %, 14,9 % unter SMA50 – Qualcomm Hold-Test 1/4.", "kandidaten": [{"name": "Qualcomm", "empfehlung": "Kein Einstieg"}]}
+    {
+      "sektor": "Industrials/Infrastructure",
+      "trend": "positiv",
+      "kommentar": "Stärkster Sektor (relative Stärke 20 Tage +10,38 Pkt.), einziger Titel United Rentals aber wegen bärischem Optionsflow und Volumen ausgeschlossen.",
+      "kandidaten": []
+    },
+    {
+      "sektor": "Consumer Discretionary",
+      "trend": "positiv",
+      "kommentar": "Rang 2, alle Titel mit steigendem OBV; Tesla zum Kurs, Amazon nur per Limit, Home Depot vor Earnings (17.11.) ausgeschlossen.",
+      "kandidaten": [
+        {"name": "Tesla", "empfehlung": "Kauf"},
+        {"name": "Amazon", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "Transportation",
+      "trend": "positiv",
+      "kommentar": "Rang 3 mit der besten 20-Tage-Stärke (+11,14 Pkt.); Union Pacific zum Kurs, UPS 5,27 % über der SMA20 – nur Limit an der SMA20.",
+      "kandidaten": [
+        {"name": "Union Pacific", "empfehlung": "Kauf"},
+        {"name": "UPS (United Parcel Service)", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "Defense",
+      "trend": "positiv",
+      "kommentar": "Rang 4, 5 Tage +4,2 %; Lockheed Martin Kandidat, Northrop Grumman (Volumen) und General Dynamics (Optionsflow) ausgeschlossen.",
+      "kandidaten": [
+        {"name": "Lockheed Martin", "empfehlung": "Kauf"}
+      ]
+    },
+    {
+      "sektor": "Insurance",
+      "trend": "positiv",
+      "kommentar": "Rang 5; Progressive ist Tages-Spitzenreiter, Travelers wegen bärischem Optionsflow ausgeschlossen.",
+      "kandidaten": [
+        {"name": "Progressive", "empfehlung": "Kauf"}
+      ]
+    },
+    {
+      "sektor": "Payments",
+      "trend": "neutral",
+      "kommentar": "Rang 6, Trend neutral nach schwächerer Woche (5 Tage −1,57 Pkt. vs. S&P 500); Visa Kandidat, Mastercard ausgeschlossen (Optionsflow).",
+      "kandidaten": [
+        {"name": "Visa", "empfehlung": "Kauf"}
+      ]
+    },
+    {
+      "sektor": "Technology",
+      "trend": "positiv",
+      "kommentar": "Rang 8, positiver Trend; Apple mit bullischem Optionsflow.",
+      "kandidaten": [
+        {"name": "Apple", "empfehlung": "Kauf"}
+      ]
+    },
+    {
+      "sektor": "Utilities",
+      "trend": "neutral",
+      "kommentar": "Rang 9, Trend neutral; Duke Energy mit grünem Kapitalfluss, Earnings-Termin unbekannt.",
+      "kandidaten": [
+        {"name": "Duke Energy", "empfehlung": "Kauf"}
+      ]
+    },
+    {
+      "sektor": "Healthcare",
+      "trend": "positiv",
+      "kommentar": "Rang 11, positiver Trend; UnitedHealth Group direkt an der SMA20.",
+      "kandidaten": [
+        {"name": "UnitedHealth Group", "empfehlung": "Kauf"}
+      ]
+    },
+    {
+      "sektor": "Materials",
+      "trend": "negativ",
+      "kommentar": "Rang 15, negativer Trend; Linde (Kauf – solide, Score 72,8) knapp außerhalb der Top 10, der schwache Sektor bremst.",
+      "kandidaten": [
+        {"name": "Linde", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "Semiconductors/AI",
+      "trend": "neutral",
+      "kommentar": "Rang 16, starke 5 Tage (+5,52 %), aber 20 Tage −8,3 Pkt.; Broadcom, Qualcomm, AMD nur Beobachten.",
+      "kandidaten": [
+        {"name": "Broadcom", "empfehlung": "Beobachten"},
+        {"name": "Qualcomm", "empfehlung": "Beobachten"},
+        {"name": "AMD (Advanced Micro Devices)", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
+      "sektor": "Software/Cloud",
+      "trend": "neutral",
+      "kommentar": "Rang 17, 20 Tage −6,9 Pkt. vs. S&P 500 – keine Kandidaten. Oracle liegt als Bestand außerhalb des Systems im Depot (Bewertung in P1).",
+      "kandidaten": [
+        {"name": "Oracle", "empfehlung": "Halten"}
+      ]
+    },
+    {
+      "sektor": "Fintech/Brokerage",
+      "trend": "negativ",
+      "kommentar": "Schwächster Sektor (20 Tage −22,6 Pkt. vs. S&P 500), negativer Trend.",
+      "kandidaten": []
+    }
   ]
 }
