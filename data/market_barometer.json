@@ -1,63 +1,63 @@
 {
-  "generated_at_utc": "2026-11-16T14:48:00Z",
+  "generated_at_utc": "2026-11-16T16:19:29Z",
   "status": "RISK-OFF",
-  "begruendung": "RISK-OFF: nur noch 1 von 5 Kriterien erfüllt (P4 um 15:00: NEUTRAL, 2/5). Nicht erfüllt: S&P 500 unter SMA50 (−2,09 %), Nasdaq unter SMA20 (−3,49 %), VIX 20,41 über 20, nur 46 % der Watchlist im 5-Tage-Plus (P4: 82 %). Erfüllt: 52 % der Watchlist über SMA50. Eröffnung klar schwächer: S&P 500 −0,85 %, Nasdaq −1,64 %, Halbleiter −5,0 %; Marktbreite 16 Gewinner zu 34 Verlierern. US-10J-Rendite 5,13 % (nur Info). Die defensiven und zyklischen Sektoren (Transport, Versicherung, Versorger, Defense, Payments) halten sich, Halbleiter, Cybersecurity und Fintech schwach. Regel RISK-OFF: keine neuen Positionen – alle P4-Kandidaten nur beobachten; P5.5 prüft das Regime mit Intraday-Daten erneut. Rohstoffe: Ampel ROT (0/6), keine Rotation in Edelmetalle.",
-  "kurzbegruendung": "RISK-OFF (1/5): Nasdaq −1,6 %, Halbleiter −5 %, VIX 20,4. Keine neuen Positionen – Kandidaten nur beobachten.",
+  "begruendung": "RISK-OFF bestätigt (1 von 5 Kriterien, wie zur Eröffnung). Nicht erfüllt: S&P 500 unter SMA50 (−2,32 %), Nasdaq unter SMA20 (−3,62 %), VIX 20,81 über 20, nur 48 % der Watchlist im 5-Tage-Plus. Erfüllt: 50 % der Watchlist über SMA50. Seit Eröffnung S&P 500 −0,57 % (Tag −1,08 %), Nasdaq −1,77 %, Halbleiter −4,35 %; Marktbreite 12 Gewinner zu 38 Verlierern. US-10J-Rendite 5,13 % (nur Info). Hold-Test nach 90 Minuten: nur Union Pacific mit 4/4 Checks (über VWAP, über Eröffnung, stärker als S&P 500, Volumen 1,54×); sechs Kandidaten teilweise, drei nicht bestanden. Visa ist wegen intraday bärisch gedrehtem Optionsflow jetzt hart ausgeschlossen. Regel RISK-OFF: keine neuen Positionen – alle Kandidaten nur beobachten. Defensive Sektoren (Transport, Versorger, Versicherung, Payments, Defense) führen das Sektor-Ranking an, Halbleiter, Cybersecurity und Fintech bleiben schwach.",
+  "kurzbegruendung": "RISK-OFF (1/5): S&P 500 −0,57 % seit Eröffnung, Halbleiter −4,4 %. Nur Union Pacific besteht den Hold-Test – keine neuen Positionen.",
   "sektor_rotation": [
     {
       "sektor": "Transportation",
       "trend": "positiv",
-      "kommentar": "Jetzt Rang 1 (relative Stärke 20 Tage +12,51 Pkt.). Union Pacific eröffnet +1,01 % am Einstieg (Score 85,2, Ranking-Spitze); UPS −1,37 % schwächer, aber weiter 3,18 % über der SMA20 – nur Limit an der SMA20.",
+      "kommentar": "Rang 1 (relative Stärke 20 Tage +12,9 Pkt.). Union Pacific besteht den Hold-Test mit 4/4 (Volumen 1,54×, Score 85,1); UPS 3/4, knapp unter der Eröffnung, 3,53 % über der SMA20 – nur Limit an der SMA20.",
       "kandidaten": [
         {"name": "Union Pacific", "empfehlung": "Beobachten"},
         {"name": "UPS (United Parcel Service)", "empfehlung": "Beobachten"}
       ]
     },
     {
-      "sektor": "Insurance",
-      "trend": "positiv",
-      "kommentar": "Rang 2, 5 Tage +4,06 %. Progressive eröffnet +1,28 % und liegt 3,72 % über der SMA20 – nicht hinterherlaufen, Einstieg jetzt nur noch per Limit an der SMA20 (Score 77,7).",
-      "kandidaten": [
-        {"name": "Progressive", "empfehlung": "Beobachten"}
-      ]
-    },
-    {
       "sektor": "Utilities",
       "trend": "positiv",
-      "kommentar": "Rang 3, Trend auf positiv gedreht. Duke Energy eröffnet +1,30 %, 3,21 % über der SMA20 – Limit an der SMA20 statt Kauf zum Kurs; Earnings-Termin unbekannt.",
+      "kommentar": "Rang 2. Duke Energy 3/4 Checks (stärker als S&P 500 um 1,01 Pkt., Volumen 1,40×), knapp unter VWAP; 3,08 % über der SMA20 – Limit an der SMA20.",
       "kandidaten": [
         {"name": "Duke Energy", "empfehlung": "Beobachten"}
       ]
     },
     {
-      "sektor": "Defense",
+      "sektor": "Insurance",
       "trend": "positiv",
-      "kommentar": "Rang 4. Lockheed Martin eröffnet unverändert (+0,01 %), knapp unter der SMA20; Score nach Kursupdate 74,2 (Kauf – solide), ULA-Fehlstart als leicht negatives Signal.",
+      "kommentar": "Rang 3. Progressive fällt im Hold-Test durch (1/4: unter VWAP und Eröffnung, Volumen nur 0,55×); Score 77,0.",
       "kandidaten": [
-        {"name": "Lockheed Martin", "empfehlung": "Beobachten"}
+        {"name": "Progressive", "empfehlung": "Beobachten"}
       ]
     },
     {
       "sektor": "Payments",
       "trend": "positiv",
-      "kommentar": "Rang 5, Trend wieder positiv. Visa eröffnet +1,04 %, 3,14 % über der SMA20 – nicht hinterherlaufen, Limit an der SMA20.",
+      "kommentar": "Rang 4. Visa 2/4 Checks, aber Optionsflow intraday bärisch – vom Skript jetzt hart ausgeschlossen.",
       "kandidaten": [
-        {"name": "Visa", "empfehlung": "Beobachten"}
+        {"name": "Visa", "empfehlung": "Kein Einstieg"}
+      ]
+    },
+    {
+      "sektor": "Defense",
+      "trend": "positiv",
+      "kommentar": "Rang 5. Lockheed Martin 0/4 Checks (−2,32 % seit Eröffnung), Feed-Stufe auf „Beobachten“ (Score 64,0) gefallen.",
+      "kandidaten": [
+        {"name": "Lockheed Martin", "empfehlung": "Beobachten"}
       ]
     },
     {
       "sektor": "Consumer Discretionary",
-      "trend": "positiv",
-      "kommentar": "Auf Rang 7 zurückgefallen (5 Tage −0,13 %). Tesla eröffnet −0,21 % nahe der SMA20, Amazon −1,63 % (Score 65,5) – beide ohne Warnhinweis, aber schwächer als der Sektor zuvor.",
+      "trend": "neutral",
+      "kommentar": "Rang 7, Trend auf neutral. Amazon 3/4 Checks (über VWAP, Volumen 1,21×) trotz Tagesminus −2,12 %; Tesla fällt durch (1/4, −1,65 % seit Eröffnung bei Volumen 2,21×).",
       "kandidaten": [
-        {"name": "Tesla", "empfehlung": "Beobachten"},
-        {"name": "Amazon", "empfehlung": "Beobachten"}
+        {"name": "Amazon", "empfehlung": "Beobachten"},
+        {"name": "Tesla", "empfehlung": "Beobachten"}
       ]
     },
     {
       "sektor": "Technology",
       "trend": "positiv",
-      "kommentar": "Rang 9. Apple eröffnet −0,29 %, hält sich gegen die schwache Nasdaq; Score 80,7, bullischer Optionsflow.",
+      "kommentar": "Rang 8. Apple 2/4 Checks: stärker als S&P 500 bei 3,60× Volumen, aber unter VWAP und Eröffnung.",
       "kandidaten": [
         {"name": "Apple", "empfehlung": "Beobachten"}
       ]
@@ -65,15 +65,23 @@
     {
       "sektor": "Healthcare",
       "trend": "positiv",
-      "kommentar": "Rang 11, 5 Tage +3,41 %. UnitedHealth Group eröffnet +0,91 %, 0,79 % über der SMA20.",
+      "kommentar": "Rang 9, 5 Tage +3,64 %. UnitedHealth Group 2/4 Checks (Volumen 2,93×, stärker als S&P 500), knapp unter VWAP und Eröffnung.",
       "kandidaten": [
         {"name": "UnitedHealth Group", "empfehlung": "Beobachten"}
       ]
     },
     {
+      "sektor": "Materials",
+      "trend": "negativ",
+      "kommentar": "Rang 15. Linde als Second-Chance-Hinweis für den nächsten P4-Lauf (Score 70,8, Kauf – solide, kein Ausschluss; Earnings-Termin unbekannt), trotz schwachem Sektor.",
+      "kandidaten": [
+        {"name": "Linde", "empfehlung": "Beobachten"}
+      ]
+    },
+    {
       "sektor": "Software/Cloud",
       "trend": "neutral",
-      "kommentar": "Rang 16, 20 Tage −7,82 Pkt. vs. S&P 500. Oracle fällt zur Eröffnung −2,89 %; liegt als Bestand außerhalb des Systems im Depot (Bewertung in P1).",
+      "kommentar": "Rang 16, 20 Tage −7,9 Pkt. vs. S&P 500. Oracle heute −3,75 %; Bestand außerhalb des Systems im Depot (Bewertung in P1).",
       "kandidaten": [
         {"name": "Oracle", "empfehlung": "Halten"}
       ]
@@ -81,13 +89,13 @@
     {
       "sektor": "Semiconductors/AI",
       "trend": "negativ",
-      "kommentar": "Rang 18, Trend auf negativ gedreht: Halbleiter-ETF zur Eröffnung −5,0 %, 8,82 % unter der SMA20 – Haupttreiber des RISK-OFF.",
+      "kommentar": "Rang 18: Halbleiter-ETF −4,35 %, 8,22 % unter der SMA20 – Haupttreiber des RISK-OFF.",
       "kandidaten": []
     },
     {
       "sektor": "Fintech/Brokerage",
       "trend": "negativ",
-      "kommentar": "Schwächster Sektor (5 Tage −10,9 %, 20 Tage −23,11 Pkt. vs. S&P 500).",
+      "kommentar": "Schwächster Sektor (5 Tage −12,37 %, 20 Tage −24,13 Pkt. vs. S&P 500).",
       "kandidaten": []
     }
   ]
