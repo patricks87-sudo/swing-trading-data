@@ -1,25 +1,25 @@
 {
-  "generated_at_utc": "2026-11-16T16:58:00Z",
+  "generated_at_utc": "2026-11-17T16:49:35Z",
   "top3": [
-    {
-      "ticker": "UNP",
-      "name": "Union Pacific",
-      "aktion": "Beobachten",
-      "begruendung": "Kein Trade heute (RISK-OFF, 0 neue Positionen). Union Pacific ist dem Kauf am nächsten: Score 85,0 (Kauf – hohe Qualität), einziger Kandidat mit Hold-Test 4/4 (über VWAP und Eröffnung, stärker als S&P 500, Volumen 1,54×), Transport auf Sektor-Rang 1, Kurs 1,64 % über der SMA20. Setup laut Feed: Einstieg zum Kurs ca. 275,85 €, Schutz-Stop 264,29 €, 6 Stück, Risiko ca. 69 €. Es fehlt nur ein Regime, das Einstiege erlaubt (mind. NEUTRAL). STB-Frist im Fusionsverfahren am 18.11. beachten."
-    },
     {
       "ticker": "DUK",
       "name": "Duke Energy",
       "aktion": "Beobachten",
-      "begruendung": "Höchster Score der Watchlist (90,6, Kauf – hohe Qualität), Versorger auf Sektor-Rang 2, Kurs 2,76 % über der SMA20; Hold-Test 3/4 (nur knapp unter VWAP). Setup laut Feed: Einstieg ca. 118,12 €, Schutz-Stop 113,87 €, 17 Stück, Risiko ca. 72 €. Earnings-Termin unbekannt (Datenbasis unvollständig). Wegen RISK-OFF heute kein Einstieg."
+      "begruendung": "Kein Trade heute (RISK-OFF, 0 neue Positionen erlaubt). Duke Energy ist dem Kauf am nächsten: P4 „Kauf – hohe Qualität“ (80,9, Abendfeed 92,0), Hold-Test 4/4 bei 2,59-fachem Volumen, stärkster Sektor (Utilities, Rang 1). Setup bei Freigabe laut Feed: Einstieg 118,72 €, Schutz-Stop 114,43 €, 17 Stück (≈ 2.018 €, Risiko 73 €). Es fehlt allein das Regime (mindestens NEUTRAL)."
     },
     {
       "ticker": "UPS",
-      "name": "UPS (United Parcel Service)",
+      "name": "United Parcel Service (UPS)",
       "aktion": "Beobachten",
-      "begruendung": "Watchlist-Kandidat: Score 79,3, Hold-Test 3/4 bei Volumen 1,71×, aber 3,49 % über der SMA20 (überdehnt im Tracking). Bei erlaubtem Regime nur Limit an der SMA20 (ca. 97,47 €, Stop 92,69 €, 15 Stück). Heute wegen RISK-OFF kein Einstieg."
+      "begruendung": "Höchster Feed-Score (96,2, Kauf – hohe Qualität), Sektor Transportation Rang 2, wieder in der Pullback-Zone (2,56 % über der SMA20), keine Bulltrap-Flags. Hold-Test 3/4 (knapp unter VWAP). P4 sah den Einstieg per Limit an der SMA20 (97,71 €); bei Freigabe Limit statt Hinterherlaufen. Gesperrt durch RISK-OFF."
+    },
+    {
+      "ticker": "PGR",
+      "name": "Progressive",
+      "aktion": "Beobachten",
+      "begruendung": "Feed-Score 92,9 (Kauf – hohe Qualität), Versicherer (Rang 3) mit bullischem Optionsflow, 2,54 % über der SMA20; Hold-Test 3/4, aber Volumen nur 0,41×. P4-Einstieg per Limit an der SMA20 (209,21 €). Gesperrt durch RISK-OFF."
     }
   ],
-  "gesamteinschaetzung": "Kein Trade heute. Regime RISK-OFF (1 von 5 Kriterien): S&P 500 2,27 % unter der SMA50 (Tag −1,03 %), Nasdaq 3,42 % unter der SMA20 (Tag −1,56 %), Halbleiter −3,61 %, VIX 20,99, Marktbreite 12 zu 38. Regel: keine neuen Positionen. Depot: keine Swing-Positionen offen, gebundenes Risiko 0 €, freies Risiko 375 €, freie Plätze heute 0. Bestand außerhalb des Systems: Oracle, Rheinmetall und Alphabet (Google) auf „Prüfen“, Bloom Energy „Halten“ – die Entscheidung liegt beim Nutzer. Führend bleiben defensive Sektoren (Transport, Versorger, Versicherung, Payments); Halbleiter, Cybersecurity und Fintech schwach. Rohstoff-Ampel ROT (0/6 Kriterien), Rotation „Aktien schwach, keine Rotation“; eine Gold/Silber-Empfehlung liefert der Feed derzeit nicht (Datenbasis unvollständig) – nur Information, kein System-Trade. Ausgeführte Käufe und Verkäufe bitte im Cockpit unter „Journal“ eintragen.",
-  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +3,11 Prozentpunkte über dem Nasdaq (n=68) – überwiegend liegengelassene Gewinne."
+  "gesamteinschaetzung": "Kein Trade heute. RISK-OFF (0/5 Kriterien, S&P 500 unter SMA200; S&P 500 −1,23 %, Nasdaq −1,37 %, VIX 25,25, nur 7 von 50 Watchlist-Werten im Plus) – keine neuen Positionen. Keine offenen Swing-Positionen: gebundenes Risiko 0 €, freies Risiko 375 €, freie Plätze heute 0. Bestand außerhalb des Systems: Oracle und Rheinmetall „Prüfen“, Alphabet und Bloom Energy „Halten“ – die Entscheidung liegt beim Nutzer. Defensive Sektoren (Utilities, Transportation, Insurance) führen; Duke Energy ist erster Kandidat beim Regimewechsel. Rohstoff-Ampel ROT (0/6 Kriterien), eine Gold/Silber-Empfehlung liefert der Feed heute nicht (Datenbasis unvollständig) – nur Information, kein System-Trade. Hinweis Filter-Bilanz: Aussortierte Kandidaten lagen nach 10 Tagen im Schnitt +3,07 Prozentpunkte über dem Nasdaq (n=70) – die Ausstiegsregeln könnten zu streng sein; Regeln bleiben unverändert. Ausgeführte Käufe und Verkäufe bitte im Cockpit unter „Journal“ eintragen.",
+  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +3,07 Prozentpunkte über dem Nasdaq (n=70) – überwiegend liegengelassene Gewinne."
 }
