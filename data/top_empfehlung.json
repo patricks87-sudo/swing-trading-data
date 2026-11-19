@@ -1,25 +1,25 @@
 {
-  "generated_at_utc": "2026-11-18T16:48:33Z",
-  "top3": [
-    {
-      "ticker": "DUK",
-      "name": "Duke Energy",
-      "aktion": "Beobachten",
-      "begruendung": "Kein Trade heute (RISK-OFF, 0 neue Positionen erlaubt). Duke Energy ist dem Kauf am nächsten: Feed-Score 90,9 (Ranking-Spitze, Kauf – hohe Qualität), Utilities Sektor-Rang 2, Hold-Test zum zweiten Mal in Folge 4/4 bei 1,67-fachem Volumen. Setup laut Feed: Einstieg 117,87 € zum Kurs, Schutz-Stop 113,68 €, 17 Stück, Kapitalbedarf 2.004 €, Risiko 71 €. Es fehlt nur der Regimewechsel auf NEUTRAL oder RISK-ON; Earnings-Termin unbekannt – vor Kauf manuell prüfen."
-    },
-    {
-      "ticker": "UNP",
-      "name": "Union Pacific",
-      "aktion": "Beobachten",
-      "begruendung": "Zweitbeste Alternative: Hold-Test 4/4 mit deutlicher Umkehr (+1,68 % am Tag, Volumen 1,26×), Kurs 0,54 % über der SMA20, Score 81,5, Transportation Sektor-Rang 1. Setup laut Feed: Einstieg 274,54 €, Schutz-Stop 262,49 €, 6 Stück, Kapitalbedarf 1.647 €, Risiko 72 €. Heute wegen RISK-OFF kein Kauf; Fusionsverfahren mit Norfolk Southern (STB-Frist 18.11.) im Blick behalten."
-    },
-    {
-      "ticker": "UPS",
-      "name": "United Parcel Service",
-      "aktion": "Beobachten",
-      "begruendung": "Watchlist-Kandidat: höchster P4-Score (89,8, Feed 90,3), Trend- und Optionsflow-Ampel grün, Kurs 2,07 % über der SMA20; Hold-Test 3/4, nur das Volumen (0,89×) lag unter dem Schnitt, Kapitalfluss-Ampel rot. Setup laut Feed: Einstieg 100,80 €, Schutz-Stop 96,01 €, 15 Stück, Risiko 72 €. Wegen RISK-OFF nur Beobachtung."
-    }
-  ],
-  "gesamteinschaetzung": "Kein Trade heute. Regime RISK-OFF (0/5 Kriterien, Override S&P 500 unter SMA200): S&P 500 4,37 % unter der SMA50, Nasdaq 4,36 % unter der SMA20, VIX 25,62, nur 40 % der Watchlist über der SMA50 und 10 % im 5-Tage-Plus – laut Regel keine neuen Positionen. Depot: keine Swing-Positionen offen, gebundenes Risiko 0 €, freies Risiko 375 €, freie Plätze 0 (Regime). Vier Bestandspositionen außerhalb des Systems: Oracle und Rheinmetall „Prüfen“, Alphabet (Google) und Bloom Energy „Halten“ – die Entscheidung liegt beim Nutzer. Defensive Sektoren führen (Transportation, Utilities, Payments); Duke Energy und Union Pacific bestehen den Hold-Test 4/4 und sind die ersten Kandidaten nach einem Regimewechsel. Rohstoffe (nur Information, kein System-Trade): Rohstoff-Ampel ROT (0/6), keine Rotation in Edelmetalle; eine Gold/Silber-Empfehlung liefert der Feed heute nicht (Datenbasis unvollständig). Hinweis Filter-Bilanz: aussortierte Kandidaten liegen nach 10 Tagen im Schnitt +2,87 Prozentpunkte über dem Nasdaq (n=73) – die Ausstiegsregeln der Kandidatenliste könnten zu streng sein; Regeln bleiben unverändert. Ausgeführte Käufe und Verkäufe bitte im Cockpit unter „Journal“ eintragen.",
-  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,87 Prozentpunkte über dem Nasdaq (n=73) – überwiegend liegengelassene Gewinne."
+ "generated_at_utc": "2026-11-19T16:50:22Z",
+ "top3": [
+  {
+   "ticker": "DUK",
+   "name": "Duke Energy",
+   "aktion": "Beobachten",
+   "begruendung": "Kein Trade heute – dem Kauf am nächsten: P4-Score 92,9 (Kauf – hohe Qualität), Feed-Score 88,5 (Ranking-Spitze), Utilities Sektor-Rang 5, Kurs 0,23 % unter der SMA20 und 5,0 % über der SMA50. Es fehlen die Regime-Freigabe (RISK-OFF) und ein bestandener Hold-Test (heute 2/4, unter VWAP und Eröffnung). Setup laut Feed: Einstieg 116,11 €, Schutz-Stop 111,79 €, 17 Stück, Kapital 1.974 €, Risiko 73 €, Verkauf spätestens nach 10 Handelstagen."
+  },
+  {
+   "ticker": "UPS",
+   "name": "United Parcel Service",
+   "aktion": "Beobachten",
+   "begruendung": "Zweitbeste Alternative: Feed-Score 86,8 (Kauf – hohe Qualität), Transportation Sektor-Rang 3, Kurs an der SMA20 (−0,06 %) und 7,45 % über der SMA50. Hold-Test heute nicht bestanden (1/4, −1,80 % seit Eröffnung bei Verkaufsvolumen 1,30×), Kapitalfluss-Ampel rot. Setup: Einstieg 99,26 €, Schutz-Stop 94,30 €, 15 Stück, Kapital 1.489 €, Risiko 74 €. Morgen 15. Handelstag in der Kandidatenliste (Zeitlimit)."
+  },
+  {
+   "ticker": "TMO",
+   "name": "Thermo Fisher Scientific",
+   "aktion": "Beobachten",
+   "begruendung": "Watchlist-Kandidat: Feed-Score auf 87,2 (Kauf – hohe Qualität) gestiegen, P4-Stufe heute aber nur Beobachten (63,7); Kurs 0,37 % über der SMA20 und 3,32 % über der SMA50, Hold-Test 1/4. Kandidat für den nächsten P4-Lauf – ebenso Amazon (Feed-Score 85,3, Limit an SMA20 bei 235,13 €)."
+  }
+ ],
+ "gesamteinschaetzung": "Kein Trade heute. Regime RISK-OFF (0/5 Kriterien, S&P 500 unter SMA200, VIX 25,3, nur 12 % der Watchlist im 5-Tage-Plus) – laut Regime-Limit keine neuen Positionen. Keine Swing-Positionen offen: gebundenes Risiko 0 €, freies Risiko 375 €, aber 0 freie Plätze. Hold-Test schwach, kein Kandidat wäre zum Kurs kaufbar; Mastercard, RTX (Raytheon) und NextEra Energy im Abendfeed mit bärischem Optionsflow ausgeschlossen. Depot: vier Bestandspositionen außerhalb des Systems – Oracle und Rheinmetall „Prüfen“, Alphabet (Google) und Bloom Energy „Halten“. Rohstoff-Ampel ROT (0/6 Kriterien), Gold/Silber-Empfehlung im Feed nicht verfügbar (Datenbasis unvollständig) – nur Information, kein System-Trade. Filter-Bilanz: aussortierte Kandidaten +2,82 Pkt. über dem Nasdaq nach 10 Tagen (n=73) – Hinweis, dass die Ausstiegsregeln der Kandidatenliste zu streng sein könnten (Regeln unverändert). Trade-Republic-Spread nicht prüfbar. Ausgeführte Käufe und Verkäufe bitte im Cockpit unter „Journal“ eintragen.",
+ "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,82 Prozentpunkte über dem Nasdaq (n=73) – überwiegend liegengelassene Gewinne."
 }
