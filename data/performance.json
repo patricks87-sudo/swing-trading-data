@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-18T16:44:38.849981+00:00",
+  "generated_at_utc": "2026-11-19T16:44:38.482705+00:00",
   "waehrung": "EUR",
   "hinweis": "Hypothetisch, ohne Steuern. Depot-Simulation mit 8.000 € Start, 75 € Risiko je Trade, Schutz-Stop 2× ATR, Verkauf nach 10 Handelstagen, max. 5 Positionen / 375 € Gesamtrisiko / 2 je Sektor, 1 € Gebühr je Order. Echte Trades stehen im Trade-Journal.",
   "start": "2026-08-12",
@@ -73,7 +73,8 @@
     "2026-11-13",
     "2026-11-16",
     "2026-11-17",
-    "2026-11-18"
+    "2026-11-18",
+    "2026-11-19"
   ],
   "reihen": [
     {
@@ -113,43 +114,44 @@
         106.87,
         107.42,
         107.08,
-        107.19,
-        107.37,
-        108.35,
-        110.11,
-        110.48,
-        111.71,
-        110.24,
-        110.76,
-        111.84,
-        112.26,
-        112.48,
-        110.61,
-        110.44,
-        108.69,
-        108.44,
-        108.84,
-        109.98,
-        109.3,
-        109.75,
-        109.84,
-        110.21,
-        110.23,
-        109.07,
-        108.26,
-        108.26,
-        108.67,
-        109.82,
+        107.2,
+        107.38,
         108.4,
-        107.69,
-        109.46,
-        109.57,
-        110.8,
-        111.52,
-        112.3,
-        111.41,
-        110.82,
-        109.63
+        110.17,
+        110.53,
+        111.78,
+        110.29,
+        110.88,
+        111.96,
+        112.41,
+        112.63,
+        110.77,
+        110.59,
+        108.84,
+        108.59,
+        108.99,
+        110.14,
+        109.45,
+        109.9,
+        110.0,
+        110.36,
+        110.38,
+        109.22,
+        108.41,
+        108.41,
+        108.82,
+        109.97,
+        108.56,
+        107.85,
+        109.61,
+        109.73,
+        110.95,
+        111.67,
+        112.46,
+        111.56,
+        110.98,
+        109.27,
+        109.16
       ]
     },
     {
@@ -225,7 +227,8 @@
         114.26,
         113.57,
         112.41,
-        110.57
+        110.32,
+        109.03
       ]
     },
     {
@@ -301,7 +304,8 @@
         98.24,
         95.84,
         95.38,
-        95.34
+        95.8,
+        96.42
       ]
     },
     {
@@ -377,39 +381,40 @@
         101.58,
         99.97,
         99.15,
-        98.68
+        98.69,
+        98.51
       ]
     }
   ],
   "zusammenfassung": {
     "neu": {
       "label": "Depot-Simulation (deine Regeln)",
-      "gesamt_pct": 9.63
+      "gesamt_pct": 9.16
     },
     "alle": {
       "label": "Alle Kandidaten, 10 Tage gehalten",
-      "gesamt_pct": 10.57
+      "gesamt_pct": 9.03
     },
     "qqq": {
       "label": "Nasdaq-100 (QQQ)",
-      "gesamt_pct": -4.66
+      "gesamt_pct": -3.58
     },
     "urth": {
       "label": "MSCI World (URTH)",
-      "gesamt_pct": -1.32
+      "gesamt_pct": -1.49
     }
   },
   "statistik": {
     "neu": {
       "startkapital_eur": 8000.0,
-      "endwert_eur": 8770.4,
+      "endwert_eur": 8732.8,
       "trades_abgeschlossen": 26,
-      "trades_offen": 3,
+      "trades_offen": 5,
       "trefferquote_pct": 62.0,
-      "schnitt_trade_eur": 29.44,
+      "schnitt_trade_eur": 29.77,
       "bester_trade_eur": 197.65,
       "schlechtester_trade_eur": -105.6,
-      "gebuehren_eur": 55.0,
+      "gebuehren_eur": 57.0,
       "max_gleichzeitig": 5,
       "nicht_gekauft": {
         "plaetze": 11,
@@ -421,10 +426,10 @@
       }
     },
     "alle": {
-      "trades": 92,
-      "abgeschlossen": 77,
-      "trefferquote_pct": 70.0,
-      "schnitt_trade_pct": 2.45
+      "trades": 94,
+      "abgeschlossen": 78,
+      "trefferquote_pct": 71.0,
+      "schnitt_trade_pct": 2.4
     }
   },
   "trades_neu": [
@@ -448,9 +453,9 @@
       "stueck": 7,
       "ausstieg": "10 Tage",
       "einstieg_eur": 175.09,
-      "ausstieg_eur": 177.79,
-      "ergebnis_eur": 16.95,
-      "rendite_pct": 1.55
+      "ausstieg_eur": 179.62,
+      "ergebnis_eur": 29.7,
+      "rendite_pct": 2.59
     },
     {
       "ticker": "JPM",
@@ -460,9 +465,9 @@
       "stueck": 6,
       "ausstieg": "10 Tage",
       "einstieg_eur": 300.68,
-      "ausstieg_eur": 297.58,
-      "ergebnis_eur": -20.62,
-      "rendite_pct": -1.03
+      "ausstieg_eur": 294.84,
+      "ergebnis_eur": -37.09,
+      "rendite_pct": -1.94
     },
     {
       "ticker": "AAPL",
@@ -601,11 +606,11 @@
       "name": "Chevron",
       "start": "2026-09-29",
       "ende": "2026-10-12",
-      "stueck": 8,
+      "stueck": 9,
       "ausstieg": "10 Tage",
-      "einstieg_eur": 178.54,
-      "ausstieg_eur": 191.88,
-      "ergebnis_eur": 104.73,
+      "einstieg_eur": 177.07,
+      "ausstieg_eur": 190.3,
+      "ergebnis_eur": 117.08,
       "rendite_pct": 7.47
     },
     {
@@ -748,9 +753,9 @@
       "start": "2026-11-09",
       "stueck": 4,
       "einstieg_eur": 356.82,
-      "kurs_eur": 356.15,
-      "tage": 8,
-      "ergebnis_eur": -3.67
+      "kurs_eur": 353.21,
+      "tage": 9,
+      "ergebnis_eur": -15.47
     },
     {
       "ticker": "PGR",
@@ -758,9 +763,9 @@
       "start": "2026-11-09",
       "stueck": 8,
       "einstieg_eur": 205.47,
-      "kurs_eur": 207.84,
-      "tage": 8,
-      "ergebnis_eur": 17.95
+      "kurs_eur": 207.05,
+      "tage": 9,
+      "ergebnis_eur": 11.64
     },
     {
       "ticker": "TSLA",
@@ -768,9 +773,29 @@
       "start": "2026-11-16",
       "stueck": 2,
       "einstieg_eur": 351.02,
-      "kurs_eur": 346.91,
-      "tage": 3,
-      "ergebnis_eur": -9.24
+      "kurs_eur": 348.26,
+      "tage": 4,
+      "ergebnis_eur": -6.53
+    },
+    {
+      "ticker": "RTX",
+      "name": "RTX (Raytheon)",
+      "start": "2026-11-18",
+      "stueck": 7,
+      "einstieg_eur": 179.21,
+      "kurs_eur": 179.8,
+      "tage": 2,
+      "ergebnis_eur": 3.13
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "start": "2026-11-18",
+      "stueck": 7,
+      "einstieg_eur": 193.4,
+      "kurs_eur": 188.71,
+      "tage": 2,
+      "ergebnis_eur": -33.81
     }
   ]
 }
