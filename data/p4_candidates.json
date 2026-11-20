@@ -1,162 +1,331 @@
 {
-  "generated_at_utc": "2026-11-19T14:12:00Z",
-  "run_date": "2026-11-19",
+  "generated_at_utc": "2026-11-20T14:06:29Z",
+  "run_date": "2026-11-20",
   "regime": "RISK-OFF",
   "candidates": [
-    {
-      "ticker": "DUK",
-      "name": "Duke Energy",
-      "sector": "Utilities",
-      "score": 92.9,
-      "feed_score": 91.9,
-      "score_korrektur": 1,
-      "stufe": "Kauf – hohe Qualität",
-      "ampel": {"kapitalfluss": "gruen", "trendkontext": "gruen", "optionsflow": "gelb"},
-      "levels": {"einstieg_eur": 118.48, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 114.23, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 17, "kapitalbedarf_eur": 2014.0, "risiko_eur": 72.0},
-      "news": {"positiv": 1, "negativ": 0, "wichtigste": "Regulierer in North Carolina genehmigen am 16. November den Carolinas-Ressourcenplan von Duke Energy: 8.831 Megawatt neue Kapazität, davon 3.831 Megawatt Gaskraftwerke, dazu 2.300 Megawatt Solar und 2.700 Megawatt Batteriespeicher"},
-      "bulltrap_flags": [],
-      "earnings": "unbekannt",
-      "begruendung": "Spitzenreiter der Watchlist: Bestwerte bei Kapitalfluss, Trendkontext, Sektorstärke (Utilities Rang 1) und Setup, Kurs 1,89 % über SMA20. Schwächster Teilscore ist der neutrale Optionsflow. News-Korrektur +1 (Genehmigung des Carolinas-Ressourcenplans). Earnings-Termin im Feed nicht verfügbar, per Suche nicht bestätigt (Vorjahr: 10. Februar) – kein Ausschluss; RISK-OFF: heute kein Einstieg."
-    },
     {
       "ticker": "PGR",
       "name": "Progressive",
       "sector": "Insurance",
-      "score": 90.2,
-      "feed_score": 90.2,
+      "score": 91.7,
+      "feed_score": 91.7,
       "score_korrektur": 0,
       "stufe": "Kauf – hohe Qualität",
-      "ampel": {"kapitalfluss": "gruen", "trendkontext": "gruen", "optionsflow": "gruen"},
-      "levels": {"einstieg_eur": 208.14, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 198.38, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 7, "kapitalbedarf_eur": 1457.0, "risiko_eur": 68.0},
-      "news": {"positiv": 0, "negativ": 0, "wichtigste": ""},
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "levels": {
+        "einstieg_eur": 209.49,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 199.59,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 7,
+        "kapitalbedarf_eur": 1466.0,
+        "risiko_eur": 69.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
       "bulltrap_flags": [],
       "earnings": "2027-01-27",
-      "begruendung": "Optionsflow wieder bullisch, damit kein Ausschluss mehr: alle drei Ampeln grün, Trend, Setup und Optionsflow mit Bestwerten, Kurs 1,16 % unter SMA20. Schwächer ist die Sektorstärke Insurance (Rang 8). Eigene Suche ohne bestätigte negative Meldungen. RISK-OFF: heute kein Einstieg."
+      "begruendung": "Bester Score der Watchlist mit Bestwerten bei Trendkontext, Setup-Qualität, Optionsflow und CRV; Kurs liegt praktisch auf der SMA20 (−0,52 %). Versicherer halten sich im Ausverkauf relativ stabil (Sektor-Rang 6). Schwächster Teilwert ist die Sektorstärke (72), keine News-Signale. RISK-OFF: heute kein neuer Einstieg, nur Beobachtung."
+    },
+    {
+      "ticker": "DUK",
+      "name": "Duke Energy",
+      "sector": "Utilities",
+      "score": 90.3,
+      "feed_score": 89.3,
+      "score_korrektur": 1,
+      "stufe": "Kauf – hohe Qualität",
+      "ampel": {
+        "kapitalfluss": "gelb",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "levels": {
+        "einstieg_eur": 117.39,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 113.07,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 17,
+        "kapitalbedarf_eur": 1996.0,
+        "risiko_eur": 73.0
+      },
+      "news": {
+        "positiv": 1,
+        "negativ": 0,
+        "wichtigste": "Regulierer in North Carolina genehmigen am 16. November den Carolinas-Ressourcenplan von Duke Energy: 8.831 Megawatt neue Kapazität, davon 3.831 Megawatt Gaskraftwerke, dazu 2.300 Megawatt Solar und 2.700 Megawatt Batteriespeicher"
+      },
+      "bulltrap_flags": [],
+      "earnings": "unbekannt",
+      "begruendung": "Utilities sind der stärkste Sektor (Rang 1); Trend, Setup und Sektorstärke mit Bestwerten, Kapitalfluss 86. Ein positives Signal (Genehmigung des Carolinas-Ressourcenplans) bringt +1 Punkt. Optionsflow nur neutral (50); Earnings-Termin im Feed nicht verfügbar. RISK-OFF: kein Einstieg heute."
     },
     {
       "ticker": "UPS",
-      "name": "United Parcel Service",
+      "name": "UPS (United Parcel Service)",
       "sector": "Transportation",
-      "score": 87.2,
-      "feed_score": 87.2,
+      "score": 89.5,
+      "feed_score": 89.5,
       "score_korrektur": 0,
       "stufe": "Kauf – hohe Qualität",
-      "ampel": {"kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "gruen"},
-      "levels": {"einstieg_eur": 101.15, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 96.25, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 15, "kapitalbedarf_eur": 1517.0, "risiko_eur": 73.0},
-      "news": {"positiv": 0, "negativ": 0, "wichtigste": ""},
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "levels": {
+        "einstieg_eur": 99.4,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 94.37,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 14,
+        "kapitalbedarf_eur": 1392.0,
+        "risiko_eur": 70.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
       "bulltrap_flags": [],
       "earnings": "2027-01-26",
-      "begruendung": "Sehr starke relative Stärke (20 Tage +11,5 %) im zweitstärksten Sektor Transportation, Trend, Setup und Optionsflow mit Bestwerten. Schwachpunkt ist der Kapitalfluss (Ampel rot). Angehobene Jahresprognose stützt, eigene Suche ohne negative Meldungen. RISK-OFF: heute kein Einstieg."
-    },
-    {
-      "ticker": "UNP",
-      "name": "Union Pacific",
-      "sector": "Transportation",
-      "score": 80.2,
-      "feed_score": 80.2,
-      "score_korrektur": 0,
-      "stufe": "Kauf – hohe Qualität",
-      "ampel": {"kapitalfluss": "gruen", "trendkontext": "gelb", "optionsflow": "gelb"},
-      "levels": {"einstieg_eur": 274.12, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 261.89, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 6, "kapitalbedarf_eur": 1645.0, "risiko_eur": 73.0},
-      "news": {"positiv": 0, "negativ": 0, "wichtigste": "Union Pacific: Fusion mit Norfolk Southern soll Kühltransporte von Fleisch aus dem Mittleren Westen zu den Exporthäfen der Ostküste um drei bis vier Tage verkürzen; Stellungnahmefrist der Bahnaufsicht STB endet am 18. November, Erwiderungen bis 16. Februar 2027, Abschluss für das zweite Halbjahr 2027 geplant"},
-      "bulltrap_flags": [],
-      "earnings": "2027-01-26",
-      "begruendung": "Starker Kapitalfluss (Ampel grün) und Sektor-Rang 2, Kurs praktisch an der SMA20. Schwächer: Trendkontext und Optionsflow (je neutral). Fusionsverfahren mit Norfolk Southern läuft (STB-Stellungnahmefrist 18. November), als neutral erfasst. RISK-OFF: heute kein Einstieg."
-    },
-    {
-      "ticker": "MA",
-      "name": "Mastercard",
-      "sector": "Payments",
-      "score": 79.7,
-      "feed_score": 79.7,
-      "score_korrektur": 0,
-      "stufe": "Kauf – hohe Qualität",
-      "ampel": {"kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "gruen"},
-      "levels": {"einstieg_eur": 586.11, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 557.18, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 2, "kapitalbedarf_eur": 1172.0, "risiko_eur": 58.0},
-      "news": {"positiv": 0, "negativ": 0, "wichtigste": "Mastercard und Visa werben vor Gericht in Brooklyn für die Genehmigung ihres 38-Milliarden-Dollar-Vergleichs mit Händlern zu Kartengebühren – Richter Brian Cogan entscheidet noch nicht; über 1.000 Einwände, u. a. von Walmart und dem Handelsverband NRF"},
-      "bulltrap_flags": [],
-      "earnings": "2027-01-28",
-      "begruendung": "Trend, Setup und Optionsflow mit Bestwerten, Kurs an der SMA20. Schwach: Kapitalfluss (Ampel rot) und Sektorstärke Payments (Rang 6). Gerichtsverfahren zum 38-Mrd.-Dollar-Händlervergleich neutral gewertet, keine Korrektur. RISK-OFF: heute kein Einstieg."
-    },
-    {
-      "ticker": "RTX",
-      "name": "RTX (Raytheon)",
-      "sector": "Defense/Industrials",
-      "score": 69.5,
-      "feed_score": 69.5,
-      "score_korrektur": 0,
-      "stufe": "Kauf – solide",
-      "ampel": {"kapitalfluss": "rot", "trendkontext": "rot", "optionsflow": "gruen"},
-      "levels": {"einstieg_eur": 179.88, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 169.78, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 7, "kapitalbedarf_eur": 1259.0, "risiko_eur": 71.0},
-      "news": {"positiv": 0, "negativ": 0, "wichtigste": ""},
-      "bulltrap_flags": [],
-      "earnings": "2027-01-26",
-      "begruendung": "Hohe relative Stärke, bullischer Optionsflow und Sektor Defense/Industrials auf Rang 5, Kurs an der SMA20. Schwachpunkte: Trendkontext (0 Punkte) und Kapitalfluss (rot). Eigene Suche: Ausblick auf Umsatz-, Gewinn- und Cashflow-Wachstum 2027, keine negativen Meldungen. RISK-OFF: heute kein Einstieg."
-    },
-    {
-      "ticker": "NEE",
-      "name": "NextEra Energy",
-      "sector": "Utilities",
-      "score": 65.4,
-      "feed_score": 65.4,
-      "score_korrektur": 0,
-      "stufe": "Kauf – solide",
-      "ampel": {"kapitalfluss": "rot", "trendkontext": "rot", "optionsflow": "gelb"},
-      "levels": {"einstieg_eur": 77.23, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 73.93, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 22, "kapitalbedarf_eur": 1699.0, "risiko_eur": 73.0},
-      "news": {"positiv": 0, "negativ": 0, "wichtigste": ""},
-      "bulltrap_flags": [],
-      "earnings": "2027-01-27",
-      "begruendung": "Stärkster Sektor Utilities (Rang 1) und gute relative Stärke, Kurs an der SMA20. Schwach: Trendkontext (0 Punkte) und Kapitalfluss (rot). Keine bestätigten negativen Meldungen. Max. 2 Positionen je Sektor beachten (Utilities mit Duke Energy)."
+      "begruendung": "Sehr starke relative Stärke (97) und Sektorstärke (Transportation Rang 2), Kurs exakt an der SMA20. Schwachpunkt ist der Kapitalfluss (55, Ampel rot). Keine News-Signale. Bei RISK-OFF kein neuer Einstieg – Kandidat für die Wiederaufnahme, sobald das Regime dreht."
     },
     {
       "ticker": "TMO",
       "name": "Thermo Fisher Scientific",
       "sector": "MedTech",
-      "score": 63.7,
-      "feed_score": 63.7,
+      "score": 76.9,
+      "feed_score": 76.9,
       "score_korrektur": 0,
-      "stufe": "Beobachten",
-      "ampel": {"kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "gelb"},
-      "levels": {"einstieg_eur": 631.09, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 594.2, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 2, "kapitalbedarf_eur": 1262.0, "risiko_eur": 74.0},
-      "news": {"positiv": 0, "negativ": 0, "wichtigste": ""},
+      "stufe": "Kauf – hohe Qualität",
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "levels": {
+        "einstieg_eur": 627.45,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 590.86,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 2,
+        "kapitalbedarf_eur": 1255.0,
+        "risiko_eur": 73.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
       "bulltrap_flags": [],
       "earnings": "2027-01-28",
-      "begruendung": "Intakter Trend und sauberes Setup, Kurs 0,51 % unter SMA20. Sehr schwacher Kapitalfluss (9 Punkte) und nur mittlere Sektorstärke MedTech. Keine News-Signale. Nur Beobachtung."
-    },
-    {
-      "ticker": "LMT",
-      "name": "Lockheed Martin",
-      "sector": "Defense",
-      "score": 61.8,
-      "feed_score": 61.8,
-      "score_korrektur": 0,
-      "stufe": "Beobachten",
-      "ampel": {"kapitalfluss": "rot", "trendkontext": "gelb", "optionsflow": "gruen"},
-      "levels": {"einstieg_eur": 526.73, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 490.63, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 2, "kapitalbedarf_eur": 1053.0, "risiko_eur": 72.0},
-      "news": {"positiv": 0, "negativ": 0, "wichtigste": "Vulcan-Rakete des Boeing-Lockheed-Gemeinschaftsunternehmens ULA versagt rund 10 Minuten nach dem Start – 40 Amazon-Leo-Satelliten zerstört, erste vollständige Fehlmission von ULA, längere Startpause droht"},
-      "bulltrap_flags": [],
-      "earnings": "2027-01-26",
-      "begruendung": "Bullischer Optionsflow, aber Kurs 4,73 % unter SMA20 nach −5,2 % in 5 Tagen (RSI 31). Schwach: Kapitalfluss (rot) und Setup-Qualität. Vulcan-Fehlstart von ULA liegt außerhalb des 3-Tage-Fensters, keine Korrektur mehr. Nur Beobachtung."
+      "begruendung": "Relative Stärke 98 bei intaktem Trend und sauberem Setup knapp unter der SMA20. Kapitalfluss (50, Ampel rot) und Sektorstärke (MedTech Rang 10) sind die Schwachstellen. Keine News-Signale. RISK-OFF: nur beobachten."
     },
     {
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "sector": "Cybersecurity",
-      "score": 58.9,
-      "feed_score": 58.9,
+      "score": 73.3,
+      "feed_score": 73.3,
+      "score_korrektur": 0,
+      "stufe": "Kauf – solide",
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "levels": {
+        "einstieg_eur": 221.79,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 194.19,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 2,
+        "kapitalbedarf_eur": 444.0,
+        "risiko_eur": 55.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
+      "bulltrap_flags": [],
+      "earnings": "2026-12-01",
+      "begruendung": "Cybersecurity mit der stärksten 5-Tage-Erholung (+5,9 %), Kapitalfluss, Trend und Optionsflow grün. Setup-Qualität nur 10 (Abstand zu SMA20/50 ungünstig), dazu hohe Schwankung (Stop-Abstand rund 12 %). Earnings am 01.12.2026 – in 7 Handelstagen, also knapp außerhalb des Ausschlussfensters; ein Trade würde über die Zahlen laufen."
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Cybersecurity",
+      "score": 69.7,
+      "feed_score": 69.7,
+      "score_korrektur": 0,
+      "stufe": "Kauf – solide",
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "levels": {
+        "einstieg_eur": 316.83,
+        "einstieg_typ": "Limit an SMA20 (Rücksetzer abwarten)",
+        "stop_eur": 280.05,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 2,
+        "kapitalbedarf_eur": 634.0,
+        "risiko_eur": 74.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
+      "bulltrap_flags": [],
+      "earnings": "2027-02-16",
+      "begruendung": "Starke relative Stärke (100) und grüne Ampel, aber +12,1 % in 5 Tagen und 4,0 % über der SMA20 – daher Einstieg nur per Limit an der SMA20. Setup (10) und CRV (23) schwach. Keine News-Signale. RISK-OFF: beobachten."
+    },
+    {
+      "ticker": "LIN",
+      "name": "Linde",
+      "sector": "Materials",
+      "score": 67.4,
+      "feed_score": 67.4,
+      "score_korrektur": 0,
+      "stufe": "Kauf – solide",
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gruen",
+        "optionsflow": "gelb"
+      },
+      "levels": {
+        "einstieg_eur": 464.8,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 447.67,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 4,
+        "kapitalbedarf_eur": 1859.0,
+        "risiko_eur": 69.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
+      "bulltrap_flags": [],
+      "earnings": "unbekannt",
+      "begruendung": "Relative Stärke 100, Trend und Setup intakt, Kurs knapp unter der SMA20. Kapitalfluss (16) und Sektorstärke (Materials Rang 14, negativ) sind schwach. Earnings-Termin im Feed nicht verfügbar, per Suche nicht bestätigt. RISK-OFF: kein Einstieg."
+    },
+    {
+      "ticker": "HD",
+      "name": "Home Depot",
+      "sector": "Consumer Discretionary",
+      "score": 63.5,
+      "feed_score": 63.5,
       "score_korrektur": 0,
       "stufe": "Beobachten",
-      "ampel": {"kapitalfluss": "rot", "trendkontext": "gruen", "optionsflow": "gruen"},
-      "levels": {"einstieg_eur": 215.93, "einstieg_typ": "am aktuellen Kurs", "stop_eur": 188.33, "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs", "stueck": 2, "kapitalbedarf_eur": 432.0, "risiko_eur": 55.0},
-      "news": {"positiv": 0, "negativ": 0, "wichtigste": ""},
-      "bulltrap_flags": ["Kurs steigt, OBV fällt"],
-      "earnings": "2026-12-01",
-      "begruendung": "Höchste relative Stärke unter den Kandidaten (5 Tage +3,5 %) und bullischer Optionsflow. Setup-Qualität 0 Punkte und Bulltrap-Flag „Kurs steigt, OBV fällt“; Sektor Cybersecurity nur neutral. Earnings am 01.12.2026 (8 Handelstage) – innerhalb der 10-Tage-Haltedauer, kein Ausschluss. Nur Beobachtung."
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gelb",
+        "optionsflow": "gelb"
+      },
+      "levels": {
+        "einstieg_eur": 306.72,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 287.55,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 3,
+        "kapitalbedarf_eur": 920.0,
+        "risiko_eur": 57.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
+      "bulltrap_flags": [],
+      "earnings": "unbekannt",
+      "begruendung": "Gute Sektorstärke (Consumer Discretionary Rang 4) und relative Stärke 83, Setup an der SMA20. Kapitalfluss (10) sehr schwach, Trendkontext nur 50. Earnings-Termin unbekannt. Beobachten."
+    },
+    {
+      "ticker": "UNP",
+      "name": "Union Pacific",
+      "sector": "Transportation",
+      "score": 61.4,
+      "feed_score": 61.4,
+      "score_korrektur": 0,
+      "stufe": "Beobachten",
+      "ampel": {
+        "kapitalfluss": "rot",
+        "trendkontext": "gelb",
+        "optionsflow": "gelb"
+      },
+      "levels": {
+        "einstieg_eur": 264.76,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 251.74,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 5,
+        "kapitalbedarf_eur": 1324.0,
+        "risiko_eur": 65.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": "Union Pacific: Fusion mit Norfolk Southern soll Kühltransporte von Fleisch aus dem Mittleren Westen zu den Exporthäfen der Ostküste um drei bis vier Tage verkürzen; Stellungnahmefrist der Bahnaufsicht STB endet am 18. November, Erwiderungen bis 16. Februar 2027, Abschluss für das zweite Halbjahr 2027 geplant"
+      },
+      "bulltrap_flags": [],
+      "earnings": "2027-01-26",
+      "begruendung": "Transportation (Rang 2) stützt, Kapitalfluss 60; der Kurs liegt jedoch 3,1 % unter der SMA20 und Trend/Setup sind nur mittel. Laufendes Fusionsverfahren mit Norfolk Southern (neutrale Signale). Beobachten."
+    },
+    {
+      "ticker": "ZS",
+      "name": "Zscaler",
+      "sector": "Cybersecurity",
+      "score": 60.0,
+      "feed_score": 60.0,
+      "score_korrektur": 0,
+      "stufe": "Beobachten",
+      "ampel": {
+        "kapitalfluss": "gruen",
+        "trendkontext": "gruen",
+        "optionsflow": "gruen"
+      },
+      "levels": {
+        "einstieg_eur": 187.4,
+        "einstieg_typ": "am aktuellen Kurs",
+        "stop_eur": 164.45,
+        "ausstieg": "spätestens nach 10 Handelstagen zum Schlusskurs",
+        "stueck": 3,
+        "kapitalbedarf_eur": 562.0,
+        "risiko_eur": 69.0
+      },
+      "news": {
+        "positiv": 0,
+        "negativ": 0,
+        "wichtigste": ""
+      },
+      "bulltrap_flags": [],
+      "earnings": "2026-12-02",
+      "begruendung": "Kapitalfluss, Trend und Optionsflow grün, Erholung +6,5 % in 5 Tagen, aber noch 5,3 % unter der SMA20 und relative Stärke nur 32. Earnings am 02.12.2026 (8 Handelstage) – knapp außerhalb des Ausschlussfensters. Beobachten."
     }
   ],
   "ausgeschlossen": [
-    {"name": "Apple", "grund": "Optionsflow bärisch (Feed-Score 68,3)"},
-    {"name": "United Rentals", "grund": "Ø-Volumen unter 1 Mio. Aktien (Feed-Score 65,7)"},
-    {"name": "Visa", "grund": "Optionsflow bärisch (Feed-Score 63,0)"}
+    {
+      "name": "Apple",
+      "grund": "Optionsflow bärisch (Feed-Score 69,4)"
+    },
+    {
+      "name": "Mastercard",
+      "grund": "Optionsflow bärisch (Feed-Score 61,4)"
+    },
+    {
+      "name": "Amazon",
+      "grund": "Optionsflow bärisch (Feed-Score 58,4)"
+    }
   ]
 }
