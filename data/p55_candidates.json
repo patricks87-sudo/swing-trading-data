@@ -1,118 +1,118 @@
 {
-  "generated_at_utc": "2026-11-19T16:25:00Z",
-  "run_date": "2026-11-19",
+  "generated_at_utc": "2026-11-20T16:25:00Z",
+  "run_date": "2026-11-20",
   "ergebnis": "Kein Trade heute",
-  "kurzbegruendung": "RISK-OFF (0/5 Kriterien, S&P 500 unter SMA200): laut Regime-Limit keine neuen Positionen. Die Gap-up-Eröffnung ist verpufft – S&P 500 seit Eröffnung −1,21 %, VIX 25,76, nur 20 von 50 Watchlist-Werten im Plus. Hold-Test: CrowdStrike bestanden (4/4, aber P4-Stufe Beobachten und 5,4 % über SMA20); Duke Energy, Progressive, RTX (Raytheon) und Mastercard teilweise; United Parcel Service, Union Pacific, NextEra Energy, Thermo Fisher Scientific und Lockheed Martin nicht bestanden. Ohne Regime-Sperre wären Duke Energy, Progressive, RTX (Raytheon) und Mastercard nur per Limit-Order möglich, kein Kandidat zum Kurs. Second-Chance-Hinweise für den nächsten P4-Lauf: Amazon (85,3, Kauf – hohe Qualität, Optionsflow nicht mehr bärisch; Limit an SMA20, Earnings-Termin manuell prüfen), Palo Alto Networks (65,3, Kauf – solide, Bulltrap-Flag) sowie Thermo Fisher Scientific (Feed-Score 87,3).",
+  "kurzbegruendung": "RISK-OFF (0/5 Kriterien, Override „VIX über 30“, VIX 30,12): laut Regime-Limit keine neuen Positionen. Der S&P 500 liegt seit Eröffnung −0,74 % im Minus (Tag −1,55 %), der Nasdaq −3,08 %, Halbleiter (SOXX) −7,36 %; nur 19 von 50 Watchlist-Werten im Plus. Hold-Test: Union Pacific bestanden (4/4, aber P4-Stufe Beobachten); Progressive und Duke Energy teilweise mit 3/4 (über VWAP, über Eröffnung, stärker als der S&P 500 – nur das Volumen fehlt); UPS, Linde, Home Depot und Palo Alto Networks teilweise mit 2/4; Thermo Fisher Scientific, CrowdStrike und Zscaler nicht bestanden. Ohne Regime-Sperre wären Progressive, Duke Energy, UPS und Linde per Limit-Order möglich, kein Kandidat zum Kurs; Palo Alto Networks ist im aktuellen Feed wegen bärischem Optionsflow ausgeschlossen. Second-Chance-Hinweise für den nächsten P4-Lauf: Travelers (71,8, Kauf – solide, Insurance) und Apple (71,8, Kauf – solide, Optionsflow nicht mehr bärisch).",
   "kandidaten": [
     {
-      "ticker": "CRWD",
-      "name": "CrowdStrike",
-      "sector": "Cybersecurity",
-      "status": "Bestanden",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 251.94,
-      "relatives_volumen": 1.95,
+      "ticker": "PGR",
+      "name": "Progressive",
+      "sector": "Insurance",
+      "status": "Teilweise",
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
+      "vwap": 235.29,
+      "relatives_volumen": 0.78,
       "einstieg_heute": "nein",
-      "begruendung": "4 von 4 Checks: +2,23 % seit Eröffnung, über VWAP 251,94 $ (≈ 229,52 €), 3,43 Pkt. stärker als der S&P 500, Volumen 1,95× – einziger Kandidat mit klarem Kaufdruck. P4-Stufe Beobachten, Kurs 5,4 % über SMA20 (Limit an SMA20 218,63 €), Bulltrap-Flag und Earnings am 01.12. – heute nein, nicht hinterherlaufen."
+      "begruendung": "3 von 4 Checks (Teilweise): +1,23 % seit Eröffnung, über VWAP 235,29 $ (≈ 214,35 €), 1,97 Pkt. stärker als der S&P 500, Volumen 0,78×. Ohne Regime-Sperre Limit an 215,22 € (Feed-Score 86,0, Kauf – hohe Qualität); wegen RISK-OFF (VIX über 30) heute nein."
     },
     {
       "ticker": "DUK",
       "name": "Duke Energy",
       "sector": "Utilities",
       "status": "Teilweise",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 128.08,
-      "relatives_volumen": 1.3,
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
+      "vwap": 130.43,
+      "relatives_volumen": 0.95,
       "einstieg_heute": "nein",
-      "begruendung": "2 von 4 Checks: −0,80 % seit Eröffnung, unter VWAP 128,08 $ (≈ 116,68 €), aber 0,41 Pkt. stärker als der S&P 500 bei Volumen 1,30×. Ohne Regime-Sperre Limit an 116,39 € (Feed-Score 91,1, Ranking-Spitze); wegen RISK-OFF heute nein."
-    },
-    {
-      "ticker": "PGR",
-      "name": "Progressive",
-      "sector": "Insurance",
-      "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 225.61,
-      "relatives_volumen": 0.38,
-      "einstieg_heute": "nein",
-      "begruendung": "2 von 4 Checks: über VWAP 225,61 $ (≈ 205,53 €) und 0,87 Pkt. stärker als der S&P 500, aber leicht unter der Eröffnung (−0,34 %) und Volumen nur 0,38×. Ohne Regime-Sperre Limit an 205,43 € (Feed-Score auf 67,3 gesunken, Kauf – solide); wegen RISK-OFF heute nein."
-    },
-    {
-      "ticker": "RTX",
-      "name": "RTX (Raytheon)",
-      "sector": "Defense/Industrials",
-      "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 196.8,
-      "relatives_volumen": 0.98,
-      "einstieg_heute": "nein",
-      "begruendung": "2 von 4 Checks: über VWAP 196,80 $ (≈ 179,28 €) und 1,01 Pkt. stärker als der S&P 500, knapp unter der Eröffnung (−0,19 %), Volumen 0,98×. Ohne Regime-Sperre Limit an 179,45 € (Feed-Score 72,3); wegen RISK-OFF heute nein."
-    },
-    {
-      "ticker": "MA",
-      "name": "Mastercard",
-      "sector": "Payments",
-      "status": "Teilweise",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 634.43,
-      "relatives_volumen": 1.46,
-      "einstieg_heute": "nein",
-      "begruendung": "2 von 4 Checks: −1,16 % seit Eröffnung, unter VWAP 634,43 $ (≈ 577,97 €), nur 0,05 Pkt. stärker als der S&P 500 bei Volumen 1,46×. Feed-Score auf 62,8 (Beobachten) gesunken; ohne Regime-Sperre allenfalls Limit an 574,63 €, wegen RISK-OFF heute nein."
+      "begruendung": "3 von 4 Checks (Teilweise): +0,28 % seit Eröffnung, über VWAP 130,43 $ (≈ 118,82 €), 1,02 Pkt. stärker als der S&P 500, Volumen 0,95×. Ohne Regime-Sperre Limit an 118,77 € (Feed-Score 89,5, Ranking-Spitze); wegen RISK-OFF heute nein. Earnings-Termin weiter unbekannt."
     },
     {
       "ticker": "UPS",
-      "name": "United Parcel Service",
+      "name": "UPS (United Parcel Service)",
       "sector": "Transportation",
-      "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": true},
-      "vwap": 109.69,
-      "relatives_volumen": 1.3,
+      "status": "Teilweise",
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
+      "vwap": 109.28,
+      "relatives_volumen": 2.26,
       "einstieg_heute": "nein",
-      "begruendung": "Nur 1 von 4 Checks: −1,80 % seit Eröffnung, unter VWAP 109,69 $ (≈ 99,93 €), 0,60 Pkt. schwächer als der S&P 500 – erhöhtes Volumen (1,30×) auf der Verkaufsseite. Heute nein, Kandidat bleibt auf der Liste (Feed-Score 86,0)."
+      "begruendung": "2 von 4 Checks (Teilweise): −0,63 % seit Eröffnung, 0,11 Pkt. stärker als der S&P 500, unter VWAP 109,28 $ (≈ 99,55 €), Volumen 2,26×. Ohne Regime-Sperre Limit an 99,01 € (Feed-Score 81,3); wegen RISK-OFF heute nein."
     },
     {
       "ticker": "UNP",
       "name": "Union Pacific",
       "sector": "Transportation",
-      "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": true},
-      "vwap": 293.13,
-      "relatives_volumen": 1.38,
+      "status": "Bestanden",
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
+      "vwap": 293.81,
+      "relatives_volumen": 1.21,
       "einstieg_heute": "nein",
-      "begruendung": "Nur 1 von 4 Checks: −2,99 % seit Eröffnung, unter VWAP 293,13 $ (≈ 267,04 €), 1,78 Pkt. schwächer als der S&P 500 bei Volumen 1,38× – schwächster Kandidat. Feed-Score auf 63,6 (Beobachten) gefallen; heute nein."
+      "begruendung": "4 von 4 Checks (Bestanden): +0,18 % seit Eröffnung, über VWAP 293,81 $ (≈ 267,66 €), 0,92 Pkt. stärker als der S&P 500, Volumen 1,21×. Einziger Kandidat mit 4 von 4 Checks, aber P4-Stufe Beobachten – heute nein; Feed-Score inzwischen 73,6 (Kauf – solide), Hinweis für den nächsten P4-Lauf."
     },
     {
-      "ticker": "NEE",
-      "name": "NextEra Energy",
-      "sector": "Utilities",
-      "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 83.84,
-      "relatives_volumen": 0.95,
+      "ticker": "LIN",
+      "name": "Linde",
+      "sector": "Materials",
+      "status": "Teilweise",
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
+      "vwap": 512.72,
+      "relatives_volumen": 1.3,
       "einstieg_heute": "nein",
-      "begruendung": "Nur 1 von 4 Checks: −0,67 % seit Eröffnung, unter VWAP 83,84 $ (≈ 76,38 €), Volumen 0,95×; nur relativ stärker als der S&P 500 (+0,54 Pkt.). Im heutigen Feed Optionsflow bärisch (harter Ausschluss, Score 50,6) – heute nein."
+      "begruendung": "2 von 4 Checks (Teilweise): −0,12 % seit Eröffnung, 0,62 Pkt. stärker als der S&P 500, unter VWAP 512,72 $ (≈ 467,09 €), Volumen 1,30×. Ohne Regime-Sperre Limit an 465,61 € (Feed-Score 66,5); wegen RISK-OFF heute nein. Materials-Sektor negativ (Rang 15)."
+    },
+    {
+      "ticker": "HD",
+      "name": "Home Depot",
+      "sector": "Consumer Discretionary",
+      "status": "Teilweise",
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
+      "vwap": 344.43,
+      "relatives_volumen": 0.97,
+      "einstieg_heute": "nein",
+      "begruendung": "2 von 4 Checks (Teilweise): +0,75 % seit Eröffnung, 1,49 Pkt. stärker als der S&P 500, unter VWAP 344,43 $ (≈ 313,78 €), Volumen 0,97×. P4-Stufe Beobachten – heute nein; Feed-Score inzwischen 65,7 (Kauf – solide), Hinweis für den nächsten P4-Lauf."
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Cybersecurity",
+      "status": "Teilweise",
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": true},
+      "vwap": 352.8,
+      "relatives_volumen": 1.6,
+      "einstieg_heute": "nein",
+      "begruendung": "2 von 4 Checks (Teilweise): −1,07 % seit Eröffnung, über VWAP 352,80 $ (≈ 321,40 €), 0,33 Pkt. schwächer als der S&P 500, Volumen 1,60×. Laut P4 Kauf – solide mit Limit an SMA20, im aktuellen Feed jedoch Optionsflow bärisch (harter Ausschluss, Score 48,5) – heute nein."
     },
     {
       "ticker": "TMO",
       "name": "Thermo Fisher Scientific",
       "sector": "MedTech",
       "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 697.64,
-      "relatives_volumen": 0.72,
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
+      "vwap": 685.23,
+      "relatives_volumen": 0.98,
       "einstieg_heute": "nein",
-      "begruendung": "Nur 1 von 4 Checks: −0,79 % seit Eröffnung, unter VWAP 697,64 $ (≈ 635,55 €), Volumen 0,72×, relativ 0,42 Pkt. stärker als der S&P 500. P4-Stufe Beobachten – heute nein; Feed-Score inzwischen 87,3 (Kauf – hohe Qualität), Hinweis für den nächsten P4-Lauf."
+      "begruendung": "0 von 4 Checks (Nicht bestanden): −1,13 % seit Eröffnung, unter VWAP 685,23 $ (≈ 624,24 €), 0,39 Pkt. schwächer als der S&P 500, Volumen 0,98×. Heute nein, Kandidat bleibt auf der Liste (Feed-Score 74,9, Kauf – solide)."
     },
     {
-      "ticker": "LMT",
-      "name": "Lockheed Martin",
-      "sector": "Defense",
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "sector": "Cybersecurity",
       "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 574.73,
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
+      "vwap": 234.17,
+      "relatives_volumen": 0.87,
+      "einstieg_heute": "nein",
+      "begruendung": "1 von 4 Checks (Nicht bestanden): −1,06 % seit Eröffnung, über VWAP 234,17 $ (≈ 213,33 €), 0,32 Pkt. schwächer als der S&P 500, Volumen 0,87×. Heute nein; Feed-Score auf 64,7 (Beobachten) gesunken, Earnings am 01.12.2026."
+    },
+    {
+      "ticker": "ZS",
+      "name": "Zscaler",
+      "sector": "Cybersecurity",
+      "status": "Nicht bestanden",
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
+      "vwap": 200.12,
       "relatives_volumen": 0.85,
       "einstieg_heute": "nein",
-      "begruendung": "Nur 1 von 4 Checks: −1,16 % seit Eröffnung, unter VWAP 574,73 $ (≈ 523,58 €), Volumen 0,85×. P4-Stufe Beobachten, Feed jetzt ohne Setup (47,4), Kurs 5,4 % unter SMA20 – heute nein."
+      "begruendung": "1 von 4 Checks (Nicht bestanden): −1,30 % seit Eröffnung, über VWAP 200,12 $ (≈ 182,31 €), 0,56 Pkt. schwächer als der S&P 500, Volumen 0,85×. P4-Stufe Beobachten, Kurs 6,8 % unter SMA20, Earnings am 02.12.2026 – heute nein."
     }
   ]
 }
