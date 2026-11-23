@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-20T16:44:31.986544+00:00",
+  "generated_at_utc": "2026-11-23T16:44:24.313715+00:00",
   "waehrung": "EUR",
   "hinweis": "Hypothetisch, ohne Steuern. Depot-Simulation mit 8.000 € Start, 75 € Risiko je Trade, Schutz-Stop 2× ATR, Verkauf nach 10 Handelstagen, max. 5 Positionen / 375 € Gesamtrisiko / 2 je Sektor, 1 € Gebühr je Order. Echte Trades stehen im Trade-Journal.",
   "start": "2026-08-12",
@@ -75,7 +75,8 @@
     "2026-11-17",
     "2026-11-18",
     "2026-11-19",
-    "2026-11-20"
+    "2026-11-20",
+    "2026-11-23"
   ],
   "reihen": [
     {
@@ -142,10 +143,10 @@
         108.41,
         108.82,
         109.97,
-        108.55,
+        108.56,
         107.85,
         109.61,
-        109.73,
+        109.72,
         110.95,
         111.67,
         112.45,
@@ -153,7 +154,8 @@
         110.97,
         109.27,
         109.03,
-        109.73
+        107.43,
+        109.04
       ]
     },
     {
@@ -231,7 +233,8 @@
         112.41,
         110.32,
         108.49,
-        108.94
+        106.78,
+        108.41
       ]
     },
     {
@@ -309,7 +312,8 @@
         95.38,
         95.8,
         93.87,
-        90.52
+        88.57,
+        95.01
       ]
     },
     {
@@ -387,42 +391,43 @@
         99.15,
         98.69,
         96.97,
-        95.16
+        93.75,
+        98.01
       ]
     }
   ],
   "zusammenfassung": {
     "neu": {
       "label": "Depot-Simulation (deine Regeln)",
-      "gesamt_pct": 9.73
+      "gesamt_pct": 9.04
     },
     "alle": {
       "label": "Alle Kandidaten, 10 Tage gehalten",
-      "gesamt_pct": 8.94
+      "gesamt_pct": 8.41
     },
     "qqq": {
       "label": "Nasdaq-100 (QQQ)",
-      "gesamt_pct": -9.48
+      "gesamt_pct": -4.99
     },
     "urth": {
       "label": "MSCI World (URTH)",
-      "gesamt_pct": -4.84
+      "gesamt_pct": -1.99
     }
   },
   "statistik": {
     "neu": {
       "startkapital_eur": 8000.0,
-      "endwert_eur": 8778.4,
-      "trades_abgeschlossen": 28,
-      "trades_offen": 4,
-      "trefferquote_pct": 64.0,
-      "schnitt_trade_eur": 31.4,
+      "endwert_eur": 8723.2,
+      "trades_abgeschlossen": 29,
+      "trades_offen": 5,
+      "trefferquote_pct": 62.0,
+      "schnitt_trade_eur": 25.9,
       "bester_trade_eur": 197.65,
       "schlechtester_trade_eur": -105.6,
-      "gebuehren_eur": 60.0,
+      "gebuehren_eur": 63.0,
       "max_gleichzeitig": 5,
       "nicht_gekauft": {
-        "plaetze": 12,
+        "plaetze": 14,
         "risiko": 0,
         "sektor": 5,
         "kapital": 0,
@@ -431,13 +436,25 @@
       }
     },
     "alle": {
-      "trades": 95,
-      "abgeschlossen": 81,
-      "trefferquote_pct": 70.0,
-      "schnitt_trade_pct": 2.38
+      "trades": 99,
+      "abgeschlossen": 82,
+      "trefferquote_pct": 71.0,
+      "schnitt_trade_pct": 2.31
     }
   },
   "trades_neu": [
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "start": "2026-11-16",
+      "ende": "2026-11-20",
+      "stueck": 2,
+      "ausstieg": "Stop",
+      "einstieg_eur": 351.02,
+      "ausstieg_eur": 317.46,
+      "ergebnis_eur": -69.13,
+      "rendite_pct": -9.56
+    },
     {
       "ticker": "TRV",
       "name": "Travelers",
@@ -446,9 +463,9 @@
       "stueck": 4,
       "ausstieg": "10 Tage",
       "einstieg_eur": 356.82,
-      "ausstieg_eur": 364.2,
-      "ergebnis_eur": 27.52,
-      "rendite_pct": 2.07
+      "ausstieg_eur": 358.48,
+      "ergebnis_eur": 4.62,
+      "rendite_pct": 0.46
     },
     {
       "ticker": "PGR",
@@ -458,9 +475,9 @@
       "stueck": 8,
       "ausstieg": "10 Tage",
       "einstieg_eur": 205.47,
-      "ausstieg_eur": 215.43,
-      "ergebnis_eur": 77.7,
-      "rendite_pct": 4.85
+      "ausstieg_eur": 210.94,
+      "ergebnis_eur": 41.74,
+      "rendite_pct": 2.66
     },
     {
       "ticker": "UNH",
@@ -481,9 +498,9 @@
       "ende": "2026-11-18",
       "stueck": 7,
       "ausstieg": "10 Tage",
-      "einstieg_eur": 175.09,
-      "ausstieg_eur": 179.62,
-      "ergebnis_eur": 29.7,
+      "einstieg_eur": 174.43,
+      "ausstieg_eur": 178.94,
+      "ergebnis_eur": 29.58,
       "rendite_pct": 2.59
     },
     {
@@ -777,24 +794,14 @@
   ],
   "offen_neu": [
     {
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "start": "2026-11-16",
-      "stueck": 2,
-      "einstieg_eur": 351.02,
-      "kurs_eur": 323.51,
-      "tage": 5,
-      "ergebnis_eur": -56.03
-    },
-    {
       "ticker": "RTX",
       "name": "RTX (Raytheon)",
       "start": "2026-11-18",
       "stueck": 7,
-      "einstieg_eur": 179.21,
-      "kurs_eur": 176.34,
-      "tage": 3,
-      "ergebnis_eur": -21.06
+      "einstieg_eur": 178.53,
+      "kurs_eur": 177.75,
+      "tage": 4,
+      "ergebnis_eur": -6.47
     },
     {
       "ticker": "CVX",
@@ -802,9 +809,9 @@
       "start": "2026-11-18",
       "stueck": 7,
       "einstieg_eur": 193.4,
-      "kurs_eur": 190.66,
-      "tage": 3,
-      "ergebnis_eur": -20.19
+      "kurs_eur": 189.37,
+      "tage": 4,
+      "ergebnis_eur": -29.21
     },
     {
       "ticker": "AMZN",
@@ -812,9 +819,29 @@
       "start": "2026-11-20",
       "stueck": 3,
       "einstieg_eur": 230.09,
-      "kurs_eur": 229.28,
-      "tage": 1,
-      "ergebnis_eur": -3.44
+      "kurs_eur": 234.3,
+      "tage": 2,
+      "ergebnis_eur": 11.61
+    },
+    {
+      "ticker": "TMO",
+      "name": "Thermo Fisher Scientific",
+      "start": "2026-11-20",
+      "stueck": 2,
+      "einstieg_eur": 628.75,
+      "kurs_eur": 631.81,
+      "tage": 2,
+      "ergebnis_eur": 5.12
+    },
+    {
+      "ticker": "UPS",
+      "name": "UPS (United Parcel Service)",
+      "start": "2026-11-20",
+      "stueck": 14,
+      "einstieg_eur": 99.63,
+      "kurs_eur": 99.06,
+      "tage": 2,
+      "ergebnis_eur": -9.01
     }
   ]
 }
