@@ -1,46 +1,46 @@
 {
-  "generated_at_utc": "2026-11-24T16:44:08.720198+00:00",
+  "generated_at_utc": "2026-11-25T16:44:53.476045+00:00",
   "benchmark": "Nasdaq-100 (QQQ)",
   "waehrung": "USD",
   "gruppen": [
     {
       "gruppe": "aktiv",
       "label": "Aktiv beobachtet",
-      "eintraege": 10,
+      "eintraege": 9,
       "seit_aufnahme": {
-        "anzahl": 10,
-        "schnitt_ueberrendite_pct": 3.25,
-        "trefferquote_pct": 80.0
+        "anzahl": 9,
+        "schnitt_ueberrendite_pct": 6.93,
+        "trefferquote_pct": 100.0
       },
       "nach_5_tagen": {
-        "anzahl": 6,
-        "schnitt_ueberrendite_pct": -0.45,
-        "trefferquote_pct": 33.0
+        "anzahl": 4,
+        "schnitt_ueberrendite_pct": -0.64,
+        "trefferquote_pct": 25.0
       },
       "nach_10_tagen": {
-        "anzahl": 5,
-        "schnitt_ueberrendite_pct": 4.32,
-        "trefferquote_pct": 80.0
+        "anzahl": 3,
+        "schnitt_ueberrendite_pct": 4.99,
+        "trefferquote_pct": 67.0
       },
       "nach_20_tagen": null
     },
     {
       "gruppe": "invalidiert",
       "label": "Aussortiert – These widerlegt",
-      "eintraege": 45,
+      "eintraege": 48,
       "seit_aufnahme": {
-        "anzahl": 45,
-        "schnitt_ueberrendite_pct": -4.77,
-        "trefferquote_pct": 42.0
+        "anzahl": 48,
+        "schnitt_ueberrendite_pct": -3.77,
+        "trefferquote_pct": 46.0
       },
       "nach_5_tagen": {
-        "anzahl": 42,
-        "schnitt_ueberrendite_pct": 1.04,
-        "trefferquote_pct": 50.0
+        "anzahl": 43,
+        "schnitt_ueberrendite_pct": 1.15,
+        "trefferquote_pct": 49.0
       },
       "nach_10_tagen": {
         "anzahl": 37,
-        "schnitt_ueberrendite_pct": 2.94,
+        "schnitt_ueberrendite_pct": 2.92,
         "trefferquote_pct": 65.0
       },
       "nach_20_tagen": {
@@ -52,21 +52,21 @@
     {
       "gruppe": "zeitlimit",
       "label": "Aussortiert – Zeitlimit",
-      "eintraege": 46,
+      "eintraege": 48,
       "seit_aufnahme": {
-        "anzahl": 46,
-        "schnitt_ueberrendite_pct": 7.2,
-        "trefferquote_pct": 76.0
+        "anzahl": 48,
+        "schnitt_ueberrendite_pct": 8.89,
+        "trefferquote_pct": 77.0
       },
       "nach_5_tagen": {
-        "anzahl": 46,
-        "schnitt_ueberrendite_pct": 1.48,
-        "trefferquote_pct": 57.0
+        "anzahl": 48,
+        "schnitt_ueberrendite_pct": 1.42,
+        "trefferquote_pct": 56.0
       },
       "nach_10_tagen": {
-        "anzahl": 42,
-        "schnitt_ueberrendite_pct": 2.47,
-        "trefferquote_pct": 69.0
+        "anzahl": 47,
+        "schnitt_ueberrendite_pct": 2.87,
+        "trefferquote_pct": 72.0
       },
       "nach_20_tagen": {
         "anzahl": 35,
@@ -75,5 +75,5 @@
       }
     }
   ],
-  "fazit": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,69 Prozentpunkte über dem Nasdaq (n=79) – überwiegend liegengelassene Gewinne."
+  "fazit": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,89 Prozentpunkte über dem Nasdaq (n=84) – überwiegend liegengelassene Gewinne."
 }
