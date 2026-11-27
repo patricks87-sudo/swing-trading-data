@@ -1,10 +1,25 @@
 {
- "generated_at_utc": "2026-11-26T16:55:00Z",
- "top3": [
-  {"ticker": "V", "name": "Visa", "aktion": "Beobachten", "begruendung": "#1 Beste Portfolio-Chance – heute kein Kauf (RISK-OFF, 0 neue Positionen; Thanksgiving, US-Börse geschlossen). P4-Score 93,7 (Kauf – hohe Qualität, bester Wert der Watchlist), Optionsflow wieder bullisch (Call/Put 2,14), Hold-Test 25.11. bestanden (4/4, Volumen 1,31×), Payments Rang 1, Kurs 1,26 % über der SMA20, Earnings erst 26.01.2027. Levels laut Feed: Einstieg 387,04 € (zum Kurs), Schutz-Stop 370,26 €, 4 Stück, Kapital 1.548 €, Risiko 67 €. Erster Kandidat, sobald das Regime mindestens NEUTRAL meldet."},
-  {"ticker": "UNP", "name": "Union Pacific", "aktion": "Beobachten", "begruendung": "#2 Zweitbeste Alternative – heute kein Kauf (RISK-OFF). P4-Score 88,4 (Kauf – hohe Qualität), Kapitalfluss 90, Optionsflow bullisch, Kurs an der SMA20 (−0,16 %); Hold-Test 25.11. 3/4 (nur Volumen 0,87× fehlt). Levels laut Feed: Einstieg 272,12 €, Schutz-Stop 259,26 €, 5 Stück, Kapital 1.361 €, Risiko 64 €. Neu ins Tracking aufgenommen."},
-  {"ticker": "GD", "name": "General Dynamics", "aktion": "Beobachten", "begruendung": "#3 Watchlist-Kandidat – heute kein Kauf (RISK-OFF). P4-Score 76,9 (Kauf – hohe Qualität), Hold-Test 25.11. bestanden (4/4, Volumen 1,44×, 1,21 Pkt. stärker als der S&P 500), relative Stärke 91; Schwachpunkt Trend-Ampel rot. Levels laut Feed: Einstieg 328,57 €, Schutz-Stop 314,01 €, 5 Stück, Kapital 1.643 €, Risiko 73 €. Neu ins Tracking aufgenommen."}
- ],
- "gesamteinschaetzung": "Kein Trade heute. Thanksgiving – die US-Börsen sind geschlossen, der Feed bewertet den Schluss vom 25.11. Regime RISK-OFF (0/5 Kriterien, Override „S&P 500 unter SMA200“): S&P 500 5,43 % unter der SMA50, Nasdaq 4,92 % unter der SMA20, VIX 26,67, nur 38 % der Watchlist über der SMA50 – daher 0 neue Positionen. Depot: keine Swing-Positionen, gebundenes Risiko 0 €, freies Risiko 375 €, freie Plätze 0 (Regime). Die vier Bestandspositionen (Oracle, Rheinmetall, Alphabet, Bloom Energy) laufen außerhalb des Systems; Oracle bleibt auf „Prüfen“ (Optionsflow bärisch, Kapitalfluss- und Trend-Ampel rot, 20,16 % unter der SMA50). Dem Kauf am nächsten ist Visa (93,7, Hold-Test 4/4) – es fehlt nur der Regimewechsel auf mindestens NEUTRAL. Duke Energy hat den Hold-Test nicht bestanden und erreicht am nächsten Handelstag das 15-Tage-Zeitlimit. Freitag (27.11.) verkürzter US-Handel bis 19:00 MEZ. Rohstoff-Ampel ROT (0/6 Kriterien), eine Gold/Silber-Empfehlung liefert der Feed heute nicht (Rotationsstatus: „Aktien schwach, keine Rotation“) – nur Information, kein System-Trade.",
- "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,82 Prozentpunkte über dem Nasdaq (n=84) – überwiegend liegengelassene Gewinne."
+  "generated_at_utc": "2026-11-27T16:50:11Z",
+  "top3": [
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "aktion": "Beobachten",
+      "begruendung": "Kein Trade heute. #1 Beste Chance und am nächsten an einem Kauf: Score 89,2 (P4 93,7, Kauf – hohe Qualität) im stärksten Sektor Payments, Trend grün, Optionsflow im P1-Feed wieder neutral, Hold-Test 3/4 (nur Volumen am Brückentag unter Schnitt). Es fehlt allein ein Regime NEUTRAL oder RISK-ON; dann Einstieg nach P4-Levels (zuletzt ca. 386,62 €, Schutz-Stop ca. 369,85 €, 4 Stück, Risiko ca. 67 €)."
+    },
+    {
+      "ticker": "DUK",
+      "name": "Duke Energy",
+      "aktion": "Beobachten",
+      "begruendung": "#2 Zweitbeste Alternative: Score 84,2 (+2 News, P4 89,3, Kauf – hohe Qualität), defensiver Versorger mit grünem Trend, Kurs 1,94 % über der SMA20; Hold-Test nur 2/4 bei sehr dünnem Volumen (0,39×). Nach Zeitlimit heute neu in die Liste aufgenommen. RISK-OFF – kein Einstieg."
+    },
+    {
+      "ticker": "TRV",
+      "name": "Travelers",
+      "aktion": "Beobachten",
+      "begruendung": "#3 Watchlist-Kandidat: Score 77,8 (Kauf – hohe Qualität), Sektor Insurance auf Rang 3, Trend grün, Optionsflow neutral; Hold-Test nicht bestanden (1/4) und schwacher Kapitalfluss. RISK-OFF – nur beobachten, Zeitlimit am nächsten Handelstag."
+    }
+  ],
+  "gesamteinschaetzung": "Kein Trade heute. Regime RISK-OFF (1/5 Kriterien, Override „S&P 500 unter SMA200“, VIX 25,37) erlaubt 0 neue Positionen; es gibt keine offenen Swing-Positionen, das Risikobudget von 375 € ist damit vollständig frei, aber gesperrt. Am Brückentag nach Thanksgiving (verkürzter Handel) hat kein Kandidat den Hold-Test bestanden; im P1-Feed sind Union Pacific, UPS, Home Depot, RTX, Mastercard, Progressive und Apple wegen bärischen Optionsflows hart ausgeschlossen, Visa ist wieder neutral. Depot: vier Bestandspositionen außerhalb des Systems – Oracle zur Prüfung (Kapitalfluss- und Trend-Ampel rot, rund −40 %), Rheinmetall, Alphabet und Bloom Energy halten. Rohstoff-Ampel ROT (0/6, keine Rotation in Gold/Silber); eine Gold/Silber-Empfehlung liefert der Feed derzeit nicht (Datenbasis unvollständig) – nur Information, kein System-Trade. Filter-Bilanz: aussortierte Kandidaten liegen nach 10 Tagen +2,82 Prozentpunkte über dem Nasdaq (n=84) – Hinweis, dass die Ausstiegsregeln zu streng sein könnten.",
+  "filter_bilanz": "Aussortierte Kandidaten lagen 10 Handelstage nach Aufnahme im Schnitt +2,82 Prozentpunkte über dem Nasdaq (n=84) – überwiegend liegengelassene Gewinne."
 }
