@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-26T16:44:53.294497+00:00",
+  "generated_at_utc": "2026-11-27T16:44:31.161887+00:00",
   "waehrung": "EUR",
   "hinweis": "Hypothetisch, ohne Steuern. Depot-Simulation mit 8.000 € Start, 75 € Risiko je Trade, Schutz-Stop 2× ATR, Verkauf nach 10 Handelstagen, max. 5 Positionen / 375 € Gesamtrisiko / 2 je Sektor, 1 € Gebühr je Order. Echte Trades stehen im Trade-Journal.",
   "start": "2026-08-12",
@@ -78,7 +78,8 @@
     "2026-11-20",
     "2026-11-23",
     "2026-11-24",
-    "2026-11-25"
+    "2026-11-25",
+    "2026-11-27"
   ],
   "reihen": [
     {
@@ -159,7 +160,8 @@
         107.43,
         108.69,
         109.81,
-        109.29
+        109.29,
+        110.11
       ]
     },
     {
@@ -240,7 +242,8 @@
         106.78,
         108.2,
         109.76,
-        109.68
+        109.68,
+        111.14
       ]
     },
     {
@@ -321,7 +324,8 @@
         88.57,
         94.75,
         93.41,
-        92.34
+        92.34,
+        94.32
       ]
     },
     {
@@ -402,32 +406,33 @@
         93.75,
         97.65,
         97.87,
-        97.38
+        97.38,
+        98.67
       ]
     }
   ],
   "zusammenfassung": {
     "neu": {
       "label": "Depot-Simulation (deine Regeln)",
-      "gesamt_pct": 9.29
+      "gesamt_pct": 10.11
     },
     "alle": {
       "label": "Alle Kandidaten, 10 Tage gehalten",
-      "gesamt_pct": 9.68
+      "gesamt_pct": 11.14
     },
     "qqq": {
       "label": "Nasdaq-100 (QQQ)",
-      "gesamt_pct": -7.66
+      "gesamt_pct": -5.68
     },
     "urth": {
       "label": "MSCI World (URTH)",
-      "gesamt_pct": -2.62
+      "gesamt_pct": -1.33
     }
   },
   "statistik": {
     "neu": {
       "startkapital_eur": 8000.0,
-      "endwert_eur": 8743.2,
+      "endwert_eur": 8808.8,
       "trades_abgeschlossen": 29,
       "trades_offen": 5,
       "trefferquote_pct": 62.0,
@@ -446,7 +451,7 @@
       }
     },
     "alle": {
-      "trades": 107,
+      "trades": 111,
       "abgeschlossen": 87,
       "trefferquote_pct": 70.0,
       "schnitt_trade_pct": 2.03
@@ -809,9 +814,9 @@
       "start": "2026-11-18",
       "stueck": 7,
       "einstieg_eur": 178.53,
-      "kurs_eur": 178.97,
-      "tage": 6,
-      "ergebnis_eur": 2.06
+      "kurs_eur": 180.36,
+      "tage": 7,
+      "ergebnis_eur": 11.79
     },
     {
       "ticker": "CVX",
@@ -819,9 +824,9 @@
       "start": "2026-11-18",
       "stueck": 7,
       "einstieg_eur": 193.4,
-      "kurs_eur": 192.43,
-      "tage": 6,
-      "ergebnis_eur": -7.76
+      "kurs_eur": 195.38,
+      "tage": 7,
+      "ergebnis_eur": 12.85
     },
     {
       "ticker": "AMZN",
@@ -829,9 +834,9 @@
       "start": "2026-11-20",
       "stueck": 3,
       "einstieg_eur": 230.09,
-      "kurs_eur": 222.97,
-      "tage": 4,
-      "ergebnis_eur": -22.36
+      "kurs_eur": 231.95,
+      "tage": 5,
+      "ergebnis_eur": 4.56
     },
     {
       "ticker": "TMO",
@@ -839,9 +844,9 @@
       "start": "2026-11-20",
       "stueck": 2,
       "einstieg_eur": 628.75,
-      "kurs_eur": 625.35,
-      "tage": 4,
-      "ergebnis_eur": -7.81
+      "kurs_eur": 622.48,
+      "tage": 5,
+      "ergebnis_eur": -13.53
     },
     {
       "ticker": "UPS",
@@ -849,9 +854,9 @@
       "start": "2026-11-20",
       "stueck": 14,
       "einstieg_eur": 99.63,
-      "kurs_eur": 101.69,
-      "tage": 4,
-      "ergebnis_eur": 27.79
+      "kurs_eur": 102.72,
+      "tage": 5,
+      "ergebnis_eur": 42.21
     }
   ]
 }
