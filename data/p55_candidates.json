@@ -1,118 +1,118 @@
 {
-  "generated_at_utc": "2026-11-26T16:21:10Z",
-  "run_date": "2026-11-26",
+  "generated_at_utc": "2026-11-27T16:16:00Z",
+  "run_date": "2026-11-27",
   "ergebnis": "Kein Trade heute",
-  "kurzbegruendung": "RISK-OFF (0/5 Kriterien, Override „S&P 500 unter SMA200“, VIX 26,7): laut Regime-Limit keine neuen Positionen. Heute Thanksgiving – US-Börsen geschlossen; der Feed liefert den Hold-Test der letzten vollständigen Sitzung (25.11., 78 Fünf-Minuten-Kerzen), in der der S&P 500 seit Eröffnung +1,93 % zulegte. Bestanden (4/4): Visa und General Dynamics; Teilweise: Union Pacific und Home Depot (3/4), UPS, Travelers, RTX, NextEra Energy und Linde (2/4); Nicht bestanden: Duke Energy (1/4, unter VWAP, 1,74 Pkt. schwächer als der S&P 500). Ohne Regime-Sperre wären Visa und General Dynamics zum Kurs, Union Pacific, UPS, Travelers, Home Depot, RTX, NextEra Energy und Linde per Limit möglich. Kein Second-Chance-Hinweis: alle übrigen Titel mit Score ≥ 65 (Mastercard, Progressive, Apple, Northrop Grumman) sind hart ausgeschlossen. Freitag (27.11.) verkürzter US-Handel bis 19:00 MEZ.",
+  "kurzbegruendung": "RISK-OFF (1/5 Kriterien, Override „S&P 500 unter SMA200“, VIX 25,61): laut Regime-Limit keine neuen Positionen. Tag nach Thanksgiving, verkürzter US-Handel bis 19:00 MEZ; der S&P 500 liegt seit Eröffnung −0,16 % (Tagesplus +1,23 % kam aus der Eröffnungslücke). Hold-Test (21 Fünf-Minuten-Kerzen): kein Kandidat Bestanden – das Volumen liegt bei allen unter dem Vortagesschnitt (Brückentag). Teilweise: Visa, UPS und Linde (3/4) sowie Duke Energy, Home Depot und NextEra Energy (2/4); Nicht bestanden: Union Pacific, General Dynamics und RTX (0/4), Travelers (1/4). Ohne Regime-Sperre wären Duke Energy, Linde, NextEra Energy und Home Depot (an der SMA20) per Limit möglich; bei Visa, UPS, Home Depot, Union Pacific und RTX meldet der aktuelle Feed zudem bärischen Optionsflow (harter Ausschluss). Second-Chance-Hinweis für den nächsten P4-Lauf: Mastercard (Score 90,6, Kauf – hohe Qualität, Optionsflow nicht mehr bärisch).",
   "kandidaten": [
     {
       "ticker": "V",
       "name": "Visa",
       "sector": "Payments",
-      "status": "Bestanden",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 421.48,
-      "relatives_volumen": 1.31,
+      "status": "Teilweise",
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
+      "vwap": 428.72,
+      "relatives_volumen": 0.93,
       "einstieg_heute": "nein",
-      "begruendung": "Hold-Test der letzten US-Sitzung (25.11., heute Thanksgiving): 4 von 4 Checks (Bestanden): +2,19 % seit Eröffnung, über VWAP 421,48 $ (≈ 384,39 €), 0,26 Pkt. stärker als der S&P 500, Volumen 1,31×. P4-Stufe Kauf – hohe Qualität; ohne Regime-Sperre Einstieg zum Kurs (387,04 €, Stop 370,26 €). Wegen RISK-OFF (max. 0 neue Positionen) und geschlossener US-Börse heute nein."
+      "begruendung": "3 von 4 Checks (Teilweise): +1,67 % seit Eröffnung, über VWAP 428,72 $ (≈ 390,56 €), 1,83 Pkt. stärker als der S&P 500, Volumen 0,93×. P4-Stufe Kauf – hohe Qualität, ohne Regime-Sperre Limit an 392,24 € (Stop 375,81 €); der aktuelle Feed meldet aber Optionsflow bärisch (harter Ausschluss) – vor P1 prüfen. Wegen RISK-OFF (max. 0 neue Positionen) heute nein."
     },
     {
       "ticker": "UNP",
       "name": "Union Pacific",
       "sector": "Transportation",
-      "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
-      "vwap": 295.25,
-      "relatives_volumen": 0.87,
+      "status": "Nicht bestanden",
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
+      "vwap": 298.41,
+      "relatives_volumen": 0.68,
       "einstieg_heute": "nein",
-      "begruendung": "Hold-Test der letzten US-Sitzung (25.11., heute Thanksgiving): 3 von 4 Checks (Teilweise): +3,38 % seit Eröffnung, über VWAP 295,25 $ (≈ 269,27 €), 1,45 Pkt. stärker als der S&P 500, Volumen 0,87×. P4-Stufe Kauf – hohe Qualität; ohne Regime-Sperre Limit an 272,12 € (Stop 259,26 €). Wegen RISK-OFF (max. 0 neue Positionen) und geschlossener US-Börse heute nein."
+      "begruendung": "0 von 4 Checks (Nicht bestanden): −0,53 % seit Eröffnung, unter VWAP 298,41 $ (≈ 271,85 €), 0,37 Pkt. schwächer als der S&P 500, Volumen 0,68×. Hold-Test nicht bestanden – heute nicht, bleibt aber auf der Liste; aktueller Feed zusätzlich mit Optionsflow bärisch (harter Ausschluss). RISK-OFF: max. 0 neue Positionen."
     },
     {
       "ticker": "DUK",
       "name": "Duke Energy",
       "sector": "Utilities",
-      "status": "Nicht bestanden",
-      "checks": {"ueber_vwap": false, "ueber_eroeffnung": true, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
-      "vwap": 132.28,
-      "relatives_volumen": 0.96,
+      "status": "Teilweise",
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
+      "vwap": 131.92,
+      "relatives_volumen": 0.39,
       "einstieg_heute": "nein",
-      "begruendung": "Hold-Test der letzten US-Sitzung (25.11., heute Thanksgiving): 1 von 4 Checks (Nicht bestanden): +0,19 % seit Eröffnung, unter VWAP 132,28 $ (≈ 120,64 €), 1,74 Pkt. schwächer als der S&P 500, Volumen 0,96×. P4-Stufe Kauf – hohe Qualität; Hold-Test nicht bestanden – auch ohne Regime-Sperre heute nicht, bleibt aber auf der Liste. Wegen RISK-OFF (max. 0 neue Positionen) und geschlossener US-Börse heute nein."
+      "begruendung": "2 von 4 Checks (Teilweise): +0,23 % seit Eröffnung, knapp unter VWAP 131,92 $ (≈ 120,18 €), 0,39 Pkt. stärker als der S&P 500, Volumen nur 0,39×. P4-Stufe Kauf – hohe Qualität; ohne Regime-Sperre Limit an 120,08 € (Stop 116,40 €). Wegen RISK-OFF (max. 0 neue Positionen) heute nein."
     },
     {
       "ticker": "UPS",
       "name": "UPS (United Parcel Service)",
       "sector": "Transportation",
       "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
-      "vwap": 111.29,
-      "relatives_volumen": 0.97,
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
+      "vwap": 112.22,
+      "relatives_volumen": 0.65,
       "einstieg_heute": "nein",
-      "begruendung": "Hold-Test der letzten US-Sitzung (25.11., heute Thanksgiving): 2 von 4 Checks (Teilweise): +0,99 % seit Eröffnung, über VWAP 111,29 $ (≈ 101,50 €), 0,94 Pkt. schwächer als der S&P 500, Volumen 0,97×. P4-Stufe Kauf – hohe Qualität; ohne Regime-Sperre Limit an 101,66 € (Stop 96,64 €). Wegen RISK-OFF (max. 0 neue Positionen) und geschlossener US-Börse heute nein."
+      "begruendung": "3 von 4 Checks (Teilweise): +0,08 % seit Eröffnung, knapp über VWAP 112,22 $ (≈ 102,23 €), 0,24 Pkt. stärker als der S&P 500, Volumen 0,65×. P4-Stufe Kauf – hohe Qualität, ohne Regime-Sperre Limit an 102,31 € (Stop 97,51 €); der aktuelle Feed meldet aber Optionsflow bärisch (harter Ausschluss). Wegen RISK-OFF (max. 0 neue Positionen) heute nein."
     },
     {
       "ticker": "TRV",
       "name": "Travelers",
       "sector": "Insurance",
-      "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
-      "vwap": 406.9,
-      "relatives_volumen": 0.95,
+      "status": "Nicht bestanden",
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
+      "vwap": 406.05,
+      "relatives_volumen": 0.58,
       "einstieg_heute": "nein",
-      "begruendung": "Hold-Test der letzten US-Sitzung (25.11., heute Thanksgiving): 2 von 4 Checks (Teilweise): +1,22 % seit Eröffnung, über VWAP 406,90 $ (≈ 371,09 €), 0,71 Pkt. schwächer als der S&P 500, Volumen 0,95×. P4-Stufe Kauf – hohe Qualität; ohne Regime-Sperre Limit an 371,06 € (Stop 355,43 €). Wegen RISK-OFF (max. 0 neue Positionen) und geschlossener US-Börse heute nein."
+      "begruendung": "1 von 4 Checks (Nicht bestanden): −0,41 % seit Eröffnung, nur knapp über VWAP 406,05 $ (≈ 369,91 €), 0,25 Pkt. schwächer als der S&P 500, Volumen 0,58×. Hold-Test nicht bestanden – heute nicht, bleibt aber auf der Liste (Feed-Score 83,1, Kauf – hohe Qualität). RISK-OFF: max. 0 neue Positionen."
     },
     {
       "ticker": "GD",
       "name": "General Dynamics",
       "sector": "Defense",
-      "status": "Bestanden",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": true},
-      "vwap": 357.78,
-      "relatives_volumen": 1.44,
+      "status": "Nicht bestanden",
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
+      "vwap": 361.5,
+      "relatives_volumen": 0.87,
       "einstieg_heute": "nein",
-      "begruendung": "Hold-Test der letzten US-Sitzung (25.11., heute Thanksgiving): 4 von 4 Checks (Bestanden): +3,14 % seit Eröffnung, über VWAP 357,78 $ (≈ 326,30 €), 1,21 Pkt. stärker als der S&P 500, Volumen 1,44×. P4-Stufe Kauf – hohe Qualität; ohne Regime-Sperre Einstieg zum Kurs (328,57 €, Stop 314,01 €). Wegen RISK-OFF (max. 0 neue Positionen) und geschlossener US-Börse heute nein."
+      "begruendung": "0 von 4 Checks (Nicht bestanden): −0,72 % seit Eröffnung, unter VWAP 361,50 $ (≈ 329,33 €), 0,56 Pkt. schwächer als der S&P 500, Volumen 0,87×. Hold-Test nicht bestanden – heute nicht; Feed-Stufe inzwischen Beobachten (Score 63,7). RISK-OFF: max. 0 neue Positionen."
     },
     {
       "ticker": "HD",
       "name": "Home Depot",
       "sector": "Consumer Discretionary",
       "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": false, "volumen_ueber_schnitt": true},
-      "vwap": 359.31,
-      "relatives_volumen": 1.26,
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
+      "vwap": 360.42,
+      "relatives_volumen": 0.47,
       "einstieg_heute": "nein",
-      "begruendung": "Hold-Test der letzten US-Sitzung (25.11., heute Thanksgiving): 3 von 4 Checks (Teilweise): +1,77 % seit Eröffnung, über VWAP 359,31 $ (≈ 327,69 €), 0,16 Pkt. schwächer als der S&P 500, Volumen 1,26×. P4-Stufe Kauf – solide; ohne Regime-Sperre nur Limit an der SMA20 (314,43 €, Stop 297,19 €) – nicht hinterherlaufen. Wegen RISK-OFF (max. 0 neue Positionen) und geschlossener US-Börse heute nein."
+      "begruendung": "2 von 4 Checks (Teilweise): +0,07 % seit Eröffnung, knapp unter VWAP 360,42 $ (≈ 328,34 €), 0,23 Pkt. stärker als der S&P 500, Volumen 0,47×. P4-Stufe Kauf – solide, ohne Regime-Sperre nur Limit an der SMA20 (315,50 €, Stop 299,39 €) – Kurs 3,96 % darüber, nicht hinterherlaufen; aktueller Feed zusätzlich mit Optionsflow bärisch (harter Ausschluss). Wegen RISK-OFF heute nein."
     },
     {
       "ticker": "RTX",
       "name": "RTX",
       "sector": "Defense/Industrials",
-      "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
-      "vwap": 195.06,
-      "relatives_volumen": 0.92,
+      "status": "Nicht bestanden",
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": false, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
+      "vwap": 197.44,
+      "relatives_volumen": 0.66,
       "einstieg_heute": "nein",
-      "begruendung": "Hold-Test der letzten US-Sitzung (25.11., heute Thanksgiving): 2 von 4 Checks (Teilweise): +1,61 % seit Eröffnung, über VWAP 195,06 $ (≈ 177,89 €), 0,32 Pkt. schwächer als der S&P 500, Volumen 0,92×. P4-Stufe Kauf – solide; ohne Regime-Sperre Limit an 178,93 € (Stop 169,45 €). Wegen RISK-OFF (max. 0 neue Positionen) und geschlossener US-Börse heute nein."
-    },
-    {
-      "ticker": "NEE",
-      "name": "NextEra Energy",
-      "sector": "Utilities",
-      "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
-      "vwap": 85.35,
-      "relatives_volumen": 0.77,
-      "einstieg_heute": "nein",
-      "begruendung": "Hold-Test der letzten US-Sitzung (25.11., heute Thanksgiving): 2 von 4 Checks (Teilweise): +0,58 % seit Eröffnung, über VWAP 85,35 $ (≈ 77,84 €), 1,35 Pkt. schwächer als der S&P 500, Volumen 0,77×. P4-Stufe Kauf – solide; ohne Regime-Sperre Limit an 77,89 € (Stop 75,20 €). Wegen RISK-OFF (max. 0 neue Positionen) und geschlossener US-Börse heute nein."
+      "begruendung": "0 von 4 Checks (Nicht bestanden): −1,11 % seit Eröffnung, unter VWAP 197,44 $ (≈ 179,87 €), 0,95 Pkt. schwächer als der S&P 500, Volumen 0,66×. Hold-Test nicht bestanden – heute nicht; aktueller Feed zusätzlich mit Optionsflow bärisch (harter Ausschluss). RISK-OFF: max. 0 neue Positionen."
     },
     {
       "ticker": "LIN",
       "name": "Linde",
       "sector": "Materials",
       "status": "Teilweise",
-      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": false, "volumen_ueber_schnitt": false},
-      "vwap": 522.24,
-      "relatives_volumen": 0.89,
+      "checks": {"ueber_vwap": true, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
+      "vwap": 528.88,
+      "relatives_volumen": 0.78,
       "einstieg_heute": "nein",
-      "begruendung": "Hold-Test der letzten US-Sitzung (25.11., heute Thanksgiving): 2 von 4 Checks (Teilweise): +1,82 % seit Eröffnung, über VWAP 522,24 $ (≈ 476,28 €), 0,11 Pkt. schwächer als der S&P 500, Volumen 0,89×. P4-Stufe Kauf – solide; ohne Regime-Sperre Limit an 478,44 € (Stop 460,58 €). Bulltrap-Flag „Kurs steigt, OBV fällt“. Wegen RISK-OFF (max. 0 neue Positionen) und geschlossener US-Börse heute nein."
+      "begruendung": "3 von 4 Checks (Teilweise): +0,85 % seit Eröffnung, über VWAP 528,88 $ (≈ 481,81 €), 1,01 Pkt. stärker als der S&P 500, Volumen 0,78×. P4-Stufe Kauf – solide; ohne Regime-Sperre Limit an 482,61 € (Stop 465,54 €), Bulltrap-Flag „Kurs steigt, OBV fällt“ bleibt. Wegen RISK-OFF (max. 0 neue Positionen) heute nein."
+    },
+    {
+      "ticker": "NEE",
+      "name": "NextEra Energy",
+      "sector": "Utilities",
+      "status": "Teilweise",
+      "checks": {"ueber_vwap": false, "ueber_eroeffnung": true, "staerker_als_sp500": true, "volumen_ueber_schnitt": false},
+      "vwap": 84.9,
+      "relatives_volumen": 0.73,
+      "einstieg_heute": "nein",
+      "begruendung": "2 von 4 Checks (Teilweise): +0,22 % seit Eröffnung, knapp unter VWAP 84,90 $ (≈ 77,34 €), 0,38 Pkt. stärker als der S&P 500, Volumen 0,73×. P4-Stufe Kauf – solide (Feed jetzt Beobachten, Score 64,0); ohne Regime-Sperre Limit an 77,32 € (Stop 74,85 €). Wegen RISK-OFF (max. 0 neue Positionen) heute nein."
     }
   ]
 }
