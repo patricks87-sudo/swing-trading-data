@@ -1,15 +1,15 @@
 UMZUG: EIGENE DOMAIN, LOGIN UND PRIVATES REPO
-Stand: 24.10.2026
+Stand: 01.11.2026
 
 STATUS
 Erledigt – Schritte 1–5:
 - Domain aktienkaenguru.de bei INWX, Nameserver auf Cloudflare umgestellt.
-- Worker "aktienkaenguru-cockpit" live (Fassung aus PR #15, nur Cockpit – die öffentliche Startseite aus PR #17 ist noch nicht eingespielt).
+- Worker "aktienkaenguru-cockpit" live mit dem aktuellen worker/worker.js (Cockpit, Journal-Eingabe, öffentliche Startseite – Letztere bleibt hinter Login, bis Root und www aus der Access-App genommen werden).
 - Access-App "cockpit" mit Policy "Nur ich" (patricks87@gmx.de), Team-Domain aktienkaenguru.cloudflareaccess.com, Sitzungsdauer 1 Monat.
 - workers.dev und Preview-URLs deaktiviert.
-- Variablen im Worker: GITHUB_TOKEN (nur lesen), REPO, BRANCH, TEAM_DOMAIN, POLICY_AUD.
+- Variablen im Worker: GITHUB_TOKEN (nur lesen), JOURNAL_TOKEN (nur Issues), REPO, BRANCH, TEAM_DOMAIN, POLICY_AUD.
+- Journal-Eingabe direkt im Cockpit (C25) eingerichtet und getestet.
 Offen:
-- Journal direkt im Cockpit (C25): neuen worker/worker.js einspielen und JOURNAL_TOKEN anlegen, siehe Abschnitt JOURNAL-EINGABE IM COCKPIT.
 - Schritt 6: geplante Aufgaben sind seit 23.10. auf den GitHub-Connector umgestellt (N6 am 23.10. erfolgreich); offen sind die Projekt-Anweisungen im Claude-Projekt und die Beobachtung von P4–P1.
 - Schritt 7: Repo privat stellen.
 
